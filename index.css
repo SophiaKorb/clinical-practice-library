@@ -86,3 +86,11 @@ footer{width:min(var(--max),calc(100% - 32px));margin:0 auto 34px;padding:26px 0
   .subtopic{background:#171c19;border-color:#323b35}
   .subtopic>summary{color:#b9dfca}
 }
+
+
+/* Keyboard focus */
+a:focus-visible, button:focus-visible, summary:focus-visible{
+  outline:3px solid currentColor;
+  outline-offset:3px;
+  border-radius:6px;
+}
