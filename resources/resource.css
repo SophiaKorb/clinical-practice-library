@@ -25,3 +25,11 @@
   a{color:#a8d3bb}
   a:hover{color:#c5e4d2}
 }
+
+
+@media print{
+  :root{color-scheme:light;--paper:#fff;--white:#fff;--ink:#111;--muted:#555;--line:#bbb;--green:#244b3b;--green2:#35634f;--sand:#f3eee5}
+  body,.resource-card,.quick-card{background:#fff!important;color:#111!important;box-shadow:none!important}
+  .worksheet,.safety-note{background:#fff!important;color:#111!important}
+  a{color:#111!important}
+}
