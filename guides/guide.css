@@ -7,7 +7,7 @@
 body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
 a{color:var(--green)}button,textarea,input{font:inherit}
 .topbar{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:11px max(18px,calc((100vw - 1180px)/2));background:rgba(246,241,232,.94);border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}
-.topbar a{text-decoration:none;font-weight:780;color:var(--ink)}.topbar a:before{content:"CP";display:inline-grid;place-items:center;width:30px;height:30px;margin-right:9px;border-radius:9px;background:var(--green);color:white;font:700 .72rem Georgia,serif;vertical-align:middle}
+.topbar a{text-decoration:none;font-weight:780;color:var(--ink)}.topbar a:before{content:"CPL";display:inline-grid;place-items:center;width:38px;height:30px;margin-right:9px;border-radius:9px;background:var(--green);color:white;font:700 .72rem Georgia,serif;vertical-align:middle}
 .topbar div{display:flex;gap:8px}.topbar button{border:1px solid var(--line);background:var(--white);border-radius:10px;padding:7px 11px;cursor:pointer;color:var(--green);font-size:.82rem;font-weight:720}
 .page-shell{width:min(1180px,calc(100% - 28px));margin:34px auto 58px;display:grid;grid-template-columns:220px minmax(0,var(--max));gap:26px;align-items:start}
 .toc{position:sticky;top:78px;background:rgba(255,253,249,.86);border:1px solid var(--line);border-radius:18px;padding:15px;max-height:calc(100vh - 98px);overflow:auto}
