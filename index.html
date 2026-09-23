@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Searchable clinical practice resource library.">
+<title>Clinical Practice Library</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#results">Skip to results</a>
+<header class="site-header">
+  <div class="header-inner">
+    <div>
+      <p class="eyebrow">Evidence • tools • teaching • systems</p>
+      <h1>Clinical Practice Library</h1>
+      <p class="lede">A searchable working library for finding the right resource without remembering which folder, spreadsheet, or mildly cursed filename it lives in.</p>
+    </div>
+    <div class="header-actions">
+      <button id="exportCsv" class="button secondary" type="button">Export filtered CSV</button>
+      <button id="exportJson" class="button secondary" type="button">Export filtered JSON</button>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="stats" aria-label="Library statistics">
+    <div class="stat"><strong id="totalCount">0</strong><span>resources</span></div>
+    <div class="stat"><strong id="researchCount">0</strong><span>research core</span></div>
+    <div class="stat"><strong id="assessmentCount">0</strong><span>assessment tools</span></div>
+    <div class="stat"><strong id="visibleCount">0</strong><span>showing</span></div>
+  </section>
+  <section class="notice"><strong>Public catalog boundary:</strong> metadata and legitimate source links only. No PHI, completed protocols, restricted test content, or copyrighted full-text PDFs are stored here.</section>
+  <section class="search-panel" aria-label="Search and filters">
+    <label class="search-label" for="search">Find a resource</label>
+    <input id="search" class="search-input" type="search" autocomplete="off" placeholder="Search title, domain, caveat, measure, purpose, evidence role...">
+    <div class="filters">
+      <label>Section<select id="sectionFilter"><option value="">All sections</option></select></label>
+      <label>Type<select id="typeFilter"><option value="">All types</option></select></label>
+      <label>Domain<select id="domainFilter"><option value="">All domains</option></select></label>
+      <label>Priority<select id="priorityFilter"><option value="">All priorities</option><option>P1</option><option>P2</option><option>P3</option></select></label>
+      <label>Evidence<select id="evidenceFilter"><option value="">All evidence levels</option></select></label>
+      <label>Sort<select id="sortBy"><option value="default">Library order</option><option value="title">Title A-Z</option><option value="newest">Newest first</option><option value="domain">Domain A-Z</option></select></label>
+    </div>
+    <div class="filter-footer"><div id="activeFilters" class="active-filters" aria-live="polite"></div><button id="clearFilters" class="text-button" type="button">Clear filters</button></div>
+  </section>
+  <section class="section-jump">
+    <h2>Browse the library</h2>
+    <div id="sectionChips" class="chips"></div>
+  </section>
+  <section id="results" aria-labelledby="resultsTitle">
+    <div class="results-heading"><div><p class="eyebrow">Catalog</p><h2 id="resultsTitle">Resources</h2></div><p id="resultSummary" class="muted"></p></div>
+    <div id="cards" class="cards"></div>
+    <div id="emptyState" class="empty" hidden><h3>No matches</h3><p>Try fewer filters or a broader search term.</p></div>
+  </section>
+  <section class="about"><h2>How this library is organized</h2><div id="architecture" class="architecture"></div></section>
+</main>
+<footer><p>Clinical Practice Library • Public metadata catalog • Scaffold updated September 22, 2026</p></footer>
+<template id="cardTemplate">
+<article class="card">
+  <div class="card-top"><div class="pills"></div><button class="copy-link" type="button">Copy link</button></div>
+  <h3 class="card-title"></h3><p class="card-subtitle"></p><div class="card-meta"></div>
+  <details><summary>Details</summary><dl class="details-grid"></dl></details>
+  <div class="card-actions"></div>
+</article>
+</template>
+<script src="app.js" defer></script>
+</body>
+</html>

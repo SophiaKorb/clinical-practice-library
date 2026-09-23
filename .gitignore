@@ -1,0 +1,11 @@
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.*
+node_modules/
+private/
+phi/
+restricted/
+pdfs/
+*.pdf

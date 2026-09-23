@@ -1,0 +1,4603 @@
+{
+  "meta": {
+    "title": "Clinical Practice Library",
+    "generated": "2026-09-22",
+    "records": 126,
+    "researchCoreRecords": 95,
+    "assessmentRecords": 31,
+    "note": "Public metadata catalog only. No PHI, restricted test content, or copyrighted full-text PDFs are stored here."
+  },
+  "resources": [
+    {
+      "id": "core-001",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Meuret et al. (2026), Positive Affect Treatment for depression/anxiety",
+      "year": 2026,
+      "domain": "Depression / Anxiety",
+      "evidenceRole": "Recent RCT",
+      "coreNumber": 1,
+      "coreStatus": "Approved core",
+      "caveat": "Mechanism-focused; selected low-positive-affect sample",
+      "evidenceReview": "Reviewed",
+      "canonicalFilename": "Meuret 2026 - Positive Affect Treatment.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "Publisher/open article page",
+      "sourceUrl": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2848142",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Depression / Anxiety",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-002",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Cuijpers et al. (2026), Long-term effects of psychotherapies for depression",
+      "year": 2026,
+      "domain": "Depression / Psychotherapy",
+      "evidenceRole": "Recent meta-analysis",
+      "coreNumber": 2,
+      "coreStatus": "Approved core",
+      "caveat": "Adult depression; long-term causal interpretation complicated by later care",
+      "evidenceReview": "Reviewed",
+      "canonicalFilename": "Cuijpers 2026 - Long-Term Effects of Psychotherapy for Depression.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "Publisher/open article page",
+      "sourceUrl": "https://onlinelibrary.wiley.com/doi/full/10.1002/wps.70065",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Depression / Psychotherapy",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-003",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Morse et al. (2026), interventions for youth anxiety/depression",
+      "year": 2026,
+      "domain": "Youth Anxiety / Depression",
+      "evidenceRole": "Umbrella review",
+      "coreNumber": 3,
+      "coreStatus": "Approved core",
+      "caveat": "Inherits overlap/quality limits of underlying meta-analyses",
+      "evidenceReview": "Reviewed",
+      "canonicalFilename": "Morse 2026 - Youth Anxiety and Depression Interventions.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "Publisher/open article page",
+      "sourceUrl": "https://link.springer.com/article/10.1007/s00787-026-03064-w",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Youth Anxiety / Depression",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-004",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Lovell et al. (2026), mental-health interventions for autistic youth",
+      "year": 2026,
+      "domain": "Autism / Youth Mental Health",
+      "evidenceRole": "Overview of reviews",
+      "coreNumber": 4,
+      "coreStatus": "Approved core",
+      "caveat": "Underlying review quality often low; adaptation evidence thinner",
+      "evidenceReview": "Reviewed",
+      "canonicalFilename": "Lovell 2026 - Mental Health Interventions for Autistic Youth.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "PMC/open repository",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13221812/",
+      "priority": "P1",
+      "nextAction": "Download legal PDF and save with canonical filename",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Autism / Youth Mental Health",
+        "research core",
+        "P1"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-005",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Fan et al. (2026), DBT-based interventions for autism",
+      "year": 2026,
+      "domain": "Autism / DBT",
+      "evidenceRole": "Meta-analysis",
+      "coreNumber": 5,
+      "coreStatus": "Approved core",
+      "caveat": "Only 4 RCTs; heterogeneity; caution on pooled effects",
+      "evidenceReview": "Reviewed",
+      "canonicalFilename": "Fan 2026 - DBT Interventions for Autism.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "Publisher/open article page",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s40359-026-04729-6",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Autism / DBT",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-006",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Chang et al. (2026), stimulant dose-response in youth ADHD",
+      "year": 2026,
+      "domain": "ADHD / Pharmacotherapy",
+      "evidenceRole": "Network meta-analysis",
+      "coreNumber": 6,
+      "coreStatus": "Approved core",
+      "caveat": "Population dose estimates are not individual dosing rules",
+      "evidenceReview": "Reviewed",
+      "canonicalFilename": "Chang 2026 - Stimulant Dose Response in Youth ADHD.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "Publisher/open article page",
+      "sourceUrl": "https://link.springer.com/article/10.1007/s00787-026-03025-3",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "ADHD / Pharmacotherapy",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-007",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Dobrean et al. (2026), transdiagnostic internet treatment for youth anxiety/depression",
+      "year": 2026,
+      "domain": "Youth Anxiety / Depression / Digital",
+      "evidenceRole": "Recent RCT",
+      "coreNumber": 7,
+      "coreStatus": "Approved core",
+      "caveat": "Waitlist comparator; Romanian sample",
+      "evidenceReview": "Reviewed",
+      "canonicalFilename": "Dobrean 2026 - Transdiagnostic Internet Treatment for Youth.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "Publisher/open article page",
+      "sourceUrl": "https://www.nature.com/articles/s41746-026-02341-x",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Youth Anxiety / Depression / Digital",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-008",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Held et al. (2026), accelerated CPT plus stellate ganglion block",
+      "year": 2026,
+      "domain": "PTSD / CPT",
+      "evidenceRole": "Pilot RCT",
+      "coreNumber": 8,
+      "coreStatus": "Approved core",
+      "caveat": "Tiny pilot; augmentation result underpowered",
+      "evidenceReview": "Reviewed",
+      "canonicalFilename": "Held 2026 - Accelerated CPT Plus Stellate Ganglion Block.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "Publisher/open article page",
+      "sourceUrl": "https://onlinelibrary.wiley.com/doi/full/10.1002/jts.70116",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "PTSD / CPT",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-009",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Hails et al. (2026), Family Check-Up Online",
+      "year": 2026,
+      "domain": "Parenting / Early Childhood",
+      "evidenceRole": "Recent RCT",
+      "coreNumber": 9,
+      "coreStatus": "Approved core",
+      "caveat": "Demographically limited sample; parent-report outcomes",
+      "evidenceReview": "Reviewed",
+      "canonicalFilename": "Hails 2026 - Family Check-Up Online.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "PMC/open repository",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13474999/",
+      "priority": "P1",
+      "nextAction": "Download legal PDF and save with canonical filename",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Parenting / Early Childhood",
+        "research core",
+        "P1"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-010",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Goodman et al. (2026), group suicide safety planning and skills training",
+      "year": 2026,
+      "domain": "Suicide Prevention",
+      "evidenceRole": "Recent RCT",
+      "coreNumber": 10,
+      "coreStatus": "Approved core",
+      "caveat": "Veteran population; suicide outcomes difficult to power",
+      "evidenceReview": "Reviewed",
+      "canonicalFilename": "Goodman 2026 - Group Suicide Safety Planning and Skills.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "Publisher/open article page",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42213437/",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Suicide Prevention",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-011",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Zhang et al. (2026), group DBT skills vs CBT for adult ADHD",
+      "year": 2026,
+      "domain": "Adult ADHD / Psychotherapy",
+      "evidenceRole": "Recent RCT",
+      "coreNumber": 11,
+      "coreStatus": "Approved core",
+      "caveat": "Noninferiority not established; small trial",
+      "evidenceReview": "Reviewed",
+      "canonicalFilename": "Zhang 2026 - DBT Skills vs CBT for Adult ADHD.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "PMC/open repository",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13330458/",
+      "priority": "P1",
+      "nextAction": "Download legal PDF and save with canonical filename",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Adult ADHD / Psychotherapy",
+        "research core",
+        "P1"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-012",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Bisby et al. (2026), ultra-brief psychological treatment",
+      "year": 2026,
+      "domain": "Brief Therapy / Integrated Care",
+      "evidenceRole": "Meta-analysis",
+      "coreNumber": 12,
+      "coreStatus": "Approved core",
+      "caveat": "High heterogeneity; many inactive controls",
+      "evidenceReview": "Reviewed",
+      "canonicalFilename": "Bisby 2026 - Ultra-Brief Psychological Treatment.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "Publisher/open article page",
+      "sourceUrl": "https://doi.org/10.1080/16506073.2026.2689743",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Brief Therapy / Integrated Care",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-013",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Lee et al. (2026), psychosocial case management and suicide prevention",
+      "year": 2026,
+      "domain": "Suicide Prevention / MDD",
+      "evidenceRole": "Recent RCT",
+      "coreNumber": 13,
+      "coreStatus": "Approved core",
+      "caveat": "Did not significantly reduce attempts; multicomponent intervention",
+      "evidenceReview": "Reviewed",
+      "canonicalFilename": "Lee 2026 - Psychosocial Case Management for Suicide Prevention.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "Publisher/open article page",
+      "sourceUrl": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2851285",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Suicide Prevention / MDD",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-014",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Schlegelmilch et al. (2026), IV ketamine for adolescent suicidal ideation",
+      "year": 2026,
+      "domain": "Adolescent Suicide / Ketamine",
+      "evidenceRole": "Pilot RCT",
+      "coreNumber": 14,
+      "coreStatus": "Approved core",
+      "caveat": "N=20; primary endpoint nonsignificant",
+      "evidenceReview": "Reviewed",
+      "canonicalFilename": "Schlegelmilch 2026 - IV Ketamine for Adolescent Suicidal Ideation.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "PMC/open repository",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13188393/",
+      "priority": "P1",
+      "nextAction": "Download legal PDF and save with canonical filename",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Adolescent Suicide / Ketamine",
+        "research core",
+        "P1"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-015",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Jones et al. (2026), TSND-201 methylone for PTSD",
+      "year": 2026,
+      "domain": "PTSD / Novel Pharmacotherapy",
+      "evidenceRole": "Phase 2 RCT",
+      "coreNumber": 15,
+      "coreStatus": "Approved core",
+      "caveat": "Small; manufacturer involvement; replication essential",
+      "evidenceReview": "Reviewed",
+      "canonicalFilename": "Jones 2026 - Methylone for PTSD.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "Publisher/open article page",
+      "sourceUrl": "https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2844885",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "PTSD / Novel Pharmacotherapy",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-016",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Yang et al. (2026), exercise and executive function in youth ADHD",
+      "year": 2026,
+      "domain": "ADHD / Executive Function",
+      "evidenceRole": "Network meta-analysis",
+      "coreNumber": 16,
+      "coreStatus": "Approved core",
+      "caveat": "Indirect comparisons; exercise prescription precision limited",
+      "evidenceReview": "Reviewed",
+      "canonicalFilename": "Yang 2026 - Exercise and Executive Function in Youth ADHD.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "PMC/open repository",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12916422/",
+      "priority": "P1",
+      "nextAction": "Download legal PDF and save with canonical filename",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "ADHD / Executive Function",
+        "research core",
+        "P1"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-017",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Conti et al. (2026), external trigeminal nerve stimulation for youth ADHD",
+      "year": 2026,
+      "domain": "ADHD / Neuromodulation",
+      "evidenceRole": "Sham-controlled RCT",
+      "coreNumber": 17,
+      "coreStatus": "Approved core",
+      "caveat": "Device expectancy/blinding issues; not first-line replacement",
+      "evidenceReview": "Reviewed",
+      "canonicalFilename": "Conti 2026 - Trigeminal Nerve Stimulation for Youth ADHD.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "PMC/open repository",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12920111/",
+      "priority": "P1",
+      "nextAction": "Download legal PDF and save with canonical filename",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "ADHD / Neuromodulation",
+        "research core",
+        "P1"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-018",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Zhukovsky et al. (2026), biomarker-guided bupropion/sertraline treatment",
+      "year": 2026,
+      "domain": "MDD / Precision Psychiatry",
+      "evidenceRole": "Sequential randomized trial",
+      "coreNumber": 18,
+      "coreStatus": "Approved core",
+      "caveat": "Biomarkers need external replication",
+      "evidenceReview": "Reviewed",
+      "canonicalFilename": "Zhukovsky 2026 - Biomarker Guided Depression Treatment.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "PMC/open repository",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13341311/",
+      "priority": "P1",
+      "nextAction": "Download legal PDF and save with canonical filename",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "MDD / Precision Psychiatry",
+        "research core",
+        "P1"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-019",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Toukhy et al. (2026), BRITEpath adolescent suicide-risk intervention",
+      "year": 2026,
+      "domain": "Adolescent Suicide / Primary Care",
+      "evidenceRole": "Recent RCT",
+      "coreNumber": 19,
+      "coreStatus": "Approved core",
+      "caveat": "Digital engagement and acuity limits",
+      "evidenceReview": "Reviewed",
+      "canonicalFilename": "Toukhy 2026 - BRITEpath Adolescent Suicide Risk.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "PMC/open repository",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13247626/",
+      "priority": "P1",
+      "nextAction": "Download legal PDF and save with canonical filename",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Adolescent Suicide / Primary Care",
+        "research core",
+        "P1"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-020",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Dekkers et al. (2026), behavioral parent training in autistic school-age children",
+      "year": 2026,
+      "domain": "Autism / Parent Training",
+      "evidenceRole": "RCT secondary outcomes",
+      "coreNumber": 20,
+      "coreStatus": "Approved core",
+      "caveat": "Secondary outcomes; parent-report expectancy",
+      "evidenceReview": "Reviewed",
+      "canonicalFilename": "Dekkers 2026 - Behavioral Parent Training in Autism.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "PMC/open repository",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13337588/",
+      "priority": "P1",
+      "nextAction": "Download legal PDF and save with canonical filename",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Autism / Parent Training",
+        "research core",
+        "P1"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-021",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Cuijpers et al. (2026), behavioral activation for depression",
+      "year": 2026,
+      "domain": "Depression / Psychotherapy",
+      "evidenceRole": "Meta-analysis",
+      "coreNumber": 21,
+      "coreStatus": "Approved core",
+      "caveat": "Heterogeneity; youth evidence limited",
+      "evidenceReview": "Reviewed",
+      "canonicalFilename": "Cuijpers 2026 - Behavioral Activation for Depression.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "PMC/open repository",
+      "sourceUrl": "https://discovery.ucl.ac.uk/id/eprint/10228668/",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Depression / Psychotherapy",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-022",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Young et al. (2026), PHQ-9/GAD-7 instructional emphasis",
+      "year": 2026,
+      "domain": "Assessment / Measurement-Based Care",
+      "evidenceRole": "Recent RCT",
+      "coreNumber": 22,
+      "coreStatus": "Approved core",
+      "caveat": "Repeated same-session measurement; conspicuous manipulation",
+      "evidenceReview": "Reviewed",
+      "canonicalFilename": "Young 2026 - PHQ-9 and GAD-7 Instructional Emphasis.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "Publisher/open article page",
+      "sourceUrl": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2851784",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Assessment / Measurement-Based Care",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-023",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Huang et al. (2026), dual-site aiTBS for adolescent suicidal ideation",
+      "year": 2026,
+      "domain": "Adolescent Suicide / Neuromodulation",
+      "evidenceRole": "Recent RCT",
+      "coreNumber": 23,
+      "coreStatus": "Approved core",
+      "caveat": "Small single-center; no full sham-control arm",
+      "evidenceReview": "Reviewed",
+      "canonicalFilename": "Huang 2026 - Dual-Site aiTBS for Adolescent Suicidal Ideation.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "Publisher/open article page",
+      "sourceUrl": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2849146",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Adolescent Suicide / Neuromodulation",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-024",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Ward et al. (2026), centanafadine for adolescent ADHD",
+      "year": 2026,
+      "domain": "ADHD / Pharmacotherapy",
+      "evidenceRole": "Placebo-controlled RCT",
+      "coreNumber": 24,
+      "coreStatus": "Approved core",
+      "caveat": "Short fixed-dose trial; investigational; manufacturer involvement",
+      "evidenceReview": "Reviewed",
+      "canonicalFilename": "Ward 2026 - Centanafadine for Adolescent ADHD.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "Publisher/open article page",
+      "sourceUrl": "https://www.sciencedirect.com/science/article/pii/S0890856725003272",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "ADHD / Pharmacotherapy",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-025",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Kawasaki et al. (2026), internet-delivered PCIT in preschool ADHD",
+      "year": 2026,
+      "domain": "Preschool ADHD / Parent Intervention",
+      "evidenceRole": "Recent RCT",
+      "coreNumber": 25,
+      "coreStatus": "Approved core",
+      "caveat": "Small sample; no blinding; limited generalizability",
+      "evidenceReview": "Reviewed",
+      "canonicalFilename": "Kawasaki 2026 - Internet PCIT for Preschool ADHD.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "Publisher/open article page",
+      "sourceUrl": "https://link.springer.com/article/10.1007/s10578-026-02011-9",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Preschool ADHD / Parent Intervention",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-026",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Sohn et al. (2026), chatbots for depressive and anxiety symptoms",
+      "year": 2026,
+      "domain": "Digital Mental Health",
+      "evidenceRole": "Meta-analysis",
+      "coreNumber": 26,
+      "coreStatus": "Approved core",
+      "caveat": "Most studies high risk of bias; technology changes rapidly",
+      "evidenceReview": "Reviewed",
+      "canonicalFilename": "Sohn 2026 - Chatbots for Depression and Anxiety.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "Publisher/open article page",
+      "sourceUrl": "https://www.nature.com/articles/s41746-026-02566-w",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Digital Mental Health",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-027",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Ciharova et al. (2026), combined psychotherapy plus medication for depression",
+      "year": 2026,
+      "domain": "Depression / Combined Treatment",
+      "evidenceRole": "IPD meta-analysis",
+      "coreNumber": 27,
+      "coreStatus": "Approved core",
+      "caveat": "IPD available for subset of eligible studies",
+      "evidenceReview": "Reviewed",
+      "canonicalFilename": "Ciharova 2026 - Combined Psychotherapy and Medication for Depression.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "PMC/open repository",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13004618/",
+      "priority": "P1",
+      "nextAction": "Download legal PDF and save with canonical filename",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Depression / Combined Treatment",
+        "research core",
+        "P1"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-028",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Li et al. (2026), digital interventions for social anxiety disorder",
+      "year": 2026,
+      "domain": "Social Anxiety / Digital CBT",
+      "evidenceRole": "Network meta-analysis",
+      "coreNumber": 28,
+      "coreStatus": "Approved core",
+      "caveat": "Sparse nodes and long-term data",
+      "evidenceReview": "Reviewed",
+      "canonicalFilename": "Li 2026 - Digital Interventions for Social Anxiety.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "Publisher/open article page",
+      "sourceUrl": "https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2026.1883150/full",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Social Anxiety / Digital CBT",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-029",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Cao et al. (2026), methylphenidate and physical growth",
+      "year": 2026,
+      "domain": "ADHD / Medication Safety",
+      "evidenceRole": "Meta-analysis",
+      "coreNumber": 29,
+      "coreStatus": "Approved core",
+      "caveat": "Very high heterogeneity; mixed study designs",
+      "evidenceReview": "Reviewed",
+      "canonicalFilename": "Cao 2026 - Methylphenidate and Growth in Youth ADHD.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "Publisher/open article page",
+      "sourceUrl": "https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2026.1794403/full",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "ADHD / Medication Safety",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-030",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Torabi et al. (2026), metacognitive therapy for depressive symptoms",
+      "year": 2026,
+      "domain": "Depression / MCT",
+      "evidenceRole": "Meta-analysis",
+      "coreNumber": 30,
+      "coreStatus": "Approved core",
+      "caveat": "Very high heterogeneity; bias/publication concerns",
+      "evidenceReview": "Reviewed",
+      "canonicalFilename": "Torabi 2026 - Metacognitive Therapy for Depression.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "Publisher/open article page",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12991-026-00658-1",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Depression / MCT",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-031",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Pender et al. (2026), psychotherapy outcomes in autistic adults",
+      "year": 2026,
+      "domain": "Autism / Adult Psychotherapy",
+      "evidenceRole": "Routine-care observational study",
+      "coreNumber": 31,
+      "coreStatus": "Approved core",
+      "caveat": "Observational; treatment content not experimentally controlled",
+      "evidenceReview": "To review",
+      "canonicalFilename": "Pender 2026 - Psychotherapy Outcomes in Autistic Adults.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "Publisher/open article page",
+      "sourceUrl": "https://www.nature.com/articles/s44220-025-00567-4",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Autism / Adult Psychotherapy",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-032",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Liu et al. (2026), personalized accelerated iTBS for autism",
+      "year": 2026,
+      "domain": "Autism / Neuromodulation",
+      "evidenceRole": "Double-blind RCT",
+      "coreNumber": 32,
+      "coreStatus": "Approved core",
+      "caveat": "Emerging; specialized; replication required",
+      "evidenceReview": "To review",
+      "canonicalFilename": "Liu 2026 - Personalized Accelerated iTBS for Autism.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "Publisher/open article page",
+      "sourceUrl": "https://www.nature.com/articles/s41380-026-03596-2",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Autism / Neuromodulation",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-033",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Wang et al. (2026), trainee-delivered school intervention for adolescent anxiety/depression",
+      "year": 2026,
+      "domain": "School Mental Health / Youth",
+      "evidenceRole": "Cluster RCT",
+      "coreNumber": 33,
+      "coreStatus": "Approved core",
+      "caveat": "Context/cluster effects; not specialist-equivalence evidence",
+      "evidenceReview": "To review",
+      "canonicalFilename": "Wang 2026 - School Intervention for Adolescent Anxiety and Depression.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "Publisher/open article page",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12916-026-04816-w",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "School Mental Health / Youth",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-034",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "ASPEN culturally adapted parent-mediated autism intervention (2026)",
+      "year": 2026,
+      "domain": "Autism / Equity / Implementation",
+      "evidenceRole": "Randomized intervention study",
+      "coreNumber": 34,
+      "coreStatus": "Approved core",
+      "caveat": "Context-specific; fidelity/access-dependent",
+      "evidenceReview": "To review",
+      "canonicalFilename": "ASPEN 2026 - Culturally Adapted Parent-Mediated Autism Intervention.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "Publisher/open article page",
+      "sourceUrl": "https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2026.1795918/full",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Autism / Equity / Implementation",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-035",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Duran et al. (2026), online psychotherapy approaches for PTSD",
+      "year": 2026,
+      "domain": "PTSD / Digital Psychotherapy",
+      "evidenceRole": "Recent RCT",
+      "coreNumber": 35,
+      "coreStatus": "Approved core",
+      "caveat": "COVID-related context; multiple interventions/outcomes",
+      "evidenceReview": "To review",
+      "canonicalFilename": "Duran 2026 - Online Psychotherapy for PTSD.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "Publisher/open article page",
+      "sourceUrl": "https://link.springer.com/article/10.1007/s12671-026-02760-7",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "PTSD / Digital Psychotherapy",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-036",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Yamada et al. (2026), smartphone intervention for parenting stress in autism",
+      "year": 2026,
+      "domain": "Parent Mental Health / Autism",
+      "evidenceRole": "Multicenter RCT",
+      "coreNumber": 36,
+      "coreStatus": "Approved core",
+      "caveat": "Open-label; bundled techniques",
+      "evidenceReview": "To review",
+      "canonicalFilename": "Yamada 2026 - Smartphone Intervention for Parenting Stress in Autism.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "Publisher/open article page",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12888-025-07746-8",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Parent Mental Health / Autism",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-037",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Schweizer et al. (2026), manualized group psychotherapy for autistic adults",
+      "year": 2026,
+      "domain": "Autism / Adult Group Therapy",
+      "evidenceRole": "Naturalistic clinical study",
+      "coreNumber": 37,
+      "coreStatus": "Approved core",
+      "caveat": "No randomized control; completer bias",
+      "evidenceReview": "To review",
+      "canonicalFilename": "Schweizer 2026 - Group Psychotherapy for Autistic Adults.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "Publisher/open article page",
+      "sourceUrl": "https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2026.1863942/full",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Autism / Adult Group Therapy",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-038",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Rahmani et al. (2026), web-based Barkley parent training for ADHD",
+      "year": 2026,
+      "domain": "ADHD / Parent Training",
+      "evidenceRole": "Recent RCT",
+      "coreNumber": 38,
+      "coreStatus": "Approved core",
+      "caveat": "Tiny sample; mothers only; caregiver outcomes",
+      "evidenceReview": "To review",
+      "canonicalFilename": "Rahmani 2026 - Web-Based Barkley Parent Training for ADHD.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "Publisher/open article page",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12888-026-08194-8",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "ADHD / Parent Training",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-039",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "She et al. (2026), digital art therapy plus pivotal response treatment",
+      "year": 2026,
+      "domain": "Autism / Emerging Intervention",
+      "evidenceRole": "Pilot RCT",
+      "coreNumber": 39,
+      "coreStatus": "Approved core",
+      "caveat": "Very small pilot; composite treatment",
+      "evidenceReview": "To review",
+      "canonicalFilename": "She 2026 - Digital Art Therapy Plus PRT for Autism.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "Publisher/open article page",
+      "sourceUrl": "https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2026.1894877/full",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Autism / Emerging Intervention",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-040",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Kuchinke et al. (2026), parent-infant psychotherapy for postpartum disorder",
+      "year": 2026,
+      "domain": "Perinatal / Dyadic Therapy",
+      "evidenceRole": "Recent RCT",
+      "coreNumber": 40,
+      "coreStatus": "Approved core",
+      "caveat": "Specialized population; dyadic outcomes hard to blind",
+      "evidenceReview": "To review",
+      "canonicalFilename": "Kuchinke 2026 - Parent-Infant Psychotherapy for Postpartum Disorder.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "Publisher/open article page",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s13034-025-01013-0",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Perinatal / Dyadic Therapy",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-041",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Argin et al. (2026), CBT-based psychoeducation in children with ADHD",
+      "year": 2026,
+      "domain": "ADHD / CBT",
+      "evidenceRole": "Recent trial",
+      "coreNumber": 41,
+      "coreStatus": "Approved core",
+      "caveat": "Expectancy/self-report; not core-symptom monotherapy evidence",
+      "evidenceReview": "To review",
+      "canonicalFilename": "Argin 2026 - CBT Psychoeducation for Children with ADHD.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "Publisher/open article page",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s40359-026-04110-7",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "ADHD / CBT",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-042",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Taylor et al. (2026), circuit-targeted TMS for anxiety in MDD",
+      "year": 2026,
+      "domain": "MDD / Anxiety / TMS",
+      "evidenceRole": "Head-to-head trial",
+      "coreNumber": 42,
+      "coreStatus": "Approved core",
+      "caveat": "Specialized; mechanistic targeting needs replication",
+      "evidenceReview": "To review",
+      "canonicalFilename": "Taylor 2026 - Circuit Targeted TMS for Anxiety in MDD.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "Publisher/open article page",
+      "sourceUrl": "https://www.nature.com/articles/s41380-026-03535-1",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "MDD / Anxiety / TMS",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-043",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Li & Chien (2026), ACT for parents of autistic children",
+      "year": 2026,
+      "domain": "Autism / Parent Mental Health",
+      "evidenceRole": "Recent RCT",
+      "coreNumber": 43,
+      "coreStatus": "Approved core",
+      "caveat": "Parent-report; some effects not sustained",
+      "evidenceReview": "To review",
+      "canonicalFilename": "Li 2026 - ACT for Parents of Autistic Children.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "PMC/open repository",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12784228/",
+      "priority": "P1",
+      "nextAction": "Download legal PDF and save with canonical filename",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Autism / Parent Mental Health",
+        "research core",
+        "P1"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-044",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Nam et al. (2026), blended online behavioral parent training for ADHD",
+      "year": 2026,
+      "domain": "ADHD / Parent Training",
+      "evidenceRole": "Recent RCT",
+      "coreNumber": 44,
+      "coreStatus": "Approved core",
+      "caveat": "Short follow-up; cultural transportability",
+      "evidenceReview": "To review",
+      "canonicalFilename": "Nam 2026 - Blended Online Parent Training for ADHD.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "PMC/open repository",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13400807/",
+      "priority": "P1",
+      "nextAction": "Download legal PDF and save with canonical filename",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "ADHD / Parent Training",
+        "research core",
+        "P1"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-045",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Shi et al. (2026), suicide prevention interventions for men",
+      "year": 2026,
+      "domain": "Suicide Prevention / Gender",
+      "evidenceRole": "Systematic review",
+      "coreNumber": 45,
+      "coreStatus": "Approved core",
+      "caveat": "Intervention heterogeneity; suicide mortality hard to study",
+      "evidenceReview": "To review",
+      "canonicalFilename": "Shi 2026 - Suicide Prevention Interventions for Men.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "Publisher/open article page",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12889-026-28269-1",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Suicide Prevention / Gender",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-046",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Hinten et al. (2026), Let's Play program for autistic children",
+      "year": 2026,
+      "domain": "Autism / Play / Caregiver",
+      "evidenceRole": "Recent RCT",
+      "coreNumber": 46,
+      "coreStatus": "Approved core",
+      "caveat": "Program-specific; durability/generalization uncertain",
+      "evidenceReview": "To review",
+      "canonicalFilename": "Hinten 2026 - Lets Play Program for Autistic Children.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "Publisher/open article page",
+      "sourceUrl": "https://link.springer.com/article/10.1007/s10803-026-07396-z",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Autism / Play / Caregiver",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-047",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Schefft et al. (2026), prediction of treatment benefit with iCBT",
+      "year": 2026,
+      "domain": "Depression / Precision Psychotherapy",
+      "evidenceRole": "Prediction study",
+      "coreNumber": 47,
+      "coreStatus": "Approved core",
+      "caveat": "Needs external validation and decision-impact testing",
+      "evidenceReview": "To review",
+      "canonicalFilename": "Schefft 2026 - Predicting Treatment Benefit with iCBT.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "Publisher/open article page",
+      "sourceUrl": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2853377",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Depression / Precision Psychotherapy",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-048",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Wardeszkiewicz et al. (2026), synchronous vs asynchronous online MBCT",
+      "year": 2026,
+      "domain": "Depression / Digital MBCT",
+      "evidenceRole": "Recent RCT",
+      "coreNumber": 48,
+      "coreStatus": "Approved core",
+      "caveat": "Mild-moderate sample; preference/adherence effects",
+      "evidenceReview": "To review",
+      "canonicalFilename": "Wardeszkiewicz 2026 - Synchronous vs Asynchronous Online MBCT.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "Publisher/open article page",
+      "sourceUrl": "https://link.springer.com/article/10.1007/s12671-026-02778-x",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Depression / Digital MBCT",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-049",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Breider et al. (2026), parent training for disruptive behavior in autism",
+      "year": 2026,
+      "domain": "Autism / Parent Training",
+      "evidenceRole": "Recent RCT",
+      "coreNumber": 49,
+      "coreStatus": "Approved core",
+      "caveat": "Parent-rated outcomes; blended arm attrition",
+      "evidenceReview": "To review",
+      "canonicalFilename": "Breider 2026 - Parent Training for Disruptive Behavior in Autism.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "Publisher/open article page",
+      "sourceUrl": "https://link.springer.com/article/10.1007/s10803-024-06567-0",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Autism / Parent Training",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-050",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Wu et al. (2026), portable tACS for major depressive disorder",
+      "year": 2026,
+      "domain": "MDD / Neuromodulation",
+      "evidenceRole": "Multicenter RCT",
+      "coreNumber": 50,
+      "coreStatus": "Approved core",
+      "caveat": "Device blinding/expectancy; emerging technology",
+      "evidenceReview": "To review",
+      "canonicalFilename": "Wu 2026 - Portable tACS for Major Depression.pdf",
+      "accessStatus": "Approved; source identified; PDF not yet in Core PDFs",
+      "sourceType": "Publisher/open article page",
+      "sourceUrl": "https://www.nature.com/articles/s41746-026-02575-9",
+      "priority": "P2",
+      "nextAction": "Verify direct PDF access, then download and save",
+      "notes": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "MDD / Neuromodulation",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-051",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Rush et al. (1977), cognitive therapy vs pharmacotherapy for depression",
+      "year": 1977,
+      "domain": "Depression / CBT",
+      "evidenceRole": "Landmark psychotherapy trial",
+      "coreNumber": 51,
+      "coreStatus": "Approved core",
+      "caveat": "Small early trial; superiority claims should not be overgeneralized",
+      "evidenceReview": "Historical annotation required",
+      "canonicalFilename": "Rush 1977 - Cognitive Therapy vs Pharmacotherapy for Depression.pdf",
+      "accessStatus": "Approved classic; PDF retrieval/verification pending",
+      "sourceType": "Legacy archive or publisher/repository search",
+      "sourceUrl": "",
+      "priority": "P3",
+      "nextAction": "Search Drive/Papers archive first; verify exact article; then locate legal open copy if absent",
+      "notes": "Do not substitute a later review unless explicitly designated.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Depression / CBT",
+        "research core",
+        "P3"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-052",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Elkin et al. (1989), NIMH Treatment of Depression Collaborative Research Program",
+      "year": 1989,
+      "domain": "Depression / CBT / IPT",
+      "evidenceRole": "Landmark comparative trial",
+      "coreNumber": 52,
+      "coreStatus": "Approved core",
+      "caveat": "Site/therapist/severity effects complicate simple rankings",
+      "evidenceReview": "Historical annotation required",
+      "canonicalFilename": "Elkin 1989 - NIMH Depression Collaborative Research Program.pdf",
+      "accessStatus": "Approved classic; PDF retrieval/verification pending",
+      "sourceType": "Legacy archive or publisher/repository search",
+      "sourceUrl": "",
+      "priority": "P3",
+      "nextAction": "Search Drive/Papers archive first; verify exact article; then locate legal open copy if absent",
+      "notes": "Do not substitute a later review unless explicitly designated.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Depression / CBT / IPT",
+        "research core",
+        "P3"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-053",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Linehan et al. (1991), original DBT trial",
+      "year": 1991,
+      "domain": "BPD / Suicide / DBT",
+      "evidenceRole": "Landmark psychotherapy trial",
+      "coreNumber": 53,
+      "coreStatus": "Approved core",
+      "caveat": "Early small sample; DBT is not the only effective BPD treatment",
+      "evidenceReview": "Historical annotation required",
+      "canonicalFilename": "Linehan 1991 - DBT for Chronically Parasuicidal BPD.pdf",
+      "accessStatus": "Approved classic; PDF retrieval/verification pending",
+      "sourceType": "Legacy archive or publisher/repository search",
+      "sourceUrl": "",
+      "priority": "P3",
+      "nextAction": "Search Drive/Papers archive first; verify exact article; then locate legal open copy if absent",
+      "notes": "Do not substitute a later review unless explicitly designated.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "BPD / Suicide / DBT",
+        "research core",
+        "P3"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-054",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Resick et al. (2002), CPT vs prolonged exposure for PTSD",
+      "year": 2002,
+      "domain": "PTSD / Trauma Therapy",
+      "evidenceRole": "Landmark head-to-head trial",
+      "coreNumber": 54,
+      "coreStatus": "Approved core",
+      "caveat": "Specific population; later evidence broadens treatment options",
+      "evidenceReview": "Historical annotation required",
+      "canonicalFilename": "Resick 2002 - CPT vs Prolonged Exposure for PTSD.pdf",
+      "accessStatus": "Approved classic; PDF retrieval/verification pending",
+      "sourceType": "Legacy archive or publisher/repository search",
+      "sourceUrl": "",
+      "priority": "P3",
+      "nextAction": "Search Drive/Papers archive first; verify exact article; then locate legal open copy if absent",
+      "notes": "Do not substitute a later review unless explicitly designated.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "PTSD / Trauma Therapy",
+        "research core",
+        "P3"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-055",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "MTA Cooperative Group (1999), multimodal treatment study of ADHD",
+      "year": 1999,
+      "domain": "ADHD / Child Treatment",
+      "evidenceRole": "Landmark multimodal trial",
+      "coreNumber": 55,
+      "coreStatus": "Approved core",
+      "caveat": "Initial medication advantage should be read with long-term follow-up",
+      "evidenceReview": "Historical annotation required",
+      "canonicalFilename": "MTA 1999 - Multimodal Treatment Study of ADHD.pdf",
+      "accessStatus": "Approved classic; PDF retrieval/verification pending",
+      "sourceType": "Legacy archive or publisher/repository search",
+      "sourceUrl": "",
+      "priority": "P3",
+      "nextAction": "Search Drive/Papers archive first; verify exact article; then locate legal open copy if absent",
+      "notes": "Do not substitute a later review unless explicitly designated.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "ADHD / Child Treatment",
+        "research core",
+        "P3"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-056",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Rush et al. (2006), STAR-D acute and longer-term outcomes",
+      "year": 2006,
+      "domain": "Depression / Psychiatry",
+      "evidenceRole": "Landmark effectiveness study",
+      "coreNumber": 56,
+      "coreStatus": "Approved core",
+      "caveat": "Methodological debate around cumulative remission and later steps",
+      "evidenceReview": "Historical annotation required",
+      "canonicalFilename": "Rush 2006 - STAR-D Depression Outcomes.pdf",
+      "accessStatus": "Approved classic; PDF retrieval/verification pending",
+      "sourceType": "Legacy archive or publisher/repository search",
+      "sourceUrl": "",
+      "priority": "P3",
+      "nextAction": "Search Drive/Papers archive first; verify exact article; then locate legal open copy if absent",
+      "notes": "Do not substitute a later review unless explicitly designated.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Depression / Psychiatry",
+        "research core",
+        "P3"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-057",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Lieberman et al. (2005), CATIE antipsychotic effectiveness trial",
+      "year": 2005,
+      "domain": "Schizophrenia / Psychiatry",
+      "evidenceRole": "Landmark effectiveness trial",
+      "coreNumber": 57,
+      "coreStatus": "Approved core",
+      "caveat": "Drug-specific benefits/harms; not a simple class verdict",
+      "evidenceReview": "Historical annotation required",
+      "canonicalFilename": "Lieberman 2005 - CATIE Antipsychotic Effectiveness.pdf",
+      "accessStatus": "Approved classic; PDF retrieval/verification pending",
+      "sourceType": "Legacy archive or publisher/repository search",
+      "sourceUrl": "",
+      "priority": "P3",
+      "nextAction": "Search Drive/Papers archive first; verify exact article; then locate legal open copy if absent",
+      "notes": "Do not substitute a later review unless explicitly designated.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Schizophrenia / Psychiatry",
+        "research core",
+        "P3"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-058",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Felitti et al. (1998), Adverse Childhood Experiences Study",
+      "year": 1998,
+      "domain": "Trauma / Epidemiology",
+      "evidenceRole": "Landmark epidemiology",
+      "coreNumber": 58,
+      "coreStatus": "Approved core",
+      "caveat": "Do not use ACE score as individual diagnostic/prognostic test",
+      "evidenceReview": "Historical annotation required",
+      "canonicalFilename": "Felitti 1998 - Adverse Childhood Experiences Study.pdf",
+      "accessStatus": "Approved classic; PDF retrieval/verification pending",
+      "sourceType": "Legacy archive or publisher/repository search",
+      "sourceUrl": "",
+      "priority": "P3",
+      "nextAction": "Search Drive/Papers archive first; verify exact article; then locate legal open copy if absent",
+      "notes": "Do not substitute a later review unless explicitly designated.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Trauma / Epidemiology",
+        "research core",
+        "P3"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-059",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Lovaas (1987), early intensive behavioral intervention for autism",
+      "year": 1987,
+      "domain": "Autism / History",
+      "evidenceRole": "Historically influential intervention study",
+      "coreNumber": 59,
+      "coreStatus": "Approved core",
+      "caveat": "Major methodological and historical caveats; neurodiversity annotation essential",
+      "evidenceReview": "Historical annotation required",
+      "canonicalFilename": "Lovaas 1987 - Early Intensive Behavioral Intervention for Autism.pdf",
+      "accessStatus": "Approved classic; PDF retrieval/verification pending",
+      "sourceType": "Legacy archive or publisher/repository search",
+      "sourceUrl": "",
+      "priority": "P3",
+      "nextAction": "Search Drive/Papers archive first; verify exact article; then locate legal open copy if absent",
+      "notes": "Do not substitute a later review unless explicitly designated.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Autism / History",
+        "research core",
+        "P3"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-060",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Kellam et al. (2008), Good Behavior Game long-term prevention findings",
+      "year": 2008,
+      "domain": "Prevention / School Mental Health",
+      "evidenceRole": "Landmark prevention research",
+      "coreNumber": 60,
+      "coreStatus": "Approved core",
+      "caveat": "Long-term effects vary by cohort, sex, baseline risk, implementation",
+      "evidenceReview": "Historical annotation required",
+      "canonicalFilename": "Kellam 2008 - Good Behavior Game Long-Term Outcomes.pdf",
+      "accessStatus": "Approved classic; PDF retrieval/verification pending",
+      "sourceType": "Legacy archive or publisher/repository search",
+      "sourceUrl": "",
+      "priority": "P3",
+      "nextAction": "Search Drive/Papers archive first; verify exact article; then locate legal open copy if absent",
+      "notes": "Do not substitute a later review unless explicitly designated.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Prevention / School Mental Health",
+        "research core",
+        "P3"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-061",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Robins & Guze (1970), diagnostic validity framework",
+      "year": 1970,
+      "domain": "Diagnosis / Nosology",
+      "evidenceRole": "Foundational methods paper",
+      "coreNumber": 61,
+      "coreStatus": "Approved core",
+      "caveat": "Validity remains distinct from reliability; few biological gold standards",
+      "evidenceReview": "Historical annotation required",
+      "canonicalFilename": "Robins 1970 - Establishment of Diagnostic Validity.pdf",
+      "accessStatus": "Approved classic; PDF retrieval/verification pending",
+      "sourceType": "Legacy archive or publisher/repository search",
+      "sourceUrl": "",
+      "priority": "P3",
+      "nextAction": "Search Drive/Papers archive first; verify exact article; then locate legal open copy if absent",
+      "notes": "Do not substitute a later review unless explicitly designated.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Diagnosis / Nosology",
+        "research core",
+        "P3"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-062",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Feighner et al. (1972), operational diagnostic criteria",
+      "year": 1972,
+      "domain": "Diagnosis / Nosology",
+      "evidenceRole": "Foundational diagnostic paper",
+      "coreNumber": 62,
+      "coreStatus": "Approved core",
+      "caveat": "Operational criteria improved reliability, not necessarily validity",
+      "evidenceReview": "Historical annotation required",
+      "canonicalFilename": "Feighner 1972 - Diagnostic Criteria for Psychiatric Research.pdf",
+      "accessStatus": "Approved classic; PDF retrieval/verification pending",
+      "sourceType": "Legacy archive or publisher/repository search",
+      "sourceUrl": "",
+      "priority": "P3",
+      "nextAction": "Search Drive/Papers archive first; verify exact article; then locate legal open copy if absent",
+      "notes": "Do not substitute a later review unless explicitly designated.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Diagnosis / Nosology",
+        "research core",
+        "P3"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-063",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Luborsky et al. (1975), comparative psychotherapies and Dodo Bird finding",
+      "year": 1975,
+      "domain": "Psychotherapy Science",
+      "evidenceRole": "Foundational comparative review",
+      "coreNumber": 63,
+      "coreStatus": "Approved core",
+      "caveat": "'All therapies equal' is too broad; condition-specific differences matter",
+      "evidenceReview": "Historical annotation required",
+      "canonicalFilename": "Luborsky 1975 - Comparative Studies of Psychotherapies.pdf",
+      "accessStatus": "Approved classic; PDF retrieval/verification pending",
+      "sourceType": "Legacy archive or publisher/repository search",
+      "sourceUrl": "",
+      "priority": "P3",
+      "nextAction": "Search Drive/Papers archive first; verify exact article; then locate legal open copy if absent",
+      "notes": "Do not substitute a later review unless explicitly designated.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Psychotherapy Science",
+        "research core",
+        "P3"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-064",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Smith & Glass (1977), psychotherapy meta-analysis",
+      "year": 1977,
+      "domain": "Psychotherapy Science",
+      "evidenceRole": "Foundational meta-analysis",
+      "coreNumber": 64,
+      "coreStatus": "Approved core",
+      "caveat": "Early meta-analytic methods were crude by modern standards",
+      "evidenceReview": "Historical annotation required",
+      "canonicalFilename": "Smith 1977 - Meta-Analysis of Psychotherapy Outcomes.pdf",
+      "accessStatus": "Approved classic; PDF retrieval/verification pending",
+      "sourceType": "Legacy archive or publisher/repository search",
+      "sourceUrl": "",
+      "priority": "P3",
+      "nextAction": "Search Drive/Papers archive first; verify exact article; then locate legal open copy if absent",
+      "notes": "Do not substitute a later review unless explicitly designated.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Psychotherapy Science",
+        "research core",
+        "P3"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-065",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Foa & Kozak (1986), emotional processing theory of fear",
+      "year": 1986,
+      "domain": "Anxiety / Exposure",
+      "evidenceRole": "Foundational theory",
+      "coreNumber": 65,
+      "coreStatus": "Approved core",
+      "caveat": "Modern exposure emphasizes inhibitory learning/expectancy violation, not simple habituation",
+      "evidenceReview": "Historical annotation required",
+      "canonicalFilename": "Foa 1986 - Emotional Processing of Fear.pdf",
+      "accessStatus": "Approved classic; PDF retrieval/verification pending",
+      "sourceType": "Legacy archive or publisher/repository search",
+      "sourceUrl": "",
+      "priority": "P3",
+      "nextAction": "Search Drive/Papers archive first; verify exact article; then locate legal open copy if absent",
+      "notes": "Do not substitute a later review unless explicitly designated.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Anxiety / Exposure",
+        "research core",
+        "P3"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-066",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Olds et al. (1997), long-term nurse home-visiting prevention",
+      "year": 1997,
+      "domain": "Early Childhood / Prevention",
+      "evidenceRole": "Landmark prevention RCT follow-up",
+      "coreNumber": 66,
+      "coreStatus": "Approved core",
+      "caveat": "Effects vary across populations/sites/implementation",
+      "evidenceReview": "Historical annotation required",
+      "canonicalFilename": "Olds 1997 - Long-Term Effects of Nurse Home Visitation.pdf",
+      "accessStatus": "Approved classic; PDF retrieval/verification pending",
+      "sourceType": "Legacy archive or publisher/repository search",
+      "sourceUrl": "",
+      "priority": "P3",
+      "nextAction": "Search Drive/Papers archive first; verify exact article; then locate legal open copy if absent",
+      "notes": "Do not substitute a later review unless explicitly designated.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Early Childhood / Prevention",
+        "research core",
+        "P3"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-067",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Barlow et al. (2000), CBT, imipramine, and combination for panic disorder",
+      "year": 2000,
+      "domain": "Panic Disorder / CBT",
+      "evidenceRole": "Landmark comparative RCT",
+      "coreNumber": 67,
+      "coreStatus": "Approved core",
+      "caveat": "Medication context changed; long-term discontinuation matters",
+      "evidenceReview": "Historical annotation required",
+      "canonicalFilename": "Barlow 2000 - CBT and Imipramine for Panic Disorder.pdf",
+      "accessStatus": "Approved classic; PDF retrieval/verification pending",
+      "sourceType": "Legacy archive or publisher/repository search",
+      "sourceUrl": "",
+      "priority": "P3",
+      "nextAction": "Search Drive/Papers archive first; verify exact article; then locate legal open copy if absent",
+      "notes": "Do not substitute a later review unless explicitly designated.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Panic Disorder / CBT",
+        "research core",
+        "P3"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-068",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Caspi et al. (2002), MAOA x childhood maltreatment",
+      "year": 2002,
+      "domain": "Developmental Psychopathology / Genetics",
+      "evidenceRole": "Historically influential G×E study",
+      "coreNumber": 68,
+      "coreStatus": "Approved core",
+      "caveat": "Candidate-gene era requires major reproducibility caution",
+      "evidenceReview": "Historical annotation required",
+      "canonicalFilename": "Caspi 2002 - MAOA Maltreatment and Antisocial Behavior.pdf",
+      "accessStatus": "Approved classic; PDF retrieval/verification pending",
+      "sourceType": "Legacy archive or publisher/repository search",
+      "sourceUrl": "",
+      "priority": "P3",
+      "nextAction": "Search Drive/Papers archive first; verify exact article; then locate legal open copy if absent",
+      "notes": "Do not substitute a later review unless explicitly designated.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Developmental Psychopathology / Genetics",
+        "research core",
+        "P3"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-069",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "TADS (2004), fluoxetine, CBT, and combination for adolescent depression",
+      "year": 2004,
+      "domain": "Adolescent Depression",
+      "evidenceRole": "Landmark treatment trial",
+      "coreNumber": 69,
+      "coreStatus": "Approved core",
+      "caveat": "Acute and follow-up results differ; suicidality context matters",
+      "evidenceReview": "Historical annotation required",
+      "canonicalFilename": "TADS 2004 - Fluoxetine CBT and Combination for Adolescent Depression.pdf",
+      "accessStatus": "Approved classic; PDF retrieval/verification pending",
+      "sourceType": "Legacy archive or publisher/repository search",
+      "sourceUrl": "",
+      "priority": "P3",
+      "nextAction": "Search Drive/Papers archive first; verify exact article; then locate legal open copy if absent",
+      "notes": "Do not substitute a later review unless explicitly designated.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Adolescent Depression",
+        "research core",
+        "P3"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-070",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "POTS (2004), CBT/ERP, sertraline, and combination for pediatric OCD",
+      "year": 2004,
+      "domain": "Pediatric OCD",
+      "evidenceRole": "Landmark treatment trial",
+      "coreNumber": 70,
+      "coreStatus": "Approved core",
+      "caveat": "ERP specificity matters; not generic CBT",
+      "evidenceReview": "Historical annotation required",
+      "canonicalFilename": "POTS 2004 - CBT ERP Sertraline and Combination for Pediatric OCD.pdf",
+      "accessStatus": "Approved classic; PDF retrieval/verification pending",
+      "sourceType": "Legacy archive or publisher/repository search",
+      "sourceUrl": "",
+      "priority": "P3",
+      "nextAction": "Search Drive/Papers archive first; verify exact article; then locate legal open copy if absent",
+      "notes": "Do not substitute a later review unless explicitly designated.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Pediatric OCD",
+        "research core",
+        "P3"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-071",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "CAMS (2008), CBT, sertraline, and combination for childhood anxiety",
+      "year": 2008,
+      "domain": "Child Anxiety",
+      "evidenceRole": "Landmark treatment trial",
+      "coreNumber": 71,
+      "coreStatus": "Approved core",
+      "caveat": "Severity/social anxiety may moderate outcomes",
+      "evidenceReview": "Historical annotation required",
+      "canonicalFilename": "CAMS 2008 - CBT Sertraline and Combination for Childhood Anxiety.pdf",
+      "accessStatus": "Approved classic; PDF retrieval/verification pending",
+      "sourceType": "Legacy archive or publisher/repository search",
+      "sourceUrl": "",
+      "priority": "P3",
+      "nextAction": "Search Drive/Papers archive first; verify exact article; then locate legal open copy if absent",
+      "notes": "Do not substitute a later review unless explicitly designated.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Child Anxiety",
+        "research core",
+        "P3"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-072",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Kirsch et al. (2008), antidepressant benefit and baseline severity",
+      "year": 2008,
+      "domain": "Depression / Pharmacotherapy",
+      "evidenceRole": "Contested meta-analysis",
+      "coreNumber": 72,
+      "coreStatus": "Approved core",
+      "caveat": "Interpretation heavily debated; efficacy vs magnitude distinction",
+      "evidenceReview": "Historical annotation required",
+      "canonicalFilename": "Kirsch 2008 - Antidepressant Benefit and Depression Severity.pdf",
+      "accessStatus": "Approved classic; PDF retrieval/verification pending",
+      "sourceType": "Legacy archive or publisher/repository search",
+      "sourceUrl": "",
+      "priority": "P3",
+      "nextAction": "Search Drive/Papers archive first; verify exact article; then locate legal open copy if absent",
+      "notes": "Do not substitute a later review unless explicitly designated.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Depression / Pharmacotherapy",
+        "research core",
+        "P3"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-073",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Rosenhan (1973), On Being Sane in Insane Places",
+      "year": 1973,
+      "domain": "Psychiatry / History",
+      "evidenceRole": "Historical/critical classic",
+      "coreNumber": 73,
+      "coreStatus": "Approved core",
+      "caveat": "Major credibility and historical-verification caveat",
+      "evidenceReview": "Historical annotation required",
+      "canonicalFilename": "Rosenhan 1973 - On Being Sane in Insane Places.pdf",
+      "accessStatus": "Approved classic; PDF retrieval/verification pending",
+      "sourceType": "Legacy archive or publisher/repository search",
+      "sourceUrl": "",
+      "priority": "P3",
+      "nextAction": "Search Drive/Papers archive first; verify exact article; then locate legal open copy if absent",
+      "notes": "Do not substitute a later review unless explicitly designated.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Psychiatry / History",
+        "research core",
+        "P3"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-074",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Rutter et al. (1970), Isle of Wight child psychiatric epidemiology",
+      "year": 1970,
+      "domain": "Developmental Psychopathology",
+      "evidenceRole": "Foundational epidemiology",
+      "coreNumber": 74,
+      "coreStatus": "Approved core",
+      "caveat": "Diagnostic methods and prevalence estimates evolved",
+      "evidenceReview": "Historical annotation required",
+      "canonicalFilename": "Rutter 1970 - Isle of Wight Child Psychiatric Epidemiology.pdf",
+      "accessStatus": "Approved classic; PDF retrieval/verification pending",
+      "sourceType": "Legacy archive or publisher/repository search",
+      "sourceUrl": "",
+      "priority": "P3",
+      "nextAction": "Search Drive/Papers archive first; verify exact article; then locate legal open copy if absent",
+      "notes": "Do not substitute a later review unless explicitly designated.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Developmental Psychopathology",
+        "research core",
+        "P3"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-075",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Caspi et al. (2003), serotonin transporter, stress, and depression",
+      "year": 2003,
+      "domain": "Psychiatric Genetics / Methods",
+      "evidenceRole": "Historical caution collection",
+      "coreNumber": 75,
+      "coreStatus": "Approved core",
+      "caveat": "Important primarily as reproducibility/methodological lesson",
+      "evidenceReview": "Historical annotation required",
+      "canonicalFilename": "Caspi 2003 - 5-HTTLPR Stress and Depression.pdf",
+      "accessStatus": "Approved classic; PDF retrieval/verification pending",
+      "sourceType": "Legacy archive or publisher/repository search",
+      "sourceUrl": "",
+      "priority": "P3",
+      "nextAction": "Search Drive/Papers archive first; verify exact article; then locate legal open copy if absent",
+      "notes": "Do not substitute a later review unless explicitly designated.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Psychiatric Genetics / Methods",
+        "research core",
+        "P3"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-076",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Miklowitz et al. (2003), family-focused treatment for bipolar disorder",
+      "year": 2003,
+      "domain": "Bipolar / Family Therapy",
+      "evidenceRole": "Gap-filling core evidence",
+      "coreNumber": 76,
+      "coreStatus": "Approved core target",
+      "caveat": "Select canonical FFT RCT/review; ensure relapse-prevention evidence represented",
+      "evidenceReview": "Strengths/limitations review pending",
+      "canonicalFilename": "Miklowitz 2003 - Family-Focused Treatment for Bipolar Disorder.pdf",
+      "accessStatus": "Companion/source identified; original canonical PDF still to verify",
+      "sourceType": "Open companion review",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2184903/",
+      "priority": "P2",
+      "nextAction": "Verify original FFT RCT PDF; use companion review only if core tracker designates it",
+      "notes": "Use as bipolar family-focused-treatment anchor; verify whether a specific original FFT RCT PDF is also legally open before storing a second file.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Bipolar / Family Therapy",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-077",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Miklowitz et al. (2007), STEP-BD psychosocial treatment for bipolar depression",
+      "year": 2007,
+      "domain": "Bipolar / Psychotherapy",
+      "evidenceRole": "Gap-filling core evidence",
+      "coreNumber": 77,
+      "coreStatus": "Approved core target",
+      "caveat": "Select representative intensive-psychotherapy paper; avoid redundant STEP-BD PDFs",
+      "evidenceReview": "Strengths/limitations review pending",
+      "canonicalFilename": "Miklowitz 2007 - STEP-BD Psychosocial Treatment for Bipolar Depression.pdf",
+      "accessStatus": "Free full text confirmed",
+      "sourceType": "PMC/open repository",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3876031/",
+      "priority": "P1",
+      "nextAction": "Download PDF and save",
+      "notes": "Use one representative STEP-BD psychotherapy paper to avoid redundant PDFs.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Bipolar / Psychotherapy",
+        "research core",
+        "P1"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-078",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Kane et al. (2016), RAISE-ETP NAVIGATE for first-episode psychosis",
+      "year": 2016,
+      "domain": "First-Episode Psychosis / Systems Care",
+      "evidenceRole": "Gap-filling core evidence",
+      "coreNumber": 78,
+      "coreStatus": "Approved core target",
+      "caveat": "Canonical free full-text trial/source still to verify",
+      "evidenceReview": "Strengths/limitations review pending",
+      "canonicalFilename": "Kane 2016 - NAVIGATE First-Episode Psychosis.pdf",
+      "accessStatus": "Free full text confirmed",
+      "sourceType": "PMC/open repository",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4981493/",
+      "priority": "P1",
+      "nextAction": "Download PDF and save",
+      "notes": "Canonical coordinated-specialty-care anchor. N=404 across 34 clinics; quality of life, symptoms, and work/school outcomes.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "First-Episode Psychosis / Systems Care",
+        "research core",
+        "P1"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-079",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Morrison et al. (2018), CBT and antipsychotic treatment in psychosis",
+      "year": 2018,
+      "domain": "Psychosis / CBT",
+      "evidenceRole": "Gap-filling core evidence",
+      "coreNumber": 79,
+      "coreStatus": "Approved core target",
+      "caveat": "Choose one high-quality core paper rather than multiple overlapping PDFs",
+      "evidenceReview": "Strengths/limitations review pending",
+      "canonicalFilename": "Morrison 2018 - CBT and Antipsychotic Treatment for Psychosis.pdf",
+      "accessStatus": "Free full text confirmed",
+      "sourceType": "PMC/open repository",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6048761/",
+      "priority": "P1",
+      "nextAction": "Download PDF and save",
+      "notes": "Use one high-quality psychosis-CBT anchor rather than accumulating overlapping trials.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Psychosis / CBT",
+        "research core",
+        "P1"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-080",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Lock et al. (2010), family-based treatment vs adolescent-focused therapy for anorexia",
+      "year": 2010,
+      "domain": "Eating Disorders / Adolescents",
+      "evidenceRole": "Gap-filling classic",
+      "coreNumber": 80,
+      "coreStatus": "Approved core target",
+      "caveat": "Canonical free full-text source to verify",
+      "evidenceReview": "Strengths/limitations review pending",
+      "canonicalFilename": "Lock 2010 - Family-Based Treatment for Adolescent Anorexia.pdf",
+      "accessStatus": "Free full text confirmed",
+      "sourceType": "PMC/open repository",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3038846/",
+      "priority": "P1",
+      "nextAction": "Download PDF and save",
+      "notes": "Canonical adolescent anorexia FBT RCT; PMCID PMC3038846.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Eating Disorders / Adolescents",
+        "research core",
+        "P1"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-081",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Fairburn et al. (2015), CBT-E vs IPT for eating disorders",
+      "year": 2015,
+      "domain": "Eating Disorders / Psychotherapy",
+      "evidenceRole": "Gap-filling core evidence",
+      "coreNumber": 81,
+      "coreStatus": "Approved core target",
+      "caveat": "Open-access adult/transdiagnostic eating-disorder anchor",
+      "evidenceReview": "Strengths/limitations review pending",
+      "canonicalFilename": "Fairburn 2015 - CBT-E vs IPT for Eating Disorders.pdf",
+      "accessStatus": "Free full text confirmed",
+      "sourceType": "PMC/open repository",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4461007/",
+      "priority": "P1",
+      "nextAction": "Download PDF and save",
+      "notes": "Adult/transdiagnostic eating-disorder psychotherapy anchor.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Eating Disorders / Psychotherapy",
+        "research core",
+        "P1"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-082",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Rubak et al. (2005), motivational interviewing systematic review",
+      "year": 2005,
+      "domain": "Substance Use / MI",
+      "evidenceRole": "Gap-filling classic",
+      "coreNumber": 82,
+      "coreStatus": "Approved core target",
+      "caveat": "Select a canonical efficacy/source paper with free full text",
+      "evidenceReview": "Strengths/limitations review pending",
+      "canonicalFilename": "Rubak 2005 - Motivational Interviewing Systematic Review.pdf",
+      "accessStatus": "Free evidence source confirmed; canonical historical anchor may differ",
+      "sourceType": "Open evidence source",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1463134/",
+      "priority": "P2",
+      "nextAction": "Verify retained evidence anchor matches source before saving",
+      "notes": "Use the open systematic review/meta-analysis as the PDF evidence anchor. Pair database metadata with Miller, Benefield & Tonigan (1993) and Project MATCH MET as historical citations; the original 1993 paper is not reliably free full text.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Substance Use / MI",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-083",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Hunt et al. (2021), contingency management for substance-use disorders",
+      "year": 2021,
+      "domain": "Substance Use / Behavioral Treatment",
+      "evidenceRole": "Gap-filling core evidence",
+      "coreNumber": 83,
+      "coreStatus": "Approved core target",
+      "caveat": "Prefer strong systematic review/meta-analysis",
+      "evidenceReview": "Strengths/limitations review pending",
+      "canonicalFilename": "Hunt 2021 - Contingency Management for Substance Use Disorders.pdf",
+      "accessStatus": "Free full text confirmed",
+      "sourceType": "PMC/open repository",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7916027/",
+      "priority": "P1",
+      "nextAction": "Download PDF and save",
+      "notes": "Behavioral-treatment anchor for substance-use disorders.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Substance Use / Behavioral Treatment",
+        "research core",
+        "P1"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-084",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Espie et al. (2020), digital CBT-I efficacy trial",
+      "year": 2020,
+      "domain": "Insomnia / Behavioral Sleep Medicine",
+      "evidenceRole": "Gap-filling core evidence",
+      "coreNumber": 84,
+      "coreStatus": "Approved core target",
+      "caveat": "Choose one definitive free full-text source",
+      "evidenceReview": "Strengths/limitations review pending",
+      "canonicalFilename": "Espie 2020 - Digital CBT-I Efficacy Trial.pdf",
+      "accessStatus": "Free full text confirmed",
+      "sourceType": "Open publisher",
+      "sourceUrl": "https://www.jmir.org/2020/4/e15841/",
+      "priority": "P1",
+      "nextAction": "Download PDF and save",
+      "notes": "Behavioral sleep-medicine anchor; retain one definitive CBT-I PDF unless a superior classic open source replaces it.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Insomnia / Behavioral Sleep Medicine",
+        "research core",
+        "P1"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-085",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Bateman & Fonagy (2009), mentalization-based treatment for BPD",
+      "year": 2009,
+      "domain": "BPD / MBT",
+      "evidenceRole": "Gap-filling classic",
+      "coreNumber": 85,
+      "coreStatus": "Approved core target",
+      "caveat": "Canonical free full-text source to verify",
+      "evidenceReview": "Strengths/limitations review pending",
+      "canonicalFilename": "Bateman 2009 - Mentalization-Based Treatment for BPD.pdf",
+      "accessStatus": "Original landmark RCT not reliably open; companion review confirmed",
+      "sourceType": "Open companion review",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4467231/",
+      "priority": "P3",
+      "nextAction": "Search Drive for exact original; otherwise keep citation plus companion review, clearly labeled",
+      "notes": "Keep the 2009 RCT citation in metadata (Am J Psychiatry 166:1355-1364, doi:10.1176/appi.ajp.2009.09040539). Store this open Bateman/Fonagy review as the legal PDF companion unless the original becomes legally available.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "BPD / MBT",
+        "research core",
+        "P3"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-086",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Giesen-Bloo et al. (2006), schema-focused vs transference-focused psychotherapy",
+      "year": 2006,
+      "domain": "BPD / Psychotherapy",
+      "evidenceRole": "Gap-filling classic",
+      "coreNumber": 86,
+      "coreStatus": "Approved core target",
+      "caveat": "Canonical free full-text source to verify",
+      "evidenceReview": "Strengths/limitations review pending",
+      "canonicalFilename": "Giesen-Bloo 2006 - Schema Therapy vs Transference-Focused Psychotherapy.pdf",
+      "accessStatus": "Publisher article accessible; PDF access needs check",
+      "sourceType": "Publisher article",
+      "sourceUrl": "https://jamanetwork.com/journals/jamapsychiatry/fullarticle/209673",
+      "priority": "P2",
+      "nextAction": "Check legal PDF access; search Drive exact copy if publisher blocks download",
+      "notes": "Head-to-head specialist psychotherapy trial. If the publisher PDF is access-restricted, retain citation plus open BPD psychotherapy review instead of an unauthorized copy.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "BPD / Psychotherapy",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-087",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Simpson et al. (2013), ERP/CBT vs risperidone augmentation for OCD",
+      "year": 2013,
+      "domain": "OCD / ERP",
+      "evidenceRole": "Gap-filling classic",
+      "coreNumber": 87,
+      "coreStatus": "Approved core target",
+      "caveat": "Choose adult ERP anchor distinct from POTS",
+      "evidenceReview": "Strengths/limitations review pending",
+      "canonicalFilename": "Simpson 2013 - CBT ERP vs Risperidone for OCD.pdf",
+      "accessStatus": "Free full text confirmed",
+      "sourceType": "PMC/open repository",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3955365/",
+      "priority": "P1",
+      "nextAction": "Download PDF and save",
+      "notes": "Chosen as the open adult ERP anchor. The 2005 Foa et al. EX/RP vs clomipramine landmark trial remains a key citation but is not reliably free full text.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "OCD / ERP",
+        "research core",
+        "P1"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-088",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "O'Hara et al. (2000), interpersonal psychotherapy for postpartum depression",
+      "year": 2000,
+      "domain": "Perinatal Mental Health / IPT",
+      "evidenceRole": "Gap-filling core evidence",
+      "coreNumber": 88,
+      "coreStatus": "Approved core target",
+      "caveat": "Choose landmark or definitive free full-text trial",
+      "evidenceReview": "Strengths/limitations review pending",
+      "canonicalFilename": "OHara 2000 - Interpersonal Psychotherapy for Postpartum Depression.pdf",
+      "accessStatus": "Publisher article accessible; open companion also known",
+      "sourceType": "Publisher plus open companion",
+      "sourceUrl": "https://jamanetwork.com/journals/jamapsychiatry/fullarticle/481669",
+      "priority": "P2",
+      "nextAction": "Check publisher PDF; if unavailable search Drive, preserve companion separately",
+      "notes": "Canonical postpartum IPT RCT. Open companion treatment paper: https://pmc.ncbi.nlm.nih.gov/articles/PMC3330386/",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Perinatal Mental Health / IPT",
+        "research core",
+        "P2"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-089",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Unutzer et al. (2002), IMPACT collaborative care for late-life depression",
+      "year": 2002,
+      "domain": "Geriatric Depression / Integrated Care",
+      "evidenceRole": "Gap-filling classic",
+      "coreNumber": 89,
+      "coreStatus": "Approved core target",
+      "caveat": "Primary-care collaborative-care anchor",
+      "evidenceReview": "Strengths/limitations review pending",
+      "canonicalFilename": "Unutzer 2002 - IMPACT Collaborative Care for Late-Life Depression.pdf",
+      "accessStatus": "Free full text confirmed",
+      "sourceType": "PMC/open repository",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1360390/",
+      "priority": "P1",
+      "nextAction": "Download PDF and save",
+      "notes": "Primary-care collaborative-care anchor for older adults.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Geriatric Depression / Integrated Care",
+        "research core",
+        "P1"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-090",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Kroenke, Spitzer & Williams (2001), PHQ-9 validation",
+      "year": 2001,
+      "domain": "Assessment / Depression",
+      "evidenceRole": "Assessment classic",
+      "coreNumber": 90,
+      "coreStatus": "Approved core target",
+      "caveat": "Keep original validation; pair interpretation with administration-effects paper #22",
+      "evidenceReview": "Strengths/limitations review pending",
+      "canonicalFilename": "Kroenke 2001 - PHQ-9 Validity.pdf",
+      "accessStatus": "Free full text confirmed",
+      "sourceType": "PMC/open repository",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1495268/",
+      "priority": "P1",
+      "nextAction": "Download PDF and save",
+      "notes": "Pair with paper #22 on administration effects when interpreting longitudinal scores.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Assessment / Depression",
+        "research core",
+        "P1"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-091",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Spitzer et al. (2006), GAD-7 validation",
+      "year": 2006,
+      "domain": "Assessment / Anxiety",
+      "evidenceRole": "Assessment classic",
+      "coreNumber": 91,
+      "coreStatus": "Approved core target",
+      "caveat": "Canonical free full-text source to verify",
+      "evidenceReview": "Strengths/limitations review pending",
+      "canonicalFilename": "Spitzer 2006 - GAD-7 Validation.pdf",
+      "accessStatus": "Free publisher PDF confirmed",
+      "sourceType": "Publisher PDF",
+      "sourceUrl": "https://jamanetwork.com/journals/jamainternalmedicine/articlepdf/410326/ioi60000.pdf",
+      "priority": "P1",
+      "nextAction": "Download PDF and save",
+      "notes": "Original validation paper; screening/severity tool, not standalone diagnosis.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Assessment / Anxiety",
+        "research core",
+        "P1"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-092",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Forkus et al. (2023), PCL-5 psychometric systematic review",
+      "year": 2023,
+      "domain": "Assessment / PTSD",
+      "evidenceRole": "Assessment core evidence",
+      "coreNumber": 92,
+      "coreStatus": "Approved core target",
+      "caveat": "Prefer psychometric systematic review over redundant early validations",
+      "evidenceReview": "Strengths/limitations review pending",
+      "canonicalFilename": "Forkus 2023 - PCL-5 Psychometric Systematic Review.pdf",
+      "accessStatus": "Free full text confirmed",
+      "sourceType": "PMC/open repository",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10292741/",
+      "priority": "P1",
+      "nextAction": "Download PDF and save",
+      "notes": "Prefer this synthesis over keeping multiple redundant early validation PDFs.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Assessment / PTSD",
+        "research core",
+        "P1"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-093",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Kessler et al. (2007), ASRS Screener validation",
+      "year": 2007,
+      "domain": "Assessment / Adult ADHD",
+      "evidenceRole": "Assessment classic",
+      "coreNumber": 93,
+      "coreStatus": "Approved core target",
+      "caveat": "Emphasize screening vs diagnosis; verify canonical full text",
+      "evidenceReview": "Strengths/limitations review pending",
+      "canonicalFilename": "Kessler 2007 - ASRS Screener Validation.pdf",
+      "accessStatus": "Free full text confirmed",
+      "sourceType": "PMC/open repository",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2044504/",
+      "priority": "P1",
+      "nextAction": "Download PDF and save",
+      "notes": "Canonical accessible ASRS validation. Explicitly tag ASRS as a screening/case-finding instrument rather than a diagnostic test.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Assessment / Adult ADHD",
+        "research core",
+        "P1"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-094",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Posner et al. (2011), C-SSRS initial validity",
+      "year": 2011,
+      "domain": "Assessment / Suicide Risk",
+      "evidenceRole": "Assessment classic",
+      "coreNumber": 94,
+      "coreStatus": "Approved core target",
+      "caveat": "Include what scale can and cannot predict; verify canonical full text",
+      "evidenceReview": "Strengths/limitations review pending",
+      "canonicalFilename": "Posner 2011 - C-SSRS Initial Validity.pdf",
+      "accessStatus": "Free full text confirmed",
+      "sourceType": "PMC/open repository",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3893686/",
+      "priority": "P1",
+      "nextAction": "Download PDF and save",
+      "notes": "Three multisite studies. Store with annotation that risk scales structure assessment but do not predict individual suicide with certainty.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Assessment / Suicide Risk",
+        "research core",
+        "P1"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "core-095",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Clinical Research Core",
+      "resourceType": "Research article",
+      "title": "Sheehan et al. (1998), MINI development and validation",
+      "year": 1998,
+      "domain": "Assessment / Diagnostic Interview",
+      "evidenceRole": "Assessment classic",
+      "coreNumber": 95,
+      "coreStatus": "Approved core target",
+      "caveat": "Use as structured-diagnosis anchor; verify canonical source",
+      "evidenceReview": "Strengths/limitations review pending",
+      "canonicalFilename": "Sheehan 1998 - MINI Development and Validation.pdf",
+      "accessStatus": "Free publisher PDF confirmed",
+      "sourceType": "Publisher PDF",
+      "sourceUrl": "https://www.psychiatrist.com/jcp/mini-international-neuropsychiatric-interview-mini/",
+      "priority": "P1",
+      "nextAction": "Download publisher PDF and save",
+      "notes": "Publisher explicitly offers a free PDF. Structured diagnostic interview anchor; validation against longer interviews and expert assessment.",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Assessment / Diagnostic Interview",
+        "research core",
+        "P1"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "assessment-001-scas",
+      "section": "06 Assessments & Screening Tools",
+      "collection": "Clinical Assessment Decision-Support Library",
+      "resourceType": "Assessment / screening tool",
+      "title": "Spence Children’s Anxiety Scale",
+      "abbreviation": "SCAS",
+      "year": null,
+      "domain": "Anxiety",
+      "constructFocus": "Child self-report",
+      "ageRange": "8-15 (verify exact form)",
+      "clinicalPurpose": [
+        "Screening",
+        "severity",
+        "monitoring"
+      ],
+      "instrumentType": "Standardized measure",
+      "respondent": [
+        "Child"
+      ],
+      "adminTime": "~10 min",
+      "telehealth": "Yes",
+      "repeatMeasure": "Yes",
+      "accessStatus": "Freely available; copyrighted",
+      "copyrightCaution": "Copyrighted; no modification or unauthorized electronic conversion",
+      "interpretiveLimit": "Does not diagnose an anxiety disorder",
+      "evidenceStrength": "High",
+      "outpatientUtility": "High",
+      "progressUtility": "High",
+      "nextAction": "Verify version, norms, translations, and whether two files differ",
+      "sourceUrl": "https://www.scaswebsite.com/",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Anxiety",
+        "Screening; severity; monitoring",
+        "Standardized measure"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "assessment-002-dsm-5-tr-severity-measure-for-gad-child-11-17",
+      "section": "06 Assessments & Screening Tools",
+      "collection": "Clinical Assessment Decision-Support Library",
+      "resourceType": "Assessment / screening tool",
+      "title": "DSM-5-TR Severity Measure for GAD, Child 11-17",
+      "abbreviation": "",
+      "year": null,
+      "domain": "Anxiety",
+      "constructFocus": "Child self-report",
+      "ageRange": "11-17",
+      "clinicalPurpose": [
+        "Severity",
+        "monitoring"
+      ],
+      "instrumentType": "Standardized/emerging measure",
+      "respondent": [
+        "Child"
+      ],
+      "adminTime": "Brief",
+      "telehealth": "Yes",
+      "repeatMeasure": "Yes",
+      "accessStatus": "Freely available; copyrighted",
+      "copyrightCaution": "Use APA instructions; verify reproduction/electronic terms",
+      "interpretiveLimit": "Does not independently diagnose GAD",
+      "evidenceStrength": "Moderate",
+      "outpatientUtility": "High",
+      "progressUtility": "High",
+      "nextAction": "Confirm scoring, change guidance, and current form",
+      "sourceUrl": "https://www.psychiatry.org/psychiatrists/practice/dsm/educational-resources/assessment-measures",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Anxiety",
+        "Severity; monitoring",
+        "Standardized/emerging measure"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "assessment-003-dsm-5-tr-severity-measure-for-separation-anxiety-child-11-17",
+      "section": "06 Assessments & Screening Tools",
+      "collection": "Clinical Assessment Decision-Support Library",
+      "resourceType": "Assessment / screening tool",
+      "title": "DSM-5-TR Severity Measure for Separation Anxiety, Child 11-17",
+      "abbreviation": "",
+      "year": null,
+      "domain": "Anxiety",
+      "constructFocus": "Child self-report",
+      "ageRange": "11-17",
+      "clinicalPurpose": [
+        "Severity",
+        "monitoring"
+      ],
+      "instrumentType": "Standardized/emerging measure",
+      "respondent": [
+        "Child"
+      ],
+      "adminTime": "Brief",
+      "telehealth": "Yes",
+      "repeatMeasure": "Yes",
+      "accessStatus": "Freely available; copyrighted",
+      "copyrightCaution": "Use APA instructions; verify reproduction/electronic terms",
+      "interpretiveLimit": "Does not independently diagnose separation anxiety disorder",
+      "evidenceStrength": "Moderate",
+      "outpatientUtility": "High",
+      "progressUtility": "High",
+      "nextAction": "Confirm scoring and current form",
+      "sourceUrl": "https://www.psychiatry.org/psychiatrists/practice/dsm/educational-resources/assessment-measures",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Anxiety",
+        "Severity; monitoring",
+        "Standardized/emerging measure"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "assessment-004-aq",
+      "section": "06 Assessments & Screening Tools",
+      "collection": "Clinical Assessment Decision-Support Library",
+      "resourceType": "Assessment / screening tool",
+      "title": "Autism-Spectrum Quotient",
+      "abbreviation": "AQ",
+      "year": null,
+      "domain": "Autism traits",
+      "constructFocus": "Adult self-report",
+      "ageRange": "Adult (form in file uncertain)",
+      "clinicalPurpose": [
+        "Screening/trait description"
+      ],
+      "instrumentType": "Standardized measure",
+      "respondent": [
+        "Adult"
+      ],
+      "adminTime": "~10 min",
+      "telehealth": "Yes",
+      "repeatMeasure": "Limited",
+      "accessStatus": "Freely available but copyright/status verify",
+      "copyrightCaution": "Do not modify; confirm source and form",
+      "interpretiveLimit": "Not a diagnostic autism evaluation; vulnerable to false positives in clinical samples",
+      "evidenceStrength": "Moderate",
+      "outpatientUtility": "High",
+      "progressUtility": "Low",
+      "nextAction": "Identify exact AQ version and verify access terms",
+      "sourceUrl": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Autism traits",
+        "Screening/trait description",
+        "Standardized measure"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "assessment-005-raads-r",
+      "section": "06 Assessments & Screening Tools",
+      "collection": "Clinical Assessment Decision-Support Library",
+      "resourceType": "Assessment / screening tool",
+      "title": "Ritvo Autism Asperger Diagnostic Scale-Revised",
+      "abbreviation": "RAADS-R",
+      "year": null,
+      "domain": "Autism traits",
+      "constructFocus": "Adult self-report",
+      "ageRange": "Adult",
+      "clinicalPurpose": [
+        "Screening/diagnostic support"
+      ],
+      "instrumentType": "Standardized measure",
+      "respondent": [
+        "Adult"
+      ],
+      "adminTime": "20-30 min",
+      "telehealth": "Possible",
+      "repeatMeasure": "No/limited",
+      "accessStatus": "Access/copyright uncertain",
+      "copyrightCaution": "Do not treat an internet copy as permission",
+      "interpretiveLimit": "Cannot diagnose autism; specificity can be poor in referred/psychiatric samples",
+      "evidenceStrength": "Low-Moderate",
+      "outpatientUtility": "Moderate",
+      "progressUtility": "Low",
+      "nextAction": "Evidence audit, especially specificity and intended administration",
+      "sourceUrl": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Autism traits",
+        "Screening/diagnostic support",
+        "Standardized measure"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "assessment-006-cat-q",
+      "section": "06 Assessments & Screening Tools",
+      "collection": "Clinical Assessment Decision-Support Library",
+      "resourceType": "Assessment / screening tool",
+      "title": "Camouflaging Autistic Traits Questionnaire",
+      "abbreviation": "CAT-Q",
+      "year": null,
+      "domain": "Autistic camouflaging",
+      "constructFocus": "Adult self-report",
+      "ageRange": "Adult",
+      "clinicalPurpose": [
+        "Trait description",
+        "clinical formulation"
+      ],
+      "instrumentType": "Standardized measure",
+      "respondent": [
+        "Adult"
+      ],
+      "adminTime": "5-10 min",
+      "telehealth": "Yes",
+      "repeatMeasure": "Possible",
+      "accessStatus": "Access/copyright uncertain",
+      "copyrightCaution": "Verify electronic and reproduction permissions",
+      "interpretiveLimit": "Does not establish autism or quantify “how autistic” someone is",
+      "evidenceStrength": "Moderate",
+      "outpatientUtility": "High",
+      "progressUtility": "Possible",
+      "nextAction": "Verify scoring, populations, cross-cultural evidence",
+      "sourceUrl": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Autistic camouflaging",
+        "Trait description; clinical formulation",
+        "Standardized measure"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "assessment-007-tas-20",
+      "section": "06 Assessments & Screening Tools",
+      "collection": "Clinical Assessment Decision-Support Library",
+      "resourceType": "Assessment / screening tool",
+      "title": "Toronto Alexithymia Scale (likely TAS-20)",
+      "abbreviation": "TAS-20?",
+      "year": null,
+      "domain": "Alexithymia",
+      "constructFocus": "Self-report",
+      "ageRange": "File/form uncertain",
+      "clinicalPurpose": [
+        "Trait description",
+        "formulation"
+      ],
+      "instrumentType": "Standardized measure",
+      "respondent": [
+        "Likely adult"
+      ],
+      "adminTime": "5-10 min",
+      "telehealth": "Yes",
+      "repeatMeasure": "Possible",
+      "accessStatus": "Copyright/licensing uncertain",
+      "copyrightCaution": "Identify instrument before use; scoring copy may be unofficial",
+      "interpretiveLimit": "Alexithymia is transdiagnostic and does not establish autism",
+      "evidenceStrength": "Unknown",
+      "outpatientUtility": "High",
+      "progressUtility": "Possible",
+      "nextAction": "Identify exact tool, source, version, and permission status",
+      "sourceUrl": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Alexithymia",
+        "Trait description; formulation",
+        "Standardized measure"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "assessment-008-mfq-ambiguous",
+      "section": "06 Assessments & Screening Tools",
+      "collection": "Clinical Assessment Decision-Support Library",
+      "resourceType": "Assessment / screening tool",
+      "title": "Mindful Attention Awareness Scale? / MFQ?",
+      "abbreviation": "MFQ (ambiguous)",
+      "year": null,
+      "domain": "Mindfulness or mood (uncertain)",
+      "constructFocus": "Adult self-report",
+      "ageRange": "Adult",
+      "clinicalPurpose": [
+        "Unknown until identified"
+      ],
+      "instrumentType": "Standardized measure?",
+      "respondent": [
+        "Adult"
+      ],
+      "adminTime": "Unknown",
+      "telehealth": "Unknown",
+      "repeatMeasure": "Unknown",
+      "accessStatus": "Unknown",
+      "copyrightCaution": "Do not use until exact instrument is identified",
+      "interpretiveLimit": "Unknown",
+      "evidenceStrength": "Unknown",
+      "outpatientUtility": "Unknown",
+      "progressUtility": "Unknown",
+      "nextAction": "Open file and resolve ambiguous abbreviation",
+      "sourceUrl": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Mindfulness or mood (uncertain)",
+        "Unknown until identified",
+        "Standardized measure?"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "assessment-009-executive-functioning-unidentified-form",
+      "section": "06 Assessments & Screening Tools",
+      "collection": "Clinical Assessment Decision-Support Library",
+      "resourceType": "Assessment / screening tool",
+      "title": "Executive Functioning (unidentified form)",
+      "abbreviation": "",
+      "year": null,
+      "domain": "Executive functioning",
+      "constructFocus": "Self-report/other unknown",
+      "ageRange": "Unknown",
+      "clinicalPurpose": [
+        "Functional screening"
+      ],
+      "instrumentType": "Unknown/possibly clinician-created",
+      "respondent": [
+        "Unknown"
+      ],
+      "adminTime": "Unknown",
+      "telehealth": "Unknown",
+      "repeatMeasure": "Unknown",
+      "accessStatus": "Unknown",
+      "copyrightCaution": "Identity and provenance unknown",
+      "interpretiveLimit": "Cannot infer ADHD or neuropsychological impairment without validation/context",
+      "evidenceStrength": "Unknown",
+      "outpatientUtility": "Unknown",
+      "progressUtility": "Unknown",
+      "nextAction": "Open and identify tool",
+      "sourceUrl": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Executive functioning",
+        "Functional screening",
+        "Unknown/possibly clinician-created"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "assessment-010-dsm-5-tr-level-2-inattention-parent-of-child-6-17",
+      "section": "06 Assessments & Screening Tools",
+      "collection": "Clinical Assessment Decision-Support Library",
+      "resourceType": "Assessment / screening tool",
+      "title": "DSM-5-TR Level 2 Inattention, Parent of Child 6-17",
+      "abbreviation": "",
+      "year": null,
+      "domain": "ADHD/inattention",
+      "constructFocus": "Parent report",
+      "ageRange": "6-17",
+      "clinicalPurpose": [
+        "Severity",
+        "monitoring"
+      ],
+      "instrumentType": "Standardized/emerging measure",
+      "respondent": [
+        "Parent"
+      ],
+      "adminTime": "Brief",
+      "telehealth": "Yes",
+      "repeatMeasure": "Yes",
+      "accessStatus": "Freely available; copyrighted",
+      "copyrightCaution": "Use APA instructions; verify reproduction/electronic terms",
+      "interpretiveLimit": "Does not diagnose ADHD or establish cross-setting impairment",
+      "evidenceStrength": "Moderate",
+      "outpatientUtility": "High",
+      "progressUtility": "High",
+      "nextAction": "Confirm underlying measure, scoring, and current form",
+      "sourceUrl": "https://www.psychiatry.org/psychiatrists/practice/dsm/educational-resources/assessment-measures",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "ADHD/inattention",
+        "Severity; monitoring",
+        "Standardized/emerging measure"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "assessment-011-dsm-5-tr-level-2-anxiety-parent-of-child-6-17",
+      "section": "06 Assessments & Screening Tools",
+      "collection": "Clinical Assessment Decision-Support Library",
+      "resourceType": "Assessment / screening tool",
+      "title": "DSM-5-TR Level 2 Anxiety, Parent of Child 6-17",
+      "abbreviation": "",
+      "year": null,
+      "domain": "Anxiety",
+      "constructFocus": "Parent report",
+      "ageRange": "6-17",
+      "clinicalPurpose": [
+        "Severity",
+        "monitoring"
+      ],
+      "instrumentType": "Standardized/emerging measure",
+      "respondent": [
+        "Parent"
+      ],
+      "adminTime": "Brief",
+      "telehealth": "Yes",
+      "repeatMeasure": "Yes",
+      "accessStatus": "Freely available; copyrighted",
+      "copyrightCaution": "Use APA instructions; retain one canonical access record",
+      "interpretiveLimit": "Does not independently diagnose an anxiety disorder",
+      "evidenceStrength": "Moderate",
+      "outpatientUtility": "High",
+      "progressUtility": "High",
+      "nextAction": "Compare duplicates and confirm current form",
+      "sourceUrl": "https://www.psychiatry.org/psychiatrists/practice/dsm/educational-resources/assessment-measures",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Anxiety",
+        "Severity; monitoring",
+        "Standardized/emerging measure"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "assessment-012-dsm-5-tr-level-1-cross-cutting-symptom-measure-parent-guardian-6-17",
+      "section": "06 Assessments & Screening Tools",
+      "collection": "Clinical Assessment Decision-Support Library",
+      "resourceType": "Assessment / screening tool",
+      "title": "DSM-5-TR Level 1 Cross-Cutting Symptom Measure, Parent/Guardian 6-17",
+      "abbreviation": "",
+      "year": null,
+      "domain": "Broad psychopathology",
+      "constructFocus": "Parent report",
+      "ageRange": "6-17",
+      "clinicalPurpose": [
+        "Broad screening",
+        "triage"
+      ],
+      "instrumentType": "Standardized/emerging measure",
+      "respondent": [
+        "Parent"
+      ],
+      "adminTime": "Brief",
+      "telehealth": "Yes",
+      "repeatMeasure": "Possible",
+      "accessStatus": "Freely available; copyrighted",
+      "copyrightCaution": "Use follow-up Level 2 measures/interview; verify current instructions",
+      "interpretiveLimit": "Broad symptom flags are not diagnoses",
+      "evidenceStrength": "Moderate",
+      "outpatientUtility": "High",
+      "progressUtility": "Possible",
+      "nextAction": "Map domains to follow-up pathways",
+      "sourceUrl": "https://www.psychiatry.org/psychiatrists/practice/dsm/educational-resources/assessment-measures",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Broad psychopathology",
+        "Broad screening; triage",
+        "Standardized/emerging measure"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "assessment-013-phq-9",
+      "section": "06 Assessments & Screening Tools",
+      "collection": "Clinical Assessment Decision-Support Library",
+      "resourceType": "Assessment / screening tool",
+      "title": "Patient Health Questionnaire-9",
+      "abbreviation": "PHQ-9",
+      "year": null,
+      "domain": "Depression",
+      "constructFocus": "Self-report",
+      "ageRange": "Adolescents/adults; validate by population",
+      "clinicalPurpose": [
+        "Screening",
+        "severity",
+        "monitoring"
+      ],
+      "instrumentType": "Standardized measure",
+      "respondent": [
+        "Client"
+      ],
+      "adminTime": "2-5 min",
+      "telehealth": "Yes",
+      "repeatMeasure": "Yes",
+      "accessStatus": "Freely available; copyright terms verify",
+      "copyrightCaution": "Item 9 requires direct risk follow-up; do not automate diagnosis",
+      "interpretiveLimit": "Does not diagnose MDD or replace suicide-risk assessment",
+      "evidenceStrength": "High",
+      "outpatientUtility": "High",
+      "progressUtility": "High",
+      "nextAction": "Verify local form, language versions, workflow for item 9",
+      "sourceUrl": "https://www.phqscreeners.com/",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Depression",
+        "Screening; severity; monitoring",
+        "Standardized measure"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "assessment-014-gad-7",
+      "section": "06 Assessments & Screening Tools",
+      "collection": "Clinical Assessment Decision-Support Library",
+      "resourceType": "Assessment / screening tool",
+      "title": "Generalized Anxiety Disorder-7",
+      "abbreviation": "GAD-7",
+      "year": null,
+      "domain": "Anxiety",
+      "constructFocus": "Self-report",
+      "ageRange": "Adolescents/adults; validate by population",
+      "clinicalPurpose": [
+        "Screening",
+        "severity",
+        "monitoring"
+      ],
+      "instrumentType": "Standardized measure",
+      "respondent": [
+        "Client"
+      ],
+      "adminTime": "2-5 min",
+      "telehealth": "Yes",
+      "repeatMeasure": "Yes",
+      "accessStatus": "Freely available; copyright terms verify",
+      "copyrightCaution": "Interpret with impairment, differential, and anxiety type",
+      "interpretiveLimit": "Does not diagnose GAD; may miss disorder-specific avoidance",
+      "evidenceStrength": "High",
+      "outpatientUtility": "High",
+      "progressUtility": "High",
+      "nextAction": "Confirm language versions and clinic scoring convention",
+      "sourceUrl": "https://www.phqscreeners.com/",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Anxiety",
+        "Screening; severity; monitoring",
+        "Standardized measure"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "assessment-015-basc-3",
+      "section": "06 Assessments & Screening Tools",
+      "collection": "Clinical Assessment Decision-Support Library",
+      "resourceType": "Assessment / screening tool",
+      "title": "Behavior Assessment System for Children, Third Edition",
+      "abbreviation": "BASC-3",
+      "year": null,
+      "domain": "Broad child behavior/emotional functioning",
+      "constructFocus": "Parent/teacher/self-report",
+      "ageRange": "Preschool-young adult; form-specific",
+      "clinicalPurpose": [
+        "Broad assessment",
+        "differential support",
+        "intervention planning"
+      ],
+      "instrumentType": "Commercial standardized measure",
+      "respondent": [
+        "Parent",
+        "Teacher",
+        "Child/Adolescent"
+      ],
+      "adminTime": "10-20 min/form",
+      "telehealth": "Platform dependent",
+      "repeatMeasure": "Not ideal without repeat-access cost",
+      "accessStatus": "Purchased/restricted; qualification required",
+      "copyrightCaution": "Do not reproduce sample items or use sample as test form",
+      "interpretiveLimit": "Does not diagnose; elevations require multi-source interpretation",
+      "evidenceStrength": "High",
+      "outpatientUtility": "Moderate",
+      "progressUtility": "Possible",
+      "nextAction": "Record actual Pearson access and qualification level",
+      "sourceUrl": "https://www.pearsonassessments.com/",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Broad child behavior/emotional functioning",
+        "Broad assessment; differential support; intervention planning",
+        "Commercial standardized measure"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "assessment-016-vineland-3",
+      "section": "06 Assessments & Screening Tools",
+      "collection": "Clinical Assessment Decision-Support Library",
+      "resourceType": "Assessment / screening tool",
+      "title": "Vineland Adaptive Behavior Scales, Third Edition",
+      "abbreviation": "Vineland-3",
+      "year": null,
+      "domain": "Adaptive functioning",
+      "constructFocus": "Interview/parent-teacher rating",
+      "ageRange": "Birth-90; form-specific",
+      "clinicalPurpose": [
+        "Adaptive assessment",
+        "IDD support",
+        "planning"
+      ],
+      "instrumentType": "Commercial standardized measure",
+      "respondent": [
+        "Caregiver",
+        "Teacher",
+        "Clinician interview"
+      ],
+      "adminTime": "~20-60 min",
+      "telehealth": "Possible with platform",
+      "repeatMeasure": "Possible",
+      "accessStatus": "Purchased/restricted; qualification required",
+      "copyrightCaution": "Do not administer from unverified PDF; use legitimate materials/scoring",
+      "interpretiveLimit": "Does not measure IQ or establish IDD by itself",
+      "evidenceStrength": "High",
+      "outpatientUtility": "Moderate",
+      "progressUtility": "Low-Possible",
+      "nextAction": "Compare duplicates; verify licensed access, scoring, forms",
+      "sourceUrl": "https://www.pearsonassessments.com/en-us/Store/Professional-Assessments/Behavior/Vineland-Adaptive-Behavior-Scales-%7C-Third-Edition/p/100001622",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Adaptive functioning",
+        "Adaptive assessment; IDD support; planning",
+        "Commercial standardized measure"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "assessment-017-sp-2",
+      "section": "06 Assessments & Screening Tools",
+      "collection": "Clinical Assessment Decision-Support Library",
+      "resourceType": "Assessment / screening tool",
+      "title": "Sensory Profile 2",
+      "abbreviation": "SP-2",
+      "year": null,
+      "domain": "Sensory processing patterns",
+      "constructFocus": "Caregiver/teacher report",
+      "ageRange": "Birth-14:11; form-specific",
+      "clinicalPurpose": [
+        "Functional profile",
+        "intervention planning"
+      ],
+      "instrumentType": "Commercial standardized measure",
+      "respondent": [
+        "Caregiver",
+        "Teacher"
+      ],
+      "adminTime": "5-20 min",
+      "telehealth": "Platform dependent",
+      "repeatMeasure": "Possible",
+      "accessStatus": "Purchased/restricted; qualification/access verify",
+      "copyrightCaution": "Do not reproduce forms; separate sensory patterns from diagnosis",
+      "interpretiveLimit": "Does not diagnose sensory processing disorder, autism, or ADHD",
+      "evidenceStrength": "Moderate-High",
+      "outpatientUtility": "Moderate",
+      "progressUtility": "Possible",
+      "nextAction": "Identify form types and legitimate scoring access",
+      "sourceUrl": "https://www.pearsonassessments.com/",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Sensory processing patterns",
+        "Functional profile; intervention planning",
+        "Commercial standardized measure"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "assessment-018-aasp",
+      "section": "06 Assessments & Screening Tools",
+      "collection": "Clinical Assessment Decision-Support Library",
+      "resourceType": "Assessment / screening tool",
+      "title": "Adolescent/Adult Sensory Profile",
+      "abbreviation": "AASP",
+      "year": null,
+      "domain": "Sensory processing patterns",
+      "constructFocus": "Self-report",
+      "ageRange": "11-65+ (verify)",
+      "clinicalPurpose": [
+        "Functional profile"
+      ],
+      "instrumentType": "Commercial standardized measure",
+      "respondent": [
+        "Adolescent/Adult"
+      ],
+      "adminTime": "10-15 min",
+      "telehealth": "Possible",
+      "repeatMeasure": "Possible",
+      "accessStatus": "Purchased/restricted",
+      "copyrightCaution": "Do not reproduce forms; verify scoring access",
+      "interpretiveLimit": "Does not diagnose autism or a sensory disorder",
+      "evidenceStrength": "Moderate",
+      "outpatientUtility": "Moderate",
+      "progressUtility": "Possible",
+      "nextAction": "Verify exact edition, norms, and licensed access",
+      "sourceUrl": "https://www.pearsonassessments.com/",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Sensory processing patterns",
+        "Functional profile",
+        "Commercial standardized measure"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "assessment-019-cast",
+      "section": "06 Assessments & Screening Tools",
+      "collection": "Clinical Assessment Decision-Support Library",
+      "resourceType": "Assessment / screening tool",
+      "title": "Childhood Autism Spectrum Test",
+      "abbreviation": "CAST",
+      "year": null,
+      "domain": "Autism screening",
+      "constructFocus": "Parent report",
+      "ageRange": "4-11 (verify)",
+      "clinicalPurpose": [
+        "Screening"
+      ],
+      "instrumentType": "Standardized measure",
+      "respondent": [
+        "Parent"
+      ],
+      "adminTime": "5-10 min",
+      "telehealth": "Yes",
+      "repeatMeasure": "No/limited",
+      "accessStatus": "Copyright/access verify",
+      "copyrightCaution": "Verify whether third-party PDF is authorized",
+      "interpretiveLimit": "Does not diagnose autism",
+      "evidenceStrength": "Moderate",
+      "outpatientUtility": "High",
+      "progressUtility": "Low",
+      "nextAction": "Verify original source, cutoff evidence, sex/cultural limitations",
+      "sourceUrl": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Autism screening",
+        "Screening",
+        "Standardized measure"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "assessment-020-mid",
+      "section": "06 Assessments & Screening Tools",
+      "collection": "Clinical Assessment Decision-Support Library",
+      "resourceType": "Assessment / screening tool",
+      "title": "Multidimensional Inventory of Dissociation",
+      "abbreviation": "MID",
+      "year": null,
+      "domain": "Dissociation",
+      "constructFocus": "Adult self-report + clinician interpretation",
+      "ageRange": "Adult; adolescent variant also found",
+      "clinicalPurpose": [
+        "Diagnostic support",
+        "symptom profiling"
+      ],
+      "instrumentType": "Standardized measure",
+      "respondent": [
+        "Client",
+        "Clinician"
+      ],
+      "adminTime": "Long",
+      "telehealth": "Possible",
+      "repeatMeasure": "Limited",
+      "accessStatus": "Freely distributed with conditions? verify",
+      "copyrightCaution": "Protect completed protocols; verify author terms; never reuse client copies as templates",
+      "interpretiveLimit": "Does not independently establish DID; requires differential assessment",
+      "evidenceStrength": "Moderate",
+      "outpatientUtility": "Low",
+      "progressUtility": "Low",
+      "nextAction": "Separate blank master from client data; verify v6/current scoring and privacy",
+      "sourceUrl": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Dissociation",
+        "Diagnostic support; symptom profiling",
+        "Standardized measure"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "assessment-021-des-ii",
+      "section": "06 Assessments & Screening Tools",
+      "collection": "Clinical Assessment Decision-Support Library",
+      "resourceType": "Assessment / screening tool",
+      "title": "Dissociative Experiences Scale-II",
+      "abbreviation": "DES-II",
+      "year": null,
+      "domain": "Dissociation",
+      "constructFocus": "Self-report",
+      "ageRange": "Adult",
+      "clinicalPurpose": [
+        "Screening"
+      ],
+      "instrumentType": "Standardized measure",
+      "respondent": [
+        "Client"
+      ],
+      "adminTime": "5-10 min",
+      "telehealth": "Yes",
+      "repeatMeasure": "Possible",
+      "accessStatus": "Copyright/access verify",
+      "copyrightCaution": "Verify source; elevated score needs clinical interview",
+      "interpretiveLimit": "Does not diagnose DID or distinguish causes of dissociation",
+      "evidenceStrength": "Moderate",
+      "outpatientUtility": "High",
+      "progressUtility": "Possible",
+      "nextAction": "Verify scoring and legitimate form",
+      "sourceUrl": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Dissociation",
+        "Screening",
+        "Standardized measure"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "assessment-022-tsc",
+      "section": "06 Assessments & Screening Tools",
+      "collection": "Clinical Assessment Decision-Support Library",
+      "resourceType": "Assessment / screening tool",
+      "title": "Trauma Symptom Checklist (exact tool uncertain)",
+      "abbreviation": "TSC?",
+      "year": null,
+      "domain": "Trauma symptoms",
+      "constructFocus": "Unknown",
+      "ageRange": "Unknown",
+      "clinicalPurpose": [
+        "Screening/severity"
+      ],
+      "instrumentType": "Standardized measure?",
+      "respondent": [
+        "Unknown"
+      ],
+      "adminTime": "Unknown",
+      "telehealth": "Unknown",
+      "repeatMeasure": "Unknown",
+      "accessStatus": "Likely restricted depending on version",
+      "copyrightCaution": "Do not use until exact version and rights are known",
+      "interpretiveLimit": "Cannot diagnose PTSD without identified tool and clinical assessment",
+      "evidenceStrength": "Unknown",
+      "outpatientUtility": "Unknown",
+      "progressUtility": "Unknown",
+      "nextAction": "Open and identify TSC-40 vs TSCC/TSCYC/etc.",
+      "sourceUrl": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Trauma symptoms",
+        "Screening/severity",
+        "Standardized measure?"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "assessment-023-pearls",
+      "section": "06 Assessments & Screening Tools",
+      "collection": "Clinical Assessment Decision-Support Library",
+      "resourceType": "Assessment / screening tool",
+      "title": "Pediatric ACEs and Related Life-events Screener",
+      "abbreviation": "PEARLS",
+      "year": null,
+      "domain": "Adversity/ACEs",
+      "constructFocus": "Parent/caregiver report",
+      "ageRange": "Child; form-specific",
+      "clinicalPurpose": [
+        "Risk/context screening"
+      ],
+      "instrumentType": "Standardized clinical screener",
+      "respondent": [
+        "Caregiver"
+      ],
+      "adminTime": "Brief",
+      "telehealth": "Possible",
+      "repeatMeasure": "Not ideal as symptom outcome",
+      "accessStatus": "Use governed by program terms; verify",
+      "copyrightCaution": "Trauma-informed administration; clarify mandated reporting and response plan",
+      "interpretiveLimit": "Does not diagnose trauma/PTSD or determine causality",
+      "evidenceStrength": "Moderate",
+      "outpatientUtility": "High",
+      "progressUtility": "No",
+      "nextAction": "Verify current implementation guidance and Arizona workflow",
+      "sourceUrl": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Adversity/ACEs",
+        "Risk/context screening",
+        "Standardized clinical screener"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "assessment-024-chede-q8",
+      "section": "06 Assessments & Screening Tools",
+      "collection": "Clinical Assessment Decision-Support Library",
+      "resourceType": "Assessment / screening tool",
+      "title": "Children’s Eating Disorder Examination Questionnaire, 8-item",
+      "abbreviation": "ChEDE-Q8",
+      "year": null,
+      "domain": "Eating disorder symptoms",
+      "constructFocus": "Child self-report",
+      "ageRange": "Child/adolescent; verify",
+      "clinicalPurpose": [
+        "Screening/severity"
+      ],
+      "instrumentType": "Standardized measure",
+      "respondent": [
+        "Child/Adolescent"
+      ],
+      "adminTime": "Brief",
+      "telehealth": "Possible",
+      "repeatMeasure": "Possible",
+      "accessStatus": "Copyright/access verify",
+      "copyrightCaution": "Confirm validated wording and scoring; do not modify casually",
+      "interpretiveLimit": "Does not diagnose an eating disorder or assess medical instability",
+      "evidenceStrength": "Moderate",
+      "outpatientUtility": "High",
+      "progressUtility": "Possible",
+      "nextAction": "Evidence/access audit and medical risk pathway",
+      "sourceUrl": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Eating disorder symptoms",
+        "Screening/severity",
+        "Standardized measure"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "assessment-025-bdi",
+      "section": "06 Assessments & Screening Tools",
+      "collection": "Clinical Assessment Decision-Support Library",
+      "resourceType": "Assessment / screening tool",
+      "title": "Beck Depression Inventory (version uncertain)",
+      "abbreviation": "BDI",
+      "year": null,
+      "domain": "Depression",
+      "constructFocus": "Self-report",
+      "ageRange": "Adolescent/adult; version-specific",
+      "clinicalPurpose": [
+        "Severity"
+      ],
+      "instrumentType": "Commercial standardized measure",
+      "respondent": [
+        "Client"
+      ],
+      "adminTime": "5-10 min",
+      "telehealth": "Possible",
+      "repeatMeasure": "Possible",
+      "accessStatus": "Purchased/restricted",
+      "copyrightCaution": "Do not reproduce or distribute; identify BDI-II and licensed access",
+      "interpretiveLimit": "Does not diagnose depression; item responses need clinical follow-up",
+      "evidenceStrength": "High",
+      "outpatientUtility": "High",
+      "progressUtility": "Possible",
+      "nextAction": "Identify version and whether files contain PHI; verify purchased access",
+      "sourceUrl": "https://www.pearsonassessments.com/",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Depression",
+        "Severity",
+        "Commercial standardized measure"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "assessment-026-mcmi-iii",
+      "section": "06 Assessments & Screening Tools",
+      "collection": "Clinical Assessment Decision-Support Library",
+      "resourceType": "Assessment / screening tool",
+      "title": "Millon Clinical Multiaxial Inventory-III",
+      "abbreviation": "MCMI-III",
+      "year": null,
+      "domain": "Personality/clinical syndromes",
+      "constructFocus": "Adult self-report",
+      "ageRange": "Adult clinical populations",
+      "clinicalPurpose": [
+        "Diagnostic support/personality assessment"
+      ],
+      "instrumentType": "Commercial standardized measure",
+      "respondent": [
+        "Adult"
+      ],
+      "adminTime": "25-30 min",
+      "telehealth": "No/uncertain",
+      "repeatMeasure": "No",
+      "accessStatus": "Restricted; obsolete edition",
+      "copyrightCaution": "Do not use unauthorized copy; MCMI-IV supersedes III",
+      "interpretiveLimit": "Does not diagnose personality disorder alone; base rates require manual/software",
+      "evidenceStrength": "Low (current utility)",
+      "outpatientUtility": "Moderate",
+      "progressUtility": "No",
+      "nextAction": "Quarantine access record; determine legitimate MCMI-IV access",
+      "sourceUrl": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Personality/clinical syndromes",
+        "Diagnostic support/personality assessment",
+        "Commercial standardized measure"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "assessment-027-life-skills-advocate-executive-functioning-assessment",
+      "section": "06 Assessments & Screening Tools",
+      "collection": "Clinical Assessment Decision-Support Library",
+      "resourceType": "Assessment / screening tool",
+      "title": "Life Skills Advocate Executive Functioning Assessment",
+      "abbreviation": "",
+      "year": null,
+      "domain": "Executive-function skills",
+      "constructFocus": "Likely self/observer report",
+      "ageRange": "Unknown",
+      "clinicalPurpose": [
+        "Functional needs assessment"
+      ],
+      "instrumentType": "Nonstandard/local/commercial tool",
+      "respondent": [
+        "Unknown"
+      ],
+      "adminTime": "Unknown",
+      "telehealth": "Possible",
+      "repeatMeasure": "Possible",
+      "accessStatus": "Copyright/access verify",
+      "copyrightCaution": "Do not present as neuropsychological test without validation",
+      "interpretiveLimit": "Cannot diagnose ADHD or executive-function disorder",
+      "evidenceStrength": "Unknown",
+      "outpatientUtility": "High",
+      "progressUtility": "Possible",
+      "nextAction": "Compare hashes; identify author, age, scoring, evidence",
+      "sourceUrl": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Executive-function skills",
+        "Functional needs assessment",
+        "Nonstandard/local/commercial tool"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "assessment-028-executive-functioning-skill-assessment-readable",
+      "section": "06 Assessments & Screening Tools",
+      "collection": "Clinical Assessment Decision-Support Library",
+      "resourceType": "Assessment / screening tool",
+      "title": "Executive Functioning Skill Assessment - readable",
+      "abbreviation": "",
+      "year": null,
+      "domain": "Executive-function skills",
+      "constructFocus": "Clinician/client worksheet",
+      "ageRange": "Unknown",
+      "clinicalPurpose": [
+        "Functional assessment",
+        "treatment planning"
+      ],
+      "instrumentType": "Clinician-created/nonstandard likely",
+      "respondent": [
+        "Unknown"
+      ],
+      "adminTime": "Flexible",
+      "telehealth": "Yes",
+      "repeatMeasure": "Yes",
+      "accessStatus": "Unknown",
+      "copyrightCaution": "Keep blank and completed files separate; protect PHI",
+      "interpretiveLimit": "Not standardized and cannot diagnose",
+      "evidenceStrength": "",
+      "outpatientUtility": "High",
+      "progressUtility": "High",
+      "nextAction": "Determine provenance and whether KH copy contains PHI",
+      "sourceUrl": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Executive-function skills",
+        "Functional assessment; treatment planning",
+        "Clinician-created/nonstandard likely"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "assessment-029-pars",
+      "section": "06 Assessments & Screening Tools",
+      "collection": "Clinical Assessment Decision-Support Library",
+      "resourceType": "Assessment / screening tool",
+      "title": "PARS Parent Report, 15 items",
+      "abbreviation": "PARS?",
+      "year": null,
+      "domain": "Anxiety (identity verify)",
+      "constructFocus": "Parent report",
+      "ageRange": "Child/adolescent; verify",
+      "clinicalPurpose": [
+        "Screening/severity"
+      ],
+      "instrumentType": "Standardized measure?",
+      "respondent": [
+        "Parent"
+      ],
+      "adminTime": "Brief",
+      "telehealth": "Yes",
+      "repeatMeasure": "Possible",
+      "accessStatus": "Copyright/access verify",
+      "copyrightCaution": "Identify exact published derivative and permissions",
+      "interpretiveLimit": "Does not diagnose an anxiety disorder",
+      "evidenceStrength": "Unknown",
+      "outpatientUtility": "High",
+      "progressUtility": "Possible",
+      "nextAction": "Resolve acronym/version, evidence, scoring, source",
+      "sourceUrl": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Anxiety (identity verify)",
+        "Screening/severity",
+        "Standardized measure?"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "assessment-030-cfq",
+      "section": "06 Assessments & Screening Tools",
+      "collection": "Clinical Assessment Decision-Support Library",
+      "resourceType": "Assessment / screening tool",
+      "title": "Cognitive Failures Questionnaire",
+      "abbreviation": "CFQ",
+      "year": null,
+      "domain": "Everyday cognitive failures",
+      "constructFocus": "Self-report",
+      "ageRange": "Adult",
+      "clinicalPurpose": [
+        "Research/functional formulation"
+      ],
+      "instrumentType": "Standardized questionnaire",
+      "respondent": [
+        "Adult"
+      ],
+      "adminTime": "5-10 min",
+      "telehealth": "Yes",
+      "repeatMeasure": "Possible",
+      "accessStatus": "Copyright/access verify",
+      "copyrightCaution": "Self-report cognitive lapses are not objective memory performance",
+      "interpretiveLimit": "Does not diagnose ADHD, dementia, or memory disorder",
+      "evidenceStrength": "Moderate",
+      "outpatientUtility": "High",
+      "progressUtility": "Possible",
+      "nextAction": "Locate authorized form and current norms/evidence",
+      "sourceUrl": "https://doi.org/10.1111/j.2044-8260.1982.tb01421.x",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Everyday cognitive failures",
+        "Research/functional formulation",
+        "Standardized questionnaire"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "assessment-031-abc-behavior-tracking-template",
+      "section": "06 Assessments & Screening Tools",
+      "collection": "Clinical Assessment Decision-Support Library",
+      "resourceType": "Assessment / screening tool",
+      "title": "ABC Behavior Tracking Template",
+      "abbreviation": "",
+      "year": null,
+      "domain": "Behavior/function",
+      "constructFocus": "Clinician/caregiver observation",
+      "ageRange": "All ages",
+      "clinicalPurpose": [
+        "Functional hypothesis generation"
+      ],
+      "instrumentType": "Clinician-created observation log",
+      "respondent": [
+        "Caregiver",
+        "Staff",
+        "Clinician"
+      ],
+      "adminTime": "Ongoing",
+      "telehealth": "Yes",
+      "repeatMeasure": "Yes",
+      "accessStatus": "Local tool",
+      "copyrightCaution": "Protect PHI; operationally define behavior; ABC is descriptive, not proof of function",
+      "interpretiveLimit": "Cannot establish behavioral function from sparse observations alone",
+      "evidenceStrength": "",
+      "outpatientUtility": "High",
+      "progressUtility": "High",
+      "nextAction": "Review usability and add observation-quality prompts",
+      "sourceUrl": "",
+      "audience": [
+        "Clinician",
+        "Intern / Trainee"
+      ],
+      "language": [
+        "English"
+      ],
+      "tags": [
+        "Behavior/function",
+        "Functional hypothesis generation",
+        "Clinician-created observation log"
+      ],
+      "publicMetadataOnly": true
+    }
+  ]
+}
