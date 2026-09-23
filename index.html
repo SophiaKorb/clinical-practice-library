@@ -3,25 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Practical clinical tools, plain-language school guides, assessment decision support, and curated research.">
+<meta name="description" content="Practical therapy resources, school-support guides, clinical decision tools, and curated evidence.">
 <title>Clinical Practice Library</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-
 <header class="topbar">
   <div class="topbar-inner">
-    <a class="brand" href="./" aria-label="Clinical Practice Library home">
-      <span class="brand-mark">CP</span>
-      <span>Clinical Practice Library</span>
-    </a>
+    <a class="brand" href="./"><span class="brand-mark">CP</span><span>Clinical Practice Library</span></a>
     <nav class="nav-links" aria-label="Main navigation">
-      <a href="#insights">At a glance</a>
-      <a href="#guides">School guides</a>
-      <a href="#pathways">Clinical pathways</a>
-      <a href="#library">Research & assessments</a>
+      <a href="#therapy">Therapy resources</a>
+      <a href="#guides">School tools</a>
+      <a href="#pathways">Decision tools</a>
+      <a href="#evidence">Evidence</a>
     </nav>
   </div>
 </header>
@@ -29,121 +25,74 @@
 <main id="main">
   <section class="hero">
     <div class="hero-copy">
-      <p class="kicker">Practical tools for real clinical work</p>
-      <h1>Clinical resources,<br>organized for use.</h1>
-      <p class="hero-lede">Start with the question in front of you. Find a practical school tool, a clinical reasoning pathway, an assessment reference, or evidence worth reading.</p>
-
-      <div class="hero-search">
-        <label class="sr-only" for="heroSearch">Search the library</label>
-        <input id="heroSearch" type="search" autocomplete="off" placeholder="Try “ADHD”, “school supports”, “trauma”, “autism”...">
-        <button id="heroSearchButton" type="button">Search library</button>
-      </div>
-
-      <div class="hero-links" aria-label="Popular topics">
-        <span>Popular:</span>
-        <button type="button" data-search="ADHD">ADHD</button>
-        <button type="button" data-search="Autism">Autism</button>
-        <button type="button" data-search="Trauma">Trauma</button>
-        <button type="button" data-search="Anxiety">Anxiety</button>
-        <button type="button" data-search="School">School supports</button>
+      <p class="kicker">Practical tools for clinical work</p>
+      <h1>Start with what<br>you need to do.</h1>
+      <p class="hero-lede">Find a handout for the session, a school-support guide for a family, a decision tool for a clinical question, or evidence when you need to go deeper.</p>
+      <div class="hero-actions">
+        <a class="hero-primary" href="#therapy">Find a therapy resource</a>
+        <a class="hero-secondary" href="#pathways">Use a decision tool</a>
       </div>
     </div>
-
     <aside class="hero-note">
-      <p class="mini-label">What this is</p>
-      <p>A curated working library for moving from <strong>question → useful resource → next step</strong>, without requiring you to remember where anything was filed.</p>
+      <p class="mini-label">Current library</p>
+      <p>The front of the library is organized around <strong>use</strong>. Specialist reference material stays available without getting in everyone else’s way.</p>
       <div class="mini-stats">
-        <div><strong id="totalCount">0</strong><span>curated resources</span></div>
+        <div><strong id="therapyCount">0</strong><span>therapy collections</span></div>
+        <div><strong id="schoolCount">0</strong><span>school guides</span></div>
         <div><strong id="researchCount">0</strong><span>research core</span></div>
-        <div><strong id="assessmentCount">0</strong><span>assessment tools</span></div>
       </div>
     </aside>
   </section>
 
   <section class="entry-points" aria-labelledby="entryTitle">
     <div class="section-heading compact">
-      <p class="kicker">Start where you are</p>
-      <h2 id="entryTitle">What are you looking for?</h2>
+      <p class="kicker">Library index</p>
+      <h2 id="entryTitle">Choose the kind of help you need</h2>
     </div>
     <div class="entry-grid">
-      <button class="entry-card" type="button" data-section="03 School - IEP & 504">
+      <a class="entry-card" href="#therapy">
         <span class="entry-number">01</span>
-        <span class="entry-title">School & family tools</span>
-        <span class="entry-copy">Barrier → Support guides and practical school-access resources written for use, not display.</span>
-        <span class="entry-action">Browse school tools →</span>
-      </button>
-
-      <button class="entry-card" type="button" data-jump="#pathways">
+        <span class="entry-title">Therapy handouts & resources</span>
+        <span class="entry-copy">Patient-facing handouts, worksheets, parent resources, regulation tools, DBT materials, and practical session aids.</span>
+        <span class="entry-action">Browse therapy resources →</span>
+      </a>
+      <a class="entry-card" href="#guides">
         <span class="entry-number">02</span>
-        <span class="entry-title">Clinical decision support</span>
-        <span class="entry-copy">Short pathways that help frame the question before reaching automatically for a battery.</span>
-        <span class="entry-action">Explore pathways →</span>
-      </button>
-
-      <button class="entry-card" type="button" data-type="Assessment / screening tool">
+        <span class="entry-title">School & family tools</span>
+        <span class="entry-copy">Barrier → Support guides and school-access resources built for families and teams.</span>
+        <span class="entry-action">Browse school tools →</span>
+      </a>
+      <a class="entry-card" href="#pathways">
         <span class="entry-number">03</span>
-        <span class="entry-title">Assessments & screening</span>
-        <span class="entry-copy">What a measure is for, what it cannot establish, and the practical cautions that matter.</span>
-        <span class="entry-action">Browse assessments →</span>
-      </button>
-
-      <button class="entry-card" type="button" data-type="Research article">
+        <span class="entry-title">Clinical decision tools</span>
+        <span class="entry-copy">Question-framing pathways for common diagnostic, treatment, and referral decisions.</span>
+        <span class="entry-action">Use decision tools →</span>
+      </a>
+      <a class="entry-card" href="#evidence">
         <span class="entry-number">04</span>
-        <span class="entry-title">Research core</span>
-        <span class="entry-copy">A selective evidence library with caveats, clinical role, source links, and retrieval status.</span>
-        <span class="entry-action">Browse research →</span>
-      </button>
+        <span class="entry-title">Evidence library</span>
+        <span class="entry-copy">Curated research with clinical role, caveats, and source links when you need the literature behind the work.</span>
+        <span class="entry-action">Explore evidence →</span>
+      </a>
     </div>
   </section>
 
-  <section id="insights" class="insights-section" aria-labelledby="insightsTitle">
+  <section id="therapy" class="therapy-section" aria-labelledby="therapyTitle">
     <div class="section-heading split">
       <div>
-        <p class="kicker">The shape of the library</p>
-        <h2 id="insightsTitle">At a glance</h2>
-        <p>A visual summary of what is actually in the collection right now. These update automatically as the library grows.</p>
+        <p class="kicker">Use in therapy</p>
+        <h2 id="therapyTitle">Therapy handouts & resources</h2>
+        <p>Browse by the job the resource needs to do. The handout library includes patient, parent, and clinician-facing material.</p>
       </div>
-      <div class="section-note">Live from the current catalog</div>
+      <div class="section-note"><span id="therapySectionCount">0</span> indexed collections</div>
     </div>
-
-    <div class="viz-grid">
-      <article class="viz-card viz-mix-card">
-        <div class="viz-card-head">
-          <div><span class="viz-label">Resource mix</span><h3>What the library contains</h3></div>
-          <span class="viz-badge">134 total</span>
-        </div>
-        <div class="mix-layout">
-          <div id="resourceDonut" class="resource-donut" role="img" aria-label="Resource mix">
-            <div class="donut-center"><strong id="donutTotal">0</strong><span>resources</span></div>
-          </div>
-          <div id="mixLegend" class="mix-legend"></div>
-        </div>
-      </article>
-
-      <article class="viz-card">
-        <div class="viz-card-head">
-          <div><span class="viz-label">Topic signals</span><h3>Where the collection is deepest</h3></div>
-          <span class="viz-badge">overlap allowed</span>
-        </div>
-        <div id="topicBars" class="topic-bars"></div>
-        <p class="viz-note">A resource may appear in more than one topic area when its title, domain, or tags span multiple clinical questions.</p>
-      </article>
-
-      <article class="viz-card">
-        <div class="viz-card-head">
-          <div><span class="viz-label">Research core</span><h3>Foundations + current evidence</h3></div>
-          <span class="viz-badge">95 papers</span>
-        </div>
-        <div id="eraBars" class="era-bars" aria-label="Research core by publication era"></div>
-        <p class="viz-note">The core intentionally keeps landmark older work alongside a substantial 2026 evidence refresh.</p>
-      </article>
-    </div>
+    <div id="therapyGroups" class="therapy-groups"></div>
   </section>
 
   <section id="guides" class="featured-section" aria-labelledby="featuredGuidesTitle">
     <div class="section-heading split">
       <div>
-        <p class="kicker">Plain-language school tools</p>
+        <p class="kicker">School & family tools</p>
         <h2 id="featuredGuidesTitle">Barrier → Support Guides</h2>
         <p>Start with what is getting in the student’s way, then choose supports that directly address the barrier.</p>
       </div>
@@ -155,102 +104,131 @@
   <section id="pathways" class="pathways-section" aria-labelledby="pathwaysTitle">
     <div class="section-heading split">
       <div>
-        <p class="kicker">Clinical reasoning</p>
+        <p class="kicker">Clinical decision tools</p>
         <h2 id="pathwaysTitle">Start with the question</h2>
-        <p>These pathways are prompts for sequencing and scope. They are not diagnostic algorithms.</p>
+        <p>Short pathways for deciding what to clarify, what to rule out, and when a broader evaluation or referral is actually needed.</p>
       </div>
       <button id="showAllPathways" class="quiet-button" type="button">Show all pathways</button>
     </div>
     <div id="pathwayCards" class="pathway-cards"></div>
   </section>
 
-  <section id="library" class="library-section" aria-labelledby="libraryTitle">
-    <div class="section-heading">
-      <p class="kicker">Research & clinical reference</p>
-      <h2 id="libraryTitle">Explore the full library</h2>
-      <p>Use a simple search, then narrow only if you need to. The detailed metadata is still here, just no longer shouting from the front porch.</p>
-    </div>
-
-    <div class="catalog-search">
-      <label for="search">Search resources</label>
-      <div class="catalog-search-row">
-        <input id="search" type="search" autocomplete="off" placeholder="Search topic, title, measure, clinical purpose...">
-        <button id="clearFilters" class="quiet-button" type="button">Clear</button>
+  <section id="evidence" class="insights-section" aria-labelledby="insightsTitle">
+    <div class="section-heading split">
+      <div>
+        <p class="kicker">Evidence library</p>
+        <h2 id="insightsTitle">What supports the work</h2>
+        <p>A visual view of the practical library and the research core. Specialist assessment references are intentionally kept out of this front layer.</p>
       </div>
-
-      <details class="advanced-filters">
-        <summary>More filters</summary>
-        <div class="filters">
-          <label>Collection<select id="sectionFilter"><option value="">All collections</option></select></label>
-          <label>Resource type<select id="typeFilter"><option value="">All resource types</option></select></label>
-          <label>Topic<select id="domainFilter"><option value="">All topics</option></select></label>
-          <label>Research priority<select id="priorityFilter"><option value="">Any priority</option><option>P1</option><option>P2</option><option>P3</option></select></label>
-          <label>Evidence<select id="evidenceFilter"><option value="">Any evidence level</option></select></label>
-          <label>Sort<select id="sortBy"><option value="default">Curated order</option><option value="title">Title A-Z</option><option value="newest">Newest first</option><option value="domain">Topic A-Z</option></select></label>
+      <button class="quiet-button" type="button" data-open-type="Research article">Browse research</button>
+    </div>
+    <div class="viz-grid">
+      <article class="viz-card viz-mix-card">
+        <div class="viz-card-head">
+          <div><span class="viz-label">Front library</span><h3>Practical collections</h3></div>
+          <span class="viz-badge" id="frontLibraryTotal">0 items</span>
         </div>
-      </details>
-
-      <div class="catalog-status">
-        <span id="activeFilters">No filters applied</span>
-        <span id="resultSummary"></span>
-      </div>
-    </div>
-
-    <div id="cards" class="cards"></div>
-    <div id="emptyState" class="empty" hidden>
-      <h3>No matches</h3>
-      <p>Try a broader term or clear one of the filters.</p>
-    </div>
-    <div class="show-more-wrap">
-      <button id="showMoreResources" class="outline-button" type="button">Show more resources</button>
-    </div>
-
-    <div class="catalog-tools">
-      <span>Need the data rather than the browsing view?</span>
-      <button id="exportCsv" class="text-link-button" type="button">Export filtered CSV</button>
-      <button id="exportJson" class="text-link-button" type="button">Export filtered JSON</button>
+        <div class="mix-layout">
+          <div id="resourceDonut" class="resource-donut" role="img" aria-label="Practical library mix">
+            <div class="donut-center"><strong id="donutTotal">0</strong><span>front-library items</span></div>
+          </div>
+          <div id="mixLegend" class="mix-legend"></div>
+        </div>
+      </article>
+      <article class="viz-card">
+        <div class="viz-card-head">
+          <div><span class="viz-label">Topic signals</span><h3>Where the library is deepest</h3></div>
+          <span class="viz-badge">overlap allowed</span>
+        </div>
+        <div id="topicBars" class="topic-bars"></div>
+        <p class="viz-note">Topic counts can overlap because practical resources and evidence may address more than one clinical task.</p>
+      </article>
+      <article class="viz-card">
+        <div class="viz-card-head">
+          <div><span class="viz-label">Research core</span><h3>Foundations + current evidence</h3></div>
+          <span class="viz-badge">95 papers</span>
+        </div>
+        <div id="eraBars" class="era-bars" aria-label="Research core by publication era"></div>
+        <p class="viz-note">Landmark older work stays visible alongside the substantial 2026 evidence refresh.</p>
+      </article>
     </div>
   </section>
 
-  <section class="scope-note" aria-label="Library scope">
-    <div>
-      <p class="mini-label">A note about scope</p>
-      <h2>Useful does not mean unrestricted.</h2>
+  <section class="deep-reference" aria-labelledby="deepReferenceTitle">
+    <div class="section-heading compact">
+      <p class="kicker">Deeper reference</p>
+      <h2 id="deepReferenceTitle">When you need the specialist shelves</h2>
     </div>
+
+    <details id="assessmentShelf" class="specialist-shelf">
+      <summary>
+        <span><strong>Specialist assessment reference</strong><small>Formal and specialist tools, access cautions, scope, and interpretive limits.</small></span>
+        <span class="shelf-count" id="assessmentShelfCount">0</span>
+      </summary>
+      <div class="shelf-body">
+        <p>This section is intentionally not part of the main browsing path. It is most useful when the clinical question actually requires assessment or formal testing knowledge.</p>
+        <button id="openAssessments" class="outline-button" type="button">Open assessment index</button>
+      </div>
+    </details>
+
+    <details id="catalogDrawer" class="catalog-drawer">
+      <summary>
+        <span><strong>Open full catalog & search</strong><small>Search across everything, including research metadata and specialist references.</small></span>
+        <span class="shelf-count" id="catalogTotal">0</span>
+      </summary>
+      <div class="catalog-body" id="library">
+        <div class="catalog-search">
+          <label for="search">Search the full catalog</label>
+          <div class="catalog-search-row">
+            <input id="search" type="search" autocomplete="off" placeholder="Search topic, title, measure, clinical purpose...">
+            <button id="clearFilters" class="quiet-button" type="button">Clear</button>
+          </div>
+          <details class="advanced-filters">
+            <summary>More filters</summary>
+            <div class="filters">
+              <label>Collection<select id="sectionFilter"><option value="">All collections</option></select></label>
+              <label>Resource type<select id="typeFilter"><option value="">All resource types</option></select></label>
+              <label>Topic<select id="domainFilter"><option value="">All topics</option></select></label>
+              <label>Research priority<select id="priorityFilter"><option value="">Any priority</option><option>P1</option><option>P2</option><option>P3</option></select></label>
+              <label>Evidence<select id="evidenceFilter"><option value="">Any evidence level</option></select></label>
+              <label>Sort<select id="sortBy"><option value="default">Curated order</option><option value="title">Title A-Z</option><option value="newest">Newest first</option><option value="domain">Topic A-Z</option></select></label>
+            </div>
+          </details>
+          <div class="catalog-status"><span id="activeFilters">No filters applied</span><span id="resultSummary"></span></div>
+        </div>
+        <div id="cards" class="cards"></div>
+        <div id="emptyState" class="empty" hidden><h3>No matches</h3><p>Try a broader term or clear one of the filters.</p></div>
+        <div class="show-more-wrap"><button id="showMoreResources" class="outline-button" type="button">Show more resources</button></div>
+        <div class="catalog-tools">
+          <span>Need the data rather than the browsing view?</span>
+          <button id="exportCsv" class="text-link-button" type="button">Export filtered CSV</button>
+          <button id="exportJson" class="text-link-button" type="button">Export filtered JSON</button>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <section class="scope-note">
+    <div><p class="mini-label">A note about scope</p><h2>Useful does not mean unrestricted.</h2></div>
     <p>This public site contains metadata, original shareable tools, and legitimate source links. It does not publish PHI, completed protocols, restricted test content, or copyrighted full-text articles without redistribution rights.</p>
   </section>
 </main>
 
 <footer>
   <div class="footer-inner">
-    <div>
-      <strong>Clinical Practice Library</strong>
-      <p>Evidence, tools, teaching, and systems for practical clinical work.</p>
-    </div>
-    <div class="footer-meta">
-      <span>Public resource site</span>
-      <span>Updated September 2026</span>
-    </div>
+    <div><strong>Clinical Practice Library</strong><p>Therapy resources, decision tools, school supports, and evidence for practical clinical work.</p></div>
+    <div class="footer-meta"><span>Public resource site</span><span>Updated September 2026</span></div>
   </div>
 </footer>
 
 <template id="cardTemplate">
 <article class="card">
-  <div class="card-top">
-    <div class="pills"></div>
-    <button class="copy-link" type="button">Copy link</button>
-  </div>
-  <h3 class="card-title"></h3>
-  <p class="card-subtitle"></p>
-  <p class="card-summary"></p>
+  <div class="card-top"><div class="pills"></div><button class="copy-link" type="button">Copy link</button></div>
+  <h3 class="card-title"></h3><p class="card-subtitle"></p><p class="card-summary"></p>
   <div class="card-actions"></div>
-  <details>
-    <summary>Clinical details</summary>
-    <dl class="details-grid"></dl>
-  </details>
+  <details><summary>Clinical details</summary><dl class="details-grid"></dl></details>
 </article>
 </template>
-
 <script src="app.js" defer></script>
 </body>
 </html>

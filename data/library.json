@@ -2,12 +2,13 @@
   "meta": {
     "title": "Clinical Practice Library",
     "generated": "2026-09-22",
-    "records": 134,
+    "records": 155,
     "researchCoreRecords": 95,
     "assessmentRecords": 31,
     "note": "Public metadata catalog only. No PHI, restricted test content, or copyrighted full-text PDFs are stored here.",
     "schoolSupportRecords": 8,
-    "webGuides": 8
+    "webGuides": 8,
+    "therapyHandoutCollections": 21
   },
   "resources": [
     {
@@ -4944,6 +4945,853 @@
       "repositoryFile": "resources/school/barrier-to-support/ODD_persistent_conflict_behavior_Barrier_to_Support_Cheat_Sheet_AZ_2026.docx",
       "fileStatus": "Source DOCX identified; binary repository upload pending connector support",
       "pageUrl": "guides/odd-persistent-conflict-behavior.html"
+    },
+    {
+      "id": "therapy-001-after-school-recovery",
+      "section": "02 Parent & Patient Education",
+      "collection": "Clinical Handout Library",
+      "resourceType": "Therapy handout collection",
+      "title": "After-School Recovery",
+      "year": 2026,
+      "domain": "After-School Recovery",
+      "therapyGroup": "Everyday functioning",
+      "functionalTarget": "supporting recovery after sustained school demands and communicating recovery needs after school",
+      "components": [
+        "After School Is a Landing, Not a Launch",
+        "My After-School Reset Plan"
+      ],
+      "clinicalPurpose": [
+        "Psychoeducation",
+        "Parent coaching",
+        "Behavior planning"
+      ],
+      "audience": [
+        "Patient",
+        "Parent / Caregiver",
+        "Clinician"
+      ],
+      "language": [
+        "English"
+      ],
+      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "sourceType": "Author-created clinical handout/resource",
+      "sourceUrl": "",
+      "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
+      "nextAction": "Complete review and link the public-facing version.",
+      "tags": [
+        "After-School Recovery",
+        "Everyday functioning",
+        "therapy handout",
+        "patient education",
+        "clinical resource"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "therapy-002-anxiety-approach-practice",
+      "section": "02 Parent & Patient Education",
+      "collection": "Clinical Handout Library",
+      "resourceType": "Therapy handout collection",
+      "title": "Anxiety Approach Practice",
+      "year": 2026,
+      "domain": "Anxiety Approach Practice",
+      "therapyGroup": "Anxiety & mood",
+      "functionalTarget": "approaching manageable feared situations without reinforcing avoidance",
+      "components": [
+        "When Avoidance Makes Anxiety Bigger"
+      ],
+      "clinicalPurpose": [
+        "Psychoeducation",
+        "Skill teaching",
+        "Practice worksheet"
+      ],
+      "audience": [
+        "Patient",
+        "Parent / Caregiver",
+        "Clinician"
+      ],
+      "language": [
+        "English"
+      ],
+      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "sourceType": "Author-created clinical handout/resource",
+      "sourceUrl": "",
+      "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
+      "nextAction": "Complete review and link the public-facing version.",
+      "tags": [
+        "Anxiety Approach Practice",
+        "Anxiety & mood",
+        "therapy handout",
+        "patient education",
+        "clinical resource"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "therapy-003-attention-task-initiation",
+      "section": "02 Parent & Patient Education",
+      "collection": "Clinical Handout Library",
+      "resourceType": "Therapy handout collection",
+      "title": "Attention and Task Initiation",
+      "year": 2026,
+      "domain": "Attention and Task Initiation",
+      "therapyGroup": "Everyday functioning",
+      "functionalTarget": "difficulty starting, sequencing, and completing tasks",
+      "components": [
+        "ADHD Task Management Handout"
+      ],
+      "clinicalPurpose": [
+        "Skill teaching",
+        "Practice worksheet"
+      ],
+      "audience": [
+        "Patient",
+        "Parent / Caregiver",
+        "Clinician"
+      ],
+      "language": [
+        "English"
+      ],
+      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "sourceType": "Author-created clinical handout/resource",
+      "sourceUrl": "",
+      "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
+      "nextAction": "Complete review and link the public-facing version.",
+      "tags": [
+        "Attention and Task Initiation",
+        "Everyday functioning",
+        "therapy handout",
+        "patient education",
+        "clinical resource"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "therapy-004-behavioral-activation",
+      "section": "02 Parent & Patient Education",
+      "collection": "Clinical Handout Library",
+      "resourceType": "Therapy handout collection",
+      "title": "Behavioral Activation",
+      "year": 2026,
+      "domain": "Behavioral Activation",
+      "therapyGroup": "Anxiety & mood",
+      "functionalTarget": "low activity, low reinforcement, inertia, and difficulty initiating meaningful activity",
+      "components": [
+        "Small Steps When Depression Shrinks Your World"
+      ],
+      "clinicalPurpose": [
+        "Psychoeducation",
+        "Skill teaching",
+        "Activity planning"
+      ],
+      "audience": [
+        "Patient",
+        "Parent / Caregiver",
+        "Clinician"
+      ],
+      "language": [
+        "English"
+      ],
+      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "sourceType": "Author-created clinical handout/resource",
+      "sourceUrl": "",
+      "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
+      "nextAction": "Complete review and link the public-facing version.",
+      "tags": [
+        "Behavioral Activation",
+        "Anxiety & mood",
+        "therapy handout",
+        "patient education",
+        "clinical resource"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "therapy-005-conflict-repair-boundaries",
+      "section": "02 Parent & Patient Education",
+      "collection": "Clinical Handout Library",
+      "resourceType": "Therapy handout collection",
+      "title": "Conflict, Repair, and Boundaries",
+      "year": 2026,
+      "domain": "Conflict, Repair, and Boundaries",
+      "therapyGroup": "Relationships & parenting",
+      "functionalTarget": "reflection after ordinary conflict, enforceable boundaries, and specific repair",
+      "components": [
+        "Conflict map",
+        "Boundary planning",
+        "Repair planning"
+      ],
+      "clinicalPurpose": [
+        "Conversation guide",
+        "Worksheet",
+        "Relationship skill"
+      ],
+      "audience": [
+        "Patient",
+        "Parent / Caregiver",
+        "Clinician"
+      ],
+      "language": [
+        "English"
+      ],
+      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "sourceType": "Author-created clinical handout/resource",
+      "sourceUrl": "",
+      "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
+      "nextAction": "Complete review and link the public-facing version.",
+      "tags": [
+        "Conflict, Repair, and Boundaries",
+        "Relationships & parenting",
+        "therapy handout",
+        "patient education",
+        "clinical resource"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "therapy-006-chore-support",
+      "section": "02 Parent & Patient Education",
+      "collection": "Clinical Handout Library",
+      "resourceType": "Therapy handout collection",
+      "title": "Chore Support",
+      "year": 2026,
+      "domain": "Chore Support",
+      "therapyGroup": "Everyday functioning",
+      "functionalTarget": "starting and completing chores and routine household tasks",
+      "components": [
+        "Chore Tips Handout",
+        "Chore Help Handout",
+        "Daily Chore Chart"
+      ],
+      "clinicalPurpose": [
+        "Parent coaching",
+        "Behavior planning",
+        "Visual support"
+      ],
+      "audience": [
+        "Patient",
+        "Parent / Caregiver",
+        "Clinician"
+      ],
+      "language": [
+        "English"
+      ],
+      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "sourceType": "Author-created clinical handout/resource",
+      "sourceUrl": "",
+      "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
+      "nextAction": "Complete review and link the public-facing version.",
+      "tags": [
+        "Chore Support",
+        "Everyday functioning",
+        "therapy handout",
+        "patient education",
+        "clinical resource"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "therapy-007-co-parenting",
+      "section": "02 Parent & Patient Education",
+      "collection": "Clinical Handout Library",
+      "resourceType": "Therapy handout collection",
+      "title": "Co-Parenting",
+      "year": 2026,
+      "domain": "Co-Parenting",
+      "therapyGroup": "Relationships & parenting",
+      "functionalTarget": "reducing child exposure to adult conflict when cooperation is limited",
+      "components": [
+        "Parenting Across Disagreement"
+      ],
+      "clinicalPurpose": [
+        "Parent coaching",
+        "Conversation guide",
+        "Reference sheet"
+      ],
+      "audience": [
+        "Patient",
+        "Parent / Caregiver",
+        "Clinician"
+      ],
+      "language": [
+        "English"
+      ],
+      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "sourceType": "Author-created clinical handout/resource",
+      "sourceUrl": "",
+      "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
+      "nextAction": "Complete review and link the public-facing version.",
+      "tags": [
+        "Co-Parenting",
+        "Relationships & parenting",
+        "therapy handout",
+        "patient education",
+        "clinical resource"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "therapy-008-emotion-awareness",
+      "section": "02 Parent & Patient Education",
+      "collection": "Clinical Handout Library",
+      "resourceType": "Therapy handout collection",
+      "title": "Emotion Awareness",
+      "year": 2026,
+      "domain": "Emotion Awareness",
+      "therapyGroup": "Emotion & regulation",
+      "functionalTarget": "noticing and communicating internal states without requiring precise emotion labels",
+      "components": [
+        "Notice Before You Name It",
+        "Body Clues and Needs Map",
+        "Emotion Signals"
+      ],
+      "clinicalPurpose": [
+        "Psychoeducation",
+        "Skill teaching",
+        "Worksheet"
+      ],
+      "audience": [
+        "Patient",
+        "Parent / Caregiver",
+        "Clinician"
+      ],
+      "language": [
+        "English"
+      ],
+      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "sourceType": "Author-created clinical handout/resource",
+      "sourceUrl": "",
+      "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
+      "nextAction": "Complete review and link the public-facing version.",
+      "tags": [
+        "Emotion Awareness",
+        "Emotion & regulation",
+        "therapy handout",
+        "patient education",
+        "clinical resource"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "therapy-009-fairness-flexibility",
+      "section": "02 Parent & Patient Education",
+      "collection": "Clinical Handout Library",
+      "resourceType": "Therapy handout collection",
+      "title": "Fairness and Flexibility",
+      "year": 2026,
+      "domain": "Fairness and Flexibility",
+      "therapyGroup": "Thinking & communication",
+      "functionalTarget": "getting unstuck after perceived unfairness while preserving valid concerns",
+      "components": [
+        "Fairness and Flexibility: A Teen Guide with Parent Companion"
+      ],
+      "clinicalPurpose": [
+        "Skill teaching",
+        "Conversation guide",
+        "Parent coaching"
+      ],
+      "audience": [
+        "Patient",
+        "Parent / Caregiver",
+        "Clinician"
+      ],
+      "language": [
+        "English"
+      ],
+      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "sourceType": "Author-created clinical handout/resource",
+      "sourceUrl": "",
+      "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
+      "nextAction": "Complete review and link the public-facing version.",
+      "tags": [
+        "Fairness and Flexibility",
+        "Thinking & communication",
+        "therapy handout",
+        "patient education",
+        "clinical resource"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "therapy-010-functional-behavior",
+      "section": "02 Parent & Patient Education",
+      "collection": "Clinical Handout Library",
+      "resourceType": "Therapy handout collection",
+      "title": "Functional Behavior",
+      "year": 2026,
+      "domain": "Functional Behavior",
+      "therapyGroup": "Thinking & communication",
+      "functionalTarget": "interpreting distress, avoidance, shutdown, or escalation functionally rather than morally",
+      "components": [
+        "Autism Behavior Not Manipulation Handout"
+      ],
+      "clinicalPurpose": [
+        "Psychoeducation",
+        "Parent coaching"
+      ],
+      "audience": [
+        "Patient",
+        "Parent / Caregiver",
+        "Clinician"
+      ],
+      "language": [
+        "English"
+      ],
+      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "sourceType": "Author-created clinical handout/resource",
+      "sourceUrl": "",
+      "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
+      "nextAction": "Complete review and link the public-facing version.",
+      "tags": [
+        "Functional Behavior",
+        "Thinking & communication",
+        "therapy handout",
+        "patient education",
+        "clinical resource"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "therapy-011-learning-at-home",
+      "section": "02 Parent & Patient Education",
+      "collection": "Clinical Handout Library",
+      "resourceType": "Therapy handout collection",
+      "title": "Learning at Home",
+      "year": 2026,
+      "domain": "Learning at Home",
+      "therapyGroup": "Everyday functioning",
+      "functionalTarget": "supporting attention, task initiation, working memory, and learning at home",
+      "components": [
+        "ADHD Homeschool Handout"
+      ],
+      "clinicalPurpose": [
+        "Parent coaching",
+        "Psychoeducation"
+      ],
+      "audience": [
+        "Patient",
+        "Parent / Caregiver",
+        "Clinician"
+      ],
+      "language": [
+        "English"
+      ],
+      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "sourceType": "Author-created clinical handout/resource",
+      "sourceUrl": "",
+      "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
+      "nextAction": "Complete review and link the public-facing version.",
+      "tags": [
+        "Learning at Home",
+        "Everyday functioning",
+        "therapy handout",
+        "patient education",
+        "clinical resource"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "therapy-012-parent-regulation-repair",
+      "section": "02 Parent & Patient Education",
+      "collection": "Clinical Handout Library",
+      "resourceType": "Therapy handout collection",
+      "title": "Parent Regulation and Repair",
+      "year": 2026,
+      "domain": "Parent Regulation and Repair",
+      "therapyGroup": "Relationships & parenting",
+      "functionalTarget": "recurrent yelling, ineffective directions, and repair after difficult moments",
+      "components": [
+        "Instead of Yelling"
+      ],
+      "clinicalPurpose": [
+        "Parent coaching",
+        "Conversation guide",
+        "Behavior planning"
+      ],
+      "audience": [
+        "Patient",
+        "Parent / Caregiver",
+        "Clinician"
+      ],
+      "language": [
+        "English"
+      ],
+      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "sourceType": "Author-created clinical handout/resource",
+      "sourceUrl": "",
+      "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
+      "nextAction": "Complete review and link the public-facing version.",
+      "tags": [
+        "Parent Regulation and Repair",
+        "Relationships & parenting",
+        "therapy handout",
+        "patient education",
+        "clinical resource"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "therapy-013-parenting-responses",
+      "section": "02 Parent & Patient Education",
+      "collection": "Clinical Handout Library",
+      "resourceType": "Therapy handout collection",
+      "title": "Parenting Responses",
+      "year": 2026,
+      "domain": "Parenting Responses",
+      "therapyGroup": "Relationships & parenting",
+      "functionalTarget": "choosing more effective responses during recurring conflict",
+      "components": [
+        "Good Better Best Parenting Strategies"
+      ],
+      "clinicalPurpose": [
+        "Decision aid",
+        "Parent coaching"
+      ],
+      "audience": [
+        "Patient",
+        "Parent / Caregiver",
+        "Clinician"
+      ],
+      "language": [
+        "English"
+      ],
+      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "sourceType": "Author-created clinical handout/resource",
+      "sourceUrl": "",
+      "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
+      "nextAction": "Complete review and link the public-facing version.",
+      "tags": [
+        "Parenting Responses",
+        "Relationships & parenting",
+        "therapy handout",
+        "patient education",
+        "clinical resource"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "therapy-014-perspective-taking",
+      "section": "02 Parent & Patient Education",
+      "collection": "Clinical Handout Library",
+      "resourceType": "Therapy handout collection",
+      "title": "Perspective Taking",
+      "year": 2026,
+      "domain": "Perspective Taking",
+      "therapyGroup": "Thinking & communication",
+      "functionalTarget": "considering multiple explanations without mind-reading or erasing one's own perspective",
+      "components": [
+        "Perspective-Taking Without Guessing",
+        "Perspective Possibility Cards",
+        "Facts, Guesses, and Questions"
+      ],
+      "clinicalPurpose": [
+        "Skill teaching",
+        "Practice worksheet",
+        "Decision aid"
+      ],
+      "audience": [
+        "Patient",
+        "Parent / Caregiver",
+        "Clinician"
+      ],
+      "language": [
+        "English"
+      ],
+      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "sourceType": "Author-created clinical handout/resource",
+      "sourceUrl": "",
+      "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
+      "nextAction": "Complete review and link the public-facing version.",
+      "tags": [
+        "Perspective Taking",
+        "Thinking & communication",
+        "therapy handout",
+        "patient education",
+        "clinical resource"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "therapy-015-regulation",
+      "section": "02 Parent & Patient Education",
+      "collection": "Clinical Handout Library",
+      "resourceType": "Therapy handout collection",
+      "title": "Regulation",
+      "year": 2026,
+      "domain": "Regulation",
+      "therapyGroup": "Emotion & regulation",
+      "functionalTarget": "recognizing arousal and choosing regulation supports",
+      "components": [
+        "Self Regulation Handout"
+      ],
+      "clinicalPurpose": [
+        "Psychoeducation",
+        "Skill teaching"
+      ],
+      "audience": [
+        "Patient",
+        "Parent / Caregiver",
+        "Clinician"
+      ],
+      "language": [
+        "English"
+      ],
+      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "sourceType": "Author-created clinical handout/resource",
+      "sourceUrl": "",
+      "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
+      "nextAction": "Complete review and link the public-facing version.",
+      "tags": [
+        "Regulation",
+        "Emotion & regulation",
+        "therapy handout",
+        "patient education",
+        "clinical resource"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "therapy-016-self-reflection",
+      "section": "02 Parent & Patient Education",
+      "collection": "Clinical Handout Library",
+      "resourceType": "Therapy handout collection",
+      "title": "Self-Reflection",
+      "year": 2026,
+      "domain": "Self-Reflection",
+      "therapyGroup": "Thinking & communication",
+      "functionalTarget": "finding words during emotionally loaded conversations",
+      "components": [
+        "Sentence Stems"
+      ],
+      "clinicalPurpose": [
+        "Script",
+        "Visual support"
+      ],
+      "audience": [
+        "Patient",
+        "Parent / Caregiver",
+        "Clinician"
+      ],
+      "language": [
+        "English"
+      ],
+      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "sourceType": "Author-created clinical handout/resource",
+      "sourceUrl": "",
+      "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
+      "nextAction": "Complete review and link the public-facing version.",
+      "tags": [
+        "Self-Reflection",
+        "Thinking & communication",
+        "therapy handout",
+        "patient education",
+        "clinical resource"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "therapy-017-sensory-recovery",
+      "section": "02 Parent & Patient Education",
+      "collection": "Clinical Handout Library",
+      "resourceType": "Therapy handout collection",
+      "title": "Sensory Recovery",
+      "year": 2026,
+      "domain": "Sensory Recovery",
+      "therapyGroup": "Emotion & regulation",
+      "functionalTarget": "recognizing overload, reducing input, communicating needs, and recovering without shame",
+      "components": [
+        "Sensory Overload and Recovery Plan"
+      ],
+      "clinicalPurpose": [
+        "Psychoeducation",
+        "Worksheet",
+        "Visual support"
+      ],
+      "audience": [
+        "Patient",
+        "Parent / Caregiver",
+        "Clinician"
+      ],
+      "language": [
+        "English"
+      ],
+      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "sourceType": "Author-created clinical handout/resource",
+      "sourceUrl": "",
+      "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
+      "nextAction": "Complete review and link the public-facing version.",
+      "tags": [
+        "Sensory Recovery",
+        "Emotion & regulation",
+        "therapy handout",
+        "patient education",
+        "clinical resource"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "therapy-018-sleep-support",
+      "section": "02 Parent & Patient Education",
+      "collection": "Clinical Handout Library",
+      "resourceType": "Therapy handout collection",
+      "title": "Sleep Support",
+      "year": 2026,
+      "domain": "Sleep Support",
+      "therapyGroup": "Everyday functioning",
+      "functionalTarget": "difficulty settling, inconsistent sleep timing, prolonged wakefulness, and morning impairment",
+      "components": [
+        "Making Sleep More Likely"
+      ],
+      "clinicalPurpose": [
+        "Psychoeducation",
+        "Problem solving",
+        "Routine planning"
+      ],
+      "audience": [
+        "Patient",
+        "Parent / Caregiver",
+        "Clinician"
+      ],
+      "language": [
+        "English"
+      ],
+      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "sourceType": "Author-created clinical handout/resource",
+      "sourceUrl": "",
+      "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
+      "nextAction": "Complete review and link the public-facing version.",
+      "tags": [
+        "Sleep Support",
+        "Everyday functioning",
+        "therapy handout",
+        "patient education",
+        "clinical resource"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "therapy-019-thought-flexibility",
+      "section": "02 Parent & Patient Education",
+      "collection": "Clinical Handout Library",
+      "resourceType": "Therapy handout collection",
+      "title": "Thought Flexibility",
+      "year": 2026,
+      "domain": "Thought Flexibility",
+      "therapyGroup": "Thinking & communication",
+      "functionalTarget": "generating more than one interpretation while preserving valid danger and boundary concerns",
+      "components": [
+        "Thought Edition Therapy Game Two Columns"
+      ],
+      "clinicalPurpose": [
+        "Activity/game",
+        "Practice worksheet"
+      ],
+      "audience": [
+        "Patient",
+        "Parent / Caregiver",
+        "Clinician"
+      ],
+      "language": [
+        "English"
+      ],
+      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "sourceType": "Author-created clinical handout/resource",
+      "sourceUrl": "",
+      "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
+      "nextAction": "Complete review and link the public-facing version.",
+      "tags": [
+        "Thought Flexibility",
+        "Thinking & communication",
+        "therapy handout",
+        "patient education",
+        "clinical resource"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "therapy-020-transitions",
+      "section": "02 Parent & Patient Education",
+      "collection": "Clinical Handout Library",
+      "resourceType": "Therapy handout collection",
+      "title": "Transitions",
+      "year": 2026,
+      "domain": "Transitions",
+      "therapyGroup": "Everyday functioning",
+      "functionalTarget": "difficulty stopping, shifting, or entering the next activity or setting",
+      "components": [
+        "Making Transitions Easier",
+        "Transitions Are a Bridge",
+        "My Transition Map"
+      ],
+      "clinicalPurpose": [
+        "Skill teaching",
+        "Behavior planning",
+        "Visual support"
+      ],
+      "audience": [
+        "Patient",
+        "Parent / Caregiver",
+        "Clinician"
+      ],
+      "language": [
+        "English"
+      ],
+      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "sourceType": "Author-created clinical handout/resource",
+      "sourceUrl": "",
+      "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
+      "nextAction": "Complete review and link the public-facing version.",
+      "tags": [
+        "Transitions",
+        "Everyday functioning",
+        "therapy handout",
+        "patient education",
+        "clinical resource"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "therapy-021-dbt-plain-useful",
+      "section": "02 Parent & Patient Education",
+      "collection": "Clinical Handout Library",
+      "resourceType": "Therapy handout collection",
+      "title": "DBT, Plain and Useful",
+      "year": 2026,
+      "domain": "DBT, Plain and Useful",
+      "therapyGroup": "Emotion & regulation",
+      "functionalTarget": "practical DBT-informed behavior-change tools taught in direct, non-patronizing language",
+      "components": [
+        "Clinician Guide",
+        "Four-Module Skills Curriculum",
+        "Teaching & Practice Guide",
+        "Patient Workbook"
+      ],
+      "clinicalPurpose": [
+        "Clinician resource",
+        "Skills curriculum",
+        "Patient workbook"
+      ],
+      "audience": [
+        "Patient",
+        "Parent / Caregiver",
+        "Clinician"
+      ],
+      "language": [
+        "English"
+      ],
+      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "sourceType": "Author-created clinical handout/resource",
+      "sourceUrl": "",
+      "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
+      "nextAction": "Complete review and link the public-facing version.",
+      "tags": [
+        "DBT, Plain and Useful",
+        "Emotion & regulation",
+        "therapy handout",
+        "patient education",
+        "clinical resource"
+      ],
+      "publicMetadataOnly": true
     }
   ]
 }
