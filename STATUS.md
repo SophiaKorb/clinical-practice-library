@@ -6,6 +6,8 @@ Updated September 22, 2026.
 
 - 95 Clinical Research Core records
 - 31 assessment and screening-tool records
+- 8 Arizona Barrier Support school-toolkit records
+- 134 indexed catalog records total
 - 13 clinical-question pathways
 - 21 de-identified assessment verification gaps
 

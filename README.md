@@ -8,7 +8,8 @@ This repository contains a working static web interface plus structured metadata
 
 - 95 Clinical Research Core records
 - 31 assessment and screening-tool records
-- 126 indexed records total
+- 8 Arizona Barrier Support school-toolkit records
+- 134 indexed records total
 - the established library architecture for clinical, family, school, trainee, assessment, Arizona, California, and Spanish-language resources
 
 The site is designed to run directly from GitHub Pages without a build step.

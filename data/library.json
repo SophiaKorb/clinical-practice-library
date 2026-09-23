@@ -2,10 +2,11 @@
   "meta": {
     "title": "Clinical Practice Library",
     "generated": "2026-09-22",
-    "records": 126,
+    "records": 134,
     "researchCoreRecords": 95,
     "assessmentRecords": 31,
-    "note": "Public metadata catalog only. No PHI, restricted test content, or copyrighted full-text PDFs are stored here."
+    "note": "Public metadata catalog only. No PHI, restricted test content, or copyrighted full-text PDFs are stored here.",
+    "schoolSupportRecords": 8
   },
   "resources": [
     {
@@ -4596,6 +4597,326 @@
         "Behavior/function",
         "Functional hypothesis generation",
         "Clinician-created observation log"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "school-az-adhd-2026",
+      "section": "03 School - IEP & 504",
+      "collection": "Barrier Support School Access Toolkit",
+      "resourceType": "School support",
+      "title": "ADHD - Barrier Support Cheat Sheet",
+      "year": 2026,
+      "domain": "ADHD",
+      "clinicalPurpose": [
+        "School access",
+        "IEP / 504 planning",
+        "Support selection and implementation"
+      ],
+      "audience": [
+        "Parent / Caregiver",
+        "Recovery Coach",
+        "School Team"
+      ],
+      "language": [
+        "English"
+      ],
+      "jurisdiction": [
+        "Arizona"
+      ],
+      "accessStatus": "Author-created resource; public catalog metadata only",
+      "sourceType": "Author-created school support guide",
+      "sourceUrl": "",
+      "caveat": "Educational information, not legal advice. Supports must be individualized to the student, evaluation data, and current school context.",
+      "nextAction": "Publish or link a reviewed shareable copy when ready.",
+      "lastVerified": "2026-09",
+      "tags": [
+        "ADHD",
+        "school",
+        "IEP",
+        "504",
+        "Arizona",
+        "barrier to support"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "school-az-autism-2026",
+      "section": "03 School - IEP & 504",
+      "collection": "Barrier Support School Access Toolkit",
+      "resourceType": "School support",
+      "title": "Autism - Barrier Support Cheat Sheet",
+      "year": 2026,
+      "domain": "Autism",
+      "clinicalPurpose": [
+        "School access",
+        "IEP / 504 planning",
+        "Support selection and implementation"
+      ],
+      "audience": [
+        "Parent / Caregiver",
+        "Recovery Coach",
+        "School Team"
+      ],
+      "language": [
+        "English"
+      ],
+      "jurisdiction": [
+        "Arizona"
+      ],
+      "accessStatus": "Author-created resource; public catalog metadata only",
+      "sourceType": "Author-created school support guide",
+      "sourceUrl": "",
+      "caveat": "Educational information, not legal advice. Supports must be individualized to the student, evaluation data, and current school context.",
+      "nextAction": "Publish or link a reviewed shareable copy when ready.",
+      "lastVerified": "2026-09",
+      "tags": [
+        "Autism",
+        "school",
+        "IEP",
+        "504",
+        "Arizona",
+        "barrier to support"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "school-az-anxiety-2026",
+      "section": "03 School - IEP & 504",
+      "collection": "Barrier Support School Access Toolkit",
+      "resourceType": "School support",
+      "title": "Anxiety - Barrier Support Cheat Sheet",
+      "year": 2026,
+      "domain": "Anxiety",
+      "clinicalPurpose": [
+        "School access",
+        "IEP / 504 planning",
+        "Support selection and implementation"
+      ],
+      "audience": [
+        "Parent / Caregiver",
+        "Recovery Coach",
+        "School Team"
+      ],
+      "language": [
+        "English"
+      ],
+      "jurisdiction": [
+        "Arizona"
+      ],
+      "accessStatus": "Author-created resource; public catalog metadata only",
+      "sourceType": "Author-created school support guide",
+      "sourceUrl": "",
+      "caveat": "Educational information, not legal advice. Supports must be individualized to the student, evaluation data, and current school context.",
+      "nextAction": "Publish or link a reviewed shareable copy when ready.",
+      "lastVerified": "2026-09",
+      "tags": [
+        "Anxiety",
+        "school",
+        "IEP",
+        "504",
+        "Arizona",
+        "barrier to support"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "school-az-dyslexia-2026",
+      "section": "03 School - IEP & 504",
+      "collection": "Barrier Support School Access Toolkit",
+      "resourceType": "School support",
+      "title": "Dyslexia - Barrier Support Cheat Sheet",
+      "year": 2026,
+      "domain": "Dyslexia",
+      "clinicalPurpose": [
+        "School access",
+        "IEP / 504 planning",
+        "Support selection and implementation"
+      ],
+      "audience": [
+        "Parent / Caregiver",
+        "Recovery Coach",
+        "School Team"
+      ],
+      "language": [
+        "English"
+      ],
+      "jurisdiction": [
+        "Arizona"
+      ],
+      "accessStatus": "Author-created resource; public catalog metadata only",
+      "sourceType": "Author-created school support guide",
+      "sourceUrl": "",
+      "caveat": "Educational information, not legal advice. Supports must be individualized to the student, evaluation data, and current school context.",
+      "nextAction": "Publish or link a reviewed shareable copy when ready.",
+      "lastVerified": "2026-09",
+      "tags": [
+        "Dyslexia",
+        "school",
+        "IEP",
+        "504",
+        "Arizona",
+        "barrier to support"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "school-az-dyscalculia-2026",
+      "section": "03 School - IEP & 504",
+      "collection": "Barrier Support School Access Toolkit",
+      "resourceType": "School support",
+      "title": "Dyscalculia - Barrier Support Cheat Sheet",
+      "year": 2026,
+      "domain": "Dyscalculia",
+      "clinicalPurpose": [
+        "School access",
+        "IEP / 504 planning",
+        "Support selection and implementation"
+      ],
+      "audience": [
+        "Parent / Caregiver",
+        "Recovery Coach",
+        "School Team"
+      ],
+      "language": [
+        "English"
+      ],
+      "jurisdiction": [
+        "Arizona"
+      ],
+      "accessStatus": "Author-created resource; public catalog metadata only",
+      "sourceType": "Author-created school support guide",
+      "sourceUrl": "",
+      "caveat": "Educational information, not legal advice. Supports must be individualized to the student, evaluation data, and current school context.",
+      "nextAction": "Publish or link a reviewed shareable copy when ready.",
+      "lastVerified": "2026-09",
+      "tags": [
+        "Dyscalculia",
+        "school",
+        "IEP",
+        "504",
+        "Arizona",
+        "barrier to support"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "school-az-dysgraphia-2026",
+      "section": "03 School - IEP & 504",
+      "collection": "Barrier Support School Access Toolkit",
+      "resourceType": "School support",
+      "title": "Dysgraphia - Barrier Support Cheat Sheet",
+      "year": 2026,
+      "domain": "Dysgraphia",
+      "clinicalPurpose": [
+        "School access",
+        "IEP / 504 planning",
+        "Support selection and implementation"
+      ],
+      "audience": [
+        "Parent / Caregiver",
+        "Recovery Coach",
+        "School Team"
+      ],
+      "language": [
+        "English"
+      ],
+      "jurisdiction": [
+        "Arizona"
+      ],
+      "accessStatus": "Author-created resource; public catalog metadata only",
+      "sourceType": "Author-created school support guide",
+      "sourceUrl": "",
+      "caveat": "Educational information, not legal advice. Supports must be individualized to the student, evaluation data, and current school context.",
+      "nextAction": "Publish or link a reviewed shareable copy when ready.",
+      "lastVerified": "2026-09",
+      "tags": [
+        "Dysgraphia",
+        "school",
+        "IEP",
+        "504",
+        "Arizona",
+        "barrier to support"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "school-az-depression-2026",
+      "section": "03 School - IEP & 504",
+      "collection": "Barrier Support School Access Toolkit",
+      "resourceType": "School support",
+      "title": "Depression - Barrier Support Cheat Sheet",
+      "year": 2026,
+      "domain": "Depression",
+      "clinicalPurpose": [
+        "School access",
+        "IEP / 504 planning",
+        "Support selection and implementation"
+      ],
+      "audience": [
+        "Parent / Caregiver",
+        "Recovery Coach",
+        "School Team"
+      ],
+      "language": [
+        "English"
+      ],
+      "jurisdiction": [
+        "Arizona"
+      ],
+      "accessStatus": "Author-created resource; public catalog metadata only",
+      "sourceType": "Author-created school support guide",
+      "sourceUrl": "",
+      "caveat": "Educational information, not legal advice. Supports must be individualized to the student, evaluation data, and current school context.",
+      "nextAction": "Publish or link a reviewed shareable copy when ready.",
+      "lastVerified": "2026-09",
+      "tags": [
+        "Depression",
+        "school",
+        "IEP",
+        "504",
+        "Arizona",
+        "barrier to support"
+      ],
+      "publicMetadataOnly": true
+    },
+    {
+      "id": "school-az-odd-persistent-conflict-2026",
+      "section": "03 School - IEP & 504",
+      "collection": "Barrier Support School Access Toolkit",
+      "resourceType": "School support",
+      "title": "ODD / Persistent Conflict Behavior - Barrier Support Cheat Sheet",
+      "year": 2026,
+      "domain": "ODD / persistent conflict behavior",
+      "clinicalPurpose": [
+        "School access",
+        "IEP / 504 planning",
+        "Support selection and implementation"
+      ],
+      "audience": [
+        "Parent / Caregiver",
+        "Recovery Coach",
+        "School Team"
+      ],
+      "language": [
+        "English"
+      ],
+      "jurisdiction": [
+        "Arizona"
+      ],
+      "accessStatus": "Author-created resource; public catalog metadata only",
+      "sourceType": "Author-created school support guide",
+      "sourceUrl": "",
+      "caveat": "Educational information, not legal advice. Supports must be individualized to the student, evaluation data, and current school context.",
+      "nextAction": "Publish or link a reviewed shareable copy when ready.",
+      "lastVerified": "2026-09",
+      "tags": [
+        "ODD / persistent conflict behavior",
+        "school",
+        "IEP",
+        "504",
+        "Arizona",
+        "barrier to support"
       ],
       "publicMetadataOnly": true
     }
