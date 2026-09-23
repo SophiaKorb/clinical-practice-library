@@ -4638,7 +4638,9 @@
         "Arizona",
         "barrier to support"
       ],
-      "publicMetadataOnly": true
+      "publicMetadataOnly": true,
+      "repositoryFile": "resources/school/barrier-to-support/ADHD_Barrier_to_Support_Cheat_Sheet_AZ_2026.docx",
+      "fileStatus": "Source DOCX identified; binary repository upload pending connector support"
     },
     {
       "id": "school-az-autism-2026",
@@ -4678,7 +4680,9 @@
         "Arizona",
         "barrier to support"
       ],
-      "publicMetadataOnly": true
+      "publicMetadataOnly": true,
+      "repositoryFile": "resources/school/barrier-to-support/Autism_Barrier_to_Support_Cheat_Sheet_AZ_2026.docx",
+      "fileStatus": "Source DOCX identified; binary repository upload pending connector support"
     },
     {
       "id": "school-az-anxiety-2026",
@@ -4718,7 +4722,9 @@
         "Arizona",
         "barrier to support"
       ],
-      "publicMetadataOnly": true
+      "publicMetadataOnly": true,
+      "repositoryFile": "resources/school/barrier-to-support/Anxiety_Barrier_to_Support_Cheat_Sheet_AZ_2026.docx",
+      "fileStatus": "Source DOCX identified; binary repository upload pending connector support"
     },
     {
       "id": "school-az-dyslexia-2026",
@@ -4758,7 +4764,9 @@
         "Arizona",
         "barrier to support"
       ],
-      "publicMetadataOnly": true
+      "publicMetadataOnly": true,
+      "repositoryFile": "resources/school/barrier-to-support/Dyslexia_Barrier_to_Support_Cheat_Sheet_AZ_2026.docx",
+      "fileStatus": "Source DOCX identified; binary repository upload pending connector support"
     },
     {
       "id": "school-az-dyscalculia-2026",
@@ -4798,7 +4806,9 @@
         "Arizona",
         "barrier to support"
       ],
-      "publicMetadataOnly": true
+      "publicMetadataOnly": true,
+      "repositoryFile": "resources/school/barrier-to-support/Dyscalculia_Barrier_to_Support_Cheat_Sheet_AZ_2026.docx",
+      "fileStatus": "Source DOCX identified; binary repository upload pending connector support"
     },
     {
       "id": "school-az-dysgraphia-2026",
@@ -4838,7 +4848,9 @@
         "Arizona",
         "barrier to support"
       ],
-      "publicMetadataOnly": true
+      "publicMetadataOnly": true,
+      "repositoryFile": "resources/school/barrier-to-support/Dysgraphia_Barrier_to_Support_Cheat_Sheet_AZ_2026.docx",
+      "fileStatus": "Source DOCX identified; binary repository upload pending connector support"
     },
     {
       "id": "school-az-depression-2026",
@@ -4878,7 +4890,9 @@
         "Arizona",
         "barrier to support"
       ],
-      "publicMetadataOnly": true
+      "publicMetadataOnly": true,
+      "repositoryFile": "resources/school/barrier-to-support/Depression_Barrier_to_Support_Cheat_Sheet_AZ_2026.docx",
+      "fileStatus": "Source DOCX identified; binary repository upload pending connector support"
     },
     {
       "id": "school-az-odd-persistent-conflict-2026",
@@ -4918,7 +4932,9 @@
         "Arizona",
         "barrier to support"
       ],
-      "publicMetadataOnly": true
+      "publicMetadataOnly": true,
+      "repositoryFile": "resources/school/barrier-to-support/ODD_persistent_conflict_behavior_Barrier_to_Support_Cheat_Sheet_AZ_2026.docx",
+      "fileStatus": "Source DOCX identified; binary repository upload pending connector support"
     }
   ]
 }
