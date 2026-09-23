@@ -34,3 +34,40 @@ footer{width:min(var(--max),calc(100% - 32px));margin:0 auto 34px;padding:26px 0
 }
 
 .resource-links .resource-item,.plain-resource-list .resource-item{padding:9px 10px;border-radius:9px;background:#f2eee6;color:#526057;font-size:.8rem;display:block}.topic-body.resource-links .resource-item{background:#f2eee6}.topic-body.resource-links a{display:block}.shelf-body>.plain-resource-list{margin-bottom:10px}
+
+
+@media (prefers-color-scheme: dark){
+  :root{
+    color-scheme:dark;
+    --paper:#141916;
+    --white:#1b211d;
+    --ink:#e7e9e5;
+    --muted:#a5aea7;
+    --line:#343d37;
+    --green:#9bc6ae;
+    --green2:#87ad98;
+    --sage:#243229;
+    --gold:#d1aa78;
+    --sand:#2a2822;
+    --shadow:0 18px 55px rgba(0,0,0,.22)
+  }
+  .site-header{background:rgba(20,25,22,.94);border-bottom-color:rgba(52,61,55,.95)}
+  .header-inner nav a{color:#b9c2bb}
+  .brand-mark,.primary{background:#315b47;color:#f3f6f4}
+  .lede,.about-grid p{color:#b4bcb6}
+  .secondary{background:#1b211d;color:var(--ink);border-color:var(--line)}
+  .need-card,.shelf{background:#1b211d;box-shadow:0 8px 28px rgba(0,0,0,.12)}
+  .need-card li{border-top-color:#313a34}
+  .school-feature{background:linear-gradient(155deg,#1b211d,#1b2721)}
+  .subtopics span,.plain-resource-list span,.topic-chip,
+  .resource-links .resource-item,.plain-resource-list .resource-item,
+  .topic-body.resource-links .resource-item{background:#242b26;color:#bdc5bf}
+  .resource-links a{background:#24352c;color:#b9dfca}
+  .shelf-toggle{background:#27302a;color:#a9d1ba}
+  .topic{background:#181e1a;border-color:#323b35}
+  .topic>summary{color:#d4d9d5}
+  .topic-body{color:#a5aea7}
+  .boundary{background:#29271f;color:#c3c2ba}
+  a{color:#a8d3bb}
+  a:hover{color:#c5e4d2}
+}
