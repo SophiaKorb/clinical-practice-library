@@ -6,7 +6,8 @@
     "researchCoreRecords": 95,
     "assessmentRecords": 31,
     "note": "Public metadata catalog only. No PHI, restricted test content, or copyrighted full-text PDFs are stored here.",
-    "schoolSupportRecords": 8
+    "schoolSupportRecords": 8,
+    "webGuides": 8
   },
   "resources": [
     {
@@ -4624,7 +4625,7 @@
       "jurisdiction": [
         "Arizona"
       ],
-      "accessStatus": "Author-created resource; public catalog metadata only",
+      "accessStatus": "Full interactive web guide available",
       "sourceType": "Author-created school support guide",
       "sourceUrl": "",
       "caveat": "Educational information, not legal advice. Supports must be individualized to the student, evaluation data, and current school context.",
@@ -4640,7 +4641,8 @@
       ],
       "publicMetadataOnly": true,
       "repositoryFile": "resources/school/barrier-to-support/ADHD_Barrier_to_Support_Cheat_Sheet_AZ_2026.docx",
-      "fileStatus": "Source DOCX identified; binary repository upload pending connector support"
+      "fileStatus": "Source DOCX identified; binary repository upload pending connector support",
+      "pageUrl": "guides/adhd.html"
     },
     {
       "id": "school-az-autism-2026",
@@ -4666,7 +4668,7 @@
       "jurisdiction": [
         "Arizona"
       ],
-      "accessStatus": "Author-created resource; public catalog metadata only",
+      "accessStatus": "Full interactive web guide available",
       "sourceType": "Author-created school support guide",
       "sourceUrl": "",
       "caveat": "Educational information, not legal advice. Supports must be individualized to the student, evaluation data, and current school context.",
@@ -4682,7 +4684,8 @@
       ],
       "publicMetadataOnly": true,
       "repositoryFile": "resources/school/barrier-to-support/Autism_Barrier_to_Support_Cheat_Sheet_AZ_2026.docx",
-      "fileStatus": "Source DOCX identified; binary repository upload pending connector support"
+      "fileStatus": "Source DOCX identified; binary repository upload pending connector support",
+      "pageUrl": "guides/autism.html"
     },
     {
       "id": "school-az-anxiety-2026",
@@ -4708,7 +4711,7 @@
       "jurisdiction": [
         "Arizona"
       ],
-      "accessStatus": "Author-created resource; public catalog metadata only",
+      "accessStatus": "Full interactive web guide available",
       "sourceType": "Author-created school support guide",
       "sourceUrl": "",
       "caveat": "Educational information, not legal advice. Supports must be individualized to the student, evaluation data, and current school context.",
@@ -4724,7 +4727,8 @@
       ],
       "publicMetadataOnly": true,
       "repositoryFile": "resources/school/barrier-to-support/Anxiety_Barrier_to_Support_Cheat_Sheet_AZ_2026.docx",
-      "fileStatus": "Source DOCX identified; binary repository upload pending connector support"
+      "fileStatus": "Source DOCX identified; binary repository upload pending connector support",
+      "pageUrl": "guides/anxiety.html"
     },
     {
       "id": "school-az-dyslexia-2026",
@@ -4750,7 +4754,7 @@
       "jurisdiction": [
         "Arizona"
       ],
-      "accessStatus": "Author-created resource; public catalog metadata only",
+      "accessStatus": "Full interactive web guide available",
       "sourceType": "Author-created school support guide",
       "sourceUrl": "",
       "caveat": "Educational information, not legal advice. Supports must be individualized to the student, evaluation data, and current school context.",
@@ -4766,7 +4770,8 @@
       ],
       "publicMetadataOnly": true,
       "repositoryFile": "resources/school/barrier-to-support/Dyslexia_Barrier_to_Support_Cheat_Sheet_AZ_2026.docx",
-      "fileStatus": "Source DOCX identified; binary repository upload pending connector support"
+      "fileStatus": "Source DOCX identified; binary repository upload pending connector support",
+      "pageUrl": "guides/dyslexia.html"
     },
     {
       "id": "school-az-dyscalculia-2026",
@@ -4792,7 +4797,7 @@
       "jurisdiction": [
         "Arizona"
       ],
-      "accessStatus": "Author-created resource; public catalog metadata only",
+      "accessStatus": "Full interactive web guide available",
       "sourceType": "Author-created school support guide",
       "sourceUrl": "",
       "caveat": "Educational information, not legal advice. Supports must be individualized to the student, evaluation data, and current school context.",
@@ -4808,7 +4813,8 @@
       ],
       "publicMetadataOnly": true,
       "repositoryFile": "resources/school/barrier-to-support/Dyscalculia_Barrier_to_Support_Cheat_Sheet_AZ_2026.docx",
-      "fileStatus": "Source DOCX identified; binary repository upload pending connector support"
+      "fileStatus": "Source DOCX identified; binary repository upload pending connector support",
+      "pageUrl": "guides/dyscalculia.html"
     },
     {
       "id": "school-az-dysgraphia-2026",
@@ -4834,7 +4840,7 @@
       "jurisdiction": [
         "Arizona"
       ],
-      "accessStatus": "Author-created resource; public catalog metadata only",
+      "accessStatus": "Full interactive web guide available",
       "sourceType": "Author-created school support guide",
       "sourceUrl": "",
       "caveat": "Educational information, not legal advice. Supports must be individualized to the student, evaluation data, and current school context.",
@@ -4850,7 +4856,8 @@
       ],
       "publicMetadataOnly": true,
       "repositoryFile": "resources/school/barrier-to-support/Dysgraphia_Barrier_to_Support_Cheat_Sheet_AZ_2026.docx",
-      "fileStatus": "Source DOCX identified; binary repository upload pending connector support"
+      "fileStatus": "Source DOCX identified; binary repository upload pending connector support",
+      "pageUrl": "guides/dysgraphia.html"
     },
     {
       "id": "school-az-depression-2026",
@@ -4876,7 +4883,7 @@
       "jurisdiction": [
         "Arizona"
       ],
-      "accessStatus": "Author-created resource; public catalog metadata only",
+      "accessStatus": "Full interactive web guide available",
       "sourceType": "Author-created school support guide",
       "sourceUrl": "",
       "caveat": "Educational information, not legal advice. Supports must be individualized to the student, evaluation data, and current school context.",
@@ -4892,7 +4899,8 @@
       ],
       "publicMetadataOnly": true,
       "repositoryFile": "resources/school/barrier-to-support/Depression_Barrier_to_Support_Cheat_Sheet_AZ_2026.docx",
-      "fileStatus": "Source DOCX identified; binary repository upload pending connector support"
+      "fileStatus": "Source DOCX identified; binary repository upload pending connector support",
+      "pageUrl": "guides/depression.html"
     },
     {
       "id": "school-az-odd-persistent-conflict-2026",
@@ -4918,7 +4926,7 @@
       "jurisdiction": [
         "Arizona"
       ],
-      "accessStatus": "Author-created resource; public catalog metadata only",
+      "accessStatus": "Full interactive web guide available",
       "sourceType": "Author-created school support guide",
       "sourceUrl": "",
       "caveat": "Educational information, not legal advice. Supports must be individualized to the student, evaluation data, and current school context.",
@@ -4934,7 +4942,8 @@
       ],
       "publicMetadataOnly": true,
       "repositoryFile": "resources/school/barrier-to-support/ODD_persistent_conflict_behavior_Barrier_to_Support_Cheat_Sheet_AZ_2026.docx",
-      "fileStatus": "Source DOCX identified; binary repository upload pending connector support"
+      "fileStatus": "Source DOCX identified; binary repository upload pending connector support",
+      "pageUrl": "guides/odd-persistent-conflict-behavior.html"
     }
   ]
 }

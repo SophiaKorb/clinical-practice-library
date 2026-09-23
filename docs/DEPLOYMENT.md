@@ -1,13 +1,19 @@
-# Deploying with GitHub Pages
+# Deployment architecture
 
-This repository is a static site and requires no build process.
+## Production model
 
-1. Open the repository on GitHub.
-2. Go to Settings, then Pages.
-3. Under Build and deployment, choose Deploy from a branch.
-4. Select the main branch and /(root).
-5. Save.
+**Source repository:** private GitHub repository.
 
-The site will use index.html from the repository root.
+**Public surface:** the static website only. The site should contain vetted public-facing resources and metadata; working files and admin/project material remain private.
 
-Keep the public repository free of PHI and restricted clinical materials. Public is public. GitHub is admirably literal about this.
+### Preferred host: Vercel
+
+Connect the private GitHub repository to Vercel and deploy the `main` branch. The current site is static and requires no build command.
+
+### GitHub Pages alternative
+
+GitHub Pages can publish from private repositories only on GitHub plans that support Pages for private repositories. The published site is still public. If the account is on GitHub Free, use Vercel rather than making the source repository public solely for hosting.
+
+## Publication boundary
+
+Never publish PHI, completed assessment protocols, restricted test content, proprietary scoring materials, or copyrighted full-text research PDFs.
