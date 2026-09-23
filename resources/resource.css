@@ -33,3 +33,23 @@
   .worksheet,.safety-note{background:#fff!important;color:#111!important}
   a{color:#111!important}
 }
+
+
+/* Clinical Barrier → Support pages */
+.clinical-barrier{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:24px;margin:18px 0}
+.barrier-number{margin:0 0 4px;color:var(--green);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.observable{padding:12px 14px;border-radius:10px;background:var(--sand)}
+.clinical-supports{display:grid;gap:8px;margin:16px 0}
+.clinical-support{display:grid;grid-template-columns:58px 1fr;gap:12px;align-items:start;padding:10px 12px;border:1px solid var(--line);border-radius:10px}
+.support-code{font-weight:800;color:var(--green)}
+.clinical-note{padding:12px 14px;margin-top:10px;border-left:3px solid var(--green2);background:var(--sage);border-radius:8px}
+.clinical-note p{margin:.25rem 0 0}
+.clinical-note.caution{border-left-color:#a78554;background:var(--sand)}
+@media(max-width:650px){.clinical-support{grid-template-columns:48px 1fr}.clinical-barrier{padding:18px}}
+@media(prefers-color-scheme:dark){
+ .clinical-barrier{background:#1b211d;border-color:#343d37}
+ .observable{background:#242b26}
+ .clinical-support{border-color:#343d37}
+ .clinical-note{background:#243229}
+ .clinical-note.caution{background:#2a2822}
+}
