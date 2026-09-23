@@ -76,3 +76,11 @@ footer{width:min(var(--max),calc(100% - 28px));margin:0 auto 42px;display:flex;j
   @media(max-width:860px){.toc a{background:#1b211d}}
   a{color:#a8d3bb}
 }
+
+
+@media print{
+  :root{color-scheme:light;--paper:#fff;--white:#fff;--ink:#111;--muted:#555;--line:#bbb;--green:#244b3b;--green-2:#35634f;--green-soft:#fff;--gold-soft:#fff}
+  body,.guide,.callout,.callout.important,.callout.look,.support-table tbody tr:nth-child(even),.generic-table tr:nth-child(even){background:#fff!important;color:#111!important;box-shadow:none!important}
+  .support-table th,.generic-table th{background:#244b3b!important;color:#fff!important}
+  a{color:#111!important}
+}
