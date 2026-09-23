@@ -84,3 +84,11 @@ footer{width:min(var(--max),calc(100% - 28px));margin:0 auto 42px;display:flex;j
   .support-table th,.generic-table th{background:#244b3b!important;color:#fff!important}
   a{color:#111!important}
 }
+
+
+/* Keyboard focus */
+a:focus-visible, button:focus-visible, summary:focus-visible{
+  outline:3px solid currentColor;
+  outline-offset:3px;
+  border-radius:6px;
+}
