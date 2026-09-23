@@ -38,7 +38,7 @@ function renderGuideCards(){
     const card=document.createElement("article");card.className="guide-card";
     const body=document.createElement("div");body.innerHTML='<span class="guide-index">Guide '+String(i+1).padStart(2,"0")+'</span><h3>'+esc(r.domain)+'</h3><p>Match an observable school barrier with supports that can actually be written and implemented.</p>';
     const actions=document.createElement("div");actions.className="guide-actions";
-    if(r.pageUrl){const a=document.createElement("a");a.className="primary-link";a.href=r.pageUrl;a.textContent="Open guide";actions.appendChild(a)}
+    if(r.pageUrl){const a=document.createElement("a");a.className="primary-link";a.href="/"+r.pageUrl;a.textContent="Open guide";actions.appendChild(a)}
     const b=document.createElement("button");b.type="button";b.className="text-button";b.textContent="Related resources";b.addEventListener("click",()=>setSearch(r.domain));actions.appendChild(b);
     card.append(body,actions);return card;
   }));
@@ -113,7 +113,7 @@ function card(r){
   const dl=n.querySelector(".details-grid");
   [["Collection",r.collection],["Topic",r.domain],["Functional target",r.functionalTarget],["Includes",r.components],["Clinical purpose",r.clinicalPurpose],["Age range",r.ageRange],["Evidence role",r.evidenceRole],["Clinical caveat",r.caveat],["Access",r.accessStatus],["Interpretive limit",r.interpretiveLimit],["Next action",r.nextAction]].forEach(x=>addDetail(dl,x[0],x[1]));
   const actions=n.querySelector(".card-actions");
-  if(r.pageUrl){const a=document.createElement("a");a.className="primary-link";a.href=r.pageUrl;a.textContent="Open guide";actions.appendChild(a)}
+  if(r.pageUrl){const a=document.createElement("a");a.className="primary-link";a.href="/"+r.pageUrl;a.textContent="Open guide";actions.appendChild(a)}
   else if(r.sourceUrl){const a=document.createElement("a");a.className="source-link";a.href=r.sourceUrl;a.target="_blank";a.rel="noopener noreferrer";a.textContent="Open source";actions.appendChild(a)}
   else{const s=document.createElement("span");s.className="card-subtitle";s.textContent=r.resourceType==="Therapy handout collection"?"Public handout link coming after final review":"Source link pending verification";actions.appendChild(s)}
   n.querySelector(".copy-link").addEventListener("click",async e=>{const u=location.href.split("#")[0]+"#"+r.id;try{await navigator.clipboard.writeText(u);e.currentTarget.textContent="Copied";setTimeout(()=>e.currentTarget.textContent="Copy link",1200)}catch{location.hash=r.id}});
@@ -129,7 +129,7 @@ function csv(rows){const keys=["id","section","collection","resourceType","title
 function download(name,mime,body){const a=document.createElement("a"),u=URL.createObjectURL(new Blob([body],{type:mime}));a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),500)}
 async function init(){
   try{
-    const rs=await Promise.all([fetch("data/library.json"),fetch("data/pathways.json")]);if(!rs[0].ok||!rs[1].ok)throw new Error("Library data could not be loaded");
+    const rs=await Promise.all([fetch("/data/library.json"),fetch("/data/pathways.json")]);if(!rs[0].ok||!rs[1].ok)throw new Error("Library data could not be loaded");
     const lib=await rs[0].json(),pathData=await rs[1].json();allResources=lib.resources||[];pathways=pathData.pathways||[];
     const therapy=allResources.filter(r=>r.collection==="Clinical Handout Library").length,school=allResources.filter(r=>r.collection==="Barrier Support School Access Toolkit").length,research=allResources.filter(r=>r.collection==="Clinical Research Core").length,assessment=allResources.filter(r=>r.collection==="Clinical Assessment Decision-Support Library").length;
     q("#therapyCount").textContent=therapy;q("#schoolCount").textContent=school;q("#researchCount").textContent=research;q("#assessmentShelfCount").textContent=assessment;q("#catalogTotal").textContent=allResources.length;
