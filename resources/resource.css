@@ -2,3 +2,26 @@
 *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.resource-topbar{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:10px max(16px,calc((100vw - var(--max))/2));background:rgba(247,243,235,.95);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}.resource-topbar a{color:var(--green);text-decoration:none;font-weight:760}.resource-topbar button{border:1px solid var(--line);background:var(--white);border-radius:10px;padding:8px 11px;color:var(--green);font-weight:760;cursor:pointer}.resource-page{width:min(var(--max),calc(100% - 28px));margin:48px auto}.resource-kicker{margin:0 0 8px;color:var(--green2);text-transform:uppercase;letter-spacing:.13em;font-size:.72rem;font-weight:850}h1,h2{font-family:Georgia,"Times New Roman",serif;font-weight:500;letter-spacing:-.03em}h1{font-size:clamp(2.8rem,7vw,4.8rem);line-height:.96;margin:0}.resource-byline{margin:13px 0 0;font-weight:760;color:var(--green)}.resource-intro{color:var(--muted);margin:6px 0 30px}.quick-card{background:var(--white);border:1px solid var(--line);border-radius:22px;padding:24px;margin:18px 0;box-shadow:0 16px 45px rgba(42,49,43,.06)}.quick-card h2{margin:0 0 16px;font-size:2rem}.quick-card dl{margin:0}.quick-card dl div{display:grid;grid-template-columns:110px 1fr;gap:14px;padding:10px 0;border-top:1px solid #eee8df}.quick-card dl div:first-child{border-top:0}.quick-card dt{text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;font-weight:850;color:var(--green)}.quick-card dd{margin:0}.fill-line{margin:20px 0 10px;padding:12px 0;border-top:2px solid var(--green)}.stop-note{margin:0;color:var(--muted);font-size:.88rem}.safety-note{margin:24px 0;padding:16px 18px;background:var(--sand);border-radius:14px}.safety-note strong{color:var(--green);margin-right:6px}.resource-footer{width:min(var(--max),calc(100% - 28px));margin:0 auto 36px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:.78rem}
 @media(max-width:600px){.quick-card dl div{grid-template-columns:1fr;gap:3px}.resource-topbar{padding:9px 12px}}
 @media print{body{background:#fff}.resource-topbar{display:none}.resource-page{margin:0 auto}.quick-card{box-shadow:none;break-inside:avoid}.second-copy{break-before:page}.resource-footer{margin-top:20px}}.resource-card{background:var(--white);border:1px solid var(--line);border-radius:22px;padding:clamp(20px,4vw,34px);box-shadow:0 16px 45px rgba(42,49,43,.05)}.resource-card h2{font-size:1.55rem;margin:34px 0 10px}.resource-card h2:first-child{margin-top:0}.resource-card p{margin:10px 0}.resource-card ul,.resource-card ol{padding-left:1.3rem}.worksheet{background:#f5f1e9;border-left:4px solid var(--green);padding:14px 16px;border-radius:0 10px 10px 0;line-height:1.8}
+
+@media (prefers-color-scheme: dark){
+  :root{
+    color-scheme:dark;
+    --paper:#141916;
+    --white:#1b211d;
+    --ink:#e7e9e5;
+    --muted:#a5aea7;
+    --line:#343d37;
+    --green:#9bc6ae;
+    --green2:#87ad98;
+    --sage:#243229;
+    --sand:#2a2822
+  }
+  .resource-topbar{background:rgba(20,25,22,.95)}
+  .resource-topbar button{background:#202722;color:#b9dfca;border-color:var(--line)}
+  .quick-card,.resource-card{background:#1b211d;box-shadow:0 16px 45px rgba(0,0,0,.18)}
+  .quick-card dl div{border-top-color:#313a34}
+  .worksheet{background:#222823;border-left-color:#6c9a82}
+  .safety-note{background:#29271f}
+  a{color:#a8d3bb}
+  a:hover{color:#c5e4d2}
+}
