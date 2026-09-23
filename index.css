@@ -32,3 +32,5 @@ footer{width:min(var(--max),calc(100% - 32px));margin:0 auto 34px;padding:26px 0
   .shelf.expandable-shelf>.shelf-body{padding:12px 14px 16px}
   .topic-body.resource-links,.plain-resource-list{grid-template-columns:1fr}
 }
+
+.resource-links .resource-item,.plain-resource-list .resource-item{padding:9px 10px;border-radius:9px;background:#f2eee6;color:#526057;font-size:.8rem;display:block}.topic-body.resource-links .resource-item{background:#f2eee6}.topic-body.resource-links a{display:block}.shelf-body>.plain-resource-list{margin-bottom:10px}
