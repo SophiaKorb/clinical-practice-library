@@ -53,3 +53,11 @@
  .clinical-note{background:#243229}
  .clinical-note.caution{background:#2a2822}
 }
+
+
+/* Keyboard focus */
+a:focus-visible, button:focus-visible, summary:focus-visible{
+  outline:3px solid currentColor;
+  outline-offset:3px;
+  border-radius:6px;
+}
