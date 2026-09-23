@@ -74,3 +74,16 @@ a:focus-visible, button:focus-visible, summary:focus-visible{
 .reminder-list li{margin:8px 0}
 @media(max-width:650px){.two-col{grid-template-columns:1fr}}
 @media print{.table-wrap{overflow:visible}.resource-card table{break-inside:avoid}.two-col>div{background:#fff!important}}
+
+/* Worksheet web layouts */
+.prompt{margin:20px 0 4px!important;font-weight:760;color:var(--green)}
+.answer-space{min-height:2.4rem;border-bottom:1px solid var(--line);margin:0 0 12px}
+.checklist{list-style:none!important;padding-left:0!important;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px 14px}
+.checklist li{position:relative;padding-left:1.6rem}
+.checklist li::before{content:"☐";position:absolute;left:0;top:0;color:var(--green);font-weight:800}
+@media(max-width:620px){.checklist{grid-template-columns:1fr}}
+@media print{
+ .answer-space{min-height:2rem;border-bottom:1px solid #777}
+ .checklist{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .checklist li::before{color:#111}
+}
