@@ -1,15 +1,45 @@
-let allResources=[];let taxonomy=null;let filteredResources=[];
-let pathways=[];let showAllPathways=false;
+let allResources=[];let taxonomy=null;let filteredResources=[];let pathways=[];let showAllPathways=false;let showAllResources=false;
+
+const q=s=>document.querySelector(s);
+const qa=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]));
+const unique=a=>[...new Set(a.filter(Boolean))].sort((x,y)=>String(x).localeCompare(String(y)));
+
+function optionize(sel,vals){vals.forEach(v=>{const o=document.createElement("option");o.value=v;o.textContent=v;sel.appendChild(o)})}
+function searchText(r){return Object.values(r).flatMap(v=>Array.isArray(v)?v:[v]).filter(v=>["string","number"].includes(typeof v)).join(" ").toLowerCase()}
+function filters(){return{term:q("#search").value.trim().toLowerCase(),section:q("#sectionFilter").value,type:q("#typeFilter").value,domain:q("#domainFilter").value,priority:q("#priorityFilter").value,evidence:q("#evidenceFilter").value,sort:q("#sortBy").value}}
+
+function jumpToLibrary(){q("#library").scrollIntoView({behavior:"smooth",block:"start"})}
+function setSearch(term){
+  q("#search").value=term;
+  q("#heroSearch").value=term;
+  showAllResources=false;
+  apply();
+  jumpToLibrary();
+}
+function setSection(section){
+  q("#sectionFilter").value=section;
+  showAllResources=false;
+  apply();
+  jumpToLibrary();
+}
+function setType(type){
+  q("#typeFilter").value=type;
+  showAllResources=false;
+  apply();
+  jumpToLibrary();
+}
+
 function renderGuideCards(){
   const host=q("#guideCards");if(!host)return;
   const guides=allResources.filter(r=>r.collection==="Barrier Support School Access Toolkit");
-  host.replaceChildren(...guides.map(r=>{
+  host.replaceChildren(...guides.map((r,i)=>{
     const card=document.createElement("article");card.className="guide-card";
     const body=document.createElement("div");
-    body.innerHTML="<p class=\"eyebrow\">School access toolkit</p><h3>"+esc(r.domain)+"</h3><p>"+esc(r.caveat||"Barrier-based school support planning.")+"</p>";
+    body.innerHTML='<span class="guide-index">Guide '+String(i+1).padStart(2,"0")+'</span><h3>'+esc(r.domain)+'</h3><p>'+esc("Plain-language help connecting observable school barriers with supports that can actually be implemented.")+'</p>';
     const actions=document.createElement("div");actions.className="guide-actions";
-    if(r.pageUrl){const a=document.createElement("a");a.className="source-link";a.href=r.pageUrl;a.textContent="Open guide";actions.appendChild(a)}
-    const b=document.createElement("button");b.type="button";b.className="text-button";b.textContent="View catalog record";b.addEventListener("click",()=>{q("#search").value=r.domain;apply();q("#results").scrollIntoView({behavior:"smooth"})});actions.appendChild(b);
+    if(r.pageUrl){const a=document.createElement("a");a.className="primary-link";a.href=r.pageUrl;a.textContent="Open guide";actions.appendChild(a)}
+    const b=document.createElement("button");b.type="button";b.className="text-button";b.textContent="Related resources";b.addEventListener("click",()=>setSearch(r.domain));actions.appendChild(b);
     card.append(body,actions);return card;
   }));
 }
@@ -19,24 +49,129 @@ function renderPathways(){
   const shown=showAllPathways?pathways:pathways.slice(0,4);
   host.replaceChildren(...shown.map(p=>{
     const d=document.createElement("details");d.className="pathway-card";
-    const s=document.createElement("summary");s.textContent=p.clinicalQuestion+(p.tier?" • "+p.tier:"");d.appendChild(s);
+    const s=document.createElement("summary");s.textContent=p.clinicalQuestion+(p.tier?" · "+p.tier:"");d.appendChild(s);
     const body=document.createElement("div");body.className="pathway-body";
-    [["Components",p.components],["Decision point",p.decisionPoint],["Next step / caution",p.nextStep],["Approx. burden",p.burden]].forEach(x=>{if(x[1]){const b=document.createElement("div");b.innerHTML="<strong>"+esc(x[0])+"</strong><span>"+esc(x[1])+"</span>";body.appendChild(b)}});
+    [["Look at",p.components],["Decision point",p.decisionPoint],["Next step",p.nextStep],["Time",p.burden]].forEach(x=>{if(x[1]){const row=document.createElement("div");row.innerHTML="<strong>"+esc(x[0])+"</strong><span>"+esc(x[1])+"</span>";body.appendChild(row)}});
     d.appendChild(body);return d;
   }));
-  const btn=q("#showAllPathways");if(btn)btn.textContent=showAllPathways?"Show fewer pathways":"Show all pathways ("+pathways.length+")";
+  q("#showAllPathways").textContent=showAllPathways?"Show fewer pathways":"Show all "+pathways.length+" pathways";
 }
 
-const q=s=>document.querySelector(s);const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]));const unique=a=>[...new Set(a.filter(Boolean))].sort((x,y)=>String(x).localeCompare(String(y)));
-function optionize(sel,vals){vals.forEach(v=>{const o=document.createElement("option");o.value=v;o.textContent=v;sel.appendChild(o)})}
-function searchText(r){return Object.values(r).flatMap(v=>Array.isArray(v)?v:[v]).filter(v=>["string","number"].includes(typeof v)).join(" ").toLowerCase()}
-function filters(){return{term:q("#search").value.trim().toLowerCase(),section:q("#sectionFilter").value,type:q("#typeFilter").value,domain:q("#domainFilter").value,priority:q("#priorityFilter").value,evidence:q("#evidenceFilter").value,sort:q("#sortBy").value}}
-function apply(){const f=filters();filteredResources=allResources.filter(r=>{if(f.term&&!searchText(r).includes(f.term))return false;if(f.section&&r.section!==f.section)return false;if(f.type&&r.resourceType!==f.type)return false;if(f.domain&&r.domain!==f.domain)return false;if(f.priority&&r.priority!==f.priority)return false;if(f.evidence&&r.evidenceStrength!==f.evidence)return false;return true});if(f.sort==="title")filteredResources.sort((a,b)=>a.title.localeCompare(b.title));else if(f.sort==="newest")filteredResources.sort((a,b)=>(b.year||0)-(a.year||0)||a.title.localeCompare(b.title));else if(f.sort==="domain")filteredResources.sort((a,b)=>(a.domain||"").localeCompare(b.domain||"")||a.title.localeCompare(b.title));else filteredResources.sort((a,b)=>a.collection!==b.collection?a.collection.localeCompare(b.collection):(a.coreNumber||9999)-(b.coreNumber||9999)||a.title.localeCompare(b.title));render()}
-function addDetail(dl,label,value){if(value==null||value===""||(Array.isArray(value)&&!value.length))return;const dt=document.createElement("dt"),dd=document.createElement("dd");dt.textContent=label;dd.textContent=Array.isArray(value)?value.join(", "):value;dl.append(dt,dd)}
-function card(r){const n=q("#cardTemplate").content.firstElementChild.cloneNode(true);n.id=r.id;const ps=n.querySelector(".pills");[r.resourceType,r.priority,r.evidenceStrength].filter(Boolean).forEach(v=>{const p=document.createElement("span");p.className="pill"+(String(v).startsWith("P")?" priority-"+v:"");p.textContent=v;ps.appendChild(p)});n.querySelector(".card-title").textContent=r.title;n.querySelector(".card-subtitle").textContent=[r.abbreviation,r.domain].filter(Boolean).join(" • ");const m=n.querySelector(".card-meta");[r.coreNumber?"Core #"+r.coreNumber:"",r.year||"",r.collection||"",r.adminTime?"Admin: "+r.adminTime:""].filter(Boolean).forEach(v=>{const s=document.createElement("span");s.className="meta-item";s.textContent=v;m.appendChild(s)});const dl=n.querySelector(".details-grid");[["Section",r.section],["Domain",r.domain],["Jurisdiction",r.jurisdiction],["Evidence role",r.evidenceRole],["Caveat",r.caveat],["Core status",r.coreStatus],["Access / PDF status",r.accessStatus],["Canonical filename",r.canonicalFilename],["Next action",r.nextAction],["Construct / focus",r.constructFocus],["Age range",r.ageRange],["Clinical purpose",r.clinicalPurpose],["Respondent",r.respondent],["Telehealth",r.telehealth],["Repeat measure",r.repeatMeasure],["Copyright / ethics",r.copyrightCaution],["Interpretive limit",r.interpretiveLimit],["Evidence strength",r.evidenceStrength],["Outpatient utility",r.outpatientUtility],["Progress utility",r.progressUtility],["Notes",r.notes]].forEach(x=>addDetail(dl,x[0],x[1]));const a=n.querySelector(".card-actions");if(r.sourceUrl){const l=document.createElement("a");l.className="source-link";l.href=r.sourceUrl;l.target="_blank";l.rel="noopener noreferrer";l.textContent="Open source";a.appendChild(l)}else{const s=document.createElement("span");s.className="muted";s.textContent="Source link pending verification";a.appendChild(s)}n.querySelector(".copy-link").addEventListener("click",async e=>{const u=location.href.split("#")[0]+"#"+r.id;try{await navigator.clipboard.writeText(u);e.currentTarget.textContent="Copied";setTimeout(()=>e.currentTarget.textContent="Copy link",1200)}catch{location.hash=r.id}});return n}
-function render(){q("#cards").replaceChildren(...filteredResources.map(card));q("#visibleCount").textContent=filteredResources.length;q("#resultSummary").textContent=filteredResources.length+" of "+allResources.length+" resources";q("#emptyState").hidden=filteredResources.length!==0;const f=filters(),active=[f.term?'search: "'+f.term+'"':"",f.section,f.type,f.domain,f.priority,f.evidence].filter(Boolean);q("#activeFilters").textContent=active.length?active.join(" • "):"No filters applied";document.querySelectorAll(".chip").forEach(c=>c.classList.toggle("active",c.dataset.section===f.section))}
-function clearAll(){q("#search").value="";["sectionFilter","typeFilter","domainFilter","priorityFilter","evidenceFilter"].forEach(id=>q("#"+id).value="");q("#sortBy").value="default";apply()}
+function apply(){
+  const f=filters();
+  filteredResources=allResources.filter(r=>{
+    if(f.term&&!searchText(r).includes(f.term))return false;
+    if(f.section&&r.section!==f.section)return false;
+    if(f.type&&r.resourceType!==f.type)return false;
+    if(f.domain&&r.domain!==f.domain)return false;
+    if(f.priority&&r.priority!==f.priority)return false;
+    if(f.evidence&&r.evidenceStrength!==f.evidence)return false;
+    return true
+  });
+  if(f.sort==="title")filteredResources.sort((a,b)=>a.title.localeCompare(b.title));
+  else if(f.sort==="newest")filteredResources.sort((a,b)=>(b.year||0)-(a.year||0)||a.title.localeCompare(b.title));
+  else if(f.sort==="domain")filteredResources.sort((a,b)=>(a.domain||"").localeCompare(b.domain||"")||a.title.localeCompare(b.title));
+  else filteredResources.sort((a,b)=>a.collection!==b.collection?a.collection.localeCompare(b.collection):(a.coreNumber||9999)-(b.coreNumber||9999)||a.title.localeCompare(b.title));
+  render();
+}
+
+function addDetail(dl,label,value){
+  if(value==null||value===""||(Array.isArray(value)&&!value.length))return;
+  const dt=document.createElement("dt"),dd=document.createElement("dd");
+  dt.textContent=label;dd.textContent=Array.isArray(value)?value.join(", "):value;dl.append(dt,dd)
+}
+
+function summaryFor(r){
+  if(r.resourceType==="Assessment / screening tool"){
+    const bits=[r.constructFocus,r.clinicalPurpose&&r.clinicalPurpose[0],r.interpretiveLimit].filter(Boolean);
+    return bits.join(" · ")||"Assessment decision-support reference."
+  }
+  if(r.resourceType==="School support")return r.caveat||"Plain-language school access resource.";
+  return r.caveat||r.evidenceRole||r.notes||"Curated clinical reference."
+}
+
+function card(r){
+  const n=q("#cardTemplate").content.firstElementChild.cloneNode(true);n.id=r.id;
+  const ps=n.querySelector(".pills");
+  [r.resourceType,r.priority,r.evidenceStrength].filter(Boolean).forEach(v=>{const p=document.createElement("span");p.className="pill"+(String(v).startsWith("P")?" priority-"+v:"");p.textContent=v;ps.appendChild(p)});
+  n.querySelector(".card-title").textContent=r.title;
+  n.querySelector(".card-subtitle").textContent=[r.abbreviation,r.domain,r.year].filter(Boolean).join(" · ");
+  n.querySelector(".card-summary").textContent=summaryFor(r);
+
+  const dl=n.querySelector(".details-grid");
+  [["Collection",r.section],["Topic",r.domain],["Jurisdiction",r.jurisdiction],["Evidence role",r.evidenceRole],["Clinical caveat",r.caveat],["Core status",r.coreStatus],["Access",r.accessStatus],["Canonical filename",r.canonicalFilename],["Next action",r.nextAction],["Construct / focus",r.constructFocus],["Age range",r.ageRange],["Clinical purpose",r.clinicalPurpose],["Respondent",r.respondent],["Telehealth",r.telehealth],["Repeat measure",r.repeatMeasure],["Copyright / ethics",r.copyrightCaution],["Interpretive limit",r.interpretiveLimit],["Evidence strength",r.evidenceStrength],["Outpatient utility",r.outpatientUtility],["Progress utility",r.progressUtility],["Notes",r.notes]].forEach(x=>addDetail(dl,x[0],x[1]));
+
+  const actions=n.querySelector(".card-actions");
+  if(r.pageUrl){const a=document.createElement("a");a.className="primary-link";a.href=r.pageUrl;a.textContent="Open guide";actions.appendChild(a)}
+  else if(r.sourceUrl){const a=document.createElement("a");a.className="source-link";a.href=r.sourceUrl;a.target="_blank";a.rel="noopener noreferrer";a.textContent="Open source";actions.appendChild(a)}
+  else{const s=document.createElement("span");s.className="card-subtitle";s.textContent="Source link pending verification";actions.appendChild(s)}
+
+  n.querySelector(".copy-link").addEventListener("click",async e=>{
+    const u=location.href.split("#")[0]+"#"+r.id;
+    try{await navigator.clipboard.writeText(u);e.currentTarget.textContent="Copied";setTimeout(()=>e.currentTarget.textContent="Copy link",1200)}catch{location.hash=r.id}
+  });
+  return n
+}
+
+function render(){
+  const active=filters();
+  const hasFilter=Boolean(active.term||active.section||active.type||active.domain||active.priority||active.evidence);
+  const limit=showAllResources?filteredResources.length:(hasFilter?18:12);
+  const visible=filteredResources.slice(0,limit);
+  q("#cards").replaceChildren(...visible.map(card));
+  q("#resultSummary").textContent="Showing "+visible.length+" of "+filteredResources.length+" matching resources";
+  q("#emptyState").hidden=filteredResources.length!==0;
+  q("#showMoreResources").hidden=visible.length>=filteredResources.length;
+  q("#showMoreResources").textContent="Show more resources";
+  const chips=[active.term&&'search: “'+active.term+'”',active.section,active.type,active.domain,active.priority,active.evidence].filter(Boolean);
+  q("#activeFilters").textContent=chips.length?chips.join(" · "):"No filters applied";
+}
+
+function clearAll(){
+  q("#search").value="";q("#heroSearch").value="";
+  ["sectionFilter","typeFilter","domainFilter","priorityFilter","evidenceFilter"].forEach(id=>q("#"+id).value="");
+  q("#sortBy").value="default";showAllResources=false;apply()
+}
+
 function csv(rows){const keys=["id","section","collection","resourceType","title","year","domain","evidenceRole","coreNumber","priority","evidenceStrength","ageRange","clinicalPurpose","accessStatus","sourceUrl","nextAction"],quote=v=>'"'+String(Array.isArray(v)?v.join("; "):(v??"")).replace(/"/g,'""')+'"';return[keys.join(","),...rows.map(r=>keys.map(k=>quote(r[k])).join(","))].join("\n")}
 function download(name,mime,body){const a=document.createElement("a"),u=URL.createObjectURL(new Blob([body],{type:mime}));a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),500)}
-async function init(){try{const rs=await Promise.all([fetch("data/library.json"),fetch("data/taxonomy.json"),fetch("data/pathways.json")]);if(!rs[0].ok||!rs[1].ok||!rs[2].ok)throw new Error("Data files could not be loaded");const lib=await rs[0].json();taxonomy=await rs[1].json();const pathData=await rs[2].json();pathways=pathData.pathways||[];allResources=lib.resources||[];renderGuideCards();renderPathways();q("#totalCount").textContent=allResources.length;q("#researchCount").textContent=allResources.filter(r=>r.collection==="Clinical Research Core").length;q("#assessmentCount").textContent=allResources.filter(r=>r.collection==="Clinical Assessment Decision-Support Library").length;optionize(q("#sectionFilter"),unique(allResources.map(r=>r.section)));optionize(q("#typeFilter"),unique(allResources.map(r=>r.resourceType)));optionize(q("#domainFilter"),unique(allResources.map(r=>r.domain)));optionize(q("#evidenceFilter"),unique(allResources.map(r=>r.evidenceStrength)));const chips=q("#sectionChips");taxonomy.sections.forEach(s=>{const b=document.createElement("button");b.type="button";b.className="chip";const exact=allResources.some(r=>r.section===s.label)?s.label:"";b.dataset.section=exact;const count=exact?allResources.filter(r=>r.section===exact).length:0;b.textContent=s.label+(count?" ("+count+")":"");b.addEventListener("click",()=>{if(exact){q("#sectionFilter").value=exact;apply();q("#results").scrollIntoView({behavior:"smooth"})}});if(!exact)b.title="Section scaffolded; resources will appear as they are ingested";chips.appendChild(b)});const arch=q("#architecture");taxonomy.sections.forEach(s=>{const d=document.createElement("div");d.className="arch-item";d.innerHTML="<strong>"+esc(s.label)+"</strong><span>"+esc(s.description)+"</span>";arch.appendChild(d)});["search","sectionFilter","typeFilter","domainFilter","priorityFilter","evidenceFilter","sortBy"].forEach(id=>q("#"+id).addEventListener(id==="search"?"input":"change",apply));q("#clearFilters").addEventListener("click",clearAll);const pathwayBtn=q("#showAllPathways");if(pathwayBtn)pathwayBtn.addEventListener("click",()=>{showAllPathways=!showAllPathways;renderPathways()});q("#exportCsv").addEventListener("click",()=>download("clinical-practice-library-filtered.csv","text/csv;charset=utf-8",csv(filteredResources)));q("#exportJson").addEventListener("click",()=>download("clinical-practice-library-filtered.json","application/json",JSON.stringify(filteredResources,null,2)));apply();if(location.hash){const el=document.getElementById(location.hash.slice(1));if(el){el.scrollIntoView();const d=el.querySelector("details");if(d)d.open=true}}}catch(err){q("#cards").innerHTML='<div class="empty"><h3>Library data did not load</h3><p>'+esc(err.message)+'. Serve the repository with GitHub Pages or a local web server rather than opening index.html directly from the filesystem.</p></div>'}}
+
+async function init(){
+  try{
+    const rs=await Promise.all([fetch("data/library.json"),fetch("data/taxonomy.json"),fetch("data/pathways.json")]);
+    if(!rs[0].ok||!rs[1].ok||!rs[2].ok)throw new Error("Library data could not be loaded");
+    const lib=await rs[0].json();taxonomy=await rs[1].json();const pathData=await rs[2].json();
+    pathways=pathData.pathways||[];allResources=lib.resources||[];
+
+    q("#totalCount").textContent=allResources.length;
+    q("#researchCount").textContent=allResources.filter(r=>r.collection==="Clinical Research Core").length;
+    q("#assessmentCount").textContent=allResources.filter(r=>r.collection==="Clinical Assessment Decision-Support Library").length;
+
+    optionize(q("#sectionFilter"),unique(allResources.map(r=>r.section)));
+    optionize(q("#typeFilter"),unique(allResources.map(r=>r.resourceType)));
+    optionize(q("#domainFilter"),unique(allResources.map(r=>r.domain)));
+    optionize(q("#evidenceFilter"),unique(allResources.map(r=>r.evidenceStrength)));
+
+    renderGuideCards();renderPathways();
+
+    q("#heroSearchButton").addEventListener("click",()=>setSearch(q("#heroSearch").value.trim()));
+    q("#heroSearch").addEventListener("keydown",e=>{if(e.key==="Enter")setSearch(e.currentTarget.value.trim())});
+    qa("[data-search]").forEach(b=>b.addEventListener("click",()=>setSearch(b.dataset.search)));
+    qa("[data-section]").forEach(b=>b.addEventListener("click",()=>setSection(b.dataset.section)));
+    qa("[data-type]").forEach(b=>b.addEventListener("click",()=>setType(b.dataset.type)));
+    qa("[data-jump]").forEach(b=>b.addEventListener("click",()=>q(b.dataset.jump).scrollIntoView({behavior:"smooth"})));
+
+    ["search","sectionFilter","typeFilter","domainFilter","priorityFilter","evidenceFilter","sortBy"].forEach(id=>q("#"+id).addEventListener(id==="search"?"input":"change",()=>{showAllResources=false;apply()}));
+    q("#clearFilters").addEventListener("click",clearAll);
+    q("#showAllPathways").addEventListener("click",()=>{showAllPathways=!showAllPathways;renderPathways()});
+    q("#showMoreResources").addEventListener("click",()=>{showAllResources=true;render()});
+    q("#exportCsv").addEventListener("click",()=>download("clinical-practice-library-filtered.csv","text/csv;charset=utf-8",csv(filteredResources)));
+    q("#exportJson").addEventListener("click",()=>download("clinical-practice-library-filtered.json","application/json",JSON.stringify(filteredResources,null,2)));
+
+    apply();
+    if(location.hash){const el=document.getElementById(location.hash.slice(1));if(el){el.scrollIntoView();const d=el.querySelector("details");if(d)d.open=true}}
+  }catch(err){
+    q("#cards").innerHTML='<div class="empty"><h3>Library data did not load</h3><p>'+esc(err.message)+'</p></div>'
+  }
+}
 init();
