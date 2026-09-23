@@ -14,6 +14,17 @@ nav.jump{display:flex;flex-wrap:wrap;gap:8px;margin:28px 0}nav.jump a{background
 footer{border-top:1px solid var(--line);margin-top:60px;padding-top:24px;color:var(--muted);font-size:.9rem}@media print{header,nav.jump{display:none}.tool{break-inside:avoid;box-shadow:none}}
 
 .example{margin-top:14px;border-top:1px solid var(--line);padding-top:12px}.example summary{cursor:pointer;font-weight:800;color:var(--accent);min-height:44px;display:flex;align-items:center;gap:8px;list-style:none}.example summary::-webkit-details-marker{display:none}.example summary:after{content:"＋";margin-left:auto}.example[open] summary:after{content:"−"}.visual{margin-top:10px;background:#f8f8f6;border:1px solid var(--line);border-radius:10px;padding:14px}.visual .row{display:flex;flex-wrap:wrap;gap:8px;margin:7px 0}.chip{border:1px solid #bfcbd0;background:white;border-radius:9px;padding:9px 12px;font-weight:650}.arrow{align-self:center;color:var(--muted);font-weight:800}.scale{display:grid;grid-template-columns:repeat(5,1fr);gap:5px}.scale span{background:white;border:1px solid #cbd4d8;border-radius:7px;padding:8px 4px;text-align:center;font-size:.82rem}.caption{font-size:.82rem;color:var(--muted);margin-top:8px}
+
+@media (prefers-color-scheme:dark){
+  :root{color-scheme:dark;--ink:#e7e9e5;--muted:#a5aea7;--paper:#141916;--card:#1b211d;--line:#343d37;--accent:#9bc6ae;--soft:#243229}
+  body{background:var(--paper);color:#d8ddd9}
+  header{background:#17251f}
+  .tool{box-shadow:0 3px 14px rgba(0,0,0,.18)}
+  .mini{background:#242b26;color:#c5cdc7}
+  nav.jump a{background:#1b211d;color:#d7ddd8}
+  .visual{background:#171c19}
+  .chip,.scale span{background:#202722;border-color:#46514a;color:#e4e8e5}
+}
 </style></head><body>
 <header><a href="/resources/">← Clinical Practice Library</a></header><main class="wrap">
 <p class="eyebrow">Clinical Practice · Communication Access</p><h1>Communication Supports Toolkit</h1>
