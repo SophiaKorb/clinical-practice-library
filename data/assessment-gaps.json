@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "generated": "2026-09-22",
+    "count": 21,
+    "note": "Public, de-identified verification backlog. No local filenames or client data."
+  },
+  "gaps": [
+    {
+      "id": "gap-01",
+      "tool": "Vanderbilt ADHD scales",
+      "domain": "ADHD",
+      "respondent": "Parent + teacher",
+      "rationale": "Used/discussed clinically; file not located in this pass",
+      "priority": "High",
+      "nextAction": "Find legitimate current forms and scoring instructions"
+    },
+    {
+      "id": "gap-02",
+      "tool": "Conners scales",
+      "domain": "ADHD/executive functioning",
+      "respondent": "Parent + teacher + self",
+      "rationale": "Likely relevant; no usable copy identified",
+      "priority": "High",
+      "nextAction": "Clarify access to Conners 4 vs older versions"
+    },
+    {
+      "id": "gap-03",
+      "tool": "C-SSRS",
+      "domain": "Suicide/self-harm",
+      "respondent": "Clinician interview",
+      "rationale": "Common risk tool; no file identified",
+      "priority": "Critical",
+      "nextAction": "Verify clinic-approved version, training, and documentation workflow"
+    },
+    {
+      "id": "gap-04",
+      "tool": "ASQ Suicide Screening Tool",
+      "domain": "Suicide/self-harm",
+      "respondent": "Clinician-administered",
+      "rationale": "Useful pediatric brief screener; no file identified",
+      "priority": "Critical",
+      "nextAction": "Verify clinic workflow and disposition pathway"
+    },
+    {
+      "id": "gap-05",
+      "tool": "PCL-5",
+      "domain": "PTSD",
+      "respondent": "Adult self-report",
+      "rationale": "Commonly useful; no file identified",
+      "priority": "High",
+      "nextAction": "Locate official VA copy and scoring guidance"
+    },
+    {
+      "id": "gap-06",
+      "tool": "CPSS-5 / CATS",
+      "domain": "Child trauma/PTSD",
+      "respondent": "Child + caregiver",
+      "rationale": "Needed for pediatric trauma pathway",
+      "priority": "High",
+      "nextAction": "Compare feasibility, age/language coverage, and access"
+    },
+    {
+      "id": "gap-07",
+      "tool": "CY-BOCS / Y-BOCS",
+      "domain": "OCD",
+      "respondent": "Clinician interview/rating",
+      "rationale": "Needed for OCD clarification and monitoring",
+      "priority": "High",
+      "nextAction": "Verify training, forms, copyright, and child/adult versions"
+    },
+    {
+      "id": "gap-08",
+      "tool": "SCARED",
+      "domain": "Child anxiety",
+      "respondent": "Child + parent",
+      "rationale": "Needed for multi-informant anxiety pathway",
+      "priority": "High",
+      "nextAction": "Locate official/authorized forms and current interpretation guidance"
+    },
+    {
+      "id": "gap-09",
+      "tool": "RCADS",
+      "domain": "Child anxiety/depression",
+      "respondent": "Child + parent",
+      "rationale": "Strong candidate for repeated monitoring",
+      "priority": "High",
+      "nextAction": "Verify access, scoring, norms, languages, and electronic use"
+    },
+    {
+      "id": "gap-10",
+      "tool": "PROMIS Pediatric Anxiety",
+      "domain": "Anxiety",
+      "respondent": "Child/parent proxy",
+      "rationale": "Item bank file found by title but needs complete access workflow",
+      "priority": "Medium",
+      "nextAction": "Inventory exact form, short form, T-score conversion, and HealthMeasures terms"
+    },
+    {
+      "id": "gap-11",
+      "tool": "PHQ-A",
+      "domain": "Adolescent depression",
+      "respondent": "Adolescent self-report",
+      "rationale": "Discussed/used clinically; file not identified",
+      "priority": "High",
+      "nextAction": "Locate official form and suicide follow-up workflow"
+    },
+    {
+      "id": "gap-12",
+      "tool": "CALOCUS-CASII",
+      "domain": "Level of care/function",
+      "respondent": "Clinician rating",
+      "rationale": "Used clinically; no manual/form found in Drive search",
+      "priority": "High",
+      "nextAction": "Locate current manual, anchors, training, and permitted use"
+    },
+    {
+      "id": "gap-13",
+      "tool": "ADOS-2",
+      "domain": "Autism",
+      "respondent": "Performance-based clinician",
+      "rationale": "Formal evaluation/referral tier",
+      "priority": "High",
+      "nextAction": "Record training, kit, scope, telehealth limits, and access"
+    },
+    {
+      "id": "gap-14",
+      "tool": "ADI-R",
+      "domain": "Autism/developmental history",
+      "respondent": "Caregiver interview",
+      "rationale": "Formal evaluation/referral tier",
+      "priority": "Medium",
+      "nextAction": "Record qualification, time, materials, and role in battery"
+    },
+    {
+      "id": "gap-15",
+      "tool": "Social Responsiveness Scale, 2nd ed.",
+      "domain": "Autism/social functioning",
+      "respondent": "Parent/teacher/self",
+      "rationale": "Potential differential support; restricted",
+      "priority": "Medium",
+      "nextAction": "Verify SRS-2 access and appropriate interpretive cautions"
+    },
+    {
+      "id": "gap-16",
+      "tool": "BRIEF2 / BRIEF-A",
+      "domain": "Executive functioning",
+      "respondent": "Parent/teacher/self",
+      "rationale": "Ecological EF rating; restricted",
+      "priority": "Medium",
+      "nextAction": "Clarify versions and purchased access"
+    },
+    {
+      "id": "gap-17",
+      "tool": "WISC-V / WAIS-5",
+      "domain": "Cognitive ability",
+      "respondent": "Performance-based",
+      "rationale": "Formal psychological testing",
+      "priority": "High",
+      "nextAction": "Record qualification, current access, referral triggers; never store items"
+    },
+    {
+      "id": "gap-18",
+      "tool": "WIAT-4 / WJ V Tests of Achievement",
+      "domain": "Academic achievement",
+      "respondent": "Performance-based",
+      "rationale": "Formal learning-disability evaluation",
+      "priority": "High",
+      "nextAction": "Record access, qualification, battery choices, and referral pathway"
+    },
+    {
+      "id": "gap-19",
+      "tool": "CTOPP-2 / GORT-5 / TOWRE-2",
+      "domain": "Reading processes",
+      "respondent": "Performance-based",
+      "rationale": "Formal dyslexia clarification",
+      "priority": "Medium",
+      "nextAction": "Build construct map; verify access and age ranges"
+    },
+    {
+      "id": "gap-20",
+      "tool": "KeyMath-3 / WIAT Math / WJ Math",
+      "domain": "Mathematics",
+      "respondent": "Performance-based",
+      "rationale": "Formal math-disability clarification",
+      "priority": "Medium",
+      "nextAction": "Build math domain map before selecting tests"
+    },
+    {
+      "id": "gap-21",
+      "tool": "Faux Pas Test / Strange Stories / NEPSY-II Social Perception",
+      "domain": "Social cognition",
+      "respondent": "Performance/clinical probes",
+      "rationale": "Relevant to cognitive-empathy questions",
+      "priority": "Medium",
+      "nextAction": "Separate standardized tools from informal probes; audit developmental validity"
+    }
+  ]
+}

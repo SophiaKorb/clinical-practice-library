@@ -48,6 +48,9 @@ The research catalog preserves canonical filenames and retrieval status so the s
 - app.js: search, filters, sorting, deep links, and export
 - data/library.json: normalized public resource metadata
 - data/taxonomy.json: library taxonomy
+- data/pathways.json: clinical-question decision-support pathways
+- data/assessment-gaps.json: de-identified verification backlog
+- STATUS.md: current build coverage and next content waves
 - docs/METADATA-SCHEMA.md: field definitions
 - docs/INGESTION-GUIDE.md: how to add resources safely
 - docs/PRIVACY-AND-COPYRIGHT.md: publication boundary
