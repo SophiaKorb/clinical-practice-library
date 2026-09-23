@@ -61,3 +61,16 @@ a:focus-visible, button:focus-visible, summary:focus-visible{
   outline-offset:3px;
   border-radius:6px;
 }
+
+/* Resource tables */
+.table-wrap{overflow-x:auto;margin:16px 0 22px}
+.resource-card table{width:100%;border-collapse:collapse;background:var(--white)}
+.resource-card th,.resource-card td{padding:10px 12px;border:1px solid var(--line);text-align:left;vertical-align:top}
+.resource-card th{background:var(--sage);color:var(--green);font-weight:800}
+.resource-card h3{margin:26px 0 8px;font-size:1.08rem;color:var(--green)}
+.resource-card h4{margin:0 0 6px;font-size:.95rem}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:12px 0 18px}
+.two-col>div{padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--sage)}
+.reminder-list li{margin:8px 0}
+@media(max-width:650px){.two-col{grid-template-columns:1fr}}
+@media print{.table-wrap{overflow:visible}.resource-card table{break-inside:avoid}.two-col>div{background:#fff!important}}
