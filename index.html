@@ -18,6 +18,7 @@
       <span>Clinical Practice Library</span>
     </a>
     <nav class="nav-links" aria-label="Main navigation">
+      <a href="#insights">At a glance</a>
       <a href="#guides">School guides</a>
       <a href="#pathways">Clinical pathways</a>
       <a href="#library">Research & assessments</a>
@@ -29,8 +30,8 @@
   <section class="hero">
     <div class="hero-copy">
       <p class="kicker">Practical tools for real clinical work</p>
-      <h1>Find something useful.<br>Not just something indexed.</h1>
-      <p class="hero-lede">Plain-language school guides, clinical decision support, assessment references, and a curated research core, organized around the question you are trying to answer.</p>
+      <h1>Clinical resources,<br>organized for use.</h1>
+      <p class="hero-lede">Start with the question in front of you. Find a practical school tool, a clinical reasoning pathway, an assessment reference, or evidence worth reading.</p>
 
       <div class="hero-search">
         <label class="sr-only" for="heroSearch">Search the library</label>
@@ -50,7 +51,7 @@
 
     <aside class="hero-note">
       <p class="mini-label">What this is</p>
-      <p>A working clinical library designed to help people move from <strong>question → useful resource → next step</strong>.</p>
+      <p>A curated working library for moving from <strong>question → useful resource → next step</strong>, without requiring you to remember where anything was filed.</p>
       <div class="mini-stats">
         <div><strong id="totalCount">0</strong><span>curated resources</span></div>
         <div><strong id="researchCount">0</strong><span>research core</span></div>
@@ -92,6 +93,50 @@
         <span class="entry-copy">A selective evidence library with caveats, clinical role, source links, and retrieval status.</span>
         <span class="entry-action">Browse research →</span>
       </button>
+    </div>
+  </section>
+
+  <section id="insights" class="insights-section" aria-labelledby="insightsTitle">
+    <div class="section-heading split">
+      <div>
+        <p class="kicker">The shape of the library</p>
+        <h2 id="insightsTitle">At a glance</h2>
+        <p>A visual summary of what is actually in the collection right now. These update automatically as the library grows.</p>
+      </div>
+      <div class="section-note">Live from the current catalog</div>
+    </div>
+
+    <div class="viz-grid">
+      <article class="viz-card viz-mix-card">
+        <div class="viz-card-head">
+          <div><span class="viz-label">Resource mix</span><h3>What the library contains</h3></div>
+          <span class="viz-badge">134 total</span>
+        </div>
+        <div class="mix-layout">
+          <div id="resourceDonut" class="resource-donut" role="img" aria-label="Resource mix">
+            <div class="donut-center"><strong id="donutTotal">0</strong><span>resources</span></div>
+          </div>
+          <div id="mixLegend" class="mix-legend"></div>
+        </div>
+      </article>
+
+      <article class="viz-card">
+        <div class="viz-card-head">
+          <div><span class="viz-label">Topic signals</span><h3>Where the collection is deepest</h3></div>
+          <span class="viz-badge">overlap allowed</span>
+        </div>
+        <div id="topicBars" class="topic-bars"></div>
+        <p class="viz-note">A resource may appear in more than one topic area when its title, domain, or tags span multiple clinical questions.</p>
+      </article>
+
+      <article class="viz-card">
+        <div class="viz-card-head">
+          <div><span class="viz-label">Research core</span><h3>Foundations + current evidence</h3></div>
+          <span class="viz-badge">95 papers</span>
+        </div>
+        <div id="eraBars" class="era-bars" aria-label="Research core by publication era"></div>
+        <p class="viz-note">The core intentionally keeps landmark older work alongside a substantial 2026 evidence refresh.</p>
+      </article>
     </div>
   </section>
 

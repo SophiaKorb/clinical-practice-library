@@ -30,6 +30,75 @@ function setType(type){
   jumpToLibrary();
 }
 
+
+function renderVisualizations(){
+  const total=allResources.length;
+  const counts={
+    research:allResources.filter(r=>r.resourceType==="Research article").length,
+    assessment:allResources.filter(r=>r.resourceType==="Assessment / screening tool").length,
+    school:allResources.filter(r=>r.resourceType==="School support").length
+  };
+  const donut=q("#resourceDonut");
+  if(donut){
+    const p1=counts.research/total*100;
+    const p2=p1+counts.assessment/total*100;
+    donut.style.background="conic-gradient(var(--green) 0 "+p1+"%, var(--gold) "+p1+"% "+p2+"%, #b98f86 "+p2+"% 100%)";
+    donut.setAttribute("aria-label",counts.research+" research articles, "+counts.assessment+" assessment tools, and "+counts.school+" school-support guides");
+  }
+  if(q("#donutTotal"))q("#donutTotal").textContent=total;
+
+  const legend=q("#mixLegend");
+  if(legend){
+    const rows=[
+      {label:"Research core",count:counts.research,type:"Research article",color:"var(--green)"},
+      {label:"Assessment & screening",count:counts.assessment,type:"Assessment / screening tool",color:"var(--gold)"},
+      {label:"School-support guides",count:counts.school,type:"School support",color:"#b98f86"}
+    ];
+    legend.replaceChildren(...rows.map(r=>{
+      const b=document.createElement("button");b.type="button";b.className="legend-row";
+      b.innerHTML='<span class="legend-dot" style="background:'+r.color+'"></span><span class="legend-name">'+esc(r.label)+'</span><span class="legend-count">'+r.count+'</span>';
+      b.addEventListener("click",()=>setType(r.type));return b;
+    }));
+  }
+
+  const topicDefs=[
+    {label:"Anxiety & mood",re:/anxiety|depress|mood/i},
+    {label:"Autism & sensory",re:/autis|sensory|social communication/i},
+    {label:"ADHD & executive function",re:/adhd|executive function|inattention|attention/i},
+    {label:"Trauma & dissociation",re:/trauma|ptsd|dissoci/i},
+    {label:"Therapy & treatment",re:/psychotherapy|therapy|cbt|dbt|treatment/i},
+    {label:"Parenting & family",re:/parent|family|caregiver/i}
+  ].map(d=>({...d,count:allResources.filter(r=>d.re.test(searchText(r))).length}))
+   .sort((a,b)=>b.count-a.count);
+  const maxTopic=Math.max(...topicDefs.map(d=>d.count),1);
+  const topicHost=q("#topicBars");
+  if(topicHost){
+    topicHost.replaceChildren(...topicDefs.map(d=>{
+      const row=document.createElement("div");row.className="topic-row";
+      row.innerHTML='<span class="topic-name">'+esc(d.label)+'</span><span class="topic-track"><span class="topic-fill" style="width:'+(d.count/maxTopic*100)+'%"></span></span><span class="topic-count">'+d.count+'</span>';
+      return row;
+    }));
+  }
+
+  const research=allResources.filter(r=>r.resourceType==="Research article"&&Number(r.year));
+  const eras=[
+    {label:"1970s–80s",sub:"foundations",min:0,max:1989},
+    {label:"1990s–2000s",sub:"core literature",min:1990,max:2009},
+    {label:"2010–2025",sub:"recent base",min:2010,max:2025},
+    {label:"2026",sub:"current refresh",min:2026,max:2026}
+  ].map(e=>({...e,count:research.filter(r=>Number(r.year)>=e.min&&Number(r.year)<=e.max).length}));
+  const maxEra=Math.max(...eras.map(e=>e.count),1);
+  const eraHost=q("#eraBars");
+  if(eraHost){
+    eraHost.replaceChildren(...eras.map(e=>{
+      const col=document.createElement("div");col.className="era-col";
+      const height=Math.max(8,e.count/maxEra*100);
+      col.innerHTML='<div class="era-bar-space"><div class="era-bar" style="height:'+height+'%"><strong>'+e.count+'</strong></div></div><div class="era-label">'+esc(e.label)+'</div><div class="era-sub">'+esc(e.sub)+'</div>';
+      return col;
+    }));
+  }
+}
+
 function renderGuideCards(){
   const host=q("#guideCards");if(!host)return;
   const guides=allResources.filter(r=>r.collection==="Barrier Support School Access Toolkit");
@@ -152,7 +221,7 @@ async function init(){
     optionize(q("#domainFilter"),unique(allResources.map(r=>r.domain)));
     optionize(q("#evidenceFilter"),unique(allResources.map(r=>r.evidenceStrength)));
 
-    renderGuideCards();renderPathways();
+    renderGuideCards();renderPathways();renderVisualizations();
 
     q("#heroSearchButton").addEventListener("click",()=>setSearch(q("#heroSearch").value.trim()));
     q("#heroSearch").addEventListener("keydown",e=>{if(e.key==="Enter")setSearch(e.currentTarget.value.trim())});
