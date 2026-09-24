@@ -27,7 +27,29 @@
     <p class="lede">A curated collection of clinical, family, school, and training resources, organized into clear shelves and topic areas.</p>
     <div class="hero-actions">
       <a class="primary" href="#shelves">Browse the library</a>
-      <a class="secondary" href="#find">Browse by common need</a>
+      <a class="secondary" href="#resource-finder">Find a resource</a>
+    </div>
+  </section>
+
+  <section id="resource-finder" class="section finder-section" aria-labelledby="finder-title">
+    <div class="section-heading">
+      <p class="eyebrow">Resource finder · preview</p>
+      <h2 id="finder-title">What do you need right now?</h2>
+      <p>Search the library by title or topic, then narrow by the kind of job you are trying to do. This finder is being tested before it replaces any existing navigation.</p>
+    </div>
+    <div class="finder-panel">
+      <label class="finder-search"><span>Search resources</span><input id="resource-search" type="search" placeholder="Try: transitions, OCD, school, grounding…" autocomplete="off"></label>
+      <div class="finder-tasks" aria-label="Common tasks">
+        <button type="button" data-filter="patient">Explain or send home</button>
+        <button type="button" data-filter="visual">Find a visual or worksheet</button>
+        <button type="button" data-filter="clinical">Plan clinical work</button>
+        <button type="button" data-filter="school">Support school access</button>
+        <button type="button" data-filter="assessment">Assess or screen</button>
+        <button type="button" data-filter="spanish">En español</button>
+        <button type="button" data-filter="all" class="active">Show all</button>
+      </div>
+      <p id="finder-status" class="finder-status" aria-live="polite">Start typing or choose a task. Results are drawn from the resources already listed on this page.</p>
+      <div id="finder-results" class="finder-results"></div>
     </div>
   </section>
 
@@ -415,5 +437,39 @@
 </main>
 
 <footer><div><strong>Clinical Practice Library</strong><span>Selected Resources · Curated by Sophia Cohon, PhD</span></div></footer>
+<script>
+(() => {
+  const search = document.getElementById('resource-search');
+  const results = document.getElementById('finder-results');
+  const status = document.getElementById('finder-status');
+  const buttons = [...document.querySelectorAll('.finder-tasks button')];
+  const sourceLinks = [...document.querySelectorAll('#shelves a[href]')];
+  let filter = 'all';
+  const classify = (a) => {
+    const href = a.getAttribute('href') || '';
+    const text = a.textContent.trim();
+    const hay = (text + ' ' + href).toLowerCase();
+    const tags = [];
+    if (/handout|family|patient|plain-language|guides\//.test(hay)) tags.push('patient');
+    if (/map|card|sheet|visual|plan|log|worksheet|menu|toolkit/.test(hay)) tags.push('visual');
+    if (/therapy|clinical|clinician|treatment|manual/.test(hay)) tags.push('clinical');
+    if (/school|iep|504|homeschool|dyslex|dyscalcul|dysgraph/.test(hay)) tags.push('school');
+    if (/assessment|screen|evaluation|instrument|measure|form/.test(hay)) tags.push('assessment');
+    if (/\/es\//.test(href)) tags.push('spanish');
+    return {href,text,tags:[...new Set(tags)], hay};
+  };
+  const items = sourceLinks.map(classify).filter((x,i,arr)=>arr.findIndex(y=>y.href===x.href)===i);
+  const label = t => ({patient:'Patient / family',visual:'Visual / worksheet',clinical:'Clinician',school:'School',assessment:'Assessment',spanish:'Español'}[t] || t);
+  function render(){
+    const q = search.value.trim().toLowerCase();
+    const matched = items.filter(x => (!q || x.hay.includes(q)) && (filter==='all' || x.tags.includes(filter))).slice(0,24);
+    results.innerHTML = matched.map(x => '<a class="finder-result" href="'+x.href+'"><strong>'+x.text+'</strong><span>'+x.tags.slice(0,3).map(label).join(' · ')+'</span></a>').join('');
+    status.textContent = matched.length ? matched.length + (matched.length===24 ? '+':'') + ' matching resources' : (q || filter!=='all' ? 'No matches yet. Try a broader word or another task.' : 'Start typing or choose a task.');
+  }
+  search.addEventListener('input',render);
+  buttons.forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;buttons.forEach(x=>x.classList.toggle('active',x===b));render();}));
+  render();
+})();
+</script>
 </body>
 </html>
