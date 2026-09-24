@@ -404,6 +404,23 @@
         <a href="/resources/school/iep-504-meeting-preparation.html"><b>Prepare</b><span>IEP & 504 Meeting Preparation</span></a>
         <a href="/resources/school/school-support-implementation-log.html"><b>Follow through</b><span>Implementation Log</span></a>
       </div></article>
+      <article class="pathway-card"><h3>Executive function & task initiation</h3><div class="pathway-steps">
+        <a href="/resources/handouts/making-plans-easier-to-start-and-finish.html"><b>Understand</b><span>Making Plans Easier to Start and Finish</span></a>
+        <a href="/resources/handouts/task-launch-map.html"><b>Practice</b><span>Task Launch Map</span></a>
+      </div></article>
+      <article class="pathway-card"><h3>Personal care & hygiene</h3><div class="pathway-steps">
+        <a href="/resources/handouts/when-hygiene-tasks-are-hard.html"><b>Understand</b><span>When Hygiene Tasks Are Hard</span></a>
+        <a href="/resources/handouts/my-personal-care-plan.html"><b>Plan</b><span>My Personal Care Plan</span></a>
+      </div></article>
+      <article class="pathway-card"><h3>Grief & loss</h3><div class="pathway-steps">
+        <a href="/resources/handouts/making-room-for-grief.html"><b>Understand</b><span>Making Room for Grief</span></a>
+        <a href="/resources/handouts/my-grief-map.html"><b>Explore</b><span>My Grief Map</span></a>
+      </div></article>
+      <article class="pathway-card"><h3>Substance use & harm reduction</h3><div class="pathway-steps">
+        <a href="/resources/handouts/reducing-harm-when-substance-use-is-part-of-the-picture.html"><b>Understand</b><span>Reducing Harm</span></a>
+        <a href="/resources/handouts/my-lower-risk-plan.html"><b>Plan</b><span>My Lower-Risk Plan</span></a>
+        <a href="/resources/handouts/suspected-opioid-overdose.html"><b>Safety</b><span>Suspected Opioid Overdose</span></a>
+      </div></article>
     </div>
   </section>
 
@@ -502,9 +519,9 @@
   const label = t => ({patient:'Patient / family',visual:'Visual / worksheet',clinical:'Clinician',school:'School',assessment:'Assessment',spanish:'Español'}[t] || t);
   function render(){
     const q = search.value.trim().toLowerCase();
-    const matched = items.filter(x => (!q || (x.hay+' '+x.use+' '+x.audience+' '+x.format).toLowerCase().includes(q)) && (filter==='all' || x.tags.includes(filter))).slice(0,24);
+    const matched = items.filter(x => (!q || (x.hay+' '+x.use+' '+x.audience+' '+x.format).toLowerCase().includes(q)) && (filter==='all' || x.tags.includes(filter))).slice(0,36);
     results.innerHTML = matched.map(x => '<a class="finder-result" href="'+x.href+'"><strong>'+x.text+'</strong><span class="finder-use">Use when: '+x.use+'</span><span class="finder-meta">'+x.audience+' · '+x.format+'</span></a>').join('');
-    status.textContent = matched.length ? matched.length + (matched.length===24 ? '+':'') + ' matching resources' : (q || filter!=='all' ? 'No matches yet. Try a broader word or another task.' : 'Start typing or choose a task.');
+    status.textContent = matched.length ? matched.length + (matched.length===36 ? '+':'') + ' matching resources' : (q || filter!=='all' ? 'No matches. Try a broader term, clear the task filter, or browse the shelves.' : 'Start typing or choose a task.');
   }
   search.addEventListener('input',render);
   buttons.forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;buttons.forEach(x=>x.classList.toggle('active',x===b));render();}));
