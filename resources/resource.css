@@ -87,3 +87,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible{
  .checklist{grid-template-columns:repeat(2,minmax(0,1fr))}
  .checklist li::before{color:#111}
 }
+
+
+/* Reusable resource decision-support components */
+.resource-route{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0 26px}.resource-route>div{padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:var(--sage)}.resource-route strong{display:block;color:var(--green);margin-bottom:4px}.resource-callout{margin:18px 0;padding:15px 17px;border-left:4px solid var(--green2);background:var(--sage);border-radius:0 12px 12px 0}.resource-callout.caution{background:var(--sand);border-left-color:#a78554}.resource-links{display:grid;gap:8px;margin:12px 0}.resource-links a{display:block;padding:10px 12px;border:1px solid var(--line);border-radius:10px;text-decoration:none}.resource-links a:hover{text-decoration:underline}.micro-label{display:block;margin-bottom:3px;text-transform:uppercase;letter-spacing:.08em;font-size:.7rem;font-weight:850;color:var(--green2)}
+@media(max-width:650px){.resource-route{grid-template-columns:1fr}}
+@media print{.resource-route>div,.resource-callout{background:#fff!important}}
