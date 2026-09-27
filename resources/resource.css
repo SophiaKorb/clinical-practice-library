@@ -87,3 +87,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible{
  .checklist{grid-template-columns:repeat(2,minmax(0,1fr))}
  .checklist li::before{color:#111}
 }
+
+/* Visual working-tool structures */
+.visual-flow{display:flex;align-items:stretch;gap:8px;margin:6px 0 28px;overflow-x:auto;padding:4px 2px 10px}.visual-node{min-width:132px;flex:1;padding:14px 12px;border:1px solid #cfd8d1;border-radius:14px;background:#f4f8f5;text-align:center;display:flex;flex-direction:column;justify-content:center;gap:5px}.visual-node strong{font-size:.76rem;letter-spacing:.08em;color:#274c3c}.visual-node span{font-size:.78rem;line-height:1.35;color:#5e6962}.visual-arrow{align-self:center;font-size:1.35rem;color:#789083}.visual-map{display:grid;grid-template-columns:repeat(5,minmax(110px,1fr));gap:10px;margin:6px 0 28px}.body-map .visual-node:nth-child(1){border-radius:50%}.body-map .visual-node:nth-child(5){border-width:2px}@media(max-width:700px){.visual-flow{display:grid;grid-template-columns:1fr}.visual-arrow{transform:rotate(90deg);justify-self:center}.visual-map{grid-template-columns:1fr 1fr}.visual-map .visual-node:last-child{grid-column:1/-1}}@media print{.visual-flow{overflow:visible}.visual-node{break-inside:avoid}}
