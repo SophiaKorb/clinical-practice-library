@@ -9,3 +9,8 @@ phi/
 restricted/
 pdfs/
 *.pdf
+
+# Explicitly public, author-created worksheets; other PDFs remain excluded.
+!/resources/downloads/sensory-overload-and-recovery-plan.pdf
+!/resources/downloads/my-lower-risk-plan.pdf
+!/resources/downloads/uncertainty-practice-plan-and-my-erp-practice.pdf

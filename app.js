@@ -34,9 +34,9 @@ function renderTherapyIndex(){
 function renderGuideCards(){
   const host=q("#guideCards");if(!host)return;
   const guides=allResources.filter(r=>r.collection==="Barrier Support School Access Toolkit");
-  host.replaceChildren(...guides.map((r,i)=>{
+  host.replaceChildren(...guides.map(r=>{
     const card=document.createElement("article");card.className="guide-card";
-    const body=document.createElement("div");body.innerHTML='<span class="guide-index">Guide '+String(i+1).padStart(2,"0")+'</span><h3>'+esc(r.domain)+'</h3><p>Match an observable school barrier with supports that can actually be written and implemented.</p>';
+    const body=document.createElement("div");body.innerHTML='<span class="guide-index">Family school guide</span><h3>'+esc(r.domain)+'</h3><p>Match an observable school barrier with supports that can actually be written and implemented.</p>';
     const actions=document.createElement("div");actions.className="guide-actions";
     if(r.pageUrl){const a=document.createElement("a");a.className="primary-link";a.href="/"+r.pageUrl;a.textContent="Open guide";actions.appendChild(a)}
     const b=document.createElement("button");b.type="button";b.className="text-button";b.textContent="Related resources";b.addEventListener("click",()=>setSearch(r.domain));actions.appendChild(b);
