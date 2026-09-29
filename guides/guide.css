@@ -92,3 +92,34 @@ a:focus-visible, button:focus-visible, summary:focus-visible{
   outline-offset:3px;
   border-radius:6px;
 }
+
+/* Family-first guide pattern */
+.family-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:20px 0 34px}.family-steps>div{padding:14px;border-radius:14px;background:#f5f1e8;display:flex;gap:9px;align-items:center}.family-steps strong{display:grid;place-items:center;min-width:28px;height:28px;border-radius:50%;background:#fff;font-size:.82rem}.family-steps span{font-size:.82rem;line-height:1.3}.family-check{margin:16px 0 34px;padding:16px 18px;border-radius:14px;background:#f6f8f4}.family-check>strong{display:block;margin-bottom:9px}.family-check label{display:block;margin-top:10px;font-size:.84rem}.family-check textarea{display:block;width:100%;margin-top:5px}.family-sources{margin-top:36px}body[data-family="true"] .support-table .code{display:none}@media(max-width:700px){.family-steps{grid-template-columns:1fr 1fr}}@media print{.family-steps{grid-template-columns:repeat(4,1fr)}}
+
+/* Family controls remain legible without exposing internal reference codes. */
+body[data-family="true"] .page-shell>*{min-width:0}
+body[data-family="true"] .guide a{overflow-wrap:anywhere}
+body[data-family="true"] .family-steps>div{flex-direction:column;align-items:flex-start;background:var(--green-soft);gap:6px}
+body[data-family="true"] .family-steps strong{display:block;height:auto;border-radius:0;background:transparent;color:var(--green);font-size:.95rem}
+body[data-family="true"] .family-steps span{font-size:.9rem}
+body[data-family="true"] .support-table label{display:block;cursor:pointer}
+body[data-family="true"] .support-table input:focus-visible{outline:3px solid var(--green);outline-offset:4px}
+body[data-family="true"] .support-table tr:has(input:checked){background:var(--green-soft)}
+body[data-family="true"] .family-check{background:var(--green-soft)}
+body[data-family="true"] .family-check label{font-size:.9rem}
+body[data-family="true"] .family-check textarea{width:100%;padding:9px;border:1px solid var(--line);border-radius:8px;font:inherit;background:var(--white);color:var(--ink);resize:vertical}
+body[data-family="true"] .callout{grid-template-columns:1fr;gap:6px}
+body[data-family="true"] .callout strong{white-space:normal;font-size:.8rem}
+body[data-family="true"] .toc a{font-size:.875rem}
+@media(max-width:860px){
+  body[data-family="true"] .topbar{flex-direction:column;align-items:stretch;gap:8px}
+  body[data-family="true"] .topbar div{justify-content:space-between}
+  body[data-family="true"] .topbar button:first-child{display:inline-block}
+  body[data-family="true"] h2{scroll-margin-top:128px}
+}
+@media print{
+  body[data-family="true"] .family-steps>div,body[data-family="true"] .family-check,body[data-family="true"] .support-table tr:has(input:checked){background:#fff!important}
+  body[data-family="true"] .support-table tr{break-inside:avoid}
+  body[data-family="true"] .support-table-wrap{break-inside:auto}
+  body[data-family="true"] .family-check{break-inside:avoid}
+}

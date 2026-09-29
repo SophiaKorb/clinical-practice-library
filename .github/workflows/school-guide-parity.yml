@@ -1,0 +1,21 @@
+name: School guide parity QA
+on:
+  push:
+    paths:
+      - 'guides/**.html'
+      - 'resources/school/clinical/**.html'
+      - 'scripts/check-school-guide-parity.js'
+  pull_request:
+    paths:
+      - 'guides/**.html'
+      - 'resources/school/clinical/**.html'
+      - 'scripts/check-school-guide-parity.js'
+jobs:
+  parity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: node scripts/check-school-guide-parity.js --self-test

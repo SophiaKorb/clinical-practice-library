@@ -1,13 +1,14 @@
 # Library status
 
-Updated September 25, 2026.
+Updated September 29, 2026.
 
 ## Live catalog
 
 - 95 Clinical Research Core records
 - 31 assessment and screening-tool records
 - 8 Arizona Barrier Support school-toolkit records
-- 134 indexed catalog records total
+- 21 Clinical Handout Library collection records
+- 155 indexed catalog records total
 - 13 clinical-question pathways
 - 21 de-identified assessment verification gaps
 
@@ -58,6 +59,16 @@ For each visual:
 5. REMOVE if it does not improve understanding, choice, communication, sequencing, comparison, or response.
 
 Visual test: if most sentences disappeared, would the tool still communicate something useful?
+
+## September 29 P0/P1 batch
+
+- Eight family school guides reviewed and rewritten for everyday language; 292 supports retain their pairings with clinical guides.
+- Selectable support labels, mobile navigation and clear controls, and saved-note clearing fixed. Family-facing support codes and numbered guide labels are hidden; clinical reference codes remain available for teams.
+- Sensory Overload & Recovery Plan, My Lower-Risk Plan, and My Uncertainty & ERP Practice rebuilt as visual worksheets with native controls and a second companion page.
+- Each worksheet has a public, blank, editable two-page PDF, one visible author credit, and a source/provenance note.
+- School-guide checks verify real rows and reject nine regression cases. Browser checks cover desktop, 390px and 320px mobile layouts, selection/reset, and saved notes. PDF fields and both printed pages were verified.
+- Shared updates applied to both `main` and `cpl-2-colorful-helpful`; the redesign remains separate from the production shelves.
+- Details and follow-up scope: [September 29 handoff](docs/2026-09-29-P0-P1-HANDOFF.md). P1.5 remains deferred.
 
 ## Next content waves
 
