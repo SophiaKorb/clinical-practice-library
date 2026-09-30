@@ -1,30 +1,30 @@
 # Library status
 
-Updated September 29, 2026.
+Updated September 30, 2026.
 
 ## Live catalog
 
-- 95 Clinical Research Core records
-- 31 assessment and screening-tool records
+- Clinical Research Core records
+- assessment and screening-tool records
 - 8 Arizona Barrier Support school-toolkit records
-- 21 Clinical Handout Library collection records
+- Clinical Handout Library collection records
 - 155 indexed catalog records total
-- 13 clinical-question pathways
-- 21 de-identified assessment verification gaps
+- clinical-question pathways
+- de-identified assessment verification gaps
 
 ## Architecture scaffolded
 
-- 00 START HERE
+- START HERE
 - FIND A RESOURCE
-- 01 Families & Children - Trauma
-- 02 Parent & Patient Education
-- 03 School - IEP & 504
-- 04 Clinical Practice - Therapist
-- 05 Intern & Trainee
-- 06 Assessments & Screening Tools
-- 07 Arizona
-- 08 California
-- 09 ESPAÑOL
+- Families & Children - Trauma
+- Parent & Patient Education
+- School - IEP & 504
+- Clinical Practice - Therapist
+- Intern & Trainee
+- Assessments & Screening Tools
+- Arizona
+- California
+- ESPAÑOL
 
 ## CPL 2.0 redesign status
 
@@ -59,6 +59,16 @@ For each visual:
 5. REMOVE if it does not improve understanding, choice, communication, sequencing, comparison, or response.
 
 Visual test: if most sentences disappeared, would the tool still communicate something useful?
+
+## September 30 homepage and phone-layout batch
+
+- Intro simplified: “Guides, visual tools, and handouts for therapy, family support, and school planning.”
+- Shelf-summary grid repaired after removal of the old number column; expanded menus use the available width.
+- Folder and nested-menu number prefixes removed. Phone navigation remains visible with 44px targets; title sizes, buttons, spacing, and sticky-header anchor offsets adjusted.
+- Live homepage checked at 320, 390, 768, and 1280px without horizontal overflow; nested school and Spanish resource lists checked at 320px. Editorial preview reviewed at both phone widths.
+- All internal links and fragment targets checked. Deployed production HTML/CSS matches reviewed source; existing school-guide parity self-test passes.
+- Shared fixes deployed to both branches. Colorful concept controls now have working destinations and responsive phone styles; its authenticated browser review remains pending because automatic approval review blocked the Vercel sign-in redirect.
+- Results and screenshot: [September 30 handoff](docs/2026-09-30-HOMEPAGE-MOBILE-HANDOFF.md). P1.5 remains deferred.
 
 ## September 29 P0/P1 batch
 
