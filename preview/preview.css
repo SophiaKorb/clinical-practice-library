@@ -19,3 +19,5 @@
 .preview-divider h2{font-family:Georgia,serif;font-size:clamp(2.2rem,4vw,3.4rem);margin:.15rem 0 .4rem}
 @media(max-width:800px){.collection-grid,.feature-grid{grid-template-columns:1fr}.preview-hero{padding-top:64px}.preview-hero h1{font-size:clamp(3.2rem,14vw,5rem)}}
 @media(prefers-color-scheme:dark){.collection-card,.feature-grid,.feature-actions a{background:#1b211d}.feature-grid{background:linear-gradient(145deg,#1b211d,#202b24)}}
+
+@media(max-width:600px){.preview-hero{padding:36px 0}.preview-hero h1{font-size:clamp(2.3rem,10.8vw,3.6rem);line-height:1.05}.preview-feature,.preview-collections,.preview-divider{padding-left:0;padding-right:0}.feature-grid,.collection-card{padding:20px}}
