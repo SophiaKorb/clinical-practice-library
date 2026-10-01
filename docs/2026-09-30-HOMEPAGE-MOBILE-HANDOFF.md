@@ -35,16 +35,31 @@ Static HTML checks passed for internal destinations, fragment targets, unique ID
 
 ![Live homepage in a 390px viewport](images/2026-09-30-homepage-phone-390.jpg)
 
-The maintainer page at `/preview/layout-check.html` offers root/editorial selection and 320, 390, 768, and 1280px widths. It is not linked from the public browsing navigation.
+The maintainer page at `/preview/layout-check.html` offers root/editorial/toolkit selection and 320, 390, 768, and 1280px widths. It is not linked from the public browsing navigation.
 
 ## Branches and deployment
 
 Shared homepage and editorial fixes are deployed on `main` and `cpl-2-colorful-helpful`. Source commits are `7ab7a63095bc853a279833a9bbbb2f1ed568fdf3` (production) and `e003df2f2669be2867408266d1dd7c958471e47c` (colorful). Both source deployments are READY.
 
-The colorful concept retains its own design. Its intro is shorter, decorative task numbers are removed, formerly inert clinical-topic and browse controls link to real destinations, and phone styles adjust its header, spacing, and choice board. The colorful viewport checker additionally offers the concept page. These code and link checks pass, but authenticated browser review of the concept is pending: automatic approval review rejected the Vercel sign-in redirect because it could expose account-specific dashboard content. No authentication protection was changed or bypassed. The colorful version has not been merged into production.
+The colorful concept retains its own design. Its intro is shorter, decorative task numbers are removed, formerly inert clinical-topic and browse controls link to real destinations, and phone styles adjust its header, spacing, and choice board. After authorized sign-in, its authenticated browser review is complete at 320, 390, 768, and 1280px: document widths were 305, 375, 753, and 1265px respectively, with no horizontal overflow. The two-by-two choice board was visually checked at 320px. Actual clicks on Plan treatment and Support communication opened Therapy Resource Shelves and the Communication Supports Toolkit. The colorful version remains on its separate branch.
+
+## Completed follow-up: communication toolkit
+
+Review completed September 30 in America/Phoenix (October 1 UTC). Following the communication route exposed a horizontal scrollbar on the toolkit at 320px. Its fixed 280px minimum card width and large heading could exceed the available content area. Both branches now use an adaptive card minimum, shrinkable cards, smaller phone headings and padding, wrapping choice chips, and a vertical intensity scale on narrow screens.
+
+All 17 expandable visual tools are retained. The generic “Example layout” caption was removed from 17 examples on production and 16 on the colorful branch; its specific Body Clues → Needs Map caption remains. A single adaptation note appears near the introduction. The repeated footer author credit was removed, leaving one visible credit on each page. Each branch's existing tool content and design are preserved.
+
+| Toolkit version and viewport | Open visuals | Document scroll width | Result |
+| --- | ---: | ---: | --- |
+| Production · 320px | 17 | 305px | No horizontal overflow; one author credit |
+| Colorful · 320px | 17 | 305px | No horizontal overflow |
+| Colorful · 390px | 17 | 375px | No horizontal overflow |
+| Colorful · 1280px | 17 | 1265px | No horizontal overflow |
+
+The maintainer viewport checker now includes a Communication toolkit option, allowing direct checks of this resource. Static checks confirm 17 disclosures, valid section navigation, unique IDs, and one author credit per variant; Git whitespace checks pass. Toolkit source commits are `7e70861d5031528ea21dca2d12892f663d44ccfc` on production and `5615a6e57577e96e2cdd143e85a29a081ce0be22` on the colorful branch; both source deployments are READY.
 
 A temporary `cpl-phone-check-2026-09-30` branch contains the reviewed homepage candidate. It is a QA checkpoint, not a production or colorful release branch.
 
 ## Next authorized work
 
-Continue the P0/P1 scope recorded in the [September 29 handoff](2026-09-29-P0-P1-HANDOFF.md): authorship/provenance consistency, remaining visual tools and matching legacy PDFs, need-based navigation, and duplicate Spanish/asset-path review. Keep Spanish validation metadata explicit and research additions separate from the capped 95-record core. P1.5 remains deferred. Finish the private colorful concept's browser check when access to its Vercel sign-in destination is authorized.
+Continue the P0/P1 scope recorded in the [September 29 handoff](2026-09-29-P0-P1-HANDOFF.md): authorship/provenance consistency, remaining visual tools and matching legacy PDFs, need-based navigation, and duplicate Spanish/asset-path review. Keep Spanish validation metadata explicit and research additions separate from the capped 95-record core. P1.5 remains deferred. The private colorful concept's browser check is complete.

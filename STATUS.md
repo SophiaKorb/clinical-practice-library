@@ -33,7 +33,8 @@ Updated September 30, 2026.
 - Folder and nested-menu number prefixes removed. Phone navigation remains visible with 44px targets; title sizes, buttons, spacing, and sticky-header anchor offsets adjusted.
 - Live homepage checked at 320, 390, 768, and 1280px without horizontal overflow; nested school and Spanish resource lists checked at 320px. Editorial preview reviewed at both phone widths.
 - All internal links and fragment targets checked. Deployed production HTML/CSS matches reviewed source; existing school-guide parity self-test passes.
-- Shared fixes deployed to both branches. Colorful concept controls now have working destinations and responsive phone styles; its authenticated browser review remains pending because automatic approval review blocked the Vercel sign-in redirect.
+- Shared fixes deployed to both branches. Colorful concept controls have working destinations and responsive phone styles; authenticated browser review is complete at 320, 390, 768, and 1280px, including actual treatment-planning and communication-toolkit routes.
+- Communication toolkit phone overflow fixed on both branches. All 17 visuals fit at 320px while expanded; the colorful variant also passes at 390 and 1280px. Repeated generic captions and the duplicate footer author credit removed; one adaptation note and one author credit remain.
 - Results and screenshot: [September 30 handoff](docs/2026-09-30-HOMEPAGE-MOBILE-HANDOFF.md). P1.5 remains deferred.
 
 ## September 29 P0/P1 batch
