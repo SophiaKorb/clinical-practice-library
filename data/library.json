@@ -5792,6 +5792,43 @@
         "clinical resource"
       ],
       "publicMetadataOnly": true
+    },
+    {
+      "id": "treatment-plan-menu",
+      "section": "04 Clinical Practice - Therapist",
+      "collection": "Treatment Planning Tools",
+      "resourceType": "Interactive treatment planning menu",
+      "title": "Treatment planning menu: major diagnosis families",
+      "domain": "Treatment planning",
+      "functionalTarget": "Choose and adapt needs, functional goals, measurable objectives, planned interventions and review measures across 28 diagnosis families and presentations.",
+      "clinicalPurpose": [
+        "Treatment planning",
+        "Shared decision making"
+      ],
+      "audience": [
+        "Clinician"
+      ],
+      "pageUrl": "resources/therapy/treatment-plan-menu.html",
+      "sourceUrl": "",
+      "accessStatus": "Original public planning tool",
+      "tags": [
+        "treatment plan",
+        "needs",
+        "goals",
+        "objectives",
+        "interventions",
+        "depression",
+        "bipolar",
+        "anxiety",
+        "OCD",
+        "PTSD",
+        "DID",
+        "autism",
+        "ADHD",
+        "psychosis",
+        "eating disorders"
+      ],
+      "caveat": "Original example wording with official reference links; not an exhaustive DSM catalog, diagnosis tool, prescribing plan or AthenaOne-native template. Adapt to age, context, assessment, client preference and clinician competence."
     }
   ]
 }
