@@ -20,17 +20,5 @@
         }
       ]
     }
-  ],
-  "redirects": [
-    {
-      "source": "/resources",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/resources/index",
-      "destination": "/",
-      "permanent": true
-    }
   ]
 }

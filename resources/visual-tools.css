@@ -75,10 +75,6 @@ fieldset.tool-group{padding:0;border:0;margin:18px 0;min-width:0}
 .tool-sources a{overflow-wrap:anywhere;color:var(--green)}
 .tool-sources ul{margin:8px 0;padding-left:20px}
 .tool-sources li{font-size:.875rem;margin:5px 0}
-@media screen and (max-width:680px){
-  .tool-choice{min-height:44px}
-  .tool-actions a,.tool-actions button{min-height:44px;display:inline-flex;align-items:center}
-}
 @media(prefers-color-scheme:dark){
   .visual-tool{--tool-blue:#a6bde9;--tool-teal:#9dd3bf;--tool-gold:#e2c280;--tool-rose:#edb0bd;--tool-blue-bg:#242f44;--tool-teal-bg:#20372f;--tool-gold-bg:#382f1c;--tool-rose-bg:#39262c}
 }
@@ -146,34 +142,4 @@ fieldset.tool-group{padding:0;border:0;margin:18px 0;min-width:0}
   .tool-sources{margin-top:14px;padding-top:10px;break-inside:avoid}
   .tool-field,.load-scale,.support-map,.sequence,.ocd-map,.field-pair,.field-trio{break-inside:avoid}
   .visual-tool .resource-footer{width:100%;margin:12px 0 0;font-size:9pt;padding-top:8px}
-}
-
-/* Grief, personal care, and after-school worksheets use the same working surface. */
-.stable-worksheet .grief-map{margin:0 0 20px}
-.stable-worksheet .grief-map>div{min-width:0;background:var(--tool-teal-bg);padding:14px}
-.stable-worksheet .grief-map .map-center{background:var(--tool-blue-bg);text-align:left}
-.stable-worksheet .tool-field small{font-weight:400;font-size:.875rem;color:var(--muted)}
-.four-step{display:grid;grid-template-columns:1fr 20px 1fr 20px 1fr 20px 1fr;gap:8px;margin:16px 0 22px}
-.four-step>div{min-width:0;padding:12px;border:1px solid var(--line);border-top:4px solid var(--tool-teal);border-radius:10px;background:var(--tool-teal-bg)}
-.four-step>div:nth-of-type(2){background:var(--tool-gold-bg);border-top-color:var(--tool-gold)}
-.four-step>div:nth-of-type(3){background:var(--tool-blue-bg);border-top-color:var(--tool-blue)}
-.stable-worksheet .tool-actions a,.stable-worksheet .tool-actions button{min-height:44px;display:inline-flex;align-items:center}
-@media(max-width:680px){
-  .four-step{grid-template-columns:1fr}
-  .four-step .path-arrow{transform:rotate(90deg);justify-self:center}
-  .stable-worksheet .grief-map{grid-template-columns:1fr;grid-template-areas:"center" "a" "b" "c" "d"}
-  .stable-worksheet .tool-field small{font-size:.875rem}
-}
-@media print{
-  .stable-worksheet{font-size:10pt}
-  .stable-worksheet .grief-map{grid-template-columns:1fr 1.05fr 1fr;grid-template-areas:"a center b" "c center d";gap:8px;margin-bottom:12px}
-  .stable-worksheet .grief-map>div{padding:10px}
-  .stable-worksheet .tool-field small{font-size:8pt}
-  .stable-worksheet .grief-map .tool-field textarea{min-height:32px}
-  .four-step{grid-template-columns:1fr 15px 1fr 15px 1fr 15px 1fr;gap:6px;margin:10px 0 12px;break-inside:avoid}
-  .four-step>div{padding:8px}
-  .four-step .path-arrow{transform:none}
-  .four-step .tool-field{font-size:9pt}
-  .stable-worksheet .field-trio{margin:10px 0}
-  .stable-worksheet .tool-sources{break-inside:auto}
 }

@@ -1,0 +1,67 @@
+{
+  "generated": "2026-09-22",
+  "sections": [
+    {
+      "label": "00 START HERE",
+      "description": "Orientation, scope, and library rules."
+    },
+    {
+      "label": "FIND A RESOURCE",
+      "description": "Search and filter across the entire library."
+    },
+    {
+      "label": "01 Families & Children - Trauma",
+      "description": "Child, family, parenting, and trauma resources."
+    },
+    {
+      "label": "02 Parent & Patient Education",
+      "description": "Plain-language education, handouts, and skills resources."
+    },
+    {
+      "label": "03 School - IEP & 504",
+      "description": "School access, disability supports, and family-facing school tools."
+    },
+    {
+      "label": "04 Clinical Practice - Therapist",
+      "description": "Research, practice tools, treatment references, and clinician resources."
+    },
+    {
+      "label": "05 Intern & Trainee",
+      "description": "Teaching, supervision, quick references, and trainee supports."
+    },
+    {
+      "label": "06 Assessments & Screening Tools",
+      "description": "Decision-support metadata for measures and assessment pathways."
+    },
+    {
+      "label": "07 Arizona",
+      "description": "Arizona-specific systems, school, DDD/ALTCS, crisis, and referral resources."
+    },
+    {
+      "label": "08 California",
+      "description": "California-specific clinical and systems resources."
+    },
+    {
+      "label": "09 ESPAÑOL",
+      "description": "Spanish-language and validated Spanish resources."
+    }
+  ],
+  "resourceTypes": [
+    "Research article",
+    "Assessment / screening tool",
+    "Clinical guide",
+    "Handout / worksheet",
+    "School support",
+    "Referral / community resource",
+    "Training resource",
+    "Template / macro"
+  ],
+  "audiences": [
+    "Clinician",
+    "Intern / Trainee",
+    "Patient",
+    "Parent / Caregiver",
+    "School Team",
+    "Recovery Coach"
+  ]
+}

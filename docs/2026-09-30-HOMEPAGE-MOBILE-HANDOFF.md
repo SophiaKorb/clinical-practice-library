@@ -58,6 +58,10 @@ All 17 expandable visual tools are retained. The generic “Example layout” ca
 
 The maintainer viewport checker now includes a Communication toolkit option, allowing direct checks of this resource. Static checks confirm 17 disclosures, valid section navigation, unique IDs, and one author credit per variant; Git whitespace checks pass. Toolkit source commits are `7e70861d5031528ea21dca2d12892f663d44ccfc` on production and `5615a6e57577e96e2cdd143e85a29a081ce0be22` on the colorful branch; both source deployments are READY.
 
+![Colorful choice board at 320px](images/2026-10-01-colorful-choice-board-320.jpg)
+
+![Repaired toolkit cards at 320px](images/2026-10-01-toolkit-phone-320.jpg)
+
 A temporary `cpl-phone-check-2026-09-30` branch contains the reviewed homepage candidate. It is a QA checkpoint, not a production or colorful release branch.
 
 ## Next authorized work

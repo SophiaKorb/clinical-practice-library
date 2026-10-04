@@ -1,0 +1,1031 @@
+{
+  "version": "2026-10-04",
+  "scope": "Major outpatient diagnosis families and overlapping presentations; not an exhaustive DSM catalog",
+  "families": [
+    {
+      "id": "depression",
+      "name": "Depressive disorders",
+      "group": "Mood",
+      "age": "Adult core; use youth-specific treatment for minors",
+      "context": "MDD and persistent depressive presentations: target participation, connection and agency as well as symptoms. Clarify history of mood elevation.",
+      "caution": "Assess suicide risk and severe impairment. Possible mania, psychotic depression or inability to care for basic needs changes the care pathway.",
+      "evidence": "Guideline-informed treatment direction; objectives are original examples.",
+      "sources": [
+        {
+          "label": "NICE NG222 · adult depression",
+          "url": "https://www.nice.org.uk/guidance/ng222/chapter/Recommendations"
+        }
+      ],
+      "guide": "/resources/therapy/cbt-behavioral-activation-start-here.html",
+      "targets": [
+        {
+          "id": "depression-1",
+          "label": "Return to meaningful activity",
+          "need": "Withdrawal and loss of meaningful routines",
+          "goal": "Rebuild participation in activities the client values.",
+          "objective": "By [date], complete [target] personally meaningful activities per [week], from baseline [baseline], recording what helped or blocked participation.",
+          "intervention": "Use collaborative behavioral activation: map avoidance, choose manageable activities, schedule practice and review reinforcement and barriers.",
+          "measure": "Weekly activity frequency, completion with supports, and client-rated meaning or mastery."
+        },
+        {
+          "id": "depression-2",
+          "label": "Reduce self-critical shutdown",
+          "need": "Self-criticism interrupts action and problem solving",
+          "goal": "Respond to setbacks with greater flexibility and self-respect.",
+          "objective": "By [date], use an agreed alternative response to self-critical thoughts in [target] of [opportunities], from [baseline], and take one chosen next step.",
+          "intervention": "Use CBT to examine specific predictions and self-evaluations; practice balanced responses, behavioral experiments and problem solving.",
+          "measure": "Self-critical shutdown frequency; use of an alternative response; ability to resume a valued task."
+        },
+        {
+          "id": "depression-3",
+          "label": "Rebuild connection",
+          "need": "Isolation and loss of trusted support",
+          "goal": "Increase chosen, supportive contact without overwhelming the client.",
+          "objective": "By [date], initiate or accept [target] preferred supportive contacts per [week], from [baseline], with agreed access supports.",
+          "intervention": "Use behavioral activation or interpersonal work to identify safe relationships, communication barriers and realistic invitations.",
+          "measure": "Chosen contact frequency, connection rating, and quality of support rather than contact count alone."
+        }
+      ]
+    },
+    {
+      "id": "bipolar",
+      "name": "Bipolar and related disorders",
+      "group": "Mood",
+      "age": "Adults; youth care needs a specialist pathway",
+      "context": "Psychotherapy supports recovery and relapse prevention alongside psychiatric care. Clarify episode status first.",
+      "caution": "Suspected mania, mixed symptoms, major sleep reduction with activation, or severe depression requires prompt psychiatric assessment; this is not a medication plan.",
+      "evidence": "Guideline-informed treatment direction; objectives are original examples.",
+      "sources": [
+        {
+          "label": "NICE CG185 · bipolar disorder",
+          "url": "https://www.nice.org.uk/guidance/cg185/chapter/recommendations"
+        }
+      ],
+      "guide": "/resources/therapy/psychosis-smi-rehabilitation-start-here.html",
+      "targets": [
+        {
+          "id": "bipolar-1",
+          "label": "Protect rhythm and functioning",
+          "need": "Irregular routines and sleep precede loss of stability",
+          "goal": "Maintain routines that support personally meaningful functioning.",
+          "objective": "By [date], follow the agreed daily rhythm on [target] days per [week], from [baseline], while tracking sleep and activation.",
+          "intervention": "Provide bipolar-specific psychoeducation; collaboratively map routines, triggers and barriers; coordinate concerning changes with the prescriber.",
+          "measure": "Sleep timing, activation, participation in chosen roles, and feasibility of the routine."
+        },
+        {
+          "id": "bipolar-2",
+          "label": "Act on early warning signs",
+          "need": "Warning signs are missed or help is delayed",
+          "goal": "Recognize changes early and use a shared response plan.",
+          "objective": "By [date], identify [target] personal warning signs and rehearse the corresponding support/contact step in [target] practice scenarios.",
+          "intervention": "Develop a relapse signature and written response plan with client-selected supports; rehearse help-seeking and review past episodes without blame.",
+          "measure": "Recognition and response-plan rehearsal; actual delay to support; symptoms and consequences of emerging episodes."
+        }
+      ]
+    },
+    {
+      "id": "gad",
+      "name": "Generalized anxiety disorder",
+      "group": "Anxiety and compulsions",
+      "age": "Adult core; adapt with age-specific guidance",
+      "context": "Distinguish productive problem solving from repetitive worry and avoidance.",
+      "caution": "Assess medical/substance contributors and comorbidity. Choose practices that increase function rather than make certainty a prerequisite.",
+      "evidence": "Guideline-informed treatment direction; objectives are original examples.",
+      "sources": [
+        {
+          "label": "NICE CG113 · adult GAD and panic",
+          "url": "https://www.nice.org.uk/guidance/cg113/chapter/Recommendations"
+        }
+      ],
+      "guide": "/resources/therapy/anxiety-exposure-ocd-start-here.html",
+      "targets": [
+        {
+          "id": "gad-1",
+          "label": "Choose action over worry",
+          "need": "Worry delays decisions and valued activity",
+          "goal": "Take meaningful action while uncertainty remains.",
+          "objective": "By [date], complete [target] planned actions per [week] despite worry, from [baseline], and record reassurance or avoidance used.",
+          "intervention": "Use CBT to map worry, test predictions, practice uncertainty and separate actionable problems from hypothetical worry.",
+          "measure": "Valued actions completed; time lost to worry; reassurance and avoidance frequency."
+        },
+        {
+          "id": "gad-2",
+          "label": "Solve what is solvable",
+          "need": "Repeated rumination replaces practical problem solving",
+          "goal": "Use a bounded process for problems within the client’s control.",
+          "objective": "By [date], apply the agreed problem-solving sequence to [target] real-life problems and carry out one chosen step in [target] of [opportunities].",
+          "intervention": "Teach specific problem definition, options, a feasible action and review; use applied relaxation if it fits the chosen treatment formulation.",
+          "measure": "Actions taken and usefulness of decisions; time spent looping; client-rated interference."
+        }
+      ]
+    },
+    {
+      "id": "panic",
+      "name": "Panic disorder and agoraphobia",
+      "group": "Anxiety and compulsions",
+      "age": "Adult core",
+      "context": "Fear of body sensations and avoided places can restrict daily life.",
+      "caution": "New or unexplained physical symptoms need medical assessment. Interoceptive exposure requires competence and medical suitability; avoid using relaxation as a mandatory safety behavior.",
+      "evidence": "Guideline-informed treatment direction; objectives are original examples.",
+      "sources": [
+        {
+          "label": "NICE CG113 · adult GAD and panic",
+          "url": "https://www.nice.org.uk/guidance/cg113/chapter/Recommendations"
+        }
+      ],
+      "guide": "/resources/therapy/anxiety-exposure-ocd-start-here.html",
+      "targets": [
+        {
+          "id": "panic-1",
+          "label": "Regain access to places",
+          "need": "Panic-related avoidance narrows independence",
+          "goal": "Use chosen places and activities with less reliance on safety behaviors.",
+          "objective": "By [date], complete [target] agreed situation practices per [week], from [baseline], while reducing [specified safety behavior].",
+          "intervention": "Use panic-focused CBT and collaboratively graded in-vivo exposure; test feared predictions and review safety behaviors.",
+          "measure": "Activities accessed, avoidance, safety behavior use, and learning from practice."
+        },
+        {
+          "id": "panic-2",
+          "label": "Change the response to sensations",
+          "need": "Catastrophic interpretations of sensations escalate fear",
+          "goal": "Respond to panic sensations with a more flexible understanding.",
+          "objective": "By [date], complete [target] clinician-guided, medically appropriate sensation practices and describe the observed outcome versus prediction.",
+          "intervention": "Provide panic-cycle psychoeducation and competent interoceptive exposure within a structured CBT protocol.",
+          "measure": "Practice completion, catastrophic belief rating, and willingness to remain engaged despite sensations."
+        }
+      ]
+    },
+    {
+      "id": "social",
+      "name": "Social anxiety disorder",
+      "group": "Anxiety and compulsions",
+      "age": "Adults and young people; use age-specific delivery",
+      "context": "Target fear-driven avoidance rather than preferred solitude or neurodivergent communication style.",
+      "caution": "Check actual bullying, discrimination and unsafe settings. Do not turn social goals into compelled masking or eye contact.",
+      "evidence": "Guideline-informed treatment direction; objectives are original examples.",
+      "sources": [
+        {
+          "label": "NICE CG159 · social anxiety",
+          "url": "https://www.nice.org.uk/guidance/cg159/chapter/recommendations"
+        }
+      ],
+      "guide": "/resources/therapy/anxiety-exposure-ocd-start-here.html",
+      "targets": [
+        {
+          "id": "social-1",
+          "label": "Participate without over-monitoring",
+          "need": "Fear of judgment blocks chosen participation",
+          "goal": "Take part in personally chosen social situations with greater freedom.",
+          "objective": "By [date], participate in [target] chosen social situations per [week], from [baseline], using an agreed outward-attention practice.",
+          "intervention": "Use social-anxiety-specific CBT, attention work, behavioral experiments and graded exposure; reduce self-focused monitoring.",
+          "measure": "Participation, avoidance, self-monitoring, and client-rated authenticity and freedom."
+        },
+        {
+          "id": "social-2",
+          "label": "Reduce protective routines",
+          "need": "Rehearsal, reassurance and post-event review consume time",
+          "goal": "Use fewer anxiety-maintaining safety behaviors.",
+          "objective": "By [date], test dropping [specified safety behavior] in [target] agreed situations and compare predicted versus observed consequences.",
+          "intervention": "Identify safety behaviors and post-event processing; design collaborative experiments and review evidence without reassurance rituals.",
+          "measure": "Safety behavior frequency, time in post-event review, and functional benefit."
+        }
+      ]
+    },
+    {
+      "id": "phobia",
+      "name": "Specific phobia / separation anxiety",
+      "group": "Anxiety and compulsions",
+      "age": "Age-specific assessment and treatment required",
+      "context": "These are distinct diagnoses sharing some avoidance targets. Use a disorder-specific formulation rather than treating every separation as fear.",
+      "caution": "Rule out real danger, developmental expectations, trauma and attachment disruption. Exposure is collaborative, never forced.",
+      "evidence": "NIMH public overview supports broad direction; use a diagnosis- and age-specific protocol for treatment detail.",
+      "sources": [
+        {
+          "label": "NIMH · phobias and related disorders",
+          "url": "https://www.nimh.nih.gov/health/publications/phobias-and-phobia-related-disorders"
+        }
+      ],
+      "guide": "/resources/therapy/anxiety-exposure-ocd-start-here.html",
+      "targets": [
+        {
+          "id": "phobia-1",
+          "label": "Approach a chosen feared activity",
+          "need": "A specific fear limits an important activity",
+          "goal": "Regain access to a chosen activity through manageable approach steps.",
+          "objective": "By [date], complete [target] agreed hierarchy steps, from [baseline], documenting approach, avoidance and observed learning.",
+          "intervention": "Use a diagnosis-appropriate CBT exposure plan with consent/assent; adapt pace and response mode.",
+          "measure": "Hierarchy steps attempted and completed; participation gained; safety behaviors and distress tolerance."
+        },
+        {
+          "id": "phobia-2",
+          "label": "Practice supported separation",
+          "need": "Fear-driven separation distress limits age-appropriate participation",
+          "goal": "Build confidence in safe, predictable separations.",
+          "objective": "By [date], complete [target] agreed separation practices of [duration], from [baseline], with a predictable return/support plan.",
+          "intervention": "Use age-appropriate CBT, caregiver coaching and gradual supported practice; assess context and developmental needs first.",
+          "measure": "Practice participation, duration, recovery, caregiver accommodation and sense of safety."
+        }
+      ]
+    },
+    {
+      "id": "ocd",
+      "name": "Obsessive-compulsive disorder",
+      "group": "Anxiety and compulsions",
+      "age": "Adults and youth; include caregivers as appropriate",
+      "context": "Identify overt and mental compulsions, reassurance seeking and functional cost.",
+      "caution": "Distinguish intrusive thoughts from intent through assessment. ERP reduces rituals; it must not become repeated reassurance or a demand for anxiety to disappear.",
+      "evidence": "Guideline-informed treatment direction; objectives are original examples.",
+      "sources": [
+        {
+          "label": "NICE CG31 · OCD and BDD",
+          "url": "https://www.nice.org.uk/guidance/cg31/chapter/Recommendations"
+        }
+      ],
+      "guide": "/resources/therapy/anxiety-exposure-ocd-start-here.html",
+      "targets": [
+        {
+          "id": "ocd-1",
+          "label": "Interrupt the ritual cycle",
+          "need": "Compulsions and avoidance occupy daily life",
+          "goal": "Choose valued action with less control by rituals.",
+          "objective": "By [date], complete [target] agreed ERP practices per [week], from [baseline], refraining from [specified overt/mental ritual] for [agreed period].",
+          "intervention": "Use competent CBT with exposure and response prevention; identify hidden rituals and review learning and willingness.",
+          "measure": "Ritual time/frequency, response prevention, participation and optional appropriately administered OCD measure."
+        },
+        {
+          "id": "ocd-2",
+          "label": "Reduce accommodation",
+          "need": "Family reassurance and participation in rituals sustain restriction",
+          "goal": "Build supportive responses that do not reinforce compulsions.",
+          "objective": "By [date], use the agreed supportive response instead of [specified accommodation] in [target] of [opportunities], from [baseline].",
+          "intervention": "Collaboratively map accommodation, coach validating responses without certainty-giving and pace changes with the client and support person.",
+          "measure": "Accommodation frequency, support quality, distress response and function."
+        }
+      ]
+    },
+    {
+      "id": "bdd",
+      "name": "Body dysmorphic disorder",
+      "group": "Anxiety and compulsions",
+      "age": "Adults and youth; use age-specific protocol",
+      "context": "Appearance preoccupation, checking and avoidance interfere with daily life.",
+      "caution": "Assess suicide risk and eating-disorder differential. Avoid reassurance about appearance or cosmetic procedures as psychotherapy goals.",
+      "evidence": "Guideline-informed treatment direction; objectives are original examples.",
+      "sources": [
+        {
+          "label": "NICE CG31 · OCD and BDD",
+          "url": "https://www.nice.org.uk/guidance/cg31/chapter/Recommendations"
+        }
+      ],
+      "guide": "/resources/therapy/anxiety-exposure-ocd-start-here.html",
+      "targets": [
+        {
+          "id": "bdd-1",
+          "label": "Reclaim time from checking",
+          "need": "Appearance checking and comparison dominate routines",
+          "goal": "Spend more time on chosen activities and less on checking.",
+          "objective": "By [date], reduce [specified checking/comparison ritual] from [baseline] to [target] per [period] while completing [chosen activity].",
+          "intervention": "Use BDD-specific CBT including ERP, attention work and behavioral experiments; tailor mirror-related work within training.",
+          "measure": "Checking time/frequency, avoided activities and functional participation."
+        },
+        {
+          "id": "bdd-2",
+          "label": "Re-enter valued situations",
+          "need": "Appearance fears drive avoidance",
+          "goal": "Participate in chosen situations without excessive concealment or reassurance.",
+          "objective": "By [date], complete [target] agreed situation practices per [week], from [baseline], reducing [specified safety behavior].",
+          "intervention": "Use BDD-specific graded exposure and response prevention; collaboratively test beliefs without arguing about appearance.",
+          "measure": "Participation gained, safety behavior use, distress and belief flexibility."
+        }
+      ]
+    },
+    {
+      "id": "ptsd",
+      "name": "PTSD / trauma-related disorders",
+      "group": "Trauma, stress and dissociation",
+      "age": "Adult core; TF-CBT and other age-specific options for youth",
+      "context": "Clarify current threat, trauma-related avoidance, beliefs and functional goals.",
+      "caution": "Ongoing danger requires protection and practical support. Trauma processing needs consent, appropriate training and assessment of stability; grounding alone is not full PTSD treatment.",
+      "evidence": "Guideline-informed treatment direction; objectives are original examples.",
+      "sources": [
+        {
+          "label": "NICE NG116 · PTSD",
+          "url": "https://www.nice.org.uk/guidance/ng116/chapter/recommendations"
+        }
+      ],
+      "guide": "/resources/therapy/trauma-ptsd-start-here.html",
+      "targets": [
+        {
+          "id": "ptsd-1",
+          "label": "Return to safe participation",
+          "need": "Trauma reminders restrict safe valued activities",
+          "goal": "Re-engage with safe activities the client has chosen.",
+          "objective": "By [date], complete [target] agreed safe approach practices per [week], from [baseline], documenting avoidance and participation.",
+          "intervention": "Offer a competent trauma-focused treatment matched to age and preference; collaboratively address avoidance within its protocol.",
+          "measure": "Safe activity participation, avoidance and trauma symptoms using an appropriate measure when indicated."
+        },
+        {
+          "id": "ptsd-2",
+          "label": "Increase choice during reminders",
+          "need": "Reminders lead to shutdown or loss of effective response",
+          "goal": "Recognize reminders and regain enough present orientation to choose a response.",
+          "objective": "By [date], recognize [target] personal reminder cues and use an agreed orienting/support step in [target] of [opportunities], from [baseline].",
+          "intervention": "Teach trauma psychoeducation, present orientation and emotion-regulation supports; link these to, rather than substitute them for, indicated trauma-focused care.",
+          "measure": "Time to reorient, choice of response, functional recovery and fit of the support."
+        }
+      ]
+    },
+    {
+      "id": "adjustment",
+      "name": "Adjustment disorders / life transitions",
+      "group": "Trauma, stress and dissociation",
+      "age": "Across ages with developmental adaptation",
+      "context": "Formulate a clear link between a stressor, distress and disruption of functioning.",
+      "caution": "Assess whether depression, PTSD, grief or another condition better explains the presentation. Address ongoing adversity; distress is not automatically disorder.",
+      "evidence": "Original transdiagnostic planning examples; APA overview supports supportive care for life stressors, not an adjustment-disorder-specific protocol.",
+      "sources": [
+        {
+          "label": "APA · psychotherapy for stressful life events",
+          "url": "https://www.psychiatry.org/patients-families/psychotherapy"
+        }
+      ],
+      "guide": "/resources/therapy/relational-supportive-psychodynamic-start-here.html",
+      "targets": [
+        {
+          "id": "adjustment-1",
+          "label": "Restore a workable routine",
+          "need": "A stressor disrupts daily roles",
+          "goal": "Re-establish a routine that fits the changed situation.",
+          "objective": "By [date], complete [target] chosen role/routine tasks per [week], from [baseline], using agreed supports.",
+          "intervention": "Use brief supportive therapy, problem solving and practical resource mapping tailored to the stressor.",
+          "measure": "Role participation, stressor burden, task feasibility and distress."
+        },
+        {
+          "id": "adjustment-2",
+          "label": "Use support and boundaries",
+          "need": "Stress exceeds available support",
+          "goal": "Ask for support and set workable limits.",
+          "objective": "By [date], make [target] specific support requests or boundary statements and review the outcome of each.",
+          "intervention": "Clarify controllable needs, rehearse requests, identify practical resources and process loss/change in context.",
+          "measure": "Requests made, support received, boundary follow-through and client-rated agency."
+        }
+      ]
+    },
+    {
+      "id": "grief",
+      "name": "Prolonged grief disorder / bereavement",
+      "group": "Trauma, stress and dissociation",
+      "age": "Adult core; developmental and cultural assessment for youth",
+      "context": "Support continued connection with the deceased and participation in life. Normal bereavement is not automatically a disorder.",
+      "caution": "Establish diagnostic duration, impairment and cultural context. Assess depression, PTSD and suicide risk; do not make “moving on” or forgetting a treatment goal.",
+      "evidence": "APA public resource supports grief-focused treatment direction; original planning examples are not a manualized protocol.",
+      "sources": [
+        {
+          "label": "American Psychiatric Association · prolonged grief",
+          "url": "https://www.psychiatry.org/patients-families/prolonged-grief-disorder"
+        }
+      ],
+      "guide": "/resources/therapy/relational-supportive-psychodynamic-start-here.html",
+      "targets": [
+        {
+          "id": "grief-1",
+          "label": "Make space for grief and living",
+          "need": "Grief and avoidance prevent desired life participation",
+          "goal": "Hold grief while re-engaging with personally meaningful life roles.",
+          "objective": "By [date], complete [target] chosen restoration activities per [week], from [baseline], while identifying the grief/support needs that arise.",
+          "intervention": "Use grief-focused treatment when indicated; alternate loss-focused processing with restoration work and supported approach to avoided situations.",
+          "measure": "Valued participation, avoidance, grief-related impairment and personal meaning."
+        },
+        {
+          "id": "grief-2",
+          "label": "Find an enduring connection",
+          "need": "The loss leaves a painful rupture in identity and connection",
+          "goal": "Develop a personally meaningful way to remember and remain connected.",
+          "objective": "By [date], identify and try [target] chosen remembrance/connection practices and review how each affects connection and daily function.",
+          "intervention": "Use grief-informed supportive work or a grief-specific protocol; explore relationship meaning, identity and community/cultural practices.",
+          "measure": "Client-rated connection, tolerability, identity continuity and participation."
+        }
+      ]
+    },
+    {
+      "id": "dissociation",
+      "name": "Dissociative disorders / DID",
+      "group": "Trauma, stress and dissociation",
+      "age": "Adult specialist pathway; do not apply adult guideline to children",
+      "context": "Prioritize safety, cooperation, continuity and functioning. Clarify dissociation and medical/neurological differential.",
+      "caution": "Use dissociation-specific competence and consultation. Avoid suggestive memory work, forcing disclosure, or mandating identity fusion; new speech or neurological changes need medical assessment.",
+      "evidence": "ISSTD 2011 adult specialist consensus guideline; evidence and training needs differ from well-established disorder-specific CBT protocols. Objectives are original.",
+      "sources": [
+        {
+          "label": "ISSTD · adult DID guidelines (2011 specialist consensus)",
+          "url": "https://www.isst-d.org/publications-resources/resources-for-professionals/adult-treatment-guidelines/"
+        }
+      ],
+      "guide": "/resources/therapy/trauma-ptsd-start-here.html",
+      "targets": [
+        {
+          "id": "dissociation-1",
+          "label": "Increase present orientation",
+          "need": "Dissociation interrupts participation or safety",
+          "goal": "Notice dissociative shifts and regain orientation using accessible supports.",
+          "objective": "By [date], recognize [target] personally useful early cues and use [chosen orienting support] in [target] of [opportunities], from [baseline].",
+          "intervention": "Use phase-oriented stabilization, collaborative psychoeducation and individualized present-orientation practice; assess what worsens symptoms.",
+          "measure": "Time lost, recovery/orientation, support use and safe participation; self-report interpreted in context."
+        },
+        {
+          "id": "dissociation-2",
+          "label": "Improve continuity and cooperation",
+          "need": "Memory gaps or conflicting responses disrupt daily roles",
+          "goal": "Increase continuity and internal cooperation around shared daily needs.",
+          "objective": "By [date], use an agreed non-coercive continuity aid for [chosen task] on [target] days per [week], from [baseline], and review barriers safely.",
+          "intervention": "Support internal communication and shared safety agreements within specialist phase-oriented treatment; use neutral logs or cues when acceptable.",
+          "measure": "Task continuity, gaps and consequences, internal conflict, agency and safety."
+        }
+      ]
+    },
+    {
+      "id": "bpd",
+      "name": "Borderline personality disorder",
+      "group": "Personality and relationships",
+      "age": "Adult core; adolescent formulation needs developmental expertise",
+      "context": "Choose a coherent treatment frame and hierarchy. Link emotion, relationship and safety targets to client priorities.",
+      "caution": "DBT-informed skills are not equivalent to comprehensive DBT. Risk and therapy-interfering behaviors require a shared hierarchy, continuity and a specific response plan.",
+      "evidence": "Guideline-informed treatment direction; objectives are original examples.",
+      "sources": [
+        {
+          "label": "NICE CG78 · borderline personality disorder",
+          "url": "https://www.nice.org.uk/guidance/cg78/chapter/Recommendations"
+        }
+      ],
+      "guide": "/resources/therapy/personality-complex-presentations-start-here.html",
+      "targets": [
+        {
+          "id": "bpd-1",
+          "label": "Respond safely to intense emotion",
+          "need": "Intense affect prompts harmful or destabilizing responses",
+          "goal": "Use safer responses that preserve relationships and personal goals.",
+          "objective": "By [date], use an agreed alternative response in [target] of [high-intensity episodes], from [baseline], with chain review of barriers.",
+          "intervention": "Use a structured BPD treatment within competence; teach and rehearse relevant DBT skills, conduct chain analysis and prioritize safety targets.",
+          "measure": "Harmful-response frequency/severity, alternative response use, recovery and valued functioning."
+        },
+        {
+          "id": "bpd-2",
+          "label": "Communicate needs and repair",
+          "need": "Relationship rupture interrupts trust and treatment",
+          "goal": "Express needs and repair conflict with greater consistency.",
+          "objective": "By [date], use [agreed request/boundary/repair sequence] in [target] interactions per [period], from [baseline], and review the effect.",
+          "intervention": "Use the agreed treatment frame to practice interpersonal effectiveness, validate distress, examine assumptions and maintain consistent boundaries.",
+          "measure": "Requests, repairs, ruptures, treatment engagement and client-rated relationship stability."
+        }
+      ]
+    },
+    {
+      "id": "personality",
+      "name": "Other personality / enduring relational patterns",
+      "group": "Personality and relationships",
+      "age": "Adults; avoid premature personality labeling in youth",
+      "context": "Formulate enduring patterns and the function they serve; diagnosis alone does not select a treatment.",
+      "caution": "Do not generalize BPD recommendations to every personality disorder. Assess coercion, violence, trauma and neurodevelopmental explanations; use specialist formulation as needed.",
+      "evidence": "Original transdiagnostic examples informed by a public APA overview; select a disorder-specific specialist formulation and treatment.",
+      "sources": [
+        {
+          "label": "APA · personality disorders and psychotherapy",
+          "url": "https://www.psychiatry.org/patients-families/personality-disorders/what-are-personality-disorders"
+        }
+      ],
+      "guide": "/resources/therapy/relational-supportive-psychodynamic-start-here.html",
+      "targets": [
+        {
+          "id": "personality-1",
+          "label": "Increase flexibility in relationships",
+          "need": "Rigid expectations or protective strategies create repeated conflict",
+          "goal": "Choose responses that better match current relationship goals.",
+          "objective": "By [date], identify [target] recurring interaction patterns and test an alternative response in [target] agreed situations.",
+          "intervention": "Use collaborative relational formulation and structured behavioral experiments consistent with the chosen therapy model.",
+          "measure": "Pattern recognition, alternative responses, consequences and relationship function."
+        },
+        {
+          "id": "personality-2",
+          "label": "Protect boundaries and agency",
+          "need": "Difficulty with limits or trust disrupts chosen roles",
+          "goal": "Set and maintain boundaries that support autonomy and connection.",
+          "objective": "By [date], communicate [target] specific boundaries or preferences and review follow-through and safety after each.",
+          "intervention": "Use supportive/relational psychotherapy, rehearsal and review of expectations and consequences; refer when specialist treatment is indicated.",
+          "measure": "Boundary enactment, felt agency, conflict impact and support quality."
+        }
+      ]
+    },
+    {
+      "id": "psychosis",
+      "name": "Schizophrenia spectrum / psychotic disorders",
+      "group": "Psychosis and recovery",
+      "age": "Adult core; youth needs an early-intervention specialist pathway",
+      "context": "Focus on distress, recovery and chosen roles, alongside coordinated psychiatric care.",
+      "caution": "New psychosis, dangerous command experiences, marked deterioration or catatonia needs urgent assessment. Do not confront beliefs or affirm delusional content as established fact.",
+      "evidence": "Guideline-informed treatment direction; objectives are original examples.",
+      "sources": [
+        {
+          "label": "NICE CG178 · adult psychosis",
+          "url": "https://www.nice.org.uk/guidance/cg178/chapter/recommendations"
+        }
+      ],
+      "guide": "/resources/therapy/psychosis-smi-rehabilitation-start-here.html",
+      "targets": [
+        {
+          "id": "psychosis-1",
+          "label": "Reduce interference from experiences",
+          "need": "Voices or unusual experiences interrupt daily life",
+          "goal": "Respond in ways that reduce distress and protect chosen activities.",
+          "objective": "By [date], use [agreed coping response] in [target] of [distressing episodes], from [baseline], and document its effect on participation.",
+          "intervention": "Use competent CBT for psychosis: explore meaning and context collaboratively, test coping strategies and support recovery without arguing about beliefs.",
+          "measure": "Distress, interference, coping usefulness, safety and role participation."
+        },
+        {
+          "id": "psychosis-2",
+          "label": "Strengthen recovery support",
+          "need": "Symptoms and practical barriers interrupt routines and support",
+          "goal": "Maintain a recovery routine and access help early.",
+          "objective": "By [date], carry out [target] chosen recovery/support steps per [week], from [baseline], and rehearse the early-warning response.",
+          "intervention": "Use recovery planning, family intervention where appropriate and consented, and coordinated support for chosen social/vocational goals.",
+          "measure": "Support access, routine participation, early-warning response and client-defined recovery."
+        }
+      ]
+    },
+    {
+      "id": "adhd",
+      "name": "ADHD",
+      "group": "Neurodevelopment and access",
+      "age": "Adults and youth; developmental adaptation",
+      "context": "Target task access and functioning rather than effort or compliance. Assess environmental barriers and co-occurring needs.",
+      "caution": "Coordinate assessment and medication questions with appropriate clinicians. Supports should be feasible; reward systems are not a substitute for access or skills.",
+      "evidence": "Guideline-informed treatment direction; objectives are original examples.",
+      "sources": [
+        {
+          "label": "NICE NG87 · ADHD",
+          "url": "https://www.nice.org.uk/guidance/ng87/chapter/recommendations"
+        }
+      ],
+      "guide": "/resources/therapy/neurodevelopmental-executive-function-start-here.html",
+      "targets": [
+        {
+          "id": "adhd-1",
+          "label": "Make tasks easier to start",
+          "need": "Initiation and working-memory load block valued tasks",
+          "goal": "Start chosen tasks using reliable external supports.",
+          "objective": "By [date], start [chosen task] within [agreed interval] using [support] in [target] of [opportunities], from [baseline].",
+          "intervention": "Use ADHD-focused skills work and environmental modification: break tasks into visible steps, externalize cues and rehearse task launch.",
+          "measure": "Start latency, opportunities completed with supports, burden and independence chosen by the client."
+        },
+        {
+          "id": "adhd-2",
+          "label": "Finish and recover from interruption",
+          "need": "Interruptions and sequencing difficulties derail completion",
+          "goal": "Complete or deliberately reschedule tasks with less avoidable disruption.",
+          "objective": "By [date], use an agreed next-step/restart cue in [target] of [task interruptions], from [baseline], and complete the planned task segment.",
+          "intervention": "Teach planning and restart strategies, practice in real routines and adapt caregiver support when appropriate.",
+          "measure": "Restart success, completed segments, missed commitments and support burden."
+        }
+      ]
+    },
+    {
+      "id": "autism",
+      "name": "Autism",
+      "group": "Neurodevelopment and access",
+      "age": "Adults and youth with age-appropriate adaptations",
+      "context": "Target access, autonomy, communication and co-occurring distress. Autistic traits are not themselves defects to eliminate.",
+      "caution": "Do not set forced eye contact, masking or suppression of harmless regulation as goals. Examine overload, pain, communication mismatch and coercion before labeling behavior.",
+      "evidence": "Guideline-informed treatment direction; objectives are original examples.",
+      "sources": [
+        {
+          "label": "NICE CG142 · autistic adults",
+          "url": "https://www.nice.org.uk/guidance/cg142/chapter/Recommendations"
+        },
+        {
+          "label": "NICE CG170 · autistic children and adolescents",
+          "url": "https://www.nice.org.uk/guidance/cg170/chapter/Recommendations"
+        }
+      ],
+      "guide": "/resources/therapy/neurodevelopmental-executive-function-start-here.html",
+      "targets": [
+        {
+          "id": "autism-1",
+          "label": "Increase communication and choice",
+          "need": "Communication mismatch limits participation and assent",
+          "goal": "Express preferences and influence decisions through a reliable preferred mode.",
+          "objective": "By [date], communicate a choice, refusal or request using [preferred mode] in [target] of [opportunities], from [baseline], with agreed partner supports.",
+          "intervention": "Use accessible psychotherapy, visual/communication supports and partner coaching; coordinate with SLP/AAC services when needed.",
+          "measure": "Choices acknowledged, requests understood, ability to refuse and client-rated agency; partner responsiveness."
+        },
+        {
+          "id": "autism-2",
+          "label": "Reduce overload and support recovery",
+          "need": "Sensory or demand overload disrupts wellbeing",
+          "goal": "Recognize load and obtain supports before or during overload.",
+          "objective": "By [date], use [agreed signal/support] in [target] of [overload opportunities], from [baseline], with a jointly agreed recovery routine.",
+          "intervention": "Map sensory and demand load, adapt the environment and collaboratively rehearse recovery and transition supports.",
+          "measure": "Overload frequency/duration, recovery time, support availability and participation without masking demands."
+        }
+      ]
+    },
+    {
+      "id": "id",
+      "name": "Intellectual disability / adaptive support needs",
+      "group": "Neurodevelopment and access",
+      "age": "Across ages; match developmental and communication needs",
+      "context": "Adapt psychotherapy to comprehension, communication and daily support needs. Involve the person directly.",
+      "caution": "Assess pain, illness, environment and unmet communication needs. Caregiver goals must not replace the person’s preferences or supported assent.",
+      "evidence": "Guideline-informed treatment direction; objectives are original examples.",
+      "sources": [
+        {
+          "label": "NICE NG11 · learning disability and behavior that challenges",
+          "url": "https://www.nice.org.uk/guidance/ng11/chapter/Recommendations"
+        }
+      ],
+      "guide": "/resources/therapy/communication-supports-toolkit.html",
+      "targets": [
+        {
+          "id": "id-1",
+          "label": "Support everyday decision making",
+          "need": "Information or response barriers limit choice",
+          "goal": "Make meaningful choices with the right support.",
+          "objective": "By [date], make and communicate [target] everyday choices per [period], from [baseline], with [specified support] and a genuine refusal option.",
+          "intervention": "Use concrete language, visual options, rehearsal and teach-back; coach supporters to allow processing time and honor choices.",
+          "measure": "Choices offered and honored, understanding, support level and personal agency."
+        },
+        {
+          "id": "id-2",
+          "label": "Understand distress in context",
+          "need": "Distress is interpreted without attention to function or health",
+          "goal": "Identify unmet needs and use accessible ways to seek support.",
+          "objective": "By [date], use [agreed help/break/need signal] in [target] of [opportunities], from [baseline], while supporters record context and response.",
+          "intervention": "Use functional assessment, communication supports and caregiver coaching; coordinate medical review and positive support planning.",
+          "measure": "Needs identified, partner response, distress duration and access to preferred activities."
+        }
+      ]
+    },
+    {
+      "id": "disruptive",
+      "name": "ODD / conduct and disruptive behavior disorders",
+      "group": "Youth and behavior",
+      "age": "Children and adolescents; family and systems involvement",
+      "context": "Separate skill, communication and access barriers from learned interaction patterns. Assess safety and context.",
+      "caution": "Aggression, abuse and coercion need an explicit safety response. Avoid humiliation, deprivation of essential supports, or making the child responsible for adult conflict.",
+      "evidence": "Guideline-informed treatment direction; objectives are original examples.",
+      "sources": [
+        {
+          "label": "NICE CG158 · child and adolescent conduct disorders",
+          "url": "https://www.nice.org.uk/guidance/cg158/chapter/Recommendations"
+        }
+      ],
+      "guide": "/resources/therapy/child-adolescent-parenting-family-start-here.html",
+      "targets": [
+        {
+          "id": "disruptive-1",
+          "label": "Change escalation patterns",
+          "need": "Recurring demand-conflict cycles disrupt safety and relationships",
+          "goal": "Replace escalation with a clear, supported response sequence.",
+          "objective": "By [date], use [agreed pause/request/return sequence] in [target] of [conflict opportunities], from [baseline], with a coordinated adult response.",
+          "intervention": "Use age-appropriate evidence-based parent/family intervention; map antecedents and consequences, coach clear directions and reinforce specific alternative behaviors.",
+          "measure": "Escalation frequency/severity, adult consistency, alternative behavior and relationship repair."
+        },
+        {
+          "id": "disruptive-2",
+          "label": "Build task follow-through",
+          "need": "Tasks are poorly matched, inconsistently prompted or repeatedly avoided",
+          "goal": "Complete feasible tasks with predictable support and accountability.",
+          "objective": "By [date], complete [chosen task segment] with [agreed support] in [target] of [opportunities], from [baseline].",
+          "intervention": "Use behavioral parent training and joint problem solving; check skill/capacity first, define a feasible task and rehearse consistent contingencies.",
+          "measure": "Task completion, prompts needed, access barriers and conflict cost."
+        }
+      ]
+    },
+    {
+      "id": "anger",
+      "name": "Anger / impulse-control presentations",
+      "group": "Youth and behavior",
+      "age": "Across ages after differential assessment",
+      "context": "A shared target menu for anger and impulsive aggression; it does not establish intermittent explosive disorder.",
+      "caution": "Assess violence risk, substance use, mania, trauma, neurodevelopment and coercive control. Safety planning must be specific to the context.",
+      "evidence": "Original transdiagnostic examples; child conduct and BPD sources inform adjacent skills approaches, not an IED-specific treatment protocol.",
+      "sources": [
+        {
+          "label": "NICE CG158 · child and adolescent conduct disorders",
+          "url": "https://www.nice.org.uk/guidance/cg158/chapter/Recommendations"
+        },
+        {
+          "label": "NICE CG78 · borderline personality disorder",
+          "url": "https://www.nice.org.uk/guidance/cg78/chapter/Recommendations"
+        }
+      ],
+      "guide": "/resources/therapy/dbt-informed-emotion-regulation-start-here.html",
+      "targets": [
+        {
+          "id": "anger-1",
+          "label": "Interrupt escalation",
+          "need": "Rising activation leads to harmful actions",
+          "goal": "Recognize escalation and use a safer next action.",
+          "objective": "By [date], use [agreed exit/pause/help sequence] in [target] of [escalations], from [baseline], documenting safety and return to discussion.",
+          "intervention": "Use formulation-based CBT/skills practice, chain analysis, behavioral rehearsal and a context-specific safety plan.",
+          "measure": "Aggression frequency/severity, early cue recognition, safer actions and impact on others."
+        },
+        {
+          "id": "anger-2",
+          "label": "Repair and solve the trigger",
+          "need": "Conflict recurs without accountability or problem solving",
+          "goal": "Take responsibility and address the problem after regulation.",
+          "objective": "By [date], complete [agreed accountability/repair/problem-solving steps] following [target] of [eligible conflicts], from [baseline].",
+          "intervention": "Rehearse non-coercive repair, perspective taking and concrete problem solving; involve caregivers or systems when appropriate and safe.",
+          "measure": "Repairs completed, recurrence, responsibility taken and whether others feel safe."
+        }
+      ]
+    },
+    {
+      "id": "sud",
+      "name": "Substance use disorders",
+      "group": "Substances and eating",
+      "age": "Adult core; adolescent treatment needs age-specific care",
+      "context": "Separate alcohol, opioid, stimulant, cannabis and other substances in assessment. Agree on abstinence or harm-reduction goals and coordinate indicated medical treatment.",
+      "caution": "Assess intoxication, overdose and withdrawal risk. Alcohol/benzodiazepine withdrawal can require medical care; psychotherapy does not replace medications or withdrawal management.",
+      "evidence": "Guideline-informed treatment direction; objectives are original examples.",
+      "sources": [
+        {
+          "label": "VA/DoD · substance use disorder guideline",
+          "url": "https://www.healthquality.va.gov/guidelines/MH/sud/"
+        }
+      ],
+      "guide": "/resources/therapy/motivational-interviewing-substance-use-start-here.html",
+      "targets": [
+        {
+          "id": "sud-1",
+          "label": "Move toward a chosen change",
+          "need": "Use conflicts with health, roles or personal priorities",
+          "goal": "Reduce substance-related harm and move toward the agreed use goal.",
+          "objective": "By [date], change [substance/use pattern or harm indicator] from [baseline] to [target] per [period], reviewed collaboratively without punitive interpretation.",
+          "intervention": "Use motivational interviewing and a substance-specific treatment plan; select indicated CBT, contingency management or other supported care and coordinate medical treatment.",
+          "measure": "Use pattern, harm events, valued functioning and agreed objective information where clinically appropriate."
+        },
+        {
+          "id": "sud-2",
+          "label": "Prepare for high-risk situations",
+          "need": "Craving and predictable triggers undermine change",
+          "goal": "Use a workable response and access support during high-risk situations.",
+          "objective": "By [date], rehearse [target] trigger-response plans and use [chosen support/response] in [target] of [high-risk opportunities], from [baseline].",
+          "intervention": "Use functional analysis, coping practice and relapse prevention; review recurrence as information and address access to recovery support and overdose prevention.",
+          "measure": "Response-plan use, cravings, recurrence pattern, help access and consequences."
+        }
+      ]
+    },
+    {
+      "id": "anorexia",
+      "name": "Anorexia nervosa / restrictive eating",
+      "group": "Substances and eating",
+      "age": "Adults and youth; treatment selection depends on age and medical status",
+      "context": "Use an eating-disorder specialist pathway with medical and nutritional collaboration. Psychotherapy targets support the team’s individualized recovery plan.",
+      "caution": "Medical instability, rapid deterioration or inability to maintain intake needs timely medical assessment. Do not set generic weight targets or use this menu as nutritional prescribing.",
+      "evidence": "Guideline-informed treatment direction; objectives are original examples.",
+      "sources": [
+        {
+          "label": "NICE NG69 · eating disorders",
+          "url": "https://www.nice.org.uk/guidance/ng69/chapter/recommendations"
+        }
+      ],
+      "guide": "/resources/therapy/clinical-practice-manuals-authoritative-source-guide.html",
+      "targets": [
+        {
+          "id": "anorexia-1",
+          "label": "Engage with the recovery plan",
+          "need": "Restriction and fear interfere with the team’s recovery plan",
+          "goal": "Participate in individualized eating-disorder care with support.",
+          "objective": "By [date], complete [target] of [team-defined recovery behaviors], from [baseline], documenting barriers and agreed support.",
+          "intervention": "Use an indicated age-appropriate eating-disorder treatment; coordinate medical/nutrition monitoring and family-based care when appropriate.",
+          "measure": "Team-defined nutritional/medical indicators, recovery behavior, participation and access barriers."
+        },
+        {
+          "id": "anorexia-2",
+          "label": "Reduce eating-disorder interference",
+          "need": "Rigid rules and fear narrow daily life",
+          "goal": "Increase flexible participation in recovery-consistent activities.",
+          "objective": "By [date], complete [target] agreed specialist-guided behavioral experiments involving [rule/avoided recovery activity], from [baseline].",
+          "intervention": "Within the selected eating-disorder protocol, address maintaining beliefs, avoidance and identity/values beyond the disorder.",
+          "measure": "Rule interference, avoided activities, distress, functional participation and medical status."
+        }
+      ]
+    },
+    {
+      "id": "bulimia",
+      "name": "Bulimia nervosa / binge-eating disorder",
+      "group": "Substances and eating",
+      "age": "Adults and youth; diagnosis- and age-specific care",
+      "context": "These are distinct diagnoses. Select the relevant binge, compensatory behavior and eating-pattern targets.",
+      "caution": "Purging can create medical risk. Do not make weight loss a routine binge-eating treatment goal; distinguish dieting from the treatment team’s regular-eating plan.",
+      "evidence": "Guideline-informed treatment direction; objectives are original examples.",
+      "sources": [
+        {
+          "label": "NICE NG69 · eating disorders",
+          "url": "https://www.nice.org.uk/guidance/ng69/chapter/recommendations"
+        }
+      ],
+      "guide": "/resources/therapy/clinical-practice-manuals-authoritative-source-guide.html",
+      "targets": [
+        {
+          "id": "bulimia-1",
+          "label": "Interrupt the binge / compensatory cycle",
+          "need": "Binge episodes or compensatory behaviors disrupt health and function",
+          "goal": "Reduce the maintaining cycle and regain flexibility around eating.",
+          "objective": "By [date], change [defined binge/compensatory behavior] from [baseline] to [target] per [period], with medical monitoring when indicated.",
+          "intervention": "Use indicated eating-disorder-focused CBT/guided self-help or age-appropriate family treatment; map maintaining cycles and address relevant triggers.",
+          "measure": "Episode frequency, compensatory behaviors, distress, function and medical status."
+        },
+        {
+          "id": "bulimia-2",
+          "label": "Support a regular eating plan",
+          "need": "Restriction and irregular eating maintain the cycle",
+          "goal": "Follow a collaboratively established recovery eating pattern.",
+          "objective": "By [date], carry out [team-agreed eating-pattern step] in [target] of [opportunities], from [baseline], and review barriers.",
+          "intervention": "Support the specialist/nutrition team’s individualized plan within an eating-disorder protocol; address shame, rules and avoidance.",
+          "measure": "Pattern consistency, restriction, binge urges, flexibility and participation."
+        }
+      ]
+    },
+    {
+      "id": "arfid",
+      "name": "ARFID / avoidant-restrictive food intake",
+      "group": "Substances and eating",
+      "age": "Across ages; specialist feeding/eating assessment",
+      "context": "Identify sensory sensitivity, feared consequences and low interest separately. Assess nutritional and functional consequences.",
+      "caution": "Coordinate medical, nutrition and feeding/SLP/OT assessment as indicated. Rule out swallowing problems and allergy; no forced feeding or unsafe exposure.",
+      "evidence": "NIMH public overview describes ARFID; these original access targets are adjuncts, not an ARFID treatment protocol.",
+      "sources": [
+        {
+          "label": "NIMH · eating disorders and ARFID",
+          "url": "https://www.nimh.nih.gov/health/publications/eating-disorders"
+        }
+      ],
+      "guide": "/resources/therapy/neurodevelopmental-executive-function-start-here.html",
+      "targets": [
+        {
+          "id": "arfid-1",
+          "label": "Increase safe food participation",
+          "need": "Avoidance restricts adequate intake or participation",
+          "goal": "Expand safe, tolerable participation in the specialist-agreed eating plan.",
+          "objective": "By [date], complete [target] agreed safe food/meal participation practices, from [baseline], at a tolerable pace.",
+          "intervention": "Support an ARFID-specific specialist plan, matching practice to the maintaining pathway and sensory/communication needs.",
+          "measure": "Intake adequacy monitored by the team, participation, variety where relevant, and tolerability."
+        },
+        {
+          "id": "arfid-2",
+          "label": "Communicate eating support needs",
+          "need": "Pressure and misunderstood needs worsen avoidance",
+          "goal": "Access eating supports without coercion.",
+          "objective": "By [date], communicate [specified food/setting/support need] in [target] of [opportunities], from [baseline], with an agreed partner response.",
+          "intervention": "Use collaborative problem solving, predictable routines and partner coaching alongside specialist feeding/eating treatment.",
+          "measure": "Needs communicated and honored, pressure reduced, participation and team-defined nutritional status."
+        }
+      ]
+    },
+    {
+      "id": "sleep",
+      "name": "Insomnia disorder",
+      "group": "Sleep, health and cognition",
+      "age": "Adult core; use pediatric sleep guidance for minors",
+      "context": "Differentiate chronic insomnia from circadian problems, sleep apnea, parasomnia and insufficient sleep opportunity.",
+      "caution": "CBT-I requires training. Sleep-restriction components need clinical screening and monitoring, especially with bipolar disorder, seizures or safety-sensitive work.",
+      "evidence": "Guideline-informed treatment direction; objectives are original examples.",
+      "sources": [
+        {
+          "label": "VA/DoD · chronic insomnia and sleep apnea",
+          "url": "https://www.healthquality.va.gov/guidelines/CD/insomnia/"
+        }
+      ],
+      "guide": "/resources/therapy/sleep-pain-health-psychology-start-here.html",
+      "targets": [
+        {
+          "id": "sleep-1",
+          "label": "Improve sleep-related functioning",
+          "need": "Persistent insomnia impairs daytime life",
+          "goal": "Improve sleep and daytime functioning with an individualized plan.",
+          "objective": "By [date], change [agreed sleep/daytime indicator] from [baseline] to [target], recorded over [period] in a sleep diary.",
+          "intervention": "Use competent CBT-I or refer; tailor stimulus control, sleep scheduling and cognitive work after clinical assessment.",
+          "measure": "Sleep diary indicators, daytime function and an appropriately administered insomnia measure."
+        },
+        {
+          "id": "sleep-2",
+          "label": "Reduce struggle around sleep",
+          "need": "Sleep effort and rigid predictions increase interference",
+          "goal": "Use a more flexible response to wakefulness within the CBT-I plan.",
+          "objective": "By [date], follow [agreed CBT-I response to wakefulness] in [target] of [opportunities], from [baseline], and review daytime safety.",
+          "intervention": "Use CBT-I cognitive/behavioral work to address sleep effort and unhelpful beliefs; screen for other sleep disorders and coordinate care.",
+          "measure": "Response use, sleep effort, daytime impairment and safety."
+        }
+      ]
+    },
+    {
+      "id": "somatic",
+      "name": "Somatic symptom / illness anxiety presentations",
+      "group": "Sleep, health and cognition",
+      "age": "Adult core; age-specific adaptation",
+      "context": "Symptoms are real experiences. Differentiate medical conditions, disproportionate health worry and repeated checking; psychological and medical care can coexist.",
+      "caution": "New or worsening symptoms need appropriate medical assessment. Avoid dismissing symptoms as “just anxiety” or withholding medically indicated evaluation.",
+      "evidence": "APA public overview supports broad psychotherapy direction. Separate illness-anxiety formulation and original objectives require individual clinical judgment.",
+      "sources": [
+        {
+          "label": "American Psychiatric Association · somatic symptom disorder",
+          "url": "https://www.psychiatry.org/patients-families/somatic-symptom-disorder/what-is-somatic-symptom-disorder"
+        }
+      ],
+      "guide": "/resources/therapy/sleep-pain-health-psychology-start-here.html",
+      "targets": [
+        {
+          "id": "somatic-1",
+          "label": "Rebuild life around symptoms",
+          "need": "Symptoms and health worry restrict chosen activities",
+          "goal": "Improve participation while receiving appropriate medical care.",
+          "objective": "By [date], complete [target] agreed activities per [week], from [baseline], using the coordinated medical and psychological plan.",
+          "intervention": "Use formulation-based CBT/supportive care and paced participation; coordinate consistent medical follow-up and address illness beliefs without dismissal.",
+          "measure": "Function, symptom burden, health-worry interference and coordination."
+        },
+        {
+          "id": "somatic-2",
+          "label": "Reduce repetitive checking",
+          "need": "Reassurance/checking provides only brief relief",
+          "goal": "Use an agreed response to health worry with less repetitive checking.",
+          "objective": "By [date], reduce [specified non-indicated checking/reassurance behavior] from [baseline] to [target] per [period], preserving indicated medical care.",
+          "intervention": "Collaboratively map the worry-checking cycle, test alternatives and agree on how to respond to genuine medical changes.",
+          "measure": "Checking time, reassurance frequency, meaningful activity and appropriate medical engagement."
+        }
+      ]
+    },
+    {
+      "id": "pain",
+      "name": "Chronic pain / health-related adjustment",
+      "group": "Sleep, health and cognition",
+      "age": "Adult core; medical coordination",
+      "context": "An adjunct psychotherapy menu for functioning with chronic pain or illness; pain is not itself a psychiatric diagnosis.",
+      "caution": "NICE NG193 distinguishes chronic primary from secondary pain. Treat the actual medical condition; do not imply symptoms are imagined or increase activity against medical restrictions.",
+      "evidence": "Guideline-informed treatment direction; objectives are original examples.",
+      "sources": [
+        {
+          "label": "NICE NG193 · chronic pain",
+          "url": "https://www.nice.org.uk/guidance/ng193/chapter/Recommendations"
+        }
+      ],
+      "guide": "/resources/therapy/sleep-pain-health-psychology-start-here.html",
+      "targets": [
+        {
+          "id": "pain-1",
+          "label": "Increase sustainable participation",
+          "need": "Pain and boom-bust activity restrict daily roles",
+          "goal": "Participate in chosen activities at a sustainable pace.",
+          "objective": "By [date], complete [chosen activity] at [agreed level] on [target] days per [period], from [baseline], within medical limits.",
+          "intervention": "Use indicated pain-focused CBT or ACT, pacing and values-based planning alongside medical care; review load and recovery.",
+          "measure": "Activity sustainability, role participation, interference and recovery cost."
+        },
+        {
+          "id": "pain-2",
+          "label": "Respond flexibly to flare-ups",
+          "need": "Flare-ups disrupt coping and continuity",
+          "goal": "Use a workable flare-up plan that preserves agency and care access.",
+          "objective": "By [date], apply [agreed flare-up/support sequence] in [target] of [episodes], from [baseline], and review what was helpful.",
+          "intervention": "Map early cues, flexible activity options, support needs and appropriate medical contact; rehearse coping without invalidating symptoms.",
+          "measure": "Plan use, interference, help access and ability to resume chosen routines."
+        }
+      ]
+    },
+    {
+      "id": "neurocognitive",
+      "name": "Neurocognitive disorders / dementia",
+      "group": "Sleep, health and cognition",
+      "age": "Adults; medical/neuropsychological assessment and caregiver collaboration",
+      "context": "Target supported participation, distress and caregiver response. Restoration goals must match the condition and capacity.",
+      "caution": "Sudden confusion or decline needs assessment for delirium/medical causes. Obtain appropriate consent and supported participation; distinguish caregiver convenience from the person’s wellbeing.",
+      "evidence": "Guideline-informed treatment direction; objectives are original examples.",
+      "sources": [
+        {
+          "label": "NICE NG97 · dementia",
+          "url": "https://www.nice.org.uk/guidance/ng97/chapter/recommendations"
+        }
+      ],
+      "guide": "/resources/therapy/communication-supports-toolkit.html",
+      "targets": [
+        {
+          "id": "neurocognitive-1",
+          "label": "Maintain supported participation",
+          "need": "Cognitive changes interrupt familiar meaningful routines",
+          "goal": "Sustain meaningful participation with appropriate support.",
+          "objective": "By [date], participate in [chosen familiar activity] with [agreed cues/support] on [target] days per [period], from [baseline].",
+          "intervention": "Use person-centered supportive work, environmental cues and caregiver coaching; coordinate OT/medical services and adapt expectations over time.",
+          "measure": "Participation, comfort, cue/support level and personal preference."
+        },
+        {
+          "id": "neurocognitive-2",
+          "label": "Respond to distress and unmet needs",
+          "need": "Distress is misunderstood or escalates during care",
+          "goal": "Identify needs and reduce avoidable distress during support.",
+          "objective": "By [date], supporters use [agreed context/need/response sequence] in [target] of [distress episodes], from [baseline], documenting the result.",
+          "intervention": "Assess pain, illness, overload and communication barriers; coach calm, validating responses and adapt routines/environment.",
+          "measure": "Distress frequency/duration, unmet needs identified, response fit and caregiver burden."
+        }
+      ]
+    }
+  ]
+}

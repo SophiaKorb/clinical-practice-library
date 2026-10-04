@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "generated": "2026-09-22",
+    "count": 13,
+    "note": "Question-framing pathways. Not diagnostic algorithms and not substitutes for professional judgment."
+  },
+  "pathways": [
+    {
+      "id": "pathway-01",
+      "clinicalQuestion": "Possible ADHD",
+      "tier": "Tier 1",
+      "components": "Interview onset, settings, impairment; parent + teacher ADHD rating; school records; sleep/anxiety/trauma screen",
+      "decisionPoint": "Cross-setting symptoms and impairment?",
+      "nextStep": "If discrepant, do not average informants; examine setting demands, observation opportunity, learning, anxiety, sleep, and relationships",
+      "burden": "20-40 min + collateral"
+    },
+    {
+      "id": "pathway-02",
+      "clinicalQuestion": "Possible ADHD",
+      "tier": "Tier 2",
+      "components": "Executive-function rating, academic screen, mood/anxiety/trauma measures, structured diagnostic interview",
+      "decisionPoint": "Alternative/comorbid explanation or skill deficit?",
+      "nextStep": "Add direct observation or targeted learning/language assessment; obtain teacher narrative and work samples",
+      "burden": "Variable"
+    },
+    {
+      "id": "pathway-03",
+      "clinicalQuestion": "Possible ADHD",
+      "tier": "Tier 3",
+      "components": "Formal cognitive/achievement/language/neuropsychological evaluation when needed",
+      "decisionPoint": "Complex profile, major academic impact, diagnostic uncertainty, or high-stakes eligibility?",
+      "nextStep": "Refer for formal testing; ADHD diagnosis does not require cognitive testing in routine cases",
+      "burden": "Several hours"
+    },
+    {
+      "id": "pathway-04",
+      "clinicalQuestion": "Possible autism + weak perspective taking",
+      "tier": "Tier 1",
+      "components": "Developmental history; current social communication and restricted/repetitive patterns; adaptive functioning; multi-setting collateral",
+      "decisionPoint": "Lifelong pattern plus functional impact, not merely a low social-cognition score?",
+      "nextStep": "Screen hearing/language, ADHD, anxiety, trauma, IDD; use social-cognition probes descriptively",
+      "burden": "45-90 min"
+    },
+    {
+      "id": "pathway-05",
+      "clinicalQuestion": "Possible autism + weak perspective taking",
+      "tier": "Tier 2",
+      "components": "Autism-specific caregiver/self ratings with cautious interpretation; pragmatic language; adaptive behavior; direct observation",
+      "decisionPoint": "Does evidence converge across development, observation, and collateral?",
+      "nextStep": "Ratings alone are insufficient; masking and psychiatric false positives need formulation",
+      "burden": "1-3 hr"
+    },
+    {
+      "id": "pathway-06",
+      "clinicalQuestion": "Possible autism + weak perspective taking",
+      "tier": "Tier 3",
+      "components": "Comprehensive autism evaluation, cognitive/developmental and language testing as indicated",
+      "decisionPoint": "Will formal diagnosis/eligibility materially affect care or services?",
+      "nextStep": "Refer to trained evaluator; ADOS-2 is one component, not an oracle in a suitcase",
+      "burden": "Several hours"
+    },
+    {
+      "id": "pathway-07",
+      "clinicalQuestion": "Parent ADHD, teacher not",
+      "tier": "Clarify discrepancy",
+      "components": "Verify forms/time periods; interview both settings; impairment examples; classroom demands; school records/work samples; sleep/anxiety/learning",
+      "decisionPoint": "Is there true setting-specific impairment, limited teacher observation, accommodation masking, or parent-child interaction effect?",
+      "nextStep": "Do not require identical ratings; DSM requires symptoms/impairment across settings supported by clinical evidence",
+      "burden": "30-60 min + collateral"
+    },
+    {
+      "id": "pathway-08",
+      "clinicalQuestion": "Brief repeat anxiety measure",
+      "tier": "Routine monitoring",
+      "components": "GAD-7 for many adolescents/adults; SCAS/RCADS/PROMIS form matched to child age and target",
+      "decisionPoint": "Does the measure match anxiety domain and age, and is change interpretable?",
+      "nextStep": "Pair scores with function, avoidance, risk, and treatment target; keep administration consistent",
+      "burden": "2-10 min"
+    },
+    {
+      "id": "pathway-09",
+      "clinicalQuestion": "Math taking far too long",
+      "tier": "Tier 1",
+      "components": "Developmental/educational history; curriculum exposure; work samples; timed vs untimed performance; anxiety/attention/EF; number sense and calculation probes",
+      "decisionPoint": "What process is slow: fact retrieval, calculation, language, visuospatial organization, working memory, writing, or avoidance?",
+      "nextStep": "Do not call it dyscalculia from speed alone; check instruction and functional impact",
+      "burden": "30-60 min"
+    },
+    {
+      "id": "pathway-10",
+      "clinicalQuestion": "Math taking far too long",
+      "tier": "Tier 2-3",
+      "components": "Standardized achievement plus targeted math processes; cognitive/language/attention/visual-motor testing only as hypotheses require",
+      "decisionPoint": "Persistent specific weakness despite instruction?",
+      "nextStep": "School evaluation or psychologist referral; choose tests by process, not brand-name battery reflex",
+      "burden": "Several hours"
+    },
+    {
+      "id": "pathway-11",
+      "clinicalQuestion": "Trauma vs ADHD vs autism",
+      "tier": "Sequence",
+      "components": "Safety and acute risk → developmental timeline → trauma exposure/symptoms → cross-setting attention/EF → lifelong social communication/RRB → adaptive/school function",
+      "decisionPoint": "Which features predated trauma, are cue-linked, cross-situational, or developmentally persistent?",
+      "nextStep": "Assess iteratively; comorbidity is common; avoid forcing one grand unifying label",
+      "burden": "60-120 min initially"
+    },
+    {
+      "id": "pathway-12",
+      "clinicalQuestion": "30-minute visit",
+      "tier": "Focused battery",
+      "components": "One referral question; brief targeted measure; impairment questions; risk check; next-step collateral request",
+      "decisionPoint": "Will this result change today’s decision?",
+      "nextStep": "Choose one useful tool plus reasoning; postpone broad batteries",
+      "burden": "30 min"
+    },
+    {
+      "id": "pathway-13",
+      "clinicalQuestion": "Therapist vs formal testing",
+      "tier": "Scope decision",
+      "components": "Therapists: screen, interview, observe, track symptoms/function. Formal evaluator: restricted performance tests, integrated cognitive/academic/adaptive diagnosis when trained",
+      "decisionPoint": "Does the question require standardized administration, protected items, licensed scoring, or credentialed interpretation?",
+      "nextStep": "Refer when scope/training/materials or high-stakes decisions exceed role; local policy and license govern",
+      "burden": ""
+    }
+  ]
+}

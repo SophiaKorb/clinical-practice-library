@@ -1,0 +1,179 @@
+/* Shared working surface for patient worksheets. */
+.visual-tool{--tool-blue:#354d7c;--tool-teal:#236357;--tool-gold:#795719;--tool-rose:#873f4a;--tool-blue-bg:#edf1fa;--tool-teal-bg:#eaf5f0;--tool-gold-bg:#fff4d9;--tool-rose-bg:#faedf0}
+.visual-tool .resource-page{--max:960px;margin:28px auto 40px}
+.visual-tool h1{font-size:clamp(2rem,5vw,3.3rem);line-height:1.08;max-width:24ch}
+.visual-tool .resource-kicker{font-size:.875rem;letter-spacing:.06em}
+.visual-tool .resource-byline{font-size:.875rem}
+.visual-tool .resource-intro{margin-bottom:16px;color:var(--ink)}
+.tool-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:12px 0 20px}
+.tool-actions a,.tool-actions button{font:inherit;font-size:.9rem;padding:8px 12px;border:1px solid var(--line);border-radius:9px;background:var(--white);color:var(--green);cursor:pointer}
+.tool-privacy{font-size:.875rem;color:var(--muted);margin:0 0 20px}
+.worksheet-page,.companion-page{padding:24px;border:1px solid var(--line);border-radius:18px;background:var(--white)}
+.companion-page{margin-top:24px}
+.visual-tool h2{font-size:1.55rem;line-height:1.25;margin:22px 0 12px}
+.visual-tool h2:first-child{margin-top:0}
+.visual-tool h3{font-size:1rem;line-height:1.4;margin:0 0 7px}
+.tool-field{display:flex;flex-direction:column;gap:6px;min-width:0;font-weight:650;font-size:.95rem}
+.tool-field textarea,.tool-field input[type=text]{display:block;width:100%;min-width:0;padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:var(--white);color:var(--ink);font:400 1rem/1.4 system-ui,sans-serif}
+.tool-field textarea{resize:vertical;min-height:58px;overflow:hidden}
+.tool-field input[type=text]{min-height:42px}
+.tool-field textarea:focus-visible,.tool-field input:focus-visible{outline:3px solid var(--tool-blue);outline-offset:2px}
+.tool-choice{display:flex;gap:8px;align-items:flex-start;min-width:0;cursor:pointer;padding:8px 10px;border:1px solid var(--line);border-radius:8px;line-height:1.4;font-size:.95rem;background:var(--white)}
+.tool-choice span{min-width:0;overflow-wrap:anywhere}
+.tool-choice input{flex-shrink:0;width:19px;height:19px;margin:2px 0 0;accent-color:var(--tool-teal)}
+.tool-choice:has(input:checked){border-color:var(--tool-teal);box-shadow:inset 0 0 0 1px var(--tool-teal);background:var(--tool-teal-bg)}
+.tool-choice:has(input:focus-visible){outline:3px solid var(--tool-blue);outline-offset:2px}
+.choice-board{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.field-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:16px 0}
+.field-trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:16px 0}
+fieldset.tool-group{padding:0;border:0;margin:18px 0;min-width:0}
+.tool-group legend{font-weight:750;font-size:1.05rem;margin-bottom:10px;padding:0}
+.load-scale{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.load-scale .tool-choice{border-top:5px solid var(--tool-teal);flex-wrap:wrap;background:var(--tool-teal-bg)}
+.load-scale .tool-choice:nth-child(2){border-top-color:var(--tool-gold);background:var(--tool-gold-bg)}
+.load-scale .tool-choice:nth-child(3){border-top-color:var(--tool-rose);background:var(--tool-rose-bg)}
+.load-scale .tool-choice:nth-child(4){border-top-color:var(--tool-blue);background:var(--tool-blue-bg)}
+.load-scale b{display:block;font-size:.95rem}
+.load-scale small{display:block;font-size:.875rem;margin-top:4px;color:var(--ink)}
+.support-map{display:grid;grid-template-columns:minmax(0,1fr) 26px minmax(0,1.2fr);gap:10px 12px;margin:12px 0 18px;align-items:center}
+.support-map .map-heading{font-weight:750;font-size:.95rem;margin:0}
+.support-map .map-arrow{text-align:center;font-size:1.25rem;color:var(--tool-blue)}
+.map-options{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.map-options .tool-choice{font-size:.875rem;padding:8px}
+.sequence{display:grid;grid-template-columns:1fr 24px 1fr 24px 1fr;gap:8px;align-items:stretch;margin:18px 0}
+.sequence>div:not(.path-arrow){padding:13px;border:1px solid var(--line);border-top:4px solid var(--tool-blue);border-radius:10px;background:var(--tool-blue-bg);min-width:0}
+.sequence .tool-field{font-size:.9rem}
+.path-arrow{align-self:center;text-align:center;color:var(--tool-blue);font-size:1.4rem}
+.point-card{padding:14px 16px;border:2px solid var(--tool-teal);border-radius:12px;background:var(--tool-teal-bg);margin:18px 0}
+.point-card h2{font-family:inherit;font-size:1.3rem;font-weight:800;margin:0 0 12px}
+.point-card .choice-board{grid-template-columns:repeat(4,minmax(0,1fr))}
+.tool-note{border-left:4px solid var(--tool-gold);background:var(--tool-gold-bg);padding:12px 14px;font-size:.95rem;margin:16px 0 0}
+.tool-note p{margin:0}
+.emergency-strip{border:2px solid var(--tool-rose);border-radius:12px;padding:12px 14px;margin:18px 0;background:var(--tool-rose-bg)}
+.emergency-strip h3{color:var(--tool-rose)}
+.emergency-strip p{margin:6px 0;font-size:.95rem}
+.emergency-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+.emergency-actions strong{border:1px solid var(--tool-rose);border-radius:8px;padding:9px;font-size:.95rem;text-align:center;background:var(--white)}
+.ocd-map{display:grid;grid-template-columns:1fr 1fr;gap:8px 16px;margin:14px 0 20px;text-align:center}
+.ocd-trigger{grid-column:1/-1;justify-self:center;min-width:180px;border:2px solid var(--tool-blue);border-radius:12px;padding:10px 20px;font-weight:800;background:var(--tool-blue-bg)}
+.ocd-branch{border-top:1px solid var(--line);padding-top:10px;display:grid;gap:6px;align-content:start}
+.ocd-branch>strong{font-size:.875rem;color:var(--tool-rose)}
+.ocd-branch.practice>strong{color:var(--tool-teal)}
+.ocd-node{border:1px solid var(--line);border-radius:10px;padding:10px;font-weight:650;font-size:.95rem;background:var(--tool-rose-bg)}
+.ocd-branch.practice .ocd-node{background:var(--tool-teal-bg)}
+.ocd-branch .down-arrow{line-height:1;color:var(--muted)}
+.ocd-return{font-size:.875rem;color:var(--tool-rose);padding:6px;border:1px dashed var(--tool-rose);border-radius:8px}
+.practice-route{padding:14px;border:2px solid var(--tool-teal);border-radius:12px;margin:18px 0}
+.practice-route h2{font-family:inherit;font-size:1.15rem;font-weight:750;margin:0 0 12px}
+.practice-route .field-trio{margin:0}
+.tool-example{margin:18px 0;border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.tool-example summary{font-weight:700;cursor:pointer;font-size:.95rem}
+.tool-example p{margin-bottom:0}
+.companion-page p,.companion-page li{font-size:1rem}
+.tool-sources{border-top:1px solid var(--line);margin-top:22px;padding-top:14px;font-size:.875rem}
+.tool-sources p{font-size:.875rem}
+.tool-sources a{overflow-wrap:anywhere;color:var(--green)}
+.tool-sources ul{margin:8px 0;padding-left:20px}
+.tool-sources li{font-size:.875rem;margin:5px 0}
+@media screen and (max-width:680px){
+  .tool-choice{min-height:44px}
+  .tool-actions a,.tool-actions button{min-height:44px;display:inline-flex;align-items:center}
+}
+@media(prefers-color-scheme:dark){
+  .visual-tool{--tool-blue:#a6bde9;--tool-teal:#9dd3bf;--tool-gold:#e2c280;--tool-rose:#edb0bd;--tool-blue-bg:#242f44;--tool-teal-bg:#20372f;--tool-gold-bg:#382f1c;--tool-rose-bg:#39262c}
+}
+@media(max-width:680px){
+  .visual-tool .resource-page{margin-top:20px}
+  .worksheet-page,.companion-page{padding:17px}
+  .load-scale{grid-template-columns:1fr 1fr}
+  .choice-board,.point-card .choice-board{grid-template-columns:1fr 1fr}
+  .point-card .choice-board{grid-template-columns:1fr}
+  .field-trio,.field-pair{grid-template-columns:1fr}
+  .map-options{grid-template-columns:1fr}
+  .support-map{grid-template-columns:minmax(0,1fr) 18px minmax(0,1.1fr);gap:10px 6px}
+  .sequence{grid-template-columns:1fr}
+  .sequence .path-arrow{transform:rotate(90deg);line-height:1;justify-self:center}
+  .emergency-actions{grid-template-columns:1fr}
+  .visual-tool .resource-topbar a{font-size:.875rem;max-width:55%}
+  .visual-tool .resource-topbar button{font-size:.875rem}
+}
+@media print{
+  @page{size:letter;margin:.48in}
+  .visual-tool{--tool-blue:#253e6a;--tool-teal:#215b4a;--tool-gold:#705217;--tool-rose:#783440;--tool-blue-bg:#f3f5fa;--tool-teal-bg:#f1f7f4;--tool-gold-bg:#faf6eb;--tool-rose-bg:#fbf2f4;color:#111;font-size:11pt;line-height:1.35;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .visual-tool .resource-page{width:100%;max-width:none;margin:0}
+  .visual-tool h1{font-size:25pt;line-height:1.08;max-width:none}
+  .visual-tool .resource-kicker,.visual-tool .resource-byline{font-size:9pt;margin-top:6px}
+  .visual-tool .resource-intro{font-size:10pt;margin:7px 0 10px}
+  .tool-actions,.tool-privacy,.tool-example{display:none!important}
+  .worksheet-page,.companion-page{padding:0;border:0;box-shadow:none;border-radius:0;background:#fff!important}
+  .companion-page{break-before:page;margin:0}
+  .visual-tool h2{font-size:14pt;margin:13px 0 8px}
+  .visual-tool h3{font-size:11pt;margin:0 0 5px}
+  .tool-field,.tool-choice,.map-options .tool-choice{font-size:10pt}
+  .tool-field textarea{font-size:10pt;padding:6px;min-height:36px;border-radius:5px;resize:none}
+  .tool-field input[type=text]{font-size:10pt;padding:5px;min-height:30px;border-radius:5px}
+  .tool-choice{padding:6px;gap:6px;border-radius:5px}
+  .tool-choice input{width:13px;height:13px;margin-top:0}
+  .tool-choice:has(input:checked){box-shadow:none;border-color:#222}
+  .load-scale,.choice-board,.point-card .choice-board{gap:6px}
+  .load-scale{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .load-scale b{font-size:10pt}.load-scale small{font-size:9pt}
+  fieldset.tool-group{margin:11px 0}
+  .tool-group legend{font-size:11pt;margin-bottom:7px}
+  .support-map{grid-template-columns:1fr 20px 1.2fr;gap:7px 10px;margin:8px 0 12px}
+  .map-heading{font-size:10pt!important}
+  .map-options{grid-template-columns:1fr 1fr}
+  .sequence{grid-template-columns:1fr 18px 1fr 18px 1fr;margin:12px 0;gap:6px}
+  .sequence>div:not(.path-arrow){padding:9px;border-top-width:3px}
+  .sequence .path-arrow{transform:none}
+  .field-pair{grid-template-columns:1fr 1fr;margin:12px 0}
+  .field-trio{grid-template-columns:1fr 1fr 1fr;margin:12px 0}
+  .point-card,.practice-route{padding:10px;margin:12px 0;break-inside:avoid}
+  .point-card h2{font-size:14pt;margin-bottom:8px}
+  .point-card .choice-board{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .tool-note{font-size:10pt;padding:10px;margin:11px 0 0;break-inside:avoid}
+  .ocd-map{gap:6px 14px;margin:10px 0 12px}
+  .ocd-trigger{padding:7px 18px;font-size:11pt}
+  .ocd-node{padding:7px;font-size:10pt}
+  .ocd-branch{padding-top:6px;gap:4px}
+  .ocd-branch>strong,.ocd-return{font-size:9pt}
+  .emergency-strip{padding:9px 11px;margin:12px 0;break-inside:avoid}
+  .emergency-strip p{font-size:10pt}
+  .emergency-actions{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+  .emergency-actions strong{font-size:10pt;padding:7px}
+  .companion-page p,.companion-page li{font-size:11pt}
+  .tool-sources p,.tool-sources li{font-size:9pt}
+  .tool-sources{margin-top:14px;padding-top:10px;break-inside:avoid}
+  .tool-field,.load-scale,.support-map,.sequence,.ocd-map,.field-pair,.field-trio{break-inside:avoid}
+  .visual-tool .resource-footer{width:100%;margin:12px 0 0;font-size:9pt;padding-top:8px}
+}
+
+/* Grief, personal care, and after-school worksheets use the same working surface. */
+.stable-worksheet .grief-map{margin:0 0 20px}
+.stable-worksheet .grief-map>div{min-width:0;background:var(--tool-teal-bg);padding:14px}
+.stable-worksheet .grief-map .map-center{background:var(--tool-blue-bg);text-align:left}
+.stable-worksheet .tool-field small{font-weight:400;font-size:.875rem;color:var(--muted)}
+.four-step{display:grid;grid-template-columns:1fr 20px 1fr 20px 1fr 20px 1fr;gap:8px;margin:16px 0 22px}
+.four-step>div{min-width:0;padding:12px;border:1px solid var(--line);border-top:4px solid var(--tool-teal);border-radius:10px;background:var(--tool-teal-bg)}
+.four-step>div:nth-of-type(2){background:var(--tool-gold-bg);border-top-color:var(--tool-gold)}
+.four-step>div:nth-of-type(3){background:var(--tool-blue-bg);border-top-color:var(--tool-blue)}
+.stable-worksheet .tool-actions a,.stable-worksheet .tool-actions button{min-height:44px;display:inline-flex;align-items:center}
+@media(max-width:680px){
+  .four-step{grid-template-columns:1fr}
+  .four-step .path-arrow{transform:rotate(90deg);justify-self:center}
+  .stable-worksheet .grief-map{grid-template-columns:1fr;grid-template-areas:"center" "a" "b" "c" "d"}
+  .stable-worksheet .tool-field small{font-size:.875rem}
+}
+@media print{
+  .stable-worksheet{font-size:10pt}
+  .stable-worksheet .grief-map{grid-template-columns:1fr 1.05fr 1fr;grid-template-areas:"a center b" "c center d";gap:8px;margin-bottom:12px}
+  .stable-worksheet .grief-map>div{padding:10px}
+  .stable-worksheet .tool-field small{font-size:8pt}
+  .stable-worksheet .grief-map .tool-field textarea{min-height:32px}
+  .four-step{grid-template-columns:1fr 15px 1fr 15px 1fr 15px 1fr;gap:6px;margin:10px 0 12px;break-inside:avoid}
+  .four-step>div{padding:8px}
+  .four-step .path-arrow{transform:none}
+  .four-step .tool-field{font-size:9pt}
+  .stable-worksheet .field-trio{margin:10px 0}
+  .stable-worksheet .tool-sources{break-inside:auto}
+}
