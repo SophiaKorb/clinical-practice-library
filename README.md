@@ -2,6 +2,14 @@
 
 A searchable, shareable clinical resource catalog for clinicians, interns, trainees, patients, caregivers, and school-support work.
 
+## Separate development tracks
+
+- `main` is the stable production site at https://clinical-practice-library.vercel.app/.
+- `cpl-2-colorful-helpful` is the separate colorful 2.0 track.
+- The current 2.0 candidate is `cpl2/navigation-tools-2026-10-04`, proposed in [draft PR #3](https://github.com/SophiaKorb/clinical-practice-library/pull/3) against the colorful branch.
+
+The reviewed [2.0 preview](https://clinical-practice-library-en7r1xvk8-cohon-family.vercel.app/preview/cpl2) leads from clinical questions to guides, practical tools, and review. See the [October 4 checkpoint](docs/2026-10-04-CPL2-NAVIGATION-HANDOFF.md) for verification and the remaining 2.0 work. Production approval applies only to the stable release already published from `main`.
+
 ## Current build
 
 This repository contains a working static web interface plus structured metadata for:
@@ -9,7 +17,7 @@ This repository contains a working static web interface plus structured metadata
 - 95 Clinical Research Core records
 - 31 assessment and screening-tool records
 - 8 Arizona Barrier Support school-toolkit records
-- 134 indexed records total
+- 155 indexed records total
 - the established library architecture for clinical, family, school, trainee, assessment, Arizona, California, and Spanish-language resources
 
 The site is designed to run directly from GitHub Pages without a build step.
