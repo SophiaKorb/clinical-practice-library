@@ -1,6 +1,15 @@
 # Library status
 
-Updated September 30, 2026.
+Updated October 4, 2026.
+
+
+## Colorful 2.0 candidate — October 4, 2026
+
+The separate candidate is `cpl2/navigation-tools-2026-10-04`, proposed in [draft PR #3](https://github.com/SophiaKorb/clinical-practice-library/pull/3) against `cpl-2-colorful-helpful`. [Reviewed preview](https://clinical-practice-library-en7r1xvk8-cohon-family.vercel.app/preview/cpl2) · [verification and remaining work](docs/2026-10-04-CPL2-NAVIGATION-HANDOFF.md).
+
+Three clinician routes now lead from what is being seen through understanding, next action, tool selection, and review. The recovery, lower-risk, and ERP worksheets are promoted first; plain-language patient/family materials have their own section. The clinician entry retains 12 topics in order, removes shelf prefixes, and has 24 usable guide/tool links. Phone guide headings, 44px controls, worksheet return/review links, canonical index redirects, and shelf fragments were checked. Navigation CI passes.
+
+Stable production remains separately approved on `main` at `27035be6f1b1466a1dbf28dc9c3f3d84b9666734`. This candidate does not publish 2.0 to production. Grief Map, Personal Care Plan, and After-School Reset are still separate 2.0 follow-ups; their stable conversions are already published. Native HTML print export needs a browser check; the three featured two-page PDFs are unchanged and were visually reviewed.
 
 ## Live catalog
 

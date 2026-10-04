@@ -1,0 +1,30 @@
+name: CPL 2.0 navigation QA
+on:
+  push:
+    branches:
+      - cpl-2-colorful-helpful
+      - 'cpl2/**'
+    paths:
+      - '**.html'
+      - '**.css'
+      - '**.js'
+      - 'vercel.json'
+      - 'scripts/check-library-links.py'
+      - '.github/workflows/cpl2-navigation.yml'
+  pull_request:
+    branches: [cpl-2-colorful-helpful]
+jobs:
+  navigation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: python scripts/check-library-links.py
+      - run: node --check preview/cpl2.js
+      - run: node --check navigation.js
+      - run: node scripts/check-school-guide-parity.js --self-test
