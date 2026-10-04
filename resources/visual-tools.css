@@ -75,6 +75,10 @@ fieldset.tool-group{padding:0;border:0;margin:18px 0;min-width:0}
 .tool-sources a{overflow-wrap:anywhere;color:var(--green)}
 .tool-sources ul{margin:8px 0;padding-left:20px}
 .tool-sources li{font-size:.875rem;margin:5px 0}
+@media screen and (max-width:680px){
+  .tool-choice{min-height:44px}
+  .tool-actions a,.tool-actions button{min-height:44px;display:inline-flex;align-items:center}
+}
 @media(prefers-color-scheme:dark){
   .visual-tool{--tool-blue:#a6bde9;--tool-teal:#9dd3bf;--tool-gold:#e2c280;--tool-rose:#edb0bd;--tool-blue-bg:#242f44;--tool-teal-bg:#20372f;--tool-gold-bg:#382f1c;--tool-rose-bg:#39262c}
 }
