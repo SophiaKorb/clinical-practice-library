@@ -1,6 +1,16 @@
 # Library status
 
-Updated September 30, 2026.
+Updated October 4, 2026.
+
+## October 4 stable review candidate
+
+- [Draft PR #2](https://github.com/SophiaKorb/clinical-practice-library/pull/2) targets `main` from `stable/p0-p1-completion-2026-10-04`. Production and the colorful 2.0 branch remain unchanged. Explicit production approval is required before merge or promotion.
+- The stable homepage now starts with a need; clinician navigation follows observation → understanding → action → tool → review. Treatment topics retain their order, with working guide/tool links and no visible shelf numbering. Resource return links use the main homepage; legacy `/resources/` fragments open the matching shelf.
+- Grief Map, Personal Care Plan, and After-School Reset now have editable visual web worksheets and matching blank, two-page editable PDFs. The earlier sensory, lower-risk, and ERP conversions were already complete and were checked again.
+- Repeated footer author names removed only where a named byline already exists. The changed OCD companion now links to specific IOCDF guidance. New worksheet provenance distinguishes original planning tools from validated assessments and outside reproductions.
+- Phone layouts and 44px choice targets checked at 320/390px. Local link, school-guide parity, PDF-field, JavaScript, and whitespace checks pass; GitHub's Library links and navigation workflow passes.
+- Downloadable PDF output verified on all six new pages. The review environment does not expose the native browser print dialog; HTML Print / Save PDF still needs a normal-browser spot check.
+- [Full checkpoint, source notes, and remaining P1 work](docs/2026-10-04-STABLE-P0-P1-HANDOFF.md). P1.5 remains deferred.
 
 ## Live catalog
 
