@@ -125,7 +125,7 @@ function render(){
   const bits=[f.term&&'search: “'+f.term+'”',f.section,f.type,f.domain,f.priority,f.evidence].filter(Boolean);q("#activeFilters").textContent=bits.length?bits.join(" · "):"No filters applied";
 }
 function clearAll(){q("#search").value="";["sectionFilter","typeFilter","domainFilter","priorityFilter","evidenceFilter"].forEach(id=>q("#"+id).value="");q("#sortBy").value="default";showAllResources=false;apply()}
-function csv(rows){const keys=["id","section","collection","resourceType","title","year","domain","clinicalPurpose","accessStatus","sourceUrl","nextAction"],quote=v=>'"'+String(Array.isArray(v)?v.join("; "):(v??"")).replace(/"/legacy/g,'""')+'"';return[keys.join(","),...rows.map(r=>keys.map(k=>quote(r[k])).join(","))].join("\n")}
+function csv(rows){const keys=["id","section","collection","resourceType","title","year","domain","clinicalPurpose","accessStatus","sourceUrl","nextAction"],quote=v=>'"'+String(Array.isArray(v)?v.join("; "):(v??"")).replace(/"/g,'""')+'"';return[keys.join(","),...rows.map(r=>keys.map(k=>quote(r[k])).join(","))].join("\n")}
 function download(name,mime,body){const a=document.createElement("a"),u=URL.createObjectURL(new Blob([body],{type:mime}));a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),500)}
 async function init(){
   try{
