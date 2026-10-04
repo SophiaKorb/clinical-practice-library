@@ -1,0 +1,75 @@
+{
+  "grief": {
+    "slug": "my-grief-map",
+    "pdf": "my-grief-map-fillable.pdf",
+    "title": "My Grief Map",
+    "kicker": "Grief · Client & family",
+    "intro": "Use the parts that fit today. You do not have to finish the map or make the loss meaningful.",
+    "map": [
+      ["what-i-miss", "What I miss", "What or who feels absent?"],
+      ["what-changed", "What changed", "What is different in daily life?"],
+      ["my-loss", "My loss", "Person, relationship, role, place, future, or part of life"],
+      ["what-i-carry", "What I carry", "Memory, story, ritual, object, prayer, song, place"],
+      ["unfinished", "What is unfinished", "Unsaid, complicated, angry, guilty, confusing"]
+    ],
+    "groups": [
+      ["feelings", "What is here today?", ["Sadness", "Anger", "Numbness", "Relief", "Guilt", "Yearning", "Anxiety", "Irritability", "Exhaustion", "Hard to concentrate", "Physical heaviness", "Not much right now"]],
+      ["wave", "When a grief wave hits", ["Be alone", "Be with someone", "Move", "Cry", "Rest", "Go outside", "Photos", "No photos for now", "Prayer / ritual", "Write", "Ordinary routine", "Practical help"]]
+    ],
+    "support": [["honest-person", "Who can I be honest with?"], ["burden", "What do I need help carrying?"], ["others-should-know", "What do I want others to know?"]],
+    "note": "If safety or basic care is becoming difficult, bring that concern to a clinician. This map is a conversation aid, not a safety assessment.",
+    "companion_title": "Make room for grief, together",
+    "companion_intro": "Ask which part of the map the person wants to talk about. Leave space for mixed feelings, silence, and ordinary life.",
+    "helper_points": ["Use the person's own words. Do not require a positive meaning or a particular grief stage.", "Offer practical help and company in the form the person wants.", "Ask about changes in daily functioning and safety when concerns arise; use a fuller assessment when needed."],
+    "planning": [["hard-moment", "A time or situation that feels hard"], ["wanted-support", "Support I would like then"], ["keep-close", "Something I want to keep close"], ["boundary", "Something I do not want pushed"]],
+    "review": [["what-helped", "What gave me a little more room?"], ["next-check", "What should we check or change next time?"]],
+    "related": ["/resources/handouts/making-room-for-grief.html", "Making Room for Grief · short guide"],
+    "sources": [["NHS: grief after bereavement or loss", "https://www.nhs.uk/mental-health/feelings-symptoms-behaviours/feelings-and-symptoms/grief-bereavement-loss/"]]
+  },
+  "care": {
+    "slug": "my-personal-care-plan",
+    "pdf": "my-personal-care-plan-fillable.pdf",
+    "title": "My Personal Care Plan",
+    "kicker": "Personal care · Client & family",
+    "intro": "Choose one routine. Find what makes it hard, then try a support you want.",
+    "setup": [["routine", "What do I want to make easier?"], ["good-enough", "What counts as good enough?"]],
+    "groups": [
+      ["friction", "Find the friction", ["Starting", "Remembering", "Too many steps", "Pain", "Fatigue", "Sensory discomfort", "Privacy", "Body discomfort / dysphoria", "Missing supplies", "Time", "Motor demands", "Not sure yet"]],
+      ["supports", "Match support to friction", ["Visual checklist", "Supplies laid out", "Reminder", "Same time / place", "Different product", "Temperature change", "Gloves / tool", "Music / audio", "Sit instead of stand", "First step together", "More privacy", "Shorter version", "Rest break"]]
+    ],
+    "route": [["first", "First", "My first move"], ["then", "Then", "What comes after"], ["next", "Next", "The next step"], ["finish", "Done", "Good enough"]],
+    "support": [["sensory-change", "A sensory change I want"], ["help-wanted", "Help I want"], ["help-not-wanted", "Help I do not want"]],
+    "success": ["how-it-helps", "How I will know it helps"],
+    "note": "If care suddenly gets much harder, check health, pain, mood, sleep, and access with the right professional. Do not assume it is only a habit problem.",
+    "companion_title": "Make the routine workable",
+    "companion_intro": "Plan around the person's priorities, access needs, and choice. Success may mean less effort or more control over the routine.",
+    "helper_points": ["Watch where the routine gets stuck. Offer one change at a time.", "Ask before helping, touching, or changing products. Keep the person's privacy and choices central.", "Keep helpful access supports available. Consider medical or occupational-therapy input for pain, motor demands, or persistent difficulty."],
+    "planning": [["stuck-point", "Where the routine gets stuck"], ["one-change", "One change we will try"], ["prepare", "What can be ready in advance?"], ["helper-agreement", "What my helper and I agree to do"]],
+    "review": [["easier", "What was easier or more under my control?"], ["adjust", "What will we keep, change, or check next?"]],
+    "related": ["/resources/handouts/when-hygiene-tasks-are-hard.html", "When Hygiene Tasks Are Hard · short guide"],
+    "sources": [["National Autistic Society: sensory processing and support", "https://www.autism.org.uk/advice-and-guidance/about-autism/sensory-processing"]]
+  },
+  "reset": {
+    "slug": "my-after-school-reset-plan",
+    "pdf": "my-after-school-reset-plan.pdf",
+    "title": "My After-School Reset Plan",
+    "kicker": "After school · Child & family",
+    "intro": "Home is where I get to land. Choose what helps before adding the next demand.",
+    "route": [["arrive", "Arrive", "My body needs"], ["land", "Land", "What can pause"], ["reset", "Reset", "What helps me"], ["ready", "Ready", "My first small next step"]],
+    "groups": [
+      ["arrive-help", "Pick what helps first", ["Drink", "Snack", "Bathroom", "Quiet", "Movement", "Comfortable clothes", "Familiar media", "Someone nearby", "Time alone"]],
+      ["pause", "Pause these for now", ["School questions", "Homework", "Chores", "Problems", "Tomorrow"]],
+      ["show-needs", "I can show what I need", ["Talk", "Point", "Write / type", "Show this page", "Use a signal", "Be quiet"]]
+    ],
+    "signals": [["body-sign", "Body", "tight, fast, heavy, hot, shaky, numb"], ["words-sign", "Words", "harder to find or use"], ["senses-sign", "Senses", "sound or touch feels bigger"], ["actions-sign", "Actions", "cry, hide, pace, freeze, shut down"]],
+    "support": [["reset-choice", "A support I choose"], ["another-choice", "Another choice"], ["backup-choice", "A backup choice"]],
+    "note": "For adults: offer choices without making this a quiz. Plan during a calm time. The child can tell or show when they have more room; address immediate safety needs calmly.",
+    "companion_title": "Plan the landing before school ends",
+    "companion_intro": "Notice patterns across school, travel, and home. A reset is support, not something a child must earn.",
+    "helper_points": ["Offer time, space, and a manageable way to communicate after overload.", "Ask which choices help. Keep touch, noise, and talking within what the child can manage.", "Share useful observations with school or a clinician when needed. This plan does not explain every cause of distress."],
+    "planning": [["school-load", "What used up room at school or on the way home?"], ["adult-pause", "What adults agree to pause"], ["ready-signal", "How I show I am ready"], ["return-step", "One manageable next step we agree on"]],
+    "review": [["reset-helped", "What helped the landing or recovery?"], ["reset-adjust", "What should we change or watch next?"]],
+    "related": ["/resources/handouts/after-school-is-a-landing-not-a-launch.html", "After School Is a Landing, Not a Launch · short guide"],
+    "sources": [["National Autistic Society: responding to overload", "https://www.autism.org.uk/advice-and-guidance/behaviour/meltdowns/all-audiences"], ["National Autistic Society: sensory processing and support", "https://www.autism.org.uk/advice-and-guidance/about-autism/sensory-processing"]]
+  }
+}
