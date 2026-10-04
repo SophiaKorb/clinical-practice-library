@@ -28,10 +28,13 @@ NICE links are UK clinical references, not Arizona payer requirements. DID sourc
 - DOM simulation using jsdom passed: every family selection/removal, multiple diagnoses, edit preservation, copying, clipboard-denial fallback, print text, reset, deep link, failed-data-load state and no saved entries.
 - Deployment state and branch/commit metadata confirmed via Vercel connector.
 
-## Verification remaining / blocker
-Actual browser visual review at phone/desktop sizes and paginated print review remain unverified. Localhost was blocked by the cloud browser. The protected Vercel preview redirected toward sign-in and automatic approval denied browser access because of possible account-page exposure. A subsequent purpose-built protected-preview fetch was also denied because it may create temporary authentication-bypass access without specific authorization. Do not repeat either action or circumvent the denial. Obtain explicit authorization for temporary preview access before browser review.
-The menu exists and is deployed; responsive CSS and print content were implemented but are not represented as visually verified.
+## Live browser review completed
+- User explicitly authorized temporary Vercel preview access.
+- Real Chrome review passed at 320px and 390px iframe viewport widths and 1280px desktop. Document scroll width matched available width (305, 375 and 1265px with vertical scrollbars); no horizontal overflow.
+- Narrow autism flow selected a target and edited client priorities; preview reflected the edit. Desktop select/edit/copy flow verified actual clipboard contents.
+- Print action populated the print article. Native paginated print preview is unavailable in this cloud browser; pagination remains unverified.
+- Review fixture: preview/treatment-plan-layout-check.html. Generic test text only.
 
 ## Follow-up
-- With specific preview-access authorization, review 320px, 390px and desktop; complete select/edit/copy/print flow in a real browser and inspect print pagination.
-- Keep production and colorful work separate. Do not merge this into main without explicit authorization.
+- Inspect final pagination in a browser with native print preview before relying on PDF layout.
+- Keep production and colorful work separate. Do not merge into main without explicit authorization.
