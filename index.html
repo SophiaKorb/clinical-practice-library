@@ -1,6 +1,18 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Clinical Practice Library</title><link rel="stylesheet" href="/preview/cpl2.css"><meta name="description" content="Treatment guides, visual tools, and handouts for clinical care."><link rel="icon" href="/favicon.svg" type="image/svg+xml"></head>
+<title>Clinical Practice Library</title><link rel="stylesheet" href="/preview/cpl2.css"><meta name="description" content="Treatment guides, visual tools, and handouts for clinical care."><link rel="icon" href="/favicon.svg" type="image/svg+xml"><script>
+(function(){
+  var COLORFUL_HOST="clinical-practice-library-92hq5cswg-cohon-family.vercel.app";
+  if(location.hostname==="clinical-practice-library.vercel.app"){
+    document.addEventListener("click",function(e){
+      var a=e.target.closest("a[href]");
+      if(!a || a.getAttribute("href").startsWith("/legacy/") || !a.getAttribute("href").startsWith("/")) return;
+      e.preventDefault();
+      location.href="https://"+COLORFUL_HOST+a.getAttribute("href");
+    });
+  }
+})();
+</script></head>
 <body>
 <header><a class="brand" href="/"><b>CPL</b><span>Clinical Practice Library</span></a><a class="badge" href="/legacy/">Legacy library</a></header>
 <main>
