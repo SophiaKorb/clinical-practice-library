@@ -13,9 +13,18 @@
     document.body.classList.remove('print-single');
     document.querySelectorAll('.print-selected').forEach(tool => tool.classList.remove('print-selected'));
   };
+  const print = () => {
+    preparePrint();
+    try {
+      window.print();
+    } finally {
+      // Also clean up when printing is blocked or the dialog is suppressed.
+      restorePrint();
+    }
+  };
   document.querySelector('[data-expand-tools]').addEventListener('click', () => examples.forEach(example => { example.open = true; }));
   document.querySelector('[data-collapse-tools]').addEventListener('click', () => examples.forEach(example => { example.open = false; }));
-  document.querySelector('[data-print-tools]').addEventListener('click', () => window.print());
+  document.querySelector('[data-print-tools]').addEventListener('click', print);
   examples.forEach(example => {
     const tool = example.closest('.tool');
     const button = document.createElement('button');
@@ -26,7 +35,7 @@
     button.addEventListener('click', () => {
       document.body.classList.add('print-single');
       tool.classList.add('print-selected');
-      window.print();
+      print();
     });
     example.appendChild(button);
   });
