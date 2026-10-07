@@ -3,28 +3,7 @@
 @media(max-width:600px){.quick-card dl div{grid-template-columns:1fr;gap:3px}.resource-topbar{padding:9px 12px}}
 @media print{body{background:#fff}.resource-topbar{display:none}.resource-page{margin:0 auto}.quick-card{box-shadow:none;break-inside:avoid}.second-copy{break-before:page}.resource-footer{margin-top:20px}}.resource-card{background:var(--white);border:1px solid var(--line);border-radius:22px;padding:clamp(20px,4vw,34px);box-shadow:0 16px 45px rgba(42,49,43,.05)}.resource-card h2{font-size:1.55rem;margin:34px 0 10px}.resource-card h2:first-child{margin-top:0}.resource-card p{margin:10px 0}.resource-card ul,.resource-card ol{padding-left:1.3rem}.worksheet{background:#f5f1e9;border-left:4px solid var(--green);padding:14px 16px;border-radius:0 10px 10px 0;line-height:1.8}
 
-@media (prefers-color-scheme: dark){
-  :root{
-    color-scheme:dark;
-    --paper:#141916;
-    --white:#1b211d;
-    --ink:#e7e9e5;
-    --muted:#a5aea7;
-    --line:#343d37;
-    --green:#9bc6ae;
-    --green2:#87ad98;
-    --sage:#243229;
-    --sand:#2a2822
-  }
-  .resource-topbar{background:rgba(20,25,22,.95)}
-  .resource-topbar button{background:#202722;color:#b9dfca;border-color:var(--line)}
-  .quick-card,.resource-card{background:#1b211d;box-shadow:0 16px 45px rgba(0,0,0,.18)}
-  .quick-card dl div{border-top-color:#313a34}
-  .worksheet{background:#222823;border-left-color:#6c9a82}
-  .safety-note{background:#29271f}
-  a{color:#a8d3bb}
-  a:hover{color:#c5e4d2}
-}
+
 
 
 @media print{
@@ -46,13 +25,7 @@
 .clinical-note p{margin:.25rem 0 0}
 .clinical-note.caution{border-left-color:#a78554;background:var(--sand)}
 @media(max-width:650px){.clinical-support{grid-template-columns:48px 1fr}.clinical-barrier{padding:18px}}
-@media(prefers-color-scheme:dark){
- .clinical-barrier{background:#1b211d;border-color:#343d37}
- .observable{background:#242b26}
- .clinical-support{border-color:#343d37}
- .clinical-note{background:#243229}
- .clinical-note.caution{background:#2a2822}
-}
+
 
 
 /* Keyboard focus */
@@ -93,3 +66,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible{
 .resource-route{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0 26px}.resource-route>div{padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:var(--sage)}.resource-route strong{display:block;color:var(--green);margin-bottom:4px}.resource-callout{margin:18px 0;padding:15px 17px;border-left:4px solid var(--green2);background:var(--sage);border-radius:0 12px 12px 0}.resource-callout.caution{background:var(--sand);border-left-color:#a78554}.resource-links{display:grid;gap:8px;margin:12px 0}.resource-links a{display:block;padding:10px 12px;border:1px solid var(--line);border-radius:10px;text-decoration:none}.resource-links a:hover{text-decoration:underline}.micro-label{display:block;margin-bottom:3px;text-transform:uppercase;letter-spacing:.08em;font-size:.7rem;font-weight:850;color:var(--green2)}
 @media(max-width:650px){.resource-route{grid-template-columns:1fr}}
 @media print{.resource-route>div,.resource-callout{background:#fff!important}}
+
+/* CPL uses a consistent light palette across navigation and native controls. */
+:root{color-scheme:light}
