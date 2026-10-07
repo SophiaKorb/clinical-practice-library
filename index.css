@@ -64,3 +64,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible{
 .section[id],.shelf[id]{scroll-margin-top:88px}
 @media(max-width:850px){.section[id],.shelf[id]{scroll-margin-top:138px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* CPL uses a consistent light palette across navigation and native controls. */
+:root{color-scheme:light}

@@ -1,0 +1,51 @@
+/* Shared presentation for the current and retained communication toolkit. */
+:root{color-scheme:light;--ink:#253d35;--muted:#54635d;--paper:#f7f6f1;--card:#fff;--line:#c8d0ca;--accent:#285e50;--soft:#eaf0eb}
+body{color:#283e34;line-height:1.65}
+h1,h2,.tool h3{font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.025em}
+h1{line-height:1.08}h2{line-height:1.2}.tool h3{font-size:1.5rem;line-height:1.2;margin-bottom:14px}
+.grid{align-items:start}
+.tool{border-radius:5px;box-shadow:none;padding:24px;min-width:0}
+.tool:has(.example[open]){grid-column:1/-1}
+.visual{border-radius:4px;box-shadow:none;padding:18px;background:#fbfcfa;color:var(--ink)}
+.rule,.mini{border-radius:3px}.mini{background:#eef1ed;font-weight:600}
+.chip,.compare>div,.meaning-branches>div,.memory-scene .choices span{border-radius:4px;font-weight:600}
+.chip{overflow-wrap:normal;word-break:normal}
+.visual-path{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1fr)}
+.visual-path>*{min-width:0}
+.pictogram{border-width:1px;font-weight:650;flex-shrink:0}
+.example summary{font-weight:650;line-height:1.4}
+.label,.eyebrow{font-size:.8rem;letter-spacing:.08em}.folder-head{border-bottom-width:1px}
+.tool-actions{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+.tool-actions button,.print-tool{font:inherit;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:4px;padding:10px 16px;min-height:44px;cursor:pointer}
+.tool-actions button:hover,.print-tool:hover{background:var(--soft)}
+.print-tool{margin-top:14px;font-size:.9rem}
+@media screen and (max-width:600px){
+ .tool{padding:16px}.visual{padding:12px}.tool h3{font-size:1.4rem}
+ .visual-path[style],.visual-path{grid-template-columns:minmax(0,1fr)!important}
+ .visual-path .arrow{transform:rotate(90deg);justify-self:center}
+ .choice-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .chip{padding:10px 6px;font-size:1rem;min-height:88px}
+ .meaning-branches{grid-template-columns:minmax(0,1fr)}
+}
+@media print{
+ @page{size:letter;margin:.6in}
+ :root{--ink:#17251c;--muted:#334039;--paper:#fff;--card:#fff;--line:#a5b0a8;--accent:#284c38;--soft:#fff}
+ body,.tool,.visual,.mini,.chip,.pictogram,.stop,.go,.pause,.memory-scene .choices span{background:#fff!important;color:#17251c!important}
+ header,nav.jump,.tool-actions,.print-tool,.example summary{display:none!important}
+ .wrap{padding:0}.folder{margin:20px 0}.grid{display:block}
+ .tool{padding:16px;margin:0 0 20px;break-inside:avoid;box-shadow:none}
+ .example::details-content{content-visibility:visible;height:auto}
+ .example .visual{display:block!important;box-shadow:none}
+ .choice-tiles,.visual .row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+ .consent-map{grid-template-columns:1fr}.consent-options{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .consent-core{aspect-ratio:auto;min-height:70px}
+ .thermometer{display:block}.thermo-bar{display:none}
+ .thermo-levels{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:5px}
+ .thermo-levels span{border:1px solid #a5b0a8;padding:8px;min-height:50px;font-size:10pt}
+ .visual-path .arrow{transform:none}.chip{min-height:64px;font-size:12pt;padding:8px}
+ .visual-path .chip{min-height:88px}.pictogram{width:38px;height:38px;font-size:16pt;margin-bottom:5px}
+ body.print-single .wrap> :not(.folder):not(.author-line),body.print-single .folder-head,body.print-single footer{display:none!important}
+ body.print-single .folder:not(:has(.print-selected)),body.print-single .tool:not(.print-selected){display:none!important}
+ body.print-single .folder{margin:0}.print-selected{border:0}
+ body.print-single .print-selected>.label,body.print-single .print-selected>.label+p,body.print-single .print-selected>.mini{display:none}
+}

@@ -92,3 +92,6 @@ body[data-family="true"] .toc a{font-size:.875rem}
   body[data-family="true"] .support-table-wrap{break-inside:auto}
   body[data-family="true"] .family-check{break-inside:avoid}
 }
+
+/* CPL uses a consistent light palette across navigation and native controls. */
+:root{color-scheme:light}

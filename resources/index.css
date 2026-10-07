@@ -57,3 +57,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible{
   outline-offset:3px;
   border-radius:6px;
 }
+
+/* CPL uses a consistent light palette across navigation and native controls. */
+:root{color-scheme:light}
