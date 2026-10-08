@@ -13,3 +13,11 @@ main{width:min(var(--max),calc(100% - 32px));margin:auto}.kicker,.mini-label{mar
 footer{background:#1f3028;color:#e9eee9;padding:34px 0}.footer-inner{width:min(var(--max),calc(100% - 32px));margin:auto;display:flex;justify-content:space-between;gap:30px}.footer-inner p{margin:5px 0 0;color:#bfcac3;font-size:.84rem}.footer-meta{display:flex;gap:18px;align-items:center;color:#bfcac3;font-size:.76rem}
 @media(max-width:980px){.hero{grid-template-columns:1fr;gap:28px}.entry-grid,.guide-cards{grid-template-columns:repeat(2,1fr)}.therapy-groups,.viz-grid{grid-template-columns:1fr 1fr}.viz-mix-card{grid-column:1/-1}.nav-links{display:none}.section-heading.split{display:block}.filters{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:700px){main,.topbar-inner,.footer-inner{width:min(100% - 24px,var(--max))}.hero{padding-top:52px}.hero h1{font-size:clamp(2.8rem,13vw,4.3rem)}.entry-grid,.guide-cards,.therapy-groups,.pathway-cards,.viz-grid,.cards{grid-template-columns:1fr}.viz-mix-card{grid-column:auto}.therapy-link{grid-template-columns:1fr;gap:3px}.pathway-body div,.scope-note{grid-template-columns:1fr}.filters{grid-template-columns:1fr}.catalog-status,.footer-inner{display:block}.mini-stats{grid-template-columns:repeat(3,1fr)}.mix-layout{grid-template-columns:1fr;justify-items:center}.mix-legend{width:100%}.scope-note{gap:15px}}
+/* Keep catalog controls and long resource titles usable on narrow screens. */
+.catalog-search-row input,.card,.card-top,.pills,.details-grid dd{min-width:0}
+.card-actions{flex-wrap:wrap}.card-actions a{overflow-wrap:anywhere}
+.card-top{gap:8px;flex-wrap:wrap}.card-title,.details-grid dd{overflow-wrap:anywhere}
+.card:focus{outline:3px solid var(--green);outline-offset:3px;scroll-margin-top:100px}
+.catalog-status{flex-wrap:wrap;gap:8px}.catalog-status span{display:block}
+@media(max-width:980px){.topbar-inner{flex-wrap:wrap;gap:10px;padding:12px 0}.nav-links{display:flex;flex-wrap:wrap;gap:8px 16px}}
+@media(max-width:700px){.catalog-search-row{flex-direction:column}.details-grid{grid-template-columns:1fr;gap:4px}.details-grid dd{margin-bottom:8px}.mini-stats{grid-template-columns:1fr}.card-actions{align-items:flex-start;flex-direction:column}}
