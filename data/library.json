@@ -4973,11 +4973,11 @@
       "language": [
         "English"
       ],
-      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "accessStatus": "Published resources available for this topic; see linked pages.",
       "sourceType": "Author-created clinical handout/resource",
       "sourceUrl": "",
       "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
-      "nextAction": "Complete review and link the public-facing version.",
+      "nextAction": "Open the linked resources and review their scope before use.",
       "tags": [
         "After-School Recovery",
         "Everyday functioning",
@@ -4985,7 +4985,18 @@
         "patient education",
         "clinical resource"
       ],
-      "publicMetadataOnly": true
+      "publicMetadataOnly": true,
+      "resourceLinks": [
+        {
+          "label": "After School Is a Landing, Not a Launch",
+          "url": "resources/handouts/after-school-is-a-landing-not-a-launch.html"
+        },
+        {
+          "label": "My After-School Reset Plan",
+          "url": "resources/handouts/my-after-school-reset-plan.html"
+        }
+      ],
+      "pageUrl": "resources/handouts/after-school-is-a-landing-not-a-launch.html"
     },
     {
       "id": "therapy-002-anxiety-approach-practice",
@@ -5013,11 +5024,11 @@
       "language": [
         "English"
       ],
-      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "accessStatus": "Published resources available for this topic; see linked pages.",
       "sourceType": "Author-created clinical handout/resource",
       "sourceUrl": "",
       "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
-      "nextAction": "Complete review and link the public-facing version.",
+      "nextAction": "Open the linked resources and review their scope before use.",
       "tags": [
         "Anxiety Approach Practice",
         "Anxiety & mood",
@@ -5025,7 +5036,14 @@
         "patient education",
         "clinical resource"
       ],
-      "publicMetadataOnly": true
+      "publicMetadataOnly": true,
+      "resourceLinks": [
+        {
+          "label": "When Avoidance Makes Anxiety Bigger",
+          "url": "resources/handouts/when-avoidance-makes-anxiety-bigger.html"
+        }
+      ],
+      "pageUrl": "resources/handouts/when-avoidance-makes-anxiety-bigger.html"
     },
     {
       "id": "therapy-003-attention-task-initiation",
@@ -5052,11 +5070,11 @@
       "language": [
         "English"
       ],
-      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "accessStatus": "Published resources available for this topic; see linked pages.",
       "sourceType": "Author-created clinical handout/resource",
       "sourceUrl": "",
       "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
-      "nextAction": "Complete review and link the public-facing version.",
+      "nextAction": "Open the linked resources and review their scope before use.",
       "tags": [
         "Attention and Task Initiation",
         "Everyday functioning",
@@ -5064,7 +5082,18 @@
         "patient education",
         "clinical resource"
       ],
-      "publicMetadataOnly": true
+      "publicMetadataOnly": true,
+      "resourceLinks": [
+        {
+          "label": "Making Plans Easier to Start and Finish",
+          "url": "resources/handouts/making-plans-easier-to-start-and-finish.html"
+        },
+        {
+          "label": "Task Launch Map",
+          "url": "resources/handouts/task-launch-map.html"
+        }
+      ],
+      "pageUrl": "resources/handouts/making-plans-easier-to-start-and-finish.html"
     },
     {
       "id": "therapy-004-behavioral-activation",
@@ -5092,11 +5121,11 @@
       "language": [
         "English"
       ],
-      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "accessStatus": "Published resources available for this topic; see linked pages.",
       "sourceType": "Author-created clinical handout/resource",
       "sourceUrl": "",
       "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
-      "nextAction": "Complete review and link the public-facing version.",
+      "nextAction": "Open the linked resources and review their scope before use.",
       "tags": [
         "Behavioral Activation",
         "Anxiety & mood",
@@ -5104,7 +5133,14 @@
         "patient education",
         "clinical resource"
       ],
-      "publicMetadataOnly": true
+      "publicMetadataOnly": true,
+      "resourceLinks": [
+        {
+          "label": "Small Steps When Depression Shrinks Your World",
+          "url": "resources/handouts/small-steps-when-depression-shrinks-your-world.html"
+        }
+      ],
+      "pageUrl": "resources/handouts/small-steps-when-depression-shrinks-your-world.html"
     },
     {
       "id": "therapy-005-conflict-repair-boundaries",
@@ -5134,11 +5170,11 @@
       "language": [
         "English"
       ],
-      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "accessStatus": "Published resources available for this topic; see linked pages.",
       "sourceType": "Author-created clinical handout/resource",
       "sourceUrl": "",
       "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
-      "nextAction": "Complete review and link the public-facing version.",
+      "nextAction": "Open the linked resources and review their scope before use.",
       "tags": [
         "Conflict, Repair, and Boundaries",
         "Relationships & parenting",
@@ -5146,7 +5182,14 @@
         "patient education",
         "clinical resource"
       ],
-      "publicMetadataOnly": true
+      "publicMetadataOnly": true,
+      "resourceLinks": [
+        {
+          "label": "Conflict, Repair, and Boundaries",
+          "url": "resources/handouts/conflict-repair-and-boundaries.html"
+        }
+      ],
+      "pageUrl": "resources/handouts/conflict-repair-and-boundaries.html"
     },
     {
       "id": "therapy-006-chore-support",
@@ -5176,11 +5219,11 @@
       "language": [
         "English"
       ],
-      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "accessStatus": "Published resources available for this topic; see linked pages.",
       "sourceType": "Author-created clinical handout/resource",
       "sourceUrl": "",
       "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
-      "nextAction": "Complete review and link the public-facing version.",
+      "nextAction": "Open the linked resources and review their scope before use.",
       "tags": [
         "Chore Support",
         "Everyday functioning",
@@ -5188,7 +5231,18 @@
         "patient education",
         "clinical resource"
       ],
-      "publicMetadataOnly": true
+      "publicMetadataOnly": true,
+      "resourceLinks": [
+        {
+          "label": "Helping Chores Go More Smoothly",
+          "url": "resources/handouts/helping-chores-go-more-smoothly.html"
+        },
+        {
+          "label": "My Weekly Chore Chart",
+          "url": "resources/handouts/my-weekly-chore-chart.html"
+        }
+      ],
+      "pageUrl": "resources/handouts/helping-chores-go-more-smoothly.html"
     },
     {
       "id": "therapy-007-co-parenting",
@@ -5216,11 +5270,11 @@
       "language": [
         "English"
       ],
-      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "accessStatus": "Published resources available for this topic; see linked pages.",
       "sourceType": "Author-created clinical handout/resource",
       "sourceUrl": "",
       "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
-      "nextAction": "Complete review and link the public-facing version.",
+      "nextAction": "Open the linked resources and review their scope before use.",
       "tags": [
         "Co-Parenting",
         "Relationships & parenting",
@@ -5228,7 +5282,14 @@
         "patient education",
         "clinical resource"
       ],
-      "publicMetadataOnly": true
+      "publicMetadataOnly": true,
+      "resourceLinks": [
+        {
+          "label": "Parenting Across Disagreement",
+          "url": "resources/handouts/parenting-across-disagreement.html"
+        }
+      ],
+      "pageUrl": "resources/handouts/parenting-across-disagreement.html"
     },
     {
       "id": "therapy-008-emotion-awareness",
@@ -5258,11 +5319,11 @@
       "language": [
         "English"
       ],
-      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "accessStatus": "Published resources available for this topic; see linked pages.",
       "sourceType": "Author-created clinical handout/resource",
       "sourceUrl": "",
       "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
-      "nextAction": "Complete review and link the public-facing version.",
+      "nextAction": "Open the linked resources and review their scope before use.",
       "tags": [
         "Emotion Awareness",
         "Emotion & regulation",
@@ -5270,7 +5331,22 @@
         "patient education",
         "clinical resource"
       ],
-      "publicMetadataOnly": true
+      "publicMetadataOnly": true,
+      "resourceLinks": [
+        {
+          "label": "Notice Before You Name It",
+          "url": "resources/handouts/notice-before-you-name-it.html"
+        },
+        {
+          "label": "Body Clues and Needs Map",
+          "url": "resources/handouts/body-clues-and-needs-map.html"
+        },
+        {
+          "label": "Emotion Signals",
+          "url": "resources/handouts/emotion-signals.html"
+        }
+      ],
+      "pageUrl": "resources/handouts/notice-before-you-name-it.html"
     },
     {
       "id": "therapy-009-fairness-flexibility",
@@ -5298,11 +5374,11 @@
       "language": [
         "English"
       ],
-      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "accessStatus": "Published resources available for this topic; see linked pages.",
       "sourceType": "Author-created clinical handout/resource",
       "sourceUrl": "",
       "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
-      "nextAction": "Complete review and link the public-facing version.",
+      "nextAction": "Open the linked resources and review their scope before use.",
       "tags": [
         "Fairness and Flexibility",
         "Thinking & communication",
@@ -5310,7 +5386,14 @@
         "patient education",
         "clinical resource"
       ],
-      "publicMetadataOnly": true
+      "publicMetadataOnly": true,
+      "resourceLinks": [
+        {
+          "label": "Fairness and Flexibility",
+          "url": "resources/handouts/fairness-and-flexibility.html"
+        }
+      ],
+      "pageUrl": "resources/handouts/fairness-and-flexibility.html"
     },
     {
       "id": "therapy-010-functional-behavior",
@@ -5337,11 +5420,11 @@
       "language": [
         "English"
       ],
-      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "accessStatus": "Published resources available for this topic; see linked pages.",
       "sourceType": "Author-created clinical handout/resource",
       "sourceUrl": "",
       "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
-      "nextAction": "Complete review and link the public-facing version.",
+      "nextAction": "Open the linked resources and review their scope before use.",
       "tags": [
         "Functional Behavior",
         "Thinking & communication",
@@ -5349,7 +5432,14 @@
         "patient education",
         "clinical resource"
       ],
-      "publicMetadataOnly": true
+      "publicMetadataOnly": true,
+      "resourceLinks": [
+        {
+          "label": "Understanding Behavior in Autistic Children",
+          "url": "resources/handouts/understanding-behavior-in-autistic-children.html"
+        }
+      ],
+      "pageUrl": "resources/handouts/understanding-behavior-in-autistic-children.html"
     },
     {
       "id": "therapy-011-learning-at-home",
@@ -5376,11 +5466,11 @@
       "language": [
         "English"
       ],
-      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "accessStatus": "Published resources available for this topic; see linked pages.",
       "sourceType": "Author-created clinical handout/resource",
       "sourceUrl": "",
       "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
-      "nextAction": "Complete review and link the public-facing version.",
+      "nextAction": "Open the linked resources and review their scope before use.",
       "tags": [
         "Learning at Home",
         "Everyday functioning",
@@ -5388,7 +5478,18 @@
         "patient education",
         "clinical resource"
       ],
-      "publicMetadataOnly": true
+      "publicMetadataOnly": true,
+      "resourceLinks": [
+        {
+          "label": "Supporting Attention and Learning at Home",
+          "url": "resources/handouts/supporting-attention-and-learning-at-home.html"
+        },
+        {
+          "label": "Helping Your Child Stay on Task at Home",
+          "url": "resources/handouts/helping-your-child-stay-on-task-at-home.html"
+        }
+      ],
+      "pageUrl": "resources/handouts/supporting-attention-and-learning-at-home.html"
     },
     {
       "id": "therapy-012-parent-regulation-repair",
@@ -5416,11 +5517,11 @@
       "language": [
         "English"
       ],
-      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "accessStatus": "Published resources available for this topic; see linked pages.",
       "sourceType": "Author-created clinical handout/resource",
       "sourceUrl": "",
       "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
-      "nextAction": "Complete review and link the public-facing version.",
+      "nextAction": "Open the linked resources and review their scope before use.",
       "tags": [
         "Parent Regulation and Repair",
         "Relationships & parenting",
@@ -5428,7 +5529,14 @@
         "patient education",
         "clinical resource"
       ],
-      "publicMetadataOnly": true
+      "publicMetadataOnly": true,
+      "resourceLinks": [
+        {
+          "label": "Instead of Yelling",
+          "url": "resources/handouts/instead-of-yelling.html"
+        }
+      ],
+      "pageUrl": "resources/handouts/instead-of-yelling.html"
     },
     {
       "id": "therapy-013-parenting-responses",
@@ -5455,11 +5563,11 @@
       "language": [
         "English"
       ],
-      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "accessStatus": "Published resources available for this topic; see linked pages.",
       "sourceType": "Author-created clinical handout/resource",
       "sourceUrl": "",
       "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
-      "nextAction": "Complete review and link the public-facing version.",
+      "nextAction": "Open the linked resources and review their scope before use.",
       "tags": [
         "Parenting Responses",
         "Relationships & parenting",
@@ -5467,7 +5575,14 @@
         "patient education",
         "clinical resource"
       ],
-      "publicMetadataOnly": true
+      "publicMetadataOnly": true,
+      "resourceLinks": [
+        {
+          "label": "Clear → Supported → Proactive Parenting Responses",
+          "url": "resources/handouts/clear-supported-proactive-parenting-responses.html"
+        }
+      ],
+      "pageUrl": "resources/handouts/clear-supported-proactive-parenting-responses.html"
     },
     {
       "id": "therapy-014-perspective-taking",
@@ -5497,11 +5612,11 @@
       "language": [
         "English"
       ],
-      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "accessStatus": "Published resources available for this topic; see linked pages.",
       "sourceType": "Author-created clinical handout/resource",
       "sourceUrl": "",
       "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
-      "nextAction": "Complete review and link the public-facing version.",
+      "nextAction": "Open the linked resources and review their scope before use.",
       "tags": [
         "Perspective Taking",
         "Thinking & communication",
@@ -5509,7 +5624,22 @@
         "patient education",
         "clinical resource"
       ],
-      "publicMetadataOnly": true
+      "publicMetadataOnly": true,
+      "resourceLinks": [
+        {
+          "label": "Perspective-Taking Without Guessing",
+          "url": "resources/handouts/perspective-taking-without-guessing.html"
+        },
+        {
+          "label": "Perspective Possibility Cards",
+          "url": "resources/handouts/perspective-possibility-cards.html"
+        },
+        {
+          "label": "Facts, Guesses, and Questions",
+          "url": "resources/handouts/facts-guesses-and-questions.html"
+        }
+      ],
+      "pageUrl": "resources/handouts/perspective-taking-without-guessing.html"
     },
     {
       "id": "therapy-015-regulation",
@@ -5536,11 +5666,11 @@
       "language": [
         "English"
       ],
-      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "accessStatus": "Published resources available for this topic; see linked pages.",
       "sourceType": "Author-created clinical handout/resource",
       "sourceUrl": "",
       "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
-      "nextAction": "Complete review and link the public-facing version.",
+      "nextAction": "Open the linked resources and review their scope before use.",
       "tags": [
         "Regulation",
         "Emotion & regulation",
@@ -5548,7 +5678,14 @@
         "patient education",
         "clinical resource"
       ],
-      "publicMetadataOnly": true
+      "publicMetadataOnly": true,
+      "resourceLinks": [
+        {
+          "label": "Helping Your Child Prepare, Practice, and Regulate",
+          "url": "resources/handouts/helping-your-child-prepare-practice-and-regulate.html"
+        }
+      ],
+      "pageUrl": "resources/handouts/helping-your-child-prepare-practice-and-regulate.html"
     },
     {
       "id": "therapy-016-self-reflection",
@@ -5615,11 +5752,11 @@
       "language": [
         "English"
       ],
-      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "accessStatus": "Published resources available for this topic; see linked pages.",
       "sourceType": "Author-created clinical handout/resource",
       "sourceUrl": "",
       "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
-      "nextAction": "Complete review and link the public-facing version.",
+      "nextAction": "Open the linked resources and review their scope before use.",
       "tags": [
         "Sensory Recovery",
         "Emotion & regulation",
@@ -5627,7 +5764,14 @@
         "patient education",
         "clinical resource"
       ],
-      "publicMetadataOnly": true
+      "publicMetadataOnly": true,
+      "resourceLinks": [
+        {
+          "label": "Sensory Overload & Recovery Plan",
+          "url": "resources/handouts/sensory-overload-and-recovery-plan.html"
+        }
+      ],
+      "pageUrl": "resources/handouts/sensory-overload-and-recovery-plan.html"
     },
     {
       "id": "therapy-018-sleep-support",
@@ -5655,11 +5799,11 @@
       "language": [
         "English"
       ],
-      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "accessStatus": "Published resources available for this topic; see linked pages.",
       "sourceType": "Author-created clinical handout/resource",
       "sourceUrl": "",
       "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
-      "nextAction": "Complete review and link the public-facing version.",
+      "nextAction": "Open the linked resources and review their scope before use.",
       "tags": [
         "Sleep Support",
         "Everyday functioning",
@@ -5667,7 +5811,14 @@
         "patient education",
         "clinical resource"
       ],
-      "publicMetadataOnly": true
+      "publicMetadataOnly": true,
+      "resourceLinks": [
+        {
+          "label": "Making Sleep More Likely",
+          "url": "resources/handouts/making-sleep-more-likely.html"
+        }
+      ],
+      "pageUrl": "resources/handouts/making-sleep-more-likely.html"
     },
     {
       "id": "therapy-019-thought-flexibility",
@@ -5736,11 +5887,11 @@
       "language": [
         "English"
       ],
-      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "accessStatus": "Published resources available for this topic; see linked pages.",
       "sourceType": "Author-created clinical handout/resource",
       "sourceUrl": "",
       "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
-      "nextAction": "Complete review and link the public-facing version.",
+      "nextAction": "Open the linked resources and review their scope before use.",
       "tags": [
         "Transitions",
         "Everyday functioning",
@@ -5748,7 +5899,22 @@
         "patient education",
         "clinical resource"
       ],
-      "publicMetadataOnly": true
+      "publicMetadataOnly": true,
+      "resourceLinks": [
+        {
+          "label": "Making Transitions Easier",
+          "url": "resources/handouts/making-transitions-easier.html"
+        },
+        {
+          "label": "Transitions Are a Bridge",
+          "url": "resources/handouts/transitions-are-a-bridge.html"
+        },
+        {
+          "label": "My Transition Map",
+          "url": "resources/handouts/my-transition-map.html"
+        }
+      ],
+      "pageUrl": "resources/handouts/making-transitions-easier.html"
     },
     {
       "id": "therapy-021-dbt-plain-useful",
@@ -5779,11 +5945,11 @@
       "language": [
         "English"
       ],
-      "accessStatus": "Prototype collection indexed; public web/download version pending final review",
+      "accessStatus": "Published resources available for this topic; see linked pages.",
       "sourceType": "Author-created clinical handout/resource",
       "sourceUrl": "",
       "caveat": "Use the component that matches the clinical task. Do not force completion when the activity is increasing dysregulation, shame, rumination, or pressure.",
-      "nextAction": "Complete review and link the public-facing version.",
+      "nextAction": "Open the linked resources and review their scope before use.",
       "tags": [
         "DBT, Plain and Useful",
         "Emotion & regulation",
@@ -5791,7 +5957,26 @@
         "patient education",
         "clinical resource"
       ],
-      "publicMetadataOnly": true
+      "publicMetadataOnly": true,
+      "resourceLinks": [
+        {
+          "label": "DBT, Plain and Useful – Clinician Guide",
+          "url": "resources/therapy/dbt-plain-useful-clinician-guide.html"
+        },
+        {
+          "label": "DBT, Plain and Useful – Four-Module Skills Curriculum",
+          "url": "resources/therapy/dbt-plain-useful-four-module-skills-curriculum.html"
+        },
+        {
+          "label": "DBT, Plain and Useful – Teaching & Practice Guide",
+          "url": "resources/therapy/dbt-plain-useful-teaching-practice-guide.html"
+        },
+        {
+          "label": "DBT, Plain and Useful – Patient Handout Pack",
+          "url": "resources/therapy/dbt-plain-useful-patient-handout-pack.html"
+        }
+      ],
+      "pageUrl": "resources/therapy/dbt-plain-useful-clinician-guide.html"
     },
     {
       "id": "treatment-plan-menu",

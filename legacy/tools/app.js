@@ -113,10 +113,11 @@ function card(r){
   const dl=n.querySelector(".details-grid");
   [["Collection",r.collection],["Topic",r.domain],["Functional target",r.functionalTarget],["Includes",r.components],["Clinical purpose",r.clinicalPurpose],["Age range",r.ageRange],["Evidence role",r.evidenceRole],["Clinical caveat",r.caveat],["Access",r.accessStatus],["Interpretive limit",r.interpretiveLimit],["Next action",r.nextAction]].forEach(x=>addDetail(dl,x[0],x[1]));
   const actions=n.querySelector(".card-actions");
-  if(r.pageUrl){const a=document.createElement("a");a.className="primary-link";a.href="/legacy/"+r.pageUrl;a.textContent="Open guide";actions.appendChild(a)}
+  if(r.resourceLinks?.length){r.resourceLinks.forEach(link=>{const a=document.createElement("a");a.className="primary-link";a.href="/legacy/"+link.url;a.textContent=link.label;actions.appendChild(a)})}
+  else if(r.pageUrl){const a=document.createElement("a");a.className="primary-link";a.href="/legacy/"+r.pageUrl;a.textContent="Open guide";actions.appendChild(a)}
   else if(r.sourceUrl){const a=document.createElement("a");a.className="source-link";a.href=r.sourceUrl;a.target="_blank";a.rel="noopener noreferrer";a.textContent="Open source";actions.appendChild(a)}
   else{const s=document.createElement("span");s.className="card-subtitle";s.textContent=r.resourceType==="Therapy handout collection"?"Public handout link coming after final review":"Source link pending verification";actions.appendChild(s)}
-  n.querySelector(".copy-link").addEventListener("click",async e=>{const u=location.href.split("#")[0]+"#"+r.id;try{await navigator.clipboard.writeText(u);e.currentTarget.textContent="Copied";setTimeout(()=>e.currentTarget.textContent="Copy link",1200)}catch{location.hash=r.id}});
+  n.querySelector(".copy-link").addEventListener("click",async e=>{const button=e.currentTarget;const u=location.href.split("#")[0]+"#"+r.id;try{await navigator.clipboard.writeText(u);button.textContent="Copied";setTimeout(()=>button.textContent="Copy link",1200)}catch{location.hash=r.id}});
   return n
 }
 function render(){
@@ -125,8 +126,15 @@ function render(){
   const bits=[f.term&&'search: “'+f.term+'”',f.section,f.type,f.domain,f.priority,f.evidence].filter(Boolean);q("#activeFilters").textContent=bits.length?bits.join(" · "):"No filters applied";
 }
 function clearAll(){q("#search").value="";["sectionFilter","typeFilter","domainFilter","priorityFilter","evidenceFilter"].forEach(id=>q("#"+id).value="");q("#sortBy").value="default";showAllResources=false;apply()}
-function csv(rows){const keys=["id","section","collection","resourceType","title","year","domain","clinicalPurpose","accessStatus","sourceUrl","nextAction"],quote=v=>'"'+String(Array.isArray(v)?v.join("; "):(v??"")).replace(/"/g,'""')+'"';return[keys.join(","),...rows.map(r=>keys.map(k=>quote(r[k])).join(","))].join("\n")}
+function csv(rows){const keys=["id","section","collection","resourceType","title","year","domain","clinicalPurpose","accessStatus","pageUrl","sourceUrl","nextAction"],quote=v=>'"'+String(Array.isArray(v)?v.join("; "):(v??"")).replace(/"/g,'""')+'"';return[keys.join(","),...rows.map(r=>keys.map(k=>quote(r[k])).join(","))].join("\n")}
 function download(name,mime,body){const a=document.createElement("a"),u=URL.createObjectURL(new Blob([body],{type:mime}));a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),500)}
+function openResourceFromHash(){
+  let id;try{id=decodeURIComponent(location.hash.slice(1))}catch{return}
+  if(!allResources.some(r=>r.id===id))return;
+  clearAll();showAllResources=true;render();openCatalog();
+  const target=document.getElementById(id);target.tabIndex=-1;
+  target.scrollIntoView({block:"start"});target.focus({preventScroll:true});
+}
 async function init(){
   try{
     const rs=await Promise.all([fetch("/legacy/data/library.json"),fetch("/legacy/data/pathways.json")]);if(!rs[0].ok||!rs[1].ok)throw new Error("Library data could not be loaded");
@@ -139,7 +147,7 @@ async function init(){
     q("#clearFilters").addEventListener("click",clearAll);q("#showAllPathways").addEventListener("click",()=>{showAllPathways=!showAllPathways;renderPathways()});q("#showMoreResources").addEventListener("click",()=>{showAllResources=true;render()});
     q("#openAssessments").addEventListener("click",()=>setType("Assessment / screening tool"));qa("[data-open-type]").forEach(b=>b.addEventListener("click",()=>setType(b.dataset.openType)));
     q("#exportCsv").addEventListener("click",()=>download("clinical-practice-library-filtered.csv","text/csv;charset=utf-8",csv(filteredResources)));q("#exportJson").addEventListener("click",()=>download("clinical-practice-library-filtered.json","application/json",JSON.stringify(filteredResources,null,2)));
-    apply();
+    apply();openResourceFromHash();window.addEventListener("hashchange",openResourceFromHash);
   }catch(err){q("#cards").innerHTML='<div class="empty"><h3>Library data did not load</h3><p>'+esc(err.message)+'</p></div>'}
 }
 init();
