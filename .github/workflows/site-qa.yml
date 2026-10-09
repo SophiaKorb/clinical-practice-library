@@ -1,0 +1,23 @@
+name: CPL site QA
+on:
+  push:
+    branches: [main, cpl-2-colorful-helpful]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  static-and-behavior:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: python scripts/check-local-links.py
+      - run: python scripts/check-site-scripts.py
+      - run: node scripts/check-catalog.cjs
+      - run: node scripts/check-school-guide-parity.js
+      - run: node tests/dsm-atlas-smoke.cjs

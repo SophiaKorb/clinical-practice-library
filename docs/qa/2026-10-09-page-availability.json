@@ -1,0 +1,2030 @@
+[
+  {
+    "path": "index.html",
+    "status": 200
+  },
+  {
+    "path": "library.html",
+    "status": 200
+  },
+  {
+    "path": "tools/index.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/index.html",
+    "status": 200
+  },
+  {
+    "path": "resources/about-authorship-curation-sharing.html",
+    "status": 200
+  },
+  {
+    "path": "resources/index.html",
+    "status": 200
+  },
+  {
+    "path": "guides/adhd.html",
+    "status": 200
+  },
+  {
+    "path": "guides/anxiety.html",
+    "status": 200
+  },
+  {
+    "path": "guides/arizona-school-support-process.html",
+    "status": 200
+  },
+  {
+    "path": "guides/odd-persistent-conflict-behavior.html",
+    "status": 200
+  },
+  {
+    "path": "guides/dyslexia.html",
+    "status": 200
+  },
+  {
+    "path": "guides/depression.html",
+    "status": 200
+  },
+  {
+    "path": "guides/dysgraphia.html",
+    "status": 200
+  },
+  {
+    "path": "guides/autism.html",
+    "status": 200
+  },
+  {
+    "path": "guides/dyscalculia.html",
+    "status": 200
+  },
+  {
+    "path": "preview/index.html",
+    "status": 200
+  },
+  {
+    "path": "preview/cpl2.html",
+    "status": 200
+  },
+  {
+    "path": "preview/layout-check.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/tools/index.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/about-authorship-curation-sharing.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/index.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/guides/adhd.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/guides/anxiety.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/guides/arizona-school-support-process.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/guides/odd-persistent-conflict-behavior.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/guides/dyslexia.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/guides/depression.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/guides/dysgraphia.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/guides/autism.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/guides/dyscalculia.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/preview/index.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/preview/layout-check.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/school/from-school-barrier-to-support.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/school/iep-504-meeting-preparation.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/school/school-support-implementation-log.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/school/school-access-official-reference.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/trauma/children-families-trauma-curated-clinical-guide.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/trauma/caregiver-family-youth-trauma-resources.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/trauma/start-here-families-children-trauma.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/trauma/trauma-school-neurodevelopment-crosswalk.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/trauma/foster-kinship-adoption-child-welfare.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/safety-planning-preparation-sheet.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/crisis-contact-card.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/my-transition-map.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/making-plans-easier-to-start-and-finish.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/when-doubt-wants-a-guarantee.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/autism-family-cheat-sheet.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/helping-your-child-prepare-practice-and-regulate.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/understanding-behavior-in-autistic-children.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/my-after-school-reset-plan.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/helping-chores-go-more-smoothly.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/facts-guesses-and-questions.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/making-transitions-easier.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/small-steps-when-depression-shrinks-your-world.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/my-lower-risk-plan.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/making-a-suicide-crisis-safer.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/task-launch-map.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/instead-of-yelling.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/my-personal-care-plan.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/uncertainty-practice-plan-and-my-erp-practice.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/making-room-for-grief.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/homeschool-social-connection-family-guide.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/perspective-taking-without-guessing.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/suspected-opioid-overdose.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/after-school-is-a-landing-not-a-launch.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/supporting-attention-and-learning-at-home.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/grounding-quick-card.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/clear-supported-proactive-parenting-responses.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/show-me-what-you-need.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/abc-observation-guide.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/body-clues-and-needs-map.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/sibling-conflict-reset.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/sensory-overload-and-recovery-plan.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/reducing-harm-when-substance-use-is-part-of-the-picture.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/grounding.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/perspective-possibility-cards.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/my-grief-map.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/helping-siblings-through-conflict.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/my-weekly-chore-chart.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/emotion-signals.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/my-grounding-menu.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/fairness-and-flexibility.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/when-a-young-child-has-more-feeling-than-language.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/conflict-repair-and-boundaries.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/when-hygiene-tasks-are-hard.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/transitions-are-a-bridge.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/parenting-across-disagreement.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/making-sleep-more-likely.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/friendship-peer-safety-family-guide.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/notice-before-you-name-it.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/helping-your-child-stay-on-task-at-home.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/handouts/when-avoidance-makes-anxiety-bigger.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/california/developmental-disability-autism-behavioral-health.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/california/homeschooling-parent-guide.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/california/school-access.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/therapy/dbt-informed-emotion-regulation-start-here.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/therapy/act-psychological-flexibility-practical-toolkit.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/therapy/neurodevelopmental-executive-function-practical-toolkit.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/therapy/child-adolescent-parenting-family-practical-toolkit.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/therapy/trauma-ptsd-practical-toolkit.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/therapy/cbt-behavioral-activation-practical-toolkit.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/therapy/autism-peer-relationships-bullying-social-safety.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/therapy/child-adolescent-parenting-family-start-here.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/therapy/ocd-and-uncertainty-clinician-companion.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/therapy/cbt-behavioral-activation-start-here.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/therapy/relational-supportive-psychodynamic-practical-toolkit.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/therapy/neurodevelopment-child-behavior-parenting-resource-guide.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/therapy/relational-supportive-psychodynamic-start-here.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/therapy/motivational-interviewing-substance-use-practical-toolkit.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/therapy/open-shareable-therapy-resources.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/therapy/personality-complex-presentations-start-here.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/therapy/psychosis-smi-rehabilitation-practical-toolkit.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/therapy/sleep-pain-health-psychology-practical-toolkit.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/therapy/clinical-practice-manuals-authoritative-source-guide.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/therapy/dbt-plain-useful-four-module-skills-curriculum.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/therapy/dbt-informed-emotion-regulation-practical-toolkit.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/therapy/dbt-plain-useful-patient-handout-pack.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/therapy/act-psychological-flexibility-start-here.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/therapy/anxiety-exposure-ocd-practical-toolkit.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/therapy/trauma-ptsd-start-here.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/therapy/psychosis-smi-rehabilitation-start-here.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/therapy/start-here-therapy-resource-shelves.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/therapy/neurodevelopmental-executive-function-start-here.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/therapy/early-childhood-regulation-communication.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/therapy/dbt-plain-useful-teaching-practice-guide.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/therapy/dbt-plain-useful-clinician-guide.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/therapy/sibling-conflict-safety-power-repair.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/therapy/personality-complex-presentations-practical-toolkit.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/therapy/motivational-interviewing-substance-use-start-here.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/therapy/anxiety-exposure-ocd-start-here.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/therapy/communication-supports-toolkit.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/therapy/sleep-pain-health-psychology-start-here.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/arizona/developmental-disability-autism-behavioral-health.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/arizona/homeschooling-parent-guide.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/arizona/iep-504-my-child-has-a-diagnosis.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/arizona/iep-504-clinician-guide.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/arizona/iep-504-parent-guide.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/assessment/broad-intake-depression-anxiety-outcomes.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/assessment/pediatric-developmental-neurodevelopmental.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/assessment/functioning-disability-formal-testing.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/assessment/ocd-bipolar-psychosis-substance-use-form-downloads.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/assessment/trauma-ptsd-dissociation-safety.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/assessment/broad-intake-form-downloads.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/assessment/spanish-assessment-forms.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/assessment/adhd-autism-trauma-differential-matrix.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/assessment/assessment-start-here.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/assessment/free-official-measure-source-guide.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/assessment/pediatric-developmental-form-downloads.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/assessment/trauma-safety-form-downloads.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/assessment/functioning-formal-testing-downloads.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/assessment/ocd-bipolar-psychosis-substance-use.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/trainees/three-essays-for-interns.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/trainees/last-psychiatrist-critical-guide.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/california-discapacidad-autismo-salud-conductual.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/formularios-oficiales-evaluacion.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/california-iep-504.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/arizona-homeschool.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/empiece-aqui.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/california-homeschool.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/arizona-mi-hijo-tiene-diagnostico.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/encuentre-un-recurso.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/arizona-como-conseguir-iep-504.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/school/homeschool/adhd.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/school/homeschool/anxiety.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/school/homeschool/getting-outside-help.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/school/homeschool/start-here.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/school/homeschool/dyslexia.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/school/homeschool/depression.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/school/homeschool/persistent-conflict-odd.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/school/homeschool/dysgraphia.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/school/homeschool/autism.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/school/homeschool/dyscalculia.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/school/clinical/adhd.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/school/clinical/anxiety.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/school/clinical/dyslexia.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/school/clinical/depression.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/school/clinical/persistent-conflict-odd.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/school/clinical/dysgraphia.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/school/clinical/autism.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/school/clinical/dyscalculia.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/school/iep-504-preparacion-reunion.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/school/registro-implementacion-apoyos.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/school/barrera-escolar-a-apoyo.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/hacer-crisis-suicida-mas-segura.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/reinicio-conflicto-hermanos.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/sospecha-sobredosis-opioides.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/prepararse-practicar-regularse.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/en-lugar-de-gritar.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/amistad-seguridad-pares.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/hacer-mas-segura-crisis-suicida.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/conexion-social-educacion-casa.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/anclaje-al-presente.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/mi-mapa-duelo.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/ayudar-hermanos-conflicto.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/reducir-danos-sustancias.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/hechos-suposiciones-preguntas.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/mi-mapa-transicion.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/hoja-preparacion-plan-seguridad.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/hijo-enfocado-casa.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/cuando-la-duda-quiere-garantia.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/transiciones-son-un-puente.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/tarjeta-contactos-crisis.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/hacer-transiciones-mas-faciles.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/muestrame-lo-que-necesitas.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/higiene-dificil.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/reducir-danos-consumo-sustancias.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/preparacion-plan-seguridad.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/nota-antes-de-ponerle-nombre.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/cuando-evitar-hace-crecer-ansiedad.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/guia-observacion-abc.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/sobrecarga-sensorial-recuperacion.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/tareas-hogar-mas-faciles.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/conducta-ninos-autistas.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/senales-emocionales.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/respuestas-crianza-claras-apoyo-proactivas.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/autismo-guia-rapida-familias.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/criar-en-medio-del-desacuerdo.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/reinicio-despues-escuela.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/apoyar-atencion-aprendizaje-casa.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/comprender-conducta-ninos-autistas.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/mi-plan-reducir-riesgos.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/hacer-espacio-duelo.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/pasos-pequenos-depresion.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/tarjetas-posibilidades-perspectiva.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/conexion-social-homeschool.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/dbt-claro-util-paciente.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/despues-escuela-aterrizar.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/atencion-aprendizaje-casa.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/nino-pequeno-mas-sentimiento-que-lenguaje.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/tabla-semanal-tareas.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/conflicto-reparacion-limites.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/planes-empezar-terminar.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/tomar-perspectiva-sin-adivinar.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/tarjeta-rapida-anclaje.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/plan-incertidumbre-epr.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/mapa-poner-tarea-en-marcha.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/mi-menu-anclaje.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/reducir-danos-consumo.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/plan-cuidado-personal.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/mapa-senales-cuerpo-necesidades.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/hacer-dormir-mas-probable.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/higiene-tareas-dificiles.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/handouts/justicia-flexibilidad.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/school/homeschool/discalculia.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/school/homeschool/autismo.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/school/homeschool/dislexia.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/school/homeschool/ansiedad.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/school/homeschool/start-here.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/school/homeschool/derivacion.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/school/homeschool/conflicto-persistente-tnd.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/school/homeschool/tdah.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/school/homeschool/depresion.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/school/homeschool/disgrafia.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/school/plain/discalculia.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/school/plain/autismo.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/school/plain/dislexia.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/school/plain/ansiedad.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/school/plain/conflicto-persistente-odd.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/school/plain/tdah.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/school/plain/depresion.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/school/plain/disgrafia.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/school/clinical/discalculia.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/school/clinical/autismo.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/school/clinical/dislexia.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/school/clinical/ansiedad.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/school/clinical/conflicto-persistente-odd.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/school/clinical/tdah.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/school/clinical/depresion.html",
+    "status": 200
+  },
+  {
+    "path": "legacy/resources/es/school/clinical/disgrafia.html",
+    "status": 200
+  },
+  {
+    "path": "resources/school/from-school-barrier-to-support.html",
+    "status": 200
+  },
+  {
+    "path": "resources/school/iep-504-meeting-preparation.html",
+    "status": 200
+  },
+  {
+    "path": "resources/school/school-support-implementation-log.html",
+    "status": 200
+  },
+  {
+    "path": "resources/school/school-access-official-reference.html",
+    "status": 200
+  },
+  {
+    "path": "resources/trauma/children-families-trauma-curated-clinical-guide.html",
+    "status": 200
+  },
+  {
+    "path": "resources/trauma/caregiver-family-youth-trauma-resources.html",
+    "status": 200
+  },
+  {
+    "path": "resources/trauma/start-here-families-children-trauma.html",
+    "status": 200
+  },
+  {
+    "path": "resources/trauma/trauma-school-neurodevelopment-crosswalk.html",
+    "status": 200
+  },
+  {
+    "path": "resources/trauma/foster-kinship-adoption-child-welfare.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/safety-planning-preparation-sheet.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/crisis-contact-card.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/my-transition-map.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/making-plans-easier-to-start-and-finish.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/when-doubt-wants-a-guarantee.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/autism-family-cheat-sheet.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/helping-your-child-prepare-practice-and-regulate.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/understanding-behavior-in-autistic-children.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/my-after-school-reset-plan.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/helping-chores-go-more-smoothly.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/facts-guesses-and-questions.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/making-transitions-easier.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/small-steps-when-depression-shrinks-your-world.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/my-lower-risk-plan.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/making-a-suicide-crisis-safer.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/task-launch-map.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/instead-of-yelling.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/my-personal-care-plan.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/uncertainty-practice-plan-and-my-erp-practice.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/making-room-for-grief.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/homeschool-social-connection-family-guide.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/perspective-taking-without-guessing.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/suspected-opioid-overdose.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/after-school-is-a-landing-not-a-launch.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/supporting-attention-and-learning-at-home.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/grounding-quick-card.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/clear-supported-proactive-parenting-responses.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/show-me-what-you-need.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/abc-observation-guide.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/body-clues-and-needs-map.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/sibling-conflict-reset.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/sensory-overload-and-recovery-plan.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/reducing-harm-when-substance-use-is-part-of-the-picture.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/grounding.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/perspective-possibility-cards.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/my-grief-map.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/helping-siblings-through-conflict.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/my-weekly-chore-chart.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/emotion-signals.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/my-grounding-menu.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/fairness-and-flexibility.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/when-a-young-child-has-more-feeling-than-language.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/conflict-repair-and-boundaries.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/when-hygiene-tasks-are-hard.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/transitions-are-a-bridge.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/parenting-across-disagreement.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/making-sleep-more-likely.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/friendship-peer-safety-family-guide.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/notice-before-you-name-it.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/helping-your-child-stay-on-task-at-home.html",
+    "status": 200
+  },
+  {
+    "path": "resources/handouts/when-avoidance-makes-anxiety-bigger.html",
+    "status": 200
+  },
+  {
+    "path": "resources/california/developmental-disability-autism-behavioral-health.html",
+    "status": 200
+  },
+  {
+    "path": "resources/california/homeschooling-parent-guide.html",
+    "status": 200
+  },
+  {
+    "path": "resources/california/school-access.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/dbt-informed-emotion-regulation-start-here.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/act-psychological-flexibility-practical-toolkit.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/neurodevelopmental-executive-function-practical-toolkit.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/child-adolescent-parenting-family-practical-toolkit.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/trauma-ptsd-practical-toolkit.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/cbt-behavioral-activation-practical-toolkit.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/autism-peer-relationships-bullying-social-safety.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/child-adolescent-parenting-family-start-here.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/ocd-and-uncertainty-clinician-companion.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/cbt-behavioral-activation-start-here.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/relational-supportive-psychodynamic-practical-toolkit.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/neurodevelopment-child-behavior-parenting-resource-guide.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/relational-supportive-psychodynamic-start-here.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/motivational-interviewing-substance-use-practical-toolkit.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/open-shareable-therapy-resources.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/personality-complex-presentations-start-here.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/psychosis-smi-rehabilitation-practical-toolkit.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/sleep-pain-health-psychology-practical-toolkit.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/clinical-practice-manuals-authoritative-source-guide.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/dbt-plain-useful-four-module-skills-curriculum.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/dbt-informed-emotion-regulation-practical-toolkit.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/dbt-plain-useful-patient-handout-pack.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/act-psychological-flexibility-start-here.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/anxiety-exposure-ocd-practical-toolkit.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/trauma-ptsd-start-here.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/psychosis-smi-rehabilitation-start-here.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/start-here-therapy-resource-shelves.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/neurodevelopmental-executive-function-start-here.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/early-childhood-regulation-communication.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/dbt-plain-useful-teaching-practice-guide.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/treatment-plan-menu.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/dbt-plain-useful-clinician-guide.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/sibling-conflict-safety-power-repair.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/personality-complex-presentations-practical-toolkit.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/motivational-interviewing-substance-use-start-here.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/anxiety-exposure-ocd-start-here.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/communication-supports-toolkit.html",
+    "status": 200
+  },
+  {
+    "path": "resources/therapy/sleep-pain-health-psychology-start-here.html",
+    "status": 200
+  },
+  {
+    "path": "resources/arizona/developmental-disability-autism-behavioral-health.html",
+    "status": 200
+  },
+  {
+    "path": "resources/arizona/homeschooling-parent-guide.html",
+    "status": 200
+  },
+  {
+    "path": "resources/arizona/iep-504-my-child-has-a-diagnosis.html",
+    "status": 200
+  },
+  {
+    "path": "resources/arizona/iep-504-clinician-guide.html",
+    "status": 200
+  },
+  {
+    "path": "resources/arizona/iep-504-parent-guide.html",
+    "status": 200
+  },
+  {
+    "path": "resources/assessment/broad-intake-depression-anxiety-outcomes.html",
+    "status": 200
+  },
+  {
+    "path": "resources/assessment/pediatric-developmental-neurodevelopmental.html",
+    "status": 200
+  },
+  {
+    "path": "resources/assessment/functioning-disability-formal-testing.html",
+    "status": 200
+  },
+  {
+    "path": "resources/assessment/ocd-bipolar-psychosis-substance-use-form-downloads.html",
+    "status": 200
+  },
+  {
+    "path": "resources/assessment/trauma-ptsd-dissociation-safety.html",
+    "status": 200
+  },
+  {
+    "path": "resources/assessment/broad-intake-form-downloads.html",
+    "status": 200
+  },
+  {
+    "path": "resources/assessment/spanish-assessment-forms.html",
+    "status": 200
+  },
+  {
+    "path": "resources/assessment/adhd-autism-trauma-differential-matrix.html",
+    "status": 200
+  },
+  {
+    "path": "resources/assessment/assessment-start-here.html",
+    "status": 200
+  },
+  {
+    "path": "resources/assessment/free-official-measure-source-guide.html",
+    "status": 200
+  },
+  {
+    "path": "resources/assessment/pediatric-developmental-form-downloads.html",
+    "status": 200
+  },
+  {
+    "path": "resources/assessment/trauma-safety-form-downloads.html",
+    "status": 200
+  },
+  {
+    "path": "resources/assessment/functioning-formal-testing-downloads.html",
+    "status": 200
+  },
+  {
+    "path": "resources/assessment/ocd-bipolar-psychosis-substance-use.html",
+    "status": 200
+  },
+  {
+    "path": "resources/trainees/three-essays-for-interns.html",
+    "status": 200
+  },
+  {
+    "path": "resources/trainees/last-psychiatrist-critical-guide.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/california-discapacidad-autismo-salud-conductual.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/formularios-oficiales-evaluacion.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/california-iep-504.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/arizona-homeschool.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/empiece-aqui.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/california-homeschool.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/arizona-mi-hijo-tiene-diagnostico.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/encuentre-un-recurso.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/arizona-como-conseguir-iep-504.html",
+    "status": 200
+  },
+  {
+    "path": "resources/school/homeschool/adhd.html",
+    "status": 200
+  },
+  {
+    "path": "resources/school/homeschool/anxiety.html",
+    "status": 200
+  },
+  {
+    "path": "resources/school/homeschool/getting-outside-help.html",
+    "status": 200
+  },
+  {
+    "path": "resources/school/homeschool/start-here.html",
+    "status": 200
+  },
+  {
+    "path": "resources/school/homeschool/dyslexia.html",
+    "status": 200
+  },
+  {
+    "path": "resources/school/homeschool/depression.html",
+    "status": 200
+  },
+  {
+    "path": "resources/school/homeschool/persistent-conflict-odd.html",
+    "status": 200
+  },
+  {
+    "path": "resources/school/homeschool/dysgraphia.html",
+    "status": 200
+  },
+  {
+    "path": "resources/school/homeschool/autism.html",
+    "status": 200
+  },
+  {
+    "path": "resources/school/homeschool/dyscalculia.html",
+    "status": 200
+  },
+  {
+    "path": "resources/school/clinical/adhd.html",
+    "status": 200
+  },
+  {
+    "path": "resources/school/clinical/anxiety.html",
+    "status": 200
+  },
+  {
+    "path": "resources/school/clinical/dyslexia.html",
+    "status": 200
+  },
+  {
+    "path": "resources/school/clinical/depression.html",
+    "status": 200
+  },
+  {
+    "path": "resources/school/clinical/persistent-conflict-odd.html",
+    "status": 200
+  },
+  {
+    "path": "resources/school/clinical/dysgraphia.html",
+    "status": 200
+  },
+  {
+    "path": "resources/school/clinical/autism.html",
+    "status": 200
+  },
+  {
+    "path": "resources/school/clinical/dyscalculia.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/school/iep-504-preparacion-reunion.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/school/registro-implementacion-apoyos.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/school/barrera-escolar-a-apoyo.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/hacer-crisis-suicida-mas-segura.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/reinicio-conflicto-hermanos.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/sospecha-sobredosis-opioides.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/prepararse-practicar-regularse.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/en-lugar-de-gritar.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/amistad-seguridad-pares.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/hacer-mas-segura-crisis-suicida.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/conexion-social-educacion-casa.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/anclaje-al-presente.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/mi-mapa-duelo.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/ayudar-hermanos-conflicto.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/reducir-danos-sustancias.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/hechos-suposiciones-preguntas.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/mi-mapa-transicion.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/hoja-preparacion-plan-seguridad.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/hijo-enfocado-casa.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/cuando-la-duda-quiere-garantia.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/transiciones-son-un-puente.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/tarjeta-contactos-crisis.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/hacer-transiciones-mas-faciles.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/muestrame-lo-que-necesitas.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/higiene-dificil.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/reducir-danos-consumo-sustancias.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/preparacion-plan-seguridad.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/nota-antes-de-ponerle-nombre.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/cuando-evitar-hace-crecer-ansiedad.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/guia-observacion-abc.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/sobrecarga-sensorial-recuperacion.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/tareas-hogar-mas-faciles.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/conducta-ninos-autistas.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/senales-emocionales.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/respuestas-crianza-claras-apoyo-proactivas.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/autismo-guia-rapida-familias.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/criar-en-medio-del-desacuerdo.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/reinicio-despues-escuela.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/apoyar-atencion-aprendizaje-casa.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/comprender-conducta-ninos-autistas.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/mi-plan-reducir-riesgos.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/hacer-espacio-duelo.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/pasos-pequenos-depresion.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/tarjetas-posibilidades-perspectiva.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/conexion-social-homeschool.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/dbt-claro-util-paciente.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/despues-escuela-aterrizar.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/atencion-aprendizaje-casa.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/nino-pequeno-mas-sentimiento-que-lenguaje.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/tabla-semanal-tareas.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/conflicto-reparacion-limites.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/planes-empezar-terminar.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/tomar-perspectiva-sin-adivinar.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/tarjeta-rapida-anclaje.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/plan-incertidumbre-epr.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/mapa-poner-tarea-en-marcha.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/mi-menu-anclaje.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/reducir-danos-consumo.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/plan-cuidado-personal.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/mapa-senales-cuerpo-necesidades.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/hacer-dormir-mas-probable.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/higiene-tareas-dificiles.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/handouts/justicia-flexibilidad.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/school/homeschool/discalculia.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/school/homeschool/autismo.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/school/homeschool/dislexia.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/school/homeschool/ansiedad.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/school/homeschool/start-here.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/school/homeschool/derivacion.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/school/homeschool/conflicto-persistente-tnd.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/school/homeschool/tdah.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/school/homeschool/depresion.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/school/homeschool/disgrafia.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/school/plain/discalculia.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/school/plain/autismo.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/school/plain/dislexia.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/school/plain/ansiedad.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/school/plain/conflicto-persistente-odd.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/school/plain/tdah.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/school/plain/depresion.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/school/plain/disgrafia.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/school/clinical/discalculia.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/school/clinical/autismo.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/school/clinical/dislexia.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/school/clinical/ansiedad.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/school/clinical/conflicto-persistente-odd.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/school/clinical/tdah.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/school/clinical/depresion.html",
+    "status": 200
+  },
+  {
+    "path": "resources/es/school/clinical/disgrafia.html",
+    "status": 200
+  }
+]
