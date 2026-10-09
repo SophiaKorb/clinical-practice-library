@@ -28,7 +28,10 @@ const document={
 const computed=vm.runInNewContext(script[1]+'\n;({D,F,mat,coords,eigen,nearest,cosine,projectCase,terrainMesh,componentLabels})',{document,window:{devicePixelRatio:1,addEventListener(){}}});
 const el=id=>elements[id];
 assert.equal(computed.D.length,38,'38 example disorders');
-assert.equal(computed.F.length,24,'24 distinct symptom dimensions');
+assert.equal(computed.F.length,26,'26 distinct symptom dimensions');
+assert(computed.D.find(d=>d.name==='Bipolar I disorder').features.nd===3,'Bipolar model distinguishes reduced sleep need');
+assert(!('sl' in computed.D.find(d=>d.name==='Bipolar I disorder').features),'Bipolar reduced sleep need is not equated with insomnia');
+assert(computed.D.find(d=>d.name==='Bulimia nervosa').features.lc===3,'Eating loss-of-control dimension is separate from general impulsivity');
 assert.equal(computed.coords.length,38,'All disorder profiles have coordinates');
 assert(computed.coords.every(v=>v.length===3&&v.every(Number.isFinite)),'All PCA coordinates finite');
 assert(computed.eigen.every(x=>x>0),'Three nonzero principal components');
