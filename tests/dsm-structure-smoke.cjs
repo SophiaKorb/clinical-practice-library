@@ -17,7 +17,7 @@ class Element{
 }
 const ids=[...new Set([...html.matchAll(/\bid="([^"]+)"/g)].map(match=>match[1]))];
 const elements=Object.fromEntries(ids.map(id=>[id,new Element(id)]));
-const canvas={createRadialGradient(){return {addColorStop(){}};},clearRect(){},fillRect(){},beginPath(){},arc(){},fill(){},stroke(){},moveTo(){},lineTo(){},fillText(){},setTransform(){}};
+const canvas={createRadialGradient(){return {addColorStop(){}};},save(){},restore(){},closePath(){},clearRect(){},fillRect(){},beginPath(){},arc(){},fill(){},stroke(){},moveTo(){},lineTo(){},fillText(){},setTransform(){}};
 elements.scene.getContext=()=>canvas;
 const document={
  getElementById:id=>elements[id],
@@ -25,7 +25,7 @@ const document={
  createElement:tag=>new Element(tag),
  createTextNode:text=>({textContent:text})
 };
-const computed=vm.runInNewContext(script[1]+'\n;({D,F,mat,coords,eigen,nearest,cosine,projectCase})',{document,window:{devicePixelRatio:1,addEventListener(){}}});
+const computed=vm.runInNewContext(script[1]+'\n;({D,F,mat,coords,eigen,nearest,cosine,projectCase,terrainMesh,componentLabels})',{document,window:{devicePixelRatio:1,addEventListener(){}}});
 const el=id=>elements[id];
 assert.equal(computed.D.length,38,'38 example disorders');
 assert.equal(computed.F.length,24,'24 distinct symptom dimensions');
@@ -34,6 +34,21 @@ assert(computed.coords.every(v=>v.length===3&&v.every(Number.isFinite)),'All PCA
 assert(computed.eigen.every(x=>x>0),'Three nonzero principal components');
 assert.notDeepEqual(computed.coords[0],computed.coords[1],'Symptom profiles have different positions');
 assert.equal(el('disorders').children.length,38,'All profiles render');
+assert.equal(el('axis-loadings').children.length,3,'Explain all three mathematical principal components');
+assert.equal(el('neighbors').children[0].children.length,3,'Nearest example cards explain shared symptom basis');
+for(const setting of ['tight','balanced','wide']){
+ const geometry=computed.terrainMesh(setting);
+ assert(geometry.outer>500&&geometry.inner>250,'Data-derived volumetric shells have both surfaces: '+setting);
+ assert(geometry.mesh.every(t=>[...t.a,...t.b,...t.c].every(Number.isFinite)),'No NaN or infinite shell positions: '+setting);
+ assert(geometry.mesh.length<8500,'Geometry bounded for touch devices: '+setting);
+}
+el('surface').onclick();
+assert.equal(el('surface').attrs['aria-pressed'],'false','Show/hide shape control works');
+el('surface').onclick();
+assert.equal(el('surface').attrs['aria-pressed'],'true','Restore shape control works');
+el('smoothness').value='wide';
+el('smoothness').onchange({target:el('smoothness')});
+assert.equal(el('smoothness').value,'wide','Terrain smoothing control works');
 assert.equal(el('diagnosis-title').textContent,'Generalized anxiety disorder','Initial selection loads');
 
 el('search').value='sleep';el('search').events.input({target:el('search')});
@@ -67,4 +82,4 @@ el('scene').events.keydown({key:'ArrowLeft',preventDefault(){}});
 el('scene').events.pointerdown({clientX:0,clientY:0,pointerId:1});
 el('scene').events.pointermove({clientX:20,clientY:10});
 el('scene').events.pointerup({clientX:20,clientY:10});
-console.log('PASS: symptom-space PCA, case impact, comparison, search, navigation and controls.');
+console.log('PASS: symptom-space PCA, data-derived 3D envelope, sensitivity controls, case impact, comparison, search, navigation and accessibility alternatives.');
