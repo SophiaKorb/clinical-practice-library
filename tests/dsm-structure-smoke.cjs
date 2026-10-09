@@ -41,6 +41,7 @@ for(const setting of ['tight','balanced','wide']){
  assert(geometry.outer>500&&geometry.inner>250,'Data-derived volumetric shells have both surfaces: '+setting);
  assert(geometry.mesh.every(t=>[...t.a,...t.b,...t.c].every(Number.isFinite)),'No NaN or infinite shell positions: '+setting);
  assert(geometry.mesh.length<8500,'Geometry bounded for touch devices: '+setting);
+ assert(geometry.mesh.every(t=>[...t.a,...t.b,...t.c].every(v=>Math.abs(v)<399.9)),'3D neighborhood shells are closed inside calculation bounds: '+setting);
 }
 el('surface').onclick();
 assert.equal(el('surface').attrs['aria-pressed'],'false','Show/hide shape control works');
