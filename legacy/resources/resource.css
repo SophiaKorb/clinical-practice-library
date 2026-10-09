@@ -101,3 +101,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible{
 .reset-three{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:10px 0 24px}.reset-three div{min-height:72px;border:1px solid var(--line);border-radius:14px;padding:12px}.reset-three b{color:var(--green)}.ready-box{text-align:center;margin:18px 0}.ready-box small{display:block;margin-top:5px;color:var(--muted)}
 @media(max-width:700px){.choice-field{grid-template-columns:1fr 1fr}.grief-map{grid-template-columns:1fr;grid-template-areas:"center" "a" "b" "c" "d"}.support-strip,.plan-header,.signal-lane{grid-template-columns:1fr 1fr}.care-sequence,.landing-path{display:grid;grid-template-columns:1fr}.care-sequence i,.landing-path i{transform:rotate(90deg);justify-self:center}.reset-three{grid-template-columns:1fr}}
 @media print{.choice-field span,.grief-map .map-zone,.grief-map .map-center,.plan-header>div,.support-strip>div,.success-box,.pause-zone,.ready-box,.care-sequence div,.landing-path div,.signal-lane div,.reset-three div{background:#fff!important;break-inside:avoid}}
+
+/* Long worksheet blanks and titles must wrap on phones. */
+.resource-page{overflow-wrap:anywhere}
+.resource-topbar{flex-wrap:wrap;gap:8px}

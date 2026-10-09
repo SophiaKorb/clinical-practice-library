@@ -69,3 +69,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible{
 
 /* CPL uses a consistent light palette across navigation and native controls. */
 :root{color-scheme:light}
+
+/* Long worksheet blanks and titles must wrap on phones. */
+.resource-page{overflow-wrap:anywhere}
+.resource-topbar{flex-wrap:wrap;gap:8px}
