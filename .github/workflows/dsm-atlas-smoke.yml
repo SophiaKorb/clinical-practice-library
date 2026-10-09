@@ -1,4 +1,4 @@
-name: DSM Assessment Atlas smoke test
+name: DSM training and 3D map smoke tests
 
 on:
   push:
@@ -6,6 +6,8 @@ on:
     paths:
       - 'resources/therapy/dsm-assessment-atlas.html'
       - 'tests/dsm-atlas-smoke.cjs'
+      - 'tests/dsm-structure-smoke.cjs'
+      - 'resources/therapy/dsm-structure-4d.html'
       - '.github/workflows/dsm-atlas-smoke.yml'
   pull_request:
     paths:
@@ -21,3 +23,4 @@ jobs:
         with:
           node-version: '22'
       - run: node tests/dsm-atlas-smoke.cjs
+      - run: node tests/dsm-structure-smoke.cjs
