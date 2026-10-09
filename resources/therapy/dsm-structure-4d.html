@@ -6,7 +6,8 @@
 *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.48 system-ui,-apple-system,"Segoe UI",sans-serif}button,select,input{font:inherit}button{cursor:pointer}a{color:#176476}button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible,canvas:focus-visible{outline:3px solid #e7a44c;outline-offset:3px}
 header{background:#fffefa;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px max(20px,calc((100% - 1330px)/2));font-size:.86rem}header a{text-decoration:none;font-weight:800}.quiet{font-size:.73rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}main{max-width:1330px;margin:auto;padding:23px 18px 75px}h1,h2,h3{font-family:Georgia,serif;font-weight:500;letter-spacing:-.026em;line-height:1.12}h1{font-size:clamp(2.5rem,6vw,4.5rem);margin:9px 0}h2{font-size:1.43rem;margin:0 0 10px}h3{font-size:1.14rem;margin:12px 0 7px}p{margin:7px 0 12px}.intro{font-size:1.04rem;line-height:1.6;max-width:900px;color:#4f6670}.eyebrow{font-size:.73rem;letter-spacing:.17em;font-weight:850;text-transform:uppercase;color:#347d81}.warning{border:1px solid #d3dcd2;background:#eef3ed;border-radius:12px;padding:11px 15px;margin:16px 0;font-size:.84rem;line-height:1.5}
 .dashboard{display:grid;grid-template-columns:minmax(0,1.48fr) minmax(320px,.82fr);gap:14px}.scene{background:radial-gradient(ellipse at 35% 25%,#244559,var(--panel) 75%);border-radius:20px;overflow:hidden;border:1px solid #264758;color:#eaf3f6;min-width:0}.scene-heading{padding:14px 17px 4px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}.scene-heading h2{color:white;font-size:1.13rem;margin:0}.scene-heading small{color:#bfd4da;font-size:.74rem}
-canvas{display:block;width:100%;height:440px;touch-action:none;cursor:grab}canvas:active{cursor:grabbing}.controls{padding:10px 14px 15px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;border-top:1px solid #33576a}.controls button{background:#24485a;border:1px solid #597987;border-radius:9px;color:#f2fafc;padding:7px 10px;font-size:.78rem}.controls label{font-size:.75rem;color:#d1e2e5}.controls input{width:85px;accent-color:#65d5d0}.controls button[aria-pressed=true]{background:#347a7e}
+canvas{display:block;width:100%;height:440px;touch-action:none;cursor:grab}canvas:active{cursor:grabbing}.controls{padding:10px 14px 15px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;border-top:1px solid #33576a}.controls button{background:#24485a;border:1px solid #597987;border-radius:9px;color:#f2fafc;padding:7px 10px;font-size:.78rem}.controls label{font-size:.75rem;color:#d1e2e5}.controls input{width:85px;accent-color:#65d5d0}.controls button[aria-pressed=true]{background:#347a7e}.controls select{background:#e7f3f2;color:#14383d;border:1px solid #729baa;border-radius:8px;padding:7px;font-size:.77rem}
+.terrain-caption{padding:7px 14px 11px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;color:#c6e0e3;font-size:.71rem}.swatch{display:inline-block;height:10px;width:10px;margin-right:4px;border-radius:3px}.swatch-outer{background:#70bfd7}.swatch-inner{background:#d9b6eb}.swatch-point{background:#f1ca86;border-radius:50%}
 .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:17px;min-width:0}.sidebar{display:grid;gap:13px}.pill{display:inline-block;border-radius:99px;padding:4px 10px;font-size:.73rem;font-weight:800;background:#e5f0ee;color:#255c60}.subtle{color:var(--muted);font-size:.84rem}.info-label{font-weight:850;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:#466b72}
 .metrics{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:9px 0}.metrics div{padding:11px;background:#f0f4f3;border-radius:12px}.metrics strong{font-size:.86rem}.metrics span{display:block;font-size:.76rem;color:#49696e}
 .feature-list{display:flex;flex-wrap:wrap;gap:6px;margin:9px 0 13px}.feature-tag{padding:5px 8px;border:1px solid #bdd4d4;background:#edf4f2;border-radius:10px;font-size:.76rem}.feature-tag b{margin-left:5px;color:#16636a}.neighbors{display:grid;gap:5px}.neighbors button{display:flex;justify-content:space-between;align-items:center;gap:7px;padding:8px 10px;border:1px solid #e0e7e7;background:white;border-radius:10px;text-align:left;font-size:.83rem}.neighbors button:hover{background:#eef4f1}.neighbors span{color:#557479;font-size:.73rem}
@@ -25,10 +26,10 @@ footer{margin-top:20px;line-height:1.7;font-size:.86rem;color:#546b70}details{ma
 <header><a href="/">← Clinical Practice Library</a><span class="quiet">Interactive training · Symptom-space</span></header>
 <main>
 <div class="eyebrow">DSM-5-TR symptoms across boundaries</div><h1>Symptom Constellation</h1>
-<p class="intro">A three-dimensional map calculated from <strong>24 symptom features</strong> across <strong>38 example diagnostic profiles</strong>. Disorders with more similar illustrative symptom patterns tend to appear nearer to one another. A fourth dimension displays the <strong>functional impact of a fictional case</strong> as the size of its glowing marker.</p>
-<div class="warning"><strong>Important:</strong> These 0–3 feature profiles are original, illustrative teaching judgments—not a dataset of patients, measured DSM criteria, empirical disorder distances, validated HiTOP factors, or diagnostic probabilities. PCA derives the 3D positions <em>from those ratings</em>. Projection loses information: consult the feature comparison and actual DSM-5-TR criteria. Do not enter patient information; no profile data are saved or sent.</div>
+<p class="intro">A three-dimensional map calculated from <strong>24 symptom features</strong> across <strong>38 example diagnostic profiles</strong>. Disorders with more similar illustrative symptom patterns tend to appear nearer to one another. A fourth dimension displays the <strong>functional impact of a fictional case</strong> as the size of its glowing marker. Data-derived 3D surfaces show the shape of symptom-profile neighborhoods.</p>
+<div class="warning"><strong>Important:</strong> These 0–3 feature profiles are original, illustrative teaching judgments—not a dataset of patients, measured DSM criteria, empirical disorder distances, validated HiTOP factors, or diagnostic probabilities. PCA derives the 3D positions <em>from those ratings</em>. The surface is a smooth envelope of the <em>curated example profiles</em>, not a DSM boundary, empirical patient distribution, or prevalence map. Its shape depends on smoothing and which profiles are included. Projection loses information: consult the full features and actual DSM-5-TR criteria. Do not enter patient information; no profile data are saved or sent.</div>
 <div class="dashboard">
-<section class="scene"><div class="scene-heading"><h2>Symptom similarity · PCA projection</h2><small id="map-count">38 example profiles · 24 symptom features</small></div><canvas id="scene" tabindex="0" role="img" aria-label="Rotatable symptom-space plot. The three axes are mathematical principal components, not diagnoses. Larger golden case marker represents greater fictional functional impact. Use searchable list below for accessible selection.">A 3D display is unavailable; use the list and symptom comparison panels below.</canvas><div class="controls"><button id="left" aria-label="Rotate map left">↶</button><button id="right" aria-label="Rotate map right">↷</button><button id="up" aria-label="Tilt map up">↑</button><button id="down" aria-label="Tilt map down">↓</button><button id="reset">Reset</button><button id="mode" aria-pressed="false">Flat 2D</button><label for="zoom">Zoom</label><input id="zoom" type="range" min="65" max="160" value="100"></div></section>
+<section class="scene"><div class="scene-heading"><h2>Symptom landscape · PCA + isosurfaces</h2><small id="map-count">38 example profiles · 24 symptom features</small></div><canvas id="scene" tabindex="0" role="img" aria-label="Rotatable symptom-space plot. The three axes are mathematical principal components, not diagnoses. Larger golden case marker represents greater fictional functional impact. Use searchable list below for accessible selection.">A 3D display is unavailable; use the list and symptom comparison panels below.</canvas><div class="terrain-caption"><span class="swatch swatch-outer"></span> Broad neighborhoods <span class="swatch swatch-inner"></span> Strong overlap <span class="swatch swatch-point"></span> Diagnostic examples</div><div class="controls"><button id="left" aria-label="Rotate map left">↶</button><button id="right" aria-label="Rotate map right">↷</button><button id="up" aria-label="Tilt map up">↑</button><button id="down" aria-label="Tilt map down">↓</button><button id="reset">Reset</button><button id="mode" aria-pressed="false">Flat 2D</button><button id="surface" aria-pressed="true">Hide terrain</button><label for="smoothness">Shape</label><select id="smoothness" aria-label="Smoothing of symptom neighborhoods"><option value="tight">Local</option><option value="balanced" selected>Balanced</option><option value="wide">Blended</option></select><label for="zoom">Zoom</label><input id="zoom" type="range" min="65" max="160" value="100"></div></section>
 <div class="sidebar">
 <aside class="card" aria-live="polite"><span class="pill" id="group-label">Anxiety</span><h2 id="diagnosis-title">Generalized anxiety disorder</h2><p id="diagnosis-desc"></p><div class="info-label">Illustrative symptom features</div><div class="feature-list" id="signature"></div><div class="info-label">Nearest profiles in the full feature space</div><div class="neighbors" id="neighbors"></div><div class="study"><strong>Ask the client</strong><p id="client-question"></p><strong>Assessor follow-up (not asked verbatim)</strong><p id="assessor-task"></p></div></aside>
 <aside class="card fourth"><span class="pill">Dimension 4 · case functional impact</span><h2>How much is life affected?</h2><label for="impact" class="subtle">Illustrative impairment slider — independent of diagnosis</label><input id="impact" type="range" min="0" max="4" value="2" step="1"><div class="scale"><span>None</span><span>Mild</span><span>Moderate</span><span>Marked</span><span>Extensive</span></div><strong id="impact-label">Moderate interference</strong><p id="impact-help"></p><p class="subtle">The golden case marker grows with impact. It does not change disorder positions or estimate risk. Safety concerns require their own assessment regardless of the impact setting.</p></aside>
@@ -40,8 +41,8 @@ footer{margin-top:20px;line-height:1.7;font-size:.86rem;color:#546b70}details{ma
 <section class="card"><h2>Build a fictional symptom pattern</h2><p class="subtle">Choose one of the example presentations, or alter individual symptom ratings. These changes move the gold marker in 3D according to the same feature model. The impact slider changes only its size.</p>
 <label for="preset" class="info-label">Teaching vignette</label><div class="presetbar"><select id="preset"><option value="anxiety">Worry, avoidance and insomnia</option><option value="mood">Low mood with concentration problems</option><option value="intrusions">Intrusions, avoidance and sleep disruption</option><option value="activation">Activation, disrupted sleep and impulsivity</option><option value="blank">Start with no symptoms</option></select><button class="action plain" id="reset-case">Reset case</button></div>
 <div id="case-features" class="profile"></div><div class="addbar"><select id="add-feature" aria-label="Add symptom feature"></select><button class="action" id="add">Add</button></div>
-<h3>Closest illustrative symptom profiles</h3><p class="subtle">This list reflects feature overlap only—not clinical likelihood or diagnostic recommendations.</p><div id="case-neighbors" class="neighbors" aria-live="polite"></div>
-<details><summary>How the positions are calculated</summary><p class="subtle">Each profile has 24 ordinal feature ratings (0–3). Ratings are converted to unit-length vectors, mean-centered, and projected onto the first three principal components calculated by a deterministic power-iteration eigensolver. 3D point positions are not manually assigned. Similarity comparisons use cosine similarity in the full 24-dimensional feature space, not 3D distance. Overlap is descriptive, not a differential diagnosis.</p><div id="method-stats" class="subtle"></div></details>
+<h3>Closest illustrative symptom profiles</h3><p class="subtle">This list reflects descriptive feature similarity only—not clinical likelihood, probability, or a diagnostic recommendation.</p><div id="case-neighbors" class="neighbors" aria-live="polite"></div>
+<details><summary>How the positions are calculated</summary><p class="subtle">Each profile has 24 ordinal feature ratings (0–3). Ratings are converted to unit-length vectors, mean-centered, and projected onto the first three principal components calculated by a deterministic power-iteration eigensolver. 3D point positions are not manually assigned. Similarity comparisons use cosine similarity in the full 24-dimensional feature space, not 3D distance. Overlap is descriptive, not a differential diagnosis. A cosine index is not a probability. Terrain is a soft Gaussian union over PCA points, with two isosurface levels extracted using marching tetrahedra. Smoothing changes the terrain and demonstrates model sensitivity.</p><div id="method-stats" class="subtle"></div></details>
 </section>
 </div>
 <footer><strong>Evidence and limits:</strong> The cross-cutting approach is informed conceptually by <a href="https://www.hitop-system.org/the-framework" target="_blank" rel="noopener noreferrer">HiTOP</a> and the <a href="https://www.nimh.nih.gov/research/research-funded-by-nimh/rdoc/about-rdoc" target="_blank" rel="noopener noreferrer">NIMH RDoC framework</a>, neither of which endorses these illustrative weights or geometry. The diagnostic names and descriptions are teaching summaries, not full or current diagnostic criteria. Consult the <a href="https://www.psychiatry.org/psychiatrists/practice/dsm" target="_blank" rel="noopener noreferrer">DSM-5-TR</a> and <a href="https://www.psychiatry.org/psychiatrists/practice/dsm/updates-to-dsm" target="_blank" rel="noopener noreferrer">published updates</a>. <a href="/resources/therapy/dsm-assessment-atlas.html">Explore the intake-training atlas →</a></footer>
@@ -69,6 +70,51 @@ const coordinates=centered.map(v=>basis.map(pc=>dot(v,pc)));
 const maxCoord=Math.max(.001,...coordinates.flat().map(Math.abs));
 const coords=coordinates.map(c=>c.map(x=>x/maxCoord*220));
 const variance=eigen.reduce((s,x)=>s+x,0);
+// The shape is calculated from this curated list, not a clinically validated regional boundary.
+const kernelScale={tight:52,balanced:72,wide:96},terrainCache=new Map(),gridSize=19,extent=280;
+let terrainMode="balanced",showSurface=true;
+function terrainMesh(mode="balanced"){
+ if(terrainCache.has(mode))return terrainCache.get(mode);
+ const n=gridSize+1,step=extent*2/gridSize,sigma=kernelScale[mode],inv=1/(2*sigma*sigma);
+ const field=new Float32Array(n*n*n),index=(i,j,k)=>(i*n+j)*n+k;
+ const coord=i=>-extent+i*step;
+ for(let i=0;i<n;i++)for(let j=0;j<n;j++)for(let k=0;k<n;k++){
+   const x=coord(i),y=coord(j),z=coord(k);let product=1;
+   for(const p of coords){const d2=(x-p[0])**2+(y-p[1])**2+(z-p[2])**2;product*=1-.7*Math.exp(-d2*inv)}
+   field[index(i,j,k)]=1-product;
+ }
+ const offsets=[[0,0,0],[1,0,0],[1,1,0],[0,1,0],[0,0,1],[1,0,1],[1,1,1],[0,1,1]];
+ const tetra=[[0,5,1,6],[0,1,2,6],[0,2,3,6],[0,3,7,6],[0,7,4,6],[0,4,5,6]];
+ const mesh=[];
+ for(const [level,layer] of [[.43,0],[.79,1]]){
+   for(let i=0;i<gridSize;i++)for(let j=0;j<gridSize;j++)for(let k=0;k<gridSize;k++){
+     const p=offsets.map(o=>[coord(i+o[0]),coord(j+o[1]),coord(k+o[2])]);
+     const v=offsets.map(o=>field[index(i+o[0],j+o[1],k+o[2])]);
+     if(Math.max(...v)<level||Math.min(...v)>level)continue;
+     function crossing(a,b){const t=Math.abs(v[b]-v[a])<1e-9?.5:(level-v[a])/(v[b]-v[a]);return p[a].map((x,m)=>x+(p[b][m]-x)*t)}
+     function add(a,b,c){
+       const u=b.map((x,m)=>x-a[m]),w=c.map((x,m)=>x-a[m]);
+       const cross=[u[1]*w[2]-u[2]*w[1],u[2]*w[0]-u[0]*w[2],u[0]*w[1]-u[1]*w[0]];
+       const l=Math.hypot(...cross)||1;
+       const shade=Math.abs((cross[0]*.55+cross[1]*.45+cross[2]*.70)/l);
+       mesh.push({a,b,c,layer,shade});
+     }
+     for(const t of tetra){
+       const yes=t.filter(q=>v[q]>=level),no=t.filter(q=>v[q]<level);
+       if(!yes.length||yes.length===4)continue;
+       if(yes.length===1)add(crossing(yes[0],no[0]),crossing(yes[0],no[1]),crossing(yes[0],no[2]));
+       else if(yes.length===3)add(crossing(no[0],yes[0]),crossing(no[0],yes[1]),crossing(no[0],yes[2]));
+       else{
+         const a=crossing(yes[0],no[0]),b=crossing(yes[0],no[1]),c=crossing(yes[1],no[0]),d=crossing(yes[1],no[1]);
+         add(a,b,c);add(b,d,c);
+       }
+     }
+   }
+ }
+ const result={mesh,outer:mesh.filter(x=>x.layer===0).length,inner:mesh.filter(x=>x.layer===1).length,mode};
+ terrainCache.set(mode,result);return result;
+}
+
 function cosine(a,b){const aa=Math.hypot(...a),bb=Math.hypot(...b);return aa&&bb?dot(a,b)/(aa*bb):0}
 function nearest(v,exclude=-1,limit=4){return D.map((d,i)=>({i,score:cosine(v,mat[i])})).filter(a=>a.i!==exclude).sort((a,b)=>b.score-a.score||a.i-b.i).slice(0,limit)}
 function projectCase(v){const normalized=norm(v);const cv=normalized.map((x,j)=>x-mean[j]);return basis.map(pc=>dot(cv,pc)/maxCoord*220)}
@@ -82,7 +128,7 @@ const impactInfo=[
 ["Extensive interference","Major disruptions across important life domains. Clinical and safety needs must still be assessed separately."]
 ];
 function fillFeaturePanel(){const d=D[selected];$("group-label").textContent=G[d.g].name;$("diagnosis-title").textContent=d.name;$("diagnosis-desc").textContent=d.desc;$("client-question").textContent=d.ask;$("assessor-task").textContent=d.follow;const sig=Object.entries(d.features).sort((a,b)=>b[1]-a[1]);$("signature").replaceChildren(...sig.map(([key,w])=>{let el=document.createElement("span");el.className="feature-tag";el.textContent=F.find(f=>f.id===key).name+" · "+label(w);return el}));const near=nearest(mat[selected],selected,4);renderNeighborButtons("neighbors",near);renderComparison();document.querySelectorAll("#disorders button").forEach(b=>b.setAttribute("aria-pressed",String(Number(b.dataset.id)===selected)));draw()}
-function renderNeighborButtons(id,near){const host=$(id);host.replaceChildren(...near.map(({i,score})=>{let btn=document.createElement("button");btn.type="button";btn.innerHTML="";const title=document.createElement("span");title.textContent=D[i].name;const sim=document.createElement("span");sim.textContent=(score*100).toFixed(0)+"% vector overlap";btn.append(title,sim);btn.onclick=()=>select(i);return btn}))}
+function renderNeighborButtons(id,near){const host=$(id);host.replaceChildren(...near.map(({i,score})=>{let btn=document.createElement("button");btn.type="button";btn.innerHTML="";const title=document.createElement("span");title.textContent=D[i].name;const sim=document.createElement("span");sim.textContent="cosine "+score.toFixed(2);btn.append(title,sim);btn.onclick=()=>select(i);return btn}))}
 function select(i){selected=i;fillFeaturePanel()}
 function renderComparison(){const box=$("comparison");box.replaceChildren();$("clear-compare").disabled=pinned<0;const btn=$("compare");btn.textContent=pinned===-1?"Pin selected for comparison":pinned===selected?"Pinned · choose another profile":"Compare selected with pinned";if(pinned<0){let p=document.createElement("p");p.className="subtle";p.textContent="Pin one diagnosis, then choose another to compare shared and distinguishing symptom features.";box.appendChild(p);return}
 const head=document.createElement("p");head.className="subtle";head.textContent="Pinned: "+D[pinned].name+(pinned===selected?" · Select a different profile to compare":" · compared with "+D[selected].name);box.appendChild(head);if(pinned===selected)return;
@@ -106,10 +152,35 @@ function renderCaseNeighbors(){const vec=vector(caseV);$("case-neighbors").repla
 $("impact").addEventListener("input",e=>{impact=Number(e.target.value);renderImpact();draw()});
 function renderImpact(){$("impact-label").textContent=impactInfo[impact][0];$("impact-help").textContent=impactInfo[impact][1]}
 let ctx=$("scene").getContext("2d"),W=900,H=440,screenPoints=[];
+function drawTerrain(){
+ if(!ctx||!showSurface)return;
+ if(flat){
+   for(const xyz of coords){const p=camera(...xyz),radius=58*kernelScale[terrainMode]/72*zoom;
+     const glow=ctx.createRadialGradient(p.x,p.y,2,p.x,p.y,radius);
+     glow.addColorStop(0,"rgba(99,205,217,.095)");glow.addColorStop(1,"rgba(99,205,217,0)");
+     ctx.fillStyle=glow;ctx.beginPath();ctx.arc(p.x,p.y,radius,0,Math.PI*2);ctx.fill();
+   }return;
+ }
+ const model=terrainMesh(terrainMode);
+ const polygons=model.mesh.map(t=>{
+   const a=camera(...t.a),b=camera(...t.b),c=camera(...t.c);
+   return {a,b,c,depth:(a.depth+b.depth+c.depth)/3,layer:t.layer,shade:t.shade};
+ }).sort((p,q)=>q.depth-p.depth);
+ ctx.save();
+ for(const t of polygons){
+   ctx.beginPath();ctx.moveTo(t.a.x,t.a.y);ctx.lineTo(t.b.x,t.b.y);ctx.lineTo(t.c.x,t.c.y);ctx.closePath();
+   ctx.fillStyle=t.layer===0?"#6bbdd2":"#dfb8ed";
+   ctx.globalAlpha=(t.layer===0?.021:.035)*(.35+.75*t.shade);
+   ctx.fill();
+ }
+ ctx.restore();
+}
+
 function camera(x,y,z){if(flat)return {x:W/2+x*zoom*.86,y:H/2+y*zoom*.86,depth:0,scale:zoom*.86};const sy=Math.sin(yaw),cy=Math.cos(yaw),sp=Math.sin(pitch),cp=Math.cos(pitch);const tx=x*cy-z*sy,tz=x*sy+z*cy,ty=y*cp-tz*sp,dep=y*sp+tz*cp;const sc=700/(700+dep)*Math.min(W/790,H/560)*zoom;return {x:W/2+tx*sc,y:H/2+ty*sc,depth:dep,scale:sc}}
 function drawLine(a,b,color,line=1){const p=camera(...a),q=camera(...b);ctx.strokeStyle=color;ctx.lineWidth=line;ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);ctx.stroke()}
 function draw(){if(!ctx)return;ctx.clearRect(0,0,W,H);const gr=ctx.createRadialGradient(W*.5,H*.35,40,W*.5,H*.5,Math.max(W,H)*.8);gr.addColorStop(0,"#214358");gr.addColorStop(1,"#091b2a");ctx.fillStyle=gr;ctx.fillRect(0,0,W,H);
 for(let i=0;i<85;i++){const x=((i*107.15+7)%1000)/1000*W,y=((i*283.21+65)%1000)/1000*H;ctx.fillStyle="#7fb6ca35";ctx.fillRect(x,y,1.2,1.2)}
+drawTerrain();
 for(let k=0;k<3;k++){const axis=[[220,0,0],[0,220,0],[0,0,220]][k];drawLine([0,0,0],axis,["#4aaec68c","#b497db8c","#e5bf7b8c"][k],1.4)}
 ctx.font="11px system-ui";ctx.fillStyle="#bfd9e1";ctx.textAlign="left";ctx.fillText(flat?"PC1 → and PC2 ↓ · PC3 hidden in flat view":"Principal components 1 / 2 / 3 · click points or use the list",15,22);
 const matches=nearest(mat[selected],selected,4).map(x=>x.i);for(const i of matches)drawLine(coords[selected],coords[i],"#b5d8d96b",1.5);
@@ -119,18 +190,20 @@ if(active||matches.includes(i)){ctx.fillStyle="#e5f3f4";ctx.font=(active?"bold "
 screenPoints.push({i,x:p.x,y:p.y,r:Math.max(13,r+7)})}
 const vec=vector(caseV);
 if(Math.hypot(...vec)>0){const cp=camera(...projectCase(vec));const r=8+impact*4;ctx.shadowColor="#e9b764";ctx.shadowBlur=25+impact*7;ctx.fillStyle="#f6d28b";ctx.globalAlpha=.36;ctx.beginPath();ctx.arc(cp.x,cp.y,r,0,2*Math.PI);ctx.fill();ctx.globalAlpha=1;ctx.shadowBlur=0;ctx.strokeStyle="#ffe4a4";ctx.lineWidth=2;ctx.beginPath();ctx.arc(cp.x,cp.y,r,0,2*Math.PI);ctx.stroke();ctx.fillStyle="#fff4dd";ctx.font="bold 12px system-ui";ctx.textAlign="left";ctx.fillText("Fictional case · impact "+impact,cp.x+r+7,cp.y+3,160)}
-ctx.font="10px system-ui";ctx.textAlign="left";ctx.fillStyle="#b8d0d6";ctx.fillText("Color: broad DSM grouping   ·   Distance: symptom-vector projection",15,H-14);
+ctx.font="10px system-ui";ctx.textAlign="left";ctx.fillStyle="#b8d0d6";ctx.fillText("Terrain: smoothed example-profile neighborhoods · Not clinical boundaries",15,H-14);
 }
 function resize(){if(!ctx)return;const rect=$("scene").getBoundingClientRect(),ratio=Math.min(2,window.devicePixelRatio||1);W=Math.max(270,rect.width);H=Math.max(260,rect.height);$("scene").width=Math.round(W*ratio);$("scene").height=Math.round(H*ratio);ctx.setTransform(ratio,0,0,ratio,0,0);draw()}
 $("left").onclick=()=>{yaw-=.22;draw()};$("right").onclick=()=>{yaw+=.22;draw()};$("up").onclick=()=>{pitch=clamp(pitch-.17,-1.2,1.2);draw()};$("down").onclick=()=>{pitch=clamp(pitch+.17,-1.2,1.2);draw()};$("reset").onclick=()=>{yaw=.35;pitch=-.26;zoom=1;flat=false;$("zoom").value=100;$("mode").setAttribute("aria-pressed","false");$("mode").textContent="Flat 2D";draw()};
 $("mode").onclick=()=>{flat=!flat;$("mode").setAttribute("aria-pressed",String(flat));$("mode").textContent=flat?"3D view":"Flat 2D";draw()};
 $("zoom").oninput=e=>{zoom=Number(e.target.value)/100;draw()};
+$("surface").onclick=()=>{showSurface=!showSurface;$("surface").setAttribute("aria-pressed",String(showSurface));$("surface").textContent=showSurface?"Hide terrain":"Show terrain";draw()};
+$("smoothness").onchange=e=>{terrainMode=e.target.value;terrainMesh(terrainMode);draw()};
 const scene=$("scene");scene.addEventListener("pointerdown",e=>{drag={x:e.clientX,y:e.clientY,px:e.clientX,py:e.clientY,moved:false};scene.setPointerCapture(e.pointerId)});
 scene.addEventListener("pointermove",e=>{if(!drag)return;const dx=e.clientX-drag.px,dy=e.clientY-drag.py;if(Math.abs(e.clientX-drag.x)+Math.abs(e.clientY-drag.y)>7)drag.moved=true;if(drag.moved&&!flat){yaw+=dx*.008;pitch=clamp(pitch+dy*.006,-1.2,1.2);draw()}drag.px=e.clientX;drag.py=e.clientY});
 scene.addEventListener("pointerup",e=>{if(!drag)return;const moved=drag.moved;drag=null;if(moved)return;const rect=scene.getBoundingClientRect(),x=e.clientX-rect.left,y=e.clientY-rect.top;const p=screenPoints.slice().reverse().find(p=>Math.hypot(p.x-x,p.y-y)<p.r);if(p)select(p.i)});
 scene.addEventListener("pointercancel",()=>drag=null);
 scene.addEventListener("keydown",e=>{let used=true;if(e.key==="ArrowLeft")yaw-=.18;else if(e.key==="ArrowRight")yaw+=.18;else if(e.key==="ArrowUp")pitch=clamp(pitch-.14,-1.2,1.2);else if(e.key==="ArrowDown")pitch=clamp(pitch+.14,-1.2,1.2);else used=false;if(used){e.preventDefault();draw()}});
 window.addEventListener("resize",resize);
-function start(){renderGroups();renderLists();renderImpact();fillFeaturePanel();renderCase();$("method-stats").textContent="First three components capture "+(eigen.reduce((s,x)=>s+x,0)/(Math.max(1e-12,centered.reduce((a,v)=>a+dot(v,v),0)/(D.length-1)))*100).toFixed(0)+"% of the variance of the illustrative normalized feature matrix. This is not a measure of diagnostic validity.";resize()}
+function start(){terrainMesh(terrainMode);renderGroups();renderLists();renderImpact();fillFeaturePanel();renderCase();$("method-stats").textContent="First three components capture "+(eigen.reduce((s,x)=>s+x,0)/(Math.max(1e-12,centered.reduce((a,v)=>a+dot(v,v),0)/(D.length-1)))*100).toFixed(0)+"% of the variance of the illustrative normalized feature matrix. This is not a measure of diagnostic validity.";resize()}
 start();
 </script></body></html>
