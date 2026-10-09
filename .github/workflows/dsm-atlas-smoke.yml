@@ -1,0 +1,23 @@
+name: DSM Assessment Atlas smoke test
+
+on:
+  push:
+    branches: [main, cpl-2-colorful-helpful]
+    paths:
+      - 'resources/therapy/dsm-assessment-atlas.html'
+      - 'tests/dsm-atlas-smoke.cjs'
+      - '.github/workflows/dsm-atlas-smoke.yml'
+  pull_request:
+    paths:
+      - 'resources/therapy/dsm-assessment-atlas.html'
+      - 'tests/dsm-atlas-smoke.cjs'
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/dsm-atlas-smoke.cjs
