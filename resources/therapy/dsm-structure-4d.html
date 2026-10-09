@@ -10,7 +10,7 @@ canvas{display:block;width:100%;height:440px;touch-action:none;cursor:grab}canva
 .terrain-caption{padding:7px 14px 11px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;color:#c6e0e3;font-size:.71rem}.swatch{display:inline-block;height:10px;width:10px;margin-right:4px;border-radius:3px}.swatch-outer{background:#70bfd7}.swatch-inner{background:#d9b6eb}.swatch-point{background:#f1ca86;border-radius:50%}
 .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:17px;min-width:0}.sidebar{display:grid;gap:13px}.pill{display:inline-block;border-radius:99px;padding:4px 10px;font-size:.73rem;font-weight:800;background:#e5f0ee;color:#255c60}.subtle{color:var(--muted);font-size:.84rem}.info-label{font-weight:850;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:#466b72}
 .metrics{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:9px 0}.metrics div{padding:11px;background:#f0f4f3;border-radius:12px}.metrics strong{font-size:.86rem}.metrics span{display:block;font-size:.76rem;color:#49696e}
-.feature-list{display:flex;flex-wrap:wrap;gap:6px;margin:9px 0 13px}.feature-tag{padding:5px 8px;border:1px solid #bdd4d4;background:#edf4f2;border-radius:10px;font-size:.76rem}.feature-tag b{margin-left:5px;color:#16636a}.neighbors{display:grid;gap:5px}.neighbors button{display:flex;justify-content:space-between;align-items:center;gap:7px;padding:8px 10px;border:1px solid #e0e7e7;background:white;border-radius:10px;text-align:left;font-size:.83rem}.neighbors button:hover{background:#eef4f1}.neighbors span{color:#557479;font-size:.73rem}
+.feature-list{display:flex;flex-wrap:wrap;gap:6px;margin:9px 0 13px}.feature-tag{padding:5px 8px;border:1px solid #bdd4d4;background:#edf4f2;border-radius:10px;font-size:.76rem}.feature-tag b{margin-left:5px;color:#16636a}.neighbors{display:grid;gap:5px}.neighbors button{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:4px 7px;padding:8px 10px;border:1px solid #e0e7e7;background:white;border-radius:10px;text-align:left;font-size:.83rem}.neighbors button:hover{background:#eef4f1}.neighbors span{color:#557479;font-size:.73rem}.neighbors span:first-child{font-weight:700;text-align:left;color:#2b4f54}.neighbors small{grid-column:1 / -1;font-size:.71rem;color:#637a7e;text-align:left}
 .study{margin-top:15px;border-top:1px solid var(--line);padding-top:12px}.study p{font-size:.87rem;color:#3d5b63}.study strong{font-size:.77rem;text-transform:uppercase;letter-spacing:.06em}
 .fourth{background:#fdf2dd;border-color:#e8d7b7}.fourth h2{margin-bottom:4px}.fourth input[type=range]{width:100%;accent-color:#a16e32}.scale{display:flex;justify-content:space-between;gap:4px;color:#695b48;font-size:.71rem}.fourth strong{display:block;margin-top:8px}.fourth p{font-size:.83rem;color:#6d604e}.presetbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:12px 0}.presetbar select{max-width:100%;min-width:160px;border:1px solid #b9c6c5;border-radius:9px;padding:8px;background:#fff}
 .col-2{display:grid;grid-template-columns:1.2fr 1fr;gap:14px;margin-top:14px}.search{width:100%;padding:10px 12px;border:1px solid #bbcdce;border-radius:11px;margin:5px 0 10px}.list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;max-height:370px;overflow:auto}.item{border:1px solid #d6e0e0;background:#fff;border-radius:10px;padding:8px;text-align:left;font-size:.79rem;line-height:1.35}.item small{display:block;font-size:.67rem;color:#5e787e}.item[aria-pressed=true]{background:#e2f3ef;border-color:#26777b;box-shadow:inset 4px 0 #26777b}
@@ -134,7 +134,11 @@ const impactInfo=[
 ["Extensive interference","Major disruptions across important life domains. Clinical and safety needs must still be assessed separately."]
 ];
 function fillFeaturePanel(){const d=D[selected];$("group-label").textContent=G[d.g].name;$("diagnosis-title").textContent=d.name;$("diagnosis-desc").textContent=d.desc;$("client-question").textContent=d.ask;$("assessor-task").textContent=d.follow;const sig=Object.entries(d.features).sort((a,b)=>b[1]-a[1]);$("signature").replaceChildren(...sig.map(([key,w])=>{let el=document.createElement("span");el.className="feature-tag";el.textContent=F.find(f=>f.id===key).name+" · "+label(w);return el}));const near=nearest(mat[selected],selected,4);renderNeighborButtons("neighbors",near);renderComparison();document.querySelectorAll("#disorders button").forEach(b=>b.setAttribute("aria-pressed",String(Number(b.dataset.id)===selected)));draw()}
-function renderNeighborButtons(id,near){const host=$(id);host.replaceChildren(...near.map(({i,score})=>{let btn=document.createElement("button");btn.type="button";btn.innerHTML="";const title=document.createElement("span");title.textContent=D[i].name;const sim=document.createElement("span");sim.textContent="cosine "+score.toFixed(2);btn.append(title,sim);btn.onclick=()=>select(i);return btn}))}
+function renderNeighborButtons(id,near){const host=$(id);host.replaceChildren(...near.map(({i,score})=>{let btn=document.createElement("button");btn.type="button";btn.innerHTML="";const title=document.createElement("span");title.textContent=D[i].name;const sim=document.createElement("span");sim.textContent="cosine "+score.toFixed(2);
+const source=id==="case-neighbors"?vector(caseV):mat[selected],other=mat[i];
+const shared=F.map((f,j)=>({text:f.name,n:Math.min(source[j],other[j])})).filter(x=>x.n>0).sort((a,b)=>b.n-a.n).slice(0,2);
+const why=document.createElement("small");why.textContent=shared.length?"Shared: "+shared.map(x=>x.text).join(" · "):"Little feature overlap";
+btn.append(title,sim,why);btn.onclick=()=>select(i);return btn}))}
 function select(i){selected=i;fillFeaturePanel()}
 function renderComparison(){const box=$("comparison");box.replaceChildren();$("clear-compare").disabled=pinned<0;const btn=$("compare");btn.textContent=pinned===-1?"Pin selected for comparison":pinned===selected?"Pinned · choose another profile":"Compare selected with pinned";if(pinned<0){let p=document.createElement("p");p.className="subtle";p.textContent="Pin one diagnosis, then choose another to compare shared and distinguishing symptom features.";box.appendChild(p);return}
 const head=document.createElement("p");head.className="subtle";head.textContent="Pinned: "+D[pinned].name+(pinned===selected?" · Select a different profile to compare":" · compared with "+D[selected].name);box.appendChild(head);if(pinned===selected)return;
@@ -158,6 +162,10 @@ function renderCaseNeighbors(){const vec=vector(caseV);$("case-neighbors").repla
 $("impact").addEventListener("input",e=>{impact=Number(e.target.value);renderImpact();draw()});
 function renderImpact(){$("impact-label").textContent=impactInfo[impact][0];$("impact-help").textContent=impactInfo[impact][1]}
 let ctx=$("scene").getContext("2d"),W=900,H=440,screenPoints=[];
+let frameQueued=false;function scheduleDraw(){if(frameQueued)return;frameQueued=true;
+ if(typeof window.requestAnimationFrame==="function")window.requestAnimationFrame(()=>{frameQueued=false;draw()});
+ else{frameQueued=false;draw()}
+}
 function drawTerrain(){
  if(!ctx||!showSurface)return;
  if(flat){
@@ -168,9 +176,9 @@ function drawTerrain(){
    }return;
  }
  const model=terrainMesh(terrainMode);
- const polygons=model.mesh.map(t=>{
+ const polygons=model.mesh.map((t,i)=>{
    const a=camera(...t.a),b=camera(...t.b),c=camera(...t.c);
-   return {a,b,c,depth:(a.depth+b.depth+c.depth)/3,layer:t.layer,shade:t.shade};
+   return {a,b,c,depth:(a.depth+b.depth+c.depth)/3,layer:t.layer,shade:t.shade,i};
  }).sort((p,q)=>q.depth-p.depth);
  ctx.save();
  for(const t of polygons){
@@ -179,7 +187,7 @@ function drawTerrain(){
    ctx.globalAlpha=(t.layer===0?.055:.085)*(.35+.75*t.shade);
    ctx.fill();
    // A faint subset of triangulation edges reveals curvature without overwhelming the scene.
-   if(t.layer===0&&Math.round(t.depth)%14===0){ctx.strokeStyle="#b5eef3";ctx.globalAlpha=.025;ctx.lineWidth=.6;ctx.stroke()}
+   if(t.layer===0&&t.i%29===0){ctx.strokeStyle="#b5eef3";ctx.globalAlpha=.025;ctx.lineWidth=.6;ctx.stroke()}
  }
  ctx.restore();
 }
@@ -207,7 +215,7 @@ $("zoom").oninput=e=>{zoom=Number(e.target.value)/100;draw()};
 $("surface").onclick=()=>{showSurface=!showSurface;$("surface").setAttribute("aria-pressed",String(showSurface));$("surface").textContent=showSurface?"Hide terrain":"Show terrain";draw()};
 $("smoothness").onchange=e=>{terrainMode=e.target.value;terrainMesh(terrainMode);draw()};
 const scene=$("scene");scene.addEventListener("pointerdown",e=>{drag={x:e.clientX,y:e.clientY,px:e.clientX,py:e.clientY,moved:false};scene.setPointerCapture(e.pointerId)});
-scene.addEventListener("pointermove",e=>{if(!drag)return;const dx=e.clientX-drag.px,dy=e.clientY-drag.py;if(Math.abs(e.clientX-drag.x)+Math.abs(e.clientY-drag.y)>7)drag.moved=true;if(drag.moved&&!flat){yaw+=dx*.008;pitch=clamp(pitch+dy*.006,-1.2,1.2);draw()}drag.px=e.clientX;drag.py=e.clientY});
+scene.addEventListener("pointermove",e=>{if(!drag)return;const dx=e.clientX-drag.px,dy=e.clientY-drag.py;if(Math.abs(e.clientX-drag.x)+Math.abs(e.clientY-drag.y)>7)drag.moved=true;if(drag.moved&&!flat){yaw+=dx*.008;pitch=clamp(pitch+dy*.006,-1.2,1.2);scheduleDraw()}drag.px=e.clientX;drag.py=e.clientY});
 scene.addEventListener("pointerup",e=>{if(!drag)return;const moved=drag.moved;drag=null;if(moved)return;const rect=scene.getBoundingClientRect(),x=e.clientX-rect.left,y=e.clientY-rect.top;const p=screenPoints.slice().reverse().find(p=>Math.hypot(p.x-x,p.y-y)<p.r);if(p)select(p.i)});
 scene.addEventListener("pointercancel",()=>drag=null);
 scene.addEventListener("keydown",e=>{let used=true;if(e.key==="ArrowLeft")yaw-=.18;else if(e.key==="ArrowRight")yaw+=.18;else if(e.key==="ArrowUp")pitch=clamp(pitch-.14,-1.2,1.2);else if(e.key==="ArrowDown")pitch=clamp(pitch+.14,-1.2,1.2);else used=false;if(used){e.preventDefault();draw()}});
