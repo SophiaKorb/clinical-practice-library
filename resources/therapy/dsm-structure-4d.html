@@ -77,7 +77,7 @@ function componentLabels(axis){
  return {positive:positive.map(x=>x.feature),negative:negative.map(x=>x.feature)};
 }
 // The shape is calculated from this curated list, not a clinically validated regional boundary.
-const kernelScale={tight:52,balanced:72,wide:96},terrainCache=new Map(),gridSize=12,extent=280;
+const kernelScale={tight:52,balanced:72,wide:96},terrainCache=new Map(),gridSize=14,extent=400;
 let terrainMode="balanced",showSurface=true;
 function terrainMesh(mode="balanced"){
  if(terrainCache.has(mode))return terrainCache.get(mode);
