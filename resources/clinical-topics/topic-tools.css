@@ -35,3 +35,15 @@
 .clinical-map.parallel-assess li:nth-child(2){border-left-color:#955a40}
 @media(max-width:850px){.clinical-map.parallel-assess{grid-template-columns:1fr}.clinical-map.parallel-assess li{grid-column:1/-1!important}}
 @media print{.clinical-map.parallel-assess{display:grid;grid-template-columns:1fr 1fr;gap:7px}.clinical-map.parallel-assess li:nth-child(1),.clinical-map.parallel-assess li:nth-child(n+4){grid-column:1/-1}.clinical-map.parallel-assess li:nth-child(2),.clinical-map.parallel-assess li:nth-child(3){grid-column:span 1}}
+
+/* Functional load and attention allocation are relationships, not five identical sequential boxes. */
+.clinical-map.context-budget{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.clinical-map.context-budget li::after,.clinical-map.attention-split li::after{display:none}
+.clinical-map.context-budget li:nth-child(-n+4){grid-column:span 2}
+.clinical-map.context-budget li:nth-child(5){grid-column:1/-1;border-top-width:8px}
+.clinical-map.context-budget li:nth-child(2),.clinical-map.context-budget li:nth-child(4){border-left:4px dashed #245e50}
+.clinical-map.attention-split{grid-template-columns:repeat(6,minmax(0,1fr));gap:16px}
+.clinical-map.attention-split li:nth-child(1),.clinical-map.attention-split li:nth-child(2),.clinical-map.attention-split li:nth-child(4),.clinical-map.attention-split li:nth-child(5){grid-column:span 3}
+.clinical-map.attention-split li:nth-child(3){grid-column:1/-1;border-left:6px solid #336a76;border-right:6px solid #336a76}
+@media(max-width:850px){.clinical-map.context-budget,.clinical-map.attention-split{grid-template-columns:1fr}.clinical-map.context-budget li,.clinical-map.attention-split li{grid-column:1/-1!important}}
+@media print{.clinical-map.context-budget,.clinical-map.attention-split{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.clinical-map.context-budget li,.clinical-map.attention-split li{grid-column:span 1!important}.clinical-map.context-budget li:nth-child(5),.clinical-map.attention-split li:nth-child(3){grid-column:1/-1!important}}

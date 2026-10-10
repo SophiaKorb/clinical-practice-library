@@ -21,7 +21,7 @@ for(const r of ledger.resources){
 }
 for(const set of byTopic.values())assert.equal(set.size,6);
 // Structural checks for meaningful visual models; source-level QA only, not rendered approval.
-const models={'panic-alarm-loop':'return-loop','ocd-mental-rituals':'loop-choice','aphasia-communication-access':'access-tracks','child-aggression-caregiver-coaching':'abc-tracks','sibling-conflict-safety-repair':'safety-gate','restrictive-eating-coordination':'parallel-assess','intellectual-disability-supported-choice':'access-tracks','health-anxiety-medical-plan':'loop-choice','body-dysmorphia-checking':'loop-choice'};
+const models={'panic-alarm-loop':'return-loop','ocd-mental-rituals':'loop-choice','aphasia-communication-access':'access-tracks','child-aggression-caregiver-coaching':'abc-tracks','sibling-conflict-safety-repair':'safety-gate','restrictive-eating-coordination':'parallel-assess','intellectual-disability-supported-choice':'access-tracks','health-anxiety-medical-plan':'loop-choice','body-dysmorphia-checking':'loop-choice','adult-autism-load-recovery':'context-budget','social-anxiety-attention':'attention-split','depression-activity-reward':'loop-choice','binge-eating-patterns':'loop-choice'};
 for(const [slug,cls] of Object.entries(models)){
  for(const page of ['support-map.html','index.html']){
   const html=fs.readFileSync('resources/clinical-topics/'+slug+'/'+page,'utf8');
