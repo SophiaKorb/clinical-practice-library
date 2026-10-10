@@ -9,6 +9,7 @@ const cases=[
  ['index','/resources/clinical-depth/index.html'],
  ['safety','/resources/clinical-depth/self-harm-safety-continuity.html'],
  ['dissociation','/resources/clinical-depth/complex-dissociation-functional-care.html'],
+ ['personality','/resources/clinical-depth/complex-personality-longitudinal-care.html'],
  ['function','/resources/clinical-depth/dissociation-function-observation.html'],
  ['homepage','/']
 ];
@@ -41,6 +42,10 @@ const cases=[
     await page.keyboard.press('Enter');
     assert.equal(await reveal.getAttribute('open'),null,'worked case collapses '+width);
    }
+   if(name==='personality'){
+    assert.equal(await page.locator('.cycle-map .cycle-node').count(),5);
+    assert.ok(await page.locator('#select tbody tr').count()>=4);
+   }
    if(name==='function'){
     await page.locator('textarea#task').fill('Fictional example only');
     await page.getByRole('button',{name:'Clear all entries'}).click();
@@ -69,5 +74,5 @@ const cases=[
  }
  await browser.close();
  if(issues.length)throw Error(issues.join('\n'));
- console.log('PASS 5 routes at 320/390/768/1280; Chromium screenshots, no document overflow, print PDFs, keyboard disclosure and native More, clear fields');
+ console.log('PASS 6 routes at 320/390/768/1280; Chromium screenshots, no document overflow, print PDFs, keyboard disclosure and native More, clear fields');
 })().catch(e=>{console.error(e);process.exitCode=1});
