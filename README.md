@@ -1,69 +1,42 @@
-# Clinical Practice Library
+# Clinical Practice Library (CPL)
 
-A searchable, shareable clinical resource catalog for clinicians, interns, trainees, patients, caregivers, and school-support work.
+Clinical Practice Library is a browsable collection of therapist guides, functional and assessment supports, shareable family materials, clinical learning pathways, and interactive visual tools. The resources are educational decision supports. They do not replace individual assessment, current diagnostic criteria, professional training, or local safety procedures.
 
-## Current build
+## Current branches
 
-This repository contains a working static web interface plus structured metadata for:
+- **`main`**: retained legacy production. Keep it available and do not mix unfinished Colorful 2.0 changes into it.
+- **`cpl-2-colorful-helpful`**: expanded Colorful 2.0 preview, including the DSM Foundations course and the Phase 8 / Phase 8B materials. Preview publication is **not** a claim of professional clinical review.
 
-- 95 Clinical Research Core records
-- 31 assessment and screening-tool records
-- 8 Arizona Barrier Support school-toolkit records
-- 134 indexed records total
-- the established library architecture for clinical, family, school, trainee, assessment, Arizona, California, and Spanish-language resources
+## Entry points
 
-The site is designed to run directly from GitHub Pages without a build step.
+- [Home](index.html)
+- [Browse all resources](resources/index.html)
+- [Clinical resource finder](resources/clinical-resource-finder.html)
+- [Clinical topics](resources/clinical-topics/index.html)
+- [Clinical depth decision guides](resources/clinical-depth/index.html)
+- [Visual reasoning toolkit](resources/therapy/visual-reasoning-toolkit.html)
+- [Communication supports](resources/therapy/communication-supports-toolkit.html)
+- [Treatment planning menu](resources/therapy/treatment-plan-menu.html)
+- [Learning center](resources/training/workforce-learning-center.html)
+- [DSM Foundations](resources/training/dsm-from-zero.html)
+- [Assessment entry point](resources/assessment/assessment-start-here.html)
 
-## What belongs here
+## Content structure
 
-Public-facing metadata, legitimate source links, author-created shareable materials, navigation, clinical cautions, evidence notes, and resource indexes.
+The repository contains current authored pages, generated clinical-topic pathways, Spanish-language supports, downloadable PDF companions, public resource metadata, and a preserved `legacy/` snapshot. Resource inventories differ by purpose: `data/library.json` is a selective catalog; `data/clinical-finder.json` indexes a broader searchable set; `data/topic-expansion-ledger.json` accounts for the Phase 8 expansion. Do not treat any one count as the total amount of independently clinically reviewed material.
 
-## What does not belong here
+Authoritative source/quality information and gap tracking live in `docs/qa/`, `data/topic-evidence-registry.json`, and `data/phase-8b-gap-matrix.json`.
 
-- PHI or client-specific documents
-- completed protocols or scored client forms
-- restricted test items, manuals, or proprietary scoring content
-- copyrighted full-text PDFs unless redistribution is explicitly permitted
-- unofficial copies of commercial measures
+## Testing
 
-The research catalog preserves canonical filenames and retrieval status so the separate PDF collection can remain curated without placing the PDFs in a public repository.
+On every branch push, GitHub Actions runs [CPL site QA](.github/workflows/site-qa.yml), which checks generated content integrity, internal links and fragments, JavaScript syntax, navigation, basic accessibility, search, selected interactions, and other resource-specific regressions. [Rendered browser QA](.github/workflows/phase-8b-rendered-qa.yml) uses Chromium and printable output for selected high-traffic pages at phone, tablet, and desktop widths.
 
-## Library architecture
+Source checks and automated browser tests are **not** a substitute for screen-reader testing, individual worksheet usability studies, systematic guideline appraisal, or qualified clinical review. High-stakes original material should remain review-gated until an appropriate expert has approved it.
 
-1. 00 START HERE
-2. FIND A RESOURCE
-3. 01 Families & Children - Trauma
-4. 02 Parent & Patient Education
-5. 03 School - IEP & 504
-6. 04 Clinical Practice - Therapist
-7. 05 Intern & Trainee
-8. 06 Assessments & Screening Tools
-9. 07 Arizona
-10. 08 California
-11. 09 ESPAÑOL
+## Privacy and intellectual property
 
-## Repository map
+No protected health information, completed assessment records, proprietary test manuals/items, or unauthorized copyrighted full-text documents belong in the public repository. See [privacy and copyright boundaries](docs/PRIVACY-AND-COPYRIGHT.md), [contribution guidance](CONTRIBUTING.md), and [project status](STATUS.md).
 
-- index.html: application shell
-- styles.css: responsive styling
-- app.js: search, filters, sorting, deep links, and export
-- data/library.json: normalized public resource metadata
-- data/taxonomy.json: library taxonomy
-- data/pathways.json: clinical-question decision-support pathways
-- data/assessment-gaps.json: de-identified verification backlog
-- STATUS.md: current build coverage and next content waves
-- docs/METADATA-SCHEMA.md: field definitions
-- docs/INGESTION-GUIDE.md: how to add resources safely
-- docs/PRIVACY-AND-COPYRIGHT.md: publication boundary
-- docs/DEPLOYMENT.md: GitHub Pages setup
-- CONTRIBUTING.md: contribution rules
+## Publishing rules
 
-## Source-of-truth rules
-
-The 95-item research core remains selective. Interesting new papers do not automatically enter the core. Canonical articles are not replaced with reviews unless explicitly designated as companion sources.
-
-For assessments, possession of a file is not the same thing as authorization to copy, administer, score, or distribute it. The public catalog stores decision-support metadata and links, not protected test content.
-
-## Status
-
-Initial public catalog scaffold created September 22, 2026.
+Keep changes intended for the redesign on `cpl-2-colorful-helpful`. Verify builds, local navigation, semantic labels, phone geometry, print output, and clinical warnings before publication. The retained live legacy version on `main` must stay untouched unless expressly requested.
