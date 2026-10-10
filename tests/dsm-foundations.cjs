@@ -42,7 +42,7 @@ assert.equal((html.match(/class="vocab-entry" data-vocab-entry/g)||[]).length,33
 for(const token of ['--surface-example','--surface-question','--surface-safety','--surface-correct','--surface-reconsider'])assert.ok(html.includes(token),'semantic color '+token);
 assert.match(html,/class="course-color-key"/,'visible color legend');
 assert.match(html,/class="safety-note"/,'clearly labeled acute safety caution');
-assert.match(html,/Alcohol withdrawal can be life-threatening/,'withdrawal safety');
+assert.match(html,/(?:Alcohol withdrawal|Withdrawal from heavy alcohol use) can be life-threatening/,'withdrawal safety');
 assert.match(html,/tolerance and withdrawal are not counted as SUD criteria/,'medically supervised treatment exception');
 assert.match(html,/At least two applicable criteria/,'threshold guidance');
 assert.match(html,/2–3/);assert.match(html,/4–5/);assert.match(html,/6\+/);
