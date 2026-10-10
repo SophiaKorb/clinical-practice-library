@@ -26,3 +26,12 @@
 .safety-fork p{margin:0}
 @media(max-width:850px){.clinical-map.access-tracks,.clinical-map.abc-tracks,.clinical-map.safety-gate{grid-template-columns:1fr}.clinical-map.access-tracks li,.clinical-map.abc-tracks li,.clinical-map.safety-gate li{grid-column:1/-1!important}.safety-fork{grid-template-columns:1fr}}
 @media print{.clinical-map.access-tracks,.clinical-map.abc-tracks,.clinical-map.safety-gate{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.clinical-map.access-tracks li,.clinical-map.abc-tracks li,.clinical-map.safety-gate li{grid-column:auto!important;min-width:0}.clinical-map.safety-gate li:nth-child(3){grid-column:1/-1!important}.clinical-map.access-tracks li,.clinical-map.abc-tracks li,.clinical-map.safety-gate li,.safety-fork section{background:white!important;break-inside:avoid;box-shadow:none}.safety-fork{grid-template-columns:1fr 1fr;gap:8px}.safety-fork section{padding:10px}.map-legend{background:white;color:black;border-color:black;padding:8px}.clinical-map.return-loop{border-color:black}}
+
+/* Medical/behavioral assessment must not be portrayed as sequential in restrictive eating care. */
+.clinical-map.parallel-assess{grid-template-columns:repeat(6,minmax(0,1fr));gap:16px}
+.clinical-map.parallel-assess li::after{display:none}
+.clinical-map.parallel-assess li:nth-child(1),.clinical-map.parallel-assess li:nth-child(n+4){grid-column:1/-1}
+.clinical-map.parallel-assess li:nth-child(2),.clinical-map.parallel-assess li:nth-child(3){grid-column:span 3;border-left:5px solid #245e50}
+.clinical-map.parallel-assess li:nth-child(2){border-left-color:#955a40}
+@media(max-width:850px){.clinical-map.parallel-assess{grid-template-columns:1fr}.clinical-map.parallel-assess li{grid-column:1/-1!important}}
+@media print{.clinical-map.parallel-assess{display:grid;grid-template-columns:1fr 1fr;gap:7px}.clinical-map.parallel-assess li:nth-child(1),.clinical-map.parallel-assess li:nth-child(n+4){grid-column:1/-1}.clinical-map.parallel-assess li:nth-child(2),.clinical-map.parallel-assess li:nth-child(3){grid-column:span 1}}
