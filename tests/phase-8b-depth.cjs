@@ -47,6 +47,16 @@ for(const old of ['index.html','resources/clinical-resource-finder.html','resour
  const t=fs.readFileSync(old,'utf8');
  assert.ok(t.includes('clinical-depth/'),'old pathway connected '+old);
 }
+const finder=JSON.parse(fs.readFileSync('data/clinical-finder.json','utf8'));
+const current=new Map(finder.resources.map(r=>[r.url,r]));
+for(const route of names) {
+ const url='/resources/clinical-depth/'+route;
+ const entry=current.get(url);
+ assert.ok(entry,'Phase 8B searchable '+route);
+ assert.ok(entry.metadataBasis.includes('Phase 8B'),'curated coverage '+route);
+ assert.ok(entry.tags.role.includes('Clinician')||entry.tags.role.includes('Client / caregiver'),'appropriate audience '+route);
+}
+assert.ok(!finder.resources.some(r=>r.url.startsWith('/legacy/')));
 const matrix=JSON.parse(fs.readFileSync('data/phase-8b-gap-matrix.json','utf8'));
 assert.ok(matrix.entries.length>=15);
 assert.equal(new Set(matrix.entries.map(x=>x.key)).size,matrix.entries.length);
