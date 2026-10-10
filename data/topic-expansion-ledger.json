@@ -1,6 +1,6 @@
 {
   "target": 150,
-  "completedMeaningfulResources": 120,
+  "completedMeaningfulResources": 150,
   "countPolicy": "Six distinct purposes per topic. Collection pages, PDFs, shared assets and cosmetic changes excluded. Count does not certify clinical quality.",
   "resources": [
     {
@@ -1822,6 +1822,468 @@
         "cci-bdd"
       ],
       "wave": 4,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/health-anxiety-medical-plan/formulation.html",
+      "topic": "health-anxiety-medical-plan",
+      "title": "Health anxiety: checking and a clear medical plan \u2014 Clinician formulation guide",
+      "type": "formulation",
+      "audience": "Adults",
+      "sources": [
+        "cci-health"
+      ],
+      "wave": 5,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/health-anxiety-medical-plan/case.html",
+      "topic": "health-anxiety-medical-plan",
+      "title": "Health anxiety: checking and a clear medical plan \u2014 Interactive case practice",
+      "type": "case",
+      "audience": "Adults",
+      "sources": [
+        "cci-health"
+      ],
+      "wave": 5,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/health-anxiety-medical-plan/support-map.html",
+      "topic": "health-anxiety-medical-plan",
+      "title": "Health anxiety: checking and a clear medical plan \u2014 Visual support map",
+      "type": "support-map",
+      "audience": "Adults",
+      "sources": [
+        "cci-health"
+      ],
+      "wave": 5,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/health-anxiety-medical-plan/client-workbook.html",
+      "topic": "health-anxiety-medical-plan",
+      "title": "Health anxiety: checking and a clear medical plan \u2014 Client workbook",
+      "type": "client-workbook",
+      "audience": "Adults",
+      "sources": [
+        "cci-health"
+      ],
+      "wave": 5,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/health-anxiety-medical-plan/care-partner.html",
+      "topic": "health-anxiety-medical-plan",
+      "title": "Health anxiety: checking and a clear medical plan \u2014 Care-partner guide",
+      "type": "care-partner",
+      "audience": "Adults",
+      "sources": [
+        "cci-health"
+      ],
+      "wave": 5,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/health-anxiety-medical-plan/progress-review.html",
+      "topic": "health-anxiety-medical-plan",
+      "title": "Health anxiety: checking and a clear medical plan \u2014 Progress review tool",
+      "type": "progress-review",
+      "audience": "Adults",
+      "sources": [
+        "cci-health"
+      ],
+      "wave": 5,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/chronic-pain-pacing/formulation.html",
+      "topic": "chronic-pain-pacing",
+      "title": "Chronic pain: pacing, function and access \u2014 Clinician formulation guide",
+      "type": "formulation",
+      "audience": "Adults",
+      "sources": [
+        "nice-pain"
+      ],
+      "wave": 5,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/chronic-pain-pacing/case.html",
+      "topic": "chronic-pain-pacing",
+      "title": "Chronic pain: pacing, function and access \u2014 Interactive case practice",
+      "type": "case",
+      "audience": "Adults",
+      "sources": [
+        "nice-pain"
+      ],
+      "wave": 5,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/chronic-pain-pacing/support-map.html",
+      "topic": "chronic-pain-pacing",
+      "title": "Chronic pain: pacing, function and access \u2014 Visual support map",
+      "type": "support-map",
+      "audience": "Adults",
+      "sources": [
+        "nice-pain"
+      ],
+      "wave": 5,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/chronic-pain-pacing/client-workbook.html",
+      "topic": "chronic-pain-pacing",
+      "title": "Chronic pain: pacing, function and access \u2014 Client workbook",
+      "type": "client-workbook",
+      "audience": "Adults",
+      "sources": [
+        "nice-pain"
+      ],
+      "wave": 5,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/chronic-pain-pacing/care-partner.html",
+      "topic": "chronic-pain-pacing",
+      "title": "Chronic pain: pacing, function and access \u2014 Care-partner guide",
+      "type": "care-partner",
+      "audience": "Adults",
+      "sources": [
+        "nice-pain"
+      ],
+      "wave": 5,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/chronic-pain-pacing/progress-review.html",
+      "topic": "chronic-pain-pacing",
+      "title": "Chronic pain: pacing, function and access \u2014 Progress review tool",
+      "type": "progress-review",
+      "audience": "Adults",
+      "sources": [
+        "nice-pain"
+      ],
+      "wave": 5,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/insomnia-cbti-readiness/formulation.html",
+      "topic": "insomnia-cbti-readiness",
+      "title": "Insomnia: assessment questions and CBT-I readiness \u2014 Clinician formulation guide",
+      "type": "formulation",
+      "audience": "Adults",
+      "sources": [
+        "aasm-insomnia"
+      ],
+      "wave": 5,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/insomnia-cbti-readiness/case.html",
+      "topic": "insomnia-cbti-readiness",
+      "title": "Insomnia: assessment questions and CBT-I readiness \u2014 Interactive case practice",
+      "type": "case",
+      "audience": "Adults",
+      "sources": [
+        "aasm-insomnia"
+      ],
+      "wave": 5,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/insomnia-cbti-readiness/support-map.html",
+      "topic": "insomnia-cbti-readiness",
+      "title": "Insomnia: assessment questions and CBT-I readiness \u2014 Visual support map",
+      "type": "support-map",
+      "audience": "Adults",
+      "sources": [
+        "aasm-insomnia"
+      ],
+      "wave": 5,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/insomnia-cbti-readiness/client-workbook.html",
+      "topic": "insomnia-cbti-readiness",
+      "title": "Insomnia: assessment questions and CBT-I readiness \u2014 Client workbook",
+      "type": "client-workbook",
+      "audience": "Adults",
+      "sources": [
+        "aasm-insomnia"
+      ],
+      "wave": 5,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/insomnia-cbti-readiness/care-partner.html",
+      "topic": "insomnia-cbti-readiness",
+      "title": "Insomnia: assessment questions and CBT-I readiness \u2014 Care-partner guide",
+      "type": "care-partner",
+      "audience": "Adults",
+      "sources": [
+        "aasm-insomnia"
+      ],
+      "wave": 5,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/insomnia-cbti-readiness/progress-review.html",
+      "topic": "insomnia-cbti-readiness",
+      "title": "Insomnia: assessment questions and CBT-I readiness \u2014 Progress review tool",
+      "type": "progress-review",
+      "audience": "Adults",
+      "sources": [
+        "aasm-insomnia"
+      ],
+      "wave": 5,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/child-aggression-caregiver-coaching/formulation.html",
+      "topic": "child-aggression-caregiver-coaching",
+      "title": "Child aggression: safety, function and caregiver coaching \u2014 Clinician formulation guide",
+      "type": "formulation",
+      "audience": "School-age children and caregivers",
+      "sources": [
+        "pbis-fba",
+        "nctsn-family"
+      ],
+      "wave": 5,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/child-aggression-caregiver-coaching/case.html",
+      "topic": "child-aggression-caregiver-coaching",
+      "title": "Child aggression: safety, function and caregiver coaching \u2014 Interactive case practice",
+      "type": "case",
+      "audience": "School-age children and caregivers",
+      "sources": [
+        "pbis-fba",
+        "nctsn-family"
+      ],
+      "wave": 5,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/child-aggression-caregiver-coaching/support-map.html",
+      "topic": "child-aggression-caregiver-coaching",
+      "title": "Child aggression: safety, function and caregiver coaching \u2014 Visual support map",
+      "type": "support-map",
+      "audience": "School-age children and caregivers",
+      "sources": [
+        "pbis-fba",
+        "nctsn-family"
+      ],
+      "wave": 5,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/child-aggression-caregiver-coaching/client-workbook.html",
+      "topic": "child-aggression-caregiver-coaching",
+      "title": "Child aggression: safety, function and caregiver coaching \u2014 Client workbook",
+      "type": "client-workbook",
+      "audience": "School-age children and caregivers",
+      "sources": [
+        "pbis-fba",
+        "nctsn-family"
+      ],
+      "wave": 5,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/child-aggression-caregiver-coaching/care-partner.html",
+      "topic": "child-aggression-caregiver-coaching",
+      "title": "Child aggression: safety, function and caregiver coaching \u2014 Care-partner guide",
+      "type": "care-partner",
+      "audience": "School-age children and caregivers",
+      "sources": [
+        "pbis-fba",
+        "nctsn-family"
+      ],
+      "wave": 5,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/child-aggression-caregiver-coaching/progress-review.html",
+      "topic": "child-aggression-caregiver-coaching",
+      "title": "Child aggression: safety, function and caregiver coaching \u2014 Progress review tool",
+      "type": "progress-review",
+      "audience": "School-age children and caregivers",
+      "sources": [
+        "pbis-fba",
+        "nctsn-family"
+      ],
+      "wave": 5,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/sibling-conflict-safety-repair/formulation.html",
+      "topic": "sibling-conflict-safety-repair",
+      "title": "Sibling conflict: power, safety and repair \u2014 Clinician formulation guide",
+      "type": "formulation",
+      "audience": "School-age children and caregivers",
+      "sources": [
+        "nctsn-family",
+        "pbis-fba"
+      ],
+      "wave": 5,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/sibling-conflict-safety-repair/case.html",
+      "topic": "sibling-conflict-safety-repair",
+      "title": "Sibling conflict: power, safety and repair \u2014 Interactive case practice",
+      "type": "case",
+      "audience": "School-age children and caregivers",
+      "sources": [
+        "nctsn-family",
+        "pbis-fba"
+      ],
+      "wave": 5,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/sibling-conflict-safety-repair/support-map.html",
+      "topic": "sibling-conflict-safety-repair",
+      "title": "Sibling conflict: power, safety and repair \u2014 Visual support map",
+      "type": "support-map",
+      "audience": "School-age children and caregivers",
+      "sources": [
+        "nctsn-family",
+        "pbis-fba"
+      ],
+      "wave": 5,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/sibling-conflict-safety-repair/client-workbook.html",
+      "topic": "sibling-conflict-safety-repair",
+      "title": "Sibling conflict: power, safety and repair \u2014 Client workbook",
+      "type": "client-workbook",
+      "audience": "School-age children and caregivers",
+      "sources": [
+        "nctsn-family",
+        "pbis-fba"
+      ],
+      "wave": 5,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/sibling-conflict-safety-repair/care-partner.html",
+      "topic": "sibling-conflict-safety-repair",
+      "title": "Sibling conflict: power, safety and repair \u2014 Care-partner guide",
+      "type": "care-partner",
+      "audience": "School-age children and caregivers",
+      "sources": [
+        "nctsn-family",
+        "pbis-fba"
+      ],
+      "wave": 5,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/sibling-conflict-safety-repair/progress-review.html",
+      "topic": "sibling-conflict-safety-repair",
+      "title": "Sibling conflict: power, safety and repair \u2014 Progress review tool",
+      "type": "progress-review",
+      "audience": "School-age children and caregivers",
+      "sources": [
+        "nctsn-family",
+        "pbis-fba"
+      ],
+      "wave": 5,
       "reviewDate": "2026-10-10",
       "qualifiedClinicalReview": "pending",
       "browserQA": "unavailable",

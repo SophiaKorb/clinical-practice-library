@@ -2460,7 +2460,7 @@
     {
       "path": "resources/clinical-topics/adult-adhd-task-starts/case.html",
       "bytes": 7310,
-      "sha256": "3cbcc31ad915467afc844811b320c6256ac453a95375bee135a78ed153145fce",
+      "sha256": "2bc24b86af56f7fdb5f619793e39c1c6cc4c0e7049603098161b10233530485d",
       "retained_legacy": false,
       "title": "Adult ADHD: task starts and external scaffolds \u2014 Interactive case practice | Clinical Practice Library",
       "reachable_from_home": true
@@ -2475,8 +2475,8 @@
     },
     {
       "path": "resources/clinical-topics/adult-adhd-task-starts/formulation.html",
-      "bytes": 6013,
-      "sha256": "b0027eb482930ae843f97e0d6cbb5cbd7843becbdfdfd61b3cde18d2219a3e3c",
+      "bytes": 6026,
+      "sha256": "1503f96a51aca02dbff2b1f27226ec2b9278e09bd1c146fe4895c757f78a1724",
       "retained_legacy": false,
       "title": "Adult ADHD: task starts and external scaffolds \u2014 Clinician formulation guide | Clinical Practice Library",
       "reachable_from_home": true
@@ -2531,8 +2531,8 @@
     },
     {
       "path": "resources/clinical-topics/adult-autism-load-recovery/formulation.html",
-      "bytes": 5970,
-      "sha256": "5bc45d5130c90fed33da692f4eb9c1750c1bc417bcdb3fff42987c981f9ca80b",
+      "bytes": 5983,
+      "sha256": "384e3aa01c75655a47ef9f945c18a0d7509bd4d43f6f0087064deafec44170f1",
       "retained_legacy": false,
       "title": "Adult autism: load, access and recovery \u2014 Clinician formulation guide | Clinical Practice Library",
       "reachable_from_home": true
@@ -2572,7 +2572,7 @@
     {
       "path": "resources/clinical-topics/aphasia-communication-access/case.html",
       "bytes": 7365,
-      "sha256": "776cd27db85016a60e4e7337f3259b52710504acba21103065ce7e9fb0295cc9",
+      "sha256": "f22c766f0d77111f92f1ca97285e8294d28b32c200196e6d0de62a1931926eac",
       "retained_legacy": false,
       "title": "Acquired aphasia: supported communication and participation \u2014 Interactive case practice | Clinical Practice Library",
       "reachable_from_home": true
@@ -2587,8 +2587,8 @@
     },
     {
       "path": "resources/clinical-topics/aphasia-communication-access/formulation.html",
-      "bytes": 5967,
-      "sha256": "175e6ff36642b180441611b089ea732b4a6fd93839328adaa35e31f1fb62360c",
+      "bytes": 5980,
+      "sha256": "f89b536a02cbe7050bad6977a8d82279b6b8a1f4080c88cc6093c77d8a177690",
       "retained_legacy": false,
       "title": "Acquired aphasia: supported communication and participation \u2014 Clinician formulation guide | Clinical Practice Library",
       "reachable_from_home": true
@@ -2619,56 +2619,56 @@
     },
     {
       "path": "resources/clinical-topics/bfrb-awareness-support/care-partner.html",
-      "bytes": 6199,
-      "sha256": "28f2a0c56ea3cefb8d4e326104184b5552162966cb24aaeac2c719d965d2ac16",
+      "bytes": 6371,
+      "sha256": "cc208cb467e0c2296f7e7b6e48d6a1adf085433e96a1314c81ba6866faee02bd",
       "retained_legacy": false,
       "title": "Body-focused repetitive behaviors: awareness and tailored support \u2014 Care-partner guide | Clinical Practice Library",
       "reachable_from_home": true
     },
     {
       "path": "resources/clinical-topics/bfrb-awareness-support/case.html",
-      "bytes": 7565,
-      "sha256": "ccb5ba621755eacd28fb3251e0a9dee8d3a65ea992b81089bb562f5d3ea5f5c1",
+      "bytes": 7737,
+      "sha256": "5b6be9d35a962eafb39a59c166ae7b2e57c493f03f42467d76569ccb0480e94d",
       "retained_legacy": false,
       "title": "Body-focused repetitive behaviors: awareness and tailored support \u2014 Interactive case practice | Clinical Practice Library",
       "reachable_from_home": true
     },
     {
       "path": "resources/clinical-topics/bfrb-awareness-support/client-workbook.html",
-      "bytes": 5668,
-      "sha256": "34cac3527b7c5bec715c1d137dfac488d0f35652682350c55ed7c78b45797aea",
+      "bytes": 5840,
+      "sha256": "d1b292b37751f062662685d2748d4b306ccec58699f113f2dbaf942b9f920e02",
       "retained_legacy": false,
       "title": "Body-focused repetitive behaviors: awareness and tailored support \u2014 Client workbook | Clinical Practice Library",
       "reachable_from_home": true
     },
     {
       "path": "resources/clinical-topics/bfrb-awareness-support/formulation.html",
-      "bytes": 6223,
-      "sha256": "ba5328b4820fa78c072c1fe5d337b704b2e964c6c985962f206f823364af438d",
+      "bytes": 6408,
+      "sha256": "0eaeab024981575036daf1fcfdf88f57833461f70029a23b7dec4bec9e92ba50",
       "retained_legacy": false,
       "title": "Body-focused repetitive behaviors: awareness and tailored support \u2014 Clinician formulation guide | Clinical Practice Library",
       "reachable_from_home": true
     },
     {
       "path": "resources/clinical-topics/bfrb-awareness-support/index.html",
-      "bytes": 4816,
-      "sha256": "cb9dd3f5723aaf47ca1f1328fc48416a1e5b3aeaf6bb1b0faedd98fd55299098",
+      "bytes": 4988,
+      "sha256": "bd0950f1717be4e8a4bc0703939054b498a0f8333ba0e362929dd60f256559ff",
       "retained_legacy": false,
       "title": "Body-focused repetitive behaviors: awareness and tailored support | Clinical Practice Library",
       "reachable_from_home": true
     },
     {
       "path": "resources/clinical-topics/bfrb-awareness-support/progress-review.html",
-      "bytes": 6826,
-      "sha256": "1a7b354d2f6e14934ceb94df2e5a718c34e0f4cada1e142eb1e6ab507044aa9d",
+      "bytes": 6998,
+      "sha256": "c82b4f4e3870d5b9699ad581a6032a53b521fe98829dfeadc77928cd9f33f3c3",
       "retained_legacy": false,
       "title": "Body-focused repetitive behaviors: awareness and tailored support \u2014 Progress review tool | Clinical Practice Library",
       "reachable_from_home": true
     },
     {
       "path": "resources/clinical-topics/bfrb-awareness-support/support-map.html",
-      "bytes": 7253,
-      "sha256": "d200b978449fbddb1a9931e868d028cd99923e5a8a20efcd0dbcd5a67c12ccaa",
+      "bytes": 7425,
+      "sha256": "ed9d3c9dc8a9da1abf78261e95222db0d9b5b81546fd36425a2b19c8810b265e",
       "retained_legacy": false,
       "title": "Body-focused repetitive behaviors: awareness and tailored support \u2014 Visual support map | Clinical Practice Library",
       "reachable_from_home": true
@@ -2684,7 +2684,7 @@
     {
       "path": "resources/clinical-topics/binge-eating-patterns/case.html",
       "bytes": 7258,
-      "sha256": "00d24dd31b3b1e9d224ecacd6881ac801477dcb83277a5f49b46b175da5b66f0",
+      "sha256": "680504bf1c3e442e7ada4a92fb5c867b592a888ce91de6736123e8336fbcf20c",
       "retained_legacy": false,
       "title": "Binge eating: patterns, shame and treatment engagement \u2014 Interactive case practice | Clinical Practice Library",
       "reachable_from_home": true
@@ -2699,8 +2699,8 @@
     },
     {
       "path": "resources/clinical-topics/binge-eating-patterns/formulation.html",
-      "bytes": 5916,
-      "sha256": "9aa62e2e2d3eb67e241573ac5f145e776d0637a2d23d971bf25158edb2774ba1",
+      "bytes": 5929,
+      "sha256": "a58fa7f556a7ed67ac2e39dc13503013c9d6f8891af249f370a43e89798e2ac9",
       "retained_legacy": false,
       "title": "Binge eating: patterns, shame and treatment engagement \u2014 Clinician formulation guide | Clinical Practice Library",
       "reachable_from_home": true
@@ -2755,8 +2755,8 @@
     },
     {
       "path": "resources/clinical-topics/bipolar-episode-timeline/formulation.html",
-      "bytes": 6427,
-      "sha256": "f613be1c48d8544f97be77a60813386b7018f10bf283726b9f5fdb9c54d61f6f",
+      "bytes": 6440,
+      "sha256": "1a4fd21c3baad72f9b2fb8d42c6e1d52243456438756f96ffdf7f246ffb1fcb8",
       "retained_legacy": false,
       "title": "Bipolar: episodes, baseline and support \u2014 Clinician formulation guide | Clinical Practice Library",
       "reachable_from_home": true
@@ -2796,7 +2796,7 @@
     {
       "path": "resources/clinical-topics/body-dysmorphia-checking/case.html",
       "bytes": 7471,
-      "sha256": "3c83fb96b1217a5fa82d45e693ae564f4dc6e56a42af9cb4af7bc66e6c29b566",
+      "sha256": "d2754edb1bed28d9b78f6120f1e65df39129c473da8974f315306a688ee9a4ab",
       "retained_legacy": false,
       "title": "Body dysmorphic concerns: checking and participation \u2014 Interactive case practice | Clinical Practice Library",
       "reachable_from_home": true
@@ -2811,8 +2811,8 @@
     },
     {
       "path": "resources/clinical-topics/body-dysmorphia-checking/formulation.html",
-      "bytes": 6129,
-      "sha256": "1a65ded811e7b718620317c5a72f029251f8212febf459f67332520e1fd20caa",
+      "bytes": 6142,
+      "sha256": "3f15dd2fbf157e31d5f8c32c11994370267bfec9e94b3a58e25f571773c3a9e7",
       "retained_legacy": false,
       "title": "Body dysmorphic concerns: checking and participation \u2014 Clinician formulation guide | Clinical Practice Library",
       "reachable_from_home": true
@@ -2842,6 +2842,62 @@
       "reachable_from_home": true
     },
     {
+      "path": "resources/clinical-topics/child-aggression-caregiver-coaching/care-partner.html",
+      "bytes": 6418,
+      "sha256": "2456511da6282a45319b4ff0eed429de3a66951d3aa681bf3e7f437326f4b34b",
+      "retained_legacy": false,
+      "title": "Child aggression: safety, function and caregiver coaching \u2014 Care-partner guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/child-aggression-caregiver-coaching/case.html",
+      "bytes": 7754,
+      "sha256": "9e797d0dcb46e708ea329c01577a9972ccc44ce434c617a584e0b8ae039899ae",
+      "retained_legacy": false,
+      "title": "Child aggression: safety, function and caregiver coaching \u2014 Interactive case practice | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/child-aggression-caregiver-coaching/client-workbook.html",
+      "bytes": 5733,
+      "sha256": "4d657cf51da5336433b40e58d905889132976b1f310a0992ea2aed30e9a54ec7",
+      "retained_legacy": false,
+      "title": "Child aggression: safety, function and caregiver coaching \u2014 Client workbook | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/child-aggression-caregiver-coaching/formulation.html",
+      "bytes": 6537,
+      "sha256": "a8f1c3d8b3b37ac64640a41985fc910239bee097694fcdb2009dc0ee26716acd",
+      "retained_legacy": false,
+      "title": "Child aggression: safety, function and caregiver coaching \u2014 Clinician formulation guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/child-aggression-caregiver-coaching/index.html",
+      "bytes": 4979,
+      "sha256": "17b63dc37cae5201711e8e282cd4ea025ca005c19000eca0d6e328d285dfe66f",
+      "retained_legacy": false,
+      "title": "Child aggression: safety, function and caregiver coaching | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/child-aggression-caregiver-coaching/progress-review.html",
+      "bytes": 7096,
+      "sha256": "ff88ded21b41d2b7b732ae42f8b50153cb7e5fb0ae389daaa61e374c4347b0d1",
+      "retained_legacy": false,
+      "title": "Child aggression: safety, function and caregiver coaching \u2014 Progress review tool | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/child-aggression-caregiver-coaching/support-map.html",
+      "bytes": 7502,
+      "sha256": "5420c8cb8f0e9911f8643d289552e6a10bc4797a9b7bc50339503d0eb4d917aa",
+      "retained_legacy": false,
+      "title": "Child aggression: safety, function and caregiver coaching \u2014 Visual support map | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
       "path": "resources/clinical-topics/child-grief-continuing-bonds/care-partner.html",
       "bytes": 5969,
       "sha256": "a78863c3c7b7ec8947f693b1fc0ce5b01ff7f76b88ca8a10e84a6ecc8d897ca8",
@@ -2867,8 +2923,8 @@
     },
     {
       "path": "resources/clinical-topics/child-grief-continuing-bonds/formulation.html",
-      "bytes": 6010,
-      "sha256": "53d7c5078f14ff0de36457c02164ea037aa5ac69621bbbb42b991fed7353940e",
+      "bytes": 6023,
+      "sha256": "3ae903e7202d3fcf1e0de144753d60333ef38571dd7ee8dee639bc4fbdf7daa2",
       "retained_legacy": false,
       "title": "Child grief: remembrance, routines and traumatic reminders \u2014 Clinician formulation guide | Clinical Practice Library",
       "reachable_from_home": true
@@ -2898,6 +2954,62 @@
       "reachable_from_home": true
     },
     {
+      "path": "resources/clinical-topics/chronic-pain-pacing/care-partner.html",
+      "bytes": 5714,
+      "sha256": "19bc2cc9aed98e8eb5b0b7f471e51bc163c71cb258bc673575faa317199433ea",
+      "retained_legacy": false,
+      "title": "Chronic pain: pacing, function and access \u2014 Care-partner guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/chronic-pain-pacing/case.html",
+      "bytes": 7012,
+      "sha256": "cf7da5dc5a48102f01edd07ec08bc41580e7049df69ec1a2d2795e0eae4abbfd",
+      "retained_legacy": false,
+      "title": "Chronic pain: pacing, function and access \u2014 Interactive case practice | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/chronic-pain-pacing/client-workbook.html",
+      "bytes": 5156,
+      "sha256": "2e74236ea34f9ef641c3cfe239abd38ca44c578890b255d5d72f0648b61b8bf7",
+      "retained_legacy": false,
+      "title": "Chronic pain: pacing, function and access \u2014 Client workbook | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/chronic-pain-pacing/formulation.html",
+      "bytes": 5783,
+      "sha256": "3798d584dd04df29b95984fc68b59b2d1e0b902230247a6d4953e3d779145d98",
+      "retained_legacy": false,
+      "title": "Chronic pain: pacing, function and access \u2014 Clinician formulation guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/chronic-pain-pacing/index.html",
+      "bytes": 4347,
+      "sha256": "f2d4ed8134af955bd4cd5aabdce3d1405e8211181d44adf1ea7a536c6180bc8e",
+      "retained_legacy": false,
+      "title": "Chronic pain: pacing, function and access | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/chronic-pain-pacing/progress-review.html",
+      "bytes": 6471,
+      "sha256": "418e2416a361516978982aa55a4f354f1e672e6114623c88154bad276ddb7629",
+      "retained_legacy": false,
+      "title": "Chronic pain: pacing, function and access \u2014 Progress review tool | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/chronic-pain-pacing/support-map.html",
+      "bytes": 6791,
+      "sha256": "a8b7a82b95127839024aa554a82c369e92f606d5942bd5563b3ff84154e546fa",
+      "retained_legacy": false,
+      "title": "Chronic pain: pacing, function and access \u2014 Visual support map | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
       "path": "resources/clinical-topics/depression-activity-reward/care-partner.html",
       "bytes": 6065,
       "sha256": "198abaac7c8d3a3a158b2f6036e23b87719e4d9e12ee19f601ba90d914782695",
@@ -2923,8 +3035,8 @@
     },
     {
       "path": "resources/clinical-topics/depression-activity-reward/formulation.html",
-      "bytes": 6181,
-      "sha256": "b93cfe813fe88762adad67800486403992c1ff7117812ac92c690509af0536ae",
+      "bytes": 6194,
+      "sha256": "d5578f75b629feffffb3ffbb0557e4aa60e11055c8cff43228a7dd5a5242cdd6",
       "retained_legacy": false,
       "title": "Depression: activity, reward and workable steps \u2014 Clinician formulation guide | Clinical Practice Library",
       "reachable_from_home": true
@@ -2964,7 +3076,7 @@
     {
       "path": "resources/clinical-topics/dissociation-function-orientation/case.html",
       "bytes": 7468,
-      "sha256": "922127fab13f9b904675318b6dfd5b407ac8de83966db380fb06ad2cf21884a1",
+      "sha256": "8386314b018d6d77e4d7aa9e893ea90688532436e2a8c6bf2a9c3c6135369929",
       "retained_legacy": false,
       "title": "Dissociation: orientation, time gaps and daily function \u2014 Interactive case practice | Clinical Practice Library",
       "reachable_from_home": true
@@ -2979,8 +3091,8 @@
     },
     {
       "path": "resources/clinical-topics/dissociation-function-orientation/formulation.html",
-      "bytes": 6180,
-      "sha256": "571d6ac306b21f8c29d163ceef682b3ff4513b9f9aeb5860d4c0835e769e58b2",
+      "bytes": 6193,
+      "sha256": "79947bc72d6c5c2c344690de4e0f510feac163aca1bdb091d75fd7a07aedbeec",
       "retained_legacy": false,
       "title": "Dissociation: orientation, time gaps and daily function \u2014 Clinician formulation guide | Clinical Practice Library",
       "reachable_from_home": true
@@ -3010,11 +3122,123 @@
       "reachable_from_home": true
     },
     {
+      "path": "resources/clinical-topics/health-anxiety-medical-plan/care-partner.html",
+      "bytes": 5814,
+      "sha256": "46606f7eb1061a87f4dfd509ea94bd0575c54cf37944a8b5f63ea5ea1333f1f8",
+      "retained_legacy": false,
+      "title": "Health anxiety: checking and a clear medical plan \u2014 Care-partner guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/health-anxiety-medical-plan/case.html",
+      "bytes": 7191,
+      "sha256": "b23cc5bd6f9bcb976442e64db107e6cddb334f2ee11bdc7b71b5584bc34a2b59",
+      "retained_legacy": false,
+      "title": "Health anxiety: checking and a clear medical plan \u2014 Interactive case practice | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/health-anxiety-medical-plan/client-workbook.html",
+      "bytes": 5324,
+      "sha256": "51776bf24813f5bccff4eca60478d12d618b652ebbabdb4d476ac47856b46d59",
+      "retained_legacy": false,
+      "title": "Health anxiety: checking and a clear medical plan \u2014 Client workbook | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/health-anxiety-medical-plan/formulation.html",
+      "bytes": 5930,
+      "sha256": "6b622c4ea5f278731015a0e91bc19713c820ef5f5b3677a9f001ec2fe5123bb0",
+      "retained_legacy": false,
+      "title": "Health anxiety: checking and a clear medical plan \u2014 Clinician formulation guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/health-anxiety-medical-plan/index.html",
+      "bytes": 4409,
+      "sha256": "cd082ea49006b0d697c19765e20da44b456870c1672c5cbc4a8c06fa6efaf43b",
+      "retained_legacy": false,
+      "title": "Health anxiety: checking and a clear medical plan | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/health-anxiety-medical-plan/progress-review.html",
+      "bytes": 6564,
+      "sha256": "4eccfd438a10f972f376acf15c5e1781f0f92e3d907ec12df87557ee96cfbef8",
+      "retained_legacy": false,
+      "title": "Health anxiety: checking and a clear medical plan \u2014 Progress review tool | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/health-anxiety-medical-plan/support-map.html",
+      "bytes": 7022,
+      "sha256": "e94689af09baf265d0aa263284996710d55d3698d85af439344965016e65b55c",
+      "retained_legacy": false,
+      "title": "Health anxiety: checking and a clear medical plan \u2014 Visual support map | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
       "path": "resources/clinical-topics/index.html",
-      "bytes": 18244,
-      "sha256": "fa80e3b8fc70db816619e756cea5949a5265fdd37acbab4c6bf8ea4cb31fa2f7",
+      "bytes": 22396,
+      "sha256": "ff8ba894e9e3716778fc254337068db3d84afb79eada68a4374eb57512213c4a",
       "retained_legacy": false,
       "title": "Clinical topic collections | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/insomnia-cbti-readiness/care-partner.html",
+      "bytes": 5927,
+      "sha256": "b5384c65b8524c208ebfcf77833921016a18aec5e71f73b4e9d91b05a892051f",
+      "retained_legacy": false,
+      "title": "Insomnia: assessment questions and CBT-I readiness \u2014 Care-partner guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/insomnia-cbti-readiness/case.html",
+      "bytes": 7242,
+      "sha256": "896319ab75785babc0b5844435431f704291e11f897e6245cdda00991f2a9b56",
+      "retained_legacy": false,
+      "title": "Insomnia: assessment questions and CBT-I readiness \u2014 Interactive case practice | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/insomnia-cbti-readiness/client-workbook.html",
+      "bytes": 5478,
+      "sha256": "4aa029a49874ef94138123fb6678b4cd88333d86a6587aa8e5714566341b7416",
+      "retained_legacy": false,
+      "title": "Insomnia: assessment questions and CBT-I readiness \u2014 Client workbook | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/insomnia-cbti-readiness/formulation.html",
+      "bytes": 5988,
+      "sha256": "febc005c6d5b81eb4f177e49f9efaede1150b78a84492882919dd495e6e9f0a8",
+      "retained_legacy": false,
+      "title": "Insomnia: assessment questions and CBT-I readiness \u2014 Clinician formulation guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/insomnia-cbti-readiness/index.html",
+      "bytes": 4576,
+      "sha256": "870898b74a530b28bf920fb4b326c87199191795457b5c92a0e52909bbf558b4",
+      "retained_legacy": false,
+      "title": "Insomnia: assessment questions and CBT-I readiness | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/insomnia-cbti-readiness/progress-review.html",
+      "bytes": 6611,
+      "sha256": "f0de3de225f0f10869264ebb600b390d02e245ca29130d8793f356178e855d74",
+      "retained_legacy": false,
+      "title": "Insomnia: assessment questions and CBT-I readiness \u2014 Progress review tool | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/insomnia-cbti-readiness/support-map.html",
+      "bytes": 6996,
+      "sha256": "9bea6a97a922932e18c9dc8344ab7d027df9731948835551057f3bb641aa8351",
+      "retained_legacy": false,
+      "title": "Insomnia: assessment questions and CBT-I readiness \u2014 Visual support map | Clinical Practice Library",
       "reachable_from_home": true
     },
     {
@@ -3028,7 +3252,7 @@
     {
       "path": "resources/clinical-topics/intellectual-disability-supported-choice/case.html",
       "bytes": 7312,
-      "sha256": "69cf4dad51c1c0b166564e14c85760a27db1b896cb8fbb6118f4fd0f8c718732",
+      "sha256": "494502a1ab557a8c2df4c6be84b391d277f7d090b8c2813e25bbfcb9fc9debcd",
       "retained_legacy": false,
       "title": "Intellectual disability: supported choice and functional communication \u2014 Interactive case practice | Clinical Practice Library",
       "reachable_from_home": true
@@ -3043,8 +3267,8 @@
     },
     {
       "path": "resources/clinical-topics/intellectual-disability-supported-choice/formulation.html",
-      "bytes": 5981,
-      "sha256": "541ed47d9bdeb08481c0a8f5e3eaa4229470773cf4d4df6ed2f73e21e9a61508",
+      "bytes": 6021,
+      "sha256": "cc2ca3013c423803fd9fdf69ee2f884df6de61522759cf7e7a478087603ce268",
       "retained_legacy": false,
       "title": "Intellectual disability: supported choice and functional communication \u2014 Clinician formulation guide | Clinical Practice Library",
       "reachable_from_home": true
@@ -3099,8 +3323,8 @@
     },
     {
       "path": "resources/clinical-topics/learning-instruction-access/formulation.html",
-      "bytes": 6553,
-      "sha256": "9a014357dd073280d280c2cee22d15b310ae1e2641eaba61cb04787048421cd9",
+      "bytes": 6566,
+      "sha256": "9d70c5f0abf35e4a249da6838252cc6afd40169798b79aa6b5b87d73b1b4697e",
       "retained_legacy": false,
       "title": "Learning differences: instruction and access are separate tracks \u2014 Clinician formulation guide | Clinical Practice Library",
       "reachable_from_home": true
@@ -3140,7 +3364,7 @@
     {
       "path": "resources/clinical-topics/ocd-mental-rituals/case.html",
       "bytes": 7717,
-      "sha256": "948d444e8e9e38ccc11e7f4806fe3a6e8f30e53aa0db6c3a99a015b107dd56c6",
+      "sha256": "71c91d35be42fb5a361ea930bdc7dbf93198b4f19d56ba1a68b10a70888b5b24",
       "retained_legacy": false,
       "title": "OCD: mental rituals, reassurance and uncertainty \u2014 Interactive case practice | Clinical Practice Library",
       "reachable_from_home": true
@@ -3155,8 +3379,8 @@
     },
     {
       "path": "resources/clinical-topics/ocd-mental-rituals/formulation.html",
-      "bytes": 6203,
-      "sha256": "08c009cb8a1bee5e1afbe8150b6c510122b4211d8f221ef21e222ed82f17c5d0",
+      "bytes": 6216,
+      "sha256": "0d94b61e152ad9ac881d8915f516f3b2c0b26076927c85b703499d7d34884bbe",
       "retained_legacy": false,
       "title": "OCD: mental rituals, reassurance and uncertainty \u2014 Clinician formulation guide | Clinical Practice Library",
       "reachable_from_home": true
@@ -3211,8 +3435,8 @@
     },
     {
       "path": "resources/clinical-topics/panic-alarm-loop/formulation.html",
-      "bytes": 6424,
-      "sha256": "d8e24987eca1747eaf9d3e54f08fa903dbf17ece7422c528d1e1e26b95d5368d",
+      "bytes": 6437,
+      "sha256": "bbb0689b5248f44b793563192c1b464e3f4bc5e1c24d131cb629014253ee73c9",
       "retained_legacy": false,
       "title": "Panic: body sensations and the alarm loop \u2014 Clinician formulation guide | Clinical Practice Library",
       "reachable_from_home": true
@@ -3252,7 +3476,7 @@
     {
       "path": "resources/clinical-topics/restrictive-eating-coordination/case.html",
       "bytes": 7420,
-      "sha256": "d6c8758c0a7aafe0396416556c80c0fa5c0bb1079e5b3d9695d119456a85efb8",
+      "sha256": "0f271ac8a5b0017cd9194a4f2a7a8033c079b634b3a83b32e334a16171398fb1",
       "retained_legacy": false,
       "title": "Restrictive eating: medical coordination and supported participation \u2014 Interactive case practice | Clinical Practice Library",
       "reachable_from_home": true
@@ -3267,8 +3491,8 @@
     },
     {
       "path": "resources/clinical-topics/restrictive-eating-coordination/formulation.html",
-      "bytes": 6232,
-      "sha256": "34dd3afdff8edcc561f2aadf04e1cf7a002a69bfb7f388cbad8485faf3aa1555",
+      "bytes": 6245,
+      "sha256": "c8152393c4aa36c1996a2458fcdb16ab784ffb3a861caa878423ce30591f4add",
       "retained_legacy": false,
       "title": "Restrictive eating: medical coordination and supported participation \u2014 Clinician formulation guide | Clinical Practice Library",
       "reachable_from_home": true
@@ -3298,6 +3522,62 @@
       "reachable_from_home": true
     },
     {
+      "path": "resources/clinical-topics/sibling-conflict-safety-repair/care-partner.html",
+      "bytes": 6234,
+      "sha256": "cd95499337a689efdf6397a9f42a8460190f1271670481ba4565fbefd56bd8f3",
+      "retained_legacy": false,
+      "title": "Sibling conflict: power, safety and repair \u2014 Care-partner guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/sibling-conflict-safety-repair/case.html",
+      "bytes": 7498,
+      "sha256": "a2d85e268960718e990d05995d6d4cc2d4e7ac1d802e853cc59ab89c14cb776f",
+      "retained_legacy": false,
+      "title": "Sibling conflict: power, safety and repair \u2014 Interactive case practice | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/sibling-conflict-safety-repair/client-workbook.html",
+      "bytes": 5711,
+      "sha256": "dea3372a15d8d5c906ee182fdab988473dde9fae07c806babbe9b17f8620c0a9",
+      "retained_legacy": false,
+      "title": "Sibling conflict: power, safety and repair \u2014 Client workbook | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/sibling-conflict-safety-repair/formulation.html",
+      "bytes": 6317,
+      "sha256": "9e7e3f757bb1b989d7405fc2d8c2618c0adda52f8bea6ce37675c32adb7313f7",
+      "retained_legacy": false,
+      "title": "Sibling conflict: power, safety and repair \u2014 Clinician formulation guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/sibling-conflict-safety-repair/index.html",
+      "bytes": 4847,
+      "sha256": "1da7c9513450b8dbf415f911a7aa662d4558d1f118ea2b4ec0b424ea567f1898",
+      "retained_legacy": false,
+      "title": "Sibling conflict: power, safety and repair | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/sibling-conflict-safety-repair/progress-review.html",
+      "bytes": 6992,
+      "sha256": "878386dccd826b4954826bfec22f8019fc80f561a81baaa75efbf991b5519f46",
+      "retained_legacy": false,
+      "title": "Sibling conflict: power, safety and repair \u2014 Progress review tool | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/sibling-conflict-safety-repair/support-map.html",
+      "bytes": 7332,
+      "sha256": "234c91eb007e38c71cca808f74c578277a63fb03fb1f9cd4bae7636655b73714",
+      "retained_legacy": false,
+      "title": "Sibling conflict: power, safety and repair \u2014 Visual support map | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
       "path": "resources/clinical-topics/sleep-loss-activation/care-partner.html",
       "bytes": 6231,
       "sha256": "15b222ca13d5531537debca7a49b555de6264d4820504233b13bfacce34f1466",
@@ -3308,7 +3588,7 @@
     {
       "path": "resources/clinical-topics/sleep-loss-activation/case.html",
       "bytes": 7852,
-      "sha256": "3dd56dfdce59a53727aec1e521950fdb74e075f70e7e7de12cd142e10dc2c874",
+      "sha256": "60d2c6e7f4b71d0285198cf25dac64733896aafa18305f2d9a4547e4e6e2ee7b",
       "retained_legacy": false,
       "title": "Sleep loss: exhaustion or rising activation? \u2014 Interactive case practice | Clinical Practice Library",
       "reachable_from_home": true
@@ -3323,8 +3603,8 @@
     },
     {
       "path": "resources/clinical-topics/sleep-loss-activation/formulation.html",
-      "bytes": 6432,
-      "sha256": "125fb467baad7f7b75a57f986ff848a4636ee511d4137419fc0914b32bda25de",
+      "bytes": 6445,
+      "sha256": "a5969cd7e748b4d483984fc5d782fe8a8820e4e677508f8006566bcc99092527",
       "retained_legacy": false,
       "title": "Sleep loss: exhaustion or rising activation? \u2014 Clinician formulation guide | Clinical Practice Library",
       "reachable_from_home": true
@@ -3364,7 +3644,7 @@
     {
       "path": "resources/clinical-topics/social-anxiety-attention/case.html",
       "bytes": 7884,
-      "sha256": "b252be9aa07c0c559a8ebd447a6c03c952d1596a6e57a219cd15901fb4b5c861",
+      "sha256": "9f49bb7ba0bcd0ae9d3138819e6a7aa4030cdd5f30c0e595aac01d0773f81da4",
       "retained_legacy": false,
       "title": "Social anxiety: attention, predictions and safety strategies \u2014 Interactive case practice | Clinical Practice Library",
       "reachable_from_home": true
@@ -3379,8 +3659,8 @@
     },
     {
       "path": "resources/clinical-topics/social-anxiety-attention/formulation.html",
-      "bytes": 6531,
-      "sha256": "2a406ddfe20e6346b87f4560a7c54fdb22a2300bb0de6256fafb273ac89a6386",
+      "bytes": 6544,
+      "sha256": "a791d96128929092d78b406172bbd7aacb08d9ade73b081fb3dd1ae7bce93e55",
       "retained_legacy": false,
       "title": "Social anxiety: attention, predictions and safety strategies \u2014 Clinician formulation guide | Clinical Practice Library",
       "reachable_from_home": true
@@ -3420,7 +3700,7 @@
     {
       "path": "resources/clinical-topics/tics-context-impact/case.html",
       "bytes": 7147,
-      "sha256": "8830d63cef41ea142cfe9cb05b111f48166b86abe54f834ad9d19aef4adff2c3",
+      "sha256": "ad38ca1c376242ca03dde6a4d70b43163c06e20f8f4d755dc885ca6e94edbdfc",
       "retained_legacy": false,
       "title": "Tics: context, impact and CBIT referral \u2014 Interactive case practice | Clinical Practice Library",
       "reachable_from_home": true
@@ -3435,8 +3715,8 @@
     },
     {
       "path": "resources/clinical-topics/tics-context-impact/formulation.html",
-      "bytes": 5733,
-      "sha256": "04cbdab6490e718b72a797b04214c435524b61aa4d1bad42039ebd096096be90",
+      "bytes": 5746,
+      "sha256": "7d1e99c5b31ddca3285b9bb587ee4d0c66e7a7f6c3e2fdef7366eb0673cc8838",
       "retained_legacy": false,
       "title": "Tics: context, impact and CBIT referral \u2014 Clinician formulation guide | Clinical Practice Library",
       "reachable_from_home": true
@@ -3476,7 +3756,7 @@
     {
       "path": "resources/clinical-topics/trauma-cue-orientation/case.html",
       "bytes": 7626,
-      "sha256": "6023fcc6fc6b5867932d34e63dcf848fd4347eeac4c3bb4b0e7295a5169ef084",
+      "sha256": "ab7167f79796547920e09396851d042340a2ea06247d5f351d4c2e9dfd9e6a8c",
       "retained_legacy": false,
       "title": "Trauma cues: present orientation and chosen support \u2014 Interactive case practice | Clinical Practice Library",
       "reachable_from_home": true
@@ -3491,8 +3771,8 @@
     },
     {
       "path": "resources/clinical-topics/trauma-cue-orientation/formulation.html",
-      "bytes": 6135,
-      "sha256": "b9b803c5d7f8c98b7d67f54b67bd0b18ad9d60eb10a7ecabc5eff75d0409ac95",
+      "bytes": 6148,
+      "sha256": "8c76afb8fadc0fb1db79383181a85cd06155c757dedf670650b82654db4d2a38",
       "retained_legacy": false,
       "title": "Trauma cues: present orientation and chosen support \u2014 Clinician formulation guide | Clinical Practice Library",
       "reachable_from_home": true
@@ -3532,7 +3812,7 @@
     {
       "path": "resources/clinical-topics/voices-collaborative-coping/case.html",
       "bytes": 7654,
-      "sha256": "ff9b51a53c602c20f3ba68e44e20bd66a5d9109f772d92ad02d05dc56a011065",
+      "sha256": "f4a16d806f0316bc6c3a440037b24ac9f5a21a0d5c358d7dc0d3ae66a01df757",
       "retained_legacy": false,
       "title": "Psychosis: voices, distress and collaborative coping \u2014 Interactive case practice | Clinical Practice Library",
       "reachable_from_home": true
@@ -3547,8 +3827,8 @@
     },
     {
       "path": "resources/clinical-topics/voices-collaborative-coping/formulation.html",
-      "bytes": 6275,
-      "sha256": "ae16ad7351ef042a04853aea761a3f64b57862c734bd19247f9deb120e224191",
+      "bytes": 6288,
+      "sha256": "e5b54ed0e0701b2fc396c1707ee054cb8b896c042de4a9ee754ebbb87d4c32fd",
       "retained_legacy": false,
       "title": "Psychosis: voices, distress and collaborative coping \u2014 Clinician formulation guide | Clinical Practice Library",
       "reachable_from_home": true
@@ -3579,8 +3859,8 @@
     },
     {
       "path": "resources/complete-resource-inventory.html",
-      "bytes": 198732,
-      "sha256": "7423826961adfb35059e2242ee4a624c9d4bf33b1510ea793dfe68476743fde9",
+      "bytes": 211108,
+      "sha256": "a385c691ec435eee4eb5c24eddba61bec3b4e944650041ab5e7bb8bc6223ae46",
       "retained_legacy": false,
       "title": "Complete resource inventory | CPL",
       "reachable_from_home": true
@@ -3761,9 +4041,23 @@
       "reachable_from_home": true
     },
     {
+      "path": "resources/downloads/topic-child-aggression-caregiver-coaching.pdf",
+      "bytes": 3406,
+      "sha256": "46d7e0baa5f8cf5be08468ee1b1320a734498b5b6976890d3e661ef2455e6b81",
+      "retained_legacy": false,
+      "reachable_from_home": true
+    },
+    {
       "path": "resources/downloads/topic-child-grief-continuing-bonds.pdf",
       "bytes": 3404,
       "sha256": "867eb9dd012d244464527cb9dc13828367760e398a4f1075fce6ca73b80b597f",
+      "retained_legacy": false,
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/downloads/topic-chronic-pain-pacing.pdf",
+      "bytes": 3336,
+      "sha256": "7a2503b97d0b7be0744a8049698fb92ef8871872795f1cbaafb34ccc9f3b890c",
       "retained_legacy": false,
       "reachable_from_home": true
     },
@@ -3782,6 +4076,20 @@
       "reachable_from_home": true
     },
     {
+      "path": "resources/downloads/topic-health-anxiety-medical-plan.pdf",
+      "bytes": 3365,
+      "sha256": "7c39071d2015556826ce1c589e20c6d77ee8bd949967ea0066c66b69f14b7ecb",
+      "retained_legacy": false,
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/downloads/topic-insomnia-cbti-readiness.pdf",
+      "bytes": 3371,
+      "sha256": "fd0a97dbad7a439aa5f51d9633bef77511cf9651cf7b6a8f906da6c427a517c7",
+      "retained_legacy": false,
+      "reachable_from_home": true
+    },
+    {
       "path": "resources/downloads/topic-intellectual-disability-supported-choice.pdf",
       "bytes": 3373,
       "sha256": "decbec8a48d2a9e1ded831e6279386beea57d88250563869752922d38389c2e4",
@@ -3790,8 +4098,8 @@
     },
     {
       "path": "resources/downloads/topic-learning-instruction-access.pdf",
-      "bytes": 3383,
-      "sha256": "5c4da87917522acd34109457bb0440bd30f5a820b022d1b842d1fe84461230db",
+      "bytes": 3445,
+      "sha256": "e16c4f8a8e8261688b44a248bb664bdbe56558769b7fe7dc15f4430613c99c82",
       "retained_legacy": false,
       "reachable_from_home": true
     },
@@ -3813,6 +4121,13 @@
       "path": "resources/downloads/topic-restrictive-eating-coordination.pdf",
       "bytes": 3421,
       "sha256": "6c3ebe68387ec06495d7cb87cfb29132f6b705231b95bbe4aa5b1f9e663ed032",
+      "retained_legacy": false,
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/downloads/topic-sibling-conflict-safety-repair.pdf",
+      "bytes": 3396,
+      "sha256": "92c2a0fef281e5513c670ff2492177cfd4c652f286e89363cd71c9f567f9186e",
       "retained_legacy": false,
       "reachable_from_home": true
     },
@@ -5123,8 +5438,8 @@
     },
     {
       "path": "resources/qa-status.html",
-      "bytes": 2290,
-      "sha256": "3c82698dcf65acb68ada36fa6471649f553be125b734b4d637c9eab36119ec94",
+      "bytes": 3032,
+      "sha256": "c114437d76f15db116c01851ef6aa573e0e8fde8a37480097fc95ca01abe45dd",
       "retained_legacy": false,
       "title": "QA status & review needs | Clinical Practice Library",
       "reachable_from_home": true
@@ -5699,8 +6014,8 @@
     },
     {
       "path": "resources/training/workforce-learning-center.html",
-      "bytes": 18679,
-      "sha256": "23b6d67132bd3a635519b615bd5a72a83ed1e85b72cff0d32b209b8cd4a112fe",
+      "bytes": 19104,
+      "sha256": "204b0aa926f696fe736990af80528acb8c4f0c3e4e8080f3b3502329b4ac3866",
       "retained_legacy": false,
       "title": "Intern & workforce learning center | Clinical Practice Library",
       "reachable_from_home": true
@@ -5831,8 +6146,8 @@
       "absent_from_current": []
     },
     "origin/cpl-2-colorful-helpful": {
-      "commit": "0c3332bf87e8a813e2233e46ec1242548aab71e5",
-      "resource_count": 686,
+      "commit": "b0a102308dbc36dbe3cb9aa390e111bfa3faa9c2",
+      "resource_count": 726,
       "absent_from_current": []
     },
     "origin/cpl-phone-check-2026-09-30": {

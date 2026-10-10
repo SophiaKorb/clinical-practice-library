@@ -32,11 +32,23 @@
       "evidenceType": "Public CBT self-help education; not a graded guideline or reproduced workbook",
       "access": "Official search index verified 2026-10-10"
     },
+    "cci-health": {
+      "title": "CCI: Health anxiety",
+      "url": "https://www.cci.health.wa.gov.au/Resources/Looking-After-Yourself/Health-Anxiety",
+      "evidenceType": "Public CBT self-help education; medical symptoms still require appropriate assessment",
+      "access": "Full page retrieved 2026-10-10"
+    },
     "comb-trial": {
       "title": "Carlson et al.: ComB treatment of trichotillomania randomized trial",
       "url": "https://pubmed.ncbi.nlm.nih.gov/34656205/",
-      "evidenceType": "Primary randomized trial, 2021; hair pulling, not automatic generalization to all picking/biting",
-      "access": "Abstract/search index verified 2026-10-10"
+      "evidenceType": "Primary randomized trial, 2021; 36 adults with hair pulling. Self-reported symptoms improved versus minimal-attention control; interviewer-rated symptoms/diagnostic status did not show significant immediate differences. Not generalized to all BFRBs",
+      "access": "PubMed abstract retrieved 2026-10-10; full trial not reviewed"
+    },
+    "nctsn-family": {
+      "title": "NCTSN: Physical abuse interventions",
+      "url": "https://www.nctsn.org/what-is-child-trauma/trauma-types/physical-abuse/interventions",
+      "evidenceType": "Specialist network intervention directory; model age/indication/training vary",
+      "access": "Official search index verified 2026-10-10"
     },
     "nctsn-grief": {
       "title": "NCTSN: Childhood traumatic grief",
@@ -80,6 +92,12 @@
       "evidenceType": "Published guideline, 2005; update in development in 2026. Draft is not final guidance",
       "access": "Official search index verified 2026-10-10; full recommendations retrieval limited"
     },
+    "nice-pain": {
+      "title": "NICE NG193: Chronic pain",
+      "url": "https://www.nice.org.uk/guidance/ng193",
+      "evidenceType": "Published guideline, 2021; chronic primary and secondary pain need differentiated care",
+      "access": "Official search index verified 2026-10-10"
+    },
     "nice-panic": {
       "title": "NICE CG113: Generalised anxiety and panic disorder in adults",
       "url": "https://www.nice.org.uk/guidance/cg113",
@@ -109,6 +127,12 @@
       "url": "https://www.nimh.nih.gov/health/publications/understanding-psychosis",
       "evidenceType": "Federal clinical education; coordinated specialty care orientation",
       "access": "Full page retrieved 2026-10-10"
+    },
+    "pbis-fba": {
+      "title": "Center on PBIS: Tier 3 comprehensive functional behavior assessment guide",
+      "url": "https://www.pbis.org/resource/tier-3-comprehensive-functional-behavior-assessment-fba-guide",
+      "evidenceType": "Implementation guidance, 2022; observations generate hypotheses, not causal proof",
+      "access": "Official page verified during earlier CPL audit"
     },
     "tlc-bfrb": {
       "title": "TLC Foundation: Evidence-based therapeutic treatment for BFRBs",
@@ -307,6 +331,53 @@
         "cci-bdd"
       ],
       "limits": "NICE OCD/BDD update is in development; published CG31 remains the cited guideline. CCI is public CBT education. Original aid is not a BDD measure, mirror-exposure protocol or cosmetic decision support."
+    },
+    {
+      "slug": "health-anxiety-medical-plan",
+      "title": "Health anxiety: checking and a clear medical plan",
+      "age": "Adults",
+      "sources": [
+        "cci-health"
+      ],
+      "limits": "CCI is public CBT education. This original aid is not a medical triage algorithm, reassurance-withholding protocol or health-anxiety measure. Qualified clinical review pending."
+    },
+    {
+      "slug": "chronic-pain-pacing",
+      "title": "Chronic pain: pacing, function and access",
+      "age": "Adults",
+      "sources": [
+        "nice-pain"
+      ],
+      "limits": "NICE NG193 distinguishes primary/secondary pain. Original pacing map is not a rehabilitation protocol, condition-specific exercise prescription or validated pain outcome measure."
+    },
+    {
+      "slug": "insomnia-cbti-readiness",
+      "title": "Insomnia: assessment questions and CBT-I readiness",
+      "age": "Adults",
+      "sources": [
+        "aasm-insomnia"
+      ],
+      "limits": "AASM 2021 guideline addresses behavioral/psychological treatment. This aid does not cover medication selection or replace current combination-treatment guidance. Original unvalidated referral/planning tool; clinical review pending."
+    },
+    {
+      "slug": "child-aggression-caregiver-coaching",
+      "title": "Child aggression: safety, function and caregiver coaching",
+      "age": "School-age children and caregivers",
+      "sources": [
+        "pbis-fba",
+        "nctsn-family"
+      ],
+      "limits": "Original observation/coaching aid, not a comprehensive FBA or a manual for any caregiver treatment. No functional causation or diagnosis is inferred from one event. Qualified review pending."
+    },
+    {
+      "slug": "sibling-conflict-safety-repair",
+      "title": "Sibling conflict: power, safety and repair",
+      "age": "School-age children and caregivers",
+      "sources": [
+        "nctsn-family",
+        "pbis-fba"
+      ],
+      "limits": "NCTSN family-harm education informs protective orientation; PBIS supports observation/hypothesis limits. Original sibling aid is not a validated abuse screen, legal determination or family-mediation protocol."
     }
   ]
 }

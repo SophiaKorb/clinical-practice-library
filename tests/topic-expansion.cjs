@@ -25,4 +25,10 @@ const b=(s)=>({attrs:{'data-feedback':s},getAttribute(k){return this.attrs[k]},s
 const one=b('Incomplete: missing access assessment'),two=b('Best supported: keep access and assess');let out={textContent:''};
 api.select(two,[one,two],out);assert.equal(out.textContent,'Best supported: keep access and assess');assert.equal(two.attrs['aria-pressed'],'true');assert.equal(one.attrs['aria-pressed'],'false');
 api.select(one,[one,two],out);assert.equal(out.textContent,'Incomplete: missing access assessment');assert.equal(two.attrs['aria-pressed'],'false');
+const areas=[{value:'fictional note'}];api.clear(areas,[one,two],[out]);assert.equal(areas[0].value,'');assert.equal(one.attrs['aria-pressed'],'false');assert.ok(out.textContent.includes('Choose an option'));
+const content=JSON.parse(require('node:child_process').execFileSync('python',['-c',"import json,runpy;print(json.dumps(runpy.run_path('scripts/expansion-topics.py')['TOPICS']))"],{encoding:'utf8',maxBuffer:2000000}));
+assert.equal(new Set(content.map(t=>t.case)).size,content.length,'cases must have distinct authored content');
+assert.equal(new Set(content.map(t=>t.understanding)).size,content.length,'formulations must be topic-specific');
+for(const t of content){assert.ok(t.understanding.length>350);assert.equal(t.questions.length,4);assert.equal(t.hypotheses.length,3);assert.equal(t.client.length,4);assert.equal(t.care.length,4);assert.equal(t.metrics.length,4);assert.equal(t.choices.filter(c=>c[1].startsWith('Best supported')).length,1);}
+const source=fs.readFileSync('resources/clinical-topics/topic-tools.js','utf8');assert.ok(!/localStorage|sessionStorage|fetch\(/.test(source),'tool must not store/transmit entries');
 console.log(ledger.resources.length+' resource purposes, source links, cases, visual maps, monitoring tables and feedback state checked; no browser/clinical approval inferred');

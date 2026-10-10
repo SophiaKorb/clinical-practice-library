@@ -43,3 +43,27 @@ Commit `0c3332bf87e8a813e2233e46ec1242548aab71e5`; deployment `dpl_34zMqTnuTMTyR
 120-purpose regression, original-guide parity, homepage/catalog/finder tests, PDF structure, source-accessibility and local-link checks pass. All five new PDFs rendered/visually inspected. No automated clinical approval claimed.
 
 Wave 4 repair: original-guide parity initially failed because it required the old author spelling. The assertion now accepts the current full byline and retained short form while still requiring exactly one. Rerun verifies all 292 paired supports. The learning diagram now places instruction/access on parallel branches, rather than implying sequential delivery.
+
+## Wave 4 — published and HTTP verified
+
+Commit `b0a102308dbc36dbe3cb9aa390e111bfa3faa9c2`; deployment `dpl_CGFHnFM3gVyCQMBcR59FmnvVLdW9`, READY at https://clinical-practice-library-ofmy1cupf-cohon-family.vercel.app. All 30 new pages and five PDF downloads returned HTTP 200 with expected content. Evidence: wave-4 live QA JSON.
+
+## Wave 5 — built, final QA/publication pending
+
+30 additional resources: health anxiety/medical plan, chronic pain/pacing, insomnia/CBT-I readiness, child aggression/caregiver support and sibling power/safety/repair. Total 150/150 distinct resources in 25 sets. Count excludes all 25 PDF companions, collection indexes, evidence/ledger files, shared assets, original-guide links and crisis-wording repairs.
+
+Additional QA repairs: practice-option order varies deterministically to avoid a universal middle answer; clear now resets case choice/feedback and notes; intellectual-disability assessment-planning questions are explicitly for the interviewer/team. No case certifies clinical competence. Workforce center links to topic practice.
+
+## Reproduction and review needs
+
+Run `python scripts/create-topic-pdfs.py --waves 5`, `python scripts/build-topic-expansion.py --waves 5`, inventory, finder generator and inventory again. Sources are authored in `scripts/expansion-topics.py`; the ledger records every counted path, purpose, wave and sources. PDFs use deterministic metadata. Run site QA workflow checks and PDF audit locally.
+
+Open: qualified clinical review of all new material, especially mood/psychosis, eating/medical coordination, dissociation, safeguarding, capacity/choice and treatment suitability. Source-access limitations include NICE recommendation retrieval restrictions and AAN CAPTCHA; these are not full systematic evidence reviews. No licensed clinical approval or instrument validation claimed. Browser rendering/mobile layout, real keyboard/screen-reader testing and print-dialog behavior remain unverified because control-browser is unavailable; Sites skill prohibits improvising another browser path here.
+
+Future depth gaps: substance-use/addiction case sets, personality/complex longitudinal formulation, older-adult cognition, perinatal care, gender/sexual-health and culturally adapted multilingual client versions need dedicated research and qualified review. Existing resources in those areas remain preserved; this 150-resource wave does not claim exhaustive DSM coverage.
+
+Final source check: NICE eating/panic PDF retrieval also returned 403. PubMed ComB abstract was retrieved: small adult hair-pulling trial, benefit on self-report with nonsignificant immediate interviewer-rated/diagnostic effects. Registry and BFRB pages now state those limits rather than treating a positive trial label as uniformly strong evidence.
+
+Final local QA: all existing catalog/parity/homepage/scale/clinical expansion/assessment/practice-learning/finder tests plus 150-resource regression pass. 7,840 local references have zero broken links; 449 current HTML pages have zero source-audit findings; 61 PDFs have zero structural failures. Twenty-five new PDFs rendered and visually inspected across five waves; learning parallel-branch repair re-rendered separately. Script syntax audit result recorded after completion.
+
+Final syntax audit: 538 shipped scripts/event handlers, zero errors. All regression commands passed; these results do not imply licensed clinical approval, browser rendering or full WCAG conformance.

@@ -20,12 +20,30 @@
       "status": "structurally readable; field/widget consistency checked"
     },
     {
+      "path": "resources/downloads/topic-insomnia-cbti-readiness.pdf",
+      "bytes": 3371,
+      "pages": 1,
+      "text_characters": 1305,
+      "fields": 0,
+      "widgets": 0,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
       "path": "resources/downloads/safety-planning-preparation-sheet-fillable.pdf",
       "bytes": 70085,
       "pages": 3,
       "text_characters": 3960,
       "fields": 22,
       "widgets": 22,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "resources/downloads/topic-child-aggression-caregiver-coaching.pdf",
+      "bytes": 3406,
+      "pages": 1,
+      "text_characters": 1327,
+      "fields": 0,
+      "widgets": 0,
       "status": "structurally readable; field/widget consistency checked"
     },
     {
@@ -173,6 +191,15 @@
       "status": "structurally readable; field/widget consistency checked"
     },
     {
+      "path": "resources/downloads/topic-health-anxiety-medical-plan.pdf",
+      "bytes": 3365,
+      "pages": 1,
+      "text_characters": 1270,
+      "fields": 0,
+      "widgets": 0,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
       "path": "resources/downloads/topic-restrictive-eating-coordination.pdf",
       "bytes": 3421,
       "pages": 1,
@@ -222,6 +249,15 @@
       "bytes": 3365,
       "pages": 1,
       "text_characters": 1255,
+      "fields": 0,
+      "widgets": 0,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "resources/downloads/topic-chronic-pain-pacing.pdf",
+      "bytes": 3336,
+      "pages": 1,
+      "text_characters": 1240,
       "fields": 0,
       "widgets": 0,
       "status": "structurally readable; field/widget consistency checked"
@@ -305,6 +341,15 @@
       "text_characters": 2055,
       "fields": 38,
       "widgets": 38,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "resources/downloads/topic-sibling-conflict-safety-repair.pdf",
+      "bytes": 3396,
+      "pages": 1,
+      "text_characters": 1333,
+      "fields": 0,
+      "widgets": 0,
       "status": "structurally readable; field/widget consistency checked"
     },
     {

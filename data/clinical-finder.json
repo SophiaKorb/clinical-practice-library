@@ -3862,6 +3862,238 @@
       "metadataBasis": "title/path discovery tags"
     },
     {
+      "url": "/resources/clinical-topics/child-aggression-caregiver-coaching/index.html",
+      "title": "Child aggression: safety, function and caregiver coaching",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Conflict / aggression"
+        ],
+        "function": [
+          "Safety / stabilization"
+        ],
+        "intervention": [
+          "Family / parenting"
+        ],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [],
+        "step": []
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/clinical-topics/child-aggression-caregiver-coaching/care-partner.html",
+      "title": "Child aggression: safety, function and caregiver coaching — Care-partner guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Conflict / aggression"
+        ],
+        "function": [
+          "Safety / stabilization"
+        ],
+        "intervention": [
+          "Family / parenting"
+        ],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/child-aggression-caregiver-coaching/client-workbook.html",
+      "title": "Child aggression: safety, function and caregiver coaching — Client workbook",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Conflict / aggression"
+        ],
+        "function": [
+          "Safety / stabilization"
+        ],
+        "intervention": [
+          "Family / parenting"
+        ],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/child-aggression-caregiver-coaching/formulation.html",
+      "title": "Child aggression: safety, function and caregiver coaching — Clinician formulation guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Conflict / aggression"
+        ],
+        "function": [
+          "Safety / stabilization"
+        ],
+        "intervention": [
+          "Family / parenting",
+          "Function-linked support"
+        ],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Assessment planning",
+          "Treatment planning"
+        ],
+        "step": [
+          "What am I seeing?",
+          "Understanding",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/child-aggression-caregiver-coaching/case.html",
+      "title": "Child aggression: safety, function and caregiver coaching — Interactive case practice",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Conflict / aggression"
+        ],
+        "function": [
+          "Safety / stabilization"
+        ],
+        "intervention": [
+          "Family / parenting"
+        ],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Skill rehearsal / supervision"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/child-aggression-caregiver-coaching/progress-review.html",
+      "title": "Child aggression: safety, function and caregiver coaching — Progress review tool",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Conflict / aggression"
+        ],
+        "function": [
+          "Safety / stabilization"
+        ],
+        "intervention": [
+          "Family / parenting"
+        ],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Progress review"
+        ],
+        "step": [
+          "What to watch next?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/child-aggression-caregiver-coaching/support-map.html",
+      "title": "Child aggression: safety, function and caregiver coaching — Visual support map",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Conflict / aggression"
+        ],
+        "function": [
+          "Safety / stabilization"
+        ],
+        "intervention": [
+          "Family / parenting",
+          "Access / accommodations"
+        ],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Treatment planning"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
       "url": "/resources/clinical-topics/child-grief-continuing-bonds/index.html",
       "title": "Child grief: remembrance, routines and traumatic reminders",
       "format": "HTML",
@@ -4127,6 +4359,233 @@
       },
       "priority": 20,
       "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/clinical-topics/chronic-pain-pacing/index.html",
+      "title": "Chronic pain: pacing, function and access",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Pain / bodily concerns"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [],
+        "role": [],
+        "task": [],
+        "step": []
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/clinical-topics/chronic-pain-pacing/care-partner.html",
+      "title": "Chronic pain: pacing, function and access — Care-partner guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Pain / bodily concerns"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/chronic-pain-pacing/client-workbook.html",
+      "title": "Chronic pain: pacing, function and access — Client workbook",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Pain / bodily concerns"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/chronic-pain-pacing/formulation.html",
+      "title": "Chronic pain: pacing, function and access — Clinician formulation guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Pain / bodily concerns"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
+        "intervention": [
+          "Access / accommodations",
+          "Function-linked support"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Assessment planning",
+          "Treatment planning"
+        ],
+        "step": [
+          "What am I seeing?",
+          "Understanding",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/chronic-pain-pacing/case.html",
+      "title": "Chronic pain: pacing, function and access — Interactive case practice",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Pain / bodily concerns"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Skill rehearsal / supervision"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/chronic-pain-pacing/progress-review.html",
+      "title": "Chronic pain: pacing, function and access — Progress review tool",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Pain / bodily concerns"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Progress review"
+        ],
+        "step": [
+          "What to watch next?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/chronic-pain-pacing/support-map.html",
+      "title": "Chronic pain: pacing, function and access — Visual support map",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Pain / bodily concerns"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Treatment planning"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
     },
     {
       "url": "/resources/handouts/clear-supported-proactive-parenting-responses.html",
@@ -6595,6 +7054,252 @@
       "metadataBasis": "title/path discovery tags"
     },
     {
+      "url": "/resources/clinical-topics/health-anxiety-medical-plan/index.html",
+      "title": "Health anxiety: checking and a clear medical plan",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Anxiety / OCD"
+        ],
+        "symptom": [
+          "Fear / uncertainty",
+          "Pain / bodily concerns",
+          "Repetitive actions / urges"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
+        "intervention": [],
+        "stage": [],
+        "role": [],
+        "task": [],
+        "step": [
+          "What tool?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/clinical-topics/health-anxiety-medical-plan/care-partner.html",
+      "title": "Health anxiety: checking and a clear medical plan — Care-partner guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Anxiety / OCD"
+        ],
+        "symptom": [
+          "Fear / uncertainty",
+          "Pain / bodily concerns",
+          "Repetitive actions / urges"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/health-anxiety-medical-plan/client-workbook.html",
+      "title": "Health anxiety: checking and a clear medical plan — Client workbook",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Anxiety / OCD"
+        ],
+        "symptom": [
+          "Fear / uncertainty",
+          "Pain / bodily concerns",
+          "Repetitive actions / urges"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/health-anxiety-medical-plan/formulation.html",
+      "title": "Health anxiety: checking and a clear medical plan — Clinician formulation guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Anxiety / OCD"
+        ],
+        "symptom": [
+          "Fear / uncertainty",
+          "Pain / bodily concerns",
+          "Repetitive actions / urges"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
+        "intervention": [
+          "Function-linked support"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Assessment planning",
+          "Treatment planning"
+        ],
+        "step": [
+          "What am I seeing?",
+          "Understanding",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/health-anxiety-medical-plan/case.html",
+      "title": "Health anxiety: checking and a clear medical plan — Interactive case practice",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Anxiety / OCD"
+        ],
+        "symptom": [
+          "Fear / uncertainty",
+          "Pain / bodily concerns",
+          "Repetitive actions / urges"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Skill rehearsal / supervision"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/health-anxiety-medical-plan/progress-review.html",
+      "title": "Health anxiety: checking and a clear medical plan — Progress review tool",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Anxiety / OCD"
+        ],
+        "symptom": [
+          "Fear / uncertainty",
+          "Pain / bodily concerns",
+          "Repetitive actions / urges"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Progress review"
+        ],
+        "step": [
+          "What to watch next?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/health-anxiety-medical-plan/support-map.html",
+      "title": "Health anxiety: checking and a clear medical plan — Visual support map",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Anxiety / OCD"
+        ],
+        "symptom": [
+          "Fear / uncertainty",
+          "Pain / bodily concerns",
+          "Repetitive actions / urges"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Treatment planning"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
       "url": "/resources/es/handouts/hechos-suposiciones-preguntas.html",
       "title": "Hechos, suposiciones y preguntas",
       "format": "HTML",
@@ -7018,6 +7723,250 @@
       },
       "priority": 20,
       "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/clinical-topics/insomnia-cbti-readiness/index.html",
+      "title": "Insomnia: assessment questions and CBT-I readiness",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Sleep conditions"
+        ],
+        "symptom": [
+          "Sleep difficulty"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
+        "intervention": [
+          "CBT / behavioral activation"
+        ],
+        "stage": [],
+        "role": [],
+        "task": [
+          "Assessment planning"
+        ],
+        "step": []
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/clinical-topics/insomnia-cbti-readiness/care-partner.html",
+      "title": "Insomnia: assessment questions and CBT-I readiness — Care-partner guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Sleep conditions"
+        ],
+        "symptom": [
+          "Sleep difficulty"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
+        "intervention": [
+          "CBT / behavioral activation"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/insomnia-cbti-readiness/client-workbook.html",
+      "title": "Insomnia: assessment questions and CBT-I readiness — Client workbook",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Sleep conditions"
+        ],
+        "symptom": [
+          "Sleep difficulty"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
+        "intervention": [
+          "CBT / behavioral activation"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/insomnia-cbti-readiness/formulation.html",
+      "title": "Insomnia: assessment questions and CBT-I readiness — Clinician formulation guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Sleep conditions"
+        ],
+        "symptom": [
+          "Sleep difficulty"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
+        "intervention": [
+          "CBT / behavioral activation",
+          "Function-linked support"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Assessment planning",
+          "Treatment planning"
+        ],
+        "step": [
+          "What am I seeing?",
+          "Understanding",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/insomnia-cbti-readiness/case.html",
+      "title": "Insomnia: assessment questions and CBT-I readiness — Interactive case practice",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Sleep conditions"
+        ],
+        "symptom": [
+          "Sleep difficulty"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
+        "intervention": [
+          "CBT / behavioral activation"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Skill rehearsal / supervision"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/insomnia-cbti-readiness/progress-review.html",
+      "title": "Insomnia: assessment questions and CBT-I readiness — Progress review tool",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Sleep conditions"
+        ],
+        "symptom": [
+          "Sleep difficulty"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
+        "intervention": [
+          "CBT / behavioral activation"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Progress review"
+        ],
+        "step": [
+          "What to watch next?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/insomnia-cbti-readiness/support-map.html",
+      "title": "Insomnia: assessment questions and CBT-I readiness — Visual support map",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Sleep conditions"
+        ],
+        "symptom": [
+          "Sleep difficulty"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
+        "intervention": [
+          "CBT / behavioral activation",
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Treatment planning"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
     },
     {
       "url": "/resources/handouts/instead-of-yelling.html",
@@ -10374,6 +11323,255 @@
       "metadataBasis": "title/path discovery tags"
     },
     {
+      "url": "/resources/clinical-topics/sibling-conflict-safety-repair/index.html",
+      "title": "Sibling conflict: power, safety and repair",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Persistent conflict"
+        ],
+        "symptom": [
+          "Conflict / aggression"
+        ],
+        "function": [
+          "Relationships / family",
+          "Safety / stabilization"
+        ],
+        "intervention": [
+          "Family / parenting"
+        ],
+        "stage": [],
+        "role": [],
+        "task": [],
+        "step": []
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/clinical-topics/sibling-conflict-safety-repair/care-partner.html",
+      "title": "Sibling conflict: power, safety and repair — Care-partner guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Persistent conflict"
+        ],
+        "symptom": [
+          "Conflict / aggression"
+        ],
+        "function": [
+          "Relationships / family",
+          "Safety / stabilization"
+        ],
+        "intervention": [
+          "Family / parenting"
+        ],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/sibling-conflict-safety-repair/client-workbook.html",
+      "title": "Sibling conflict: power, safety and repair — Client workbook",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Persistent conflict"
+        ],
+        "symptom": [
+          "Conflict / aggression"
+        ],
+        "function": [
+          "Relationships / family",
+          "Safety / stabilization"
+        ],
+        "intervention": [
+          "Family / parenting"
+        ],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/sibling-conflict-safety-repair/formulation.html",
+      "title": "Sibling conflict: power, safety and repair — Clinician formulation guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Persistent conflict"
+        ],
+        "symptom": [
+          "Conflict / aggression"
+        ],
+        "function": [
+          "Relationships / family",
+          "Safety / stabilization"
+        ],
+        "intervention": [
+          "Family / parenting",
+          "Function-linked support"
+        ],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Assessment planning",
+          "Treatment planning"
+        ],
+        "step": [
+          "What am I seeing?",
+          "Understanding",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/sibling-conflict-safety-repair/case.html",
+      "title": "Sibling conflict: power, safety and repair — Interactive case practice",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Persistent conflict"
+        ],
+        "symptom": [
+          "Conflict / aggression"
+        ],
+        "function": [
+          "Relationships / family",
+          "Safety / stabilization"
+        ],
+        "intervention": [
+          "Family / parenting"
+        ],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Skill rehearsal / supervision"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/sibling-conflict-safety-repair/progress-review.html",
+      "title": "Sibling conflict: power, safety and repair — Progress review tool",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Persistent conflict"
+        ],
+        "symptom": [
+          "Conflict / aggression"
+        ],
+        "function": [
+          "Relationships / family",
+          "Safety / stabilization"
+        ],
+        "intervention": [
+          "Family / parenting"
+        ],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Progress review"
+        ],
+        "step": [
+          "What to watch next?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/sibling-conflict-safety-repair/support-map.html",
+      "title": "Sibling conflict: power, safety and repair — Visual support map",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Persistent conflict"
+        ],
+        "symptom": [
+          "Conflict / aggression"
+        ],
+        "function": [
+          "Relationships / family",
+          "Safety / stabilization"
+        ],
+        "intervention": [
+          "Family / parenting",
+          "Access / accommodations"
+        ],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Treatment planning"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
       "url": "/resources/clinical-topics/sleep-loss-activation/index.html",
       "title": "Sleep loss: exhaustion or rising activation?",
       "format": "HTML",
@@ -11762,6 +12960,33 @@
       "metadataBasis": "title/path discovery tags"
     },
     {
+      "url": "/resources/downloads/topic-child-aggression-caregiver-coaching.pdf",
+      "title": "Topic Child Aggression Caregiver Coaching",
+      "format": "PDF",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Conflict / aggression"
+        ],
+        "function": [],
+        "intervention": [
+          "Family / parenting"
+        ],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [],
+        "step": [
+          "What tool?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
       "url": "/resources/downloads/topic-child-grief-continuing-bonds.pdf",
       "title": "Topic Child Grief Continuing Bonds",
       "format": "PDF",
@@ -11775,6 +13000,29 @@
         "stage": [
           "School age / adolescence"
         ],
+        "role": [],
+        "task": [],
+        "step": [
+          "What tool?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/downloads/topic-chronic-pain-pacing.pdf",
+      "title": "Topic Chronic Pain Pacing",
+      "format": "PDF",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Pain / bodily concerns"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
+        "intervention": [],
+        "stage": [],
         "role": [],
         "task": [],
         "step": [
@@ -11820,6 +13068,59 @@
         "symptom": [],
         "function": [],
         "intervention": [],
+        "stage": [],
+        "role": [],
+        "task": [],
+        "step": [
+          "What tool?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/downloads/topic-health-anxiety-medical-plan.pdf",
+      "title": "Topic Health Anxiety Medical Plan",
+      "format": "PDF",
+      "tags": {
+        "diagnosis": [
+          "Anxiety / OCD"
+        ],
+        "symptom": [
+          "Fear / uncertainty",
+          "Pain / bodily concerns"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
+        "intervention": [],
+        "stage": [],
+        "role": [],
+        "task": [],
+        "step": [
+          "What tool?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/downloads/topic-insomnia-cbti-readiness.pdf",
+      "title": "Topic Insomnia Cbti Readiness",
+      "format": "PDF",
+      "tags": {
+        "diagnosis": [
+          "Sleep conditions"
+        ],
+        "symptom": [
+          "Sleep difficulty"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
+        "intervention": [
+          "CBT / behavioral activation"
+        ],
         "stage": [],
         "role": [],
         "task": [],
@@ -11951,6 +13252,34 @@
         "task": [
           "Referral / coordination"
         ],
+        "step": [
+          "What tool?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/downloads/topic-sibling-conflict-safety-repair.pdf",
+      "title": "Topic Sibling Conflict Safety Repair",
+      "format": "PDF",
+      "tags": {
+        "diagnosis": [
+          "Persistent conflict"
+        ],
+        "symptom": [
+          "Conflict / aggression"
+        ],
+        "function": [
+          "Relationships / family",
+          "Safety / stabilization"
+        ],
+        "intervention": [
+          "Family / parenting"
+        ],
+        "stage": [],
+        "role": [],
+        "task": [],
         "step": [
           "What tool?"
         ]

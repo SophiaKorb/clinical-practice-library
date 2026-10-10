@@ -1,6 +1,6 @@
 {
   "scope": "Current HTML except legacy and preview; source-level checks only. Wrapped labels are recognized. No rendered, screen-reader, clinical, contrast, or mobile approval is inferred.",
-  "pages": 414,
+  "pages": 449,
   "issues": [],
   "cross_version_links": [
     {
