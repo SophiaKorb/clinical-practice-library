@@ -36,6 +36,7 @@ jobs:
       - run: node tests/clinical-expansion.cjs
       - run: node tests/assessment-school.cjs
       - run: node tests/practice-learning.cjs
+      - run: node tests/dsm-foundations.cjs
       - run: node tests/clinical-finder.cjs
       - run: node tests/topic-expansion.cjs
       - run: python scripts/audit-navigation-accessibility.py
