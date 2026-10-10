@@ -16,6 +16,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.x'
+      # Ensure authored topic pages match their reproducible source generator.
+      - run: python -m py_compile scripts/build-topic-expansion.py scripts/expansion-topics.py scripts/create-topic-pdfs.py
+      - run: python scripts/build-topic-expansion.py --waves 5
+      - run: git diff --exit-code -- resources/clinical-topics data/topic-expansion-ledger.json data/topic-evidence-registry.json
       - run: python scripts/check-local-links.py
       - run: python scripts/check-site-scripts.py
       - run: node scripts/check-catalog.cjs
