@@ -13,7 +13,7 @@ for(const p of targets){
  const h=fs.readFileSync(p,'utf8');
  assert.equal((h.match(/<nav class="cpl-static-nav"/g)||[]).length,1,'one persistent panel: '+p);
  assert.equal((h.match(/href="\/resources\/site-navigation.css"/g)||[]).length,1,'shared nav styling: '+p);
- const mainAt=h.search(/<main\\b/i);
+ const mainAt=h.search(/<main\b/i);
  if(mainAt!==-1)assert.ok(h.indexOf('<nav class="cpl-static-nav"')<mainAt,'navigation precedes main: '+p);
  assert.ok(h.includes('href="/resources/clinical-resource-finder.html"'),'finder access: '+p);
  assert.ok(h.includes('href="/resources/therapy/visual-reasoning-toolkit.html"'),'visual tools access: '+p);
