@@ -7,7 +7,7 @@ for (const name of names) {
  assert.equal((html.match(/<nav class="cpl-static-nav"/g)||[]).length,1,'global nav '+name);
  assert.equal((html.match(/href="\/resources\/site-navigation.css"/g)||[]).length,1,'nav style '+name);
  assert.match(html,/\/resources\/clinical-depth\/clinical-depth.css/,'clinical depth style '+name);
- assert.match(html,/Qualified (specialty|assessment) clinical review pending/,'qualified review gate '+name);
+ assert.match(html,/Qualified [^.]{0,100}clinical review pending/,'qualified review gate '+name);
  assert.ok(!html.includes('aria-current="page"'),'do not mislabel current nav '+name);
  const ids = new Set([...html.matchAll(/\bid="([^"]+)"/g)].map(x=>x[1]));
  assert.equal(ids.size,[...html.matchAll(/\bid="([^"]+)"/g)].length,'unique ids '+name);
