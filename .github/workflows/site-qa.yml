@@ -20,4 +20,5 @@ jobs:
       - run: python scripts/check-site-scripts.py
       - run: node scripts/check-catalog.cjs
       - run: node scripts/check-school-guide-parity.js
-      - run: node tests/dsm-atlas-smoke.cjs
+      # The experimental DSM lab moved to its own project; the removed test no longer belongs here.
+      - run: node tests/homepage-pathways.cjs
