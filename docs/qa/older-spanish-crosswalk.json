@@ -1,0 +1,58 @@
+[
+  {
+    "old_path": "hacer-transiciones-faciles.html",
+    "current_path": "hacer-transiciones-mas-faciles.html",
+    "identical_text": false,
+    "old_chars": 2988,
+    "current_chars": 2949,
+    "decision": "Retain source on original branch; current topical counterpart exists. Clinical/translation comparison remains open; do not replace automatically."
+  },
+  {
+    "old_path": "mapa-transicion.html",
+    "current_path": "mi-mapa-transicion.html",
+    "identical_text": false,
+    "old_chars": 1933,
+    "current_chars": 1894,
+    "decision": "Retain source on original branch; current topical counterpart exists. Clinical/translation comparison remains open; do not replace automatically."
+  },
+  {
+    "old_path": "mi-plan-cuidado-personal.html",
+    "current_path": "plan-cuidado-personal.html",
+    "identical_text": false,
+    "old_chars": 1571,
+    "current_chars": 1493,
+    "decision": "Retain source on original branch; current topical counterpart exists. Clinical/translation comparison remains open; do not replace automatically."
+  },
+  {
+    "old_path": "planes-faciles-empezar-terminar.html",
+    "current_path": "planes-empezar-terminar.html",
+    "identical_text": true,
+    "old_chars": 3523,
+    "current_chars": 3523,
+    "decision": "Retain source on original branch; current topical counterpart exists. Clinical/translation comparison remains open; do not replace automatically."
+  },
+  {
+    "old_path": "planes-mas-faciles-empezar-terminar.html",
+    "current_path": "planes-empezar-terminar.html",
+    "identical_text": false,
+    "old_chars": 3484,
+    "current_chars": 3523,
+    "decision": "Retain source on original branch; current topical counterpart exists. Clinical/translation comparison remains open; do not replace automatically."
+  },
+  {
+    "old_path": "tareas-hogar-faciles.html",
+    "current_path": "tareas-hogar-mas-faciles.html",
+    "identical_text": false,
+    "old_chars": 3436,
+    "current_chars": 3397,
+    "decision": "Retain source on original branch; current topical counterpart exists. Clinical/translation comparison remains open; do not replace automatically."
+  },
+  {
+    "old_path": "transiciones-puente.html",
+    "current_path": "transiciones-son-un-puente.html",
+    "identical_text": false,
+    "old_chars": 3607,
+    "current_chars": 3568,
+    "decision": "Retain source on original branch; current topical counterpart exists. Clinical/translation comparison remains open; do not replace automatically."
+  }
+]
