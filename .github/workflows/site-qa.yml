@@ -25,6 +25,8 @@ jobs:
       - run: node tests/static-navigation.cjs
       - run: python scripts/check-local-links.py
       - run: python scripts/check-site-scripts.py
+      - run: python -m pip install --quiet 'pypdf>=5,<8'
+      - run: python scripts/audit-pdf-integrity.py
       - run: node scripts/check-catalog.cjs
       - run: node scripts/check-school-guide-parity.js
       # The experimental DSM lab moved to its own project; the removed test no longer belongs here.
