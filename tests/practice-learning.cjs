@@ -28,6 +28,12 @@ for(let i=0;i<6;i++){levels[i].fire();assert.equal(v.elements['scale-result'].te
 v.elements['client-view'].fire();assert.ok(v.classes.has('client-view'));v.elements['client-view'].fire();assert.ok(!v.classes.has('client-view'));
 v.elements.contrast.fire();assert.ok(v.classes.has('high-contrast'));v.elements.print.fire();assert.equal(v.prints(),1);
 let prevented=false;body[0].fire('keydown',{key:' ',preventDefault(){prevented=true;}});assert.ok(prevented);assert.match(v.elements['body-result'].textContent,/Head/);
+assert.equal(body[0].attrs['aria-pressed'],'true');
+assert.equal(body[1].attrs['aria-pressed'],'false');
+body[1].fire('click');
+assert.equal(body[0].attrs['aria-pressed'],'false');
+assert.equal(body[1].attrs['aria-pressed'],'true');
+assert.match(v.elements['body-result'].textContent,/Not sure/);
 choices[0].fire();assert.match(v.elements['choice-result'].textContent,/Not now/);
 v.elements.before.value='Keep this';v.elements.example.fire();assert.equal(v.elements.before.value,'Keep this');assert.match(v.elements['map-status'].textContent,/not loaded/);v.elements['clear-map'].fire();assert.equal(v.elements.before.value,'');v.elements.example.fire();assert.match(v.elements.before.value,/spoken instructions/);
 const tracks=workforce.tracks.map(t=>new Element({track:t.id}));const cases=workforce.cases.map(c=>new Element({case:c.id}));const checks=Array.from({length:9},()=>new Element());
