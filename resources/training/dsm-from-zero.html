@@ -163,6 +163,34 @@ details.extra-examples>summary:hover{background:#f4ead4}
 /* Feedback states use text, not color alone, and explain the selected choice. */
 .feedback[data-result="correct"]{border-left:3px solid #2f8067;padding-left:10px;color:#235943}
 .feedback[data-result="incorrect"]{border-left:3px solid #ac7950;padding-left:10px;color:#6b4329}
+
+/* Early documentation guide: readable direct instructions without another giant lesson */
+.doc-guide{margin:28px 0 38px;background:#fff;border:1px solid #a9c7b6;border-radius:16px;padding:28px 29px;box-shadow:0 4px 20px #24492c0b;scroll-margin-top:78px}
+.doc-guide-heading{margin-bottom:19px;max-width:78ch}
+.doc-guide-eyebrow{color:#456e58;font-size:.72rem;font-weight:800;letter-spacing:.09em;margin:0 0 6px}
+.doc-guide-heading h2{font-family:Georgia,serif;font-size:clamp(1.7rem,3vw,2.15rem);line-height:1.2;margin:0 0 9px}
+.doc-guide-heading>p:last-child{font-size:1.02rem;line-height:1.55;margin:0}
+.doc-steps{list-style:none;counter-reset:docstep;display:grid;gap:0;padding:0;margin:0;border-block:1px solid #dce9e1}
+.doc-steps li{counter-increment:docstep;position:relative;padding:13px 12px 13px 48px;line-height:1.58}
+.doc-steps li+li{border-top:1px solid #e6eee8}
+.doc-steps li::before{content:counter(docstep);position:absolute;left:4px;top:13px;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;color:#fff;background:#315e4b;font-weight:750;font-family:system-ui,sans-serif}
+.doc-steps strong{display:block;color:#264d3b}
+.doc-format{padding:13px 16px;border-left:3px solid #739f85;background:#f1f8f2;border-radius:3px 9px 9px 3px;margin:17px 0 26px}
+.doc-guide h3{font-size:1.15rem;margin:19px 0 10px}
+.doc-examples{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.doc-example{background:#f8faf8;border:1px solid #dfebe1;border-radius:10px;padding:14px}
+.doc-example>b{font-size:1.03rem;color:#294d40}
+.doc-example p{font-size:.91rem;line-height:1.5;margin:12px 0 0}
+.doc-example p strong{display:inline;color:#415f51}
+.doc-guide-more{margin:20px 0}
+.doc-guide-more details.expand{background:#fafcfb}
+.doc-guide-return{margin:18px 0 0;font-size:.92rem}
+.cross-ref{margin:16px 0;font-size:.94rem;color:#445d4d}
+.cross-ref a,.doc-guide-return a{font-weight:700;text-underline-offset:3px}
+@media(max-width:840px){.doc-examples{grid-template-columns:1fr}}
+@media(max-width:680px){.doc-guide{padding:20px 16px;margin:21px 0 26px;border-radius:12px;scroll-margin-top:65px}.doc-steps li{padding-right:0}.doc-format{font-size:.91rem}.doc-examples{gap:9px}}
+@media print{.doc-guide{break-inside:auto!important;box-shadow:none}.doc-steps li,.doc-example{break-inside:avoid}}
+
 </style>
 <script defer>
 document.addEventListener('DOMContentLoaded',()=>{
@@ -242,6 +270,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 <a href="#lesson-1"><span>Lesson 1</span>Why classify anything?</a>
 <a href="#lesson-2"><span>Lesson 2</span>What is the DSM?</a>
 <a href="#lesson-3"><span>Lesson 3</span>Symptoms and disorders</a>
+<a href="#documentation-guide"><span>Reference</span>Document what you know</a>
 <a href="#lesson-4"><span>Lesson 4</span>Everyday vs clinical language</a>
 <a href="#lesson-5"><span>Lesson 5</span>Six questions to ask</a>
 <a href="#lesson-6"><span>Lesson 6</span>Find the right chapter</a>
@@ -329,7 +358,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 <div class="check" data-quiz><h3>Question 2 of 3</h3><p>A client says, “I keep losing my train of thought halfway through a sentence.” What is the clinical value of that phrase?</p><div class="answers"><button type="button" data-answer="no" data-feedback="A self-description does not establish an ADHD symptom pattern, timing, or differential.">It confirms ADHD.</button><button type="button" data-answer="yes" data-feedback="The phrase tells us the person notices attention difficulty, but not what causes it. Ask when it happens, what else accompanies it, how sleep or stress affects it, and whether it creates functional problems before choosing a diagnostic explanation.">It is a useful description to explore, not a DSM criterion on its own.</button><button type="button" data-answer="no" data-feedback="Sleep is relevant to ask about, not a conclusion from the phrase.">It confirms a sleep disorder.</button></div><p class="feedback" role="status" aria-live="polite">Choose an answer for feedback.</p></div>
 <div class="check" data-quiz><h3>Question 3 of 3</h3><p>Which additional detail would help distinguish ordinary stress from a clinical presentation?</p><div class="answers"><button type="button" data-answer="no" data-feedback="Unread messages are not a mental-health diagnostic instrument.">The number of unopened messages alone.</button><button type="button" data-answer="no" data-feedback="An iced coffee order tells you very little about diagnostic patterns, even in July.">Whether they still order iced coffee when it is 110°F outside.</button><button type="button" data-answer="yes" data-feedback="Onset and duration distinguish a temporary reaction from a persistent or recurrent pattern. Associated symptoms, circumstances, and functional impact then help determine whether a particular set of diagnostic criteria might fit, or whether another explanation is stronger.">Onset, duration, associated symptoms, context, and effect on functioning.</button></div><p class="feedback" role="status" aria-live="polite">Choose an answer for feedback.</p></div>
 </div></details>
-<details class="expand"><summary><span>Go deeper: how to write a symptom without diagnosing it</span><span class="expand-arrow" aria-hidden="true">+</span></summary><p>Write <em>“Client reports difficulty concentrating after three nights of short sleep”</em> rather than <em>“Client has ADHD.”</em> The first statement preserves the report and relevant context; the second assumes a diagnostic conclusion. As evidence accumulates, documentation can distinguish observed findings, self-report, and professional interpretation.</p></details>
+<p class="cross-ref">Writing about a symptom without diagnosing it? <a href="#documentation-guide">Use the documentation guide</a>.</p>
 <details class="extra-examples"><summary><span><span class="practice-eyebrow">OPTIONAL CASES</span><span class="practice-label">Explore 3 more worked examples</span></span><span class="practice-indicator" aria-hidden="true">+</span></summary><div class="extra-content"><div class="example"><strong>After three nights of poor sleep</strong><p>Taylor reports irritability, slow thinking, and missed appointments after working late all week.</p><p><b>What else to consider:</b> Consider timing and sleep before deciding whether an enduring psychiatric condition explains the change.</p></div>
 <div class="example"><strong>The road test</strong><p>A teenager experiences sweaty palms before a driving test and feels calm afterward.</p><p><b>Why the context matters:</b> Context matters; a temporary stress response is not automatically an anxiety disorder.</p></div>
 <div class="example"><strong>Difficulty starting homework</strong><p>Morgan cannot begin an assignment, yet can start tasks easily when each step is shown visually.</p><p><b>What the difference suggests:</b> That contrast suggests useful questions about task clarity, executive load, motivation, and environment.</p></div></div></details>
@@ -343,6 +372,41 @@ document.addEventListener('DOMContentLoaded',()=>{
 </section>
 
 
+
+<section class="doc-guide" id="documentation-guide" aria-labelledby="documentation-guide-title">
+<div class="doc-guide-heading"><p class="doc-guide-eyebrow">EARLY REFERENCE · PRACTICAL SKILLS</p><h2 id="documentation-guide-title">Document what you know</h2><p>Use these steps when your role involves writing assessment or therapy notes. You do not have to write a diagnostic conclusion before you have evidence for one.</p></div>
+<ol class="doc-steps">
+<li><strong>Say who provided the information.</strong> Write “Client reports…,” “Caregiver reports…,” or “Therapist observed…,” as appropriate. Do not turn someone else's interpretation into an observed fact.</li>
+<li><strong>Describe the specific experience or behavior.</strong> State what happened, using the person's own words when those words carry meaning. Avoid vague judgments such as “manipulative” or “attention-seeking.”</li>
+<li><strong>Include relevant context and daily-life impact.</strong> Note when it happens, where, how often, what is difficult, and what helps, but only if you actually have that information.</li>
+<li><strong>Separate description from interpretation.</strong> Clearly distinguish reported symptoms, observations, prior diagnoses reported by others, working hypotheses, and diagnoses established through appropriate assessment.</li>
+<li><strong>State what remains unknown and what happens next.</strong> Note the specific assessment, consultation, support, or follow-up that is planned, when appropriate. Do not invent a plan or imply that an evaluation already occurred.</li>
+</ol>
+<p class="doc-format"><strong>One simple structure:</strong> Source → specific experience → context and impact → uncertainty or next step.</p>
+<h3>Three examples: vague note versus useful note</h3>
+<div class="doc-examples">
+<div class="doc-example"><b>Concentration</b><p><strong>Instead of:</strong> “Client has ADHD and cannot focus.”</p><p><strong>Write, when supported:</strong> “Client reports difficulty following spoken directions and says written steps help. Onset and possible contributing factors have not yet been assessed.”</p></div>
+<div class="doc-example"><b>Everyday diagnostic language</b><p><strong>Instead of:</strong> “Client is bipolar because their mood changes during arguments.”</p><p><strong>Write, when supported:</strong> “Caregiver reports rapid mood changes during disagreements. Episode duration, associated symptoms, and other explanations require further assessment.”</p></div>
+<div class="doc-example"><b>Identity and functioning</b><p><strong>Instead of:</strong> “Client is definitely ADHD because they identify as neurodivergent.”</p><p><strong>Write, when supported:</strong> “Client describes themself as neurodivergent, reports that written steps improve task access, and has not reported a formal ADHD evaluation.”</p></div>
+</div>
+<div class="doc-guide-more">
+<details class="expand"><summary><span>Keep self-description, diagnosis, and functioning separate</span><span class="expand-arrow" aria-hidden="true">+</span></summary>
+<p><strong>Self-description:</strong> “Client describes themself as neurodivergent.” This respects the person's own meaning without making a formal diagnostic claim.</p>
+<p><strong>Diagnosis source:</strong> “Client reports a prior ADHD diagnosis” is different from “ADHD confirmed by evaluation.” Identify the source and what has actually been verified.</p>
+<p><strong>Functioning:</strong> “Client reports missing steps in rapid verbal instructions and benefiting from written directions.” Record observed or reported effects and supports without assuming the diagnosis explains everything.</p>
+</details>
+<details class="expand"><summary><span>When a diagnosis or code belongs in the record</span><span class="expand-arrow" aria-hidden="true">+</span></summary>
+<p>Use diagnostic terms and ICD-10-CM codes only when appropriate for the encounter, supported by the available evidence, and within your professional role and setting's requirements. An existing template code is not proof that a diagnosis is current. Some encounters use symptom-based codes when a definitive diagnosis has not been established; applicable coding and payer rules vary.</p>
+<p>DSM-5-TR criteria and ICD-10-CM coding serve related but different purposes. A code is never a substitute for history, assessment, treatment goals, and functional information.</p>
+</details>
+<details class="expand"><summary><span>Adapt notes to the actual task and scope</span><span class="expand-arrow" aria-hidden="true">+</span></summary>
+<p>A therapy note, assessment report, referral, school communication, and accommodation statement do not require identical content. Use the record's required format, protect confidentiality, and include only information relevant to its purpose. A diagnosis is not always the most useful way to describe a functional need.</p>
+<p>These are fictional models, not text to copy as though you personally observed or assessed something. Safety procedures, documentation standards, and reporting requirements remain role- and setting-specific.</p>
+</details>
+</div>
+<p class="doc-guide-return">Use this guide as a reference. <a href="#lesson-4">Continue to everyday versus diagnostic language →</a></p>
+</section>
+
 <section class="lesson" id="lesson-4" aria-labelledby="title-4">
 <div class="lesson-head"><div class="number">4</div><div><p>Language and diagnostic precision</p><h2 id="title-4">Everyday words versus clinical terms</h2></div></div>
 <p class="simple">Many diagnostic terms are also everyday words. Their meanings depend on the context.</p>
@@ -350,7 +414,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 <div class="visual" aria-label="Three stages of translating language">
 <div class="tile"><b>Everyday language</b><p>“I'm totally manic today.” What does this person mean?</p></div>
 <div class="tile"><b>Clinical questions</b><p>What changed in mood, energy, sleep, behavior, and functioning? For how long?</p></div>
-<div class="tile"><b>Careful documentation</b><p>Record the person's exact words and observed facts. Do not turn a phrase into a diagnosis.</p></div>
+<div class="tile"><b>Careful listening</b><p>Check what the person means. Their chosen words may carry personal meaning even when they are not diagnostic terms.</p></div>
 </div>
 <p><strong>The essential distinction:</strong> A person's words tell us where to begin asking questions. They do not establish a diagnosis on their own. A client may use a clinical term accurately, casually, or in a personal way. Clarify rather than correct or dismiss them.</p>
 <div class="expand-group" id="vocabulary-clinical">
@@ -397,15 +461,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 <p class="tiny">For a grounded overview, see the <a href="https://www.psychiatry.org/patients-families/personality-disorders/what-are-personality-disorders">American Psychiatric Association's personality disorder explanation</a>, <a href="https://www.nimh.nih.gov/health/statistics/personality-disorders">NIMH's definition</a>, and <a href="https://www.nimh.nih.gov/health/publications/borderline-personality-disorder">NIMH's guide to borderline personality disorder and treatment</a>.</p>
 </section>
 
-<details class="expand"><summary><span>Practice: translate the quote into a defensible note</span><span class="expand-arrow" aria-hidden="true">+</span></summary>
-<p><strong>Casual:</strong> “He's bipolar because his mood changes every ten minutes.”</p>
-<p><strong>Better:</strong> “Caregiver reports rapid mood shifts during disagreements. Onset, duration, associated symptoms, sleep, context, and alternative explanations have not yet been evaluated.”</p>
-<p><strong>Casual:</strong> “She's OCD about her workspace.”</p>
-<p><strong>Better:</strong> “Person reports a strong preference for keeping work materials arranged in a specific order; intrusive thoughts, repetitive behavior, distress, and interference have not yet been assessed.”</p>
-<p><strong>Client's own words:</strong> “I had a panic attack.”</p>
-<p><strong>Better:</strong> “Client describes the episode as a ‘panic attack.’ Further assessment will clarify onset, physical and cognitive symptoms, duration, context, and impact.”</p>
-<p class="tiny">These are fictional teaching examples, not templates to paste as if an assessment occurred. Preserve attribution and the person's preferred language.</p>
-</details>
+<p class="cross-ref">For examples of how to record these terms accurately, see <a href="#documentation-guide">Document what you know</a>.</p>
 <details class="practice-set"><summary><span><span class="practice-eyebrow">KNOWLEDGE CHECK</span><span class="practice-label">Try the 3 core questions</span></span><span class="practice-indicator" aria-hidden="true">+</span></summary><div class="practice-content">
 <div class="check" data-quiz><h3>Question 1 of 3</h3><p>A colleague says, “I’m so OCD about my desk.” What is the most useful response in a clinical interview?</p><div class="answers"><button type="button" data-answer="no" data-feedback="A preference for tidiness alone does not establish OCD or its criteria.">Record obsessive-compulsive disorder immediately.</button><button type="button" data-answer="no" data-feedback="The stationery may be meticulously organized. The clinical evidence, however, is not.">Assume the colleague has a secret color-coding compulsion.</button><button type="button" data-answer="yes" data-feedback="'I'm so OCD' can mean 'I like things tidy,' whereas OCD has specific features involving obsessions and/or compulsions. Asking what the person experiences preserves their meaning and tells you whether there are symptoms worth evaluating. A tidy desk alone is not enough.">Ask what they mean and whether intrusive thoughts, repetitive behaviors, distress, or interference are involved.</button></div><p class="feedback" role="status" aria-live="polite">Choose an answer for feedback.</p></div>
 <div class="check" data-quiz><h3>Question 2 of 3</h3><p>Someone says, “I had a panic attack before my road test.” What can you conclude?</p><div class="answers"><button type="button" data-answer="no" data-feedback="A challenging road test does not determine whether panic-disorder criteria are met.">Taking a road test automatically proves panic disorder.</button><button type="button" data-answer="yes" data-feedback="'Panic attack' is meaningful as the person's description, but panic attacks have specific features and panic disorder requires more than one alarming event. Asking about suddenness, physical symptoms, timing, and subsequent avoidance helps distinguish the experiences.">They felt overwhelmed; clarify the suddenness, symptoms, duration, context, and impact.</button><button type="button" data-answer="no" data-feedback="A self-described panic attack does not establish panic disorder. Panic attacks can occur across conditions.">They have panic disorder.</button></div><p class="feedback" role="status" aria-live="polite">Choose an answer for feedback.</p></div>
@@ -496,7 +552,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 <div class="check" data-quiz><h3>Question 2 of 3</h3><p>In Eli’s case, what would be the strongest next step?</p><div class="answers"><button type="button" data-answer="no" data-feedback="Supports and expectations need an individualized, collaborative review, not a permanent change from one episode.">Remove all academic expectations permanently.</button><button type="button" data-answer="no" data-feedback="That jumps from an action to an assumed motive.">Document ‘defiant’ after the first refusal.</button><button type="button" data-answer="yes" data-feedback="Trying short, modeled directions changes one environmental demand and shows whether Eli can access the task more easily. Comparing the response provides useful evidence about language, learning, attention, or sensory demands instead of simply labeling the behavior 'defiant.'">Test whether shorter, modeled directions change access, and document the result.</button></div><p class="feedback" role="status" aria-live="polite">Choose an answer for feedback.</p></div>
 <div class="check" data-quiz><h3>Question 3 of 3</h3><p>Which follow-up would most improve your understanding of Maya’s report?</p><div class="answers"><button type="button" data-answer="no" data-feedback="Possibly good small talk, but not a substitute for an assessment.">Ask only whether Maya enjoys Mondays.</button><button type="button" data-answer="no" data-feedback="A self-label or online quiz is not a comprehensive clinical assessment.">Ask Maya to select her diagnosis from an internet quiz.</button><button type="button" data-answer="yes" data-feedback="Questions about the timeline, sleep, health, mood, activity, and safety can separate several plausible explanations for reduced energy and social contact. A good follow-up identifies the missing evidence rather than asking Maya to choose a diagnosis.">Ask about the timeline, sleep and health, mood, functioning, and safety.</button></div><p class="feedback" role="status" aria-live="polite">Choose an answer for feedback.</p></div>
 </div></details>
-<details class="expand"><summary><span>Go deeper: example of a neutral clinical summary</span><span class="expand-arrow" aria-hidden="true">+</span></summary><p><strong>Eli:</strong> “Caregiver reports school-based distress during lengthy verbal directions and writing tasks. More information is needed about task comprehension, communication, learning demands, environmental load, timing, and supports that improve access.”</p><p><strong>Maya:</strong> “Client reports decreased social participation and persistent low energy; clinical assessment is needed to clarify onset, mood, sleep, physical health, contextual stressors, functioning, and safety.”</p></details>
+<p class="cross-ref">Want to practice turning a case report into a note? Review <a href="#documentation-guide">the early documentation guide</a>.</p>
 <details class="extra-examples"><summary><span><span class="practice-eyebrow">OPTIONAL CASES</span><span class="practice-label">Explore 3 more worked examples</span></span><span class="practice-indicator" aria-hidden="true">+</span></summary><div class="extra-content"><div class="example"><strong>Nina and the unread directions</strong><p>Nina correctly answers written questions when directions are modeled but repeatedly misses tasks described only in rapid speech.</p><p><b>What to test:</b> Compare receptive language, hearing, working memory, anxiety, and instruction design. The pattern informs support, not an instant diagnosis.</p></div>
 <div class="example"><strong>Luis and the missed appointments</strong><p>Luis misses two morning appointments after a shift change and says he cannot keep his eyes open.</p><p><b>What to follow up:</b> Ask about schedule, sleep, transportation, routines, health, and recent stressors before inferring disinterest.</p></div>
 <div class="example"><strong>Jo and the crowded waiting room</strong><p>Jo leaves a waiting room abruptly and later explains that overlapping conversations and bright lights felt unbearable.</p><p><b>Support and access:</b> Document Jo's own account and look for environmental accommodations; assess any broader symptom pattern only if indicated.</p></div></div></details>
@@ -566,12 +622,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 <p>People may welcome a diagnostic label, reject it, find parts of it useful, or hold several descriptions at once. A person can value a neurodivergent identity and seek help with symptoms, impairment, or distress. A person can dislike a diagnostic label and still benefit from support. Ask rather than presume.</p>
 <div class="example"><strong>Therapist language:</strong> “What words do you prefer? What do they mean to you? Is there anything you want me to avoid?”</div>
 </details>
-<details class="expand"><summary><span>Good documentation keeps three kinds of information separate</span><span class="expand-arrow" aria-hidden="true">+</span></summary>
-<p><strong>Self-description:</strong> “Client describes themself as neurodivergent and states that written directions have always improved access to tasks.”</p>
-<p><strong>Reported or verified diagnosis:</strong> “Client reports prior ADHD diagnosis” is not interchangeable with “ADHD established by evaluation.” Document the source and confidence of the information rather than silently upgrading a self-report into a confirmed diagnosis.</p>
-<p><strong>Functional impact:</strong> “Client requires written directions to complete multistep work accurately; rapid verbal instructions are associated with missed steps.” Record observed and reported limitations, environmental barriers, and supports.</p>
-<p>The three can be related, but one does not automatically prove another. Respectful listening and clinically accurate documentation belong together.</p>
-</details>
+<p class="cross-ref">For recording identity, reported diagnoses, and daily-life needs without conflating them, see <a href="#documentation-guide">Document what you know</a>.</p>
 </div>
 <section id="diagnosis-use-and-limits" aria-labelledby="diagnosis-balance-title">
 <h3 id="diagnosis-balance-title">Diagnosis is useful. It is also imperfect.</h3>
