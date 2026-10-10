@@ -23,6 +23,9 @@ jobs:
           python-version: '3.x'
       - run: python scripts/build-topic-expansion.py --waves 5
       - run: python scripts/site-navigation.py --apply
+      - run: python scripts/site-navigation.py --check
+      - run: node tests/static-navigation.cjs
+      - run: python scripts/check-local-links.py
       - name: Commit synchronized current pages, never legacy
         shell: bash
         run: |
