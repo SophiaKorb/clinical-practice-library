@@ -1,6 +1,6 @@
 {
   "target": 150,
-  "completedMeaningfulResources": 30,
+  "completedMeaningfulResources": 60,
   "countPolicy": "Six distinct purposes per topic. Collection pages, PDFs, shared assets and cosmetic changes excluded. Count does not certify clinical quality.",
   "resources": [
     {
@@ -454,6 +454,462 @@
         "nice-social"
       ],
       "wave": 1,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/ocd-mental-rituals/formulation.html",
+      "topic": "ocd-mental-rituals",
+      "title": "OCD: mental rituals, reassurance and uncertainty \u2014 Clinician formulation guide",
+      "type": "formulation",
+      "audience": "Adults",
+      "sources": [
+        "nice-ocd"
+      ],
+      "wave": 2,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/ocd-mental-rituals/case.html",
+      "topic": "ocd-mental-rituals",
+      "title": "OCD: mental rituals, reassurance and uncertainty \u2014 Interactive case practice",
+      "type": "case",
+      "audience": "Adults",
+      "sources": [
+        "nice-ocd"
+      ],
+      "wave": 2,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/ocd-mental-rituals/support-map.html",
+      "topic": "ocd-mental-rituals",
+      "title": "OCD: mental rituals, reassurance and uncertainty \u2014 Visual support map",
+      "type": "support-map",
+      "audience": "Adults",
+      "sources": [
+        "nice-ocd"
+      ],
+      "wave": 2,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/ocd-mental-rituals/client-workbook.html",
+      "topic": "ocd-mental-rituals",
+      "title": "OCD: mental rituals, reassurance and uncertainty \u2014 Client workbook",
+      "type": "client-workbook",
+      "audience": "Adults",
+      "sources": [
+        "nice-ocd"
+      ],
+      "wave": 2,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/ocd-mental-rituals/care-partner.html",
+      "topic": "ocd-mental-rituals",
+      "title": "OCD: mental rituals, reassurance and uncertainty \u2014 Care-partner guide",
+      "type": "care-partner",
+      "audience": "Adults",
+      "sources": [
+        "nice-ocd"
+      ],
+      "wave": 2,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/ocd-mental-rituals/progress-review.html",
+      "topic": "ocd-mental-rituals",
+      "title": "OCD: mental rituals, reassurance and uncertainty \u2014 Progress review tool",
+      "type": "progress-review",
+      "audience": "Adults",
+      "sources": [
+        "nice-ocd"
+      ],
+      "wave": 2,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/depression-activity-reward/formulation.html",
+      "topic": "depression-activity-reward",
+      "title": "Depression: activity, reward and workable steps \u2014 Clinician formulation guide",
+      "type": "formulation",
+      "audience": "Adults",
+      "sources": [
+        "nice-depression"
+      ],
+      "wave": 2,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/depression-activity-reward/case.html",
+      "topic": "depression-activity-reward",
+      "title": "Depression: activity, reward and workable steps \u2014 Interactive case practice",
+      "type": "case",
+      "audience": "Adults",
+      "sources": [
+        "nice-depression"
+      ],
+      "wave": 2,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/depression-activity-reward/support-map.html",
+      "topic": "depression-activity-reward",
+      "title": "Depression: activity, reward and workable steps \u2014 Visual support map",
+      "type": "support-map",
+      "audience": "Adults",
+      "sources": [
+        "nice-depression"
+      ],
+      "wave": 2,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/depression-activity-reward/client-workbook.html",
+      "topic": "depression-activity-reward",
+      "title": "Depression: activity, reward and workable steps \u2014 Client workbook",
+      "type": "client-workbook",
+      "audience": "Adults",
+      "sources": [
+        "nice-depression"
+      ],
+      "wave": 2,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/depression-activity-reward/care-partner.html",
+      "topic": "depression-activity-reward",
+      "title": "Depression: activity, reward and workable steps \u2014 Care-partner guide",
+      "type": "care-partner",
+      "audience": "Adults",
+      "sources": [
+        "nice-depression"
+      ],
+      "wave": 2,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/depression-activity-reward/progress-review.html",
+      "topic": "depression-activity-reward",
+      "title": "Depression: activity, reward and workable steps \u2014 Progress review tool",
+      "type": "progress-review",
+      "audience": "Adults",
+      "sources": [
+        "nice-depression"
+      ],
+      "wave": 2,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/trauma-cue-orientation/formulation.html",
+      "topic": "trauma-cue-orientation",
+      "title": "Trauma cues: present orientation and chosen support \u2014 Clinician formulation guide",
+      "type": "formulation",
+      "audience": "Adults",
+      "sources": [
+        "nice-ptsd",
+        "va-dissociation"
+      ],
+      "wave": 2,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/trauma-cue-orientation/case.html",
+      "topic": "trauma-cue-orientation",
+      "title": "Trauma cues: present orientation and chosen support \u2014 Interactive case practice",
+      "type": "case",
+      "audience": "Adults",
+      "sources": [
+        "nice-ptsd",
+        "va-dissociation"
+      ],
+      "wave": 2,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/trauma-cue-orientation/support-map.html",
+      "topic": "trauma-cue-orientation",
+      "title": "Trauma cues: present orientation and chosen support \u2014 Visual support map",
+      "type": "support-map",
+      "audience": "Adults",
+      "sources": [
+        "nice-ptsd",
+        "va-dissociation"
+      ],
+      "wave": 2,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/trauma-cue-orientation/client-workbook.html",
+      "topic": "trauma-cue-orientation",
+      "title": "Trauma cues: present orientation and chosen support \u2014 Client workbook",
+      "type": "client-workbook",
+      "audience": "Adults",
+      "sources": [
+        "nice-ptsd",
+        "va-dissociation"
+      ],
+      "wave": 2,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/trauma-cue-orientation/care-partner.html",
+      "topic": "trauma-cue-orientation",
+      "title": "Trauma cues: present orientation and chosen support \u2014 Care-partner guide",
+      "type": "care-partner",
+      "audience": "Adults",
+      "sources": [
+        "nice-ptsd",
+        "va-dissociation"
+      ],
+      "wave": 2,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/trauma-cue-orientation/progress-review.html",
+      "topic": "trauma-cue-orientation",
+      "title": "Trauma cues: present orientation and chosen support \u2014 Progress review tool",
+      "type": "progress-review",
+      "audience": "Adults",
+      "sources": [
+        "nice-ptsd",
+        "va-dissociation"
+      ],
+      "wave": 2,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/dissociation-function-orientation/formulation.html",
+      "topic": "dissociation-function-orientation",
+      "title": "Dissociation: orientation, time gaps and daily function \u2014 Clinician formulation guide",
+      "type": "formulation",
+      "audience": "Adults",
+      "sources": [
+        "va-dissociation"
+      ],
+      "wave": 2,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/dissociation-function-orientation/case.html",
+      "topic": "dissociation-function-orientation",
+      "title": "Dissociation: orientation, time gaps and daily function \u2014 Interactive case practice",
+      "type": "case",
+      "audience": "Adults",
+      "sources": [
+        "va-dissociation"
+      ],
+      "wave": 2,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/dissociation-function-orientation/support-map.html",
+      "topic": "dissociation-function-orientation",
+      "title": "Dissociation: orientation, time gaps and daily function \u2014 Visual support map",
+      "type": "support-map",
+      "audience": "Adults",
+      "sources": [
+        "va-dissociation"
+      ],
+      "wave": 2,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/dissociation-function-orientation/client-workbook.html",
+      "topic": "dissociation-function-orientation",
+      "title": "Dissociation: orientation, time gaps and daily function \u2014 Client workbook",
+      "type": "client-workbook",
+      "audience": "Adults",
+      "sources": [
+        "va-dissociation"
+      ],
+      "wave": 2,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/dissociation-function-orientation/care-partner.html",
+      "topic": "dissociation-function-orientation",
+      "title": "Dissociation: orientation, time gaps and daily function \u2014 Care-partner guide",
+      "type": "care-partner",
+      "audience": "Adults",
+      "sources": [
+        "va-dissociation"
+      ],
+      "wave": 2,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/dissociation-function-orientation/progress-review.html",
+      "topic": "dissociation-function-orientation",
+      "title": "Dissociation: orientation, time gaps and daily function \u2014 Progress review tool",
+      "type": "progress-review",
+      "audience": "Adults",
+      "sources": [
+        "va-dissociation"
+      ],
+      "wave": 2,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/child-grief-continuing-bonds/formulation.html",
+      "topic": "child-grief-continuing-bonds",
+      "title": "Child grief: remembrance, routines and traumatic reminders \u2014 Clinician formulation guide",
+      "type": "formulation",
+      "audience": "School-age children and caregivers",
+      "sources": [
+        "nctsn-grief"
+      ],
+      "wave": 2,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/child-grief-continuing-bonds/case.html",
+      "topic": "child-grief-continuing-bonds",
+      "title": "Child grief: remembrance, routines and traumatic reminders \u2014 Interactive case practice",
+      "type": "case",
+      "audience": "School-age children and caregivers",
+      "sources": [
+        "nctsn-grief"
+      ],
+      "wave": 2,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/child-grief-continuing-bonds/support-map.html",
+      "topic": "child-grief-continuing-bonds",
+      "title": "Child grief: remembrance, routines and traumatic reminders \u2014 Visual support map",
+      "type": "support-map",
+      "audience": "School-age children and caregivers",
+      "sources": [
+        "nctsn-grief"
+      ],
+      "wave": 2,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/child-grief-continuing-bonds/client-workbook.html",
+      "topic": "child-grief-continuing-bonds",
+      "title": "Child grief: remembrance, routines and traumatic reminders \u2014 Client workbook",
+      "type": "client-workbook",
+      "audience": "School-age children and caregivers",
+      "sources": [
+        "nctsn-grief"
+      ],
+      "wave": 2,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/child-grief-continuing-bonds/care-partner.html",
+      "topic": "child-grief-continuing-bonds",
+      "title": "Child grief: remembrance, routines and traumatic reminders \u2014 Care-partner guide",
+      "type": "care-partner",
+      "audience": "School-age children and caregivers",
+      "sources": [
+        "nctsn-grief"
+      ],
+      "wave": 2,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/child-grief-continuing-bonds/progress-review.html",
+      "topic": "child-grief-continuing-bonds",
+      "title": "Child grief: remembrance, routines and traumatic reminders \u2014 Progress review tool",
+      "type": "progress-review",
+      "audience": "School-age children and caregivers",
+      "sources": [
+        "nctsn-grief"
+      ],
+      "wave": 2,
       "reviewDate": "2026-10-10",
       "qualifiedClinicalReview": "pending",
       "browserQA": "unavailable",

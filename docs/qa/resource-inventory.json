@@ -2506,11 +2506,235 @@
       "reachable_from_home": true
     },
     {
+      "path": "resources/clinical-topics/child-grief-continuing-bonds/care-partner.html",
+      "bytes": 5969,
+      "sha256": "a78863c3c7b7ec8947f693b1fc0ce5b01ff7f76b88ca8a10e84a6ecc8d897ca8",
+      "retained_legacy": false,
+      "title": "Child grief: remembrance, routines and traumatic reminders \u2014 Care-partner guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/child-grief-continuing-bonds/case.html",
+      "bytes": 7284,
+      "sha256": "026fa1ecfc1009b112235d496ee70f9796af78e837f679611889463bf991167c",
+      "retained_legacy": false,
+      "title": "Child grief: remembrance, routines and traumatic reminders \u2014 Interactive case practice | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/child-grief-continuing-bonds/client-workbook.html",
+      "bytes": 5418,
+      "sha256": "c0c6f1e40939459dd1addf5e44d4d5a3fcd27440feba59b49f2b1cd728eae6a9",
+      "retained_legacy": false,
+      "title": "Child grief: remembrance, routines and traumatic reminders \u2014 Client workbook | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/child-grief-continuing-bonds/formulation.html",
+      "bytes": 6010,
+      "sha256": "53d7c5078f14ff0de36457c02164ea037aa5ac69621bbbb42b991fed7353940e",
+      "retained_legacy": false,
+      "title": "Child grief: remembrance, routines and traumatic reminders \u2014 Clinician formulation guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/child-grief-continuing-bonds/index.html",
+      "bytes": 4510,
+      "sha256": "e4ef18b404b72b323499dd4c2877def4cd279a8af6d424aaedb76a524d7d96eb",
+      "retained_legacy": false,
+      "title": "Child grief: remembrance, routines and traumatic reminders | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/child-grief-continuing-bonds/progress-review.html",
+      "bytes": 6735,
+      "sha256": "a35201d41df2ca81de5214ff49570c666c1675452d6b52b1d75322c7221109c9",
+      "retained_legacy": false,
+      "title": "Child grief: remembrance, routines and traumatic reminders \u2014 Progress review tool | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/child-grief-continuing-bonds/support-map.html",
+      "bytes": 6985,
+      "sha256": "58b22f66ba4475091d50a2758989d69c2260d16c31250b9aae7a5ea80f70cd28",
+      "retained_legacy": false,
+      "title": "Child grief: remembrance, routines and traumatic reminders \u2014 Visual support map | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/depression-activity-reward/care-partner.html",
+      "bytes": 5864,
+      "sha256": "eed42141ad1a7261e11f867c9ebc72feee90737031aa45b8ea591db8d75a45ea",
+      "retained_legacy": false,
+      "title": "Depression: activity, reward and workable steps \u2014 Care-partner guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/depression-activity-reward/case.html",
+      "bytes": 7329,
+      "sha256": "5cb405b2eb94620fc4d0416024017a4fcaccf4cc0dc4220b47a852f53a1f142c",
+      "retained_legacy": false,
+      "title": "Depression: activity, reward and workable steps \u2014 Interactive case practice | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/depression-activity-reward/client-workbook.html",
+      "bytes": 5348,
+      "sha256": "5b7ef02c33999c4bf576eac71a88e2ac4123068e5946cbfa395deba294f36e60",
+      "retained_legacy": false,
+      "title": "Depression: activity, reward and workable steps \u2014 Client workbook | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/depression-activity-reward/formulation.html",
+      "bytes": 5980,
+      "sha256": "74768ba3915ec1130d37051d5e120c5cb1d3f3f9e776f1eb4b8086b6893d5f6c",
+      "retained_legacy": false,
+      "title": "Depression: activity, reward and workable steps \u2014 Clinician formulation guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/depression-activity-reward/index.html",
+      "bytes": 4465,
+      "sha256": "c1e3d252051edf378e53561e9047f1e58cfb45a311f7de4c111a55662ff016ad",
+      "retained_legacy": false,
+      "title": "Depression: activity, reward and workable steps | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/depression-activity-reward/progress-review.html",
+      "bytes": 6584,
+      "sha256": "5dc6590a505f0740617c9abbe179d1c81faafee34dd82d1be7bbb507d4f12cc4",
+      "retained_legacy": false,
+      "title": "Depression: activity, reward and workable steps \u2014 Progress review tool | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/depression-activity-reward/support-map.html",
+      "bytes": 7070,
+      "sha256": "1de2f69593f15b708627fe8d69d43976ce69620742c06f3cd1769e375be59fdd",
+      "retained_legacy": false,
+      "title": "Depression: activity, reward and workable steps \u2014 Visual support map | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/dissociation-function-orientation/care-partner.html",
+      "bytes": 6049,
+      "sha256": "6708154250aa49ca702e95eb7421e6bd52742bb689b90ab848ca678d8966852a",
+      "retained_legacy": false,
+      "title": "Dissociation: orientation, time gaps and daily function \u2014 Care-partner guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/dissociation-function-orientation/case.html",
+      "bytes": 7468,
+      "sha256": "922127fab13f9b904675318b6dfd5b407ac8de83966db380fb06ad2cf21884a1",
+      "retained_legacy": false,
+      "title": "Dissociation: orientation, time gaps and daily function \u2014 Interactive case practice | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/dissociation-function-orientation/client-workbook.html",
+      "bytes": 5539,
+      "sha256": "8d4c265a798a0fcf4de905402eb00511b1424f78139c126b44d12d603c59c3fd",
+      "retained_legacy": false,
+      "title": "Dissociation: orientation, time gaps and daily function \u2014 Client workbook | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/dissociation-function-orientation/formulation.html",
+      "bytes": 6180,
+      "sha256": "571d6ac306b21f8c29d163ceef682b3ff4513b9f9aeb5860d4c0835e769e58b2",
+      "retained_legacy": false,
+      "title": "Dissociation: orientation, time gaps and daily function \u2014 Clinician formulation guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/dissociation-function-orientation/index.html",
+      "bytes": 4668,
+      "sha256": "cdbb857439ede55ea26dcc95780dd118add80f3f4db72171afaf3cafe5ad27c8",
+      "retained_legacy": false,
+      "title": "Dissociation: orientation, time gaps and daily function | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/dissociation-function-orientation/progress-review.html",
+      "bytes": 6794,
+      "sha256": "e2e3a5a17ab95e00521af149ec0f060c59ec6b05bd6c0bc4912a1c616a2b5ca4",
+      "retained_legacy": false,
+      "title": "Dissociation: orientation, time gaps and daily function \u2014 Progress review tool | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/dissociation-function-orientation/support-map.html",
+      "bytes": 7230,
+      "sha256": "3a41a7ca2e1ff39168a3cf89869c3d82faa87e898e9e62846761322b8f691566",
+      "retained_legacy": false,
+      "title": "Dissociation: orientation, time gaps and daily function \u2014 Visual support map | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
       "path": "resources/clinical-topics/index.html",
-      "bytes": 5795,
-      "sha256": "8d59c3a06313dc090e16c4ed061908b212fd6ec852e927174fa82d96b69ef92d",
+      "bytes": 9918,
+      "sha256": "19fc843ccc2aeccefc2fcaa04299ec3b15702b9bcb6241f06dc8de0741ebc3e6",
       "retained_legacy": false,
       "title": "Clinical topic collections | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/ocd-mental-rituals/care-partner.html",
+      "bytes": 5903,
+      "sha256": "c9b711662fc7bc734cac38da84077832a8e07b342589c8c0b5c9b154d8095093",
+      "retained_legacy": false,
+      "title": "OCD: mental rituals, reassurance and uncertainty \u2014 Care-partner guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/ocd-mental-rituals/case.html",
+      "bytes": 7525,
+      "sha256": "623d0be7c6419c780b9903217c153376f8a149f915832fdd8613e58ee328a4c1",
+      "retained_legacy": false,
+      "title": "OCD: mental rituals, reassurance and uncertainty \u2014 Interactive case practice | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/ocd-mental-rituals/client-workbook.html",
+      "bytes": 5369,
+      "sha256": "4214b156f111437c3543115510c03a73e2a542112ac1df9e7322268a04d875fd",
+      "retained_legacy": false,
+      "title": "OCD: mental rituals, reassurance and uncertainty \u2014 Client workbook | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/ocd-mental-rituals/formulation.html",
+      "bytes": 6011,
+      "sha256": "30a18d9f70408eb87920de0c7f622400b3a989dcd3c2a2c2469eb8843ccca494",
+      "retained_legacy": false,
+      "title": "OCD: mental rituals, reassurance and uncertainty \u2014 Clinician formulation guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/ocd-mental-rituals/index.html",
+      "bytes": 4498,
+      "sha256": "552a762372e5bd5866bfd59af5967430e514a369e2aa6a38f67c0070e7cba075",
+      "retained_legacy": false,
+      "title": "OCD: mental rituals, reassurance and uncertainty | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/ocd-mental-rituals/progress-review.html",
+      "bytes": 6589,
+      "sha256": "c743581d3a129a770a3fae7f9577a95db9b043945cace9d41e06e8acac5f4a7b",
+      "retained_legacy": false,
+      "title": "OCD: mental rituals, reassurance and uncertainty \u2014 Progress review tool | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/ocd-mental-rituals/support-map.html",
+      "bytes": 7119,
+      "sha256": "bab38e37f0883afd7854bac06e77978e108e58889d7b89d774bda481d8986b23",
+      "retained_legacy": false,
+      "title": "OCD: mental rituals, reassurance and uncertainty \u2014 Visual support map | Clinical Practice Library",
       "reachable_from_home": true
     },
     {
@@ -2682,6 +2906,62 @@
       "reachable_from_home": true
     },
     {
+      "path": "resources/clinical-topics/trauma-cue-orientation/care-partner.html",
+      "bytes": 6219,
+      "sha256": "1a88e97c609b4e1f0ea94d09ae5e09736e2eab1c6f7864127feea0d1ec56bb15",
+      "retained_legacy": false,
+      "title": "Trauma cues: present orientation and chosen support \u2014 Care-partner guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/trauma-cue-orientation/case.html",
+      "bytes": 7626,
+      "sha256": "6023fcc6fc6b5867932d34e63dcf848fd4347eeac4c3bb4b0e7295a5169ef084",
+      "retained_legacy": false,
+      "title": "Trauma cues: present orientation and chosen support \u2014 Interactive case practice | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/trauma-cue-orientation/client-workbook.html",
+      "bytes": 5600,
+      "sha256": "276e57b738762b0a4e108744e9e5c6434eb3454f87b68999356bedc571bb8008",
+      "retained_legacy": false,
+      "title": "Trauma cues: present orientation and chosen support \u2014 Client workbook | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/trauma-cue-orientation/formulation.html",
+      "bytes": 6135,
+      "sha256": "b9b803c5d7f8c98b7d67f54b67bd0b18ad9d60eb10a7ecabc5eff75d0409ac95",
+      "retained_legacy": false,
+      "title": "Trauma cues: present orientation and chosen support \u2014 Clinician formulation guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/trauma-cue-orientation/index.html",
+      "bytes": 4779,
+      "sha256": "5a932763ea8c0c58015512cf89f3638689dab2ab4f8a291155813454145e178b",
+      "retained_legacy": false,
+      "title": "Trauma cues: present orientation and chosen support | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/trauma-cue-orientation/progress-review.html",
+      "bytes": 6796,
+      "sha256": "dad58ea3eec968ab7cd9d1fb9995c94266137419afb030f8ee952e895f2bfb22",
+      "retained_legacy": false,
+      "title": "Trauma cues: present orientation and chosen support \u2014 Progress review tool | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/trauma-cue-orientation/support-map.html",
+      "bytes": 7179,
+      "sha256": "cf1c6568a1921622ac707e4958a685e786c8b724b1754d3c082d7a756e864bfa",
+      "retained_legacy": false,
+      "title": "Trauma cues: present orientation and chosen support \u2014 Visual support map | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
       "path": "resources/clinical-topics/voices-collaborative-coping/care-partner.html",
       "bytes": 6018,
       "sha256": "c3e38fbe9b2fa357ba6a95c0da0dbdd946e4b877c8bec56c6d4e4a4b2f98b7ff",
@@ -2739,8 +3019,8 @@
     },
     {
       "path": "resources/complete-resource-inventory.html",
-      "bytes": 161173,
-      "sha256": "a1cbade5c7b44507b8b9835d2b822024161ff1b77224a186632754652f76e096",
+      "bytes": 173570,
+      "sha256": "be843bdb5007faaa1e0424ed3d37e4e66ad970468b0ac877e60f03d9cb8fd472",
       "retained_legacy": false,
       "title": "Complete resource inventory | CPL",
       "reachable_from_home": true
@@ -2874,35 +3154,70 @@
     {
       "path": "resources/downloads/topic-bipolar-episode-timeline.pdf",
       "bytes": 3402,
-      "sha256": "846a419b154ca04e364dd509fb7054624a6294d93ff0eff2eaa6a91e1ba27026",
+      "sha256": "881f91cd3cad853a2a8018f297d30c54c2ce039baa8d5018371097482deecba3",
+      "retained_legacy": false,
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/downloads/topic-child-grief-continuing-bonds.pdf",
+      "bytes": 3404,
+      "sha256": "f6670d57727910835665d0dcfadd57e80e8d5086358b08302e733e4428eba42f",
+      "retained_legacy": false,
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/downloads/topic-depression-activity-reward.pdf",
+      "bytes": 3357,
+      "sha256": "d0a9e1b64aecd68c9319fed52895ac8337aecbe70a5b82ada55c321033a252b4",
+      "retained_legacy": false,
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/downloads/topic-dissociation-function-orientation.pdf",
+      "bytes": 3389,
+      "sha256": "efc729aa427efdf1990a51d19ae47841af597a0ed7a4cec3a8d43076879d1d6f",
+      "retained_legacy": false,
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/downloads/topic-ocd-mental-rituals.pdf",
+      "bytes": 3382,
+      "sha256": "a403ec524e2ec68967cd056535076949c4d08c463cf75de9fb5326a1bba0da77",
       "retained_legacy": false,
       "reachable_from_home": true
     },
     {
       "path": "resources/downloads/topic-panic-alarm-loop.pdf",
       "bytes": 3377,
-      "sha256": "a866599fef674d4c0a25815c6451ab3e5e15fbe70ec1646f5d027e8d0069b009",
+      "sha256": "0bb44bff3ef0788a51ac7dab223f7306f1e58be5025b84ed72596f5938fac33c",
       "retained_legacy": false,
       "reachable_from_home": true
     },
     {
       "path": "resources/downloads/topic-sleep-loss-activation.pdf",
       "bytes": 3369,
-      "sha256": "0e65d44e5a2fadb050de9f4f8e7bf4ae5445a0e757bb0d2a0dd73567477e0395",
+      "sha256": "84ebb16c4132b9ae259fdb78efc6bc70897da56d0e30edccc286fcca65f81df5",
       "retained_legacy": false,
       "reachable_from_home": true
     },
     {
       "path": "resources/downloads/topic-social-anxiety-attention.pdf",
       "bytes": 3398,
-      "sha256": "ff17d155dc14b580169aa164093cd37eeef748cc29d9b8fadef6776cf9b11404",
+      "sha256": "187d60601f93a1755b1ea184a6dcd9b32b32df4bfe45a8d1c152ecc8b657d3e6",
+      "retained_legacy": false,
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/downloads/topic-trauma-cue-orientation.pdf",
+      "bytes": 3325,
+      "sha256": "ba54e5f7b5804f832031180e50b6034b677ab66185e10a4a9e3f5c875d6eba00",
       "retained_legacy": false,
       "reachable_from_home": true
     },
     {
       "path": "resources/downloads/topic-voices-collaborative-coping.pdf",
       "bytes": 3365,
-      "sha256": "e4dd9c26d9dcb47236b18f271fcacc79e64ddaa0bd0cfd5dcfed41050e0baff7",
+      "sha256": "b41cf996ad9b85f9ed943cda8230a0c1a4a73f36eeb29ee997ccfc1d10f86c77",
       "retained_legacy": false,
       "reachable_from_home": true
     },
@@ -4902,8 +5217,8 @@
       "absent_from_current": []
     },
     "origin/cpl-2-colorful-helpful": {
-      "commit": "85043c6a3229e0350ed09a9c40559dcdb5439698",
-      "resource_count": 565,
+      "commit": "277a6b4fa04d7ad558bb1aad52e047a1931caf58",
+      "resource_count": 606,
       "absent_from_current": []
     },
     "origin/cpl-phone-check-2026-09-30": {

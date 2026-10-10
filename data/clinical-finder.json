@@ -2474,6 +2474,210 @@
       "metadataBasis": "title/path discovery tags"
     },
     {
+      "url": "/resources/clinical-topics/child-grief-continuing-bonds/index.html",
+      "title": "Child grief: remembrance, routines and traumatic reminders",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Trauma / dissociation"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [],
+        "task": [],
+        "step": []
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/clinical-topics/child-grief-continuing-bonds/care-partner.html",
+      "title": "Child grief: remembrance, routines and traumatic reminders — Care-partner guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Trauma / dissociation"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/child-grief-continuing-bonds/client-workbook.html",
+      "title": "Child grief: remembrance, routines and traumatic reminders — Client workbook",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Trauma / dissociation"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/child-grief-continuing-bonds/formulation.html",
+      "title": "Child grief: remembrance, routines and traumatic reminders — Clinician formulation guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Trauma / dissociation"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [
+          "Function-linked support"
+        ],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Assessment planning",
+          "Treatment planning"
+        ],
+        "step": [
+          "What am I seeing?",
+          "Understanding",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/child-grief-continuing-bonds/case.html",
+      "title": "Child grief: remembrance, routines and traumatic reminders — Interactive case practice",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Trauma / dissociation"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Skill rehearsal / supervision"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/child-grief-continuing-bonds/progress-review.html",
+      "title": "Child grief: remembrance, routines and traumatic reminders — Progress review tool",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Trauma / dissociation"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Progress review"
+        ],
+        "step": [
+          "What to watch next?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/child-grief-continuing-bonds/support-map.html",
+      "title": "Child grief: remembrance, routines and traumatic reminders — Visual support map",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Trauma / dissociation"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Treatment planning"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
       "url": "/resources/therapy/child-adolescent-parenting-family-practical-toolkit.html",
       "title": "Child, Adolescent, Parenting & Family",
       "format": "HTML",
@@ -3395,6 +3599,234 @@
       "metadataBasis": "title/path discovery tags"
     },
     {
+      "url": "/resources/clinical-topics/depression-activity-reward/index.html",
+      "title": "Depression: activity, reward and workable steps",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Depression"
+        ],
+        "symptom": [
+          "Low mood / energy"
+        ],
+        "function": [],
+        "intervention": [
+          "CBT / behavioral activation"
+        ],
+        "stage": [],
+        "role": [],
+        "task": [],
+        "step": []
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/clinical-topics/depression-activity-reward/care-partner.html",
+      "title": "Depression: activity, reward and workable steps — Care-partner guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Depression"
+        ],
+        "symptom": [
+          "Low mood / energy"
+        ],
+        "function": [],
+        "intervention": [
+          "CBT / behavioral activation"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/depression-activity-reward/client-workbook.html",
+      "title": "Depression: activity, reward and workable steps — Client workbook",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Depression"
+        ],
+        "symptom": [
+          "Low mood / energy"
+        ],
+        "function": [],
+        "intervention": [
+          "CBT / behavioral activation"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/depression-activity-reward/formulation.html",
+      "title": "Depression: activity, reward and workable steps — Clinician formulation guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Depression"
+        ],
+        "symptom": [
+          "Low mood / energy"
+        ],
+        "function": [],
+        "intervention": [
+          "CBT / behavioral activation",
+          "Function-linked support"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Assessment planning",
+          "Treatment planning"
+        ],
+        "step": [
+          "What am I seeing?",
+          "Understanding",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/depression-activity-reward/case.html",
+      "title": "Depression: activity, reward and workable steps — Interactive case practice",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Depression"
+        ],
+        "symptom": [
+          "Low mood / energy"
+        ],
+        "function": [],
+        "intervention": [
+          "CBT / behavioral activation"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Skill rehearsal / supervision"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/depression-activity-reward/progress-review.html",
+      "title": "Depression: activity, reward and workable steps — Progress review tool",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Depression"
+        ],
+        "symptom": [
+          "Low mood / energy"
+        ],
+        "function": [],
+        "intervention": [
+          "CBT / behavioral activation"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Progress review"
+        ],
+        "step": [
+          "What to watch next?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/depression-activity-reward/support-map.html",
+      "title": "Depression: activity, reward and workable steps — Visual support map",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Depression"
+        ],
+        "symptom": [
+          "Low mood / energy"
+        ],
+        "function": [],
+        "intervention": [
+          "CBT / behavioral activation",
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Treatment planning"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
       "url": "/resources/es/handouts/despues-escuela-aterrizar.html",
       "title": "Después de la escuela: primero aterrizar, no despegar",
       "format": "HTML",
@@ -3634,6 +4066,208 @@
       },
       "priority": 20,
       "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/clinical-topics/dissociation-function-orientation/index.html",
+      "title": "Dissociation: orientation, time gaps and daily function",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Trauma / dissociation"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [],
+        "stage": [],
+        "role": [],
+        "task": [],
+        "step": []
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/clinical-topics/dissociation-function-orientation/care-partner.html",
+      "title": "Dissociation: orientation, time gaps and daily function — Care-partner guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Trauma / dissociation"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/dissociation-function-orientation/client-workbook.html",
+      "title": "Dissociation: orientation, time gaps and daily function — Client workbook",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Trauma / dissociation"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/dissociation-function-orientation/formulation.html",
+      "title": "Dissociation: orientation, time gaps and daily function — Clinician formulation guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Trauma / dissociation"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [
+          "Function-linked support"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Assessment planning",
+          "Treatment planning"
+        ],
+        "step": [
+          "What am I seeing?",
+          "Understanding",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/dissociation-function-orientation/case.html",
+      "title": "Dissociation: orientation, time gaps and daily function — Interactive case practice",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Trauma / dissociation"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Skill rehearsal / supervision"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/dissociation-function-orientation/progress-review.html",
+      "title": "Dissociation: orientation, time gaps and daily function — Progress review tool",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Trauma / dissociation"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Progress review"
+        ],
+        "step": [
+          "What to watch next?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/dissociation-function-orientation/support-map.html",
+      "title": "Dissociation: orientation, time gaps and daily function — Visual support map",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Trauma / dissociation"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Treatment planning"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
     },
     {
       "url": "/resources/school/homeschool/dyscalculia.html",
@@ -6154,6 +6788,234 @@
       "metadataBasis": "title/path discovery tags"
     },
     {
+      "url": "/resources/clinical-topics/ocd-mental-rituals/index.html",
+      "title": "OCD: mental rituals, reassurance and uncertainty",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Anxiety / OCD"
+        ],
+        "symptom": [
+          "Fear / uncertainty"
+        ],
+        "function": [],
+        "intervention": [
+          "Exposure / ERP"
+        ],
+        "stage": [],
+        "role": [],
+        "task": [],
+        "step": []
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/clinical-topics/ocd-mental-rituals/care-partner.html",
+      "title": "OCD: mental rituals, reassurance and uncertainty — Care-partner guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Anxiety / OCD"
+        ],
+        "symptom": [
+          "Fear / uncertainty"
+        ],
+        "function": [],
+        "intervention": [
+          "Exposure / ERP"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/ocd-mental-rituals/client-workbook.html",
+      "title": "OCD: mental rituals, reassurance and uncertainty — Client workbook",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Anxiety / OCD"
+        ],
+        "symptom": [
+          "Fear / uncertainty"
+        ],
+        "function": [],
+        "intervention": [
+          "Exposure / ERP"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/ocd-mental-rituals/formulation.html",
+      "title": "OCD: mental rituals, reassurance and uncertainty — Clinician formulation guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Anxiety / OCD"
+        ],
+        "symptom": [
+          "Fear / uncertainty"
+        ],
+        "function": [],
+        "intervention": [
+          "Exposure / ERP",
+          "Function-linked support"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Assessment planning",
+          "Treatment planning"
+        ],
+        "step": [
+          "What am I seeing?",
+          "Understanding",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/ocd-mental-rituals/case.html",
+      "title": "OCD: mental rituals, reassurance and uncertainty — Interactive case practice",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Anxiety / OCD"
+        ],
+        "symptom": [
+          "Fear / uncertainty"
+        ],
+        "function": [],
+        "intervention": [
+          "Exposure / ERP"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Skill rehearsal / supervision"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/ocd-mental-rituals/progress-review.html",
+      "title": "OCD: mental rituals, reassurance and uncertainty — Progress review tool",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Anxiety / OCD"
+        ],
+        "symptom": [
+          "Fear / uncertainty"
+        ],
+        "function": [],
+        "intervention": [
+          "Exposure / ERP"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Progress review"
+        ],
+        "step": [
+          "What to watch next?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/ocd-mental-rituals/support-map.html",
+      "title": "OCD: mental rituals, reassurance and uncertainty — Visual support map",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Anxiety / OCD"
+        ],
+        "symptom": [
+          "Fear / uncertainty"
+        ],
+        "function": [],
+        "intervention": [
+          "Exposure / ERP",
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Treatment planning"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
       "url": "/resources/therapy/open-shareable-therapy-resources.html",
       "title": "Open & Shareable Therapy Resources",
       "format": "HTML",
@@ -8336,6 +9198,98 @@
       "metadataBasis": "title/path discovery tags"
     },
     {
+      "url": "/resources/downloads/topic-child-grief-continuing-bonds.pdf",
+      "title": "Topic Child Grief Continuing Bonds",
+      "format": "PDF",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [],
+        "function": [],
+        "intervention": [],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [],
+        "task": [],
+        "step": [
+          "What tool?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/downloads/topic-depression-activity-reward.pdf",
+      "title": "Topic Depression Activity Reward",
+      "format": "PDF",
+      "tags": {
+        "diagnosis": [
+          "Depression"
+        ],
+        "symptom": [
+          "Low mood / energy"
+        ],
+        "function": [],
+        "intervention": [
+          "CBT / behavioral activation"
+        ],
+        "stage": [],
+        "role": [],
+        "task": [],
+        "step": [
+          "What tool?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/downloads/topic-dissociation-function-orientation.pdf",
+      "title": "Topic Dissociation Function Orientation",
+      "format": "PDF",
+      "tags": {
+        "diagnosis": [
+          "Trauma / dissociation"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [],
+        "stage": [],
+        "role": [],
+        "task": [],
+        "step": [
+          "What tool?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/downloads/topic-ocd-mental-rituals.pdf",
+      "title": "Topic Ocd Mental Rituals",
+      "format": "PDF",
+      "tags": {
+        "diagnosis": [
+          "Anxiety / OCD"
+        ],
+        "symptom": [
+          "Fear / uncertainty"
+        ],
+        "function": [],
+        "intervention": [
+          "Exposure / ERP"
+        ],
+        "stage": [],
+        "role": [],
+        "task": [],
+        "step": [
+          "What tool?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
       "url": "/resources/downloads/topic-panic-alarm-loop.pdf",
       "title": "Topic Panic Alarm Loop",
       "format": "PDF",
@@ -8387,6 +9341,27 @@
           "Fear / uncertainty",
           "Memory / attention"
         ],
+        "function": [],
+        "intervention": [],
+        "stage": [],
+        "role": [],
+        "task": [],
+        "step": [
+          "What tool?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/downloads/topic-trauma-cue-orientation.pdf",
+      "title": "Topic Trauma Cue Orientation",
+      "format": "PDF",
+      "tags": {
+        "diagnosis": [
+          "Trauma / dissociation"
+        ],
+        "symptom": [],
         "function": [],
         "intervention": [],
         "stage": [],
@@ -8467,6 +9442,221 @@
       },
       "priority": 20,
       "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/clinical-topics/trauma-cue-orientation/index.html",
+      "title": "Trauma cues: present orientation and chosen support",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Trauma / dissociation"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [],
+        "role": [],
+        "task": [],
+        "step": [
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/clinical-topics/trauma-cue-orientation/care-partner.html",
+      "title": "Trauma cues: present orientation and chosen support — Care-partner guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Trauma / dissociation"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/trauma-cue-orientation/client-workbook.html",
+      "title": "Trauma cues: present orientation and chosen support — Client workbook",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Trauma / dissociation"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/trauma-cue-orientation/formulation.html",
+      "title": "Trauma cues: present orientation and chosen support — Clinician formulation guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Trauma / dissociation"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [
+          "Access / accommodations",
+          "Function-linked support"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Assessment planning",
+          "Treatment planning"
+        ],
+        "step": [
+          "What am I seeing?",
+          "Understanding",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/trauma-cue-orientation/case.html",
+      "title": "Trauma cues: present orientation and chosen support — Interactive case practice",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Trauma / dissociation"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Skill rehearsal / supervision"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/trauma-cue-orientation/progress-review.html",
+      "title": "Trauma cues: present orientation and chosen support — Progress review tool",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Trauma / dissociation"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Progress review"
+        ],
+        "step": [
+          "What to watch next?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/trauma-cue-orientation/support-map.html",
+      "title": "Trauma cues: present orientation and chosen support — Visual support map",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Trauma / dissociation"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Treatment planning"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
     },
     {
       "url": "/resources/trauma/trauma-school-neurodevelopment-crosswalk.html",

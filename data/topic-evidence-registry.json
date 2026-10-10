@@ -8,10 +8,34 @@
       "evidenceType": "Graded clinical practice guideline, 2021; multicomponent CBT-I strongly recommended",
       "access": "Full text retrieved 2026-10-10"
     },
+    "nctsn-grief": {
+      "title": "NCTSN: Childhood traumatic grief",
+      "url": "https://www.nctsn.org/what-is-child-trauma/trauma-types/traumatic-grief",
+      "evidenceType": "Specialist network education; child traumatic grief, not all grief or adult diagnostic criteria",
+      "access": "Official search index verified 2026-10-10"
+    },
+    "nice-depression": {
+      "title": "NICE NG222: Depression in adults",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "evidenceType": "Published guideline, 2022; treatment choice depends on severity, preference and history",
+      "access": "Official search index verified 2026-10-10; full recommendations retrieval limited"
+    },
+    "nice-ocd": {
+      "title": "NICE CG31: OCD and body dysmorphic disorder",
+      "url": "https://www.nice.org.uk/guidance/cg31",
+      "evidenceType": "Published guideline, 2005; update in development in 2026. Draft is not final guidance",
+      "access": "Official search index verified 2026-10-10; full recommendations retrieval limited"
+    },
     "nice-panic": {
       "title": "NICE CG113: Generalised anxiety and panic disorder in adults",
       "url": "https://www.nice.org.uk/guidance/cg113",
       "evidenceType": "Published clinical guideline, 2011; jurisdiction and update status matter",
+      "access": "Official search index verified 2026-10-10; full recommendations retrieval limited"
+    },
+    "nice-ptsd": {
+      "title": "NICE NG116: Post-traumatic stress disorder",
+      "url": "https://www.nice.org.uk/guidance/ng116",
+      "evidenceType": "Published guideline, 2018; age, timing, safety and treatment training matter",
       "access": "Official search index verified 2026-10-10; full recommendations retrieval limited"
     },
     "nice-social": {
@@ -30,6 +54,12 @@
       "title": "NIMH: Understanding psychosis",
       "url": "https://www.nimh.nih.gov/health/publications/understanding-psychosis",
       "evidenceType": "Federal clinical education; coordinated specialty care orientation",
+      "access": "Full page retrieved 2026-10-10"
+    },
+    "va-dissociation": {
+      "title": "VA National Center for PTSD: Dissociative subtype of PTSD",
+      "url": "https://www.ptsd.va.gov/professional/treat/essentials/dissociative_subtype.asp",
+      "evidenceType": "Professional clinical synthesis; PTSD subtype is not dissociative identity disorder",
       "access": "Full page retrieved 2026-10-10"
     }
   },
@@ -79,6 +109,52 @@
         "nice-social"
       ],
       "limits": "This original attention map is not a complete social-anxiety protocol. NICE adult/youth guidance differs; this set is adult-oriented. Accommodation decisions and anxiety treatment require individualized review."
+    },
+    {
+      "slug": "ocd-mental-rituals",
+      "title": "OCD: mental rituals, reassurance and uncertainty",
+      "age": "Adults",
+      "sources": [
+        "nice-ocd"
+      ],
+      "limits": "NICE CG31 remains published guidance; a 2026 update is in development. This aid is not an ERP protocol, OCD scale or classification of religious practice. Clinical review pending."
+    },
+    {
+      "slug": "depression-activity-reward",
+      "title": "Depression: activity, reward and workable steps",
+      "age": "Adults",
+      "sources": [
+        "nice-depression"
+      ],
+      "limits": "Original planning prompts are not a behavioral-activation manual or validated depression measure. Treatment selection depends on severity, preference, history and qualified assessment."
+    },
+    {
+      "slug": "trauma-cue-orientation",
+      "title": "Trauma cues: present orientation and chosen support",
+      "age": "Adults",
+      "sources": [
+        "nice-ptsd",
+        "va-dissociation"
+      ],
+      "limits": "Original orientation map is not a trauma-treatment protocol. Dissociation does not automatically exclude trauma-focused treatment; selection is individualized. Clinical review pending."
+    },
+    {
+      "slug": "dissociation-function-orientation",
+      "title": "Dissociation: orientation, time gaps and daily function",
+      "age": "Adults",
+      "sources": [
+        "va-dissociation"
+      ],
+      "limits": "VA source covers the PTSD dissociative subtype, not a comprehensive guide to DID or all dissociative conditions. This set intentionally avoids diagnostic thresholds, memory-recovery practices and trauma-treatment exclusion rules."
+    },
+    {
+      "slug": "child-grief-continuing-bonds",
+      "title": "Child grief: remembrance, routines and traumatic reminders",
+      "age": "School-age children and caregivers",
+      "sources": [
+        "nctsn-grief"
+      ],
+      "limits": "NCTSN supports child traumatic-grief education. This original remembrance aid is not a grief-treatment protocol or diagnostic measure. Age, culture, family context and qualified review remain essential."
     }
   ]
 }

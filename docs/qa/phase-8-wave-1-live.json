@@ -1,0 +1,218 @@
+{
+  "sha": "277a6b4fa04d7ad558bb1aad52e047a1931caf58",
+  "url": "https://clinical-practice-library-kmohtn7ms-cohon-family.vercel.app",
+  "state": "READY",
+  "verification": "HTTP status and expected content; not browser rendering",
+  "checks": [
+    {
+      "path": "resources/clinical-topics/bipolar-episode-timeline/formulation.html",
+      "status": 200,
+      "success": true,
+      "contentPresent": true
+    },
+    {
+      "path": "resources/clinical-topics/bipolar-episode-timeline/case.html",
+      "status": 200,
+      "success": true,
+      "contentPresent": true
+    },
+    {
+      "path": "resources/clinical-topics/bipolar-episode-timeline/support-map.html",
+      "status": 200,
+      "success": true,
+      "contentPresent": true
+    },
+    {
+      "path": "resources/clinical-topics/bipolar-episode-timeline/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "contentPresent": true
+    },
+    {
+      "path": "resources/clinical-topics/bipolar-episode-timeline/care-partner.html",
+      "status": 200,
+      "success": true,
+      "contentPresent": true
+    },
+    {
+      "path": "resources/clinical-topics/bipolar-episode-timeline/progress-review.html",
+      "status": 200,
+      "success": true,
+      "contentPresent": true
+    },
+    {
+      "path": "resources/clinical-topics/voices-collaborative-coping/formulation.html",
+      "status": 200,
+      "success": true,
+      "contentPresent": true
+    },
+    {
+      "path": "resources/clinical-topics/voices-collaborative-coping/case.html",
+      "status": 200,
+      "success": true,
+      "contentPresent": true
+    },
+    {
+      "path": "resources/clinical-topics/voices-collaborative-coping/support-map.html",
+      "status": 200,
+      "success": true,
+      "contentPresent": true
+    },
+    {
+      "path": "resources/clinical-topics/voices-collaborative-coping/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "contentPresent": true
+    },
+    {
+      "path": "resources/clinical-topics/voices-collaborative-coping/care-partner.html",
+      "status": 200,
+      "success": true,
+      "contentPresent": true
+    },
+    {
+      "path": "resources/clinical-topics/voices-collaborative-coping/progress-review.html",
+      "status": 200,
+      "success": true,
+      "contentPresent": true
+    },
+    {
+      "path": "resources/clinical-topics/sleep-loss-activation/formulation.html",
+      "status": 200,
+      "success": true,
+      "contentPresent": true
+    },
+    {
+      "path": "resources/clinical-topics/sleep-loss-activation/case.html",
+      "status": 200,
+      "success": true,
+      "contentPresent": true
+    },
+    {
+      "path": "resources/clinical-topics/sleep-loss-activation/support-map.html",
+      "status": 200,
+      "success": true,
+      "contentPresent": true
+    },
+    {
+      "path": "resources/clinical-topics/sleep-loss-activation/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "contentPresent": true
+    },
+    {
+      "path": "resources/clinical-topics/sleep-loss-activation/care-partner.html",
+      "status": 200,
+      "success": true,
+      "contentPresent": true
+    },
+    {
+      "path": "resources/clinical-topics/sleep-loss-activation/progress-review.html",
+      "status": 200,
+      "success": true,
+      "contentPresent": true
+    },
+    {
+      "path": "resources/clinical-topics/panic-alarm-loop/formulation.html",
+      "status": 200,
+      "success": true,
+      "contentPresent": true
+    },
+    {
+      "path": "resources/clinical-topics/panic-alarm-loop/case.html",
+      "status": 200,
+      "success": true,
+      "contentPresent": true
+    },
+    {
+      "path": "resources/clinical-topics/panic-alarm-loop/support-map.html",
+      "status": 200,
+      "success": true,
+      "contentPresent": true
+    },
+    {
+      "path": "resources/clinical-topics/panic-alarm-loop/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "contentPresent": true
+    },
+    {
+      "path": "resources/clinical-topics/panic-alarm-loop/care-partner.html",
+      "status": 200,
+      "success": true,
+      "contentPresent": true
+    },
+    {
+      "path": "resources/clinical-topics/panic-alarm-loop/progress-review.html",
+      "status": 200,
+      "success": true,
+      "contentPresent": true
+    },
+    {
+      "path": "resources/clinical-topics/social-anxiety-attention/formulation.html",
+      "status": 200,
+      "success": true,
+      "contentPresent": true
+    },
+    {
+      "path": "resources/clinical-topics/social-anxiety-attention/case.html",
+      "status": 200,
+      "success": true,
+      "contentPresent": true
+    },
+    {
+      "path": "resources/clinical-topics/social-anxiety-attention/support-map.html",
+      "status": 200,
+      "success": true,
+      "contentPresent": true
+    },
+    {
+      "path": "resources/clinical-topics/social-anxiety-attention/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "contentPresent": true
+    },
+    {
+      "path": "resources/clinical-topics/social-anxiety-attention/care-partner.html",
+      "status": 200,
+      "success": true,
+      "contentPresent": true
+    },
+    {
+      "path": "resources/clinical-topics/social-anxiety-attention/progress-review.html",
+      "status": 200,
+      "success": true,
+      "contentPresent": true
+    },
+    {
+      "path": "resources/clinical-topics/index.html",
+      "status": 200,
+      "success": true,
+      "contentPresent": true
+    },
+    {
+      "path": "resources/clinical-topics/topic-tools.js",
+      "status": 200,
+      "success": true,
+      "contentPresent": true
+    },
+    {
+      "path": "resources/clinical-topics/topic-tools.css",
+      "status": 200,
+      "success": true,
+      "contentPresent": true
+    },
+    {
+      "path": "resources/clinical-resource-finder.html",
+      "status": 200,
+      "success": true,
+      "contentPresent": true
+    },
+    {
+      "path": "resources/downloads/topic-bipolar-episode-timeline.pdf",
+      "status": 200,
+      "success": true,
+      "contentPresent": true
+    }
+  ]
+}

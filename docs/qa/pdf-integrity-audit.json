@@ -65,6 +65,33 @@
       "status": "structurally readable; field/widget consistency checked"
     },
     {
+      "path": "resources/downloads/topic-trauma-cue-orientation.pdf",
+      "bytes": 3325,
+      "pages": 1,
+      "text_characters": 1222,
+      "fields": 0,
+      "widgets": 0,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "resources/downloads/topic-ocd-mental-rituals.pdf",
+      "bytes": 3382,
+      "pages": 1,
+      "text_characters": 1280,
+      "fields": 0,
+      "widgets": 0,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "resources/downloads/topic-depression-activity-reward.pdf",
+      "bytes": 3357,
+      "pages": 1,
+      "text_characters": 1241,
+      "fields": 0,
+      "widgets": 0,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
       "path": "resources/downloads/my-lower-risk-plan-fillable.pdf",
       "bytes": 76039,
       "pages": 2,
@@ -89,6 +116,15 @@
       "text_characters": 2604,
       "fields": 33,
       "widgets": 33,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "resources/downloads/topic-child-grief-continuing-bonds.pdf",
+      "bytes": 3404,
+      "pages": 1,
+      "text_characters": 1286,
+      "fields": 0,
+      "widgets": 0,
       "status": "structurally readable; field/widget consistency checked"
     },
     {
@@ -150,6 +186,15 @@
       "bytes": 3580,
       "pages": 1,
       "text_characters": 1103,
+      "fields": 0,
+      "widgets": 0,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "resources/downloads/topic-dissociation-function-orientation.pdf",
+      "bytes": 3389,
+      "pages": 1,
+      "text_characters": 1283,
       "fields": 0,
       "widgets": 0,
       "status": "structurally readable; field/widget consistency checked"
