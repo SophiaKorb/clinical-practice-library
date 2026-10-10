@@ -6,7 +6,7 @@ const root = path.resolve(__dirname, '..');
 const read = file => fs.readFileSync(path.join(root,file),'utf8');
 const homepage = read('index.html');
 const intern = read('resources/therapy/clinical-intern-learning-hub.html');
-const style = read('preview/cpl2.css');
+const style = read('resources/library-index.css');
 const basename = [
  ['adhd','adhd','adhd'],
  ['autism','autism','autism'],
@@ -18,6 +18,9 @@ const basename = [
  ['persistent-conflict-odd','odd-persistent-conflict-behavior','persistent-conflict-odd']
 ];
 assert.match(homepage, /id="diagnosis-guides"/);
+for (const id of ['shelves','visual-tools','therapist','assessments','school','parent-patient','families-trauma','espanol']) assert.ok(homepage.includes('id="'+id+'"'), 'missing subject: '+id);
+assert.match(homepage, /aria-label="Library subjects"/);
+assert.doesNotMatch(homepage, /FEATURED TOOLKIT|NEW · CLINICAL DEPTH|What do you need/);
 assert.match(homepage, /id="intern-resources"/);
 assert.match(homepage, /href="\/#diagnosis-guides"/);
 assert.match(homepage, /href="\/resources\/therapy\/clinical-intern-learning-hub.html"/);
