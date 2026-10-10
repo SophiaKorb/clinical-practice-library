@@ -42,7 +42,7 @@ function audit(plain, clinical, expected) {
   if (/<h2[^>]*>\s*Barrier \d+:/.test(plain)) errors.push('Clinical barrier numbering in family heading');
   if (/<th[^>]*>\s*Code\s*<\/th>/.test(plain)) errors.push('Visible support-code heading');
   if (/bring the short codes|Circle a few support codes|support codes or plan items|Barrier and support code/i.test(plain)) errors.push('Instructions require hidden support codes');
-  if ((plain.match(/Sophia Cohon, PhD/g) || []).length !== 1) errors.push('Author byline should appear once');
+  if ((plain.match(/Sophia (?:Korb )?Cohon, PhD/g) || []).length !== 1) errors.push('Author byline should appear once');
   const ids = [...plain.matchAll(/\bid="([^"]+)"/g)].map(m => m[1]);
   if (new Set(ids).size !== ids.length) errors.push('Duplicate HTML id');
   for (const m of plain.matchAll(/href="#([^"]+)"/g)) {

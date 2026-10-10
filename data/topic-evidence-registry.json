@@ -2,6 +2,12 @@
   "reviewDate": "2026-10-10",
   "qualifiedReview": "pending",
   "sources": {
+    "aan-tics": {
+      "title": "AAN: Treatment of tics in Tourette syndrome and chronic tic disorders",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6537133/",
+      "evidenceType": "Clinical practice guideline, 2019; watchful waiting and CBIT decisions depend on impairment",
+      "access": "Search index verified 2026-10-10; full text retrieval blocked by CAPTCHA"
+    },
     "aasm-insomnia": {
       "title": "AASM: Behavioral and psychological treatments for chronic insomnia in adults",
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7853203/",
@@ -13,6 +19,24 @@
       "url": "https://www.asha.org/practice-portal/clinical-topics/aphasia/",
       "evidenceType": "Professional practice synthesis for acquired aphasia in adults; SLP assessment and rehabilitation",
       "access": "Full page retrieved 2026-10-10"
+    },
+    "asha-literacy": {
+      "title": "ASHA Practice Portal: Written language disorders",
+      "url": "https://www.asha.org/practice-portal/clinical-topics/written-language-disorders/",
+      "evidenceType": "Professional practice synthesis; not proof that any particular school accommodation improves literacy",
+      "access": "Official search index verified 2026-10-10"
+    },
+    "cci-bdd": {
+      "title": "CCI: Body dysmorphia",
+      "url": "https://www.cci.health.wa.gov.au/Resources/Looking-After-Yourself/Body-Dysmorphia",
+      "evidenceType": "Public CBT self-help education; not a graded guideline or reproduced workbook",
+      "access": "Official search index verified 2026-10-10"
+    },
+    "comb-trial": {
+      "title": "Carlson et al.: ComB treatment of trichotillomania randomized trial",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34656205/",
+      "evidenceType": "Primary randomized trial, 2021; hair pulling, not automatic generalization to all picking/biting",
+      "access": "Abstract/search index verified 2026-10-10"
     },
     "nctsn-grief": {
       "title": "NCTSN: Childhood traumatic grief",
@@ -43,6 +67,12 @@
       "url": "https://www.nice.org.uk/guidance/ng69",
       "evidenceType": "Published guideline, 2017; does not establish a complete ARFID, pica or rumination pathway",
       "access": "Official search index verified 2026-10-10; recommendation page returned 403"
+    },
+    "nice-id": {
+      "title": "NICE NG11: Challenging behaviour and learning disabilities",
+      "url": "https://www.nice.org.uk/guidance/ng11",
+      "evidenceType": "Published guideline, 2015. UK learning disability here means intellectual disability",
+      "access": "Official search index verified 2026-10-10"
     },
     "nice-ocd": {
       "title": "NICE CG31: OCD and body dysmorphic disorder",
@@ -79,6 +109,12 @@
       "url": "https://www.nimh.nih.gov/health/publications/understanding-psychosis",
       "evidenceType": "Federal clinical education; coordinated specialty care orientation",
       "access": "Full page retrieved 2026-10-10"
+    },
+    "tlc-bfrb": {
+      "title": "TLC Foundation: Evidence-based therapeutic treatment for BFRBs",
+      "url": "https://www.bfrb.org/post/evidence-based-therapeutic-treatment-for-bfrbs",
+      "evidenceType": "Specialist foundation education; HRT/ComB orientation, not graded guidance for all BFRBs",
+      "access": "Official search index verified 2026-10-10"
     },
     "va-dissociation": {
       "title": "VA National Center for PTSD: Dissociative subtype of PTSD",
@@ -224,6 +260,53 @@
         "asha-aphasia"
       ],
       "limits": "ASHA source concerns acquired adult aphasia. This unvalidated access aid does not establish capacity, rehabilitation effectiveness or validity of modified standardized scores. Qualified clinical review pending."
+    },
+    {
+      "slug": "learning-instruction-access",
+      "title": "Learning differences: instruction and access are separate tracks",
+      "age": "School-age children and school teams",
+      "sources": [
+        "asha-literacy"
+      ],
+      "limits": "ASHA provides written-language practice orientation, not universal school eligibility rules. Original two-track aid is not a diagnostic test or legally sufficient plan. No proprietary assessment items reproduced."
+    },
+    {
+      "slug": "intellectual-disability-supported-choice",
+      "title": "Intellectual disability: supported choice and functional communication",
+      "age": "Adults with intellectual disability",
+      "sources": [
+        "nice-id"
+      ],
+      "limits": "Original supported-choice aid is not a capacity test or intellectual-disability assessment. UK terminology and jurisdiction limits are explicit. Qualified clinical and rights review pending."
+    },
+    {
+      "slug": "tics-context-impact",
+      "title": "Tics: context, impact and CBIT referral",
+      "age": "School-age children and caregivers",
+      "sources": [
+        "aan-tics"
+      ],
+      "limits": "AAN 2019 guideline supports impact-based treatment decisions including watchful waiting and CBIT. Full text retrieval was CAPTCHA-limited; original aid requires qualified review and does not reproduce a CBIT protocol."
+    },
+    {
+      "slug": "bfrb-awareness-support",
+      "title": "Body-focused repetitive behaviors: awareness and tailored support",
+      "age": "Adults",
+      "sources": [
+        "tlc-bfrb",
+        "comb-trial"
+      ],
+      "limits": "TLC education plus a trichotillomania trial informs orientation, not graded guidance for all BFRBs. Original map is not HRT/ComB training or a validated symptom measure. Clinical review pending."
+    },
+    {
+      "slug": "body-dysmorphia-checking",
+      "title": "Body dysmorphic concerns: checking and participation",
+      "age": "Adults",
+      "sources": [
+        "nice-ocd",
+        "cci-bdd"
+      ],
+      "limits": "NICE OCD/BDD update is in development; published CG31 remains the cited guideline. CCI is public CBT education. Original aid is not a BDD measure, mirror-exposure protocol or cosmetic decision support."
     }
   ]
 }

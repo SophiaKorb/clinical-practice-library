@@ -2,6 +2,15 @@
   "scope": "All PDF downloads in the checkout except temporary/output files. Parsing and page/text counts do not establish visual layout, form semantics, accessibility, clinical suitability, or copyright permission.",
   "resources": [
     {
+      "path": "resources/downloads/topic-body-dysmorphia-checking.pdf",
+      "bytes": 3366,
+      "pages": 1,
+      "text_characters": 1246,
+      "fields": 0,
+      "widgets": 0,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
       "path": "resources/downloads/workforce-practice-sheet.pdf",
       "bytes": 3310,
       "pages": 1,
@@ -26,6 +35,15 @@
       "text_characters": 2465,
       "fields": 24,
       "widgets": 24,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "resources/downloads/topic-tics-context-impact.pdf",
+      "bytes": 3330,
+      "pages": 1,
+      "text_characters": 1239,
+      "fields": 0,
+      "widgets": 0,
       "status": "structurally readable; field/widget consistency checked"
     },
     {
@@ -101,12 +119,30 @@
       "status": "structurally readable; field/widget consistency checked"
     },
     {
+      "path": "resources/downloads/topic-bfrb-awareness-support.pdf",
+      "bytes": 3374,
+      "pages": 1,
+      "text_characters": 1248,
+      "fields": 0,
+      "widgets": 0,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
       "path": "resources/downloads/my-lower-risk-plan-fillable.pdf",
       "bytes": 76039,
       "pages": 2,
       "text_characters": 3269,
       "fields": 43,
       "widgets": 43,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "resources/downloads/topic-learning-instruction-access.pdf",
+      "bytes": 3445,
+      "pages": 1,
+      "text_characters": 1359,
+      "fields": 0,
+      "widgets": 0,
       "status": "structurally readable; field/widget consistency checked"
     },
     {
@@ -141,6 +177,15 @@
       "bytes": 3421,
       "pages": 1,
       "text_characters": 1354,
+      "fields": 0,
+      "widgets": 0,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "resources/downloads/topic-intellectual-disability-supported-choice.pdf",
+      "bytes": 3373,
+      "pages": 1,
+      "text_characters": 1293,
       "fields": 0,
       "widgets": 0,
       "status": "structurally readable; field/widget consistency checked"

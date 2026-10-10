@@ -1,6 +1,6 @@
 {
   "target": 150,
-  "completedMeaningfulResources": 90,
+  "completedMeaningfulResources": 120,
   "countPolicy": "Six distinct purposes per topic. Collection pages, PDFs, shared assets and cosmetic changes excluded. Count does not certify clinical quality.",
   "resources": [
     {
@@ -1360,6 +1360,468 @@
         "asha-aphasia"
       ],
       "wave": 3,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/learning-instruction-access/formulation.html",
+      "topic": "learning-instruction-access",
+      "title": "Learning differences: instruction and access are separate tracks \u2014 Clinician formulation guide",
+      "type": "formulation",
+      "audience": "School-age children and school teams",
+      "sources": [
+        "asha-literacy"
+      ],
+      "wave": 4,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/learning-instruction-access/case.html",
+      "topic": "learning-instruction-access",
+      "title": "Learning differences: instruction and access are separate tracks \u2014 Interactive case practice",
+      "type": "case",
+      "audience": "School-age children and school teams",
+      "sources": [
+        "asha-literacy"
+      ],
+      "wave": 4,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/learning-instruction-access/support-map.html",
+      "topic": "learning-instruction-access",
+      "title": "Learning differences: instruction and access are separate tracks \u2014 Visual support map",
+      "type": "support-map",
+      "audience": "School-age children and school teams",
+      "sources": [
+        "asha-literacy"
+      ],
+      "wave": 4,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/learning-instruction-access/client-workbook.html",
+      "topic": "learning-instruction-access",
+      "title": "Learning differences: instruction and access are separate tracks \u2014 Client workbook",
+      "type": "client-workbook",
+      "audience": "School-age children and school teams",
+      "sources": [
+        "asha-literacy"
+      ],
+      "wave": 4,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/learning-instruction-access/care-partner.html",
+      "topic": "learning-instruction-access",
+      "title": "Learning differences: instruction and access are separate tracks \u2014 Care-partner guide",
+      "type": "care-partner",
+      "audience": "School-age children and school teams",
+      "sources": [
+        "asha-literacy"
+      ],
+      "wave": 4,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/learning-instruction-access/progress-review.html",
+      "topic": "learning-instruction-access",
+      "title": "Learning differences: instruction and access are separate tracks \u2014 Progress review tool",
+      "type": "progress-review",
+      "audience": "School-age children and school teams",
+      "sources": [
+        "asha-literacy"
+      ],
+      "wave": 4,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/intellectual-disability-supported-choice/formulation.html",
+      "topic": "intellectual-disability-supported-choice",
+      "title": "Intellectual disability: supported choice and functional communication \u2014 Clinician formulation guide",
+      "type": "formulation",
+      "audience": "Adults with intellectual disability",
+      "sources": [
+        "nice-id"
+      ],
+      "wave": 4,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/intellectual-disability-supported-choice/case.html",
+      "topic": "intellectual-disability-supported-choice",
+      "title": "Intellectual disability: supported choice and functional communication \u2014 Interactive case practice",
+      "type": "case",
+      "audience": "Adults with intellectual disability",
+      "sources": [
+        "nice-id"
+      ],
+      "wave": 4,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/intellectual-disability-supported-choice/support-map.html",
+      "topic": "intellectual-disability-supported-choice",
+      "title": "Intellectual disability: supported choice and functional communication \u2014 Visual support map",
+      "type": "support-map",
+      "audience": "Adults with intellectual disability",
+      "sources": [
+        "nice-id"
+      ],
+      "wave": 4,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/intellectual-disability-supported-choice/client-workbook.html",
+      "topic": "intellectual-disability-supported-choice",
+      "title": "Intellectual disability: supported choice and functional communication \u2014 Client workbook",
+      "type": "client-workbook",
+      "audience": "Adults with intellectual disability",
+      "sources": [
+        "nice-id"
+      ],
+      "wave": 4,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/intellectual-disability-supported-choice/care-partner.html",
+      "topic": "intellectual-disability-supported-choice",
+      "title": "Intellectual disability: supported choice and functional communication \u2014 Care-partner guide",
+      "type": "care-partner",
+      "audience": "Adults with intellectual disability",
+      "sources": [
+        "nice-id"
+      ],
+      "wave": 4,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/intellectual-disability-supported-choice/progress-review.html",
+      "topic": "intellectual-disability-supported-choice",
+      "title": "Intellectual disability: supported choice and functional communication \u2014 Progress review tool",
+      "type": "progress-review",
+      "audience": "Adults with intellectual disability",
+      "sources": [
+        "nice-id"
+      ],
+      "wave": 4,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/tics-context-impact/formulation.html",
+      "topic": "tics-context-impact",
+      "title": "Tics: context, impact and CBIT referral \u2014 Clinician formulation guide",
+      "type": "formulation",
+      "audience": "School-age children and caregivers",
+      "sources": [
+        "aan-tics"
+      ],
+      "wave": 4,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/tics-context-impact/case.html",
+      "topic": "tics-context-impact",
+      "title": "Tics: context, impact and CBIT referral \u2014 Interactive case practice",
+      "type": "case",
+      "audience": "School-age children and caregivers",
+      "sources": [
+        "aan-tics"
+      ],
+      "wave": 4,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/tics-context-impact/support-map.html",
+      "topic": "tics-context-impact",
+      "title": "Tics: context, impact and CBIT referral \u2014 Visual support map",
+      "type": "support-map",
+      "audience": "School-age children and caregivers",
+      "sources": [
+        "aan-tics"
+      ],
+      "wave": 4,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/tics-context-impact/client-workbook.html",
+      "topic": "tics-context-impact",
+      "title": "Tics: context, impact and CBIT referral \u2014 Client workbook",
+      "type": "client-workbook",
+      "audience": "School-age children and caregivers",
+      "sources": [
+        "aan-tics"
+      ],
+      "wave": 4,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/tics-context-impact/care-partner.html",
+      "topic": "tics-context-impact",
+      "title": "Tics: context, impact and CBIT referral \u2014 Care-partner guide",
+      "type": "care-partner",
+      "audience": "School-age children and caregivers",
+      "sources": [
+        "aan-tics"
+      ],
+      "wave": 4,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/tics-context-impact/progress-review.html",
+      "topic": "tics-context-impact",
+      "title": "Tics: context, impact and CBIT referral \u2014 Progress review tool",
+      "type": "progress-review",
+      "audience": "School-age children and caregivers",
+      "sources": [
+        "aan-tics"
+      ],
+      "wave": 4,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/bfrb-awareness-support/formulation.html",
+      "topic": "bfrb-awareness-support",
+      "title": "Body-focused repetitive behaviors: awareness and tailored support \u2014 Clinician formulation guide",
+      "type": "formulation",
+      "audience": "Adults",
+      "sources": [
+        "tlc-bfrb",
+        "comb-trial"
+      ],
+      "wave": 4,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/bfrb-awareness-support/case.html",
+      "topic": "bfrb-awareness-support",
+      "title": "Body-focused repetitive behaviors: awareness and tailored support \u2014 Interactive case practice",
+      "type": "case",
+      "audience": "Adults",
+      "sources": [
+        "tlc-bfrb",
+        "comb-trial"
+      ],
+      "wave": 4,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/bfrb-awareness-support/support-map.html",
+      "topic": "bfrb-awareness-support",
+      "title": "Body-focused repetitive behaviors: awareness and tailored support \u2014 Visual support map",
+      "type": "support-map",
+      "audience": "Adults",
+      "sources": [
+        "tlc-bfrb",
+        "comb-trial"
+      ],
+      "wave": 4,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/bfrb-awareness-support/client-workbook.html",
+      "topic": "bfrb-awareness-support",
+      "title": "Body-focused repetitive behaviors: awareness and tailored support \u2014 Client workbook",
+      "type": "client-workbook",
+      "audience": "Adults",
+      "sources": [
+        "tlc-bfrb",
+        "comb-trial"
+      ],
+      "wave": 4,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/bfrb-awareness-support/care-partner.html",
+      "topic": "bfrb-awareness-support",
+      "title": "Body-focused repetitive behaviors: awareness and tailored support \u2014 Care-partner guide",
+      "type": "care-partner",
+      "audience": "Adults",
+      "sources": [
+        "tlc-bfrb",
+        "comb-trial"
+      ],
+      "wave": 4,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/bfrb-awareness-support/progress-review.html",
+      "topic": "bfrb-awareness-support",
+      "title": "Body-focused repetitive behaviors: awareness and tailored support \u2014 Progress review tool",
+      "type": "progress-review",
+      "audience": "Adults",
+      "sources": [
+        "tlc-bfrb",
+        "comb-trial"
+      ],
+      "wave": 4,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/body-dysmorphia-checking/formulation.html",
+      "topic": "body-dysmorphia-checking",
+      "title": "Body dysmorphic concerns: checking and participation \u2014 Clinician formulation guide",
+      "type": "formulation",
+      "audience": "Adults",
+      "sources": [
+        "nice-ocd",
+        "cci-bdd"
+      ],
+      "wave": 4,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/body-dysmorphia-checking/case.html",
+      "topic": "body-dysmorphia-checking",
+      "title": "Body dysmorphic concerns: checking and participation \u2014 Interactive case practice",
+      "type": "case",
+      "audience": "Adults",
+      "sources": [
+        "nice-ocd",
+        "cci-bdd"
+      ],
+      "wave": 4,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/body-dysmorphia-checking/support-map.html",
+      "topic": "body-dysmorphia-checking",
+      "title": "Body dysmorphic concerns: checking and participation \u2014 Visual support map",
+      "type": "support-map",
+      "audience": "Adults",
+      "sources": [
+        "nice-ocd",
+        "cci-bdd"
+      ],
+      "wave": 4,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/body-dysmorphia-checking/client-workbook.html",
+      "topic": "body-dysmorphia-checking",
+      "title": "Body dysmorphic concerns: checking and participation \u2014 Client workbook",
+      "type": "client-workbook",
+      "audience": "Adults",
+      "sources": [
+        "nice-ocd",
+        "cci-bdd"
+      ],
+      "wave": 4,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/body-dysmorphia-checking/care-partner.html",
+      "topic": "body-dysmorphia-checking",
+      "title": "Body dysmorphic concerns: checking and participation \u2014 Care-partner guide",
+      "type": "care-partner",
+      "audience": "Adults",
+      "sources": [
+        "nice-ocd",
+        "cci-bdd"
+      ],
+      "wave": 4,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/body-dysmorphia-checking/progress-review.html",
+      "topic": "body-dysmorphia-checking",
+      "title": "Body dysmorphic concerns: checking and participation \u2014 Progress review tool",
+      "type": "progress-review",
+      "audience": "Adults",
+      "sources": [
+        "nice-ocd",
+        "cci-bdd"
+      ],
+      "wave": 4,
       "reviewDate": "2026-10-10",
       "qualifiedClinicalReview": "pending",
       "browserQA": "unavailable",

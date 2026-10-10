@@ -31,3 +31,15 @@ Commit `0f20fc60d0dda568753c39ea43fe222bac361417`; deployment `dpl_HUqYm8L4nzykF
 30 more distinct resources: restrictive-eating coordination, binge-eating patterns, adult autism load/recovery, adult ADHD task starts, acquired aphasia communication access. Total 90/150; 15 PDF companions excluded. Medical stability is not inferred from body size; ARFID source-coverage limits are explicit. Aphasia does not imply incapacity. New discovery facets include eating, sleep, grief, intellectual disability, tics/repetitive behaviors and bodily concerns.
 
 90-purpose regression, 51-file PDF integrity audit, 379-page source accessibility audit, finder scenarios and 6,346 local references pass. All five new PDFs rendered/visually inspected; qualified clinical and browser QA remain pending. PDF generation now uses deterministic metadata for reproducibility.
+
+## Wave 3 — published and HTTP verified
+
+Commit `0c3332bf87e8a813e2233e46ec1242548aab71e5`; deployment `dpl_34zMqTnuTMTyRZSjFNa8NX3yZqUu`, READY at https://clinical-practice-library-16i9sm7v6-cohon-family.vercel.app. All 30 new pages and five PDF download URLs returned HTTP 200 with expected content. See wave-3 live QA JSON.
+
+## Wave 4 — built, publication pending
+
+30 more resources: learning instruction/access, intellectual-disability supported choice, tics impact/CBIT referral, BFRB awareness/support and body-dysmorphic checking. Total 120/150; 20 PDF companions excluded. Original diagnosis collections retain all paired supports and gain clearly age-labeled extensions; new topic pages link back to originals. Full compact topic shelf added to subject index and both catalogs.
+
+120-purpose regression, original-guide parity, homepage/catalog/finder tests, PDF structure, source-accessibility and local-link checks pass. All five new PDFs rendered/visually inspected. No automated clinical approval claimed.
+
+Wave 4 repair: original-guide parity initially failed because it required the old author spelling. The assertion now accepts the current full byline and retained short form while still requiring exactly one. Rerun verifies all 292 paired supports. The learning diagram now places instruction/access on parallel branches, rather than implying sequential delivery.

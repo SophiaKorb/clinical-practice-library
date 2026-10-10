@@ -1,0 +1,253 @@
+{
+  "sha": "0c3332bf87e8a813e2233e46ec1242548aab71e5",
+  "url": "https://clinical-practice-library-16i9sm7v6-cohon-family.vercel.app",
+  "state": "READY",
+  "verification": "HTTP status and expected content; not browser rendering",
+  "checks": [
+    {
+      "path": "resources/clinical-topics/restrictive-eating-coordination/formulation.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/restrictive-eating-coordination/case.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/restrictive-eating-coordination/support-map.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/restrictive-eating-coordination/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/restrictive-eating-coordination/care-partner.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/restrictive-eating-coordination/progress-review.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/binge-eating-patterns/formulation.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/binge-eating-patterns/case.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/binge-eating-patterns/support-map.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/binge-eating-patterns/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/binge-eating-patterns/care-partner.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/binge-eating-patterns/progress-review.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/adult-autism-load-recovery/formulation.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/adult-autism-load-recovery/case.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/adult-autism-load-recovery/support-map.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/adult-autism-load-recovery/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/adult-autism-load-recovery/care-partner.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/adult-autism-load-recovery/progress-review.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/adult-adhd-task-starts/formulation.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/adult-adhd-task-starts/case.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/adult-adhd-task-starts/support-map.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/adult-adhd-task-starts/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/adult-adhd-task-starts/care-partner.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/adult-adhd-task-starts/progress-review.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/aphasia-communication-access/formulation.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/aphasia-communication-access/case.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/aphasia-communication-access/support-map.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/aphasia-communication-access/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/aphasia-communication-access/care-partner.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/aphasia-communication-access/progress-review.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/downloads/topic-restrictive-eating-coordination.pdf",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "application/pdf"
+    },
+    {
+      "path": "resources/downloads/topic-aphasia-communication-access.pdf",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "application/pdf"
+    },
+    {
+      "path": "resources/downloads/topic-adult-adhd-task-starts.pdf",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "application/pdf"
+    },
+    {
+      "path": "resources/downloads/topic-binge-eating-patterns.pdf",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "application/pdf"
+    },
+    {
+      "path": "resources/downloads/topic-adult-autism-load-recovery.pdf",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "application/pdf"
+    }
+  ]
+}

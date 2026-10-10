@@ -3335,6 +3335,471 @@
       "metadataBasis": "title/path discovery tags"
     },
     {
+      "url": "/resources/clinical-topics/body-dysmorphia-checking/index.html",
+      "title": "Body dysmorphic concerns: checking and participation",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Pain / bodily concerns",
+          "Repetitive actions / urges"
+        ],
+        "function": [
+          "Communication / participation"
+        ],
+        "intervention": [],
+        "stage": [],
+        "role": [],
+        "task": [],
+        "step": []
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/clinical-topics/body-dysmorphia-checking/care-partner.html",
+      "title": "Body dysmorphic concerns: checking and participation — Care-partner guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Pain / bodily concerns",
+          "Repetitive actions / urges"
+        ],
+        "function": [
+          "Communication / participation"
+        ],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/body-dysmorphia-checking/client-workbook.html",
+      "title": "Body dysmorphic concerns: checking and participation — Client workbook",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Pain / bodily concerns",
+          "Repetitive actions / urges"
+        ],
+        "function": [
+          "Communication / participation"
+        ],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/body-dysmorphia-checking/formulation.html",
+      "title": "Body dysmorphic concerns: checking and participation — Clinician formulation guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Pain / bodily concerns",
+          "Repetitive actions / urges"
+        ],
+        "function": [
+          "Communication / participation"
+        ],
+        "intervention": [
+          "Function-linked support"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Assessment planning",
+          "Treatment planning"
+        ],
+        "step": [
+          "What am I seeing?",
+          "Understanding",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/body-dysmorphia-checking/case.html",
+      "title": "Body dysmorphic concerns: checking and participation — Interactive case practice",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Pain / bodily concerns",
+          "Repetitive actions / urges"
+        ],
+        "function": [
+          "Communication / participation"
+        ],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Skill rehearsal / supervision"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/body-dysmorphia-checking/progress-review.html",
+      "title": "Body dysmorphic concerns: checking and participation — Progress review tool",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Pain / bodily concerns",
+          "Repetitive actions / urges"
+        ],
+        "function": [
+          "Communication / participation"
+        ],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Progress review"
+        ],
+        "step": [
+          "What to watch next?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/body-dysmorphia-checking/support-map.html",
+      "title": "Body dysmorphic concerns: checking and participation — Visual support map",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Pain / bodily concerns",
+          "Repetitive actions / urges"
+        ],
+        "function": [
+          "Communication / participation"
+        ],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Treatment planning"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/bfrb-awareness-support/index.html",
+      "title": "Body-focused repetitive behaviors: awareness and tailored support",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Tic / repetitive behavior conditions"
+        ],
+        "symptom": [
+          "Conflict / aggression",
+          "Repetitive actions / urges"
+        ],
+        "function": [],
+        "intervention": [
+          "Access / accommodations",
+          "Function-linked support"
+        ],
+        "stage": [],
+        "role": [],
+        "task": [],
+        "step": [
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/clinical-topics/bfrb-awareness-support/care-partner.html",
+      "title": "Body-focused repetitive behaviors: awareness and tailored support — Care-partner guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Tic / repetitive behavior conditions"
+        ],
+        "symptom": [
+          "Conflict / aggression",
+          "Repetitive actions / urges"
+        ],
+        "function": [],
+        "intervention": [
+          "Access / accommodations",
+          "Function-linked support"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/bfrb-awareness-support/client-workbook.html",
+      "title": "Body-focused repetitive behaviors: awareness and tailored support — Client workbook",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Tic / repetitive behavior conditions"
+        ],
+        "symptom": [
+          "Conflict / aggression",
+          "Repetitive actions / urges"
+        ],
+        "function": [],
+        "intervention": [
+          "Access / accommodations",
+          "Function-linked support"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/bfrb-awareness-support/formulation.html",
+      "title": "Body-focused repetitive behaviors: awareness and tailored support — Clinician formulation guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Tic / repetitive behavior conditions"
+        ],
+        "symptom": [
+          "Conflict / aggression",
+          "Repetitive actions / urges"
+        ],
+        "function": [],
+        "intervention": [
+          "Access / accommodations",
+          "Function-linked support"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Assessment planning",
+          "Treatment planning"
+        ],
+        "step": [
+          "What am I seeing?",
+          "Understanding",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/bfrb-awareness-support/case.html",
+      "title": "Body-focused repetitive behaviors: awareness and tailored support — Interactive case practice",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Tic / repetitive behavior conditions"
+        ],
+        "symptom": [
+          "Conflict / aggression",
+          "Repetitive actions / urges"
+        ],
+        "function": [],
+        "intervention": [
+          "Access / accommodations",
+          "Function-linked support"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Skill rehearsal / supervision"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/bfrb-awareness-support/progress-review.html",
+      "title": "Body-focused repetitive behaviors: awareness and tailored support — Progress review tool",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Tic / repetitive behavior conditions"
+        ],
+        "symptom": [
+          "Conflict / aggression",
+          "Repetitive actions / urges"
+        ],
+        "function": [],
+        "intervention": [
+          "Access / accommodations",
+          "Function-linked support"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Progress review"
+        ],
+        "step": [
+          "What to watch next?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/bfrb-awareness-support/support-map.html",
+      "title": "Body-focused repetitive behaviors: awareness and tailored support — Visual support map",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Tic / repetitive behavior conditions"
+        ],
+        "symptom": [
+          "Conflict / aggression",
+          "Repetitive actions / urges"
+        ],
+        "function": [],
+        "intervention": [
+          "Access / accommodations",
+          "Function-linked support"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Treatment planning"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
       "url": "/resources/trauma/caregiver-family-youth-trauma-resources.html",
       "title": "Caregiver, Family & Youth Trauma Resources",
       "format": "HTML",
@@ -6578,6 +7043,271 @@
       "metadataBasis": "title/path discovery tags"
     },
     {
+      "url": "/resources/clinical-topics/intellectual-disability-supported-choice/index.html",
+      "title": "Intellectual disability: supported choice and functional communication",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Intellectual disability"
+        ],
+        "symptom": [
+          "Communication difficulty"
+        ],
+        "function": [
+          "Communication / participation",
+          "Daily living / self-care",
+          "Autonomy / supported choice"
+        ],
+        "intervention": [
+          "Access / accommodations",
+          "Function-linked support"
+        ],
+        "stage": [],
+        "role": [],
+        "task": [
+          "Formulation"
+        ],
+        "step": [
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/clinical-topics/intellectual-disability-supported-choice/care-partner.html",
+      "title": "Intellectual disability: supported choice and functional communication — Care-partner guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Intellectual disability"
+        ],
+        "symptom": [
+          "Communication difficulty"
+        ],
+        "function": [
+          "Communication / participation",
+          "Daily living / self-care",
+          "Autonomy / supported choice"
+        ],
+        "intervention": [
+          "Access / accommodations",
+          "Function-linked support"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/intellectual-disability-supported-choice/client-workbook.html",
+      "title": "Intellectual disability: supported choice and functional communication — Client workbook",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Intellectual disability"
+        ],
+        "symptom": [
+          "Communication difficulty"
+        ],
+        "function": [
+          "Communication / participation",
+          "Daily living / self-care",
+          "Autonomy / supported choice"
+        ],
+        "intervention": [
+          "Access / accommodations",
+          "Function-linked support"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/intellectual-disability-supported-choice/formulation.html",
+      "title": "Intellectual disability: supported choice and functional communication — Clinician formulation guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Intellectual disability"
+        ],
+        "symptom": [
+          "Communication difficulty"
+        ],
+        "function": [
+          "Communication / participation",
+          "Daily living / self-care",
+          "Autonomy / supported choice"
+        ],
+        "intervention": [
+          "Access / accommodations",
+          "Function-linked support"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Assessment planning",
+          "Treatment planning"
+        ],
+        "step": [
+          "What am I seeing?",
+          "Understanding",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/intellectual-disability-supported-choice/case.html",
+      "title": "Intellectual disability: supported choice and functional communication — Interactive case practice",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Intellectual disability"
+        ],
+        "symptom": [
+          "Communication difficulty"
+        ],
+        "function": [
+          "Communication / participation",
+          "Daily living / self-care",
+          "Autonomy / supported choice"
+        ],
+        "intervention": [
+          "Access / accommodations",
+          "Function-linked support"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Skill rehearsal / supervision"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/intellectual-disability-supported-choice/progress-review.html",
+      "title": "Intellectual disability: supported choice and functional communication — Progress review tool",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Intellectual disability"
+        ],
+        "symptom": [
+          "Communication difficulty"
+        ],
+        "function": [
+          "Communication / participation",
+          "Daily living / self-care",
+          "Autonomy / supported choice"
+        ],
+        "intervention": [
+          "Access / accommodations",
+          "Function-linked support"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Progress review"
+        ],
+        "step": [
+          "What to watch next?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/intellectual-disability-supported-choice/support-map.html",
+      "title": "Intellectual disability: supported choice and functional communication — Visual support map",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Intellectual disability"
+        ],
+        "symptom": [
+          "Communication difficulty"
+        ],
+        "function": [
+          "Communication / participation",
+          "Daily living / self-care",
+          "Autonomy / supported choice"
+        ],
+        "intervention": [
+          "Access / accommodations",
+          "Function-linked support"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Treatment planning"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
       "url": "/resources/es/handouts/justicia-flexibilidad.html",
       "title": "Justicia y flexibilidad",
       "format": "HTML",
@@ -6699,6 +7429,233 @@
       },
       "priority": 20,
       "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/clinical-topics/learning-instruction-access/index.html",
+      "title": "Learning differences: instruction and access are separate tracks",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Learning disorders"
+        ],
+        "symptom": [],
+        "function": [
+          "Learning / school access"
+        ],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [],
+        "role": [],
+        "task": [],
+        "step": []
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/clinical-topics/learning-instruction-access/care-partner.html",
+      "title": "Learning differences: instruction and access are separate tracks — Care-partner guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Learning disorders"
+        ],
+        "symptom": [],
+        "function": [
+          "Learning / school access"
+        ],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/learning-instruction-access/client-workbook.html",
+      "title": "Learning differences: instruction and access are separate tracks — Client workbook",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Learning disorders"
+        ],
+        "symptom": [],
+        "function": [
+          "Learning / school access"
+        ],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/learning-instruction-access/formulation.html",
+      "title": "Learning differences: instruction and access are separate tracks — Clinician formulation guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Learning disorders"
+        ],
+        "symptom": [],
+        "function": [
+          "Learning / school access"
+        ],
+        "intervention": [
+          "Access / accommodations",
+          "Function-linked support"
+        ],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Assessment planning",
+          "Treatment planning"
+        ],
+        "step": [
+          "What am I seeing?",
+          "Understanding",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/learning-instruction-access/case.html",
+      "title": "Learning differences: instruction and access are separate tracks — Interactive case practice",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Learning disorders"
+        ],
+        "symptom": [],
+        "function": [
+          "Learning / school access"
+        ],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Skill rehearsal / supervision"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/learning-instruction-access/progress-review.html",
+      "title": "Learning differences: instruction and access are separate tracks — Progress review tool",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Learning disorders"
+        ],
+        "symptom": [],
+        "function": [
+          "Learning / school access"
+        ],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Progress review"
+        ],
+        "step": [
+          "What to watch next?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/learning-instruction-access/support-map.html",
+      "title": "Learning differences: instruction and access are separate tracks — Visual support map",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Learning disorders"
+        ],
+        "symptom": [],
+        "function": [
+          "Learning / school access"
+        ],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Treatment planning"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
     },
     {
       "url": "/resources/handouts/making-a-suicide-crisis-safer.html",
@@ -10395,6 +11352,224 @@
       "metadataBasis": "title/path discovery tags"
     },
     {
+      "url": "/resources/clinical-topics/tics-context-impact/index.html",
+      "title": "Tics: context, impact and CBIT referral",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Tic / repetitive behavior conditions"
+        ],
+        "symptom": [
+          "Repetitive actions / urges"
+        ],
+        "function": [],
+        "intervention": [],
+        "stage": [],
+        "role": [],
+        "task": [
+          "Referral / coordination"
+        ],
+        "step": []
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/clinical-topics/tics-context-impact/care-partner.html",
+      "title": "Tics: context, impact and CBIT referral — Care-partner guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Tic / repetitive behavior conditions"
+        ],
+        "symptom": [
+          "Repetitive actions / urges"
+        ],
+        "function": [],
+        "intervention": [],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/tics-context-impact/client-workbook.html",
+      "title": "Tics: context, impact and CBIT referral — Client workbook",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Tic / repetitive behavior conditions"
+        ],
+        "symptom": [
+          "Repetitive actions / urges"
+        ],
+        "function": [],
+        "intervention": [],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/tics-context-impact/formulation.html",
+      "title": "Tics: context, impact and CBIT referral — Clinician formulation guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Tic / repetitive behavior conditions"
+        ],
+        "symptom": [
+          "Repetitive actions / urges"
+        ],
+        "function": [],
+        "intervention": [
+          "Function-linked support"
+        ],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Assessment planning",
+          "Treatment planning"
+        ],
+        "step": [
+          "What am I seeing?",
+          "Understanding",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/tics-context-impact/case.html",
+      "title": "Tics: context, impact and CBIT referral — Interactive case practice",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Tic / repetitive behavior conditions"
+        ],
+        "symptom": [
+          "Repetitive actions / urges"
+        ],
+        "function": [],
+        "intervention": [],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Skill rehearsal / supervision"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/tics-context-impact/progress-review.html",
+      "title": "Tics: context, impact and CBIT referral — Progress review tool",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Tic / repetitive behavior conditions"
+        ],
+        "symptom": [
+          "Repetitive actions / urges"
+        ],
+        "function": [],
+        "intervention": [],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Progress review"
+        ],
+        "step": [
+          "What to watch next?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/tics-context-impact/support-map.html",
+      "title": "Tics: context, impact and CBIT referral — Visual support map",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Tic / repetitive behavior conditions"
+        ],
+        "symptom": [
+          "Repetitive actions / urges"
+        ],
+        "function": [],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Treatment planning"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
       "url": "/resources/es/handouts/tomar-perspectiva-sin-adivinar.html",
       "title": "Tomar perspectiva sin adivinar",
       "format": "HTML",
@@ -10493,6 +11668,32 @@
       "metadataBasis": "title/path discovery tags"
     },
     {
+      "url": "/resources/downloads/topic-bfrb-awareness-support.pdf",
+      "title": "Topic Bfrb Awareness Support",
+      "format": "PDF",
+      "tags": {
+        "diagnosis": [
+          "Tic / repetitive behavior conditions"
+        ],
+        "symptom": [
+          "Repetitive actions / urges"
+        ],
+        "function": [],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [],
+        "role": [],
+        "task": [],
+        "step": [
+          "What should I do?",
+          "What tool?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
       "url": "/resources/downloads/topic-binge-eating-patterns.pdf",
       "title": "Topic Binge Eating Patterns",
       "format": "PDF",
@@ -10526,6 +11727,28 @@
           "Psychosis / bipolar"
         ],
         "symptom": [],
+        "function": [],
+        "intervention": [],
+        "stage": [],
+        "role": [],
+        "task": [],
+        "step": [
+          "What tool?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/downloads/topic-body-dysmorphia-checking.pdf",
+      "title": "Topic Body Dysmorphia Checking",
+      "format": "PDF",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Pain / bodily concerns",
+          "Repetitive actions / urges"
+        ],
         "function": [],
         "intervention": [],
         "stage": [],
@@ -10597,6 +11820,58 @@
         "symptom": [],
         "function": [],
         "intervention": [],
+        "stage": [],
+        "role": [],
+        "task": [],
+        "step": [
+          "What tool?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/downloads/topic-intellectual-disability-supported-choice.pdf",
+      "title": "Topic Intellectual Disability Supported Choice",
+      "format": "PDF",
+      "tags": {
+        "diagnosis": [
+          "Intellectual disability"
+        ],
+        "symptom": [],
+        "function": [
+          "Daily living / self-care",
+          "Autonomy / supported choice"
+        ],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [],
+        "role": [],
+        "task": [],
+        "step": [
+          "What should I do?",
+          "What tool?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/downloads/topic-learning-instruction-access.pdf",
+      "title": "Topic Learning Instruction Access",
+      "format": "PDF",
+      "tags": {
+        "diagnosis": [
+          "Learning disorders"
+        ],
+        "symptom": [],
+        "function": [
+          "Learning / school access"
+        ],
+        "intervention": [
+          "Access / accommodations"
+        ],
         "stage": [],
         "role": [],
         "task": [],
@@ -10719,6 +11994,29 @@
         "symptom": [
           "Fear / uncertainty",
           "Memory / attention"
+        ],
+        "function": [],
+        "intervention": [],
+        "stage": [],
+        "role": [],
+        "task": [],
+        "step": [
+          "What tool?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/downloads/topic-tics-context-impact.pdf",
+      "title": "Topic Tics Context Impact",
+      "format": "PDF",
+      "tags": {
+        "diagnosis": [
+          "Tic / repetitive behavior conditions"
+        ],
+        "symptom": [
+          "Repetitive actions / urges"
         ],
         "function": [],
         "intervention": [],

@@ -16,6 +16,12 @@ for t in data['TOPICS'][:a.waves*5]:
  y=write(c,36,y-8,'Use fictional or appropriately de-identified notes. Write, draw, dictate or point. Not a validated measure, diagnostic test or crisis service.',9)
  # Vertical relational diagram avoids cramped five-column text.
  for i,(title,desc) in enumerate(t['diagram']):
+  if t['slug']=='learning-instruction-access' and i==3:continue
+  if t['slug']=='learning-instruction-access' and i==2:
+   write(c,36,y-9,'PARALLEL TRACKS - instruction and access happen together',8,540,True);y-=20
+   for j,(name,description) in enumerate(t['diagram'][2:4]):
+    x=36+j*280;c.setFillColor(HexColor('#e8eaf4' if j==0 else '#f3e3dc'));c.roundRect(x,y-43,260,40,4,fill=1,stroke=0);write(c,x+9,y-16,name+': '+description,9,240,True)
+   y-=52;continue
   c.setFillColor(HexColor(['#e4eee7','#f4ebd9','#e8eaf4','#f3e3dc','#e1eef0'][i]));c.roundRect(36,y-36,540,32,4,fill=1,stroke=0);write(c,45,y-17,title+': '+desc,9,520,True);y-=42
  y-=8
  for i,prompt in enumerate(t['fields']):
