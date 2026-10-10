@@ -20,6 +20,23 @@ for(const r of ledger.resources){
  assert.ok(fs.existsSync('resources/downloads/topic-'+r.topic+'.pdf'));
 }
 for(const set of byTopic.values())assert.equal(set.size,6);
+// Structural checks for meaningful visual models; source-level QA only, not rendered approval.
+const models={'panic-alarm-loop':'return-loop','ocd-mental-rituals':'loop-choice','aphasia-communication-access':'access-tracks','child-aggression-caregiver-coaching':'abc-tracks','sibling-conflict-safety-repair':'safety-gate'};
+for(const [slug,cls] of Object.entries(models)){
+ for(const page of ['support-map.html','index.html']){
+  const html=fs.readFileSync('resources/clinical-topics/'+slug+'/'+page,'utf8');
+  assert.ok(html.includes('clinical-map '+cls),'missing semantic visual '+slug+' '+page);
+  assert.ok(html.includes('class="map-legend"'),'missing accessible explanation '+slug);
+  assert.equal((html.match(/<li><strong>/g)||[]).length,5,'five map parts '+slug);
+  if(slug==='sibling-conflict-safety-repair'){
+   assert.ok(html.includes('role="group" aria-label="Two safety-dependent response routes"'));
+   assert.ok(html.includes('Do not require joint mediation'));
+   assert.ok(html.includes('may refuse without penalty'));
+  }
+ }
+}
+const mapCss=fs.readFileSync('resources/clinical-topics/topic-tools.css','utf8');
+assert.ok(mapCss.includes('@media print')&&mapCss.includes('clinical-map.safety-gate'));
 const api=require('../resources/clinical-topics/topic-tools.js');
 const b=(s)=>({attrs:{'data-feedback':s},getAttribute(k){return this.attrs[k]},setAttribute(k,v){this.attrs[k]=v}});
 const one=b('Incomplete: missing access assessment'),two=b('Best supported: keep access and assess');let out={textContent:''};

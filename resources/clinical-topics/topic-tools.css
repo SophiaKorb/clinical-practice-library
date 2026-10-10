@@ -1,3 +1,28 @@
 .skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:8px;background:white;padding:12px;z-index:5}.topic-nav{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0}.topic-nav a{padding:8px 12px;background:#e4eee7;border:1px solid #9ab2a5;border-radius:8px;min-height:44px}.clinical-map{list-style:none;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px;margin:28px 0}.clinical-map li{position:relative;padding:18px 12px;border-top:6px solid #245e50;background:#e4eee7;border-bottom:1px solid #9ab2a5}.clinical-map li:nth-child(2){background:#f4ebd9;border-color:#886225}.clinical-map li:nth-child(3){background:#e8eaf4;border-color:#52628a}.clinical-map li:nth-child(4){background:#f3e3dc;border-color:#955a40}.clinical-map li:nth-child(5){background:#e1eef0;border-color:#336a76}.clinical-map li:not(:last-child)::after{content:'→';position:absolute;right:-18px;top:32px;color:#203b35}.clinical-map strong,.clinical-map span{display:block}.clinical-map span{margin-top:12px}.case-options{border:1px solid #9ab2a5;padding:18px}.case-options button{display:block;width:100%;text-align:left}.case-options button[aria-pressed=true]{outline:3px solid #89621e;outline-offset:2px}.case-feedback p{margin:0}tbody a{display:inline-block;padding:4px 0;min-height:32px}textarea{resize:vertical;min-height:100px}@media(max-width:850px){.clinical-map{grid-template-columns:1fr}.clinical-map li:not(:last-child)::after{content:'↓';right:auto;top:auto;bottom:-22px;left:50%}.topic-nav a{flex:1 1 45%}}@media print{.topic-nav,.skip,.case-options,.case-feedback{display:none!important}.clinical-map{display:block}.clinical-map li{margin:8px 0;break-inside:avoid;border:1px solid #555;background:white!important}.clinical-map li::after{display:none}details{break-inside:auto}textarea{min-height:75px;height:100px;overflow:visible}.note{break-inside:auto}}
 
 .clinical-map.two-track{grid-template-columns:1fr 1fr;grid-template-areas:"target target" "barrier barrier" "instruction access" "review review"}.two-track li:nth-child(1){grid-area:target}.two-track li:nth-child(2){grid-area:barrier}.two-track li:nth-child(3){grid-area:instruction}.two-track li:nth-child(4){grid-area:access}.two-track li:nth-child(5){grid-area:review}.clinical-map.two-track li::after{display:none}.two-track li:nth-child(3),.two-track li:nth-child(4){border-left:3px solid #203b35}.two-track li:nth-child(5){border-top:6px solid #336a76}
+
+/* Phase 8 spatial meaning: cycles, two-track access, observed ABC, and safeguarding gates. */
+.map-legend{max-width:80ch;margin:-8px 0 24px;padding:12px 18px;border-left:4px solid #245e50;background:#eef3ee;font-weight:650}
+.clinical-map.return-loop{padding-bottom:22px;border-bottom:4px dashed #245e50}
+.clinical-map.return-loop + .map-legend::before{content:"↶ ";font-size:1.3rem}
+.clinical-map.loop-choice li:nth-child(5){outline:3px solid #336a76;outline-offset:2px;border-top-width:8px}
+.clinical-map.loop-choice li:nth-child(4){border-bottom:4px dashed #955a40}
+.clinical-map.loop-choice + .map-legend::before{content:"↳ ";font-size:1.3rem}
+.clinical-map.access-tracks,.clinical-map.abc-tracks,.clinical-map.safety-gate{grid-template-columns:repeat(6,minmax(0,1fr));gap:15px}
+.clinical-map.access-tracks li::after,.clinical-map.abc-tracks li::after,.clinical-map.safety-gate li::after{display:none}
+.clinical-map.access-tracks li:nth-child(-n+3),.clinical-map.abc-tracks li:nth-child(-n+3){grid-column:span 2}
+.clinical-map.access-tracks li:nth-child(n+4),.clinical-map.abc-tracks li:nth-child(n+4){grid-column:span 3;border-top-width:8px}
+.clinical-map.access-tracks li:nth-child(4),.clinical-map.abc-tracks li:nth-child(4){border-left:4px solid #245e50}
+.clinical-map.access-tracks li:nth-child(5),.clinical-map.abc-tracks li:nth-child(5){border-left:4px solid #336a76}
+.clinical-map.safety-gate li:nth-child(-n+2),.clinical-map.safety-gate li:nth-child(n+4){grid-column:span 3}
+.clinical-map.safety-gate li:nth-child(3){grid-column:1/-1;border:3px solid #955a40;border-top-width:8px;text-align:center;font-weight:700}
+.clinical-map.safety-gate li:nth-child(5){outline:2px dashed #245e50;outline-offset:1px}
+.safety-fork{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:20px 0 28px}
+.safety-fork section{background:#fff;padding:18px;border:2px solid #245e50;border-radius:14px;min-width:0}
+.safety-fork .protect-route{border-color:#955a40;border-left-width:9px}
+.safety-fork .repair-route{border-color:#245e50;border-left-width:9px}
+.safety-fork h3{margin-top:0}
+.safety-fork p{margin:0}
+@media(max-width:850px){.clinical-map.access-tracks,.clinical-map.abc-tracks,.clinical-map.safety-gate{grid-template-columns:1fr}.clinical-map.access-tracks li,.clinical-map.abc-tracks li,.clinical-map.safety-gate li{grid-column:1/-1!important}.safety-fork{grid-template-columns:1fr}}
+@media print{.clinical-map.access-tracks,.clinical-map.abc-tracks,.clinical-map.safety-gate{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.clinical-map.access-tracks li,.clinical-map.abc-tracks li,.clinical-map.safety-gate li{grid-column:auto!important;min-width:0}.clinical-map.safety-gate li:nth-child(3){grid-column:1/-1!important}.clinical-map.access-tracks li,.clinical-map.abc-tracks li,.clinical-map.safety-gate li,.safety-fork section{background:white!important;break-inside:avoid;box-shadow:none}.safety-fork{grid-template-columns:1fr 1fr;gap:8px}.safety-fork section{padding:10px}.map-legend{background:white;color:black;border-color:black;padding:8px}.clinical-map.return-loop{border-color:black}}
