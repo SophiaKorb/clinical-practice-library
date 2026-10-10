@@ -5,3 +5,57 @@
 @media print{.site-header,.skip-link{display:none}main{width:100%}.hero{padding:0}.shelf,.diagnosis-card{break-inside:avoid}a{color:#000}.index-nav{display:none}}
 
 .clinical-pathway-links{display:flex;flex-wrap:wrap;gap:4px 12px;margin:14px 0 20px;align-items:center;font-size:.88rem}.clinical-pathway-links a{display:inline-flex;align-items:center;min-height:44px;font-weight:650}.clinical-pathway-links span{color:#53645f}
+
+/* Mobile entry view: present an action first, and use the existing subject
+   accordions instead of repeating a 13-link jump grid and 5-step pathway. */
+.mobile-lede,.mobile-hero-actions{display:none}
+@media screen and (max-width:700px){
+  .hero{padding:20px 0 14px!important;max-width:100%}
+  .hero .eyebrow{font-size:.69rem;letter-spacing:.1em;margin-bottom:6px}
+  .hero h1{
+    font-size:clamp(1.75rem,7.6vw,2.3rem)!important;
+    line-height:1.12!important;letter-spacing:-.025em;
+    max-width:100%;overflow-wrap:normal;
+  }
+  .hero .desktop-lede{display:none}
+  .hero .mobile-lede{
+    display:block!important;margin:12px 0 16px;
+    font-size:.95rem;line-height:1.48;color:#526057;
+  }
+  .mobile-hero-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  .mobile-hero-actions a{min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+  .mobile-find{
+    gap:8px;padding:10px 16px;border-radius:9px;
+    background:#285c58;color:#fff!important;text-decoration:none;
+    font-weight:700;box-shadow:none;
+  }
+  .mobile-browse{
+    padding:10px 9px;color:#285c58!important;
+    text-decoration:underline;text-underline-offset:4px;font-weight:650;
+  }
+  .mobile-hero-actions a:focus-visible{
+    outline:3px solid #a16d12;outline-offset:3px;
+  }
+  .hero>.catalog-links,.hero>.clinical-pathway-links,.hero>.index-nav{
+    display:none!important;
+  }
+  .shelves-section{padding-top:18px!important}
+  .shelves-section .section-heading{margin-bottom:12px}
+  .shelves-section .section-heading .eyebrow{display:none}
+  .shelves-section .section-heading h2{font-size:1.4rem;line-height:1.2}
+  .shelves-section .section-heading p:not(.eyebrow){
+    font-size:.86rem;line-height:1.45;margin:6px 0 0;
+  }
+  .shelf.expandable-shelf{margin:7px 0;border-radius:10px}
+  .shelf.expandable-shelf>summary{
+    padding:12px 14px!important;gap:12px;
+    grid-template-columns:minmax(0,1fr) 28px;
+    min-height:52px;
+  }
+  .shelf.expandable-shelf>summary h3{font-size:1rem;line-height:1.35}
+  .shelf.expandable-shelf:not([open])>summary .shelf-main>p{display:none}
+  .shelf.expandable-shelf>summary .shelf-main>p{font-size:.83rem;margin:5px 0 0}
+  .shelf-toggle{width:27px;height:27px;font-size:1.1rem}
+  .shelf.expandable-shelf>.shelf-body{padding:12px 14px 16px}
+}
+@media print{.mobile-hero-actions,.mobile-lede{display:none!important}}
