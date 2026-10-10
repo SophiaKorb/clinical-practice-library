@@ -75,8 +75,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 55091,
-      "sha256": "59264842f5f5788833f6c6a214a4840b6deda5f3796ec80b79d8b4ced81bb035",
+      "bytes": 55949,
+      "sha256": "28524ab3193842a48c52b1b25db14d02d4473a72e7118bfb44c4cf7de7e60e5b",
       "retained_legacy": false,
       "title": "Clinical Practice Library | Resource Index",
       "reachable_from_home": true
@@ -2211,8 +2211,8 @@
     },
     {
       "path": "library.html",
-      "bytes": 47086,
-      "sha256": "10d1208c3acfe42139295c94edb56d4891f994084788c6f5a569dfa3fb775ac8",
+      "bytes": 47198,
+      "sha256": "38c785a809c9acd339e7ee4b6d6ba9ca4cedf67cc030042d7db4f107863f4389",
       "retained_legacy": false,
       "title": "Clinical Practice Library | Selected Resources",
       "reachable_from_home": true
@@ -2442,9 +2442,17 @@
       "reachable_from_home": true
     },
     {
+      "path": "resources/clinical-resource-finder.html",
+      "bytes": 4178,
+      "sha256": "c7615e406622f411ffc94330855bd49e44cecef350ae22d560ae098faae89483",
+      "retained_legacy": false,
+      "title": "Clinical resource finder | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
       "path": "resources/complete-resource-inventory.html",
-      "bytes": 148580,
-      "sha256": "e097a7f17702c8f29baa81e39658b92c4aafdbf2007c4e411c4b8cfaee7eb2a3",
+      "bytes": 148982,
+      "sha256": "1674d8b69957113106fba9a4a71537749b980add6fd4326acd871d331b556a9a",
       "retained_legacy": false,
       "title": "Complete resource inventory | CPL",
       "reachable_from_home": true
@@ -3839,10 +3847,18 @@
     },
     {
       "path": "resources/index.html",
-      "bytes": 47315,
-      "sha256": "1c9578299bdbac35b782612ed6ee9ac9b8528e5d6c79534e74cf8e98a578c2ec",
+      "bytes": 46962,
+      "sha256": "4bab30a3044e87f1176ac2af3e0c60ca2e442598eaf679d07cde871a650d9274",
       "retained_legacy": false,
       "title": "Clinical Practice Library | Selected Resources",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/qa-status.html",
+      "bytes": 2290,
+      "sha256": "3c82698dcf65acb68ada36fa6471649f553be125b734b4d637c9eab36119ec94",
+      "retained_legacy": false,
+      "title": "QA status & review needs | Clinical Practice Library",
       "reachable_from_home": true
     },
     {
@@ -4127,8 +4143,8 @@
     },
     {
       "path": "resources/therapy/clinical-intern-learning-hub.html",
-      "bytes": 19697,
-      "sha256": "b4af6ac0a1226a2dca38efcdd3561aa75ed19e2aa95e37b91c246417c932e01a",
+      "bytes": 19777,
+      "sha256": "8eb55f03ff756378ddec831d159297b8be472ab87470c54eb3970e2aa9ed48e4",
       "retained_legacy": false,
       "title": "Clinical Intern Learning Hub | Clinical Practice Library",
       "reachable_from_home": true
@@ -4143,8 +4159,8 @@
     },
     {
       "path": "resources/therapy/communication-supports-toolkit.html",
-      "bytes": 32805,
-      "sha256": "18fb0cdf364b990509c0866c4bf34a890e7e55ba298567cc30e91e19f912ab27",
+      "bytes": 32885,
+      "sha256": "e299f5ea5892b2c1891ac35af5124e502b6cc4ae57e80a34c4003de316650648",
       "retained_legacy": false,
       "title": "Communication Supports Toolkit | Clinical Practice Library",
       "reachable_from_home": true
@@ -4391,8 +4407,8 @@
     },
     {
       "path": "resources/therapy/visual-reasoning-toolkit.html",
-      "bytes": 15230,
-      "sha256": "d092e86bb49a5d6e6a08d956d76b2c7a46d6cafbea9cd9bfa576ccdbd261b8fe",
+      "bytes": 15310,
+      "sha256": "c9db1f2928ee0fc93d64f333d05321d408848de8bb4bbc1a282452cc8bdda9d7",
       "retained_legacy": false,
       "title": "Visual reasoning & support toolkit | Clinical Practice LibraryBody outline with four selectable regions",
       "reachable_from_home": true
@@ -4415,8 +4431,8 @@
     },
     {
       "path": "resources/training/workforce-learning-center.html",
-      "bytes": 18599,
-      "sha256": "dac7d9480b68a28ee610edf543146f0fe5478cf617928e1987826d1e605fb553",
+      "bytes": 18679,
+      "sha256": "23b6d67132bd3a635519b615bd5a72a83ed1e85b72cff0d32b209b8cd4a112fe",
       "retained_legacy": false,
       "title": "Intern & workforce learning center | Clinical Practice Library",
       "reachable_from_home": true
@@ -4563,8 +4579,8 @@
       "absent_from_current": []
     },
     "origin/cpl-2-colorful-helpful": {
-      "commit": "17a0921d88d9f3c8e4bbbcb5a98f6e4ddb2fcd16",
-      "resource_count": 559,
+      "commit": "34739111b32d2f5b0faa0c2be7666891abef5bfe",
+      "resource_count": 563,
       "absent_from_current": []
     },
     "origin/cpl-phone-check-2026-09-30": {

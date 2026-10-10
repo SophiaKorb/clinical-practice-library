@@ -5,3 +5,6 @@
 
 .decision-branches{display:grid;grid-template-columns:1fr 2fr;gap:18px}.decision-branches>div:first-child .node{background:var(--amber)}
 @media(max-width:700px){.decision-branches{grid-template-columns:1fr}}
+
+/* Visual boards remain meaningful when browser controls are hidden for print. */
+@media print{.scale button,.visual .choices button{display:flex!important;background:white!important;color:black!important;border-color:black}.scale button{min-height:120px}.choices{gap:8px}details>*{display:block!important}}

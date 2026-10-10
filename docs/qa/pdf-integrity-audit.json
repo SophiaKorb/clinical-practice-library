@@ -1,0 +1,329 @@
+{
+  "scope": "All PDF downloads in the checkout except temporary/output files. Parsing and page/text counts do not establish visual layout, form semantics, accessibility, clinical suitability, or copyright permission.",
+  "resources": [
+    {
+      "path": "resources/downloads/workforce-practice-sheet.pdf",
+      "bytes": 3310,
+      "pages": 1,
+      "text_characters": 1229,
+      "fields": 0,
+      "widgets": 0,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "resources/downloads/safety-planning-preparation-sheet-fillable.pdf",
+      "bytes": 70085,
+      "pages": 3,
+      "text_characters": 3960,
+      "fields": 22,
+      "widgets": 22,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "resources/downloads/my-grounding-menu-fillable.pdf",
+      "bytes": 67352,
+      "pages": 2,
+      "text_characters": 2465,
+      "fields": 24,
+      "widgets": 24,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "resources/downloads/sensory-overload-and-recovery-plan.pdf",
+      "bytes": 281644,
+      "pages": 2,
+      "text_characters": 2354,
+      "fields": 29,
+      "widgets": 32,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "resources/downloads/competing-hypotheses-assessment-map.pdf",
+      "bytes": 61832,
+      "pages": 1,
+      "text_characters": 935,
+      "fields": 17,
+      "widgets": 17,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "resources/downloads/my-lower-risk-plan-fillable.pdf",
+      "bytes": 76039,
+      "pages": 2,
+      "text_characters": 3269,
+      "fields": 43,
+      "widgets": 43,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "resources/downloads/task-launch-map-fillable.pdf",
+      "bytes": 70945,
+      "pages": 2,
+      "text_characters": 2604,
+      "fields": 33,
+      "widgets": 33,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "resources/downloads/my-lower-risk-plan.pdf",
+      "bytes": 271703,
+      "pages": 2,
+      "text_characters": 2552,
+      "fields": 30,
+      "widgets": 30,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "resources/downloads/learning-and-access-two-track-plan.pdf",
+      "bytes": 56192,
+      "pages": 1,
+      "text_characters": 1024,
+      "fields": 10,
+      "widgets": 10,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "resources/downloads/uncertainty-practice-plan-and-my-erp-practice.pdf",
+      "bytes": 287509,
+      "pages": 2,
+      "text_characters": 2295,
+      "fields": 20,
+      "widgets": 20,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "resources/downloads/my-after-school-reset-plan.pdf",
+      "bytes": 143920,
+      "pages": 2,
+      "text_characters": 2092,
+      "fields": 37,
+      "widgets": 37,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "resources/downloads/functional-support-map.pdf",
+      "bytes": 3580,
+      "pages": 1,
+      "text_characters": 1103,
+      "fields": 0,
+      "widgets": 0,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "resources/downloads/my-grief-map-fillable.pdf",
+      "bytes": 70923,
+      "pages": 2,
+      "text_characters": 2714,
+      "fields": 35,
+      "widgets": 35,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "resources/downloads/my-personal-care-plan-fillable.pdf",
+      "bytes": 72789,
+      "pages": 2,
+      "text_characters": 2055,
+      "fields": 38,
+      "widgets": 38,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "resources/downloads/es/mi-mapa-duelo-rellenable.pdf",
+      "bytes": 42520,
+      "pages": 2,
+      "text_characters": 1482,
+      "fields": 35,
+      "widgets": 35,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "resources/downloads/es/hoja-preparacion-plan-seguridad-rellenable.pdf",
+      "bytes": 40348,
+      "pages": 3,
+      "text_characters": 2289,
+      "fields": 22,
+      "widgets": 22,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "resources/downloads/es/plan-reducir-riesgos-rellenable.pdf",
+      "bytes": 44781,
+      "pages": 2,
+      "text_characters": 2334,
+      "fields": 43,
+      "widgets": 43,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "resources/downloads/es/plan-cuidado-personal-rellenable.pdf",
+      "bytes": 42175,
+      "pages": 2,
+      "text_characters": 1373,
+      "fields": 38,
+      "widgets": 38,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "resources/downloads/es/mapa-poner-tarea-en-marcha-rellenable.pdf",
+      "bytes": 41725,
+      "pages": 2,
+      "text_characters": 1339,
+      "fields": 33,
+      "widgets": 33,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "resources/downloads/es/menu-anclaje-rellenable.pdf",
+      "bytes": 39494,
+      "pages": 2,
+      "text_characters": 1607,
+      "fields": 24,
+      "widgets": 24,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "legacy/resources/downloads/safety-planning-preparation-sheet-fillable.pdf",
+      "bytes": 70085,
+      "pages": 3,
+      "text_characters": 3960,
+      "fields": 22,
+      "widgets": 22,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "legacy/resources/downloads/my-grounding-menu-fillable.pdf",
+      "bytes": 67352,
+      "pages": 2,
+      "text_characters": 2465,
+      "fields": 24,
+      "widgets": 24,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "legacy/resources/downloads/sensory-overload-and-recovery-plan.pdf",
+      "bytes": 281644,
+      "pages": 2,
+      "text_characters": 2354,
+      "fields": 29,
+      "widgets": 32,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "legacy/resources/downloads/my-lower-risk-plan-fillable.pdf",
+      "bytes": 76039,
+      "pages": 2,
+      "text_characters": 3269,
+      "fields": 43,
+      "widgets": 43,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "legacy/resources/downloads/task-launch-map-fillable.pdf",
+      "bytes": 70945,
+      "pages": 2,
+      "text_characters": 2604,
+      "fields": 33,
+      "widgets": 33,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "legacy/resources/downloads/my-lower-risk-plan.pdf",
+      "bytes": 271703,
+      "pages": 2,
+      "text_characters": 2552,
+      "fields": 30,
+      "widgets": 30,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "legacy/resources/downloads/uncertainty-practice-plan-and-my-erp-practice.pdf",
+      "bytes": 287509,
+      "pages": 2,
+      "text_characters": 2295,
+      "fields": 20,
+      "widgets": 20,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "legacy/resources/downloads/my-after-school-reset-plan.pdf",
+      "bytes": 143920,
+      "pages": 2,
+      "text_characters": 2092,
+      "fields": 37,
+      "widgets": 37,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "legacy/resources/downloads/my-grief-map-fillable.pdf",
+      "bytes": 142918,
+      "pages": 2,
+      "text_characters": 2131,
+      "fields": 38,
+      "widgets": 38,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "legacy/resources/downloads/my-personal-care-plan-fillable.pdf",
+      "bytes": 145449,
+      "pages": 2,
+      "text_characters": 2182,
+      "fields": 41,
+      "widgets": 41,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "legacy/resources/downloads/es/mi-mapa-duelo-rellenable.pdf",
+      "bytes": 42520,
+      "pages": 2,
+      "text_characters": 1482,
+      "fields": 35,
+      "widgets": 35,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "legacy/resources/downloads/es/hoja-preparacion-plan-seguridad-rellenable.pdf",
+      "bytes": 40348,
+      "pages": 3,
+      "text_characters": 2289,
+      "fields": 22,
+      "widgets": 22,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "legacy/resources/downloads/es/plan-reducir-riesgos-rellenable.pdf",
+      "bytes": 44781,
+      "pages": 2,
+      "text_characters": 2334,
+      "fields": 43,
+      "widgets": 43,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "legacy/resources/downloads/es/plan-cuidado-personal-rellenable.pdf",
+      "bytes": 42175,
+      "pages": 2,
+      "text_characters": 1373,
+      "fields": 38,
+      "widgets": 38,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "legacy/resources/downloads/es/mapa-poner-tarea-en-marcha-rellenable.pdf",
+      "bytes": 41725,
+      "pages": 2,
+      "text_characters": 1339,
+      "fields": 33,
+      "widgets": 33,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "legacy/resources/downloads/es/menu-anclaje-rellenable.pdf",
+      "bytes": 39494,
+      "pages": 2,
+      "text_characters": 1607,
+      "fields": 24,
+      "widgets": 24,
+      "status": "structurally readable; field/widget consistency checked"
+    }
+  ]
+}
