@@ -1,0 +1,272 @@
+{
+  "phase": "8B",
+  "updated": "2026-10-10",
+  "branch": "cpl-2-colorful-helpful",
+  "scope": "Entire current CPL. Status distinguishes absent, partial, fragmented, thin, pending review; counts do not certify value.",
+  "releaseGate": "No qualified clinical approval inferred from publication or CI.",
+  "entries": [
+    {
+      "key": "crisis",
+      "priority": "P0",
+      "status": "fragmented",
+      "domain": "Self-harm, suicide, acute safety and care transitions",
+      "present": [
+        "resources/handouts/making-a-suicide-crisis-safer.html",
+        "resources/handouts/safety-planning-preparation-sheet.html",
+        "resources/assessment/trauma-ptsd-dissociation-safety.html"
+      ],
+      "missing": [
+        "Clinician decision path separating immediate physical safety, psychosocial formulation and named handoff",
+        "Nuanced distinctions among suicidal thoughts, self-harm function and medical lethality without a scoring shortcut",
+        "Longitudinal review after event/transition, capacity/access, changing context, safety-plan practicality"
+      ],
+      "firstAction": "Create clinician safety/continuity decision guide and worked case; link to existing safety-planning aids",
+      "review": "qualified suicidology/clinical review; local emergency and consent policy"
+    },
+    {
+      "key": "complex-dissociation",
+      "priority": "P0",
+      "status": "thin",
+      "domain": "DID, complex dissociation, memory and disability",
+      "present": [
+        "resources/clinical-topics/dissociation-function-orientation/formulation.html",
+        "resources/assessment/trauma-ptsd-dissociation-safety.html",
+        "resources/therapy/trauma-ptsd-practical-toolkit.html"
+      ],
+      "missing": [
+        "Differentiate PTSD subtype, DID/OSDD, detachment, amnesia, medical/neurological and other explanations",
+        "Structured, non-leading functional memory/time/identity observation and disability domains",
+        "Longitudinal treatment choice, supervision, stabilization, trauma-work adaptation and function separate from subjective integration"
+      ],
+      "firstAction": "Build differential and longitudinal clinician pathway plus functional observation tool",
+      "review": "qualified dissociation specialist and source appraisal (ISSTD consensus guideline dated 2011)"
+    },
+    {
+      "key": "personality",
+      "priority": "P1",
+      "status": "thin",
+      "domain": "Complex personality, attachment and relational therapy",
+      "present": [
+        "resources/therapy/personality-complex-presentations-start-here.html",
+        "resources/therapy/personality-complex-presentations-practical-toolkit.html",
+        "resources/therapy/relational-supportive-psychodynamic-practical-toolkit.html"
+      ],
+      "missing": [
+        "Comparative DBT/GPM/MBT/TFP/schema indications, clinician training and treatment frame",
+        "Longitudinal shared formulation, rupture/repair, team dynamics, multiple risk behaviors and change in function",
+        "Case formulation for both abandonment and engulfment concerns without stereotyping"
+      ],
+      "firstAction": "Deepen case selection and longitudinal monitoring, preserve model-specific competency boundaries",
+      "review": "qualified psychotherapy/model reviewers"
+    },
+    {
+      "key": "autism-adhd-id",
+      "priority": "P1",
+      "status": "partial",
+      "domain": "Autism, ADHD, intellectual disability and overlapping concerns",
+      "present": [
+        "resources/assessment/adhd-autism-trauma-differential-matrix.html",
+        "resources/clinical-topics/intellectual-disability-supported-choice/index.html",
+        "resources/therapy/neurodevelopmental-executive-function-practical-toolkit.html"
+      ],
+      "missing": [
+        "Developmental versus acquired change, language/communication validity, adaptive profiles, masking, co-occurrence",
+        "Concrete consent/assent/access routes and alternative means of responding",
+        "From screening to integrated feedback and change in functioning, not diagnosis alone"
+      ],
+      "firstAction": "Evaluation access/validity workflow and actionable formulation case studies",
+      "review": "qualified neuropsychologist; SLP and disability-access review"
+    },
+    {
+      "key": "neuropsych",
+      "priority": "P1",
+      "status": "partial",
+      "domain": "Psychological and neuropsychological evaluation",
+      "present": [
+        "resources/assessment/integrated-development-language-learning-casebook.html",
+        "resources/therapy/assessment-question-to-feedback.html",
+        "resources/assessment/functioning-disability-formal-testing.html"
+      ],
+      "missing": [
+        "Referral question → battery selection/stop rules/validity/access → integrated interpretation",
+        "Report structure, source disagreements, multiple hypotheses and accessible feedback",
+        "Acquired aphasia evaluation and neuropsychological testing modifications; boundaries of normed scores"
+      ],
+      "firstAction": "Question-specific workflow, fictional integrated report and feedback supports",
+      "review": "qualified assessment reviewers and licensing checks"
+    },
+    {
+      "key": "psychosis-bipolar",
+      "priority": "P1",
+      "status": "partial",
+      "domain": "Psychosis, bipolar, serious mental illness",
+      "present": [
+        "resources/clinical-topics/voices-collaborative-coping/index.html",
+        "resources/clinical-topics/bipolar-episode-timeline/index.html",
+        "resources/therapy/psychosis-smi-rehabilitation-practical-toolkit.html"
+      ],
+      "missing": [
+        "Episode and medical/substance differential trajectories; relapse and recovery coordination",
+        "Negative/cognitive symptoms, early-psychosis treatment team roles, distress and autonomy",
+        "Complex medication-adjacent problems managed via appropriate prescriber handoff"
+      ],
+      "firstAction": "Parallel safety, phenomenology, episode timeline and rehabilitation pathway",
+      "review": "psychiatric and specialty psychotherapy review"
+    },
+    {
+      "key": "substance",
+      "priority": "P1",
+      "status": "partial",
+      "domain": "Substance use, addiction and dual diagnosis",
+      "present": [
+        "resources/therapy/motivational-interviewing-substance-use-practical-toolkit.html",
+        "resources/handouts/reducing-harm-when-substance-use-is-part-of-the-picture.html"
+      ],
+      "missing": [
+        "Alcohol/opioid/stimulant/polysubstance differential, withdrawal red flags and level-of-care decisions",
+        "Structured psychosocial treatment planning including contingency management and concurrent care",
+        "Relapse/return-to-use with response to overdose risk and coordination"
+      ],
+      "firstAction": "Substance use clinical assessment/level-of-care and integrated care guide",
+      "review": "addiction-medicine/qualified SUD review"
+    },
+    {
+      "key": "child-family",
+      "priority": "P1",
+      "status": "partial",
+      "domain": "Child psychotherapy, caregivers, adoption and family systems",
+      "present": [
+        "resources/therapy/early-childhood-regulation-communication.html",
+        "resources/therapy/child-adolescent-parenting-family-practical-toolkit.html",
+        "resources/therapy/sibling-conflict-safety-power-repair.html"
+      ],
+      "missing": [
+        "Developmentally differentiated play-based treatment and dyadic/caregiver skill rehearsal",
+        "Adoption/kinship contexts, contact with unsafe adults, consent/safety and multidisciplinary pathways",
+        "Session scripts with observation, supported practice, fidelity and troubleshooting"
+      ],
+      "firstAction": "Child-development and caregiver coaching session series with safeguards",
+      "review": "child clinician/play/dyadic specialty review"
+    },
+    {
+      "key": "eating",
+      "priority": "P1",
+      "status": "partial",
+      "domain": "Eating disorders and medical/psychiatric care",
+      "present": [
+        "resources/clinical-topics/restrictive-eating-coordination/index.html",
+        "resources/clinical-topics/binge-eating-patterns/index.html"
+      ],
+      "missing": [
+        "Distinct anorexia/bulimia/ARFID/binge-eating/pica/rumination assessment and referral pathways",
+        "Medical and psychosocial coordination on parallel tracks; specialist and family approaches",
+        "Progress indicators accounting for body size, stigma, environment and access"
+      ],
+      "firstAction": "Specialist treatment-selection and collaboration pathway with medical escalation boundary",
+      "review": "eating-disorder medical and clinical specialty review"
+    },
+    {
+      "key": "older-adult",
+      "priority": "P1",
+      "status": "absent-dedicated",
+      "domain": "Older adults, cognition and caregiver support",
+      "present": [
+        "resources/assessment/functioning-disability-formal-testing.html"
+      ],
+      "missing": [
+        "Depression vs delirium vs neurocognitive disorder vs substance/medication effects",
+        "Capacity, decision support, safeguarding, caregiver burden and functional changes",
+        "Referral to medical/neuropsych and community care pathways"
+      ],
+      "firstAction": "Older-adult clinical presentation and care coordination route",
+      "review": "geropsych/medical review"
+    },
+    {
+      "key": "perinatal",
+      "priority": "P1",
+      "status": "absent-dedicated",
+      "domain": "Perinatal and postpartum mental health",
+      "present": [
+        "resources/therapy/cbt-behavioral-activation-start-here.html"
+      ],
+      "missing": [
+        "Perinatal depression/anxiety, intrusive thoughts/OCD, bipolar activation and postpartum psychosis distinctions",
+        "Safety, medication/prescriber, infant-care, sleep and family coordination",
+        "Culturally responsive and trauma-informed reproductive care"
+      ],
+      "firstAction": "Perinatal psychiatric differential and referral coordination route",
+      "review": "perinatal psychiatry/OB review"
+    },
+    {
+      "key": "culture-language",
+      "priority": "P1",
+      "status": "fragmented",
+      "domain": "Culture, multilingual care and communication access",
+      "present": [
+        "resources/es/empiece-aqui.html",
+        "resources/therapy/communication-supports-toolkit.html"
+      ],
+      "missing": [
+        "Language/interpretation decision rules and documentation of adapted administration",
+        "Translation vs validation vs norms and evidence transfer",
+        "Cross-cultural symptom meaning, disability and identity framing, co-design/user testing"
+      ],
+      "firstAction": "Interpreter-mediated assessment and cultural formulation workflow",
+      "review": "bilingual clinical, cultural and accessibility review"
+    },
+    {
+      "key": "visuals",
+      "priority": "P0",
+      "status": "partial",
+      "domain": "Original visual toolkit and printable parity",
+      "present": [
+        "resources/therapy/visual-reasoning-toolkit.html",
+        "resources/therapy/communication-supports-toolkit.html",
+        "resources/clinical-topics/index.html"
+      ],
+      "missing": [
+        "Eleven Phase 8 maps remain generic five-card models",
+        "Many client workbooks present writing boxes without supported-choice/AAC options",
+        "Twenty-five PDF companions not yet semantically equivalent to updated HTML loops, forks and parallel tracks"
+      ],
+      "firstAction": "Rebuild topic-specific visual models and PDFs; prioritize high-risk routing",
+      "review": "rendered mobile/print/assistive-technology QA plus clinical review"
+    },
+    {
+      "key": "navigation",
+      "priority": "P0",
+      "status": "fragmented",
+      "domain": "Clinical decision navigation and source of truth",
+      "present": [
+        "index.html",
+        "resources/clinical-resource-finder.html",
+        "resources/therapy/start-here-therapy-resource-shelves.html"
+      ],
+      "missing": [
+        "Authoritative starting point for each clinical question; duplicate route consolidation",
+        "Incomplete discovery tagging and unambiguous audience/scope labels",
+        "Consistent next-question, evidence, intervention, access and progress links"
+      ],
+      "firstAction": "Curated clinical depth gateway with pathway links and cross-links from existing entry points",
+      "review": "user task completion at 320/390/768/desktop"
+    },
+    {
+      "key": "review-governance",
+      "priority": "P0",
+      "status": "missing-approval",
+      "domain": "Clinical review, provenance and effectiveness evidence",
+      "present": [
+        "data/topic-evidence-registry.json",
+        "data/topic-expansion-ledger.json",
+        "resources/qa-status.html"
+      ],
+      "missing": [
+        "Qualified reviewer names/version/signoff and scope of approval",
+        "Claim-level evidence strength plus local protocol applicability",
+        "Actual browser/keyboard/screen-reader/print evidence and feedback-driven updates"
+      ],
+      "firstAction": "Review ledger and release gates; explicitly segregate technical QA from clinical endorsement",
+      "review": "qualified specialty sign-off required; no automatic approval"
+    }
+  ]
+}
