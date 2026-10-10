@@ -25,7 +25,7 @@ Primary source pages verified through search on October 10 UTC / October 9 Arizo
 
 ## Verified QA
 
-- 527 HTML pages and 3,998 local references initially checked with zero errors; re-run after regenerated inventory.
+- 527 HTML pages and 3,998 local references initially checked with zero errors; final regenerated inventory check: 4,002 local references, zero errors.
 - Existing homepage, thermometer, clinical expansion, assessment/school, catalog, and all 292 paired school-support regression checks pass.
 - New behavior harness exercises four path selectors, three cases/all nine feedback options, exclusive selection, case-feedback reset, note clear/review, checklist count/reset, six scale selectors, body-map keyboard activation, client/high-contrast state, print invocation, functional-map no-overwrite and clear.
 - Both PDFs rendered to PNG and visually inspected: one-page layouts, complete labels, readable writing areas, no overlap or clipping. Text extracted and page counts verified.
@@ -34,6 +34,6 @@ Primary source pages verified through search on October 10 UTC / October 9 Arizo
 
 ## Deployment and remaining work
 
-Commit this checkpoint and scoped changes to cpl-2-colorful-helpful. Verify the resulting Vercel preview's exact Git SHA, READY state, new page/CSS/JS HTTP responses, and preservation of main's production SHA. Deployment results are reported with the associated commit; never label this phase fully tested until real browser QA is completed.
+Verified publication: commit e9abfd147e662074dc5cb158829bf49d4a2fde98 on cpl-2-colorful-helpful, Vercel deployment dpl_5JeM4w8v6c2KtkJsxnGwKErxpVD7, READY, preview target. URL: https://clinical-practice-library-od3zdhz2m-cohon-family.vercel.app . Both new HTML pages, both scripts, shared CSS, both PDF downloads, and homepage return HTTP 200 with expected content and correct content types. Main production remains deployment dpl_DBmCm1WvuCaP8EsnHFDkLtF3t9eN at commit 2b8c5ba1d66fa397548c9c10a006d764d8c1018b. Do not label this phase fully tested until real browser QA is completed.
 
 Remaining: rendered desktop/mobile and keyboard/screen-reader QA of HTML; deeper clinical peer review; more worked cases and population-specific examples; client-specific body-map custom labels; additional individual printable tool sheets; direct-observation competency rubrics with reviewers; source freshness audit across the broader existing directory. Neither phase is claimed complete or clinically approved.
