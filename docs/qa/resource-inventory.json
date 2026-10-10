@@ -75,10 +75,10 @@
     },
     {
       "path": "index.html",
-      "bytes": 11620,
-      "sha256": "890dc9fbdfdc7d3aee623b70200ae39b6fbedd458a2beb05360ddf3bf1aa3037",
+      "bytes": 55091,
+      "sha256": "59264842f5f5788833f6c6a214a4840b6deda5f3796ec80b79d8b4ced81bb035",
       "retained_legacy": false,
-      "title": "Clinical Practice Library",
+      "title": "Clinical Practice Library | Resource Index",
       "reachable_from_home": true
     },
     {
@@ -2211,8 +2211,8 @@
     },
     {
       "path": "library.html",
-      "bytes": 46825,
-      "sha256": "29fa528f4c61f79b596f116b3047e173e88f16b80f2841eb484dd43730c57aa2",
+      "bytes": 47086,
+      "sha256": "10d1208c3acfe42139295c94edb56d4891f994084788c6f5a569dfa3fb775ac8",
       "retained_legacy": false,
       "title": "Clinical Practice Library | Selected Resources",
       "reachable_from_home": true
@@ -2443,8 +2443,8 @@
     },
     {
       "path": "resources/complete-resource-inventory.html",
-      "bytes": 147620,
-      "sha256": "735392c8bea4fc92df9f3fff3cc56a4ada251f5195f05f0064515ba3f779d995",
+      "bytes": 148580,
+      "sha256": "e097a7f17702c8f29baa81e39658b92c4aafdbf2007c4e411c4b8cfaee7eb2a3",
       "retained_legacy": false,
       "title": "Complete resource inventory | CPL",
       "reachable_from_home": true
@@ -2495,6 +2495,13 @@
       "path": "resources/downloads/es/plan-reducir-riesgos-rellenable.pdf",
       "bytes": 44781,
       "sha256": "28389f9ae58e9125363799b1253f8af2980c0f80165291dd7163d4ecb36755e5",
+      "retained_legacy": false,
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/downloads/functional-support-map.pdf",
+      "bytes": 3580,
+      "sha256": "c1f8bc596ce32558098afd7f233307ea74a8aae4acc92ccf07147300159d1297",
       "retained_legacy": false,
       "reachable_from_home": true
     },
@@ -2572,6 +2579,13 @@
       "path": "resources/downloads/uncertainty-practice-plan-and-my-erp-practice.pdf",
       "bytes": 287509,
       "sha256": "fe22a8063bb6c06a71f8e68edc63cfdd970954cb9ef2f870bbbf55e1bc7b2ffa",
+      "retained_legacy": false,
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/downloads/workforce-practice-sheet.pdf",
+      "bytes": 3310,
+      "sha256": "2d5e6122143444084574ba3106ede26d20dce29023096de0c3593c4bd43da60c",
       "retained_legacy": false,
       "reachable_from_home": true
     },
@@ -4113,8 +4127,8 @@
     },
     {
       "path": "resources/therapy/clinical-intern-learning-hub.html",
-      "bytes": 19527,
-      "sha256": "315684524b9a58d7ce64eb69578192e3f49905b2f7a43ed47a92a81534485c3a",
+      "bytes": 19697,
+      "sha256": "b4af6ac0a1226a2dca38efcdd3561aa75ed19e2aa95e37b91c246417c932e01a",
       "retained_legacy": false,
       "title": "Clinical Intern Learning Hub | Clinical Practice Library",
       "reachable_from_home": true
@@ -4129,8 +4143,8 @@
     },
     {
       "path": "resources/therapy/communication-supports-toolkit.html",
-      "bytes": 32642,
-      "sha256": "d8531755f9ece68f7531259b0260c10c486215c7e5bb6baa838919be98cff307",
+      "bytes": 32805,
+      "sha256": "18fb0cdf364b990509c0866c4bf34a890e7e55ba298567cc30e91e19f912ab27",
       "retained_legacy": false,
       "title": "Communication Supports Toolkit | Clinical Practice Library",
       "reachable_from_home": true
@@ -4376,6 +4390,14 @@
       "reachable_from_home": true
     },
     {
+      "path": "resources/therapy/visual-reasoning-toolkit.html",
+      "bytes": 15230,
+      "sha256": "d092e86bb49a5d6e6a08d956d76b2c7a46d6cafbea9cd9bfa576ccdbd261b8fe",
+      "retained_legacy": false,
+      "title": "Visual reasoning & support toolkit | Clinical Practice LibraryBody outline with four selectable regions",
+      "reachable_from_home": true
+    },
+    {
       "path": "resources/trainees/last-psychiatrist-critical-guide.html",
       "bytes": 7201,
       "sha256": "642a8a632c36b838d462825c918c7422c1ee61786d142851ab02242a8fbb931b",
@@ -4389,6 +4411,14 @@
       "sha256": "c52c4b75f17e1f75663234d0ab5993987fa9658d740cd832fb06cb23678bcc6e",
       "retained_legacy": false,
       "title": "Three Essays for Interns \u2013 Reading & Discussion Guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/training/workforce-learning-center.html",
+      "bytes": 18599,
+      "sha256": "dac7d9480b68a28ee610edf543146f0fe5478cf617928e1987826d1e605fb553",
+      "retained_legacy": false,
+      "title": "Intern & workforce learning center | Clinical Practice Library",
       "reachable_from_home": true
     },
     {
@@ -4533,8 +4563,8 @@
       "absent_from_current": []
     },
     "origin/cpl-2-colorful-helpful": {
-      "commit": "871adaeead5d5fe839ae81d575ed0c74e47a8d1d",
-      "resource_count": 555,
+      "commit": "17a0921d88d9f3c8e4bbbcb5a98f6e4ddb2fcd16",
+      "resource_count": 559,
       "absent_from_current": []
     },
     "origin/cpl-phone-check-2026-09-30": {

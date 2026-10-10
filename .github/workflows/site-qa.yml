@@ -25,3 +25,4 @@ jobs:
       - run: node tests/thermometer-levels.cjs
       - run: node tests/clinical-expansion.cjs
       - run: node tests/assessment-school.cjs
+      - run: node tests/practice-learning.cjs

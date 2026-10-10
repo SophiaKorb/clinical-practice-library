@@ -1,0 +1,116 @@
+{
+  "tracks": [
+    {
+      "id": "support",
+      "name": "High-school-diploma-level staff",
+      "goal": "Notice, support communication, and connect to help.",
+      "practice": "Describe one event without a label; rehearse offering two response routes and contacting the designated supervisor.",
+      "boundary": "Use assigned support plans and local response procedures. Do not independently diagnose, interpret tests, or design psychotherapy.",
+      "sequence": "Observation → communication → trauma-informed engagement → risk recognition → handoff"
+    },
+    {
+      "id": "coordination",
+      "name": "Bachelor’s-level workers & case managers",
+      "goal": "Coordinate practical supports and close the referral loop.",
+      "practice": "Map one access barrier, identify the responsible service, obtain required permission, and verify follow-through.",
+      "boundary": "Degree level alone does not authorize clinical tasks. Use screenings or structured interventions only when role, training, policy, and supervision permit.",
+      "sequence": "Foundations → family engagement → observation patterns → documentation → coordination"
+    },
+    {
+      "id": "graduate",
+      "name": "Graduate clinical trainees",
+      "goal": "Build competing hypotheses and rehearse under supervision.",
+      "practice": "Bring two explanations, missing information, a supported intervention rationale, and a progress measure to supervision.",
+      "boundary": "Clinical assessment and treatment require the supervisor’s authorization and adequate training. Consult before interpreting specialized instruments or starting protocols.",
+      "sequence": "Foundations → interviewing → functional reasoning → supervised assessment/treatment → review"
+    },
+    {
+      "id": "licensed",
+      "name": "Licensed clinicians",
+      "goal": "Integrate evidence, formulation, patient goals, and implementation.",
+      "practice": "Audit one treatment decision for guideline fit, access, consent, response, adverse effects, and referral thresholds.",
+      "boundary": "Licensure does not confer competence in every method. Seek consultation and training for unfamiliar populations, instruments, or procedures.",
+      "sequence": "Formulation → evidence appraisal → adapted delivery → measurement → consultation"
+    }
+  ],
+  "cases": [
+    {
+      "id": "start",
+      "title": "No start after instructions",
+      "story": "A young person watches the instructor, then pushes a worksheet away and says “no.” The room is loud. No immediate danger is observed.",
+      "ask": "“What part feels hard? You can tell me, point, or show me.”",
+      "coach": "Offer a preferred response mode. Do not assume motive from refusal. Notice direction length, writing demand, sensory load, and what happens next.",
+      "options": [
+        {
+          "label": "Document “defiant and unmotivated.”",
+          "feedback": "That assigns motive. Record observable actions and context; the explanation remains open.",
+          "appropriate": false
+        },
+        {
+          "label": "Offer one demonstrated step and ask what would help.",
+          "feedback": "A useful access trial. Record participation and support needed, then consider language, skill, worry, and overload without diagnosing from the result.",
+          "appropriate": true
+        },
+        {
+          "label": "Remove all demands indefinitely.",
+          "feedback": "A pause may help; a permanent change needs collaborative review. Preserve access while assessing learning needs and goals.",
+          "appropriate": false
+        }
+      ],
+      "note": "Observed: after three spoken instructions in a loud room, the student pushed the worksheet away and said “no.” Offered one demonstrated step and a quieter seat. Student attempted the first item with a model. Shared observations with the assigned clinician; cause remains uncertain.",
+      "supervision": "What skill, access, and health information would distinguish competing explanations? Which supports are appropriate now?"
+    },
+    {
+      "id": "risk",
+      "title": "“I cannot do this anymore”",
+      "story": "An adult says, “I cannot do this anymore.” Their meaning is unclear. You are a support worker, and the clinician is elsewhere in the building.",
+      "ask": "“When you say that, are you thinking about suicide or hurting yourself?”",
+      "coach": "Ask plainly using your organization’s trained response procedure. Notify the designated clinician promptly. If immediate danger or urgent medical need is present, activate the emergency pathway; do not wait for a routine appointment.",
+      "options": [
+        {
+          "label": "Promise secrecy so they keep talking.",
+          "feedback": "Do not promise secrecy. Explain relevant safety limits and connect to the designated response team.",
+          "appropriate": false
+        },
+        {
+          "label": "Clarify directly and promptly involve the designated clinician.",
+          "feedback": "Appropriate role-based recognition and handoff. A “no” answer does not settle safety. Follow local procedure and convey exact words, observations, and the response.",
+          "appropriate": true
+        },
+        {
+          "label": "Calculate a risk level independently and send them home.",
+          "feedback": "A support worker should not independently assign clinical risk or disposition. Structured screening requires approved training and cannot replace clinical assessment.",
+          "appropriate": false
+        }
+      ],
+      "note": "Client stated, “I cannot do this anymore.” Clarified meaning using the trained safety procedure and promptly notified the designated clinician. Document the actual reply, who received the handoff, time, instructions, and actions taken; do not invent responses or findings.",
+      "supervision": "Who receives a safety handoff, who confirms receipt, and what happens if that person is unavailable?"
+    },
+    {
+      "id": "family",
+      "title": "Caregiver and client disagree",
+      "story": "A caregiver asks you to “make him cooperate.” The young person looks away and says they do not want to discuss the conflict in front of the caregiver.",
+      "ask": "“What would help you take part? We can talk about how to make this conversation feel safer.”",
+      "coach": "Clarify confidentiality, consent/assent, and caregiver roles within policy. Do not take sides or promise private conversations that cannot be offered. Check for safety concerns and consult when needed.",
+      "options": [
+        {
+          "label": "Agree with the caregiver that compliance is the goal.",
+          "feedback": "That can bypass the young person’s goals and access needs. Clarify the shared concern and seek an appropriate collaborative plan.",
+          "appropriate": false
+        },
+        {
+          "label": "Acknowledge both concerns, offer feasible choices, and consult about participation.",
+          "feedback": "Preserves engagement and scope. A choice must be real; legal consent, privacy, and safety duties still apply.",
+          "appropriate": true
+        },
+        {
+          "label": "Conclude the caregiver caused trauma.",
+          "feedback": "The observed disagreement cannot establish trauma or causation. Gather context, consult, and follow reporting duties when facts require it.",
+          "appropriate": false
+        }
+      ],
+      "note": "Caregiver requested help with cooperation. Young person looked away and requested a different setting for discussion. Acknowledged both perspectives; reviewed available participation options with the assigned clinician. Record the agreed plan and permissions, without inferring diagnosis or family motive.",
+      "supervision": "How do we preserve voice, required caregiver involvement, privacy limits, and safety in this setting?"
+    }
+  ]
+}
