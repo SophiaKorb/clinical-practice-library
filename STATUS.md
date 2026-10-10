@@ -1,6 +1,18 @@
 # Library status
 
-Updated September 30, 2026.
+## October 10, 2026: Colorful 2.0 project QA
+
+The current preview branch is `cpl-2-colorful-helpful`. The legacy `main` branch remains separate.
+
+**Technical QA:** Site checks, links, navigation, JavaScript, representative interactive pages, DSM course integrity, and structural PDF/form checks passed on October 10. Rendered Chromium checks passed for 20 high-priority routes at 320/390/768/1280 px. A real 320 px horizontal overflow in the flagship six-level visual scale was discovered and fixed.
+
+**Not yet signed off:** Qualified clinical review of higher-stakes materials, native-language Spanish review, full-page/worksheet visual usability, screen-reader and PDF accessibility, and ongoing jurisdiction/source currency.
+
+Full findings and review gates: [October 10 Colorful project QA](docs/qa/2026-10-10-colorful-project-sweep.md).
+
+---
+
+## Historical September 30 status snapshot
 
 ## Live catalog
 
