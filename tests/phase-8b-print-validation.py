@@ -1,5 +1,5 @@
 from pathlib import Path
-import fitz
+import pymupdf as fitz
 out=Path('/tmp/cpl-phase-8b-rendered')
 expected={
  'safety-print.pdf':['After a self-harm','Physical and immediate safety'],
@@ -15,7 +15,7 @@ for filename,phrases in expected.items():
  p=out/filename
  doc=fitz.open(p)
  assert doc.page_count>0,filename
- full=' '.join(page.get_text('text') for page in doc)
+ full=' '.join(' '.join(page.get_text('text') for page in doc).split())
  for phrase in phrases:
   assert phrase.lower() in full.lower(),f'{filename} missing extractable clinical label {phrase!r}'
  assert len(full)>300,(filename,len(full))
