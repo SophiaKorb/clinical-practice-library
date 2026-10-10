@@ -488,6 +488,88 @@ depth_routes = [
   },
   "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval"
 }
+,
+{
+  "url": "/resources/clinical-depth/psychosis-bipolar-longitudinal-care.html",
+  "title": "Psychosis and bipolar: episode differential, coordinated care and recovery",
+  "priority": 90,
+  "format": "HTML",
+  "tags": {
+    "diagnosis": [
+      "Psychosis / bipolar",
+      "Substance use",
+      "Trauma / dissociation"
+    ],
+    "symptom": [
+      "Sleep difficulty",
+      "Memory / attention"
+    ],
+    "function": [
+      "Safety / stabilization",
+      "Daily living / self-care"
+    ],
+    "intervention": [
+      "CBT / behavioral activation"
+    ],
+    "stage": [
+      "Adult"
+    ],
+    "role": [
+      "Clinician",
+      "Graduate trainee"
+    ],
+    "task": [
+      "Formulation",
+      "Assessment planning",
+      "Treatment planning",
+      "Referral / coordination",
+      "Progress review"
+    ],
+    "step": [
+      "What am I seeing?",
+      "Understanding",
+      "What should I do?",
+      "What to watch next?"
+    ]
+  },
+  "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval"
+},
+{
+  "url": "/resources/clinical-depth/episode-context-function-map.html",
+  "title": "Psychosis and bipolar: episode context and function timeline",
+  "priority": 86,
+  "format": "HTML",
+  "tags": {
+    "diagnosis": [
+      "Psychosis / bipolar"
+    ],
+    "symptom": [
+      "Sleep difficulty"
+    ],
+    "function": [
+      "Safety / stabilization",
+      "Daily living / self-care"
+    ],
+    "intervention": [],
+    "stage": [
+      "Adult"
+    ],
+    "role": [
+      "Clinician",
+      "Graduate trainee",
+      "Client / caregiver"
+    ],
+    "task": [
+      "Formulation",
+      "Progress review"
+    ],
+    "step": [
+      "What tool?",
+      "What to watch next?"
+    ]
+  },
+  "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval"
+}
 ]
 by_url = {r['url']: r for r in records}
 for route in depth_routes:
