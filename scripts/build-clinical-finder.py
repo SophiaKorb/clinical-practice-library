@@ -53,6 +53,280 @@ for r in inv['resources']:
   tags['step']=['What am I seeing?','Understanding','What should I do?'] if kind=='formulation' else ['What to watch next?'] if kind=='progress-review' else ['What tool?','What should I do?']
  score=100-priority.index(path) if path in priority else 65 if '/school/clinical/' in path else 60 if path.startswith('guides/') else 30 if 'start-here' in path else 20
  records.append({'url':'/'+path,'title':title,'format':Path(path).suffix[1:].upper(),'tags':tags,'priority':score,'metadataBasis':'Curated audience, task and pathway; topic tags from title/path' if path in curated else 'title/path discovery tags'})
+# PHASE_8B_CURATED: these routes remain indexed even before inventory regeneration.
+# Source metadata is curated for navigation, not indication/effectiveness validation.
+depth_routes = [
+  {
+    "url": "/resources/clinical-depth/index.html",
+    "title": "Clinical depth: start with the decision",
+    "priority": 92,
+    "format": "HTML",
+    "tags": {
+      "diagnosis": [],
+      "symptom": [],
+      "function": [],
+      "intervention": [],
+      "stage": [
+        "Across ages / adapt to person"
+      ],
+      "role": [
+        "Clinician",
+        "Graduate trainee",
+        "Staff / case manager"
+      ],
+      "task": [
+        "Formulation",
+        "Assessment planning",
+        "Treatment planning"
+      ],
+      "step": [
+        "What am I seeing?",
+        "Understanding",
+        "What should I do?",
+        "What tool?",
+        "What to watch next?"
+      ]
+    },
+    "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval"
+  },
+  {
+    "url": "/resources/clinical-depth/self-harm-safety-continuity.html",
+    "title": "Self-harm: assessment, safety and continuity of care",
+    "priority": 91,
+    "format": "HTML",
+    "tags": {
+      "diagnosis": [
+        "Trauma / dissociation"
+      ],
+      "symptom": [
+        "Overload / distress"
+      ],
+      "function": [
+        "Safety / stabilization",
+        "Relationships / family"
+      ],
+      "intervention": [],
+      "stage": [
+        "Across ages / adapt to person"
+      ],
+      "role": [
+        "Clinician",
+        "Graduate trainee",
+        "Staff / case manager"
+      ],
+      "task": [
+        "Assessment planning",
+        "Referral / coordination",
+        "Treatment planning",
+        "Progress review"
+      ],
+      "step": [
+        "What am I seeing?",
+        "Understanding",
+        "What should I do?",
+        "What to watch next?"
+      ]
+    },
+    "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval"
+  },
+  {
+    "url": "/resources/clinical-depth/complex-dissociation-functional-care.html",
+    "title": "DID and complex dissociation: differential and functional care",
+    "priority": 90,
+    "format": "HTML",
+    "tags": {
+      "diagnosis": [
+        "Trauma / dissociation"
+      ],
+      "symptom": [
+        "Memory / attention",
+        "Overload / distress"
+      ],
+      "function": [
+        "Daily living / self-care",
+        "Safety / stabilization"
+      ],
+      "intervention": [],
+      "stage": [
+        "Adult"
+      ],
+      "role": [
+        "Clinician",
+        "Graduate trainee"
+      ],
+      "task": [
+        "Assessment planning",
+        "Formulation",
+        "Treatment planning",
+        "Progress review"
+      ],
+      "step": [
+        "What am I seeing?",
+        "Understanding",
+        "What should I do?",
+        "What to watch next?"
+      ]
+    },
+    "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval"
+  },
+  {
+    "url": "/resources/clinical-depth/dissociation-function-observation.html",
+    "title": "Dissociation: functional memory observation worksheet",
+    "priority": 87,
+    "format": "HTML",
+    "tags": {
+      "diagnosis": [
+        "Trauma / dissociation"
+      ],
+      "symptom": [
+        "Memory / attention"
+      ],
+      "function": [
+        "Daily living / self-care",
+        "Communication / participation"
+      ],
+      "intervention": [],
+      "stage": [
+        "Adult"
+      ],
+      "role": [
+        "Clinician",
+        "Graduate trainee",
+        "Client / caregiver"
+      ],
+      "task": [
+        "Assessment planning",
+        "Progress review"
+      ],
+      "step": [
+        "What tool?",
+        "What to watch next?"
+      ]
+    },
+    "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval"
+  },
+  {
+    "url": "/resources/clinical-depth/complex-personality-longitudinal-care.html",
+    "title": "Complex personality: longitudinal treatment and rupture repair",
+    "priority": 89,
+    "format": "HTML",
+    "tags": {
+      "diagnosis": [
+        "Trauma / dissociation"
+      ],
+      "symptom": [
+        "Conflict / aggression",
+        "Overload / distress"
+      ],
+      "function": [
+        "Relationships / family",
+        "Safety / stabilization"
+      ],
+      "intervention": [],
+      "stage": [
+        "Adult"
+      ],
+      "role": [
+        "Clinician",
+        "Graduate trainee"
+      ],
+      "task": [
+        "Formulation",
+        "Treatment planning",
+        "Progress review"
+      ],
+      "step": [
+        "Understanding",
+        "What should I do?",
+        "What to watch next?"
+      ]
+    },
+    "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval"
+  },
+  {
+    "url": "/resources/clinical-depth/neuropsych-evaluation-access-validity.html",
+    "title": "Neuropsychological assessment: access and score validity",
+    "priority": 90,
+    "format": "HTML",
+    "tags": {
+      "diagnosis": [
+        "Autism",
+        "ADHD",
+        "Learning disorders"
+      ],
+      "symptom": [
+        "Communication difficulty",
+        "Memory / attention"
+      ],
+      "function": [
+        "Communication / participation",
+        "Learning / school access"
+      ],
+      "intervention": [
+        "Access / accommodations"
+      ],
+      "stage": [
+        "Across ages / adapt to person"
+      ],
+      "role": [
+        "Clinician",
+        "Graduate trainee"
+      ],
+      "task": [
+        "Assessment planning",
+        "Formulation"
+      ],
+      "step": [
+        "What am I seeing?",
+        "Understanding",
+        "What should I do?"
+      ]
+    },
+    "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval"
+  },
+  {
+    "url": "/resources/clinical-depth/assessment-decision-report-planner.html",
+    "title": "Psychological evaluation: report and feedback planner",
+    "priority": 86,
+    "format": "HTML",
+    "tags": {
+      "diagnosis": [
+        "Autism",
+        "ADHD",
+        "Learning disorders"
+      ],
+      "symptom": [
+        "Communication difficulty"
+      ],
+      "function": [
+        "Communication / participation"
+      ],
+      "intervention": [
+        "Access / accommodations"
+      ],
+      "stage": [
+        "Across ages / adapt to person"
+      ],
+      "role": [
+        "Clinician",
+        "Graduate trainee"
+      ],
+      "task": [
+        "Assessment planning",
+        "Progress review"
+      ],
+      "step": [
+        "What tool?",
+        "What to watch next?"
+      ]
+    },
+    "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval"
+  }
+]
+by_url = {r['url']: r for r in records}
+for route in depth_routes:
+    by_url[route['url']] = route
+records = list(by_url.values())
 records.sort(key=lambda r:(-r['priority'],r.get('title',Path(path).stem.replace('-',' ').title()).lower()))
 model={'note':'Discovery tags describe title/path coverage, not validated indications, age suitability, evidence quality, or authorization to practice. Untagged materials remain searchable. Current Colorful resources only; retained originals are in the complete inventory.','facets':{k:list(v) for k,v in facets.items()},'resources':records}
 (ROOT/'data/clinical-finder.json').write_text(json.dumps(model,ensure_ascii=False,indent=2)+'\n')

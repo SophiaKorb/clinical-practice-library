@@ -342,6 +342,272 @@
       "metadataBasis": "title/path discovery tags"
     },
     {
+      "url": "/resources/clinical-depth/index.html",
+      "title": "Clinical depth: start with the decision",
+      "priority": 92,
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [],
+        "function": [],
+        "intervention": [],
+        "stage": [
+          "Across ages / adapt to person"
+        ],
+        "role": [
+          "Clinician",
+          "Graduate trainee",
+          "Staff / case manager"
+        ],
+        "task": [
+          "Formulation",
+          "Assessment planning",
+          "Treatment planning"
+        ],
+        "step": [
+          "What am I seeing?",
+          "Understanding",
+          "What should I do?",
+          "What tool?",
+          "What to watch next?"
+        ]
+      },
+      "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval"
+    },
+    {
+      "url": "/resources/clinical-depth/self-harm-safety-continuity.html",
+      "title": "Self-harm: assessment, safety and continuity of care",
+      "priority": 91,
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Trauma / dissociation"
+        ],
+        "symptom": [
+          "Overload / distress"
+        ],
+        "function": [
+          "Safety / stabilization",
+          "Relationships / family"
+        ],
+        "intervention": [],
+        "stage": [
+          "Across ages / adapt to person"
+        ],
+        "role": [
+          "Clinician",
+          "Graduate trainee",
+          "Staff / case manager"
+        ],
+        "task": [
+          "Assessment planning",
+          "Referral / coordination",
+          "Treatment planning",
+          "Progress review"
+        ],
+        "step": [
+          "What am I seeing?",
+          "Understanding",
+          "What should I do?",
+          "What to watch next?"
+        ]
+      },
+      "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval"
+    },
+    {
+      "url": "/resources/clinical-depth/complex-dissociation-functional-care.html",
+      "title": "DID and complex dissociation: differential and functional care",
+      "priority": 90,
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Trauma / dissociation"
+        ],
+        "symptom": [
+          "Memory / attention",
+          "Overload / distress"
+        ],
+        "function": [
+          "Daily living / self-care",
+          "Safety / stabilization"
+        ],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Clinician",
+          "Graduate trainee"
+        ],
+        "task": [
+          "Assessment planning",
+          "Formulation",
+          "Treatment planning",
+          "Progress review"
+        ],
+        "step": [
+          "What am I seeing?",
+          "Understanding",
+          "What should I do?",
+          "What to watch next?"
+        ]
+      },
+      "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval"
+    },
+    {
+      "url": "/resources/clinical-depth/neuropsych-evaluation-access-validity.html",
+      "title": "Neuropsychological assessment: access and score validity",
+      "priority": 90,
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Autism",
+          "ADHD",
+          "Learning disorders"
+        ],
+        "symptom": [
+          "Communication difficulty",
+          "Memory / attention"
+        ],
+        "function": [
+          "Communication / participation",
+          "Learning / school access"
+        ],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Across ages / adapt to person"
+        ],
+        "role": [
+          "Clinician",
+          "Graduate trainee"
+        ],
+        "task": [
+          "Assessment planning",
+          "Formulation"
+        ],
+        "step": [
+          "What am I seeing?",
+          "Understanding",
+          "What should I do?"
+        ]
+      },
+      "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval"
+    },
+    {
+      "url": "/resources/clinical-depth/complex-personality-longitudinal-care.html",
+      "title": "Complex personality: longitudinal treatment and rupture repair",
+      "priority": 89,
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Trauma / dissociation"
+        ],
+        "symptom": [
+          "Conflict / aggression",
+          "Overload / distress"
+        ],
+        "function": [
+          "Relationships / family",
+          "Safety / stabilization"
+        ],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Clinician",
+          "Graduate trainee"
+        ],
+        "task": [
+          "Formulation",
+          "Treatment planning",
+          "Progress review"
+        ],
+        "step": [
+          "Understanding",
+          "What should I do?",
+          "What to watch next?"
+        ]
+      },
+      "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval"
+    },
+    {
+      "url": "/resources/clinical-depth/dissociation-function-observation.html",
+      "title": "Dissociation: functional memory observation worksheet",
+      "priority": 87,
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Trauma / dissociation"
+        ],
+        "symptom": [
+          "Memory / attention"
+        ],
+        "function": [
+          "Daily living / self-care",
+          "Communication / participation"
+        ],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Clinician",
+          "Graduate trainee",
+          "Client / caregiver"
+        ],
+        "task": [
+          "Assessment planning",
+          "Progress review"
+        ],
+        "step": [
+          "What tool?",
+          "What to watch next?"
+        ]
+      },
+      "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval"
+    },
+    {
+      "url": "/resources/clinical-depth/assessment-decision-report-planner.html",
+      "title": "Psychological evaluation: report and feedback planner",
+      "priority": 86,
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Autism",
+          "ADHD",
+          "Learning disorders"
+        ],
+        "symptom": [
+          "Communication difficulty"
+        ],
+        "function": [
+          "Communication / participation"
+        ],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Across ages / adapt to person"
+        ],
+        "role": [
+          "Clinician",
+          "Graduate trainee"
+        ],
+        "task": [
+          "Assessment planning",
+          "Progress review"
+        ],
+        "step": [
+          "What tool?",
+          "What to watch next?"
+        ]
+      },
+      "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval"
+    },
+    {
       "url": "/resources/school/clinical/adhd.html",
       "title": "ADHD – Barrier to Support – Clinical",
       "format": "HTML",
@@ -2431,6 +2697,29 @@
       "metadataBasis": "title/path discovery tags"
     },
     {
+      "url": "/resources/es/school/plain/ansiedad.html",
+      "title": "Ansiedad – Barreras y Apoyos – Lenguaje Claro",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [],
+        "function": [
+          "Learning / school access"
+        ],
+        "intervention": [],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "School team"
+        ],
+        "task": [],
+        "step": []
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
       "url": "/resources/es/school/homeschool/ansiedad.html",
       "title": "Ansiedad – Barreras y apoyos para educación en casa",
       "format": "HTML",
@@ -2446,29 +2735,6 @@
         ],
         "role": [
           "Client / caregiver",
-          "School team"
-        ],
-        "task": [],
-        "step": []
-      },
-      "priority": 20,
-      "metadataBasis": "title/path discovery tags"
-    },
-    {
-      "url": "/resources/es/school/plain/ansiedad.html",
-      "title": "Ansiedad – Barreras y Apoyos – Lenguaje Claro",
-      "format": "HTML",
-      "tags": {
-        "diagnosis": [],
-        "symptom": [],
-        "function": [
-          "Learning / school access"
-        ],
-        "intervention": [],
-        "stage": [
-          "School age / adolescence"
-        ],
-        "role": [
           "School team"
         ],
         "task": [],
@@ -2714,6 +2980,31 @@
       "metadataBasis": "title/path discovery tags"
     },
     {
+      "url": "/resources/es/school/plain/autismo.html",
+      "title": "Autismo – Barreras y Apoyos – Lenguaje Claro",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Autism"
+        ],
+        "symptom": [],
+        "function": [
+          "Learning / school access"
+        ],
+        "intervention": [],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "School team"
+        ],
+        "task": [],
+        "step": []
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
       "url": "/resources/es/school/homeschool/autismo.html",
       "title": "Autismo – Barreras y apoyos para educación en casa",
       "format": "HTML",
@@ -2731,31 +3022,6 @@
         ],
         "role": [
           "Client / caregiver",
-          "School team"
-        ],
-        "task": [],
-        "step": []
-      },
-      "priority": 20,
-      "metadataBasis": "title/path discovery tags"
-    },
-    {
-      "url": "/resources/es/school/plain/autismo.html",
-      "title": "Autismo – Barreras y Apoyos – Lenguaje Claro",
-      "format": "HTML",
-      "tags": {
-        "diagnosis": [
-          "Autism"
-        ],
-        "symptom": [],
-        "function": [
-          "Learning / school access"
-        ],
-        "intervention": [],
-        "stage": [
-          "School age / adolescence"
-        ],
-        "role": [
           "School team"
         ],
         "task": [],
@@ -4619,6 +4885,67 @@
       "metadataBasis": "title/path discovery tags"
     },
     {
+      "url": "/resources/therapy/early-childhood-regulation-communication.html",
+      "title": "Clinical – Early Childhood Regulation & Communication",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Overload / distress",
+          "Communication difficulty"
+        ],
+        "function": [
+          "Communication / participation"
+        ],
+        "intervention": [],
+        "stage": [
+          "Early childhood",
+          "School age / adolescence"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Treatment planning"
+        ],
+        "step": []
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/therapy/sibling-conflict-safety-power-repair.html",
+      "title": "Clinical – Sibling Conflict – Safety, Power & Repair",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Persistent conflict"
+        ],
+        "symptom": [
+          "Conflict / aggression"
+        ],
+        "function": [
+          "Relationships / family",
+          "Safety / stabilization"
+        ],
+        "intervention": [
+          "Family / parenting"
+        ],
+        "stage": [],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Treatment planning"
+        ],
+        "step": []
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
       "url": "/resources/therapy/clinical-intern-learning-hub.html",
       "title": "Clinical Intern Learning Hub",
       "format": "HTML",
@@ -4688,62 +5015,52 @@
       "metadataBasis": "title/path discovery tags"
     },
     {
-      "url": "/resources/therapy/early-childhood-regulation-communication.html",
-      "title": "Clinical – Early Childhood Regulation & Communication",
+      "url": "/resources/es/school/homeschool/derivacion.html",
+      "title": "Cómo buscar ayuda profesional al educar en casa – Guía de derivación",
       "format": "HTML",
       "tags": {
         "diagnosis": [],
-        "symptom": [
-          "Overload / distress",
-          "Communication difficulty"
-        ],
+        "symptom": [],
         "function": [
-          "Communication / participation"
+          "Learning / school access"
         ],
         "intervention": [],
         "stage": [
-          "Early childhood",
           "School age / adolescence"
         ],
         "role": [
-          "Graduate trainee",
-          "Clinician"
+          "Client / caregiver",
+          "School team"
         ],
-        "task": [
-          "Treatment planning"
-        ],
+        "task": [],
         "step": []
       },
       "priority": 20,
       "metadataBasis": "title/path discovery tags"
     },
     {
-      "url": "/resources/therapy/sibling-conflict-safety-power-repair.html",
-      "title": "Clinical – Sibling Conflict – Safety, Power & Repair",
+      "url": "/resources/es/arizona-como-conseguir-iep-504.html",
+      "title": "Cómo conseguir un IEP o un plan 504 – Arizona",
       "format": "HTML",
       "tags": {
-        "diagnosis": [
-          "Persistent conflict"
-        ],
-        "symptom": [
-          "Conflict / aggression"
-        ],
+        "diagnosis": [],
+        "symptom": [],
         "function": [
-          "Relationships / family",
-          "Safety / stabilization"
+          "Learning / school access"
         ],
         "intervention": [
-          "Family / parenting"
+          "Access / accommodations"
         ],
-        "stage": [],
+        "stage": [
+          "School age / adolescence"
+        ],
         "role": [
-          "Graduate trainee",
-          "Clinician"
+          "School team"
         ],
-        "task": [
-          "Treatment planning"
-        ],
-        "step": []
+        "task": [],
+        "step": [
+          "What tool?"
+        ]
       },
       "priority": 20,
       "metadataBasis": "title/path discovery tags"
@@ -5140,50 +5457,28 @@
       "metadataBasis": "title/path discovery tags"
     },
     {
-      "url": "/resources/es/school/homeschool/derivacion.html",
-      "title": "Cómo buscar ayuda profesional al educar en casa – Guía de derivación",
+      "url": "/resources/therapy/dbt-informed-emotion-regulation-practical-toolkit.html",
+      "title": "DBT-Informed & Emotion Regulation",
       "format": "HTML",
       "tags": {
         "diagnosis": [],
-        "symptom": [],
-        "function": [
-          "Learning / school access"
+        "symptom": [
+          "Overload / distress"
         ],
-        "intervention": [],
-        "stage": [
-          "School age / adolescence"
-        ],
-        "role": [
-          "Client / caregiver",
-          "School team"
-        ],
-        "task": [],
-        "step": []
-      },
-      "priority": 20,
-      "metadataBasis": "title/path discovery tags"
-    },
-    {
-      "url": "/resources/es/arizona-como-conseguir-iep-504.html",
-      "title": "Cómo conseguir un IEP o un plan 504 – Arizona",
-      "format": "HTML",
-      "tags": {
-        "diagnosis": [],
-        "symptom": [],
-        "function": [
-          "Learning / school access"
-        ],
+        "function": [],
         "intervention": [
-          "Access / accommodations"
+          "DBT / emotion regulation"
         ],
-        "stage": [
-          "School age / adolescence"
-        ],
+        "stage": [],
         "role": [
-          "School team"
+          "Graduate trainee",
+          "Clinician"
         ],
-        "task": [],
+        "task": [
+          "Treatment planning"
+        ],
         "step": [
+          "What should I do?",
           "What tool?"
         ]
       },
@@ -5319,35 +5614,6 @@
       "metadataBasis": "title/path discovery tags"
     },
     {
-      "url": "/resources/therapy/dbt-informed-emotion-regulation-practical-toolkit.html",
-      "title": "DBT-Informed & Emotion Regulation",
-      "format": "HTML",
-      "tags": {
-        "diagnosis": [],
-        "symptom": [
-          "Overload / distress"
-        ],
-        "function": [],
-        "intervention": [
-          "DBT / emotion regulation"
-        ],
-        "stage": [],
-        "role": [
-          "Graduate trainee",
-          "Clinician"
-        ],
-        "task": [
-          "Treatment planning"
-        ],
-        "step": [
-          "What should I do?",
-          "What tool?"
-        ]
-      },
-      "priority": 20,
-      "metadataBasis": "title/path discovery tags"
-    },
-    {
       "url": "/resources/es/school/barrera-escolar-a-apoyo.html",
       "title": "De una barrera escolar a un apoyo – Guía de planificación",
       "format": "HTML",
@@ -5373,6 +5639,29 @@
       "metadataBasis": "title/path discovery tags"
     },
     {
+      "url": "/resources/es/school/plain/depresion.html",
+      "title": "Depresión – Barreras y Apoyos – Lenguaje Claro",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [],
+        "function": [
+          "Learning / school access"
+        ],
+        "intervention": [],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "School team"
+        ],
+        "task": [],
+        "step": []
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
       "url": "/resources/es/school/homeschool/depresion.html",
       "title": "Depresión – Barreras y apoyos para educación en casa",
       "format": "HTML",
@@ -5388,29 +5677,6 @@
         ],
         "role": [
           "Client / caregiver",
-          "School team"
-        ],
-        "task": [],
-        "step": []
-      },
-      "priority": 20,
-      "metadataBasis": "title/path discovery tags"
-    },
-    {
-      "url": "/resources/es/school/plain/depresion.html",
-      "title": "Depresión – Barreras y Apoyos – Lenguaje Claro",
-      "format": "HTML",
-      "tags": {
-        "diagnosis": [],
-        "symptom": [],
-        "function": [
-          "Learning / school access"
-        ],
-        "intervention": [],
-        "stage": [
-          "School age / adolescence"
-        ],
-        "role": [
           "School team"
         ],
         "task": [],
@@ -5762,6 +6028,29 @@
       "metadataBasis": "title/path discovery tags"
     },
     {
+      "url": "/resources/es/school/plain/discalculia.html",
+      "title": "Discalculia – Barreras y Apoyos – Lenguaje Claro",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [],
+        "function": [
+          "Learning / school access"
+        ],
+        "intervention": [],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "School team"
+        ],
+        "task": [],
+        "step": []
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
       "url": "/resources/es/school/homeschool/discalculia.html",
       "title": "Discalculia – Barreras y apoyos para educación en casa",
       "format": "HTML",
@@ -5786,29 +6075,6 @@
       "metadataBasis": "title/path discovery tags"
     },
     {
-      "url": "/resources/es/school/plain/discalculia.html",
-      "title": "Discalculia – Barreras y Apoyos – Lenguaje Claro",
-      "format": "HTML",
-      "tags": {
-        "diagnosis": [],
-        "symptom": [],
-        "function": [
-          "Learning / school access"
-        ],
-        "intervention": [],
-        "stage": [
-          "School age / adolescence"
-        ],
-        "role": [
-          "School team"
-        ],
-        "task": [],
-        "step": []
-      },
-      "priority": 20,
-      "metadataBasis": "title/path discovery tags"
-    },
-    {
       "url": "/resources/es/california-discapacidad-autismo-salud-conductual.html",
       "title": "Discapacidad del desarrollo, autismo y salud conductual – California",
       "format": "HTML",
@@ -5821,30 +6087,6 @@
         "intervention": [],
         "stage": [],
         "role": [],
-        "task": [],
-        "step": []
-      },
-      "priority": 20,
-      "metadataBasis": "title/path discovery tags"
-    },
-    {
-      "url": "/resources/es/school/homeschool/disgrafia.html",
-      "title": "Disgrafía – Barreras y apoyos para educación en casa",
-      "format": "HTML",
-      "tags": {
-        "diagnosis": [],
-        "symptom": [],
-        "function": [
-          "Learning / school access"
-        ],
-        "intervention": [],
-        "stage": [
-          "School age / adolescence"
-        ],
-        "role": [
-          "Client / caregiver",
-          "School team"
-        ],
         "task": [],
         "step": []
       },
@@ -5875,8 +6117,8 @@
       "metadataBasis": "title/path discovery tags"
     },
     {
-      "url": "/resources/es/school/homeschool/dislexia.html",
-      "title": "Dislexia – Barreras y apoyos para educación en casa",
+      "url": "/resources/es/school/homeschool/disgrafia.html",
+      "title": "Disgrafía – Barreras y apoyos para educación en casa",
       "format": "HTML",
       "tags": {
         "diagnosis": [],
@@ -5913,6 +6155,30 @@
           "School age / adolescence"
         ],
         "role": [
+          "School team"
+        ],
+        "task": [],
+        "step": []
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/es/school/homeschool/dislexia.html",
+      "title": "Dislexia – Barreras y apoyos para educación en casa",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [],
+        "function": [
+          "Learning / school access"
+        ],
+        "intervention": [],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "Client / caregiver",
           "School team"
         ],
         "task": [],
@@ -11200,6 +11466,29 @@
       "metadataBasis": "title/path discovery tags"
     },
     {
+      "url": "/resources/es/handouts/senales-emocionales.html",
+      "title": "Señales emocionales",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [],
+        "function": [],
+        "intervention": [],
+        "stage": [],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
       "url": "/resources/handouts/sensory-overload-and-recovery-plan.html",
       "title": "Sensory Overload & Recovery Plan",
       "format": "HTML",
@@ -11238,29 +11527,6 @@
         "stage": [],
         "role": [],
         "task": [],
-        "step": [
-          "What tool?"
-        ]
-      },
-      "priority": 20,
-      "metadataBasis": "title/path discovery tags"
-    },
-    {
-      "url": "/resources/es/handouts/senales-emocionales.html",
-      "title": "Señales emocionales",
-      "format": "HTML",
-      "tags": {
-        "diagnosis": [],
-        "symptom": [],
-        "function": [],
-        "intervention": [],
-        "stage": [],
-        "role": [
-          "Client / caregiver"
-        ],
-        "task": [
-          "Client education"
-        ],
         "step": [
           "What tool?"
         ]
@@ -12457,6 +12723,29 @@
       "metadataBasis": "title/path discovery tags"
     },
     {
+      "url": "/resources/es/school/plain/tdah.html",
+      "title": "TDAH – Barreras y Apoyos – Lenguaje Claro",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [],
+        "function": [
+          "Learning / school access"
+        ],
+        "intervention": [],
+        "stage": [
+          "School age / adolescence"
+        ],
+        "role": [
+          "School team"
+        ],
+        "task": [],
+        "step": []
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
       "url": "/resources/es/school/homeschool/tdah.html",
       "title": "TDAH – Barreras y apoyos para educación en casa",
       "format": "HTML",
@@ -12472,29 +12761,6 @@
         ],
         "role": [
           "Client / caregiver",
-          "School team"
-        ],
-        "task": [],
-        "step": []
-      },
-      "priority": 20,
-      "metadataBasis": "title/path discovery tags"
-    },
-    {
-      "url": "/resources/es/school/plain/tdah.html",
-      "title": "TDAH – Barreras y Apoyos – Lenguaje Claro",
-      "format": "HTML",
-      "tags": {
-        "diagnosis": [],
-        "symptom": [],
-        "function": [
-          "Learning / school access"
-        ],
-        "intervention": [],
-        "stage": [
-          "School age / adolescence"
-        ],
-        "role": [
           "School team"
         ],
         "task": [],
