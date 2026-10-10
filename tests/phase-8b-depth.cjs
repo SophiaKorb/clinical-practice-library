@@ -1,6 +1,6 @@
 const fs = require('node:fs'), assert = require('node:assert/strict');
 const root = 'resources/clinical-depth/';
-const names = ['index.html','self-harm-safety-continuity.html','complex-dissociation-functional-care.html','dissociation-function-observation.html','complex-personality-longitudinal-care.html','neuropsych-evaluation-access-validity.html','assessment-decision-report-planner.html'];
+const names = ['index.html','self-harm-safety-continuity.html','complex-dissociation-functional-care.html','dissociation-function-observation.html','complex-personality-longitudinal-care.html','neuropsych-evaluation-access-validity.html','assessment-decision-report-planner.html','child-caregiver-treatment-selection.html','caregiver-session-support-map.html','substance-use-cooccurring-care.html','substance-use-parallel-care-map.html'];
 for (const name of names) {
  const html=fs.readFileSync(root+name,'utf8');
  assert.match(html,/<main id="content">/,'main present '+name);
@@ -36,6 +36,17 @@ const report=fs.readFileSync(root+'assessment-decision-report-planner.html','utf
 assert.equal((report.match(/<textarea\b/g)||[]).length,8);
 assert.equal((report.match(/<label for="/g)||[]).length,8);
 assert.ok(report.includes('Clear entries'));
+const child=fs.readFileSync(root+'child-caregiver-treatment-selection.html','utf8');
+for(const term of ['PCIT','CPP','caregiver','safeguarding','Rae','Noah','NCTSN']) assert.ok(child.includes(term),'child '+term);
+const care=fs.readFileSync(root+'caregiver-session-support-map.html','utf8');
+assert.match(care,/caregiver-map__phase/g);
+assert.equal((care.match(/<textarea\b/g)||[]).length,6);
+assert.equal((care.match(/<label for="/g)||[]).length,6);
+const sud=fs.readFileSync(root+'substance-use-cooccurring-care.html','utf8');
+for(const term of ['SAMHSA','ASAM','opioid','withdrawal','co-occurring','Devon','Alex']) assert.ok(sud.includes(term),'SUD '+term);
+const sudMap=fs.readFileSync(root+'substance-use-parallel-care-map.html','utf8');
+assert.match(sudMap,/three-tracks/);
+assert.equal((sudMap.match(/<textarea\b/g)||[]).length,5);
 const obs=fs.readFileSync(root+names[3],'utf8');
 for(const domain of ['Personal care','Work/school','Finances','Travel','Conversations']) assert.ok(obs.includes(domain));
 assert.equal((obs.match(/<textarea\b/g)||[]).length,5);
@@ -43,7 +54,7 @@ assert.equal((obs.match(/<label for="/g)||[]).length,5);
 assert.ok(obs.includes('not saved or submitted'));
 const hub=fs.readFileSync(root+names[0],'utf8');
 for(const name of names.slice(1))assert.ok(hub.includes(name),'hub links '+name);
-for(const old of ['index.html','resources/clinical-resource-finder.html','resources/therapy/start-here-therapy-resource-shelves.html','resources/assessment/trauma-ptsd-dissociation-safety.html','resources/therapy/trauma-ptsd-practical-toolkit.html']) {
+for(const old of ['index.html','resources/clinical-resource-finder.html','resources/therapy/start-here-therapy-resource-shelves.html','resources/assessment/trauma-ptsd-dissociation-safety.html','resources/therapy/trauma-ptsd-practical-toolkit.html','resources/therapy/child-adolescent-parenting-family-start-here.html','resources/therapy/child-adolescent-parenting-family-practical-toolkit.html','resources/therapy/motivational-interviewing-substance-use-start-here.html','resources/therapy/motivational-interviewing-substance-use-practical-toolkit.html']) {
  const t=fs.readFileSync(old,'utf8');
  assert.ok(t.includes('clinical-depth/'),'old pathway connected '+old);
 }

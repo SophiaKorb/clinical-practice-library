@@ -322,6 +322,172 @@ depth_routes = [
     },
     "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval"
   }
+,
+{
+  "url": "/resources/clinical-depth/child-caregiver-treatment-selection.html",
+  "title": "Child treatment selection: safety, development, caregiver and dyadic care",
+  "priority": 89,
+  "format": "HTML",
+  "tags": {
+    "diagnosis": [
+      "Autism",
+      "ADHD"
+    ],
+    "symptom": [
+      "Conflict / aggression",
+      "Communication difficulty",
+      "Overload / distress"
+    ],
+    "function": [
+      "Relationships / family",
+      "Communication / participation",
+      "Safety / stabilization"
+    ],
+    "intervention": [
+      "Family / parenting",
+      "Access / accommodations",
+      "Function-linked support"
+    ],
+    "stage": [
+      "Early childhood",
+      "School age / adolescence"
+    ],
+    "role": [
+      "Clinician",
+      "Graduate trainee"
+    ],
+    "task": [
+      "Formulation",
+      "Assessment planning",
+      "Treatment planning"
+    ],
+    "step": [
+      "What am I seeing?",
+      "Understanding",
+      "What should I do?"
+    ]
+  },
+  "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval"
+},
+{
+  "url": "/resources/clinical-depth/caregiver-session-support-map.html",
+  "title": "Before-During-After: caregiver practice and child access map",
+  "priority": 86,
+  "format": "HTML",
+  "tags": {
+    "diagnosis": [],
+    "symptom": [
+      "Conflict / aggression",
+      "Overload / distress"
+    ],
+    "function": [
+      "Relationships / family",
+      "Communication / participation"
+    ],
+    "intervention": [
+      "Family / parenting",
+      "Access / accommodations"
+    ],
+    "stage": [
+      "Early childhood",
+      "School age / adolescence"
+    ],
+    "role": [
+      "Clinician",
+      "Graduate trainee",
+      "Client / caregiver"
+    ],
+    "task": [
+      "Client education",
+      "Progress review"
+    ],
+    "step": [
+      "What tool?",
+      "What to watch next?"
+    ]
+  },
+  "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval"
+},
+{
+  "url": "/resources/clinical-depth/substance-use-cooccurring-care.html",
+  "title": "Substance use and mental health: integrated clinical decision path",
+  "priority": 90,
+  "format": "HTML",
+  "tags": {
+    "diagnosis": [
+      "Substance use",
+      "Psychosis / bipolar",
+      "Trauma / dissociation"
+    ],
+    "symptom": [
+      "Overload / distress"
+    ],
+    "function": [
+      "Safety / stabilization",
+      "Daily living / self-care"
+    ],
+    "intervention": [],
+    "stage": [
+      "Adult"
+    ],
+    "role": [
+      "Clinician",
+      "Graduate trainee"
+    ],
+    "task": [
+      "Formulation",
+      "Assessment planning",
+      "Treatment planning",
+      "Referral / coordination",
+      "Progress review"
+    ],
+    "step": [
+      "What am I seeing?",
+      "Understanding",
+      "What should I do?",
+      "What to watch next?"
+    ]
+  },
+  "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval"
+},
+{
+  "url": "/resources/clinical-depth/substance-use-parallel-care-map.html",
+  "title": "Substance use: physical safety, mental health and life support map",
+  "priority": 86,
+  "format": "HTML",
+  "tags": {
+    "diagnosis": [
+      "Substance use"
+    ],
+    "symptom": [
+      "Overload / distress"
+    ],
+    "function": [
+      "Safety / stabilization",
+      "Daily living / self-care"
+    ],
+    "intervention": [],
+    "stage": [
+      "Adult"
+    ],
+    "role": [
+      "Clinician",
+      "Graduate trainee",
+      "Staff / case manager",
+      "Client / caregiver"
+    ],
+    "task": [
+      "Referral / coordination",
+      "Progress review",
+      "Client education"
+    ],
+    "step": [
+      "What tool?",
+      "What to watch next?"
+    ]
+  },
+  "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval"
+}
 ]
 by_url = {r['url']: r for r in records}
 for route in depth_routes:

@@ -13,6 +13,10 @@ const cases=[
  ['assessment','/resources/clinical-depth/neuropsych-evaluation-access-validity.html'],
  ['report','/resources/clinical-depth/assessment-decision-report-planner.html'],
  ['function','/resources/clinical-depth/dissociation-function-observation.html'],
+ ['child','/resources/clinical-depth/child-caregiver-treatment-selection.html'],
+ ['caregiver','/resources/clinical-depth/caregiver-session-support-map.html'],
+ ['substance','/resources/clinical-depth/substance-use-cooccurring-care.html'],
+ ['substance-map','/resources/clinical-depth/substance-use-parallel-care-map.html'],
  ['homepage','/']
 ];
 (async()=>{
@@ -54,6 +58,19 @@ const cases=[
     await page.getByRole('button',{name:'Clear entries'}).click();
     assert.equal(await page.locator('textarea#decision').inputValue(),'');
    }
+   if(name==='child')assert.ok(await page.locator('#choose tbody tr').count()>=5);
+   if(name==='caregiver'){
+    assert.equal(await page.locator('.caregiver-map__phase').count(),3);
+    await page.locator('textarea#situation').fill('Fictional example');
+    await page.getByRole('button',{name:'Clear local entries'}).click();
+    assert.equal(await page.locator('textarea#situation').inputValue(),'');
+   }
+   if(name==='substance')assert.equal(await page.locator('.three-tracks .diagram-track').count(),3);
+   if(name==='substance-map'){
+    await page.locator('textarea#goal').fill('Fictional only');
+    await page.getByRole('button',{name:'Clear local entries'}).click();
+    assert.equal(await page.locator('textarea#goal').inputValue(),'');
+   }
    if(name==='function'){
     await page.locator('textarea#task').fill('Fictional example only');
     await page.getByRole('button',{name:'Clear all entries'}).click();
@@ -82,5 +99,5 @@ const cases=[
  }
  await browser.close();
  if(issues.length)throw Error(issues.join('\n'));
- console.log('PASS 8 routes at 320/390/768/1280; Chromium screenshots, no document overflow, print PDFs, keyboard disclosure and native More, clear fields');
+ console.log('PASS 12 routes at 320/390/768/1280; Chromium screenshots, no document overflow, print PDFs, keyboard disclosure and native More, clear fields');
 })().catch(e=>{console.error(e);process.exitCode=1});
