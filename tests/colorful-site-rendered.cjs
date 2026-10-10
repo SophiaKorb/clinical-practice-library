@@ -37,7 +37,10 @@ fs.mkdirSync(out,{recursive:true});
     }));
     assert.equal(geometry.navigation,1,'single global navigation '+name+' @ '+width);
     assert.equal(geometry.heading,1,'one h1 '+name+' @ '+width);
-    if(geometry.width>geometry.viewport+3)errors.push(name+' @'+width+' horizontal overflow '+JSON.stringify(geometry));
+    if(geometry.width>geometry.viewport+3){
+     const offenders=await page.evaluate(()=>[...document.querySelectorAll('body *')].filter(e=>e.getBoundingClientRect().right>window.innerWidth+3).slice(0,8).map(e=>({tag:e.tagName,cls:String(e.className).slice(0,70),id:e.id,right:Math.round(e.getBoundingClientRect().right)})));
+     errors.push(name+' @'+width+' horizontal overflow '+JSON.stringify({geometry,offenders}));
+    }
     visited++;
     if((width===390||width===1280)){
      await page.screenshot({path:path.join(out,'cpl-'+name+'-'+width+'.png'),animations:'disabled'});
