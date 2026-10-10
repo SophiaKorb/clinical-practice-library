@@ -129,6 +129,10 @@ def decorate(text: str, path: str) -> str:
         if skip:
             pos += skip.end()
         text = text[:pos] + '\n' + nav_html + '\n' + text[pos:]
+    # Guard independently authored pages against a second shared CSS include.
+    # Never duplicate the stylesheet when a page already included it manually.
+    if text.count(STYLE) > 1:
+        text = text.replace(STYLE, "")
     if STYLE not in text:
         text = re.sub(r'</head\s*>', lambda m: STYLE + m.group(0), text, count=1, flags=re.I)
     return text
