@@ -7,6 +7,7 @@ on:
       - 'resources/clinical-depth/**'
       - 'resources/site-navigation.css'
       - 'tests/phase-8b-rendered.cjs'
+      - 'tests/phase-8b-print-validation.py'
   workflow_dispatch:
 permissions:
   contents: read
