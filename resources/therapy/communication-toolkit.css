@@ -40,7 +40,7 @@ h1{line-height:1.08}h2{line-height:1.2}.tool h3{font-size:1.5rem;line-height:1.2
  .consent-map{grid-template-columns:1fr}.consent-options{grid-template-columns:repeat(2,minmax(0,1fr))}
  .consent-core{aspect-ratio:auto;min-height:70px}
  .thermometer{display:block}.thermo-bar{display:none}
- .thermo-levels{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:5px}
+ .thermo-levels{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:5px}
  .thermo-levels span{border:1px solid #a5b0a8;padding:8px;min-height:50px;font-size:10pt}
  .visual-path .arrow{transform:none}.chip{min-height:64px;font-size:12pt;padding:8px}
  .visual-path .chip{min-height:88px}.pictogram{width:38px;height:38px;font-size:16pt;margin-bottom:5px}
@@ -152,7 +152,7 @@ h1{line-height:1.08}h2{line-height:1.2}.tool h3{font-size:1.5rem;line-height:1.2
  .tool .visual-path .arrow,.tool .memory-scene>.arrow,.tool .bridge-line,.tool .consent-map>.arrow{transform:rotate(90deg);justify-self:center}
  .tool[data-visual="thermometer"] .thermometer{grid-template-columns:44px 1fr;gap:12px}
  .tool[data-visual="thermometer"] .thermo-bar{min-height:220px;display:block}
- .tool[data-visual="thermometer"] .thermo-levels{grid-template-rows:repeat(5,1fr);grid-template-columns:1fr}
+ .tool[data-visual="thermometer"] .thermo-levels{grid-template-rows:repeat(6,1fr);grid-template-columns:1fr}
  .tool[data-visual="thermometer"] .thermo-levels span{font-size:14px}
  .tool[data-visual="body"] .visual-path>.chip{min-height:156px}
  .tool[data-visual="memory"] .memory-scene .prompt{min-height:125px}
@@ -171,6 +171,28 @@ h1{line-height:1.08}h2{line-height:1.2}.tool h3{font-size:1.5rem;line-height:1.2
  .tool[data-visual="consent"] .consent-options{grid-template-columns:repeat(2,minmax(0,1fr))}
  .tool[data-visual="thermometer"] .thermometer{display:grid;grid-template-columns:64px 1fr}
  .tool[data-visual="thermometer"] .thermo-bar{display:block!important;min-height:260px}
- .tool[data-visual="thermometer"] .thermo-levels{display:grid;grid-template-rows:repeat(5,1fr);grid-template-columns:1fr}
+ .tool[data-visual="thermometer"] .thermo-levels{display:grid;grid-template-rows:repeat(6,1fr);grid-template-columns:1fr}
  .tool[data-visual="thermometer"] .thermo-levels span{font-size:12pt;border:0;border-bottom:1px solid #777}
+}
+
+
+/* 0–5: six discrete, equally sized and numbered thermometer levels. */
+.tool[data-visual="thermometer"] .thermo-levels{display:grid;grid-template-rows:repeat(6,minmax(0,1fr));grid-template-columns:1fr;min-width:0}
+.tool[data-visual="thermometer"] .thermo-levels span{display:flex;align-items:center;gap:12px;line-height:1.3;min-height:44px;overflow-wrap:anywhere}
+.tool[data-visual="thermometer"] .thermo-levels b{display:inline-flex;align-items:center;justify-content:center;flex:0 0 38px;height:38px;border:2px solid #65867b;border-radius:10px;font:bold 23px/1 system-ui,sans-serif;color:#264c41;background:#fff}
+.tool[data-visual="thermometer"] .thermo-levels span:nth-child(1) b{border-color:#a34e56}
+.tool[data-visual="thermometer"] .thermo-levels span:nth-child(2) b{border-color:#b77a7d}
+.tool[data-visual="thermometer"] .thermo-levels span:nth-child(3) b{border-color:#bb9878}
+.tool[data-visual="thermometer"] .thermo-levels span:nth-child(4) b{border-color:#b4a06d}
+.tool[data-visual="thermometer"] .thermo-bar{min-height:330px;print-color-adjust:exact;-webkit-print-color-adjust:exact}
+@media screen and (max-width:600px){
+ .tool[data-visual="thermometer"] .thermo-bar{min-height:294px}
+ .tool[data-visual="thermometer"] .thermo-levels span{min-height:46px;gap:8px;font-size:13px}
+ .tool[data-visual="thermometer"] .thermo-levels b{flex-basis:32px;height:32px;font-size:19px;border-radius:8px}
+}
+@media print{
+ .tool[data-visual="thermometer"] .thermo-levels{grid-template-rows:repeat(6,minmax(0,1fr));grid-template-columns:1fr}
+ .tool[data-visual="thermometer"] .thermo-levels span{min-height:42px;font-size:11pt}
+ .tool[data-visual="thermometer"] .thermo-levels b{flex-basis:31px;height:31px;font-size:18px}
+ .tool[data-visual="thermometer"] .thermo-bar{min-height:270px}
 }
