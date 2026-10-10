@@ -1,6 +1,6 @@
 const fs = require('node:fs'), assert = require('node:assert/strict');
 const root = 'resources/clinical-depth/';
-const names = ['index.html','self-harm-safety-continuity.html','complex-dissociation-functional-care.html','dissociation-function-observation.html'];
+const names = ['index.html','self-harm-safety-continuity.html','complex-dissociation-functional-care.html','dissociation-function-observation.html','complex-personality-longitudinal-care.html'];
 for (const name of names) {
  const html=fs.readFileSync(root+name,'utf8');
  assert.match(html,/<main id="content">/,'main present '+name);
@@ -25,6 +25,11 @@ for(const text of ['DID','neurological','non-leading','functional','ISSTD','PTSD
 assert.match(did,/2011/);
 assert.match(did,/not an RCT/);
 assert.ok(did.includes('dissociation-function-observation.html'));
+
+const personality=fs.readFileSync(root+'complex-personality-longitudinal-care.html','utf8');
+for(const term of ['NICE CG78','APA Practice Guideline','GPM','rupture','Engulfment','Abandonment','Leah','supervision']) assert.ok(personality.toLowerCase().includes(term.toLowerCase()));
+assert.match(personality,/cycle-map/);
+assert.match(personality,/Clinical Practice Library/);
 const obs=fs.readFileSync(root+names[3],'utf8');
 for(const domain of ['Personal care','Work/school','Finances','Travel','Conversations']) assert.ok(obs.includes(domain));
 assert.equal((obs.match(/<textarea\b/g)||[]).length,5);

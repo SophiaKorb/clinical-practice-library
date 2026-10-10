@@ -62,3 +62,17 @@ main#content .depth-footer{border-top:1px solid #bbcec0;margin-top:45px;padding:
 @media(max-width:680px){main#content{margin:20px auto;padding:0 14px}main#content .two-col,main#content .two-tracks,main#content .question-cards{grid-template-columns:1fr}main#content .route-list{grid-template-columns:1fr 1fr}main#content .relationship-diagram{padding:13px}main#content .domain-list{grid-template-columns:1fr 1fr}main#content .table-wrap{margin-inline:-4px}main#content .within-page{gap:5px}main#content .within-page a{padding:6px 8px}main#content h1{font-size:clamp(1.9rem,8vw,2.7rem)}}
 @media(max-width:390px){main#content .route-list,main#content .domain-list{grid-template-columns:1fr}main#content .outcome-grid{grid-template-columns:1fr}main#content .outcome-grid .outcome-join{grid-column:1}}
 @media print{.cpl-static-nav,.within-page,.no-print{display:none!important}main#content{width:100%;margin:0;padding:0}main#content .relationship-diagram,main#content .diagram-track,main#content .outcome-grid>div{background:white!important;color:#000!important}main#content .case,main#content .panel,main#content table,main#content .diagram-track{break-inside:avoid}main#content a{color:black}main#content .table-wrap{overflow:visible}main#content table{min-width:0;font-size:9pt}main#content textarea{height:3rem;border:1px solid #777}}
+
+/* Interpersonal cycle: recurrence is spatial, not falsely guaranteed causation. */
+main#content .cycle-map{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;padding:20px 16px 12px;border:2px dashed #608772;border-radius:18px;background:white;margin:20px 0}
+main#content .cycle-node{position:relative;background:#e6f0e8;border-top:5px solid #28664f;padding:14px;min-height:140px;border-radius:7px}
+main#content .cycle-node:nth-child(2){background:#eef0fa;border-color:#6878a3}
+main#content .cycle-node:nth-child(3){background:#f9ede4;border-color:#ad7344}
+main#content .cycle-node:nth-child(4){background:#f4e6ec;border-color:#a2607e}
+main#content .cycle-node:nth-child(5){background:#e9f0f2;border-color:#427e8a}
+main#content .cycle-node:not(:nth-child(5))::after{content:"→";position:absolute;right:-13px;top:40%;font-weight:900;color:#214a39}
+main#content .cycle-node strong,main#content .cycle-node span{display:block}
+main#content .cycle-node span{font-size:.88rem;line-height:1.42;margin-top:8px}
+main#content .cycle-map figcaption{grid-column:1/-1}
+@media(max-width:760px){main#content .cycle-map{grid-template-columns:1fr;gap:14px}main#content .cycle-node{min-height:0}main#content .cycle-node:not(:nth-child(5))::after{content:"↓";right:50%;top:auto;bottom:-18px}}
+@media print{main#content .cycle-map{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}main#content .cycle-node{min-height:0;background:white!important;break-inside:avoid}main#content .cycle-node::after{display:none!important}}

@@ -53,3 +53,10 @@ A preceding CI run on the Colorful branch failed because `resources/training/dsm
 
 ## Status
 Audit established; first clinical deepening batch in progress. The audit is a prioritization instrument rather than evidence that each missing intervention has been approved or delivered.
+
+## Implementation checkpoint, 2026-10-10
+- First cross-linked clinical-decision route: `resources/clinical-depth/index.html` (no additional diagnosis shelf).
+- P0 safety: `resources/clinical-depth/self-harm-safety-continuity.html`; concurrent physical/psychosocial responsibilities, individual formulation, handoff and follow-up.
+- P0 complex dissociation: `resources/clinical-depth/complex-dissociation-functional-care.html` plus practical function map; PTSD subtype, DID and medical/neurological alternatives; no assumed memory recovery.
+- P1 complex personality: `resources/clinical-depth/complex-personality-longitudinal-care.html`; structured modalities, rupture repair, differential and longitudinal outcomes. Links back to existing generalist and relational tools.
+- Browser and qualified review statuses remain distinct and must be confirmed from CI/review logs, not inferred from existence of these pages.

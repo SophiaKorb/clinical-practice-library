@@ -21,7 +21,11 @@
         "Longitudinal review after event/transition, capacity/access, changing context, safety-plan practicality"
       ],
       "firstAction": "Create clinician safety/continuity decision guide and worked case; link to existing safety-planning aids",
-      "review": "qualified suicidology/clinical review; local emergency and consent policy"
+      "review": "qualified suicidology/clinical review; local emergency and consent policy",
+      "deliveredPaths": [
+        "resources/clinical-depth/self-harm-safety-continuity.html"
+      ],
+      "implementationStatus": "materially deepened — qualified review and remaining specialty gaps pending"
     },
     {
       "key": "complex-dissociation",
@@ -39,7 +43,12 @@
         "Longitudinal treatment choice, supervision, stabilization, trauma-work adaptation and function separate from subjective integration"
       ],
       "firstAction": "Build differential and longitudinal clinician pathway plus functional observation tool",
-      "review": "qualified dissociation specialist and source appraisal (ISSTD consensus guideline dated 2011)"
+      "review": "qualified dissociation specialist and source appraisal (ISSTD consensus guideline dated 2011)",
+      "deliveredPaths": [
+        "resources/clinical-depth/complex-dissociation-functional-care.html",
+        "resources/clinical-depth/dissociation-function-observation.html"
+      ],
+      "implementationStatus": "materially deepened — qualified review and remaining specialty gaps pending"
     },
     {
       "key": "personality",
@@ -57,7 +66,11 @@
         "Case formulation for both abandonment and engulfment concerns without stereotyping"
       ],
       "firstAction": "Deepen case selection and longitudinal monitoring, preserve model-specific competency boundaries",
-      "review": "qualified psychotherapy/model reviewers"
+      "review": "qualified psychotherapy/model reviewers",
+      "deliveredPaths": [
+        "resources/clinical-depth/complex-personality-longitudinal-care.html"
+      ],
+      "implementationStatus": "materially deepened — qualified review and remaining specialty gaps pending"
     },
     {
       "key": "autism-adhd-id",
