@@ -1,0 +1,37 @@
+name: Publish shared static CPL navigation
+on:
+  push:
+    branches: [cpl-2-colorful-helpful]
+    paths:
+      - 'scripts/site-navigation.py'
+      - 'resources/site-navigation.css'
+      - 'scripts/build-topic-expansion.py'
+permissions:
+  contents: write
+concurrency:
+  group: cpl-static-navigation-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  synchronize-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: python scripts/build-topic-expansion.py --waves 5
+      - run: python scripts/site-navigation.py --apply
+      - name: Commit synchronized current pages, never legacy
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- '*.html'
+          if git diff --cached --quiet; then
+            echo "Current page navigation already synchronized"
+            exit 0
+          fi
+          git commit -m "Apply shared static top navigation across current CPL pages"
+          git push origin HEAD:cpl-2-colorful-helpful

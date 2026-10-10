@@ -1,0 +1,52 @@
+/* Persistent, non-collapsing top navigation shared by current Colorful CPL pages.
+   It is normal page content, not a fixed overlay or JavaScript-generated menu. */
+.cpl-static-nav {
+  box-sizing:border-box!important;
+  width:100%;max-width:none;margin:0;
+  padding:8px clamp(10px,2.5vw,28px);
+  display:flex;align-items:center;gap:12px;
+  position:relative;z-index:4;
+  background:#eff4ef;color:#213e35;
+  border-bottom:2px solid #8ca99a;
+  font:600 14px/1.3 system-ui,-apple-system,"Segoe UI",sans-serif;
+  text-align:left;
+}
+.cpl-static-nav *, .cpl-static-nav *::before, .cpl-static-nav *::after {box-sizing:border-box}
+.cpl-static-nav__brand {
+  display:inline-flex;flex:0 0 auto;
+  align-items:center;justify-content:center;
+  min-height:44px;min-width:52px;
+  border:2px solid #245e50;border-radius:9px;
+  background:#245e50!important;color:#fff!important;
+  font-size:15px;letter-spacing:.07em;font-weight:850;
+  text-decoration:none!important;
+}
+.cpl-static-nav__links {
+  min-width:0;flex:1 1 auto;
+  display:flex;align-items:center;gap:4px;
+  overflow-x:auto;overflow-y:hidden;
+  scrollbar-width:thin;scrollbar-color:#8ca99a transparent;
+  white-space:nowrap;overscroll-behavior-inline:contain;
+  padding:1px 0 5px;
+}
+.cpl-static-nav__links a {
+  display:inline-flex;flex:0 0 auto;align-items:center;
+  min-height:44px;padding:8px 12px;
+  border:1px solid transparent;border-radius:8px;
+  color:#244c40!important;background:transparent!important;
+  font:inherit;white-space:nowrap;text-decoration:none!important;
+}
+.cpl-static-nav__links a:hover,
+.cpl-static-nav__links a[aria-current="page"] {
+  background:#dbe9de!important;border-color:#aac2b2;
+  color:#173c30!important;
+}
+.cpl-static-nav__brand:focus-visible,.cpl-static-nav__links a:focus-visible{
+  outline:3px solid #ab6d16!important;outline-offset:2px;
+}
+@media(max-width:600px){
+  .cpl-static-nav{gap:7px;padding:6px 8px}
+  .cpl-static-nav__brand{min-width:46px}
+  .cpl-static-nav__links a{padding:8px 10px}
+}
+@media print{.cpl-static-nav{display:none!important}}

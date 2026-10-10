@@ -49,4 +49,7 @@ for t in topics:
 (R/'resources/clinical-topics/index.html').write_text(page('Clinical topic collections',hub))
 (R/'data/topic-expansion-ledger.json').write_text(json.dumps({'target':150,'completedMeaningfulResources':len(ledger),'countPolicy':'Six distinct purposes per topic. Collection pages, PDFs, shared assets and cosmetic changes excluded. Count does not certify clinical quality.','resources':ledger},indent=2)+'\n')
 (R/'data/topic-evidence-registry.json').write_text(json.dumps({'reviewDate':'2026-10-10','qualifiedReview':'pending','sources':{s:dict(zip(['title','url','evidenceType','access'],sources[s])) for s in sorted({s for t in topics for s in t['sources']})},'topicCrosswalk':[{k:t[k] for k in ['slug','title','age','sources','limits']} for t in topics]},indent=2)+'\n')
+# Keep generator output byte-for-byte consistent with the published static top navigation.
+site_nav = runpy.run_path(str(R/'scripts/site-navigation.py'))
+site_nav['apply_to_files'](R, scope='resources/clinical-topics/')
 print(len(topics),'topics;',len(ledger),'distinct resource pages; collection pages excluded')
