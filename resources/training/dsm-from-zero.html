@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="DSM from Zero: a gentle, step-by-step introduction to mental health diagnosis, made for people starting with no prior DSM knowledge.">
+<title>DSM from Zero | Clinical Practice Library</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<style>
+:root{color-scheme:light;--ink:#213637;--muted:#4f6766;--paper:#f8faf8;--white:#fff;--teal:#265d58;--line:#d0ddda;--mint:#e5f2ed;--blue:#e9f0f9;--sand:#fbf2df;--violet:#f0ebf8;--focus:#284d9c}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:var(--teal);text-underline-offset:3px}a:hover{text-decoration-thickness:2px}button{font:inherit}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--focus);outline-offset:4px}.skip{position:absolute;left:12px;top:-100px;padding:10px;background:white;z-index:10}.skip:focus{top:8px}header{background:white;border-bottom:1px solid var(--line)}.top{max-width:980px;margin:auto;padding:12px 20px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;font-size:.86rem}main{max-width:980px;margin:auto;padding:28px 20px 80px}.eyebrow{font-size:.77rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#356c61;margin:0 0 10px}h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.2;letter-spacing:-.02em}h1{font-size:clamp(2.55rem,6vw,4.5rem);margin:0 0 12px}h2{font-size:clamp(1.55rem,3.5vw,2.1rem);margin:0 0 13px}h3{font-size:1.25rem;margin:8px 0}.intro{max-width:650px;font-size:1.22rem;color:#344e4b;margin:0 0 22px}.hero{padding:26px 0 32px}.hero-pills{display:flex;flex-wrap:wrap;gap:10px}.hero-pills span{background:var(--mint);border-radius:30px;padding:5px 13px;font-size:.84rem;font-weight:650}.button{display:inline-block;padding:11px 20px;border-radius:9px;background:var(--teal);color:white;text-decoration:none;font-weight:750;min-height:46px;margin-top:15px}.button:hover{background:#184a45}.boundary{font-size:.9rem;color:#415955;border-left:3px solid #7a968f;padding:9px 15px;background:#edf3f0;margin:25px 0}.track{border:1px solid var(--line);border-radius:17px;background:white;padding:22px;margin:22px 0 32px}.track h2{font-size:1.4rem}.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.steps a{border-radius:10px;background:#f1f5f2;padding:12px 14px;text-decoration:none;border:1px solid #dbe6e1;font-size:.91rem;font-weight:700}.steps a span{display:block;color:#496d64;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase}.progress{margin:18px 0 0;font-size:.9rem;font-weight:700}.meter{height:11px;overflow:hidden;background:#dde8e3;border-radius:20px;margin:7px 0}.meter span{display:block;height:100%;width:0;background:#2a7166;transition:width .2s}.lesson{scroll-margin-top:22px;border:1px solid var(--line);border-radius:18px;background:var(--white);padding:27px;margin:20px 0;box-shadow:0 2px 10px #173b2b09}.lesson-head{display:flex;gap:17px;align-items:flex-start}.number{width:44px;height:44px;border-radius:14px;background:var(--teal);color:white;display:grid;place-items:center;font-weight:850;flex:none}.lesson-head p{margin:0;color:var(--muted)}.lesson-head h2{margin:3px 0 7px}.simple{font-size:1.14rem;font-weight:620;margin:18px 0;max-width:740px}.example{background:var(--blue);padding:16px 20px;border-radius:12px;margin:16px 0}.example strong{display:block}.visual{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:20px 0}.tile{background:var(--mint);padding:17px;border-radius:12px}.tile:nth-child(2){background:var(--sand)}.tile:nth-child(3){background:var(--violet)}.tile b{display:block;font-size:1.03rem}.tile p{font-size:.91rem;margin:6px 0 0}.term{display:inline-block;background:#ebf2f0;border-radius:4px;padding:1px 6px;font-weight:750}.plain{padding-left:23px}.plain li{padding-left:4px;margin:6px 0}.check{background:#f4f7fb;border:1px solid #d4e0ed;padding:18px 20px;border-radius:12px;margin:20px 0}.check h3{font-family:system-ui,sans-serif;letter-spacing:0;font-size:1rem;margin:0 0 6px}.answers{display:grid;gap:9px;margin-top:12px}.answers button,.done{border:1px solid #88a6a0;border-radius:8px;background:white;text-align:left;padding:10px 14px;cursor:pointer;min-height:44px;color:var(--ink)}.answers button:hover,.done:hover{border-color:var(--teal);background:#eaf4f1}.answers button[aria-pressed=true]{background:#dcece7;border:2px solid var(--teal);padding:9px 13px}.feedback{min-height:1.4em;font-size:.93rem;font-weight:650;margin:11px 0 0}.done{margin-top:10px;font-size:.86rem;font-weight:750}.done[aria-pressed=true]{background:var(--teal);color:white}.lesson-footer{border-top:1px solid var(--line);padding-top:15px;margin-top:25px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}.tiny{color:var(--muted);font-size:.84rem}.case-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}.case{padding:17px;background:#f5f7f6;border:1px solid var(--line);border-radius:12px}.case h3{font-family:system-ui,sans-serif;font-size:1rem}.case p{margin:5px 0}details{border:1px solid var(--line);padding:12px 16px;border-radius:8px;margin:10px 0;background:#fff}summary{cursor:pointer;font-weight:700}footer{margin-top:35px;border-top:1px solid var(--line);padding:22px 0;color:var(--muted);font-size:.85rem}
+@media(max-width:680px){body{font-size:16px}.steps,.visual,.case-grid{grid-template-columns:1fr}.lesson{padding:19px}.track{padding:18px}.lesson-head{gap:11px}.number{width:38px;height:38px}.top{justify-content:flex-start}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.meter span{transition:none}}
+@media print{body{background:#fff;color:#000}header,.skip,.button,.done,.answers button,.meter,.steps{display:none!important}main{max-width:none;padding:0}.track,.lesson{box-shadow:none;border:1px solid #888;break-inside:avoid}.tile,.example,.check,.case{background:#fff!important;border:1px solid #888}h1{font-size:31px}h2{font-size:23px}.boundary{background:#fff}.answers::after{content:"Use the online version to try the answer choices.";font-size:12px}.feedback{display:none}}
+</style>
+<script defer>
+document.addEventListener('DOMContentLoaded',()=>{
+  const checks=[...document.querySelectorAll('[data-done]')];
+  const summary=document.getElementById('progress-text');
+  const bar=document.getElementById('progress-bar');
+  function update(){const n=checks.filter(b=>b.getAttribute('aria-pressed')==='true').length;summary.textContent=n+' of '+checks.length+' lessons marked complete';bar.style.width=(100*n/checks.length)+'%';}
+  checks.forEach(b=>b.addEventListener('click',()=>{const yes=b.getAttribute('aria-pressed')!=='true';b.setAttribute('aria-pressed',String(yes));b.textContent=yes?'✓ Lesson complete (undo)':'Mark lesson complete';update();}));
+  document.querySelectorAll('[data-quiz]').forEach(group=>{
+    const fb=group.querySelector('.feedback');
+    group.querySelectorAll('button[data-answer]').forEach(b=>b.addEventListener('click',()=>{
+      group.querySelectorAll('button[data-answer]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
+      fb.textContent=(b.dataset.answer==='yes'?'That is the safer answer. ':'Not quite. ')+b.dataset.feedback;
+    }));
+  });
+  update();
+});
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to lesson</a>
+<header><div class="top"><a href="/">← Clinical Practice Library</a><a href="/resources/training/workforce-learning-center.html">All workforce training</a><a href="/resources/therapy/clinical-intern-learning-hub.html">Deeper intern reference</a></div></header>
+<main id="main">
+<section class="hero">
+<p class="eyebrow">Start here · No prior knowledge needed</p>
+<h1>DSM from Zero</h1>
+<p class="intro">A gentle introduction to understanding mental health diagnoses. One small idea at a time, in plain language.</p>
+<div class="hero-pills"><span>6 short lessons</span><span>Everyday examples</span><span>Practice without pressure</span><span>Printable</span></div>
+<a class="button" href="#lesson-1">Start lesson 1 →</a>
+<p class="boundary"><strong>Who this is for:</strong> students, new behavioral-health workers, and beginning clinical trainees. Learning diagnostic language does not authorize someone to diagnose. Use the actual DSM-5-TR and supervision for clinical decisions; this is an original teaching introduction, not a copy of its criteria.</p>
+</section>
+<nav class="track" aria-label="Six lesson course">
+<h2>Your path</h2>
+<div class="steps">
+<a href="#lesson-1"><span>Lesson 1</span>What is the DSM?</a>
+<a href="#lesson-2"><span>Lesson 2</span>Symptoms and disorders</a>
+<a href="#lesson-3"><span>Lesson 3</span>Six questions to ask</a>
+<a href="#lesson-4"><span>Lesson 4</span>Find the right chapter</a>
+<a href="#lesson-5"><span>Lesson 5</span>Try a practice case</a>
+<a href="#lesson-6"><span>Lesson 6</span>What to do next</a>
+</div>
+<div class="progress" id="progress-text" role="status" aria-live="polite">0 of 6 lessons marked complete</div>
+<div class="meter" aria-hidden="true"><span id="progress-bar"></span></div>
+<p class="tiny">Marking a lesson complete is only a personal reading aid; it is not a competency score. Progress is not saved or sent anywhere.</p>
+</nav>
+
+<section class="lesson" id="lesson-1" aria-labelledby="title-1">
+<div class="lesson-head"><div class="number">1</div><div><p>Starting from nothing</p><h2 id="title-1">What is the DSM?</h2></div></div>
+<p class="simple">The DSM is a book that helps trained professionals describe and classify patterns of mental health difficulties.</p>
+<p><strong>DSM</strong> stands for <em>Diagnostic and Statistical Manual of Mental Disorders</em>. In the United States, the current text-revised fifth edition is called <strong>DSM-5-TR</strong>.</p>
+<div class="visual"><div class="tile"><b>What it gives you</b><p>Shared names and descriptions of disorders.</p></div><div class="tile"><b>What it does not give you</b><p>A mind-reading machine or an explanation of an entire person.</p></div><div class="tile"><b>Who uses it</b><p>Qualified clinicians, trainees under supervision, and researchers.</p></div></div>
+<p>Think of it as a <strong>map of diagnostic categories</strong>, not a complete map of someone's life.</p>
+<div class="check" data-quiz><h3>Quick check</h3><p>Does a DSM label tell you everything about a person?</p><div class="answers"><button type="button" data-answer="no" data-feedback="A diagnosis may name a pattern; it does not explain the person's whole story, strengths, culture, goals, or needs.">Yes, it explains the whole person</button><button type="button" data-answer="yes" data-feedback="A diagnosis is one piece of information, not a complete story.">No, it names only part of the picture</button></div><p class="feedback" role="status" aria-live="polite">Choose an answer for feedback.</p></div>
+<div class="lesson-footer"><button class="done" type="button" data-done aria-pressed="false">Mark lesson complete</button><a href="#lesson-2">Next: symptoms and disorders →</a></div>
+</section>
+
+<section class="lesson" id="lesson-2" aria-labelledby="title-2">
+<div class="lesson-head"><div class="number">2</div><div><p>Learn two simple words</p><h2 id="title-2">Symptom ≠ diagnosis</h2></div></div>
+<p class="simple">A <span class="term">symptom</span> is an experience or problem. A <span class="term">diagnosis</span> is a carefully evaluated pattern—not one symptom on its own.</p>
+<div class="example"><strong>Example</strong>Someone says, “I'm tired and can't focus.” Fatigue and trouble focusing are <em>clues</em>. They could arise from many things, including poor sleep, stress, a physical condition, medication, or a mental health disorder. They are not enough to choose a diagnosis.</div>
+<p>Clinicians also think about <strong>distress</strong> (how much the person is suffering) and <strong>functioning</strong> (what has become harder in daily life). Neither means the person is flawed.</p>
+<div class="check" data-quiz><h3>Quick check</h3><p>Someone feels nervous before an exam. What do you know?</p><div class="answers"><button type="button" data-answer="yes" data-feedback="One feeling can be a normal response. Ask about the bigger picture before considering a disorder.">They feel nervous; more information is needed</button><button type="button" data-answer="no" data-feedback="An isolated symptom does not establish a disorder. Look at time, intensity, context, impact, and other explanations.">They definitely have an anxiety disorder</button></div><p class="feedback" role="status" aria-live="polite">Choose an answer for feedback.</p></div>
+<div class="lesson-footer"><button class="done" type="button" data-done aria-pressed="false">Mark lesson complete</button><a href="#lesson-3">Next: six questions →</a></div>
+</section>
+
+<section class="lesson" id="lesson-3" aria-labelledby="title-3">
+<div class="lesson-head"><div class="number">3</div><div><p>Before choosing a label</p><h2 id="title-3">Ask six basic questions</h2></div></div>
+<p class="simple">The goal is to understand the pattern before searching for a diagnosis.</p>
+<ol class="plain">
+<li><strong>What?</strong> What is happening? Use the person's own words and observable facts.</li>
+<li><strong>When?</strong> When did it begin? How often? How long does it last?</li>
+<li><strong>Where?</strong> In which situations does it happen—or not happen?</li>
+<li><strong>How much?</strong> What distress or changes in daily life are present?</li>
+<li><strong>What else?</strong> Could sleep, health, medication, substances, development, environment, trauma, or culture help explain it?</li>
+<li><strong>Safety?</strong> Are there urgent concerns that require immediate action or consultation?</li>
+</ol>
+<div class="example"><strong>A useful first sentence</strong>“Tell me what has been happening, and when you first noticed it.”</div>
+<p class="tiny">These are learning prompts, not complete diagnostic criteria, a screening instrument, or a replacement for a trained safety assessment.</p>
+<div class="lesson-footer"><button class="done" type="button" data-done aria-pressed="false">Mark lesson complete</button><a href="#lesson-4">Next: find a chapter →</a></div>
+</section>
+
+<section class="lesson" id="lesson-4" aria-labelledby="title-4">
+<div class="lesson-head"><div class="number">4</div><div><p>You do not memorize the whole book</p><h2 id="title-4">Start with the broad family</h2></div></div>
+<p class="simple">The DSM groups related conditions into chapters. First learn the big neighborhoods—not every diagnosis.</p>
+<div class="visual">
+<div class="tile"><b>Mood</b><p>Examples: depressive and bipolar-related conditions. They are different categories.</p></div>
+<div class="tile"><b>Fear and worry</b><p>Examples: anxiety disorders and obsessive-compulsive-related disorders. They also have distinct chapters.</p></div>
+<div class="tile"><b>Development and attention</b><p>Examples: autism, ADHD, and learning-related disorders.</p></div>
+<div class="tile"><b>Trauma and stress</b><p>Conditions associated with certain kinds of stressors; experiences vary.</p></div>
+<div class="tile"><b>Perception and thinking</b><p>Examples: schizophrenia-spectrum and other psychotic disorders.</p></div>
+<div class="tile"><b>Substance use</b><p>Patterns involving alcohol, drugs, or other substances that require careful assessment.</p></div>
+</div>
+<p><strong>Important:</strong> These are informal teaching labels, <em>not</em> official DSM chapter names or a complete list. Similar-looking symptoms can appear in several categories. A diagnosis needs the specific criteria and differential assessment.</p>
+<div class="check" data-quiz><h3>Quick check</h3><p>If someone is distracted, should you immediately open the ADHD chapter and stop there?</p><div class="answers"><button type="button" data-answer="no" data-feedback="Distraction has many possible explanations. Consider context and competing possibilities.">Yes, distraction means ADHD</button><button type="button" data-answer="yes" data-feedback="Begin with the story and the pattern; use the DSM to compare plausible explanations.">No, first learn the larger pattern</button></div><p class="feedback" role="status" aria-live="polite">Choose an answer for feedback.</p></div>
+<div class="lesson-footer"><button class="done" type="button" data-done aria-pressed="false">Mark lesson complete</button><a href="#lesson-5">Next: practice →</a></div>
+</section>
+
+<section class="lesson" id="lesson-5" aria-labelledby="title-5">
+<div class="lesson-head"><div class="number">5</div><div><p>Practice without diagnosing</p><h2 id="title-5">Two tiny case stories</h2></div></div>
+<p class="simple">Read a story. Separate what you know from what you still need to ask.</p>
+<div class="case-grid">
+<div class="case"><h3>Case A: Maya</h3><p>“I have stopped seeing friends. I feel worn out most days.”</p><details><summary>What do we know?</summary><p>Maya reports reduced social contact and low energy. No diagnosis can be established from this sentence.</p></details><details><summary>What would you ask?</summary><p>For how long? What changed? Sleep? Mood? Health? Stress? Safety? Impact on activities? What does Maya think is happening?</p></details></div>
+<div class="case"><h3>Case B: Eli</h3><p>“He only gets upset at school when there is a lot of talking and writing.”</p><details><summary>What do we know?</summary><p>Someone reports a situation-specific pattern; we do not yet know the child's perspective, communication needs, or contributing conditions.</p></details><details><summary>What would you ask?</summary><p>What happens before and after? Is the direction understood? What works in other settings? What about learning, language, sensory load, worry, and access?</p></details></div>
+</div>
+<div class="check" data-quiz><h3>Quick check</h3><p>Which is a better clinical note from Case A?</p><div class="answers"><button type="button" data-answer="no" data-feedback="That assumes a diagnosis not established by the report.">“Maya has major depression.”</button><button type="button" data-answer="yes" data-feedback="You have accurately recorded what Maya said without turning a clue into a conclusion.">“Maya reports low energy and less contact with friends; more assessment is needed.”</button></div><p class="feedback" role="status" aria-live="polite">Choose an answer for feedback.</p></div>
+<div class="lesson-footer"><button class="done" type="button" data-done aria-pressed="false">Mark lesson complete</button><a href="#lesson-6">Next: what comes after →</a></div>
+</section>
+
+<section class="lesson" id="lesson-6" aria-labelledby="title-6">
+<div class="lesson-head"><div class="number">6</div><div><p>The safe, practical next step</p><h2 id="title-6">How clinicians actually use the DSM</h2></div></div>
+<p class="simple">The DSM helps clinicians check possibilities. It does not replace interviewing, context, judgment, or supervision.</p>
+<div class="visual">
+<div class="tile"><b>1 · Listen</b><p>Understand the person and their goals.</p></div>
+<div class="tile"><b>2 · Compare</b><p>Review plausible diagnoses and full current criteria, including exclusions.</p></div>
+<div class="tile"><b>3 · Check again</b><p>Consider health, culture, age, function, safety, and missing information; consult as needed.</p></div>
+</div>
+<p>You may hear the term <strong>differential diagnosis</strong>. It simply means considering which of several explanations best fits the evidence—and what would help tell them apart.</p>
+<div class="example"><strong>What about diagnostic codes?</strong> In U.S. practice, DSM-5-TR diagnoses use <strong>ICD-10-CM</strong> codes. A code is for classification and reporting; it is not the entire clinical explanation. Verify current codes and updates before use.</div>
+<details><summary>Three words to recognize</summary><p><strong>Criterion:</strong> one requirement within a diagnostic definition. <strong>Specifier:</strong> extra detail that applies to certain diagnoses. <strong>Comorbidity:</strong> more than one condition may be present. Learn the terms first; look up the specifics when relevant.</p></details>
+<p><strong>Ready for the next level?</strong> Use the <a href="/resources/therapy/clinical-intern-learning-hub.html">clinical intern learning hub</a> or <a href="/resources/training/workforce-learning-center.html">workforce learning center</a> for structured interviewing, formulation, and supervised practice.</p>
+<div class="lesson-footer"><button class="done" type="button" data-done aria-pressed="false">Mark lesson complete</button><a href="#finish">Finish & reference →</a></div>
+</section>
+
+<section class="lesson" id="finish" aria-labelledby="finish-title">
+<p class="eyebrow">You made it</p><h2 id="finish-title">What to remember</h2>
+<p class="simple">A symptom is a clue. A diagnosis is a carefully evaluated pattern. A person is always more than a diagnosis.</p>
+<p>In five words: <strong>Listen → Describe → Explore → Compare → Consult.</strong></p>
+<p>To practice, ask a supervisor to walk through a fictional vignette and name at least two possible explanations and one missing piece of information.</p>
+<h3>Primary sources to learn from</h3>
+<ul class="plain">
+<li><a href="https://www.psychiatry.org/psychiatrists/practice/dsm" rel="noopener noreferrer">American Psychiatric Association: DSM-5-TR overview</a></li>
+<li><a href="https://www.psychiatry.org/psychiatrists/practice/dsm/frequently-asked-questions" rel="noopener noreferrer">APA: DSM questions and answers, including DSM versus ICD</a></li>
+<li><a href="https://www.psychiatry.org/psychiatrists/practice/dsm/updates-to-dsm" rel="noopener noreferrer">APA: criteria and ICD-10-CM code updates</a></li>
+</ul>
+<p class="tiny">Original CPL educational material, October 2026. The cases are fictional. This course paraphrases general principles; it does not reproduce the copyrighted DSM criteria, validate diagnostic skill, or provide treatment advice.</p>
+<a class="button" href="#lesson-1">Review from the beginning ↑</a>
+</section>
+<footer>Clinical Practice Library · Beginner DSM training · Existing CPL guides and the advanced learning paths remain available.</footer>
+</main>
+</body>
+</html>
