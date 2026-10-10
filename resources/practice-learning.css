@@ -14,3 +14,8 @@
 
 /* Visual boards remain meaningful when browser controls are hidden for print. */
 @media print{.scale button,.visual .choices button{display:flex!important;background:white!important;color:black!important;border-color:black}.scale button{min-height:120px}.choices{gap:8px}details>*{display:block!important}}
+
+/* Quiet, final authorship credit for the learning center. */
+.learning-footer{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px 20px;margin-top:22px;padding-top:22px;color:#526460}
+.learning-footer-credit{font-size:.86rem}
+@media(max-width:700px){.learning-footer{flex-direction:column;align-items:flex-start}}
