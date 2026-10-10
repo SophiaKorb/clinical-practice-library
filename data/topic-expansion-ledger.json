@@ -1,6 +1,6 @@
 {
   "target": 150,
-  "completedMeaningfulResources": 60,
+  "completedMeaningfulResources": 90,
   "countPolicy": "Six distinct purposes per topic. Collection pages, PDFs, shared assets and cosmetic changes excluded. Count does not certify clinical quality.",
   "resources": [
     {
@@ -910,6 +910,456 @@
         "nctsn-grief"
       ],
       "wave": 2,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/restrictive-eating-coordination/formulation.html",
+      "topic": "restrictive-eating-coordination",
+      "title": "Restrictive eating: medical coordination and supported participation \u2014 Clinician formulation guide",
+      "type": "formulation",
+      "audience": "Adults",
+      "sources": [
+        "nice-eating"
+      ],
+      "wave": 3,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/restrictive-eating-coordination/case.html",
+      "topic": "restrictive-eating-coordination",
+      "title": "Restrictive eating: medical coordination and supported participation \u2014 Interactive case practice",
+      "type": "case",
+      "audience": "Adults",
+      "sources": [
+        "nice-eating"
+      ],
+      "wave": 3,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/restrictive-eating-coordination/support-map.html",
+      "topic": "restrictive-eating-coordination",
+      "title": "Restrictive eating: medical coordination and supported participation \u2014 Visual support map",
+      "type": "support-map",
+      "audience": "Adults",
+      "sources": [
+        "nice-eating"
+      ],
+      "wave": 3,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/restrictive-eating-coordination/client-workbook.html",
+      "topic": "restrictive-eating-coordination",
+      "title": "Restrictive eating: medical coordination and supported participation \u2014 Client workbook",
+      "type": "client-workbook",
+      "audience": "Adults",
+      "sources": [
+        "nice-eating"
+      ],
+      "wave": 3,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/restrictive-eating-coordination/care-partner.html",
+      "topic": "restrictive-eating-coordination",
+      "title": "Restrictive eating: medical coordination and supported participation \u2014 Care-partner guide",
+      "type": "care-partner",
+      "audience": "Adults",
+      "sources": [
+        "nice-eating"
+      ],
+      "wave": 3,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/restrictive-eating-coordination/progress-review.html",
+      "topic": "restrictive-eating-coordination",
+      "title": "Restrictive eating: medical coordination and supported participation \u2014 Progress review tool",
+      "type": "progress-review",
+      "audience": "Adults",
+      "sources": [
+        "nice-eating"
+      ],
+      "wave": 3,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/binge-eating-patterns/formulation.html",
+      "topic": "binge-eating-patterns",
+      "title": "Binge eating: patterns, shame and treatment engagement \u2014 Clinician formulation guide",
+      "type": "formulation",
+      "audience": "Adults",
+      "sources": [
+        "nice-eating"
+      ],
+      "wave": 3,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/binge-eating-patterns/case.html",
+      "topic": "binge-eating-patterns",
+      "title": "Binge eating: patterns, shame and treatment engagement \u2014 Interactive case practice",
+      "type": "case",
+      "audience": "Adults",
+      "sources": [
+        "nice-eating"
+      ],
+      "wave": 3,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/binge-eating-patterns/support-map.html",
+      "topic": "binge-eating-patterns",
+      "title": "Binge eating: patterns, shame and treatment engagement \u2014 Visual support map",
+      "type": "support-map",
+      "audience": "Adults",
+      "sources": [
+        "nice-eating"
+      ],
+      "wave": 3,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/binge-eating-patterns/client-workbook.html",
+      "topic": "binge-eating-patterns",
+      "title": "Binge eating: patterns, shame and treatment engagement \u2014 Client workbook",
+      "type": "client-workbook",
+      "audience": "Adults",
+      "sources": [
+        "nice-eating"
+      ],
+      "wave": 3,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/binge-eating-patterns/care-partner.html",
+      "topic": "binge-eating-patterns",
+      "title": "Binge eating: patterns, shame and treatment engagement \u2014 Care-partner guide",
+      "type": "care-partner",
+      "audience": "Adults",
+      "sources": [
+        "nice-eating"
+      ],
+      "wave": 3,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/binge-eating-patterns/progress-review.html",
+      "topic": "binge-eating-patterns",
+      "title": "Binge eating: patterns, shame and treatment engagement \u2014 Progress review tool",
+      "type": "progress-review",
+      "audience": "Adults",
+      "sources": [
+        "nice-eating"
+      ],
+      "wave": 3,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/adult-autism-load-recovery/formulation.html",
+      "topic": "adult-autism-load-recovery",
+      "title": "Adult autism: load, access and recovery \u2014 Clinician formulation guide",
+      "type": "formulation",
+      "audience": "Adults",
+      "sources": [
+        "nice-autism"
+      ],
+      "wave": 3,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/adult-autism-load-recovery/case.html",
+      "topic": "adult-autism-load-recovery",
+      "title": "Adult autism: load, access and recovery \u2014 Interactive case practice",
+      "type": "case",
+      "audience": "Adults",
+      "sources": [
+        "nice-autism"
+      ],
+      "wave": 3,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/adult-autism-load-recovery/support-map.html",
+      "topic": "adult-autism-load-recovery",
+      "title": "Adult autism: load, access and recovery \u2014 Visual support map",
+      "type": "support-map",
+      "audience": "Adults",
+      "sources": [
+        "nice-autism"
+      ],
+      "wave": 3,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/adult-autism-load-recovery/client-workbook.html",
+      "topic": "adult-autism-load-recovery",
+      "title": "Adult autism: load, access and recovery \u2014 Client workbook",
+      "type": "client-workbook",
+      "audience": "Adults",
+      "sources": [
+        "nice-autism"
+      ],
+      "wave": 3,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/adult-autism-load-recovery/care-partner.html",
+      "topic": "adult-autism-load-recovery",
+      "title": "Adult autism: load, access and recovery \u2014 Care-partner guide",
+      "type": "care-partner",
+      "audience": "Adults",
+      "sources": [
+        "nice-autism"
+      ],
+      "wave": 3,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/adult-autism-load-recovery/progress-review.html",
+      "topic": "adult-autism-load-recovery",
+      "title": "Adult autism: load, access and recovery \u2014 Progress review tool",
+      "type": "progress-review",
+      "audience": "Adults",
+      "sources": [
+        "nice-autism"
+      ],
+      "wave": 3,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/adult-adhd-task-starts/formulation.html",
+      "topic": "adult-adhd-task-starts",
+      "title": "Adult ADHD: task starts and external scaffolds \u2014 Clinician formulation guide",
+      "type": "formulation",
+      "audience": "Adults",
+      "sources": [
+        "nice-adhd"
+      ],
+      "wave": 3,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/adult-adhd-task-starts/case.html",
+      "topic": "adult-adhd-task-starts",
+      "title": "Adult ADHD: task starts and external scaffolds \u2014 Interactive case practice",
+      "type": "case",
+      "audience": "Adults",
+      "sources": [
+        "nice-adhd"
+      ],
+      "wave": 3,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/adult-adhd-task-starts/support-map.html",
+      "topic": "adult-adhd-task-starts",
+      "title": "Adult ADHD: task starts and external scaffolds \u2014 Visual support map",
+      "type": "support-map",
+      "audience": "Adults",
+      "sources": [
+        "nice-adhd"
+      ],
+      "wave": 3,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/adult-adhd-task-starts/client-workbook.html",
+      "topic": "adult-adhd-task-starts",
+      "title": "Adult ADHD: task starts and external scaffolds \u2014 Client workbook",
+      "type": "client-workbook",
+      "audience": "Adults",
+      "sources": [
+        "nice-adhd"
+      ],
+      "wave": 3,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/adult-adhd-task-starts/care-partner.html",
+      "topic": "adult-adhd-task-starts",
+      "title": "Adult ADHD: task starts and external scaffolds \u2014 Care-partner guide",
+      "type": "care-partner",
+      "audience": "Adults",
+      "sources": [
+        "nice-adhd"
+      ],
+      "wave": 3,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/adult-adhd-task-starts/progress-review.html",
+      "topic": "adult-adhd-task-starts",
+      "title": "Adult ADHD: task starts and external scaffolds \u2014 Progress review tool",
+      "type": "progress-review",
+      "audience": "Adults",
+      "sources": [
+        "nice-adhd"
+      ],
+      "wave": 3,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/aphasia-communication-access/formulation.html",
+      "topic": "aphasia-communication-access",
+      "title": "Acquired aphasia: supported communication and participation \u2014 Clinician formulation guide",
+      "type": "formulation",
+      "audience": "Adults with acquired aphasia",
+      "sources": [
+        "asha-aphasia"
+      ],
+      "wave": 3,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/aphasia-communication-access/case.html",
+      "topic": "aphasia-communication-access",
+      "title": "Acquired aphasia: supported communication and participation \u2014 Interactive case practice",
+      "type": "case",
+      "audience": "Adults with acquired aphasia",
+      "sources": [
+        "asha-aphasia"
+      ],
+      "wave": 3,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/aphasia-communication-access/support-map.html",
+      "topic": "aphasia-communication-access",
+      "title": "Acquired aphasia: supported communication and participation \u2014 Visual support map",
+      "type": "support-map",
+      "audience": "Adults with acquired aphasia",
+      "sources": [
+        "asha-aphasia"
+      ],
+      "wave": 3,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/aphasia-communication-access/client-workbook.html",
+      "topic": "aphasia-communication-access",
+      "title": "Acquired aphasia: supported communication and participation \u2014 Client workbook",
+      "type": "client-workbook",
+      "audience": "Adults with acquired aphasia",
+      "sources": [
+        "asha-aphasia"
+      ],
+      "wave": 3,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/aphasia-communication-access/care-partner.html",
+      "topic": "aphasia-communication-access",
+      "title": "Acquired aphasia: supported communication and participation \u2014 Care-partner guide",
+      "type": "care-partner",
+      "audience": "Adults with acquired aphasia",
+      "sources": [
+        "asha-aphasia"
+      ],
+      "wave": 3,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/aphasia-communication-access/progress-review.html",
+      "topic": "aphasia-communication-access",
+      "title": "Acquired aphasia: supported communication and participation \u2014 Progress review tool",
+      "type": "progress-review",
+      "audience": "Adults with acquired aphasia",
+      "sources": [
+        "asha-aphasia"
+      ],
+      "wave": 3,
       "reviewDate": "2026-10-10",
       "qualifiedClinicalReview": "pending",
       "browserQA": "unavailable",

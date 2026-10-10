@@ -2450,6 +2450,230 @@
       "reachable_from_home": true
     },
     {
+      "path": "resources/clinical-topics/adult-adhd-task-starts/care-partner.html",
+      "bytes": 5778,
+      "sha256": "552dbc8996948d0bd46d10c7653e787c2095f1aabcf48e313fca388031e9ae41",
+      "retained_legacy": false,
+      "title": "Adult ADHD: task starts and external scaffolds \u2014 Care-partner guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/adult-adhd-task-starts/case.html",
+      "bytes": 7127,
+      "sha256": "1870f4f3a97869c61c9354fc30341cbe8ec390c3f8028a4899624a204ab7f053",
+      "retained_legacy": false,
+      "title": "Adult ADHD: task starts and external scaffolds \u2014 Interactive case practice | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/adult-adhd-task-starts/client-workbook.html",
+      "bytes": 5303,
+      "sha256": "4be6f628a87d3af736e6ffdb10273d4ffc039a60a6e780cff358fe19bb813a32",
+      "retained_legacy": false,
+      "title": "Adult ADHD: task starts and external scaffolds \u2014 Client workbook | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/adult-adhd-task-starts/formulation.html",
+      "bytes": 5830,
+      "sha256": "5b77c27af65a0aa7087ce6ee566283dd45c71e66c3e23e9097e9235721b702c6",
+      "retained_legacy": false,
+      "title": "Adult ADHD: task starts and external scaffolds \u2014 Clinician formulation guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/adult-adhd-task-starts/index.html",
+      "bytes": 4337,
+      "sha256": "86ed2cdfa94fb26c9a9c0ccaf0b752a761a57c5a581e717d2116618f6f0f2dca",
+      "retained_legacy": false,
+      "title": "Adult ADHD: task starts and external scaffolds | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/adult-adhd-task-starts/progress-review.html",
+      "bytes": 6571,
+      "sha256": "fa64b937d198ba3be02ff7a157a83b0d29d1934bdd0b96cf49e066b5f759e7db",
+      "retained_legacy": false,
+      "title": "Adult ADHD: task starts and external scaffolds \u2014 Progress review tool | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/adult-adhd-task-starts/support-map.html",
+      "bytes": 6817,
+      "sha256": "05516045771ae8038e1fca5c30d29c2cffcb8ca1eaf24742b22c2fe7d62341dd",
+      "retained_legacy": false,
+      "title": "Adult ADHD: task starts and external scaffolds \u2014 Visual support map | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/adult-autism-load-recovery/care-partner.html",
+      "bytes": 5829,
+      "sha256": "147065792ac289ecd17725d7b18c052aeca9b60a0d3e53b1a042321b78d184c2",
+      "retained_legacy": false,
+      "title": "Adult autism: load, access and recovery \u2014 Care-partner guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/adult-autism-load-recovery/case.html",
+      "bytes": 7108,
+      "sha256": "8cebf75a3369edaa36201130c04ea75bba588b1c6bc1c7f52e704d5aefc58d7a",
+      "retained_legacy": false,
+      "title": "Adult autism: load, access and recovery \u2014 Interactive case practice | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/adult-autism-load-recovery/client-workbook.html",
+      "bytes": 5246,
+      "sha256": "e0dfd3c989403bf40a05a841a91b47de7f69a0f3d51dec04d5a27fa00d7ed241",
+      "retained_legacy": false,
+      "title": "Adult autism: load, access and recovery \u2014 Client workbook | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/adult-autism-load-recovery/formulation.html",
+      "bytes": 5781,
+      "sha256": "31e959748812db1df5ba4a26addef7922a83bc250f6ddf5845b5d73dd1927699",
+      "retained_legacy": false,
+      "title": "Adult autism: load, access and recovery \u2014 Clinician formulation guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/adult-autism-load-recovery/index.html",
+      "bytes": 4361,
+      "sha256": "f2050b2ce6fe3ad32ec4d8d34bc922654c2f39eeef88896fa4aa2d76231735fb",
+      "retained_legacy": false,
+      "title": "Adult autism: load, access and recovery | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/adult-autism-load-recovery/progress-review.html",
+      "bytes": 6425,
+      "sha256": "e6809d67f5993feb28517d01bcdf3c87ee2ff6d44791cc3e37e1d39000d7eb89",
+      "retained_legacy": false,
+      "title": "Adult autism: load, access and recovery \u2014 Progress review tool | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/adult-autism-load-recovery/support-map.html",
+      "bytes": 6849,
+      "sha256": "f28ae7245416023c45759c8a412be29f1246e055251f231bf6cb6d5863d778cc",
+      "retained_legacy": false,
+      "title": "Adult autism: load, access and recovery \u2014 Visual support map | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/aphasia-communication-access/care-partner.html",
+      "bytes": 5987,
+      "sha256": "c89a5eb75822ea1cc73d2c631d2163beff1cffb367b473c4c0e964a503556e29",
+      "retained_legacy": false,
+      "title": "Acquired aphasia: supported communication and participation \u2014 Care-partner guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/aphasia-communication-access/case.html",
+      "bytes": 7365,
+      "sha256": "776cd27db85016a60e4e7337f3259b52710504acba21103065ce7e9fb0295cc9",
+      "retained_legacy": false,
+      "title": "Acquired aphasia: supported communication and participation \u2014 Interactive case practice | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/aphasia-communication-access/client-workbook.html",
+      "bytes": 5444,
+      "sha256": "e2bb0cfc6f91640af1ce7cdb649be59c53ec5970cbd296a5bec5fc1f42fd0f4f",
+      "retained_legacy": false,
+      "title": "Acquired aphasia: supported communication and participation \u2014 Client workbook | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/aphasia-communication-access/formulation.html",
+      "bytes": 5967,
+      "sha256": "175e6ff36642b180441611b089ea732b4a6fd93839328adaa35e31f1fb62360c",
+      "retained_legacy": false,
+      "title": "Acquired aphasia: supported communication and participation \u2014 Clinician formulation guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/aphasia-communication-access/index.html",
+      "bytes": 4602,
+      "sha256": "781eca960a0d0854361c0a18db6b14997867fe8c76659ec65703d130b2fb3d6e",
+      "retained_legacy": false,
+      "title": "Acquired aphasia: supported communication and participation | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/aphasia-communication-access/progress-review.html",
+      "bytes": 6629,
+      "sha256": "b0e58bb586f29278ab41b6572ad1e7fcc7303a7aee03a0def0fc81f962b4e913",
+      "retained_legacy": false,
+      "title": "Acquired aphasia: supported communication and participation \u2014 Progress review tool | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/aphasia-communication-access/support-map.html",
+      "bytes": 7128,
+      "sha256": "02ccc3634a41f05e6581de18d03ebf034ae0c6da8de276873cb9418f67a68c9f",
+      "retained_legacy": false,
+      "title": "Acquired aphasia: supported communication and participation \u2014 Visual support map | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/binge-eating-patterns/care-partner.html",
+      "bytes": 5842,
+      "sha256": "24f37b72645fd4ca77e9da03c78f710a6aee956c1ba60a593d98e741ae027b2a",
+      "retained_legacy": false,
+      "title": "Binge eating: patterns, shame and treatment engagement \u2014 Care-partner guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/binge-eating-patterns/case.html",
+      "bytes": 7258,
+      "sha256": "00d24dd31b3b1e9d224ecacd6881ac801477dcb83277a5f49b46b175da5b66f0",
+      "retained_legacy": false,
+      "title": "Binge eating: patterns, shame and treatment engagement \u2014 Interactive case practice | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/binge-eating-patterns/client-workbook.html",
+      "bytes": 5339,
+      "sha256": "3efd8ae3edb43e5a50dd85b070d58ff257e4b32ca4098b73c67d623cdd7f97c8",
+      "retained_legacy": false,
+      "title": "Binge eating: patterns, shame and treatment engagement \u2014 Client workbook | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/binge-eating-patterns/formulation.html",
+      "bytes": 5916,
+      "sha256": "9aa62e2e2d3eb67e241573ac5f145e776d0637a2d23d971bf25158edb2774ba1",
+      "retained_legacy": false,
+      "title": "Binge eating: patterns, shame and treatment engagement \u2014 Clinician formulation guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/binge-eating-patterns/index.html",
+      "bytes": 4464,
+      "sha256": "e6ac2c92ee18f78a14d66a95c623df3ebe826f7fa2af48069417a7603956ee94",
+      "retained_legacy": false,
+      "title": "Binge eating: patterns, shame and treatment engagement | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/binge-eating-patterns/progress-review.html",
+      "bytes": 6542,
+      "sha256": "2543704e4918cf46306d442cee8a3141db32d319f9c5b31951abee7ed4fcc607",
+      "retained_legacy": false,
+      "title": "Binge eating: patterns, shame and treatment engagement \u2014 Progress review tool | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/binge-eating-patterns/support-map.html",
+      "bytes": 7025,
+      "sha256": "44c96b418118614acf8fcea62f1bb055dc19aaec9a3a84707b9f816dfa421f8f",
+      "retained_legacy": false,
+      "title": "Binge eating: patterns, shame and treatment engagement \u2014 Visual support map | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
       "path": "resources/clinical-topics/bipolar-episode-timeline/care-partner.html",
       "bytes": 6211,
       "sha256": "99c0683b4a82c5796704fe3048f42fb63851f1e0691ef6be83b06e06a9a30602",
@@ -2675,8 +2899,8 @@
     },
     {
       "path": "resources/clinical-topics/index.html",
-      "bytes": 9918,
-      "sha256": "19fc843ccc2aeccefc2fcaa04299ec3b15702b9bcb6241f06dc8de0741ebc3e6",
+      "bytes": 14055,
+      "sha256": "737a9b5aa8590d0fb731a358e2bb6c348a1512bb0825d52cfbc0a859f1888946",
       "retained_legacy": false,
       "title": "Clinical topic collections | Clinical Practice Library",
       "reachable_from_home": true
@@ -2791,6 +3015,62 @@
       "sha256": "b27dc7a9413aa54d0b76aba77c6bcd260b9ae7f40d18312fb361d515bcc6e995",
       "retained_legacy": false,
       "title": "Panic: body sensations and the alarm loop \u2014 Visual support map | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/restrictive-eating-coordination/care-partner.html",
+      "bytes": 6054,
+      "sha256": "423ce58d6af2c0de1d0d1a603bee133b295852f01a7ec494ecf1a17b4c1cfaec",
+      "retained_legacy": false,
+      "title": "Restrictive eating: medical coordination and supported participation \u2014 Care-partner guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/restrictive-eating-coordination/case.html",
+      "bytes": 7420,
+      "sha256": "d6c8758c0a7aafe0396416556c80c0fa5c0bb1079e5b3d9695d119456a85efb8",
+      "retained_legacy": false,
+      "title": "Restrictive eating: medical coordination and supported participation \u2014 Interactive case practice | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/restrictive-eating-coordination/client-workbook.html",
+      "bytes": 5605,
+      "sha256": "196e2ae0eac3af35f3e1020418625eee565b6fbb5010b577c551418e9a10d18e",
+      "retained_legacy": false,
+      "title": "Restrictive eating: medical coordination and supported participation \u2014 Client workbook | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/restrictive-eating-coordination/formulation.html",
+      "bytes": 6232,
+      "sha256": "34dd3afdff8edcc561f2aadf04e1cf7a002a69bfb7f388cbad8485faf3aa1555",
+      "retained_legacy": false,
+      "title": "Restrictive eating: medical coordination and supported participation \u2014 Clinician formulation guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/restrictive-eating-coordination/index.html",
+      "bytes": 4645,
+      "sha256": "d74b8be89838c6ee021889a5927277d49493e0cce098c45b6fe9c2cf975ad133",
+      "retained_legacy": false,
+      "title": "Restrictive eating: medical coordination and supported participation | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/restrictive-eating-coordination/progress-review.html",
+      "bytes": 6856,
+      "sha256": "55dd0d8118a95b14237e7c9127f8e52438e186ff4e23ac5702600d7693678bed",
+      "retained_legacy": false,
+      "title": "Restrictive eating: medical coordination and supported participation \u2014 Progress review tool | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/restrictive-eating-coordination/support-map.html",
+      "bytes": 7244,
+      "sha256": "ab39d6da059e73ebc7a846eacf57ddd1ffdbc00bc6ea8c94f8991ff913f73820",
+      "retained_legacy": false,
+      "title": "Restrictive eating: medical coordination and supported participation \u2014 Visual support map | Clinical Practice Library",
       "reachable_from_home": true
     },
     {
@@ -3019,8 +3299,8 @@
     },
     {
       "path": "resources/complete-resource-inventory.html",
-      "bytes": 173570,
-      "sha256": "be843bdb5007faaa1e0424ed3d37e4e66ad970468b0ac877e60f03d9cb8fd472",
+      "bytes": 186033,
+      "sha256": "0a0ef22a96c4321e50dde24c1b18a38c9aad899cbe1fd1fcd5994114d2b2da0e",
       "retained_legacy": false,
       "title": "Complete resource inventory | CPL",
       "reachable_from_home": true
@@ -3152,72 +3432,107 @@
       "reachable_from_home": true
     },
     {
+      "path": "resources/downloads/topic-adult-adhd-task-starts.pdf",
+      "bytes": 3345,
+      "sha256": "f3f223bd264652eb94592c1b62bbe190ee0ca59168c1ebed64a9a95689d7b687",
+      "retained_legacy": false,
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/downloads/topic-adult-autism-load-recovery.pdf",
+      "bytes": 3357,
+      "sha256": "d490c572a0a04abe926dde064e45a6dc258b097810ca9e1759a9a7d51335511b",
+      "retained_legacy": false,
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/downloads/topic-aphasia-communication-access.pdf",
+      "bytes": 3390,
+      "sha256": "e8565e63c409d53a790050a00655b316cebc0e0531cfda362abf6423d92ac2d1",
+      "retained_legacy": false,
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/downloads/topic-binge-eating-patterns.pdf",
+      "bytes": 3355,
+      "sha256": "8ad926c2fa415d9ab7b36cc9b3af035e3447856e555c01139c6f95054d6be18b",
+      "retained_legacy": false,
+      "reachable_from_home": true
+    },
+    {
       "path": "resources/downloads/topic-bipolar-episode-timeline.pdf",
       "bytes": 3402,
-      "sha256": "881f91cd3cad853a2a8018f297d30c54c2ce039baa8d5018371097482deecba3",
+      "sha256": "fe2f7efa3641df72c24aa465ab9ddc753da13bdde44fa24088165eb4d081be95",
       "retained_legacy": false,
       "reachable_from_home": true
     },
     {
       "path": "resources/downloads/topic-child-grief-continuing-bonds.pdf",
       "bytes": 3404,
-      "sha256": "f6670d57727910835665d0dcfadd57e80e8d5086358b08302e733e4428eba42f",
+      "sha256": "867eb9dd012d244464527cb9dc13828367760e398a4f1075fce6ca73b80b597f",
       "retained_legacy": false,
       "reachable_from_home": true
     },
     {
       "path": "resources/downloads/topic-depression-activity-reward.pdf",
       "bytes": 3357,
-      "sha256": "d0a9e1b64aecd68c9319fed52895ac8337aecbe70a5b82ada55c321033a252b4",
+      "sha256": "7d1dc0c112e5ba7fb158596616e95852f784d200f8fd5560fe0e91805cdb757b",
       "retained_legacy": false,
       "reachable_from_home": true
     },
     {
       "path": "resources/downloads/topic-dissociation-function-orientation.pdf",
       "bytes": 3389,
-      "sha256": "efc729aa427efdf1990a51d19ae47841af597a0ed7a4cec3a8d43076879d1d6f",
+      "sha256": "6a8e1b82086e6d0d8116c66851ae8ebca50e6c0db42b3684e4b07c88a54129b5",
       "retained_legacy": false,
       "reachable_from_home": true
     },
     {
       "path": "resources/downloads/topic-ocd-mental-rituals.pdf",
       "bytes": 3382,
-      "sha256": "a403ec524e2ec68967cd056535076949c4d08c463cf75de9fb5326a1bba0da77",
+      "sha256": "6802975703e67e3ca1ed08928c6f36be1d1abe150aa2bf4f4bb1a654d88bee1d",
       "retained_legacy": false,
       "reachable_from_home": true
     },
     {
       "path": "resources/downloads/topic-panic-alarm-loop.pdf",
       "bytes": 3377,
-      "sha256": "0bb44bff3ef0788a51ac7dab223f7306f1e58be5025b84ed72596f5938fac33c",
+      "sha256": "3001e603ea38b96019480a35f222c233ee412a7a4f075bfcb404b6058bfbef66",
+      "retained_legacy": false,
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/downloads/topic-restrictive-eating-coordination.pdf",
+      "bytes": 3421,
+      "sha256": "6c3ebe68387ec06495d7cb87cfb29132f6b705231b95bbe4aa5b1f9e663ed032",
       "retained_legacy": false,
       "reachable_from_home": true
     },
     {
       "path": "resources/downloads/topic-sleep-loss-activation.pdf",
       "bytes": 3369,
-      "sha256": "84ebb16c4132b9ae259fdb78efc6bc70897da56d0e30edccc286fcca65f81df5",
+      "sha256": "d68e2deb939e7e9c235810fdf1200d34c2a0297fb1a6566732f4c5ae9d4df89a",
       "retained_legacy": false,
       "reachable_from_home": true
     },
     {
       "path": "resources/downloads/topic-social-anxiety-attention.pdf",
       "bytes": 3398,
-      "sha256": "187d60601f93a1755b1ea184a6dcd9b32b32df4bfe45a8d1c152ecc8b657d3e6",
+      "sha256": "c59f7f246729d7ffdbc19ac98348c5a966ffd66dcb4d08aea20cdf80e826024b",
       "retained_legacy": false,
       "reachable_from_home": true
     },
     {
       "path": "resources/downloads/topic-trauma-cue-orientation.pdf",
       "bytes": 3325,
-      "sha256": "ba54e5f7b5804f832031180e50b6034b677ab66185e10a4a9e3f5c875d6eba00",
+      "sha256": "f02d8b8b7aba328447bf1cedbfef86db0c01b0233a5dcdea4e2824f6e9df8ca0",
       "retained_legacy": false,
       "reachable_from_home": true
     },
     {
       "path": "resources/downloads/topic-voices-collaborative-coping.pdf",
       "bytes": 3365,
-      "sha256": "b41cf996ad9b85f9ed943cda8230a0c1a4a73f36eeb29ee997ccfc1d10f86c77",
+      "sha256": "4ebb75964497a635685883adb97290c50cd66cd65227341db2dc6ef41f63d969",
       "retained_legacy": false,
       "reachable_from_home": true
     },
@@ -5217,8 +5532,8 @@
       "absent_from_current": []
     },
     "origin/cpl-2-colorful-helpful": {
-      "commit": "277a6b4fa04d7ad558bb1aad52e047a1931caf58",
-      "resource_count": 606,
+      "commit": "0f20fc60d0dda568753c39ea43fe222bac361417",
+      "resource_count": 646,
       "absent_from_current": []
     },
     "origin/cpl-phone-check-2026-09-30": {

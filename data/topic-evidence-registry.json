@@ -8,10 +8,28 @@
       "evidenceType": "Graded clinical practice guideline, 2021; multicomponent CBT-I strongly recommended",
       "access": "Full text retrieved 2026-10-10"
     },
+    "asha-aphasia": {
+      "title": "ASHA Practice Portal: Aphasia",
+      "url": "https://www.asha.org/practice-portal/clinical-topics/aphasia/",
+      "evidenceType": "Professional practice synthesis for acquired aphasia in adults; SLP assessment and rehabilitation",
+      "access": "Full page retrieved 2026-10-10"
+    },
     "nctsn-grief": {
       "title": "NCTSN: Childhood traumatic grief",
       "url": "https://www.nctsn.org/what-is-child-trauma/trauma-types/traumatic-grief",
       "evidenceType": "Specialist network education; child traumatic grief, not all grief or adult diagnostic criteria",
+      "access": "Official search index verified 2026-10-10"
+    },
+    "nice-adhd": {
+      "title": "NICE NG87: ADHD diagnosis and management",
+      "url": "https://www.nice.org.uk/guidance/ng87",
+      "evidenceType": "Published guideline, 2018; assessment requires developmental and cross-setting evidence",
+      "access": "Official search index verified 2026-10-10"
+    },
+    "nice-autism": {
+      "title": "NICE CG142: Autism in adults",
+      "url": "https://www.nice.org.uk/guidance/cg142",
+      "evidenceType": "Published adult guideline, 2012; accommodations are individualized",
       "access": "Official search index verified 2026-10-10"
     },
     "nice-depression": {
@@ -19,6 +37,12 @@
       "url": "https://www.nice.org.uk/guidance/ng222",
       "evidenceType": "Published guideline, 2022; treatment choice depends on severity, preference and history",
       "access": "Official search index verified 2026-10-10; full recommendations retrieval limited"
+    },
+    "nice-eating": {
+      "title": "NICE NG69: Eating disorders recognition and treatment",
+      "url": "https://www.nice.org.uk/guidance/ng69",
+      "evidenceType": "Published guideline, 2017; does not establish a complete ARFID, pica or rumination pathway",
+      "access": "Official search index verified 2026-10-10; recommendation page returned 403"
     },
     "nice-ocd": {
       "title": "NICE CG31: OCD and body dysmorphic disorder",
@@ -155,6 +179,51 @@
         "nctsn-grief"
       ],
       "limits": "NCTSN supports child traumatic-grief education. This original remembrance aid is not a grief-treatment protocol or diagnostic measure. Age, culture, family context and qualified review remain essential."
+    },
+    {
+      "slug": "restrictive-eating-coordination",
+      "title": "Restrictive eating: medical coordination and supported participation",
+      "age": "Adults",
+      "sources": [
+        "nice-eating"
+      ],
+      "limits": "Coordination aid only. NG69 does not provide a complete ARFID/pica/rumination pathway. No validated eating-disorder items, nutritional prescriptions or diagnostic thresholds are reproduced."
+    },
+    {
+      "slug": "binge-eating-patterns",
+      "title": "Binge eating: patterns, shame and treatment engagement",
+      "age": "Adults",
+      "sources": [
+        "nice-eating"
+      ],
+      "limits": "Original pattern aid is not a binge-eating measure or treatment manual. Specialist treatment, medical assessment and individualized nutrition planning remain outside its scope."
+    },
+    {
+      "slug": "adult-autism-load-recovery",
+      "title": "Adult autism: load, access and recovery",
+      "age": "Adults",
+      "sources": [
+        "nice-autism"
+      ],
+      "limits": "Adult-oriented access aid, not an autism assessment or validated burnout scale. Supports are individualized; evidence for specific sensory strategies varies. Clinical review pending."
+    },
+    {
+      "slug": "adult-adhd-task-starts",
+      "title": "Adult ADHD: task starts and external scaffolds",
+      "age": "Adults",
+      "sources": [
+        "nice-adhd"
+      ],
+      "limits": "Original initiation aid is not an ADHD screening test or executive-function measure. Scaffold effectiveness is individualized and does not prove diagnosis. No medication advice provided."
+    },
+    {
+      "slug": "aphasia-communication-access",
+      "title": "Acquired aphasia: supported communication and participation",
+      "age": "Adults with acquired aphasia",
+      "sources": [
+        "asha-aphasia"
+      ],
+      "limits": "ASHA source concerns acquired adult aphasia. This unvalidated access aid does not establish capacity, rehabilitation effectiveness or validity of modified standardized scores. Qualified clinical review pending."
     }
   ]
 }

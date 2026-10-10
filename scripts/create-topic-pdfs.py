@@ -11,7 +11,7 @@ def write(c,x,y,s,size=10,width=540,bold=False):
  for line in simpleSplit(plain(s),font,size,width):c.drawString(x,y,line);y-=size*1.35
  return y
 for t in data['TOPICS'][:a.waves*5]:
- out=R/'resources/downloads'/('topic-'+t['slug']+'.pdf');c=canvas.Canvas(str(out),pagesize=(612,792));c.setTitle(t['title']+' - support worksheet');c.setAuthor('Sophia Korb Cohon, PhD')
+ out=R/'resources/downloads'/('topic-'+t['slug']+'.pdf');c=canvas.Canvas(str(out),pagesize=(612,792),invariant=1);c.setTitle(t['title']+' - support worksheet');c.setAuthor('Sophia Korb Cohon, PhD')
  y=write(c,36,756,t['title'],17,540,True);y=write(c,36,y-10,'Original support worksheet | '+t['age']+' | Reviewed 2026-10-10',9)
  y=write(c,36,y-8,'Use fictional or appropriately de-identified notes. Write, draw, dictate or point. Not a validated measure, diagnostic test or crisis service.',9)
  # Vertical relational diagram avoids cramped five-column text.

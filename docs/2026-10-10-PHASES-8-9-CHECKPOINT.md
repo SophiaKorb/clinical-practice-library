@@ -21,3 +21,13 @@ Commit `277a6b4fa04d7ad558bb1aad52e047a1931caf58`; deployment `dpl_4SVeoLvTUnigG
 ## Wave 2 — built, publication pending
 
 Additional 30 distinct resources for OCD mental rituals, depression activation, trauma cues, dissociation/function and child grief. Total 60/150; ten PDF companions excluded. No memory-recovery, forced grounding, treatment exclusion based solely on dissociation, or diagnosis from intrusive content. Clinical peer review remains pending. 60-purpose regression, 46-file PDF integrity audit and 344-page source accessibility audit pass. Five new PDFs rendered for visual inspection.
+
+## Wave 2 — published and HTTP verified
+
+Commit `0f20fc60d0dda568753c39ea43fe222bac361417`; deployment `dpl_HUqYm8L4nzykFMyXn4hLEhdx9nTU`, READY at https://clinical-practice-library-rk35o6es8-cohon-family.vercel.app. All 30 new resource URLs and five new PDF downloads returned HTTP 200 with expected content. Evidence: `docs/qa/phase-8-wave-2-live.json`.
+
+## Wave 3 — built, publication pending
+
+30 more distinct resources: restrictive-eating coordination, binge-eating patterns, adult autism load/recovery, adult ADHD task starts, acquired aphasia communication access. Total 90/150; 15 PDF companions excluded. Medical stability is not inferred from body size; ARFID source-coverage limits are explicit. Aphasia does not imply incapacity. New discovery facets include eating, sleep, grief, intellectual disability, tics/repetitive behaviors and bodily concerns.
+
+90-purpose regression, 51-file PDF integrity audit, 379-page source accessibility audit, finder scenarios and 6,346 local references pass. All five new PDFs rendered/visually inspected; qualified clinical and browser QA remain pending. PDF generation now uses deterministic metadata for reproducibility.

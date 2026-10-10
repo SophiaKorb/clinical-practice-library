@@ -83,6 +83,15 @@
       "status": "structurally readable; field/widget consistency checked"
     },
     {
+      "path": "resources/downloads/topic-adult-adhd-task-starts.pdf",
+      "bytes": 3345,
+      "pages": 1,
+      "text_characters": 1234,
+      "fields": 0,
+      "widgets": 0,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
       "path": "resources/downloads/topic-depression-activity-reward.pdf",
       "bytes": 3357,
       "pages": 1,
@@ -105,6 +114,33 @@
       "bytes": 3377,
       "pages": 1,
       "text_characters": 1281,
+      "fields": 0,
+      "widgets": 0,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "resources/downloads/topic-adult-autism-load-recovery.pdf",
+      "bytes": 3357,
+      "pages": 1,
+      "text_characters": 1241,
+      "fields": 0,
+      "widgets": 0,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "resources/downloads/topic-aphasia-communication-access.pdf",
+      "bytes": 3390,
+      "pages": 1,
+      "text_characters": 1292,
+      "fields": 0,
+      "widgets": 0,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "resources/downloads/topic-restrictive-eating-coordination.pdf",
+      "bytes": 3421,
+      "pages": 1,
+      "text_characters": 1354,
       "fields": 0,
       "widgets": 0,
       "status": "structurally readable; field/widget consistency checked"
@@ -179,6 +215,15 @@
       "text_characters": 2092,
       "fields": 37,
       "widgets": 37,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "resources/downloads/topic-binge-eating-patterns.pdf",
+      "bytes": 3355,
+      "pages": 1,
+      "text_characters": 1261,
+      "fields": 0,
+      "widgets": 0,
       "status": "structurally readable; field/widget consistency checked"
     },
     {

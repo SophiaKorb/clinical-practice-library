@@ -10,7 +10,12 @@
       "Learning disorders",
       "Psychosis / bipolar",
       "Substance use",
-      "Persistent conflict"
+      "Persistent conflict",
+      "Eating disorders",
+      "Tic / repetitive behavior conditions",
+      "Intellectual disability",
+      "Sleep conditions",
+      "Grief / bereavement"
     ],
     "symptom": [
       "Fear / uncertainty",
@@ -18,7 +23,11 @@
       "Overload / distress",
       "Communication difficulty",
       "Memory / attention",
-      "Conflict / aggression"
+      "Conflict / aggression",
+      "Pain / bodily concerns",
+      "Sleep difficulty",
+      "Eating difficulty",
+      "Repetitive actions / urges"
     ],
     "function": [
       "Starting / organizing tasks",
@@ -26,7 +35,9 @@
       "Communication / participation",
       "Daily living / self-care",
       "Relationships / family",
-      "Safety / stabilization"
+      "Safety / stabilization",
+      "Food / sleep / health participation",
+      "Autonomy / supported choice"
     ],
     "intervention": [
       "CBT / behavioral activation",
@@ -1456,7 +1467,9 @@
       "format": "HTML",
       "tags": {
         "diagnosis": [],
-        "symptom": [],
+        "symptom": [
+          "Pain / bodily concerns"
+        ],
         "function": [],
         "intervention": [],
         "stage": [],
@@ -1575,6 +1588,235 @@
       "metadataBasis": "title/path discovery tags"
     },
     {
+      "url": "/resources/clinical-topics/aphasia-communication-access/index.html",
+      "title": "Acquired aphasia: supported communication and participation",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Communication difficulty"
+        ],
+        "function": [
+          "Communication / participation"
+        ],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [],
+        "role": [],
+        "task": [],
+        "step": [
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/clinical-topics/aphasia-communication-access/care-partner.html",
+      "title": "Acquired aphasia: supported communication and participation — Care-partner guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Communication difficulty"
+        ],
+        "function": [
+          "Communication / participation"
+        ],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/aphasia-communication-access/client-workbook.html",
+      "title": "Acquired aphasia: supported communication and participation — Client workbook",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Communication difficulty"
+        ],
+        "function": [
+          "Communication / participation"
+        ],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/aphasia-communication-access/formulation.html",
+      "title": "Acquired aphasia: supported communication and participation — Clinician formulation guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Communication difficulty"
+        ],
+        "function": [
+          "Communication / participation"
+        ],
+        "intervention": [
+          "Access / accommodations",
+          "Function-linked support"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Assessment planning",
+          "Treatment planning"
+        ],
+        "step": [
+          "What am I seeing?",
+          "Understanding",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/aphasia-communication-access/case.html",
+      "title": "Acquired aphasia: supported communication and participation — Interactive case practice",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Communication difficulty"
+        ],
+        "function": [
+          "Communication / participation"
+        ],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Skill rehearsal / supervision"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/aphasia-communication-access/progress-review.html",
+      "title": "Acquired aphasia: supported communication and participation — Progress review tool",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Communication difficulty"
+        ],
+        "function": [
+          "Communication / participation"
+        ],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Progress review"
+        ],
+        "step": [
+          "What to watch next?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/aphasia-communication-access/support-map.html",
+      "title": "Acquired aphasia: supported communication and participation — Visual support map",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Communication difficulty"
+        ],
+        "function": [
+          "Communication / participation"
+        ],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Treatment planning"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
       "url": "/resources/therapy/act-psychological-flexibility-practical-toolkit.html",
       "title": "ACT & Psychological Flexibility",
       "format": "HTML",
@@ -1667,6 +1909,453 @@
       },
       "priority": 20,
       "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/clinical-topics/adult-adhd-task-starts/index.html",
+      "title": "Adult ADHD: task starts and external scaffolds",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "ADHD"
+        ],
+        "symptom": [
+          "Memory / attention"
+        ],
+        "function": [
+          "Starting / organizing tasks"
+        ],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [],
+        "task": [],
+        "step": []
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/clinical-topics/adult-adhd-task-starts/care-partner.html",
+      "title": "Adult ADHD: task starts and external scaffolds — Care-partner guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "ADHD"
+        ],
+        "symptom": [
+          "Memory / attention"
+        ],
+        "function": [
+          "Starting / organizing tasks"
+        ],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/adult-adhd-task-starts/client-workbook.html",
+      "title": "Adult ADHD: task starts and external scaffolds — Client workbook",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "ADHD"
+        ],
+        "symptom": [
+          "Memory / attention"
+        ],
+        "function": [
+          "Starting / organizing tasks"
+        ],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/adult-adhd-task-starts/formulation.html",
+      "title": "Adult ADHD: task starts and external scaffolds — Clinician formulation guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "ADHD"
+        ],
+        "symptom": [
+          "Memory / attention"
+        ],
+        "function": [
+          "Starting / organizing tasks"
+        ],
+        "intervention": [
+          "Function-linked support"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Assessment planning",
+          "Treatment planning"
+        ],
+        "step": [
+          "What am I seeing?",
+          "Understanding",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/adult-adhd-task-starts/case.html",
+      "title": "Adult ADHD: task starts and external scaffolds — Interactive case practice",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "ADHD"
+        ],
+        "symptom": [
+          "Memory / attention"
+        ],
+        "function": [
+          "Starting / organizing tasks"
+        ],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Skill rehearsal / supervision"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/adult-adhd-task-starts/progress-review.html",
+      "title": "Adult ADHD: task starts and external scaffolds — Progress review tool",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "ADHD"
+        ],
+        "symptom": [
+          "Memory / attention"
+        ],
+        "function": [
+          "Starting / organizing tasks"
+        ],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Progress review"
+        ],
+        "step": [
+          "What to watch next?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/adult-adhd-task-starts/support-map.html",
+      "title": "Adult ADHD: task starts and external scaffolds — Visual support map",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "ADHD"
+        ],
+        "symptom": [
+          "Memory / attention"
+        ],
+        "function": [
+          "Starting / organizing tasks"
+        ],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Treatment planning"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/adult-autism-load-recovery/index.html",
+      "title": "Adult autism: load, access and recovery",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Autism"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [],
+        "task": [],
+        "step": []
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/clinical-topics/adult-autism-load-recovery/care-partner.html",
+      "title": "Adult autism: load, access and recovery — Care-partner guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Autism"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/adult-autism-load-recovery/client-workbook.html",
+      "title": "Adult autism: load, access and recovery — Client workbook",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Autism"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/adult-autism-load-recovery/formulation.html",
+      "title": "Adult autism: load, access and recovery — Clinician formulation guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Autism"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [
+          "Access / accommodations",
+          "Function-linked support"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Assessment planning",
+          "Treatment planning"
+        ],
+        "step": [
+          "What am I seeing?",
+          "Understanding",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/adult-autism-load-recovery/case.html",
+      "title": "Adult autism: load, access and recovery — Interactive case practice",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Autism"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Skill rehearsal / supervision"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/adult-autism-load-recovery/progress-review.html",
+      "title": "Adult autism: load, access and recovery — Progress review tool",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Autism"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Progress review"
+        ],
+        "step": [
+          "What to watch next?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/adult-autism-load-recovery/support-map.html",
+      "title": "Adult autism: load, access and recovery — Visual support map",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Autism"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Treatment planning"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
     },
     {
       "url": "/resources/handouts/after-school-is-a-landing-not-a-launch.html",
@@ -2174,6 +2863,240 @@
       "metadataBasis": "title/path discovery tags"
     },
     {
+      "url": "/resources/clinical-topics/binge-eating-patterns/index.html",
+      "title": "Binge eating: patterns, shame and treatment engagement",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Eating disorders"
+        ],
+        "symptom": [
+          "Eating difficulty"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
+        "intervention": [],
+        "stage": [],
+        "role": [],
+        "task": [
+          "Treatment planning"
+        ],
+        "step": [
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/clinical-topics/binge-eating-patterns/care-partner.html",
+      "title": "Binge eating: patterns, shame and treatment engagement — Care-partner guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Eating disorders"
+        ],
+        "symptom": [
+          "Eating difficulty"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/binge-eating-patterns/client-workbook.html",
+      "title": "Binge eating: patterns, shame and treatment engagement — Client workbook",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Eating disorders"
+        ],
+        "symptom": [
+          "Eating difficulty"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/binge-eating-patterns/formulation.html",
+      "title": "Binge eating: patterns, shame and treatment engagement — Clinician formulation guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Eating disorders"
+        ],
+        "symptom": [
+          "Eating difficulty"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
+        "intervention": [
+          "Function-linked support"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Assessment planning",
+          "Treatment planning"
+        ],
+        "step": [
+          "What am I seeing?",
+          "Understanding",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/binge-eating-patterns/case.html",
+      "title": "Binge eating: patterns, shame and treatment engagement — Interactive case practice",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Eating disorders"
+        ],
+        "symptom": [
+          "Eating difficulty"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Skill rehearsal / supervision"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/binge-eating-patterns/progress-review.html",
+      "title": "Binge eating: patterns, shame and treatment engagement — Progress review tool",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Eating disorders"
+        ],
+        "symptom": [
+          "Eating difficulty"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Progress review"
+        ],
+        "step": [
+          "What to watch next?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/binge-eating-patterns/support-map.html",
+      "title": "Binge eating: patterns, shame and treatment engagement — Visual support map",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Eating disorders"
+        ],
+        "symptom": [
+          "Eating difficulty"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Treatment planning"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
       "url": "/resources/clinical-topics/bipolar-episode-timeline/index.html",
       "title": "Bipolar: episodes, baseline and support",
       "format": "HTML",
@@ -2479,7 +3402,8 @@
       "format": "HTML",
       "tags": {
         "diagnosis": [
-          "Trauma / dissociation"
+          "Trauma / dissociation",
+          "Grief / bereavement"
         ],
         "symptom": [],
         "function": [],
@@ -2500,7 +3424,8 @@
       "format": "HTML",
       "tags": {
         "diagnosis": [
-          "Trauma / dissociation"
+          "Trauma / dissociation",
+          "Grief / bereavement"
         ],
         "symptom": [],
         "function": [],
@@ -2528,7 +3453,8 @@
       "format": "HTML",
       "tags": {
         "diagnosis": [
-          "Trauma / dissociation"
+          "Trauma / dissociation",
+          "Grief / bereavement"
         ],
         "symptom": [],
         "function": [],
@@ -2556,7 +3482,8 @@
       "format": "HTML",
       "tags": {
         "diagnosis": [
-          "Trauma / dissociation"
+          "Trauma / dissociation",
+          "Grief / bereavement"
         ],
         "symptom": [],
         "function": [],
@@ -2590,7 +3517,8 @@
       "format": "HTML",
       "tags": {
         "diagnosis": [
-          "Trauma / dissociation"
+          "Trauma / dissociation",
+          "Grief / bereavement"
         ],
         "symptom": [],
         "function": [],
@@ -2619,7 +3547,8 @@
       "format": "HTML",
       "tags": {
         "diagnosis": [
-          "Trauma / dissociation"
+          "Trauma / dissociation",
+          "Grief / bereavement"
         ],
         "symptom": [],
         "function": [],
@@ -2649,7 +3578,8 @@
       "format": "HTML",
       "tags": {
         "diagnosis": [
-          "Trauma / dissociation"
+          "Trauma / dissociation",
+          "Grief / bereavement"
         ],
         "symptom": [],
         "function": [],
@@ -5825,7 +6755,9 @@
       "title": "Making Room for Grief",
       "format": "HTML",
       "tags": {
-        "diagnosis": [],
+        "diagnosis": [
+          "Grief / bereavement"
+        ],
         "symptom": [],
         "function": [],
         "intervention": [],
@@ -6337,7 +7269,9 @@
       "title": "My Grief Map",
       "format": "HTML",
       "tags": {
-        "diagnosis": [],
+        "diagnosis": [
+          "Grief / bereavement"
+        ],
         "symptom": [],
         "function": [],
         "intervention": [],
@@ -6360,7 +7294,9 @@
       "title": "My Grief Map Fillable",
       "format": "PDF",
       "tags": {
-        "diagnosis": [],
+        "diagnosis": [
+          "Grief / bereavement"
+        ],
         "symptom": [],
         "function": [],
         "intervention": [],
@@ -6796,7 +7732,8 @@
           "Anxiety / OCD"
         ],
         "symptom": [
-          "Fear / uncertainty"
+          "Fear / uncertainty",
+          "Repetitive actions / urges"
         ],
         "function": [],
         "intervention": [
@@ -6819,7 +7756,8 @@
           "Anxiety / OCD"
         ],
         "symptom": [
-          "Fear / uncertainty"
+          "Fear / uncertainty",
+          "Repetitive actions / urges"
         ],
         "function": [],
         "intervention": [
@@ -6851,7 +7789,8 @@
           "Anxiety / OCD"
         ],
         "symptom": [
-          "Fear / uncertainty"
+          "Fear / uncertainty",
+          "Repetitive actions / urges"
         ],
         "function": [],
         "intervention": [
@@ -6883,7 +7822,8 @@
           "Anxiety / OCD"
         ],
         "symptom": [
-          "Fear / uncertainty"
+          "Fear / uncertainty",
+          "Repetitive actions / urges"
         ],
         "function": [],
         "intervention": [
@@ -6920,7 +7860,8 @@
           "Anxiety / OCD"
         ],
         "symptom": [
-          "Fear / uncertainty"
+          "Fear / uncertainty",
+          "Repetitive actions / urges"
         ],
         "function": [],
         "intervention": [
@@ -6953,7 +7894,8 @@
           "Anxiety / OCD"
         ],
         "symptom": [
-          "Fear / uncertainty"
+          "Fear / uncertainty",
+          "Repetitive actions / urges"
         ],
         "function": [],
         "intervention": [
@@ -6987,7 +7929,8 @@
           "Anxiety / OCD"
         ],
         "symptom": [
-          "Fear / uncertainty"
+          "Fear / uncertainty",
+          "Repetitive actions / urges"
         ],
         "function": [],
         "intervention": [
@@ -7994,6 +8937,260 @@
       "metadataBasis": "title/path discovery tags"
     },
     {
+      "url": "/resources/clinical-topics/restrictive-eating-coordination/index.html",
+      "title": "Restrictive eating: medical coordination and supported participation",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Eating disorders"
+        ],
+        "symptom": [
+          "Eating difficulty"
+        ],
+        "function": [
+          "Communication / participation",
+          "Food / sleep / health participation"
+        ],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [],
+        "role": [
+          "Staff / case manager"
+        ],
+        "task": [
+          "Referral / coordination"
+        ],
+        "step": [
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/clinical-topics/restrictive-eating-coordination/care-partner.html",
+      "title": "Restrictive eating: medical coordination and supported participation — Care-partner guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Eating disorders"
+        ],
+        "symptom": [
+          "Eating difficulty"
+        ],
+        "function": [
+          "Communication / participation",
+          "Food / sleep / health participation"
+        ],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/restrictive-eating-coordination/client-workbook.html",
+      "title": "Restrictive eating: medical coordination and supported participation — Client workbook",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Eating disorders"
+        ],
+        "symptom": [
+          "Eating difficulty"
+        ],
+        "function": [
+          "Communication / participation",
+          "Food / sleep / health participation"
+        ],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/restrictive-eating-coordination/formulation.html",
+      "title": "Restrictive eating: medical coordination and supported participation — Clinician formulation guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Eating disorders"
+        ],
+        "symptom": [
+          "Eating difficulty"
+        ],
+        "function": [
+          "Communication / participation",
+          "Food / sleep / health participation"
+        ],
+        "intervention": [
+          "Access / accommodations",
+          "Function-linked support"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Assessment planning",
+          "Treatment planning"
+        ],
+        "step": [
+          "What am I seeing?",
+          "Understanding",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/restrictive-eating-coordination/case.html",
+      "title": "Restrictive eating: medical coordination and supported participation — Interactive case practice",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Eating disorders"
+        ],
+        "symptom": [
+          "Eating difficulty"
+        ],
+        "function": [
+          "Communication / participation",
+          "Food / sleep / health participation"
+        ],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Skill rehearsal / supervision"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/restrictive-eating-coordination/progress-review.html",
+      "title": "Restrictive eating: medical coordination and supported participation — Progress review tool",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Eating disorders"
+        ],
+        "symptom": [
+          "Eating difficulty"
+        ],
+        "function": [
+          "Communication / participation",
+          "Food / sleep / health participation"
+        ],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Progress review"
+        ],
+        "step": [
+          "What to watch next?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/restrictive-eating-coordination/support-map.html",
+      "title": "Restrictive eating: medical coordination and supported participation — Visual support map",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Eating disorders"
+        ],
+        "symptom": [
+          "Eating difficulty"
+        ],
+        "function": [
+          "Communication / participation",
+          "Food / sleep / health participation"
+        ],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Treatment planning"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
       "url": "/resources/handouts/safety-planning-preparation-sheet.html",
       "title": "Safety Planning Preparation Sheet",
       "format": "HTML",
@@ -8224,9 +9421,15 @@
       "title": "Sleep loss: exhaustion or rising activation?",
       "format": "HTML",
       "tags": {
-        "diagnosis": [],
-        "symptom": [],
-        "function": [],
+        "diagnosis": [
+          "Sleep conditions"
+        ],
+        "symptom": [
+          "Sleep difficulty"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
         "intervention": [],
         "stage": [],
         "role": [],
@@ -8241,9 +9444,15 @@
       "title": "Sleep loss: exhaustion or rising activation? — Care-partner guide",
       "format": "HTML",
       "tags": {
-        "diagnosis": [],
-        "symptom": [],
-        "function": [],
+        "diagnosis": [
+          "Sleep conditions"
+        ],
+        "symptom": [
+          "Sleep difficulty"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
         "intervention": [],
         "stage": [
           "Adult"
@@ -8267,9 +9476,15 @@
       "title": "Sleep loss: exhaustion or rising activation? — Client workbook",
       "format": "HTML",
       "tags": {
-        "diagnosis": [],
-        "symptom": [],
-        "function": [],
+        "diagnosis": [
+          "Sleep conditions"
+        ],
+        "symptom": [
+          "Sleep difficulty"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
         "intervention": [],
         "stage": [
           "Adult"
@@ -8293,9 +9508,15 @@
       "title": "Sleep loss: exhaustion or rising activation? — Clinician formulation guide",
       "format": "HTML",
       "tags": {
-        "diagnosis": [],
-        "symptom": [],
-        "function": [],
+        "diagnosis": [
+          "Sleep conditions"
+        ],
+        "symptom": [
+          "Sleep difficulty"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
         "intervention": [
           "Function-linked support"
         ],
@@ -8325,9 +9546,15 @@
       "title": "Sleep loss: exhaustion or rising activation? — Interactive case practice",
       "format": "HTML",
       "tags": {
-        "diagnosis": [],
-        "symptom": [],
-        "function": [],
+        "diagnosis": [
+          "Sleep conditions"
+        ],
+        "symptom": [
+          "Sleep difficulty"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
         "intervention": [],
         "stage": [
           "Adult"
@@ -8352,9 +9579,15 @@
       "title": "Sleep loss: exhaustion or rising activation? — Progress review tool",
       "format": "HTML",
       "tags": {
-        "diagnosis": [],
-        "symptom": [],
-        "function": [],
+        "diagnosis": [
+          "Sleep conditions"
+        ],
+        "symptom": [
+          "Sleep difficulty"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
         "intervention": [],
         "stage": [
           "Adult"
@@ -8380,9 +9613,15 @@
       "title": "Sleep loss: exhaustion or rising activation? — Visual support map",
       "format": "HTML",
       "tags": {
-        "diagnosis": [],
-        "symptom": [],
-        "function": [],
+        "diagnosis": [
+          "Sleep conditions"
+        ],
+        "symptom": [
+          "Sleep difficulty"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
         "intervention": [
           "Access / accommodations"
         ],
@@ -8413,7 +9652,9 @@
       "format": "HTML",
       "tags": {
         "diagnosis": [],
-        "symptom": [],
+        "symptom": [
+          "Pain / bodily concerns"
+        ],
         "function": [],
         "intervention": [],
         "stage": [],
@@ -9177,6 +10418,106 @@
       "metadataBasis": "title/path discovery tags"
     },
     {
+      "url": "/resources/downloads/topic-adult-adhd-task-starts.pdf",
+      "title": "Topic Adult Adhd Task Starts",
+      "format": "PDF",
+      "tags": {
+        "diagnosis": [
+          "ADHD"
+        ],
+        "symptom": [
+          "Memory / attention"
+        ],
+        "function": [
+          "Starting / organizing tasks"
+        ],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [],
+        "task": [],
+        "step": [
+          "What tool?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/downloads/topic-adult-autism-load-recovery.pdf",
+      "title": "Topic Adult Autism Load Recovery",
+      "format": "PDF",
+      "tags": {
+        "diagnosis": [
+          "Autism"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [],
+        "task": [],
+        "step": [
+          "What tool?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/downloads/topic-aphasia-communication-access.pdf",
+      "title": "Topic Aphasia Communication Access",
+      "format": "PDF",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Communication difficulty"
+        ],
+        "function": [
+          "Communication / participation"
+        ],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [],
+        "role": [],
+        "task": [],
+        "step": [
+          "What tool?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/downloads/topic-binge-eating-patterns.pdf",
+      "title": "Topic Binge Eating Patterns",
+      "format": "PDF",
+      "tags": {
+        "diagnosis": [
+          "Eating disorders"
+        ],
+        "symptom": [
+          "Eating difficulty"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
+        "intervention": [],
+        "stage": [],
+        "role": [],
+        "task": [],
+        "step": [
+          "What tool?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
       "url": "/resources/downloads/topic-bipolar-episode-timeline.pdf",
       "title": "Topic Bipolar Episode Timeline",
       "format": "PDF",
@@ -9202,7 +10543,9 @@
       "title": "Topic Child Grief Continuing Bonds",
       "format": "PDF",
       "tags": {
-        "diagnosis": [],
+        "diagnosis": [
+          "Grief / bereavement"
+        ],
         "symptom": [],
         "function": [],
         "intervention": [],
@@ -9273,7 +10616,8 @@
           "Anxiety / OCD"
         ],
         "symptom": [
-          "Fear / uncertainty"
+          "Fear / uncertainty",
+          "Repetitive actions / urges"
         ],
         "function": [],
         "intervention": [
@@ -9311,13 +10655,48 @@
       "metadataBasis": "title/path discovery tags"
     },
     {
+      "url": "/resources/downloads/topic-restrictive-eating-coordination.pdf",
+      "title": "Topic Restrictive Eating Coordination",
+      "format": "PDF",
+      "tags": {
+        "diagnosis": [
+          "Eating disorders"
+        ],
+        "symptom": [
+          "Eating difficulty"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
+        "intervention": [],
+        "stage": [],
+        "role": [
+          "Staff / case manager"
+        ],
+        "task": [
+          "Referral / coordination"
+        ],
+        "step": [
+          "What tool?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
       "url": "/resources/downloads/topic-sleep-loss-activation.pdf",
       "title": "Topic Sleep Loss Activation",
       "format": "PDF",
       "tags": {
-        "diagnosis": [],
-        "symptom": [],
-        "function": [],
+        "diagnosis": [
+          "Sleep conditions"
+        ],
+        "symptom": [
+          "Sleep difficulty"
+        ],
+        "function": [
+          "Food / sleep / health participation"
+        ],
         "intervention": [],
         "stage": [],
         "role": [],

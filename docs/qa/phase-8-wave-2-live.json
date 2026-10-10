@@ -1,0 +1,253 @@
+{
+  "sha": "0f20fc60d0dda568753c39ea43fe222bac361417",
+  "url": "https://clinical-practice-library-rk35o6es8-cohon-family.vercel.app",
+  "state": "READY",
+  "verification": "HTTP status and expected content; not browser rendering",
+  "checks": [
+    {
+      "path": "resources/clinical-topics/ocd-mental-rituals/formulation.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/ocd-mental-rituals/case.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/ocd-mental-rituals/support-map.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/ocd-mental-rituals/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/ocd-mental-rituals/care-partner.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/ocd-mental-rituals/progress-review.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/depression-activity-reward/formulation.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/depression-activity-reward/case.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/depression-activity-reward/support-map.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/depression-activity-reward/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/depression-activity-reward/care-partner.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/depression-activity-reward/progress-review.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/trauma-cue-orientation/formulation.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/trauma-cue-orientation/case.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/trauma-cue-orientation/support-map.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/trauma-cue-orientation/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/trauma-cue-orientation/care-partner.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/trauma-cue-orientation/progress-review.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/dissociation-function-orientation/formulation.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/dissociation-function-orientation/case.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/dissociation-function-orientation/support-map.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/dissociation-function-orientation/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/dissociation-function-orientation/care-partner.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/dissociation-function-orientation/progress-review.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/child-grief-continuing-bonds/formulation.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/child-grief-continuing-bonds/case.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/child-grief-continuing-bonds/support-map.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/child-grief-continuing-bonds/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/child-grief-continuing-bonds/care-partner.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/child-grief-continuing-bonds/progress-review.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/downloads/topic-trauma-cue-orientation.pdf",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "application/pdf"
+    },
+    {
+      "path": "resources/downloads/topic-dissociation-function-orientation.pdf",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "application/pdf"
+    },
+    {
+      "path": "resources/downloads/topic-depression-activity-reward.pdf",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "application/pdf"
+    },
+    {
+      "path": "resources/downloads/topic-child-grief-continuing-bonds.pdf",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "application/pdf"
+    },
+    {
+      "path": "resources/downloads/topic-ocd-mental-rituals.pdf",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "application/pdf"
+    }
+  ]
+}
