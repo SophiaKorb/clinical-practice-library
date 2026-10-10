@@ -6,7 +6,7 @@ Colorful branch only: `cpl-2-colorful-helpful`. No changes pushed to `main` or l
 
 ### Audit and restoration
 
-- Repeatable inventory covers 553 HTML/document resources, all 11 fetched branch-tip refs, SHA-256 duplicate groups, and hyperlink reachability. 550 are reachable after adding the complete resource directory; three isolated layout-preview pages are intentionally excluded. Dynamic destinations require separate behavioral checks.
+- Repeatable inventory covers 555 HTML/document resources, all 11 fetched branch-tip refs, SHA-256 duplicate groups, and hyperlink reachability. 552 are reachable after adding the complete resource directory; three isolated layout-preview pages are intentionally excluded. Dynamic destinations require separate behavioral checks.
 - 21 exact duplicate groups are retained; many are deliberate legacy counterparts. No content deleted.
 - All eight original diagnosis collections / 24 clinical, family, and homeschool links remain prominent. Existing regression tests verify them and 292 paired supports.
 - Seven Spanish older-branch pages restored in full with version notices and current-topic links. Crosswalk preserves original paths, counterpart paths, and text comparisons. One has identical extracted text; others retain differences pending clinical/linguistic comparison. No translation approval claimed.
@@ -38,10 +38,16 @@ Evidence is recommendation-specific. A guideline index is not a treatment recomm
 - Family Pattern Support Experiment: safety and power gate; interaction sequence, competing explanations, one-change experiment, printable client/caregiver sheet, and revision criteria.
 - Homepage and intern hub feature these tools. Short barrier map links to the advanced layer rather than replacing rich clinical material.
 
+### Second expansion batch
+
+- Added Frontline Observation & Coordination: observation-versus-inference matrix, three fictional cases, scope-specific actions, risk escalation, and a printable closed-loop referral handoff.
+- Added Functional Progress Review: five functional domains, paired baseline/review matrix, contextual supports, burden and agency, a worked case preserving ongoing support needs, and explicit limits on disability and standardized-score inferences.
+- Linked both from the homepage and intern hub; assessment workflow and functional review are also accessible from the assessment start page and treatment menu.
+
 ## Validation
 
 - New behavioral regression: combined directory filters, no-result state/reset, worked-case loading, prevention of overwriting entries, clearing, and inventory version/search filters.
-- Local links: 521 pages, 3,633 local references, zero errors.
+- Local links: 523 pages, 3,656 local references, zero errors.
 - Site JavaScript/event-handler syntax and JSON checks, catalog behavior, school support parity, homepage routes, and thermometer checks run for this batch; terminal results recorded before publication.
 - New pages use labels, native controls/details, visible focus, responsive single-column layouts, text-plus-color distinctions, explicit light color scheme, and print rules. These are implementation checks, not WCAG certification.
 - Supported browser control is unavailable in this managed environment. No rendered browser, screenshot, actual print-dialog, device matrix, or complete accessibility audit was performed. Do not describe these as passed.
@@ -60,3 +66,5 @@ Evidence is recommendation-specific. A guideline index is not a treatment recomm
 ## Deployment record
 
 Publication target: preview deployment for Colorful branch under the existing Vercel project. Legacy production must retain its current branch/aliases. Record exact commit and terminal deployment state after publishing; READY does not establish browser rendering or clinical validity.
+
+Initial expansion deployment verified: commit `4d9dbc65f808c2e9f88415721f85ac09a8a7c7b9`, deployment `dpl_GnZBPx2YLHsJ8X4Yofio3p93G4S6`, READY. Authenticated HTTP checks returned 200 for the formulation lab and directory and returned expected committed page content. Stable Colorful branch alias: https://clinical-practice-library-git-cpl-2-colorfu-f5f645-cohon-family.vercel.app . The second expansion batch requires its own terminal deployment verification.

@@ -75,8 +75,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 11208,
-      "sha256": "88716f47dbb35fdf03ebc71539cb0d99c7283f3cdcfee874d0654a39b84bfeb1",
+      "bytes": 11401,
+      "sha256": "7f8830543b883e57d1d2acc765240faab4f4758fd77333f2acca3dd5abe45d2d",
       "retained_legacy": false,
       "title": "Clinical Practice Library",
       "reachable_from_home": true
@@ -2307,8 +2307,8 @@
     },
     {
       "path": "resources/assessment/assessment-start-here.html",
-      "bytes": 7033,
-      "sha256": "5dc7b17d1c03abd3c7bc2f510a4433779b2d654eb927fb8633be50b6a11f91a9",
+      "bytes": 7345,
+      "sha256": "b9d8662f0eebfd2aafc2269a25d2b9b3dd150cdac23291e41abd1018d665731f",
       "retained_legacy": false,
       "title": "START HERE \u2013 Assessment & Screening | Clinical Practice Library",
       "reachable_from_home": true
@@ -2435,8 +2435,8 @@
     },
     {
       "path": "resources/complete-resource-inventory.html",
-      "bytes": 145930,
-      "sha256": "b4f410eaea5be363fb5954f4845c281d0d70ad57c0f3c9bf08a47ccd8c3f4cab",
+      "bytes": 146399,
+      "sha256": "dcc7373868bc3eea05cd4c5c3f574a99f2ce4800f90b52677f7c7449261ebf25",
       "retained_legacy": false,
       "title": "Complete resource inventory | CPL",
       "reachable_from_home": true
@@ -4083,8 +4083,8 @@
     },
     {
       "path": "resources/therapy/clinical-intern-learning-hub.html",
-      "bytes": 19043,
-      "sha256": "64f3b96850137dbaeaa370ddc2a0b788d262200154d4500d216d7548a57984fc",
+      "bytes": 19286,
+      "sha256": "3b80dff09b2df908ba9cb25c18b5048aaad81f46fd664f94500a47504c47c94b",
       "retained_legacy": false,
       "title": "Clinical Intern Learning Hub | Clinical Practice Library",
       "reachable_from_home": true
@@ -4167,6 +4167,22 @@
       "sha256": "6d5fe41c65084642a5c1cccf7383f634226450b5ed8f510290815d66962908dd",
       "retained_legacy": false,
       "title": "Family pattern \u2192 safer response \u2192 shared review | CPL",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/therapy/frontline-observation-coordination.html",
+      "bytes": 7317,
+      "sha256": "2baca87fdafc7c22d1af02c9e3e18b251f57e0527b371e83adf3788e02516e58",
+      "retained_legacy": false,
+      "title": "Observe clearly. Support access. Close the loop. | CPL",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/therapy/functional-progress-review.html",
+      "bytes": 6545,
+      "sha256": "b59b7e85faee904a0e2f3f0c478828cadebee788b3c129b3e35d653c41237e38",
+      "retained_legacy": false,
+      "title": "Is life becoming more workable? | CPL",
       "reachable_from_home": true
     },
     {
@@ -4323,8 +4339,8 @@
     },
     {
       "path": "resources/therapy/treatment-plan-menu.html",
-      "bytes": 5544,
-      "sha256": "7a8522e1759a0ed5ed4129e89d3ce51dec570a4f0cf11f777a968ac73ea3ca0e",
+      "bytes": 5671,
+      "sha256": "6bc744cd205e102fa00f795c707bd6afc8f19778c9bca07750072cf95c17510b",
       "retained_legacy": false,
       "title": "Treatment planning menu | Clinical Practice Library",
       "reachable_from_home": true
@@ -4492,8 +4508,8 @@
       "absent_from_current": []
     },
     "origin/cpl-2-colorful-helpful": {
-      "commit": "e3d8cfedf4582529f32dd1e957dcc72e7a3f988e",
-      "resource_count": 540,
+      "commit": "4d9dbc65f808c2e9f88415721f85ac09a8a7c7b9",
+      "resource_count": 553,
       "absent_from_current": []
     },
     "origin/cpl-phone-check-2026-09-30": {
