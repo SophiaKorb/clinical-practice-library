@@ -17,6 +17,8 @@ const cases=[
  ['caregiver','/resources/clinical-depth/caregiver-session-support-map.html'],
  ['substance','/resources/clinical-depth/substance-use-cooccurring-care.html'],
  ['substance-map','/resources/clinical-depth/substance-use-parallel-care-map.html'],
+ ['psychosis','/resources/clinical-depth/psychosis-bipolar-longitudinal-care.html'],
+ ['episode','/resources/clinical-depth/episode-context-function-map.html'],
  ['homepage','/']
 ];
 (async()=>{
@@ -71,6 +73,12 @@ const cases=[
     await page.getByRole('button',{name:'Clear local entries'}).click();
     assert.equal(await page.locator('textarea#goal').inputValue(),'');
    }
+   if(name==='psychosis')assert.equal(await page.locator('.episode-row').count(),4);
+   if(name==='episode'){
+    await page.locator('textarea#account').fill('Fictional');
+    await page.getByRole('button',{name:'Clear local entries'}).click();
+    assert.equal(await page.locator('textarea#account').inputValue(),'');
+   }
    if(name==='function'){
     await page.locator('textarea#task').fill('Fictional example only');
     await page.getByRole('button',{name:'Clear all entries'}).click();
@@ -99,5 +107,5 @@ const cases=[
  }
  await browser.close();
  if(issues.length)throw Error(issues.join('\n'));
- console.log('PASS 12 routes at 320/390/768/1280; Chromium screenshots, no document overflow, print PDFs, keyboard disclosure and native More, clear fields');
+ console.log('PASS 14 routes at 320/390/768/1280; Chromium screenshots, no document overflow, print PDFs, keyboard disclosure and native More, clear fields');
 })().catch(e=>{console.error(e);process.exitCode=1});

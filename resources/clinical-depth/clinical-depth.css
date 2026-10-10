@@ -108,3 +108,33 @@ main#content .caregiver-map__arrow{font-size:1.3rem;font-weight:900;color:#245e5
   main#content .three-tracks{grid-template-columns:repeat(3,minmax(0,1fr))}
   main#content .caregiver-map__tiles span{border:1px solid #777}
 }
+
+/* Psychosis and bipolar: four observable lanes across an episode rather than a single-line cause. */
+main#content .episode-map{border:1px solid #b6ccbd;border-radius:14px;overflow-x:auto;background:#fff;max-width:100%;padding:14px;margin:18px 0}
+main#content .episode-axis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-left:154px}
+main#content .episode-axis strong{padding:11px 7px;text-align:center;background:#e2ebed;border-radius:5px;font-size:.82rem}
+main#content .episode-row{display:grid;grid-template-columns:150px repeat(3,minmax(0,1fr));gap:6px;margin:6px 0}
+main#content .episode-key{font-weight:750;line-height:1.32;padding:12px 9px;background:#e2efe4;border-radius:5px}
+main#content .episode-row:nth-of-type(3) .episode-key{background:#e9eafa}
+main#content .episode-row:nth-of-type(4) .episode-key{background:#f4e9dc}
+main#content .episode-row:nth-of-type(5) .episode-key{background:#e7edef}
+main#content .episode-row>div{padding:11px;border:1px solid #c5d6cc;border-radius:5px;font-size:.9rem;line-height:1.4}
+main#content .episode-map figcaption{margin-top:10px}
+@media(max-width:710px){
+ main#content .episode-axis{display:none}
+ main#content .episode-row{grid-template-columns:1fr}
+ main#content .episode-key{border-left:5px solid #286852}
+ main#content .episode-row>div{position:relative;padding-left:74px;min-height:44px}
+ main#content .episode-row>div::before{position:absolute;left:9px;top:11px;font-size:.76rem;letter-spacing:.02em;font-weight:800;color:#365a4d}
+ main#content .episode-row>div:nth-of-type(1)::before{content:"BEFORE"}
+ main#content .episode-row>div:nth-of-type(2)::before{content:"DURING"}
+ main#content .episode-row>div:nth-of-type(3)::before{content:"AFTER"}
+}
+@media print{
+ main#content .episode-axis{display:grid!important;margin-left:118px}
+ main#content .episode-row{grid-template-columns:114px repeat(3,minmax(0,1fr))!important}
+ main#content .episode-row>div{padding:8px!important}
+ main#content .episode-row>div::before{display:none}
+ main#content .episode-map{overflow:visible}
+ main#content .episode-row{break-inside:avoid}
+}

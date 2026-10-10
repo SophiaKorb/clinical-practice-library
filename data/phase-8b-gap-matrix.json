@@ -134,7 +134,12 @@
         "Complex medication-adjacent problems managed via appropriate prescriber handoff"
       ],
       "firstAction": "Parallel safety, phenomenology, episode timeline and rehabilitation pathway",
-      "review": "psychiatric and specialty psychotherapy review"
+      "review": "psychiatric and specialty psychotherapy review",
+      "deliveredPaths": [
+        "resources/clinical-depth/psychosis-bipolar-longitudinal-care.html",
+        "resources/clinical-depth/episode-context-function-map.html"
+      ],
+      "implementationStatus": "Episode/differential and recovery decision route with timeline added; specialized care and clinical review remain pending."
     },
     {
       "key": "substance",

@@ -1,6 +1,6 @@
 const fs = require('node:fs'), assert = require('node:assert/strict');
 const root = 'resources/clinical-depth/';
-const names = ['index.html','self-harm-safety-continuity.html','complex-dissociation-functional-care.html','dissociation-function-observation.html','complex-personality-longitudinal-care.html','neuropsych-evaluation-access-validity.html','assessment-decision-report-planner.html','child-caregiver-treatment-selection.html','caregiver-session-support-map.html','substance-use-cooccurring-care.html','substance-use-parallel-care-map.html'];
+const names = ['index.html','self-harm-safety-continuity.html','complex-dissociation-functional-care.html','dissociation-function-observation.html','complex-personality-longitudinal-care.html','neuropsych-evaluation-access-validity.html','assessment-decision-report-planner.html','child-caregiver-treatment-selection.html','caregiver-session-support-map.html','substance-use-cooccurring-care.html','substance-use-parallel-care-map.html','psychosis-bipolar-longitudinal-care.html','episode-context-function-map.html'];
 for (const name of names) {
  const html=fs.readFileSync(root+name,'utf8');
  assert.match(html,/<main id="content">/,'main present '+name);
@@ -47,6 +47,12 @@ for(const term of ['SAMHSA','ASAM','opioid','withdrawal','co-occurring','Devon',
 const sudMap=fs.readFileSync(root+'substance-use-parallel-care-map.html','utf8');
 assert.match(sudMap,/three-tracks/);
 assert.equal((sudMap.match(/<textarea\b/g)||[]).length,5);
+const psychosis=fs.readFileSync(root+'psychosis-bipolar-longitudinal-care.html','utf8');
+for(const term of ['NICE CG178','NICE CG185','Samira','Jordan','psychosis','mania','function']) assert.ok(psychosis.toLowerCase().includes(term.toLowerCase()));
+assert.equal((psychosis.match(/class="episode-row"/g)||[]).length,4);
+const episode=fs.readFileSync(root+'episode-context-function-map.html','utf8');
+assert.equal((episode.match(/<textarea\b/g)||[]).length,6);
+assert.equal((episode.match(/<label for="/g)||[]).length,6);
 const obs=fs.readFileSync(root+names[3],'utf8');
 for(const domain of ['Personal care','Work/school','Finances','Travel','Conversations']) assert.ok(obs.includes(domain));
 assert.equal((obs.match(/<textarea\b/g)||[]).length,5);
