@@ -7,6 +7,13 @@ on:
       - 'resources/clinical-depth/**'
       - 'resources/site-navigation.css'
       - 'tests/phase-8b-rendered.cjs'
+      - 'tests/colorful-site-rendered.cjs'
+      - 'resources/training/dsm-from-zero.html'
+      - 'resources/therapy/visual-reasoning-toolkit.html'
+      - 'resources/therapy/communication-supports-toolkit.html'
+      - 'resources/therapy/treatment-plan-menu.html'
+      - 'resources/clinical-resource-finder.html'
+      - 'resources/clinical-topics/index.html'
       - 'tests/phase-8b-print-validation.py'
   workflow_dispatch:
 permissions:
@@ -14,7 +21,7 @@ permissions:
 jobs:
   browser-mobile-print:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 18
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -33,6 +40,8 @@ jobs:
           sleep 2
       - name: Render 320/390/768/1280 and check keyboard and printable views
         run: node tests/phase-8b-rendered.cjs
+      - name: Render flagship tools and DSM Foundations across phone and desktop
+        run: node tests/colorful-site-rendered.cjs
       - name: Inspect extracted print text, page bounds and render PDF previews
         run: |
           python -m pip install --quiet pymupdf
