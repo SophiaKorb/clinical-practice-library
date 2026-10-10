@@ -24,3 +24,4 @@ jobs:
       - run: node tests/homepage-pathways.cjs
       - run: node tests/thermometer-levels.cjs
       - run: node tests/clinical-expansion.cjs
+      - run: node tests/assessment-school.cjs

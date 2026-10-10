@@ -1,0 +1,137 @@
+[
+  {
+    "id": "developmental",
+    "title": "Longstanding differences; a recent escalation",
+    "summary": "A fictional 12-year-old has longstanding sensory and social-communication differences, increasing distractibility, and recent avoidance after peer mistreatment. The referral asks whether autism, ADHD, trauma, or anxiety explains the difficulties.",
+    "timeline": [
+      [
+        "Early development",
+        "Gather concrete examples of communication, play, sensory preferences, flexibility, and attention; do not fill gaps with assumptions."
+      ],
+      [
+        "Changing demands",
+        "Compare different classrooms, language load, transitions, task interest, and the supports already in place."
+      ],
+      [
+        "Recent change",
+        "Locate bullying, sleep changes, distress, avoidance, and safety concerns on the timeline."
+      ]
+    ],
+    "hypotheses": [
+      [
+        "Autism-related developmental pattern",
+        "Look for developmental social-communication differences alongside restricted/repetitive patterns. Sensory complaints alone are insufficient.",
+        "Collateral and direct observation may clarify history and present functioning; apparent competence in one setting does not settle the question."
+      ],
+      [
+        "ADHD-related attention / executive pattern",
+        "Clarify childhood onset, functional impairment, and examples across relevant settings.",
+        "Do not diagnose from a rating-scale elevation alone. Compare attention when language and sensory demands are accessible."
+      ],
+      [
+        "Trauma or anxiety added to earlier vulnerabilities",
+        "Ask what changed, which situations feel unsafe, and what the person avoids or anticipates.",
+        "Safety and trauma inquiry should be paced and private where appropriate. Recent adversity does not erase prior developmental differences."
+      ],
+      [
+        "Language, learning, sleep, or medical contributors",
+        "Explore understanding of directions, reading/math demands, fatigue, hearing, pain, and medication effects.",
+        "Use targeted referrals and assessment rather than assuming all difficulty belongs to the first diagnosis."
+      ]
+    ],
+    "support": "While clarification proceeds, provide a predictable session map, written single-step instructions, a safe way to request a break, and a coordinated response to peer safety. Preserve chosen participation rather than requiring typical-looking behavior.",
+    "measure": "Track access to one chosen learning or peer activity, support level, distress, safety, and the youth’s view. Record which barriers remain even if behavior appears calmer.",
+    "supervision": "What evidence would support multiple co-occurring explanations? What could we safely do now without deciding the diagnosis? Which uncertainty changes referral or treatment?",
+    "boundary": "This case cannot be diagnosed from the vignette. There are no test scores, diagnostic verdict, or implied probability ranking."
+  },
+  {
+    "id": "language",
+    "title": "Limited spoken output; uncertain access to testing",
+    "summary": "A fictional adult with a documented developmental autism history and established acquired aphasia is referred for cognitive and functional clarification. Short spoken answers are being mistaken for poor understanding.",
+    "timeline": [
+      [
+        "Before the injury",
+        "Establish developmental communication, adaptive functioning, education, and the person’s reliable response modes."
+      ],
+      [
+        "After the injury",
+        "Review authorized neurological and rehabilitation records; distinguish acquired changes from longstanding differences."
+      ],
+      [
+        "Current decision",
+        "Specify the real question: support needs, treatment access, cognition, or another decision requiring separate criteria."
+      ]
+    ],
+    "hypotheses": [
+      [
+        "Expressive-language limitation",
+        "Compare opportunities to understand with the demand to produce spoken language.",
+        "Collaborate with speech-language pathology; use established communication supports and check response reliability."
+      ],
+      [
+        "Receptive-language limitation",
+        "A person may have difficulty understanding as well as expressing language.",
+        "Simplify and verify understanding without coaching a preferred answer. Do not assume writing or pictures automatically solve access."
+      ],
+      [
+        "Cognitive or executive limitations",
+        "Consider attention, memory, learning, initiation, and fatigue with appropriate methods.",
+        "A task called nonverbal may still depend on comprehension, vision, motor output, or familiarity. Check those demands."
+      ],
+      [
+        "Threat, fatigue, and context",
+        "New people, time pressure, sensory load, and fear of being judged may alter performance.",
+        "Document access conditions, breaks, support, and limits on interpreting altered administration."
+      ]
+    ],
+    "support": "Use the person’s established response mode, a low-demand opportunity to confirm or correct meaning, processing time, and a visible option to pause or decline. Familiar partners can inform history without supplying the answer.",
+    "measure": "Track accurate self-expression, opportunities to correct misunderstandings, decision participation, fatigue, and everyday support needs. More speech does not by itself establish improved cognition or adequate consent.",
+    "supervision": "Which findings can be interpreted using norms, and which are qualitative observations? What access modification changes the construct? How can we preserve autonomy without leading the response?",
+    "boundary": "New or sudden speech change, focal neurological signs, or acute confusion requires urgent medical assessment. This case assumes the acquired condition has already been medically assessed."
+  },
+  {
+    "id": "learning",
+    "title": "Worksheet failure: skill gap, access barrier, or both?",
+    "summary": "A fictional fifth-grade learner produces little on multi-step math worksheets, gives some accurate answers orally, and struggles when asked to explain procedures. Adults repeatedly redo the work.",
+    "timeline": [
+      [
+        "Instruction history",
+        "Check opportunity to learn, attendance, curriculum, explicit teaching, practice, language, and prior support."
+      ],
+      [
+        "Task demands",
+        "Compare a clean single-step item, a modeled example, written output, and the actual crowded worksheet."
+      ],
+      [
+        "Review learning",
+        "Look at independent work samples, error patterns, and progress under documented instruction and accessible conditions."
+      ]
+    ],
+    "hypotheses": [
+      [
+        "Math concept or procedure not yet learned",
+        "Analyze errors in quantity, relationships, strategy, and procedure rather than only a total score.",
+        "Provide explicit teaching and guided practice matched to the missing skill; seek qualified educational assessment when indicated."
+      ],
+      [
+        "Working-memory / attention load",
+        "Multi-step oral directions and crowded pages may obscure a known first step.",
+        "Externalize steps and reduce competing visual material while preserving the learning goal."
+      ],
+      [
+        "Language or output mismatch",
+        "Word problems and explanations may require skills different from the underlying calculation.",
+        "Compare comprehension, reasoning, and output modes carefully; collaborate with qualified language/learning professionals."
+      ],
+      [
+        "Fear, fatigue, and feedback history",
+        "Repeated correction can obscure the child’s own knowledge and increase shutdown.",
+        "Record the child’s original response before help, ask what feels confusing, and use error-specific feedback without humiliation."
+      ]
+    ],
+    "support": "Teach the identified skill and provide access at the same time: one worked example, a visible first step, space to show reasoning, and a response mode suited to the task. Adults record the level of help rather than replacing the child’s answer.",
+    "measure": "Separate supported task completion from independent skill growth. Track accuracy, prompt level, generalization to a new example, distress, and whether the learner can explain or show the relevant concept.",
+    "supervision": "Which task demands are part of the target skill, and which are incidental? What would an accommodation hide if used on a particular assessment? What needs school evaluation or targeted teaching?",
+    "boundary": "A brief support comparison cannot establish a learning-disorder diagnosis, school eligibility, or the best educational placement. Access support and evaluation can proceed together."
+  }
+]

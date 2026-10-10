@@ -68,3 +68,7 @@ Evidence is recommendation-specific. A guideline index is not a treatment recomm
 Publication target: preview deployment for Colorful branch under the existing Vercel project. Legacy production must retain its current branch/aliases. Record exact commit and terminal deployment state after publishing; READY does not establish browser rendering or clinical validity.
 
 Initial expansion deployment verified: commit `4d9dbc65f808c2e9f88415721f85ac09a8a7c7b9`, deployment `dpl_GnZBPx2YLHsJ8X4Yofio3p93G4S6`, READY. Authenticated HTTP checks returned 200 for the formulation lab and directory and returned expected committed page content. Stable Colorful branch alias: https://clinical-practice-library-git-cpl-2-colorfu-f5f645-cohon-family.vercel.app . The second expansion batch requires its own terminal deployment verification.
+
+## Latest continuation
+
+Phase 3 continues with the integrated assessment casebook, learning/access two-track tool, two verified fillable PDFs, and a 15-source directory. See [assessment/school expansion checkpoint](2026-10-09-ASSESSMENT-SCHOOL-EXPANSION.md) for current metrics, corrected branch-ref scope, PDF visual verification, and remaining work.

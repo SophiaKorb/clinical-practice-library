@@ -167,5 +167,31 @@
     "freshness": "English and Spanish collections",
     "verification": "Primary directory retrieved",
     "checked": "2026-10-09"
+  },
+  {
+    "id": "source-14",
+    "title": "Autism assessment in under-19s: CG128",
+    "organization": "NICE",
+    "topic": "Autism",
+    "evidence_type": "Clinical guideline",
+    "url": "https://www.nice.org.uk/guidance/cg128/chapter/recommendations",
+    "use": "Orient recognition, referral, and integrated developmental assessment. Adapt UK service context to the local setting.",
+    "cpl_connection": "Integrated assessment casebook",
+    "freshness": "Check publisher update history",
+    "verification": "Official indexed evidence located; direct recommendations retrieval blocked (403)",
+    "checked": "2026-10-09"
+  },
+  {
+    "id": "source-15",
+    "title": "Spoken Language Disorders Practice Portal",
+    "organization": "ASHA",
+    "topic": "Development",
+    "evidence_type": "Practice synthesis",
+    "url": "https://www.asha.org/practice-portal/clinical-topics/spoken-language-disorders/",
+    "use": "Review pediatric receptive and expressive language, literacy overlap, and culturally responsive assessment. Adult acquired aphasia has a separate portal.",
+    "cpl_connection": "Integrated assessment casebook and learning/access plan",
+    "freshness": "Living portal; pediatric scope ages 3\u201321",
+    "verification": "Primary portal retrieved",
+    "checked": "2026-10-09"
   }
 ]

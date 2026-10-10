@@ -75,8 +75,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 11401,
-      "sha256": "7f8830543b883e57d1d2acc765240faab4f4758fd77333f2acca3dd5abe45d2d",
+      "bytes": 11620,
+      "sha256": "890dc9fbdfdc7d3aee623b70200ae39b6fbedd458a2beb05360ddf3bf1aa3037",
       "retained_legacy": false,
       "title": "Clinical Practice Library",
       "reachable_from_home": true
@@ -2299,8 +2299,8 @@
     },
     {
       "path": "resources/assessment/adhd-autism-trauma-differential-matrix.html",
-      "bytes": 6550,
-      "sha256": "53d527f5bae0a7f04f12f668943ab9cdda34cb756ed741e5d918d407d8ac6ba0",
+      "bytes": 6873,
+      "sha256": "d44cffd2e5c63ecdc2c4bb9f7c1e2e05bec26c2e394c9631ac86ced8a345e350",
       "retained_legacy": false,
       "title": "ADHD\u2013Autism\u2013Trauma Differential Matrix | Clinical Practice Library",
       "reachable_from_home": true
@@ -2354,6 +2354,14 @@
       "reachable_from_home": true
     },
     {
+      "path": "resources/assessment/integrated-development-language-learning-casebook.html",
+      "bytes": 17652,
+      "sha256": "0b03626b48d9808709dc9a9548bd9a091ff2a08f5a9f95f7a7227ab437db7e67",
+      "retained_legacy": false,
+      "title": "Assessment casebook: development, language, and learning | CPL",
+      "reachable_from_home": true
+    },
+    {
       "path": "resources/assessment/ocd-bipolar-psychosis-substance-use-form-downloads.html",
       "bytes": 3776,
       "sha256": "227fa1b43e19cdd1f0791146fee3556ea69d540963e27688153bd5bcdf4b662d",
@@ -2379,8 +2387,8 @@
     },
     {
       "path": "resources/assessment/pediatric-developmental-neurodevelopmental.html",
-      "bytes": 5624,
-      "sha256": "beef3d373914e5eb34cba1a0537f62170d530e4a08b6e4a5fcb5883c0fd77ba9",
+      "bytes": 5947,
+      "sha256": "3d64d9ff0659ab8ae99d211979c1a445b9fbc2c8ac3d7f7e86db716368131bab",
       "retained_legacy": false,
       "title": "START HERE \u2013 Pediatric, Developmental & Neurodevelopmental Assessment | Clinical Practice Library",
       "reachable_from_home": true
@@ -2435,10 +2443,17 @@
     },
     {
       "path": "resources/complete-resource-inventory.html",
-      "bytes": 146399,
-      "sha256": "dcc7373868bc3eea05cd4c5c3f574a99f2ce4800f90b52677f7c7449261ebf25",
+      "bytes": 147620,
+      "sha256": "735392c8bea4fc92df9f3fff3cc56a4ada251f5195f05f0064515ba3f779d995",
       "retained_legacy": false,
       "title": "Complete resource inventory | CPL",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/downloads/competing-hypotheses-assessment-map.pdf",
+      "bytes": 61832,
+      "sha256": "ef7870570f7e6530bb07177591852c2ca57e1e8fadaec72420219b39102e3780",
+      "retained_legacy": false,
       "reachable_from_home": true
     },
     {
@@ -2480,6 +2495,13 @@
       "path": "resources/downloads/es/plan-reducir-riesgos-rellenable.pdf",
       "bytes": 44781,
       "sha256": "28389f9ae58e9125363799b1253f8af2980c0f80165291dd7163d4ecb36755e5",
+      "retained_legacy": false,
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/downloads/learning-and-access-two-track-plan.pdf",
+      "bytes": 56192,
+      "sha256": "39e7fd53528d39bbc32bd169cd4fcfc0324d0cc2837403d110018202d75138b9",
       "retained_legacy": false,
       "reachable_from_home": true
     },
@@ -3970,6 +3992,14 @@
       "reachable_from_home": true
     },
     {
+      "path": "resources/school/learning-and-access-two-track-plan.html",
+      "bytes": 7685,
+      "sha256": "5ce8d98b93d24b9cb8fa7a5bbf46b68a0e909d9954265d8da2600ccc8adc31bf",
+      "retained_legacy": false,
+      "title": "Learning and access: two tracks, one plan | CPL",
+      "reachable_from_home": true
+    },
+    {
       "path": "resources/school/school-access-official-reference.html",
       "bytes": 4524,
       "sha256": "333da67c775e6bdcd6ae22d4df9685b0fe4c8848b424589165798f35ba2adbec",
@@ -4019,16 +4049,16 @@
     },
     {
       "path": "resources/therapy/assessment-question-to-feedback.html",
-      "bytes": 6904,
-      "sha256": "0df8a39fdbc32b486c4b89213615021c8b8db087f80aa0479de1da83bba68876",
+      "bytes": 7227,
+      "sha256": "24a117a845f3a96e3ca78a05a6b6c0b8dacd2bb863cb2a9dbba2c047d1b93f40",
       "retained_legacy": false,
       "title": "Assessment: question \u2192 evidence \u2192 useful feedback | CPL",
       "reachable_from_home": true
     },
     {
       "path": "resources/therapy/authoritative-resource-directory.html",
-      "bytes": 11585,
-      "sha256": "abb0c67e076b930a178bd8d21e9264db3edb8db20f2651570f3deaadf0469041",
+      "bytes": 13054,
+      "sha256": "42c251096d87b305aea6603438e66804ecc0c77477f4fb4b68b7e43c67b217e3",
       "retained_legacy": false,
       "title": "Authoritative clinical resource directory | CPL",
       "reachable_from_home": true
@@ -4083,8 +4113,8 @@
     },
     {
       "path": "resources/therapy/clinical-intern-learning-hub.html",
-      "bytes": 19286,
-      "sha256": "3b80dff09b2df908ba9cb25c18b5048aaad81f46fd664f94500a47504c47c94b",
+      "bytes": 19527,
+      "sha256": "315684524b9a58d7ce64eb69578192e3f49905b2f7a43ed47a92a81534485c3a",
       "retained_legacy": false,
       "title": "Clinical Intern Learning Hub | Clinical Practice Library",
       "reachable_from_home": true
@@ -4497,19 +4527,14 @@
     ]
   ],
   "branches": {
-    "origin": {
-      "commit": "2b8c5ba1d66fa397548c9c10a006d764d8c1018b",
-      "resource_count": 539,
-      "absent_from_current": []
-    },
     "origin/closure-sweep-2026-10-05": {
       "commit": "916b651faddeb70853b6ffa46ecc43813c4874eb",
       "resource_count": 538,
       "absent_from_current": []
     },
     "origin/cpl-2-colorful-helpful": {
-      "commit": "4d9dbc65f808c2e9f88415721f85ac09a8a7c7b9",
-      "resource_count": 553,
+      "commit": "871adaeead5d5fe839ae81d575ed0c74e47a8d1d",
+      "resource_count": 555,
       "absent_from_current": []
     },
     "origin/cpl-phone-check-2026-09-30": {
