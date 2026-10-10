@@ -32,6 +32,10 @@ jobs:
           sleep 2
       - name: Render 320/390/768/1280 and check keyboard and printable views
         run: node tests/phase-8b-rendered.cjs
+      - name: Inspect extracted print text, page bounds and render PDF previews
+        run: |
+          python -m pip install --quiet pymupdf
+          python tests/phase-8b-print-validation.py
       - name: Save representative screenshots and rendered PDFs
         if: always()
         uses: actions/upload-artifact@v4

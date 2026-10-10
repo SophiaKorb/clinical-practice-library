@@ -98,10 +98,21 @@ const cases=[
    await page.pdf({path:path.join(output,'safety-print.pdf'),format:'Letter',printBackground:true});
    await page.goto(url+'/resources/clinical-depth/complex-dissociation-functional-care.html');
    await page.pdf({path:path.join(output,'dissociation-print.pdf'),format:'Letter',printBackground:true});
+   for(const [stem,route] of [
+    ['child','/resources/clinical-depth/child-caregiver-treatment-selection.html'],
+    ['caregiver','/resources/clinical-depth/caregiver-session-support-map.html'],
+    ['substance','/resources/clinical-depth/substance-use-cooccurring-care.html'],
+    ['substance-map','/resources/clinical-depth/substance-use-parallel-care-map.html'],
+    ['psychosis','/resources/clinical-depth/psychosis-bipolar-longitudinal-care.html'],
+    ['episode','/resources/clinical-depth/episode-context-function-map.html']
+   ]){
+    await page.goto(url+route,{waitUntil:'load'});
+    await page.pdf({path:path.join(output,stem+'-print.pdf'),format:'Letter',printBackground:true});
+   }
   }
   await context.close();
  }
- for(const file of ['safety-print.pdf','dissociation-print.pdf']){
+ for(const file of ['safety-print.pdf','dissociation-print.pdf','child-print.pdf','caregiver-print.pdf','substance-print.pdf','substance-map-print.pdf','psychosis-print.pdf','episode-print.pdf']){
    const bytes=fs.readFileSync(path.join(output,file));
    assert.ok(bytes.subarray(0,5).toString()==='%PDF-','valid PDF '+file);
  }
