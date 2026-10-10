@@ -20,6 +20,7 @@ jobs:
       - run: python -m py_compile scripts/build-topic-expansion.py scripts/expansion-topics.py scripts/create-topic-pdfs.py
       - run: python scripts/build-topic-expansion.py --waves 5
       - run: git diff --exit-code -- resources/clinical-topics data/topic-expansion-ledger.json data/topic-evidence-registry.json
+      - run: python -m py_compile scripts/build-clinical-finder.py
       - run: python scripts/site-navigation.py --check
       - run: node tests/static-navigation.cjs
       - run: python scripts/check-local-links.py
