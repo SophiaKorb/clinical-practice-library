@@ -10,6 +10,17 @@ for(const scenario of [
  [{q:'',step:'What to watch next?'},'/resources/therapy/functional-progress-review.html']
 ]) assert.ok(api.search(resources,scenario[0]).some(r=>r.url===scenario[1]),JSON.stringify(scenario));
 assert.ok(api.search(resources,{q:'anxiety clinician'}).length>0,'multiword intersection');assert.equal(api.search(resources,{q:'zz-no-match-zz'}).length,0);
+const clinicianQueries=[
+ ['biting','/resources/clinical-depth/child-caregiver-treatment-selection.html'],
+ ['parent coaching','/resources/clinical-depth/child-caregiver-treatment-selection.html'],
+ ['withdrawal','/resources/clinical-depth/substance-use-cooccurring-care.html'],
+ ['opioid PTSD','/resources/clinical-depth/substance-use-cooccurring-care.html'],
+ ['mania','/resources/clinical-depth/psychosis-bipolar-longitudinal-care.html'],
+ ['amnesia','/resources/clinical-depth/complex-dissociation-functional-care.html'],
+ ['aphasia','/resources/clinical-depth/neuropsych-evaluation-access-validity.html']
+];
+for(const [q,url] of clinicianQueries)assert.ok(api.search(resources,{q}).some(r=>r.url===url),'find clinical depth: '+q);
+assert.ok(resources.filter(r=>r.url.startsWith('/resources/clinical-depth/')).every(r=>!r.searchTerms||Array.isArray(r.searchTerms)));
 const invalid=api.decode(new URLSearchParams('role=unauthorized&step=bad&q=%3Cscript%3E'),data.facets);assert.equal(invalid.role,'');assert.equal(invalid.step,'');assert.equal(invalid.q,'<script>');
 for(const r of resources.slice(0,30)){const rec=api.related(r,resources);assert.ok(rec.length<=3);assert.ok(rec.every(t=>t.url!==r.url));}
 for(const route of Object.values(api.routes))for(const [url] of route.links)assert.ok(fs.existsSync('.'+url),url);

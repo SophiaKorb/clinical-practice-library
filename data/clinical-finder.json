@@ -412,7 +412,17 @@
           "What to watch next?"
         ]
       },
-      "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval"
+      "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval",
+      "searchTerms": [
+        "suicide",
+        "self harm",
+        "suicidal ideation",
+        "risk formulation",
+        "safety plan",
+        "handoff",
+        "aftercare",
+        "care transitions"
+      ]
     },
     {
       "url": "/resources/clinical-depth/complex-dissociation-functional-care.html",
@@ -452,7 +462,17 @@
           "What to watch next?"
         ]
       },
-      "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval"
+      "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval",
+      "searchTerms": [
+        "DID",
+        "dissociative identity",
+        "amnesia",
+        "time loss",
+        "integration",
+        "work readiness",
+        "functional memory",
+        "OSDD"
+      ]
     },
     {
       "url": "/resources/clinical-depth/neuropsych-evaluation-access-validity.html",
@@ -493,7 +513,16 @@
           "What should I do?"
         ]
       },
-      "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval"
+      "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval",
+      "searchTerms": [
+        "aphasia",
+        "intelligence",
+        "cognitive capacity",
+        "validity",
+        "evaluation",
+        "testing accommodations",
+        "communication assessment"
+      ]
     },
     {
       "url": "/resources/clinical-depth/psychosis-bipolar-longitudinal-care.html",
@@ -538,7 +567,19 @@
           "What to watch next?"
         ]
       },
-      "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval"
+      "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval",
+      "searchTerms": [
+        "voices",
+        "mania",
+        "hypomania",
+        "episode change",
+        "delusion",
+        "psychosis",
+        "schizophrenia",
+        "first episode",
+        "sleep deprivation",
+        "rehabilitation"
+      ]
     },
     {
       "url": "/resources/clinical-depth/substance-use-cooccurring-care.html",
@@ -580,7 +621,20 @@
           "What to watch next?"
         ]
       },
-      "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval"
+      "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval",
+      "searchTerms": [
+        "withdrawal",
+        "opioid",
+        "alcohol",
+        "stimulants",
+        "polysubstance",
+        "PTSD",
+        "dual diagnosis",
+        "MOUD",
+        "overdose",
+        "integrated treatment",
+        "contingency management"
+      ]
     },
     {
       "url": "/resources/clinical-depth/child-caregiver-treatment-selection.html",
@@ -626,7 +680,20 @@
           "What should I do?"
         ]
       },
-      "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval"
+      "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval",
+      "searchTerms": [
+        "parent coaching",
+        "biting",
+        "dyadic therapy",
+        "adoption",
+        "preschool",
+        "child parent psychotherapy",
+        "PCIT",
+        "CPP",
+        "child safety",
+        "play therapy",
+        "sibling"
+      ]
     },
     {
       "url": "/resources/clinical-depth/complex-personality-longitudinal-care.html",
@@ -664,7 +731,18 @@
           "What to watch next?"
         ]
       },
-      "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval"
+      "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval",
+      "searchTerms": [
+        "abandonment",
+        "engulfment",
+        "BPD",
+        "borderline",
+        "rupture repair",
+        "MBT",
+        "DBT",
+        "treatment frame",
+        "attachment"
+      ]
     },
     {
       "url": "/resources/clinical-depth/dissociation-function-observation.html",
@@ -700,7 +778,15 @@
           "What to watch next?"
         ]
       },
-      "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval"
+      "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval",
+      "searchTerms": [
+        "dissociative amnesia",
+        "daily tasks",
+        "memory gaps",
+        "disability",
+        "appointments",
+        "work participation"
+      ]
     },
     {
       "url": "/resources/clinical-depth/caregiver-session-support-map.html",
@@ -739,7 +825,16 @@
           "What to watch next?"
         ]
       },
-      "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval"
+      "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval",
+      "searchTerms": [
+        "before during after",
+        "parent coaching",
+        "rehearsal",
+        "visual routine",
+        "child transition",
+        "sensory support",
+        "caregiver"
+      ]
     },
     {
       "url": "/resources/clinical-depth/assessment-decision-report-planner.html",
@@ -777,7 +872,14 @@
           "What to watch next?"
         ]
       },
-      "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval"
+      "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval",
+      "searchTerms": [
+        "assessment report",
+        "interpretation",
+        "feedback",
+        "neuropsychological evaluation",
+        "testing access"
+      ]
     },
     {
       "url": "/resources/clinical-depth/episode-context-function-map.html",
@@ -813,7 +915,15 @@
           "What to watch next?"
         ]
       },
-      "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval"
+      "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval",
+      "searchTerms": [
+        "mood episode",
+        "voices",
+        "sleep change",
+        "bipolar episode",
+        "psychosis recovery",
+        "function timeline"
+      ]
     },
     {
       "url": "/resources/clinical-depth/substance-use-parallel-care-map.html",
@@ -851,7 +961,17 @@
           "What to watch next?"
         ]
       },
-      "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval"
+      "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval",
+      "searchTerms": [
+        "withdrawal",
+        "overdose",
+        "harm reduction",
+        "substance use",
+        "mental health",
+        "housing",
+        "handoff",
+        "case manager"
+      ]
     },
     {
       "url": "/resources/school/clinical/adhd.html",
