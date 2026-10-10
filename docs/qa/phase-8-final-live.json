@@ -1,0 +1,1482 @@
+{
+  "reviewDate": "2026-10-10",
+  "sha": "d1838f6d35dc87ff1838f636fbb4cab23b8ca26c",
+  "deployment": {
+    "id": "dpl_Ghv1W3TD6oPCkpM7THwNCb9PBB8o",
+    "name": "clinical-practice-library",
+    "url": "clinical-practice-library-3ft7ll3o8-cohon-family.vercel.app",
+    "created": 1791610507492,
+    "state": "READY",
+    "target": null,
+    "creator": {
+      "uid": "TaRGm39oWXu2l9qnnKKMojEL",
+      "username": "sophiakorb-5787"
+    },
+    "meta": {
+      "githubCommitRef": "cpl-2-colorful-helpful",
+      "githubCommitSha": "d1838f6d35dc87ff1838f636fbb4cab23b8ca26c",
+      "githubCommitMessage": "Publish wave 5: complete 150-resource clinical expansion with evidence and QA",
+      "githubRepo": "clinical-practice-library",
+      "githubOrg": "SophiaKorb"
+    },
+    "inspectorUrl": "https://vercel.com/cohon-family/clinical-practice-library/Ghv1W3TD6oPCkpM7THwNCb9PBB8o",
+    "isRollbackCandidate": false
+  },
+  "verification": "Live HTTP status, expected HTML text and PDF signature/content type; not rendered browser, keyboard, screen-reader or professional clinical approval",
+  "counts": {
+    "resourcePages": 150,
+    "pdfCompanions": 25,
+    "additionalNavigationAndAssets": 24,
+    "totalURLs": 199
+  },
+  "checks": [
+    {
+      "path": "resources/clinical-topics/bipolar-episode-timeline/formulation.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/bipolar-episode-timeline/case.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/bipolar-episode-timeline/support-map.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/bipolar-episode-timeline/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/bipolar-episode-timeline/care-partner.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/bipolar-episode-timeline/progress-review.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/voices-collaborative-coping/formulation.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/voices-collaborative-coping/case.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/voices-collaborative-coping/support-map.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/voices-collaborative-coping/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/voices-collaborative-coping/care-partner.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/voices-collaborative-coping/progress-review.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/sleep-loss-activation/formulation.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/sleep-loss-activation/case.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/sleep-loss-activation/support-map.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/sleep-loss-activation/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/sleep-loss-activation/care-partner.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/sleep-loss-activation/progress-review.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/panic-alarm-loop/formulation.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/panic-alarm-loop/case.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/panic-alarm-loop/support-map.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/panic-alarm-loop/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/panic-alarm-loop/care-partner.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/panic-alarm-loop/progress-review.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/social-anxiety-attention/formulation.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/social-anxiety-attention/case.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/social-anxiety-attention/support-map.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/social-anxiety-attention/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/social-anxiety-attention/care-partner.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/social-anxiety-attention/progress-review.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/ocd-mental-rituals/formulation.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/ocd-mental-rituals/case.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/ocd-mental-rituals/support-map.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/ocd-mental-rituals/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/ocd-mental-rituals/care-partner.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/ocd-mental-rituals/progress-review.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/depression-activity-reward/formulation.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/depression-activity-reward/case.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/depression-activity-reward/support-map.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/depression-activity-reward/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/depression-activity-reward/care-partner.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/depression-activity-reward/progress-review.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/trauma-cue-orientation/formulation.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/trauma-cue-orientation/case.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/trauma-cue-orientation/support-map.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/trauma-cue-orientation/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/trauma-cue-orientation/care-partner.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/trauma-cue-orientation/progress-review.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/dissociation-function-orientation/formulation.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/dissociation-function-orientation/case.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/dissociation-function-orientation/support-map.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/dissociation-function-orientation/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/dissociation-function-orientation/care-partner.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/dissociation-function-orientation/progress-review.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/child-grief-continuing-bonds/formulation.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/child-grief-continuing-bonds/case.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/child-grief-continuing-bonds/support-map.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/child-grief-continuing-bonds/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/child-grief-continuing-bonds/care-partner.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/child-grief-continuing-bonds/progress-review.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/restrictive-eating-coordination/formulation.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/restrictive-eating-coordination/case.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/restrictive-eating-coordination/support-map.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/restrictive-eating-coordination/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/restrictive-eating-coordination/care-partner.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/restrictive-eating-coordination/progress-review.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/binge-eating-patterns/formulation.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/binge-eating-patterns/case.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/binge-eating-patterns/support-map.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/binge-eating-patterns/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/binge-eating-patterns/care-partner.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/binge-eating-patterns/progress-review.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/adult-autism-load-recovery/formulation.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/adult-autism-load-recovery/case.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/adult-autism-load-recovery/support-map.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/adult-autism-load-recovery/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/adult-autism-load-recovery/care-partner.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/adult-autism-load-recovery/progress-review.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/adult-adhd-task-starts/formulation.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/adult-adhd-task-starts/case.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/adult-adhd-task-starts/support-map.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/adult-adhd-task-starts/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/adult-adhd-task-starts/care-partner.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/adult-adhd-task-starts/progress-review.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/aphasia-communication-access/formulation.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/aphasia-communication-access/case.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/aphasia-communication-access/support-map.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/aphasia-communication-access/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/aphasia-communication-access/care-partner.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/aphasia-communication-access/progress-review.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/learning-instruction-access/formulation.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/learning-instruction-access/case.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/learning-instruction-access/support-map.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/learning-instruction-access/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/learning-instruction-access/care-partner.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/learning-instruction-access/progress-review.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/intellectual-disability-supported-choice/formulation.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/intellectual-disability-supported-choice/case.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/intellectual-disability-supported-choice/support-map.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/intellectual-disability-supported-choice/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/intellectual-disability-supported-choice/care-partner.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/intellectual-disability-supported-choice/progress-review.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/tics-context-impact/formulation.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/tics-context-impact/case.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/tics-context-impact/support-map.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/tics-context-impact/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/tics-context-impact/care-partner.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/tics-context-impact/progress-review.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/bfrb-awareness-support/formulation.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/bfrb-awareness-support/case.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/bfrb-awareness-support/support-map.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/bfrb-awareness-support/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/bfrb-awareness-support/care-partner.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/bfrb-awareness-support/progress-review.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/body-dysmorphia-checking/formulation.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/body-dysmorphia-checking/case.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/body-dysmorphia-checking/support-map.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/body-dysmorphia-checking/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/body-dysmorphia-checking/care-partner.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/body-dysmorphia-checking/progress-review.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/health-anxiety-medical-plan/formulation.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/health-anxiety-medical-plan/case.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/health-anxiety-medical-plan/support-map.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/health-anxiety-medical-plan/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/health-anxiety-medical-plan/care-partner.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/health-anxiety-medical-plan/progress-review.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/chronic-pain-pacing/formulation.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/chronic-pain-pacing/case.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/chronic-pain-pacing/support-map.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/chronic-pain-pacing/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/chronic-pain-pacing/care-partner.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/chronic-pain-pacing/progress-review.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/insomnia-cbti-readiness/formulation.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/insomnia-cbti-readiness/case.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/insomnia-cbti-readiness/support-map.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/insomnia-cbti-readiness/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/insomnia-cbti-readiness/care-partner.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/insomnia-cbti-readiness/progress-review.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/child-aggression-caregiver-coaching/formulation.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/child-aggression-caregiver-coaching/case.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/child-aggression-caregiver-coaching/support-map.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/child-aggression-caregiver-coaching/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/child-aggression-caregiver-coaching/care-partner.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/child-aggression-caregiver-coaching/progress-review.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/sibling-conflict-safety-repair/formulation.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/sibling-conflict-safety-repair/case.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/sibling-conflict-safety-repair/support-map.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/sibling-conflict-safety-repair/client-workbook.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/sibling-conflict-safety-repair/care-partner.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/sibling-conflict-safety-repair/progress-review.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/downloads/topic-adult-adhd-task-starts.pdf",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "application/pdf"
+    },
+    {
+      "path": "resources/downloads/topic-adult-autism-load-recovery.pdf",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "application/pdf"
+    },
+    {
+      "path": "resources/downloads/topic-aphasia-communication-access.pdf",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "application/pdf"
+    },
+    {
+      "path": "resources/downloads/topic-bfrb-awareness-support.pdf",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "application/pdf"
+    },
+    {
+      "path": "resources/downloads/topic-binge-eating-patterns.pdf",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "application/pdf"
+    },
+    {
+      "path": "resources/downloads/topic-bipolar-episode-timeline.pdf",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "application/pdf"
+    },
+    {
+      "path": "resources/downloads/topic-body-dysmorphia-checking.pdf",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "application/pdf"
+    },
+    {
+      "path": "resources/downloads/topic-child-aggression-caregiver-coaching.pdf",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "application/pdf"
+    },
+    {
+      "path": "resources/downloads/topic-child-grief-continuing-bonds.pdf",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "application/pdf"
+    },
+    {
+      "path": "resources/downloads/topic-chronic-pain-pacing.pdf",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "application/pdf"
+    },
+    {
+      "path": "resources/downloads/topic-depression-activity-reward.pdf",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "application/pdf"
+    },
+    {
+      "path": "resources/downloads/topic-dissociation-function-orientation.pdf",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "application/pdf"
+    },
+    {
+      "path": "resources/downloads/topic-health-anxiety-medical-plan.pdf",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "application/pdf"
+    },
+    {
+      "path": "resources/downloads/topic-insomnia-cbti-readiness.pdf",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "application/pdf"
+    },
+    {
+      "path": "resources/downloads/topic-intellectual-disability-supported-choice.pdf",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "application/pdf"
+    },
+    {
+      "path": "resources/downloads/topic-learning-instruction-access.pdf",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "application/pdf"
+    },
+    {
+      "path": "resources/downloads/topic-ocd-mental-rituals.pdf",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "application/pdf"
+    },
+    {
+      "path": "resources/downloads/topic-panic-alarm-loop.pdf",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "application/pdf"
+    },
+    {
+      "path": "resources/downloads/topic-restrictive-eating-coordination.pdf",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "application/pdf"
+    },
+    {
+      "path": "resources/downloads/topic-sibling-conflict-safety-repair.pdf",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "application/pdf"
+    },
+    {
+      "path": "resources/downloads/topic-sleep-loss-activation.pdf",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "application/pdf"
+    },
+    {
+      "path": "resources/downloads/topic-social-anxiety-attention.pdf",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "application/pdf"
+    },
+    {
+      "path": "resources/downloads/topic-tics-context-impact.pdf",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "application/pdf"
+    },
+    {
+      "path": "resources/downloads/topic-trauma-cue-orientation.pdf",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "application/pdf"
+    },
+    {
+      "path": "resources/downloads/topic-voices-collaborative-coping.pdf",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "application/pdf"
+    },
+    {
+      "path": "",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "library.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/index.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/index.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/topic-tools.js",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-topics/topic-tools.css",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-resource-finder.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/clinical-finder-data.js",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "resources/qa-status.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/training/workforce-learning-center.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "guides/adhd.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/school/clinical/adhd.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "guides/autism.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/school/clinical/autism.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "guides/anxiety.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/school/clinical/anxiety.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "guides/depression.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/school/clinical/depression.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "guides/dyslexia.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/school/clinical/dyslexia.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "guides/dyscalculia.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/school/clinical/dyscalculia.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "guides/dysgraphia.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "resources/school/clinical/dysgraphia.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true,
+      "contentType": "text/html; charset=utf-8"
+    }
+  ],
+  "aliasAndLegacyChecks": [
+    {
+      "url": "https://clinical-practice-library.vercel.app/",
+      "status": 200,
+      "success": true,
+      "expectedContent": true
+    },
+    {
+      "url": "https://clinical-practice-library.vercel.app/resources/school/clinical/adhd.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true
+    },
+    {
+      "url": "https://clinical-practice-library-git-cpl-2-colorfu-f5f645-cohon-family.vercel.app/resources/clinical-topics/index.html",
+      "status": 200,
+      "success": true,
+      "expectedContent": true
+    }
+  ],
+  "production": {
+    "id": "dpl_DBmCm1WvuCaP8EsnHFDkLtF3t9eN",
+    "name": "clinical-practice-library",
+    "url": "clinical-practice-library-djel9nl16-cohon-family.vercel.app",
+    "created": 1791598688468,
+    "state": "READY",
+    "target": "production",
+    "creator": {
+      "uid": "TaRGm39oWXu2l9qnnKKMojEL",
+      "username": "sophiakorb-5787"
+    },
+    "meta": {
+      "githubCommitRef": "main",
+      "githubCommitSha": "2b8c5ba1d66fa397548c9c10a006d764d8c1018b",
+      "githubCommitMessage": "Display six separate thermometer levels in current and retained toolkits",
+      "githubRepo": "clinical-practice-library",
+      "githubOrg": "SophiaKorb"
+    },
+    "inspectorUrl": "https://vercel.com/cohon-family/clinical-practice-library/DBmCm1WvuCaP8EsnHFDkLtF3t9eN",
+    "isRollbackCandidate": true
+  },
+  "githubCI": [
+    {
+      "name": "CPL site QA",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "d1838f6d35dc87ff1838f636fbb4cab23b8ca26c",
+      "url": "https://github.com/SophiaKorb/clinical-practice-library/actions/runs/38027999673"
+    }
+  ],
+  "remaining": [
+    "Qualified clinical review of all new original materials, prioritizing high-stakes topics",
+    "Browser rendering, mobile geometry, real keyboard/screen reader and print-dialog QA",
+    "Full guideline retrieval/systematic review where source access was limited"
+  ]
+}

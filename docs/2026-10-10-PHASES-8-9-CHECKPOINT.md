@@ -1,5 +1,17 @@
 # Phases 8–9 development checkpoint
 
+## Current verified status
+
+150 distinct original resources published across five waves, plus 25 original PDF companions excluded from the count. Final implementation commit `d1838f6d35dc87ff1838f636fbb4cab23b8ca26c` is deployed READY at https://clinical-practice-library-3ft7ll3o8-cohon-family.vercel.app.
+
+Stable entry: https://clinical-practice-library-git-cpl-2-colorfu-f5f645-cohon-family.vercel.app/resources/clinical-topics/index.html
+
+All 150 resource pages, all 25 PDF downloads (PDF signature verified), and 24 navigation/shared asset URLs returned HTTP 200 with expected content on the final implementation deployment. Stable alias and two legacy production URLs also passed HTTP checks. GitHub CPL site QA completed successfully for the exact implementation SHA: https://github.com/SophiaKorb/clinical-practice-library/actions/runs/38027999673. Complete evidence is in `docs/qa/phase-8-final-live.json`.
+
+Legacy production deployment remains `dpl_DBmCm1WvuCaP8EsnHFDkLtF3t9eN`, READY on unchanged main SHA `2b8c5ba1d66fa397548c9c10a006d764d8c1018b`. Main was not updated or promoted.
+
+Qualified clinical review, full source review where access was restricted, and rendered browser/mobile/keyboard/screen-reader/print-dialog QA remain open. HTTP, source audits and test harnesses do not establish clinical approval or full accessibility conformance.
+
 ## Wave 1 — built, publication verification pending
 
 Wave 1: 30 original resources across five topics: bipolar episodes, voices/coping, sleep loss/activation, panic, social anxiety. Six distinct purposes each: clinician formulation, interactive fictional case, visual support map, client workbook, care-partner guide, functional progress review. Five original PDF companions and six collection/index pages are excluded from the count. Target remains 150.
@@ -67,3 +79,7 @@ Final source check: NICE eating/panic PDF retrieval also returned 403. PubMed Co
 Final local QA: all existing catalog/parity/homepage/scale/clinical expansion/assessment/practice-learning/finder tests plus 150-resource regression pass. 7,840 local references have zero broken links; 449 current HTML pages have zero source-audit findings; 61 PDFs have zero structural failures. Twenty-five new PDFs rendered and visually inspected across five waves; learning parallel-branch repair re-rendered separately. Script syntax audit result recorded after completion.
 
 Final syntax audit: 538 shipped scripts/event handlers, zero errors. All regression commands passed; these results do not imply licensed clinical approval, browser rendering or full WCAG conformance.
+
+## Wave 5 — published and verified
+
+Commit `d1838f6d35dc87ff1838f636fbb4cab23b8ca26c`; deployment `dpl_Ghv1W3TD6oPCkpM7THwNCb9PBB8o` READY. Final comprehensive HTTP audit includes all five waves on this revision; 199/199 responses pass. Review flags remain explicit in the public QA page and per-resource evidence panels.
