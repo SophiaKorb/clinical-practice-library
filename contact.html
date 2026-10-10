@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Sophia Korb Cohon, PhD</title><meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Send general feedback and questions about the Clinical Practice Library or DSM Symptom Lab.">
+<style>
+:root{color-scheme:light;--ink:#233b3e;--muted:#53676a;--line:#c6d8d5;--paper:#fbfaf5;--accent:#216d70;--wash:#edf5f1}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,-apple-system,Segoe UI,sans-serif}
+a{color:#14656a}a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #e4a75a;outline-offset:2px}
+header{padding:1rem max(1.25rem,calc((100vw - 980px)/2));border-bottom:1px solid var(--line);background:#fff;display:flex;gap:1rem;flex-wrap:wrap;align-items:center;justify-content:space-between}
+header a{text-decoration:none;font-weight:700}main{max-width:740px;padding:2.5rem 1.25rem 4rem;margin:auto}.eyebrow{text-transform:uppercase;font-size:.75rem;letter-spacing:.12em;color:var(--accent);font-weight:700}h1{font:500 clamp(2.3rem,6vw,3.6rem)/1.14 Georgia,serif;letter-spacing:-.025em;margin:.45rem 0 1rem}
+.intro{max-width:630px;color:var(--muted)}.notice{padding:1rem 1.15rem;border-left:4px solid var(--accent);background:var(--wash);border-radius:.35rem;margin:1.5rem 0}
+form{display:grid;gap:1.15rem;margin:1.5rem 0}label{display:block;font-weight:650;margin-bottom:.4rem}input,textarea,select{display:block;width:100%;padding:.8rem;border:1px solid #8eaaa9;border-radius:.55rem;background:white;color:var(--ink);font:inherit}
+textarea{resize:vertical;min-height:135px}small{color:var(--muted)}.checkbox{display:flex;gap:.65rem;align-items:flex-start;font-weight:450}
+.checkbox input{width:1.25rem;height:1.25rem;flex-shrink:0;margin-top:.25rem}button{background:var(--accent);color:#fff;border:0;border-radius:.55rem;padding:.82rem 1.3rem;font:700 1rem system-ui;cursor:pointer;min-height:46px}button:disabled{cursor:not-allowed;background:#879c9b}
+#state{margin:1rem 0;min-height:2rem}#state.error{color:#a12e2e}#state.success{color:#195d46}footer{padding:1.5rem 0;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line)}
+.trap{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+</style></head>
+<body><header><a id="back" href="/">← Back to the project</a><span>Sophia Korb Cohon, PhD</span></header>
+<main><div class="eyebrow">Project questions & feedback</div><h1>Contact Sophia</h1>
+<p class="intro">Questions, suggestions, or accessibility feedback about a project? This contact form keeps the destination email private and checks messages for automated spam.</p>
+<div class="notice"><strong>For general inquiries only.</strong> Please do not include names or details of patients, health information, protected records, or confidential work material. This form is not for treatment requests, emergencies, or clinical care. For urgent safety concerns, contact local emergency services.</div>
+<p id="state" role="status" aria-live="polite">Checking contact form availability…</p>
+<form id="contact" novalidate>
+<div><label for="name">Your name (optional)</label><input id="name" name="name" type="text" maxlength="100" autocomplete="name"></div>
+<div><label for="email">Your email <span aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" required></div>
+<div><label for="topic">What is this about? <span aria-hidden="true">*</span></label><select id="topic" name="topic" required><option value="">Choose a topic</option><option>Library feedback</option><option>DSM Symptom Lab</option><option>Accessibility suggestion</option><option>Technical issue</option><option>Other</option></select></div>
+<div><label for="message">Message <span aria-hidden="true">*</span></label><textarea id="message" name="message" minlength="15" maxlength="1800" required placeholder="Please describe your question without personal health or patient information."></textarea><small>15–1,800 characters.</small></div>
+<div class="trap" aria-hidden="true"><label for="website">Leave this blank</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+<label class="checkbox" for="noSensitiveInfo"><input id="noSensitiveInfo" type="checkbox" required><span>I confirm that my message contains no patient information or other confidential material.</span></label>
+<div id="challenge"></div><input type="hidden" id="proof"><input type="hidden" id="turnstileToken">
+<button id="send" type="submit" disabled>Send message</button>
+</form><footer>Created by <strong>Sophia Korb Cohon, PhD</strong>. Messages are for project feedback only; this contact form is not a secure patient portal.</footer></main>
+<script>
+(()=>{'use strict';
+const $=id=>document.getElementById(id), state=$('state'),form=$('contact'),send=$('send');
+let configured=false,proof='',challenge='';
+const path=location.host.includes('clinical-practice-library')?'Clinical Practice Library':'DSM Symptom Lab';
+$('back').textContent='← '+path; $('back').href='/';
+function status(s,kind=''){state.textContent=s;state.className=kind;}
+async function setup(){
+ send.disabled=true; configured=false;challenge='';
+ try{
+ const res=await fetch('/api/contact',{cache:'no-store'});if(!res.ok)throw Error('offline');
+ const data=await res.json();
+ if(!data.ready){status('This contact form is being set up. Message delivery is not active yet.','');return;}
+ proof=data.proof;
+ if(!/^[\w-]+$/.test(data.siteKey))throw Error('bad site key');
+ const script=document.createElement('script');
+ script.src='https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+ script.async=true;script.defer=true;
+ script.onload=()=>{window.turnstile.render('#challenge',{sitekey:data.siteKey,action:'contact',
+ callback:(t)=>{challenge=t;configured=true;send.disabled=false;status('Contact form ready.');},
+ 'expired-callback':()=>{challenge='';send.disabled=true;status('Security check expired. Please complete it again.');},
+ 'error-callback':()=>{challenge='';send.disabled=true;status('Security check unavailable. Try refreshing the page.','error');}})};
+ script.onerror=()=>status('Security check could not load. Please try again later.','error');
+ document.head.appendChild(script);status('Loading spam protection…');
+ }catch(_){status('Contact form is temporarily unavailable. Please try again later.','error')}
+}
+form.addEventListener('submit',async(ev)=>{ev.preventDefault();
+ if(!configured || !challenge || !form.reportValidity())return;
+ send.disabled=true;status('Sending securely…');
+ const body={name:$('name').value,email:$('email').value,topic:$('topic').value,
+ message:$('message').value,website:$('website').value,noSensitiveInfo:$('noSensitiveInfo').checked,
+ proof,challenge};
+ try{const r=await fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+ const data=await r.json();
+ if(!r.ok || !data.ok)throw Error(data.error||'Message not delivered.');
+ form.reset();status('Message sent. Thank you for your feedback.','success');send.disabled=true;
+ if(window.turnstile)window.turnstile.reset();
+ }catch(err){status(err.message||'Unable to send. Please try again.','error');send.disabled=false;}
+});setup();
+})();
+</script></body></html>
