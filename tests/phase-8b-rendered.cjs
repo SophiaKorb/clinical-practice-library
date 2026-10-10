@@ -10,6 +10,8 @@ const cases=[
  ['safety','/resources/clinical-depth/self-harm-safety-continuity.html'],
  ['dissociation','/resources/clinical-depth/complex-dissociation-functional-care.html'],
  ['personality','/resources/clinical-depth/complex-personality-longitudinal-care.html'],
+ ['assessment','/resources/clinical-depth/neuropsych-evaluation-access-validity.html'],
+ ['report','/resources/clinical-depth/assessment-decision-report-planner.html'],
  ['function','/resources/clinical-depth/dissociation-function-observation.html'],
  ['homepage','/']
 ];
@@ -46,6 +48,12 @@ const cases=[
     assert.equal(await page.locator('.cycle-map .cycle-node').count(),5);
     assert.ok(await page.locator('#select tbody tr').count()>=4);
    }
+   if(name==='assessment')assert.ok(await page.locator('#access tbody tr').count()>=4);
+   if(name==='report'){
+    await page.locator('textarea#decision').fill('Fictional example');
+    await page.getByRole('button',{name:'Clear entries'}).click();
+    assert.equal(await page.locator('textarea#decision').inputValue(),'');
+   }
    if(name==='function'){
     await page.locator('textarea#task').fill('Fictional example only');
     await page.getByRole('button',{name:'Clear all entries'}).click();
@@ -74,5 +82,5 @@ const cases=[
  }
  await browser.close();
  if(issues.length)throw Error(issues.join('\n'));
- console.log('PASS 6 routes at 320/390/768/1280; Chromium screenshots, no document overflow, print PDFs, keyboard disclosure and native More, clear fields');
+ console.log('PASS 8 routes at 320/390/768/1280; Chromium screenshots, no document overflow, print PDFs, keyboard disclosure and native More, clear fields');
 })().catch(e=>{console.error(e);process.exitCode=1});

@@ -88,7 +88,12 @@
         "From screening to integrated feedback and change in functioning, not diagnosis alone"
       ],
       "firstAction": "Evaluation access/validity workflow and actionable formulation case studies",
-      "review": "qualified neuropsychologist; SLP and disability-access review"
+      "review": "qualified neuropsychologist; SLP and disability-access review",
+      "deliveredPaths": [
+        "resources/clinical-depth/neuropsych-evaluation-access-validity.html",
+        "resources/clinical-depth/assessment-decision-report-planner.html"
+      ],
+      "implementationStatus": "New access/validity and report-planning layer added. Qualified specialty review and broader battery/report development pending."
     },
     {
       "key": "neuropsych",
@@ -106,7 +111,12 @@
         "Acquired aphasia evaluation and neuropsychological testing modifications; boundaries of normed scores"
       ],
       "firstAction": "Question-specific workflow, fictional integrated report and feedback supports",
-      "review": "qualified assessment reviewers and licensing checks"
+      "review": "qualified assessment reviewers and licensing checks",
+      "deliveredPaths": [
+        "resources/clinical-depth/neuropsych-evaluation-access-validity.html",
+        "resources/clinical-depth/assessment-decision-report-planner.html"
+      ],
+      "implementationStatus": "New access/validity and report-planning layer added. Qualified specialty review and broader battery/report development pending."
     },
     {
       "key": "psychosis-bipolar",

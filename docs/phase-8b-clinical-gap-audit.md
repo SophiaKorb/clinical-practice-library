@@ -60,3 +60,5 @@ Audit established; first clinical deepening batch in progress. The audit is a pr
 - P0 complex dissociation: `resources/clinical-depth/complex-dissociation-functional-care.html` plus practical function map; PTSD subtype, DID and medical/neurological alternatives; no assumed memory recovery.
 - P1 complex personality: `resources/clinical-depth/complex-personality-longitudinal-care.html`; structured modalities, rupture repair, differential and longitudinal outcomes. Links back to existing generalist and relational tools.
 - Browser and qualified review statuses remain distinct and must be confirmed from CI/review logs, not inferred from existence of these pages.
+
+- P1 neuropsych assessment: `resources/clinical-depth/neuropsych-evaluation-access-validity.html` and `resources/clinical-depth/assessment-decision-report-planner.html`; two fictional cases (acquired aphasia and developmental differences with school threat), valid-versus-descriptive score interpretation, and feedback. Review by qualified neuropsychology/SLP/cultural assessment clinicians remains pending.

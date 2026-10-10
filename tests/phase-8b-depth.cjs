@@ -1,13 +1,13 @@
 const fs = require('node:fs'), assert = require('node:assert/strict');
 const root = 'resources/clinical-depth/';
-const names = ['index.html','self-harm-safety-continuity.html','complex-dissociation-functional-care.html','dissociation-function-observation.html','complex-personality-longitudinal-care.html'];
+const names = ['index.html','self-harm-safety-continuity.html','complex-dissociation-functional-care.html','dissociation-function-observation.html','complex-personality-longitudinal-care.html','neuropsych-evaluation-access-validity.html','assessment-decision-report-planner.html'];
 for (const name of names) {
  const html=fs.readFileSync(root+name,'utf8');
  assert.match(html,/<main id="content">/,'main present '+name);
  assert.equal((html.match(/<nav class="cpl-static-nav"/g)||[]).length,1,'global nav '+name);
  assert.equal((html.match(/href="\/resources\/site-navigation.css"/g)||[]).length,1,'nav style '+name);
  assert.match(html,/\/resources\/clinical-depth\/clinical-depth.css/,'clinical depth style '+name);
- assert.ok(html.includes('Qualified specialty clinical review pending'),'qualified review gate '+name);
+ assert.match(html,/Qualified (specialty|assessment) clinical review pending/,'qualified review gate '+name);
  assert.ok(!html.includes('aria-current="page"'),'do not mislabel current nav '+name);
  const ids = new Set([...html.matchAll(/\bid="([^"]+)"/g)].map(x=>x[1]));
  assert.equal(ids.size,[...html.matchAll(/\bid="([^"]+)"/g)].length,'unique ids '+name);
@@ -30,6 +30,12 @@ const personality=fs.readFileSync(root+'complex-personality-longitudinal-care.ht
 for(const term of ['NICE CG78','APA Practice Guideline','GPM','rupture','Engulfment','Abandonment','Leah','supervision']) assert.ok(personality.toLowerCase().includes(term.toLowerCase()));
 assert.match(personality,/cycle-map/);
 assert.match(personality,/Clinical Practice Library/);
+const neuro=fs.readFileSync(root+'neuropsych-evaluation-access-validity.html','utf8');
+for(const term of ['ASHA Aphasia','Jules','Casey','comprehension','norm','interpretation']) assert.ok(neuro.toLowerCase().includes(term.toLowerCase()));
+const report=fs.readFileSync(root+'assessment-decision-report-planner.html','utf8');
+assert.equal((report.match(/<textarea\b/g)||[]).length,8);
+assert.equal((report.match(/<label for="/g)||[]).length,8);
+assert.ok(report.includes('Clear entries'));
 const obs=fs.readFileSync(root+names[3],'utf8');
 for(const domain of ['Personal care','Work/school','Finances','Travel','Conversations']) assert.ok(obs.includes(domain));
 assert.equal((obs.match(/<textarea\b/g)||[]).length,5);
