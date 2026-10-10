@@ -55,9 +55,62 @@ def navigation(path: str, spanish: bool) -> str:
         active = ' aria-current="page"' if url == current else ''
         links.append('<a href="' + url + '"' + active + '>' + html.escape(label) + '</a>')
     label = "Secciones de la Biblioteca de Práctica Clínica" if spanish else "Clinical Practice Library sections"
-    return ('<nav class="cpl-static-nav" aria-label="' + label + '">'
+    # The phone panel shows only the essential actions. Everything remains
+    # reachable through a native, keyboard-accessible details disclosure.
+    # No JavaScript, sticky overlay or extra vertical navigation row.
+    quick = (
+        ("/resources/clinical-resource-finder.html", "Find", "Buscar"),
+        ("/resources/clinical-topics/index.html", "Topics", "Temas"),
+        ("/resources/therapy/visual-reasoning-toolkit.html", "Tools", "Visuales"),
+    )
+    quick_html = ''.join(
+        '<a class="cpl-static-nav__quick cpl-static-nav__quick--' + str(i) +
+        '" href="' + url + '"' +
+        (' aria-current="page"' if url == current else '') + '>' +
+        html.escape(es if spanish else en) + '</a>'
+        for i, (url, en, es) in enumerate(quick)
+    )
+    # The menu also includes Topics and Visual tools for narrow phones where
+    # one quick link is hidden. Its open/closed state uses native <details>.
+    more_urls = (
+        "/resources/index.html",
+        "/resources/clinical-topics/index.html",
+        "/resources/therapy/visual-reasoning-toolkit.html",
+        "/resources/therapy/communication-supports-toolkit.html",
+        "/resources/therapy/treatment-plan-menu.html",
+        "/resources/assessment/assessment-start-here.html",
+        "/resources/training/workforce-learning-center.html",
+        "/#espanol",
+        "/#diagnosis-guides",
+    )
+    labels = {url: (es if spanish else en) for url, en, es in LINKS}
+    labels["/#diagnosis-guides"] = "Guías de diagnóstico" if spanish else "Diagnosis guides"
+    more_links = ''.join(
+        '<a href="' + url + '"' +
+        (' aria-current="page"' if url == current else '') + '>' +
+        html.escape(labels[url]) + '</a>' for url in more_urls
+    )
+    more_label = "Más secciones" if spanish else "More sections"
+    compact = ('<div class="cpl-static-nav__mobile">' + quick_html +
+               '<details class="cpl-static-nav__more"><summary>' +
+               ('Más' if spanish else 'More') +
+               ' <span aria-hidden="true">⌄</span></summary>' +
+               '<div class="cpl-static-nav__menu" aria-label="' +
+               more_label + '">' + more_links + '</div></details></div>')
+    # Only suppress a genuinely duplicate, controls-free secondary header
+    # on mobile. Other headers may contain print buttons or unique actions.
+    redundant = (path in (
+        "index.html", "resources/index.html",
+        "resources/clinical-resource-finder.html",
+        "resources/therapy/visual-reasoning-toolkit.html",
+        "resources/therapy/communication-supports-toolkit.html",
+        "resources/training/workforce-learning-center.html",
+    ) or path.startswith("resources/clinical-topics/"))
+    suppress = ' data-replaces-header="true"' if redundant else ''
+    return ('<nav class="cpl-static-nav" aria-label="' + label + '"' + suppress + '>'
             '<a class="cpl-static-nav__brand" href="/" aria-label="Clinical Practice Library home">CPL</a>'
-            '<div class="cpl-static-nav__links">' + ''.join(links) + '</div></nav>')
+            '<div class="cpl-static-nav__links">' + ''.join(links) + '</div>' +
+            compact + '</nav>')
 
 
 def decorate(text: str, path: str) -> str:

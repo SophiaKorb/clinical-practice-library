@@ -10,3 +10,7 @@ Global destinations: Home; Browse; Find resources; Clinical topics; Visual tools
 
 ## Outstanding
 Source-level checks do not establish device rendering, screen-reader usefulness, scrolling ergonomics or print-dialog equivalence. Inspect on actual 320, 390, 768 and desktop viewports, including keyboard focus, zoom, long localized link labels and print. Confirm clinical clarity and that the top panel does not obscure any skip link, consent control or decision aid. Retain all qualified clinical review gates.
+
+## Mobile simplification
+
+In response to phone density, keep desktop's full link strip but show only `CPL` (Home), Find, Topics and Visual Tools as compact text actions on phones, plus a native `More` disclosure for other destinations. At widths 360px and below, Topics remains available inside More instead of crowding the first row. The More list is not rendered until expanded; links are labeled in Spanish on Spanish pages. A redundant original link-only header is hidden on phone for known home, topic, finder and flagship pages, but print/action headers remain. The top bar remains in normal document flow and never becomes sticky. The app does not store menu state or require scripting.
