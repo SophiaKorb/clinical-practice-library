@@ -1,0 +1,42 @@
+name: Phase 8B rendered browser QA
+on:
+  push:
+    branches: [cpl-2-colorful-helpful]
+    paths:
+      - '.github/workflows/phase-8b-rendered-qa.yml'
+      - 'resources/clinical-depth/**'
+      - 'resources/site-navigation.css'
+      - 'tests/phase-8b-rendered.cjs'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser-mobile-print:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Install Playwright and bundled Chromium
+        run: |
+          npm install --no-save --no-package-lock playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Start local CPL server
+        run: |
+          python -m http.server 8765 --bind 127.0.0.1 >/tmp/cpl-http.log 2>&1 &
+          sleep 2
+      - name: Render 320/390/768/1280 and check keyboard and printable views
+        run: node tests/phase-8b-rendered.cjs
+      - name: Save representative screenshots and rendered PDFs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase-8b-rendered-evidence
+          path: /tmp/cpl-phase-8b-rendered
+          if-no-files-found: ignore
+          retention-days: 10
