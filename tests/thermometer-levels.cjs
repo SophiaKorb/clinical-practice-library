@@ -1,0 +1,14 @@
+const fs=require('node:fs'),assert=require('node:assert/strict');
+const read=p=>fs.readFileSync(p,'utf8');
+const fresh=read('resources/therapy/communication-supports-toolkit.html');
+const retained=read('legacy/resources/therapy/communication-supports-toolkit.html');
+const css=read('resources/therapy/communication-toolkit.css');
+const a=fresh.match(/<div class="thermo-levels"[^>]*>([\s\S]*?)<\/div>/);
+assert.ok(a,'thermometer exists');
+assert.deepEqual([...a[1].matchAll(/<span><b>(\d)<\/b>\s*([^<]+)<\/span>/g)].map(x=>[+x[1],x[2].trim()]),[[5,'TOO MUCH'],[4,'VERY HARD'],[3,'HARD'],[2,'BUILDING'],[1,'OKAY'],[0,'CALM']]);
+const b=retained.match(/<div class="scale">([\s\S]*?)<\/div>/);
+assert.deepEqual([...b[1].matchAll(/<span>(\d)<br>([^<]+)<\/span>/g)].map(x=>[+x[1],x[2]]),[[0,'Calm'],[1,'Okay'],[2,'Building'],[3,'Hard'],[4,'Very hard'],[5,'Too much']]);
+assert.ok(!fresh.includes('4–5')&&!retained.includes('4–5'));
+assert.match(fresh,/six separate levels: 0 calm, 1 okay, 2 building, 3 hard, 4 very hard, 5 too much/);
+assert.match(css,/grid-template-rows:repeat\(6,minmax\(0,1fr\)\)/);
+console.log('Thermometer: six independent levels in flagship and legacy; print/mobile styling and text checked.');
