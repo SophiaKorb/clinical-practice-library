@@ -38,6 +38,24 @@
       "status": "structurally readable; field/widget consistency checked"
     },
     {
+      "path": "resources/downloads/topic-social-anxiety-attention.pdf",
+      "bytes": 3398,
+      "pages": 1,
+      "text_characters": 1283,
+      "fields": 0,
+      "widgets": 0,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "resources/downloads/topic-bipolar-episode-timeline.pdf",
+      "bytes": 3402,
+      "pages": 1,
+      "text_characters": 1315,
+      "fields": 0,
+      "widgets": 0,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
       "path": "resources/downloads/competing-hypotheses-assessment-map.pdf",
       "bytes": 61832,
       "pages": 1,
@@ -56,12 +74,39 @@
       "status": "structurally readable; field/widget consistency checked"
     },
     {
+      "path": "resources/downloads/topic-panic-alarm-loop.pdf",
+      "bytes": 3377,
+      "pages": 1,
+      "text_characters": 1281,
+      "fields": 0,
+      "widgets": 0,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
       "path": "resources/downloads/task-launch-map-fillable.pdf",
       "bytes": 70945,
       "pages": 2,
       "text_characters": 2604,
       "fields": 33,
       "widgets": 33,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "resources/downloads/topic-sleep-loss-activation.pdf",
+      "bytes": 3369,
+      "pages": 1,
+      "text_characters": 1298,
+      "fields": 0,
+      "widgets": 0,
+      "status": "structurally readable; field/widget consistency checked"
+    },
+    {
+      "path": "resources/downloads/topic-voices-collaborative-coping.pdf",
+      "bytes": 3365,
+      "pages": 1,
+      "text_characters": 1255,
+      "fields": 0,
+      "widgets": 0,
       "status": "structurally readable; field/widget consistency checked"
     },
     {

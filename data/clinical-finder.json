@@ -2174,6 +2174,221 @@
       "metadataBasis": "title/path discovery tags"
     },
     {
+      "url": "/resources/clinical-topics/bipolar-episode-timeline/index.html",
+      "title": "Bipolar: episodes, baseline and support",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Psychosis / bipolar"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [],
+        "role": [],
+        "task": [],
+        "step": [
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/clinical-topics/bipolar-episode-timeline/care-partner.html",
+      "title": "Bipolar: episodes, baseline and support — Care-partner guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Psychosis / bipolar"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/bipolar-episode-timeline/client-workbook.html",
+      "title": "Bipolar: episodes, baseline and support — Client workbook",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Psychosis / bipolar"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/bipolar-episode-timeline/formulation.html",
+      "title": "Bipolar: episodes, baseline and support — Clinician formulation guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Psychosis / bipolar"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [
+          "Access / accommodations",
+          "Function-linked support"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Assessment planning",
+          "Treatment planning"
+        ],
+        "step": [
+          "What am I seeing?",
+          "Understanding",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/bipolar-episode-timeline/case.html",
+      "title": "Bipolar: episodes, baseline and support — Interactive case practice",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Psychosis / bipolar"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Skill rehearsal / supervision"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/bipolar-episode-timeline/progress-review.html",
+      "title": "Bipolar: episodes, baseline and support — Progress review tool",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Psychosis / bipolar"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Progress review"
+        ],
+        "step": [
+          "What to watch next?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/bipolar-episode-timeline/support-map.html",
+      "title": "Bipolar: episodes, baseline and support — Visual support map",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Psychosis / bipolar"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Treatment planning"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
       "url": "/resources/handouts/body-clues-and-needs-map.html",
       "title": "Body Clues and Needs Map",
       "format": "HTML",
@@ -2393,6 +2608,23 @@
         "step": [
           "What tool?"
         ]
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/clinical-topics/index.html",
+      "title": "Clinical topic collections",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [],
+        "function": [],
+        "intervention": [],
+        "stage": [],
+        "role": [],
+        "task": [],
+        "step": []
       },
       "priority": 20,
       "metadataBasis": "title/path discovery tags"
@@ -5944,6 +6176,208 @@
       "metadataBasis": "title/path discovery tags"
     },
     {
+      "url": "/resources/clinical-topics/panic-alarm-loop/index.html",
+      "title": "Panic: body sensations and the alarm loop",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Fear / uncertainty"
+        ],
+        "function": [],
+        "intervention": [],
+        "stage": [],
+        "role": [],
+        "task": [],
+        "step": []
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/clinical-topics/panic-alarm-loop/care-partner.html",
+      "title": "Panic: body sensations and the alarm loop — Care-partner guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Fear / uncertainty"
+        ],
+        "function": [],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/panic-alarm-loop/client-workbook.html",
+      "title": "Panic: body sensations and the alarm loop — Client workbook",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Fear / uncertainty"
+        ],
+        "function": [],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/panic-alarm-loop/formulation.html",
+      "title": "Panic: body sensations and the alarm loop — Clinician formulation guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Fear / uncertainty"
+        ],
+        "function": [],
+        "intervention": [
+          "Function-linked support"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Assessment planning",
+          "Treatment planning"
+        ],
+        "step": [
+          "What am I seeing?",
+          "Understanding",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/panic-alarm-loop/case.html",
+      "title": "Panic: body sensations and the alarm loop — Interactive case practice",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Fear / uncertainty"
+        ],
+        "function": [],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Skill rehearsal / supervision"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/panic-alarm-loop/progress-review.html",
+      "title": "Panic: body sensations and the alarm loop — Progress review tool",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Fear / uncertainty"
+        ],
+        "function": [],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Progress review"
+        ],
+        "step": [
+          "What to watch next?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/panic-alarm-loop/support-map.html",
+      "title": "Panic: body sensations and the alarm loop — Visual support map",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Fear / uncertainty"
+        ],
+        "function": [],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Treatment planning"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
       "url": "/resources/handouts/parenting-across-disagreement.html",
       "title": "Parenting Across Disagreement",
       "format": "HTML",
@@ -6260,6 +6694,224 @@
       },
       "priority": 20,
       "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/clinical-topics/voices-collaborative-coping/index.html",
+      "title": "Psychosis: voices, distress and collaborative coping",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Psychosis / bipolar"
+        ],
+        "symptom": [
+          "Overload / distress"
+        ],
+        "function": [],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [],
+        "task": [],
+        "step": []
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/clinical-topics/voices-collaborative-coping/care-partner.html",
+      "title": "Psychosis: voices, distress and collaborative coping — Care-partner guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Psychosis / bipolar"
+        ],
+        "symptom": [
+          "Overload / distress"
+        ],
+        "function": [],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/voices-collaborative-coping/client-workbook.html",
+      "title": "Psychosis: voices, distress and collaborative coping — Client workbook",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Psychosis / bipolar"
+        ],
+        "symptom": [
+          "Overload / distress"
+        ],
+        "function": [],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/voices-collaborative-coping/formulation.html",
+      "title": "Psychosis: voices, distress and collaborative coping — Clinician formulation guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Psychosis / bipolar"
+        ],
+        "symptom": [
+          "Overload / distress"
+        ],
+        "function": [],
+        "intervention": [
+          "Function-linked support"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Assessment planning",
+          "Treatment planning"
+        ],
+        "step": [
+          "What am I seeing?",
+          "Understanding",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/voices-collaborative-coping/case.html",
+      "title": "Psychosis: voices, distress and collaborative coping — Interactive case practice",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Psychosis / bipolar"
+        ],
+        "symptom": [
+          "Overload / distress"
+        ],
+        "function": [],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Skill rehearsal / supervision"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/voices-collaborative-coping/progress-review.html",
+      "title": "Psychosis: voices, distress and collaborative coping — Progress review tool",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Psychosis / bipolar"
+        ],
+        "symptom": [
+          "Overload / distress"
+        ],
+        "function": [],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Progress review"
+        ],
+        "step": [
+          "What to watch next?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/voices-collaborative-coping/support-map.html",
+      "title": "Psychosis: voices, distress and collaborative coping — Visual support map",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Psychosis / bipolar"
+        ],
+        "symptom": [
+          "Overload / distress"
+        ],
+        "function": [],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Treatment planning"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
     },
     {
       "url": "/resources/qa-status.html",
@@ -6706,6 +7358,194 @@
       "metadataBasis": "title/path discovery tags"
     },
     {
+      "url": "/resources/clinical-topics/sleep-loss-activation/index.html",
+      "title": "Sleep loss: exhaustion or rising activation?",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [],
+        "function": [],
+        "intervention": [],
+        "stage": [],
+        "role": [],
+        "task": [],
+        "step": []
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/clinical-topics/sleep-loss-activation/care-partner.html",
+      "title": "Sleep loss: exhaustion or rising activation? — Care-partner guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [],
+        "function": [],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/sleep-loss-activation/client-workbook.html",
+      "title": "Sleep loss: exhaustion or rising activation? — Client workbook",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [],
+        "function": [],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/sleep-loss-activation/formulation.html",
+      "title": "Sleep loss: exhaustion or rising activation? — Clinician formulation guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [],
+        "function": [],
+        "intervention": [
+          "Function-linked support"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Assessment planning",
+          "Treatment planning"
+        ],
+        "step": [
+          "What am I seeing?",
+          "Understanding",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/sleep-loss-activation/case.html",
+      "title": "Sleep loss: exhaustion or rising activation? — Interactive case practice",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [],
+        "function": [],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Skill rehearsal / supervision"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/sleep-loss-activation/progress-review.html",
+      "title": "Sleep loss: exhaustion or rising activation? — Progress review tool",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [],
+        "function": [],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Progress review"
+        ],
+        "step": [
+          "What to watch next?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/sleep-loss-activation/support-map.html",
+      "title": "Sleep loss: exhaustion or rising activation? — Visual support map",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [],
+        "function": [],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Treatment planning"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
       "url": "/resources/therapy/sleep-pain-health-psychology-practical-toolkit.html",
       "title": "Sleep, Pain & Health Psychology",
       "format": "HTML",
@@ -6758,6 +7598,243 @@
       },
       "priority": 20,
       "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/clinical-topics/social-anxiety-attention/index.html",
+      "title": "Social anxiety: attention, predictions and safety strategies",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Anxiety / OCD"
+        ],
+        "symptom": [
+          "Fear / uncertainty",
+          "Memory / attention"
+        ],
+        "function": [
+          "Safety / stabilization"
+        ],
+        "intervention": [],
+        "stage": [],
+        "role": [],
+        "task": [],
+        "step": []
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/clinical-topics/social-anxiety-attention/care-partner.html",
+      "title": "Social anxiety: attention, predictions and safety strategies — Care-partner guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Anxiety / OCD"
+        ],
+        "symptom": [
+          "Fear / uncertainty",
+          "Memory / attention"
+        ],
+        "function": [
+          "Safety / stabilization"
+        ],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/social-anxiety-attention/client-workbook.html",
+      "title": "Social anxiety: attention, predictions and safety strategies — Client workbook",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Anxiety / OCD"
+        ],
+        "symptom": [
+          "Fear / uncertainty",
+          "Memory / attention"
+        ],
+        "function": [
+          "Safety / stabilization"
+        ],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver"
+        ],
+        "task": [
+          "Client education"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/social-anxiety-attention/formulation.html",
+      "title": "Social anxiety: attention, predictions and safety strategies — Clinician formulation guide",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Anxiety / OCD"
+        ],
+        "symptom": [
+          "Fear / uncertainty",
+          "Memory / attention"
+        ],
+        "function": [
+          "Safety / stabilization"
+        ],
+        "intervention": [
+          "Function-linked support"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Assessment planning",
+          "Treatment planning"
+        ],
+        "step": [
+          "What am I seeing?",
+          "Understanding",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/social-anxiety-attention/case.html",
+      "title": "Social anxiety: attention, predictions and safety strategies — Interactive case practice",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Anxiety / OCD"
+        ],
+        "symptom": [
+          "Fear / uncertainty",
+          "Memory / attention"
+        ],
+        "function": [
+          "Safety / stabilization"
+        ],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Skill rehearsal / supervision"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/social-anxiety-attention/progress-review.html",
+      "title": "Social anxiety: attention, predictions and safety strategies — Progress review tool",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Anxiety / OCD"
+        ],
+        "symptom": [
+          "Fear / uncertainty",
+          "Memory / attention"
+        ],
+        "function": [
+          "Safety / stabilization"
+        ],
+        "intervention": [],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Progress review"
+        ],
+        "step": [
+          "What to watch next?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
+    },
+    {
+      "url": "/resources/clinical-topics/social-anxiety-attention/support-map.html",
+      "title": "Social anxiety: attention, predictions and safety strategies — Visual support map",
+      "format": "HTML",
+      "tags": {
+        "diagnosis": [
+          "Anxiety / OCD"
+        ],
+        "symptom": [
+          "Fear / uncertainty",
+          "Memory / attention"
+        ],
+        "function": [
+          "Safety / stabilization"
+        ],
+        "intervention": [
+          "Access / accommodations"
+        ],
+        "stage": [
+          "Adult"
+        ],
+        "role": [
+          "Client / caregiver",
+          "Staff / case manager",
+          "Graduate trainee",
+          "Clinician"
+        ],
+        "task": [
+          "Formulation",
+          "Treatment planning"
+        ],
+        "step": [
+          "What tool?",
+          "What should I do?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "Curated audience, task and pathway; topic tags from title/path"
     },
     {
       "url": "/resources/es/handouts/sospecha-sobredosis-opioides.html",
@@ -7230,6 +8307,110 @@
         "task": [
           "Client education"
         ],
+        "step": [
+          "What tool?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/downloads/topic-bipolar-episode-timeline.pdf",
+      "title": "Topic Bipolar Episode Timeline",
+      "format": "PDF",
+      "tags": {
+        "diagnosis": [
+          "Psychosis / bipolar"
+        ],
+        "symptom": [],
+        "function": [],
+        "intervention": [],
+        "stage": [],
+        "role": [],
+        "task": [],
+        "step": [
+          "What tool?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/downloads/topic-panic-alarm-loop.pdf",
+      "title": "Topic Panic Alarm Loop",
+      "format": "PDF",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [
+          "Fear / uncertainty"
+        ],
+        "function": [],
+        "intervention": [],
+        "stage": [],
+        "role": [],
+        "task": [],
+        "step": [
+          "What tool?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/downloads/topic-sleep-loss-activation.pdf",
+      "title": "Topic Sleep Loss Activation",
+      "format": "PDF",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [],
+        "function": [],
+        "intervention": [],
+        "stage": [],
+        "role": [],
+        "task": [],
+        "step": [
+          "What tool?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/downloads/topic-social-anxiety-attention.pdf",
+      "title": "Topic Social Anxiety Attention",
+      "format": "PDF",
+      "tags": {
+        "diagnosis": [
+          "Anxiety / OCD"
+        ],
+        "symptom": [
+          "Fear / uncertainty",
+          "Memory / attention"
+        ],
+        "function": [],
+        "intervention": [],
+        "stage": [],
+        "role": [],
+        "task": [],
+        "step": [
+          "What tool?"
+        ]
+      },
+      "priority": 20,
+      "metadataBasis": "title/path discovery tags"
+    },
+    {
+      "url": "/resources/downloads/topic-voices-collaborative-coping.pdf",
+      "title": "Topic Voices Collaborative Coping",
+      "format": "PDF",
+      "tags": {
+        "diagnosis": [],
+        "symptom": [],
+        "function": [],
+        "intervention": [],
+        "stage": [],
+        "role": [],
+        "task": [],
         "step": [
           "What tool?"
         ]

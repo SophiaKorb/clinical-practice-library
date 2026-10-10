@@ -75,8 +75,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 55949,
-      "sha256": "28524ab3193842a48c52b1b25db14d02d4473a72e7118bfb44c4cf7de7e60e5b",
+      "bytes": 56071,
+      "sha256": "fd6b30427fdc461044d211289041bea6e1e746d7dc36523516d3ca34a19c9084",
       "retained_legacy": false,
       "title": "Clinical Practice Library | Resource Index",
       "reachable_from_home": true
@@ -2450,9 +2450,297 @@
       "reachable_from_home": true
     },
     {
+      "path": "resources/clinical-topics/bipolar-episode-timeline/care-partner.html",
+      "bytes": 6211,
+      "sha256": "99c0683b4a82c5796704fe3048f42fb63851f1e0691ef6be83b06e06a9a30602",
+      "retained_legacy": false,
+      "title": "Bipolar: episodes, baseline and support \u2014 Care-partner guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/bipolar-episode-timeline/case.html",
+      "bytes": 7931,
+      "sha256": "9942f8ab40f618b9f85dc1413e794b70c3c6dcd346c45a44e61fab3f1f89891c",
+      "retained_legacy": false,
+      "title": "Bipolar: episodes, baseline and support \u2014 Interactive case practice | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/bipolar-episode-timeline/client-workbook.html",
+      "bytes": 5667,
+      "sha256": "b89405c9e3a77995d0c3d3db76ca893b4a8bbc56d562b5c96dbb07e92dfb879f",
+      "retained_legacy": false,
+      "title": "Bipolar: episodes, baseline and support \u2014 Client workbook | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/bipolar-episode-timeline/formulation.html",
+      "bytes": 6427,
+      "sha256": "f613be1c48d8544f97be77a60813386b7018f10bf283726b9f5fdb9c54d61f6f",
+      "retained_legacy": false,
+      "title": "Bipolar: episodes, baseline and support \u2014 Clinician formulation guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/bipolar-episode-timeline/index.html",
+      "bytes": 4547,
+      "sha256": "7bc99b62dbd724e785d42863d7f9fa7361f55fd51cd71c9facc278c8768c511b",
+      "retained_legacy": false,
+      "title": "Bipolar: episodes, baseline and support | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/bipolar-episode-timeline/progress-review.html",
+      "bytes": 6787,
+      "sha256": "396d08da59b70dedab29bc7891db428ef0017cafe7ae02fd64b5eeb832816504",
+      "retained_legacy": false,
+      "title": "Bipolar: episodes, baseline and support \u2014 Progress review tool | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/bipolar-episode-timeline/support-map.html",
+      "bytes": 7554,
+      "sha256": "fa7aa356150710f8a2c149ddaa12720884a486f351ef990630f225f3eac3dd1a",
+      "retained_legacy": false,
+      "title": "Bipolar: episodes, baseline and support \u2014 Visual support map | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/index.html",
+      "bytes": 5795,
+      "sha256": "8d59c3a06313dc090e16c4ed061908b212fd6ec852e927174fa82d96b69ef92d",
+      "retained_legacy": false,
+      "title": "Clinical topic collections | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/panic-alarm-loop/care-partner.html",
+      "bytes": 6102,
+      "sha256": "58cce7f89743ecdda7c519a897b93c0a5d7a72d588c8e64a06c4835f68a174ca",
+      "retained_legacy": false,
+      "title": "Panic: body sensations and the alarm loop \u2014 Care-partner guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/panic-alarm-loop/case.html",
+      "bytes": 7606,
+      "sha256": "bf6567b703bbd51a69d6ccddbff25ececdd2e646f968d5ba328220eeb468e0ed",
+      "retained_legacy": false,
+      "title": "Panic: body sensations and the alarm loop \u2014 Interactive case practice | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/panic-alarm-loop/client-workbook.html",
+      "bytes": 5503,
+      "sha256": "60cfaf920173991c321fbd9c017a911d58468c91e063b8ba202577a42678f44e",
+      "retained_legacy": false,
+      "title": "Panic: body sensations and the alarm loop \u2014 Client workbook | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/panic-alarm-loop/formulation.html",
+      "bytes": 6232,
+      "sha256": "2919f3f0e865e1095a6c8a425c283da583ccd2934c352c9772f5010766ce7dec",
+      "retained_legacy": false,
+      "title": "Panic: body sensations and the alarm loop \u2014 Clinician formulation guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/panic-alarm-loop/index.html",
+      "bytes": 4531,
+      "sha256": "f2dede4a619c467983044e28b5ea6dd7e3880fd028767d697e0ea978baa6ecd3",
+      "retained_legacy": false,
+      "title": "Panic: body sensations and the alarm loop | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/panic-alarm-loop/progress-review.html",
+      "bytes": 6743,
+      "sha256": "31716a8286bafe63da1cab519fd7cc18d6e27350bf1f9a03ff77f108609b8f71",
+      "retained_legacy": false,
+      "title": "Panic: body sensations and the alarm loop \u2014 Progress review tool | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/panic-alarm-loop/support-map.html",
+      "bytes": 7310,
+      "sha256": "b27dc7a9413aa54d0b76aba77c6bcd260b9ae7f40d18312fb361d515bcc6e995",
+      "retained_legacy": false,
+      "title": "Panic: body sensations and the alarm loop \u2014 Visual support map | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/sleep-loss-activation/care-partner.html",
+      "bytes": 6231,
+      "sha256": "15b222ca13d5531537debca7a49b555de6264d4820504233b13bfacce34f1466",
+      "retained_legacy": false,
+      "title": "Sleep loss: exhaustion or rising activation? \u2014 Care-partner guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/sleep-loss-activation/case.html",
+      "bytes": 7852,
+      "sha256": "3dd56dfdce59a53727aec1e521950fdb74e075f70e7e7de12cd142e10dc2c874",
+      "retained_legacy": false,
+      "title": "Sleep loss: exhaustion or rising activation? \u2014 Interactive case practice | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/sleep-loss-activation/client-workbook.html",
+      "bytes": 5652,
+      "sha256": "00ff590d215512dc4c00338790f74d54496fc6e823e72d3ccef1351ef76e8e76",
+      "retained_legacy": false,
+      "title": "Sleep loss: exhaustion or rising activation? \u2014 Client workbook | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/sleep-loss-activation/formulation.html",
+      "bytes": 6432,
+      "sha256": "125fb467baad7f7b75a57f986ff848a4636ee511d4137419fc0914b32bda25de",
+      "retained_legacy": false,
+      "title": "Sleep loss: exhaustion or rising activation? \u2014 Clinician formulation guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/sleep-loss-activation/index.html",
+      "bytes": 4676,
+      "sha256": "ee98d74386c22c245d68936b0e9ebf3bb6d32478126210d404c0e84fa5fc6bbc",
+      "retained_legacy": false,
+      "title": "Sleep loss: exhaustion or rising activation? | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/sleep-loss-activation/progress-review.html",
+      "bytes": 6921,
+      "sha256": "a19b60575a541a5ff4bf63b5198e97cf86f57f88be395c5472082730b978f8f6",
+      "retained_legacy": false,
+      "title": "Sleep loss: exhaustion or rising activation? \u2014 Progress review tool | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/sleep-loss-activation/support-map.html",
+      "bytes": 7466,
+      "sha256": "3f545f07e14d76bc5b0e4f629af4deb32faa39722b974557e98613085efa90bc",
+      "retained_legacy": false,
+      "title": "Sleep loss: exhaustion or rising activation? \u2014 Visual support map | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/social-anxiety-attention/care-partner.html",
+      "bytes": 6079,
+      "sha256": "675ae9fc995759f960762239b5bcb2d275095e923dd851bb60a840479fecd7df",
+      "retained_legacy": false,
+      "title": "Social anxiety: attention, predictions and safety strategies \u2014 Care-partner guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/social-anxiety-attention/case.html",
+      "bytes": 7692,
+      "sha256": "eabb2b181d1410d74eada070f5d284e4805fde09cb40c06d989aaa0fde63e6e0",
+      "retained_legacy": false,
+      "title": "Social anxiety: attention, predictions and safety strategies \u2014 Interactive case practice | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/social-anxiety-attention/client-workbook.html",
+      "bytes": 5570,
+      "sha256": "2116d219bf6542bc270e2dd106c0c20a2093969e57c76116f17489a77c17e8ed",
+      "retained_legacy": false,
+      "title": "Social anxiety: attention, predictions and safety strategies \u2014 Client workbook | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/social-anxiety-attention/formulation.html",
+      "bytes": 6339,
+      "sha256": "d49dbd50268fe8161bea682b5bcaa194d66e4f8d7e2e173c51d0e37863bfeb29",
+      "retained_legacy": false,
+      "title": "Social anxiety: attention, predictions and safety strategies \u2014 Clinician formulation guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/social-anxiety-attention/index.html",
+      "bytes": 4574,
+      "sha256": "ebbc51f9ebdc006c6f7a45578b955d23420540f2495ebf05c258214829614681",
+      "retained_legacy": false,
+      "title": "Social anxiety: attention, predictions and safety strategies | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/social-anxiety-attention/progress-review.html",
+      "bytes": 6820,
+      "sha256": "d230d343e76447b170272e2f13630b74b5c793a500f945d39eefe0fc434b7c7b",
+      "retained_legacy": false,
+      "title": "Social anxiety: attention, predictions and safety strategies \u2014 Progress review tool | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/social-anxiety-attention/support-map.html",
+      "bytes": 7375,
+      "sha256": "1a7205afaa2b5124ece19c6f10cb77207d6163a97abccc9961f8eb78d4f76d4e",
+      "retained_legacy": false,
+      "title": "Social anxiety: attention, predictions and safety strategies \u2014 Visual support map | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/voices-collaborative-coping/care-partner.html",
+      "bytes": 6018,
+      "sha256": "c3e38fbe9b2fa357ba6a95c0da0dbdd946e4b877c8bec56c6d4e4a4b2f98b7ff",
+      "retained_legacy": false,
+      "title": "Psychosis: voices, distress and collaborative coping \u2014 Care-partner guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/voices-collaborative-coping/case.html",
+      "bytes": 7654,
+      "sha256": "ff9b51a53c602c20f3ba68e44e20bd66a5d9109f772d92ad02d05dc56a011065",
+      "retained_legacy": false,
+      "title": "Psychosis: voices, distress and collaborative coping \u2014 Interactive case practice | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/voices-collaborative-coping/client-workbook.html",
+      "bytes": 5608,
+      "sha256": "22d61cbf967653cb16158854b5f8036c1ee83e3aa5e2e92b7a8f29dca127b8fc",
+      "retained_legacy": false,
+      "title": "Psychosis: voices, distress and collaborative coping \u2014 Client workbook | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/voices-collaborative-coping/formulation.html",
+      "bytes": 6275,
+      "sha256": "ae16ad7351ef042a04853aea761a3f64b57862c734bd19247f9deb120e224191",
+      "retained_legacy": false,
+      "title": "Psychosis: voices, distress and collaborative coping \u2014 Clinician formulation guide | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/voices-collaborative-coping/index.html",
+      "bytes": 4428,
+      "sha256": "1c41be71c19b5e0ad17b5fd86aaa2cfb4b6fbe7999b649df3d7ef04fd8b15155",
+      "retained_legacy": false,
+      "title": "Psychosis: voices, distress and collaborative coping | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/voices-collaborative-coping/progress-review.html",
+      "bytes": 6831,
+      "sha256": "e9c1b904b78179d912ec6e79589032757b366142e60a748b16e63e6ebe37be6c",
+      "retained_legacy": false,
+      "title": "Psychosis: voices, distress and collaborative coping \u2014 Progress review tool | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/clinical-topics/voices-collaborative-coping/support-map.html",
+      "bytes": 7288,
+      "sha256": "523f230550f3c51e2ea3f7d6c1a58cc280575d80baeb15478c19c22b68b2f3b9",
+      "retained_legacy": false,
+      "title": "Psychosis: voices, distress and collaborative coping \u2014 Visual support map | Clinical Practice Library",
+      "reachable_from_home": true
+    },
+    {
       "path": "resources/complete-resource-inventory.html",
-      "bytes": 148982,
-      "sha256": "1674d8b69957113106fba9a4a71537749b980add6fd4326acd871d331b556a9a",
+      "bytes": 161173,
+      "sha256": "a1cbade5c7b44507b8b9835d2b822024161ff1b77224a186632754652f76e096",
       "retained_legacy": false,
       "title": "Complete resource inventory | CPL",
       "reachable_from_home": true
@@ -2580,6 +2868,41 @@
       "path": "resources/downloads/task-launch-map-fillable.pdf",
       "bytes": 70945,
       "sha256": "59a202bb45114ac5309d9d0fa78bda012735b2c0f321e7c175eacb495cf813ad",
+      "retained_legacy": false,
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/downloads/topic-bipolar-episode-timeline.pdf",
+      "bytes": 3402,
+      "sha256": "846a419b154ca04e364dd509fb7054624a6294d93ff0eff2eaa6a91e1ba27026",
+      "retained_legacy": false,
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/downloads/topic-panic-alarm-loop.pdf",
+      "bytes": 3377,
+      "sha256": "a866599fef674d4c0a25815c6451ab3e5e15fbe70ec1646f5d027e8d0069b009",
+      "retained_legacy": false,
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/downloads/topic-sleep-loss-activation.pdf",
+      "bytes": 3369,
+      "sha256": "0e65d44e5a2fadb050de9f4f8e7bf4ae5445a0e757bb0d2a0dd73567477e0395",
+      "retained_legacy": false,
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/downloads/topic-social-anxiety-attention.pdf",
+      "bytes": 3398,
+      "sha256": "ff17d155dc14b580169aa164093cd37eeef748cc29d9b8fadef6776cf9b11404",
+      "retained_legacy": false,
+      "reachable_from_home": true
+    },
+    {
+      "path": "resources/downloads/topic-voices-collaborative-coping.pdf",
+      "bytes": 3365,
+      "sha256": "e4dd9c26d9dcb47236b18f271fcacc79e64ddaa0bd0cfd5dcfed41050e0baff7",
       "retained_legacy": false,
       "reachable_from_home": true
     },
@@ -4303,8 +4626,8 @@
     },
     {
       "path": "resources/therapy/personality-complex-presentations-practical-toolkit.html",
-      "bytes": 3446,
-      "sha256": "2847830c2810dcc4f2e85e32e71d2d61f85599dd8ca7ab47b70d6bc2278c7b87",
+      "bytes": 3759,
+      "sha256": "df16c5f0672dadc9449c750d81c2eadff24e0b51eed3c5ef23dd678a1d37c480",
       "retained_legacy": false,
       "title": "Personality & Complex Presentations | Clinical Practice Library",
       "reachable_from_home": true
@@ -4579,8 +4902,8 @@
       "absent_from_current": []
     },
     "origin/cpl-2-colorful-helpful": {
-      "commit": "34739111b32d2f5b0faa0c2be7666891abef5bfe",
-      "resource_count": 563,
+      "commit": "85043c6a3229e0350ed09a9c40559dcdb5439698",
+      "resource_count": 565,
       "absent_from_current": []
     },
     "origin/cpl-phone-check-2026-09-30": {

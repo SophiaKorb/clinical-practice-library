@@ -1,0 +1,84 @@
+{
+  "reviewDate": "2026-10-10",
+  "qualifiedReview": "pending",
+  "sources": {
+    "aasm-insomnia": {
+      "title": "AASM: Behavioral and psychological treatments for chronic insomnia in adults",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7853203/",
+      "evidenceType": "Graded clinical practice guideline, 2021; multicomponent CBT-I strongly recommended",
+      "access": "Full text retrieved 2026-10-10"
+    },
+    "nice-panic": {
+      "title": "NICE CG113: Generalised anxiety and panic disorder in adults",
+      "url": "https://www.nice.org.uk/guidance/cg113",
+      "evidenceType": "Published clinical guideline, 2011; jurisdiction and update status matter",
+      "access": "Official search index verified 2026-10-10; full recommendations retrieval limited"
+    },
+    "nice-social": {
+      "title": "NICE CG159: Social anxiety disorder",
+      "url": "https://www.nice.org.uk/guidance/cg159",
+      "evidenceType": "Published clinical guideline, 2013; adult and youth recommendations differ",
+      "access": "Official search index verified 2026-10-10; full recommendations retrieval limited"
+    },
+    "nimh-bipolar": {
+      "title": "NIMH: Bipolar disorder",
+      "url": "https://www.nimh.nih.gov/health/publications/bipolar-disorder",
+      "evidenceType": "Federal clinical education; not a graded treatment guideline",
+      "access": "Full page retrieved 2026-10-10"
+    },
+    "nimh-psychosis": {
+      "title": "NIMH: Understanding psychosis",
+      "url": "https://www.nimh.nih.gov/health/publications/understanding-psychosis",
+      "evidenceType": "Federal clinical education; coordinated specialty care orientation",
+      "access": "Full page retrieved 2026-10-10"
+    }
+  },
+  "topicCrosswalk": [
+    {
+      "slug": "bipolar-episode-timeline",
+      "title": "Bipolar: episodes, baseline and support",
+      "age": "Adults",
+      "sources": [
+        "nimh-bipolar"
+      ],
+      "limits": "Original timeline and examples are teaching aids, not a bipolar screening instrument. The source supports broad education, not a complete diagnostic or medication protocol. Qualified review of episode and escalation language remains pending."
+    },
+    {
+      "slug": "voices-collaborative-coping",
+      "title": "Psychosis: voices, distress and collaborative coping",
+      "age": "Adults",
+      "sources": [
+        "nimh-psychosis"
+      ],
+      "limits": "This is an original collaborative discussion aid, not CBT for psychosis training, a diagnostic algorithm or a command-hallucination risk scale. Care decisions require qualified assessment."
+    },
+    {
+      "slug": "sleep-loss-activation",
+      "title": "Sleep loss: exhaustion or rising activation?",
+      "age": "Adults",
+      "sources": [
+        "nimh-bipolar",
+        "aasm-insomnia"
+      ],
+      "limits": "The pattern map is not validated triage. It offers no diagnostic cutoffs or sleep-restriction prescription. AASM guidance concerns chronic insomnia treatment, not acute mania management."
+    },
+    {
+      "slug": "panic-alarm-loop",
+      "title": "Panic: body sensations and the alarm loop",
+      "age": "Adults",
+      "sources": [
+        "nice-panic"
+      ],
+      "limits": "The loop is an original psychoeducational aid, not a diagnostic or medical triage instrument. Guideline principles require trained implementation; no proprietary CBT protocol or measure is reproduced."
+    },
+    {
+      "slug": "social-anxiety-attention",
+      "title": "Social anxiety: attention, predictions and safety strategies",
+      "age": "Adults",
+      "sources": [
+        "nice-social"
+      ],
+      "limits": "This original attention map is not a complete social-anxiety protocol. NICE adult/youth guidance differs; this set is adult-oriented. Accommodation decisions and anxiety treatment require individualized review."
+    }
+  ]
+}

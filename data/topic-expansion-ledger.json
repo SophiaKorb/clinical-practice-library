@@ -1,0 +1,463 @@
+{
+  "target": 150,
+  "completedMeaningfulResources": 30,
+  "countPolicy": "Six distinct purposes per topic. Collection pages, PDFs, shared assets and cosmetic changes excluded. Count does not certify clinical quality.",
+  "resources": [
+    {
+      "path": "resources/clinical-topics/bipolar-episode-timeline/formulation.html",
+      "topic": "bipolar-episode-timeline",
+      "title": "Bipolar: episodes, baseline and support \u2014 Clinician formulation guide",
+      "type": "formulation",
+      "audience": "Adults",
+      "sources": [
+        "nimh-bipolar"
+      ],
+      "wave": 1,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/bipolar-episode-timeline/case.html",
+      "topic": "bipolar-episode-timeline",
+      "title": "Bipolar: episodes, baseline and support \u2014 Interactive case practice",
+      "type": "case",
+      "audience": "Adults",
+      "sources": [
+        "nimh-bipolar"
+      ],
+      "wave": 1,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/bipolar-episode-timeline/support-map.html",
+      "topic": "bipolar-episode-timeline",
+      "title": "Bipolar: episodes, baseline and support \u2014 Visual support map",
+      "type": "support-map",
+      "audience": "Adults",
+      "sources": [
+        "nimh-bipolar"
+      ],
+      "wave": 1,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/bipolar-episode-timeline/client-workbook.html",
+      "topic": "bipolar-episode-timeline",
+      "title": "Bipolar: episodes, baseline and support \u2014 Client workbook",
+      "type": "client-workbook",
+      "audience": "Adults",
+      "sources": [
+        "nimh-bipolar"
+      ],
+      "wave": 1,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/bipolar-episode-timeline/care-partner.html",
+      "topic": "bipolar-episode-timeline",
+      "title": "Bipolar: episodes, baseline and support \u2014 Care-partner guide",
+      "type": "care-partner",
+      "audience": "Adults",
+      "sources": [
+        "nimh-bipolar"
+      ],
+      "wave": 1,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/bipolar-episode-timeline/progress-review.html",
+      "topic": "bipolar-episode-timeline",
+      "title": "Bipolar: episodes, baseline and support \u2014 Progress review tool",
+      "type": "progress-review",
+      "audience": "Adults",
+      "sources": [
+        "nimh-bipolar"
+      ],
+      "wave": 1,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/voices-collaborative-coping/formulation.html",
+      "topic": "voices-collaborative-coping",
+      "title": "Psychosis: voices, distress and collaborative coping \u2014 Clinician formulation guide",
+      "type": "formulation",
+      "audience": "Adults",
+      "sources": [
+        "nimh-psychosis"
+      ],
+      "wave": 1,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/voices-collaborative-coping/case.html",
+      "topic": "voices-collaborative-coping",
+      "title": "Psychosis: voices, distress and collaborative coping \u2014 Interactive case practice",
+      "type": "case",
+      "audience": "Adults",
+      "sources": [
+        "nimh-psychosis"
+      ],
+      "wave": 1,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/voices-collaborative-coping/support-map.html",
+      "topic": "voices-collaborative-coping",
+      "title": "Psychosis: voices, distress and collaborative coping \u2014 Visual support map",
+      "type": "support-map",
+      "audience": "Adults",
+      "sources": [
+        "nimh-psychosis"
+      ],
+      "wave": 1,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/voices-collaborative-coping/client-workbook.html",
+      "topic": "voices-collaborative-coping",
+      "title": "Psychosis: voices, distress and collaborative coping \u2014 Client workbook",
+      "type": "client-workbook",
+      "audience": "Adults",
+      "sources": [
+        "nimh-psychosis"
+      ],
+      "wave": 1,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/voices-collaborative-coping/care-partner.html",
+      "topic": "voices-collaborative-coping",
+      "title": "Psychosis: voices, distress and collaborative coping \u2014 Care-partner guide",
+      "type": "care-partner",
+      "audience": "Adults",
+      "sources": [
+        "nimh-psychosis"
+      ],
+      "wave": 1,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/voices-collaborative-coping/progress-review.html",
+      "topic": "voices-collaborative-coping",
+      "title": "Psychosis: voices, distress and collaborative coping \u2014 Progress review tool",
+      "type": "progress-review",
+      "audience": "Adults",
+      "sources": [
+        "nimh-psychosis"
+      ],
+      "wave": 1,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/sleep-loss-activation/formulation.html",
+      "topic": "sleep-loss-activation",
+      "title": "Sleep loss: exhaustion or rising activation? \u2014 Clinician formulation guide",
+      "type": "formulation",
+      "audience": "Adults",
+      "sources": [
+        "nimh-bipolar",
+        "aasm-insomnia"
+      ],
+      "wave": 1,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/sleep-loss-activation/case.html",
+      "topic": "sleep-loss-activation",
+      "title": "Sleep loss: exhaustion or rising activation? \u2014 Interactive case practice",
+      "type": "case",
+      "audience": "Adults",
+      "sources": [
+        "nimh-bipolar",
+        "aasm-insomnia"
+      ],
+      "wave": 1,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/sleep-loss-activation/support-map.html",
+      "topic": "sleep-loss-activation",
+      "title": "Sleep loss: exhaustion or rising activation? \u2014 Visual support map",
+      "type": "support-map",
+      "audience": "Adults",
+      "sources": [
+        "nimh-bipolar",
+        "aasm-insomnia"
+      ],
+      "wave": 1,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/sleep-loss-activation/client-workbook.html",
+      "topic": "sleep-loss-activation",
+      "title": "Sleep loss: exhaustion or rising activation? \u2014 Client workbook",
+      "type": "client-workbook",
+      "audience": "Adults",
+      "sources": [
+        "nimh-bipolar",
+        "aasm-insomnia"
+      ],
+      "wave": 1,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/sleep-loss-activation/care-partner.html",
+      "topic": "sleep-loss-activation",
+      "title": "Sleep loss: exhaustion or rising activation? \u2014 Care-partner guide",
+      "type": "care-partner",
+      "audience": "Adults",
+      "sources": [
+        "nimh-bipolar",
+        "aasm-insomnia"
+      ],
+      "wave": 1,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/sleep-loss-activation/progress-review.html",
+      "topic": "sleep-loss-activation",
+      "title": "Sleep loss: exhaustion or rising activation? \u2014 Progress review tool",
+      "type": "progress-review",
+      "audience": "Adults",
+      "sources": [
+        "nimh-bipolar",
+        "aasm-insomnia"
+      ],
+      "wave": 1,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/panic-alarm-loop/formulation.html",
+      "topic": "panic-alarm-loop",
+      "title": "Panic: body sensations and the alarm loop \u2014 Clinician formulation guide",
+      "type": "formulation",
+      "audience": "Adults",
+      "sources": [
+        "nice-panic"
+      ],
+      "wave": 1,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/panic-alarm-loop/case.html",
+      "topic": "panic-alarm-loop",
+      "title": "Panic: body sensations and the alarm loop \u2014 Interactive case practice",
+      "type": "case",
+      "audience": "Adults",
+      "sources": [
+        "nice-panic"
+      ],
+      "wave": 1,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/panic-alarm-loop/support-map.html",
+      "topic": "panic-alarm-loop",
+      "title": "Panic: body sensations and the alarm loop \u2014 Visual support map",
+      "type": "support-map",
+      "audience": "Adults",
+      "sources": [
+        "nice-panic"
+      ],
+      "wave": 1,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/panic-alarm-loop/client-workbook.html",
+      "topic": "panic-alarm-loop",
+      "title": "Panic: body sensations and the alarm loop \u2014 Client workbook",
+      "type": "client-workbook",
+      "audience": "Adults",
+      "sources": [
+        "nice-panic"
+      ],
+      "wave": 1,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/panic-alarm-loop/care-partner.html",
+      "topic": "panic-alarm-loop",
+      "title": "Panic: body sensations and the alarm loop \u2014 Care-partner guide",
+      "type": "care-partner",
+      "audience": "Adults",
+      "sources": [
+        "nice-panic"
+      ],
+      "wave": 1,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/panic-alarm-loop/progress-review.html",
+      "topic": "panic-alarm-loop",
+      "title": "Panic: body sensations and the alarm loop \u2014 Progress review tool",
+      "type": "progress-review",
+      "audience": "Adults",
+      "sources": [
+        "nice-panic"
+      ],
+      "wave": 1,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/social-anxiety-attention/formulation.html",
+      "topic": "social-anxiety-attention",
+      "title": "Social anxiety: attention, predictions and safety strategies \u2014 Clinician formulation guide",
+      "type": "formulation",
+      "audience": "Adults",
+      "sources": [
+        "nice-social"
+      ],
+      "wave": 1,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/social-anxiety-attention/case.html",
+      "topic": "social-anxiety-attention",
+      "title": "Social anxiety: attention, predictions and safety strategies \u2014 Interactive case practice",
+      "type": "case",
+      "audience": "Adults",
+      "sources": [
+        "nice-social"
+      ],
+      "wave": 1,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/social-anxiety-attention/support-map.html",
+      "topic": "social-anxiety-attention",
+      "title": "Social anxiety: attention, predictions and safety strategies \u2014 Visual support map",
+      "type": "support-map",
+      "audience": "Adults",
+      "sources": [
+        "nice-social"
+      ],
+      "wave": 1,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/social-anxiety-attention/client-workbook.html",
+      "topic": "social-anxiety-attention",
+      "title": "Social anxiety: attention, predictions and safety strategies \u2014 Client workbook",
+      "type": "client-workbook",
+      "audience": "Adults",
+      "sources": [
+        "nice-social"
+      ],
+      "wave": 1,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/social-anxiety-attention/care-partner.html",
+      "topic": "social-anxiety-attention",
+      "title": "Social anxiety: attention, predictions and safety strategies \u2014 Care-partner guide",
+      "type": "care-partner",
+      "audience": "Adults",
+      "sources": [
+        "nice-social"
+      ],
+      "wave": 1,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    },
+    {
+      "path": "resources/clinical-topics/social-anxiety-attention/progress-review.html",
+      "topic": "social-anxiety-attention",
+      "title": "Social anxiety: attention, predictions and safety strategies \u2014 Progress review tool",
+      "type": "progress-review",
+      "audience": "Adults",
+      "sources": [
+        "nice-social"
+      ],
+      "wave": 1,
+      "reviewDate": "2026-10-10",
+      "qualifiedClinicalReview": "pending",
+      "browserQA": "unavailable",
+      "countedResource": true
+    }
+  ]
+}

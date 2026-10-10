@@ -14,6 +14,8 @@ facets={
  'task':{'Formulation':['formulation','differential','casebook','functional','understanding'],'Assessment planning':['assessment','screening','measure','evaluation'],'Treatment planning':['treatment','therapy','intervention','support-experiment'],'Client education':['handouts/','guides/','family','parent'],'Skill rehearsal / supervision':['intern','trainee','training','workforce','practice'],'Referral / coordination':['arizona/','california/','coordination','referral'],'Progress review':['progress','review','implementation','outcomes']},
  'step':{'What am I seeing?':['observation','frontline','start-here','differential','casebook'],'Understanding':['formulation','understanding','differential','casebook','clinical/'],'What should I do?':['treatment','planning','support','practical-toolkit','clinical/'],'What tool?':['toolkit','worksheet','handout','map','plan','downloads/','guide'],'What to watch next?':['progress','review','implementation','outcomes']}}
 priority=['resources/therapy/visual-reasoning-toolkit.html','resources/therapy/communication-supports-toolkit.html','resources/therapy/treatment-plan-menu.html','resources/therapy/barrier-formulation-lab.html','resources/therapy/assessment-question-to-feedback.html','resources/assessment/integrated-development-language-learning-casebook.html','resources/training/workforce-learning-center.html','resources/therapy/functional-progress-review.html']
+expansion=json.loads((ROOT/'data/topic-expansion-ledger.json').read_text()) if (ROOT/'data/topic-expansion-ledger.json').exists() else {'resources':[]}
+curated={r['path']:r for r in expansion['resources']}
 records=[]
 for r in inv['resources']:
  path=r['path']
@@ -40,8 +42,14 @@ for r in inv['resources']:
  # A family/plain-language diagnosis guide is not itself a clinician guide.
  if path.startswith('guides/') or '/homeschool/' in path:tags['role']=['Client / caregiver','School team']
  if '/school/clinical/' in path:tags['role']=['Clinician','School team','Graduate trainee']
+ if path in curated:
+  item=curated[path];kind=item['type']
+  tags['stage']=['Adult'] if item['audience']=='Adults' else ['School age / adolescence'] if 'child' in item['audience'].lower() else ['Across ages / adapt to person']
+  tags['role']=['Client / caregiver'] if kind in ['client-workbook','care-partner'] else ['Graduate trainee','Clinician'] if kind in ['formulation','case'] else ['Client / caregiver','Staff / case manager','Graduate trainee','Clinician']
+  tags['task']=['Formulation','Assessment planning','Treatment planning'] if kind=='formulation' else ['Skill rehearsal / supervision'] if kind=='case' else ['Client education'] if kind in ['client-workbook','care-partner'] else ['Progress review'] if kind=='progress-review' else ['Formulation','Treatment planning']
+  tags['step']=['What am I seeing?','Understanding','What should I do?'] if kind=='formulation' else ['What to watch next?'] if kind=='progress-review' else ['What tool?','What should I do?']
  score=100-priority.index(path) if path in priority else 65 if '/school/clinical/' in path else 60 if path.startswith('guides/') else 30 if 'start-here' in path else 20
- records.append({'url':'/'+path,'title':title,'format':Path(path).suffix[1:].upper(),'tags':tags,'priority':score,'metadataBasis':'title/path discovery tags'})
+ records.append({'url':'/'+path,'title':title,'format':Path(path).suffix[1:].upper(),'tags':tags,'priority':score,'metadataBasis':'Curated audience, task and pathway; topic tags from title/path' if path in curated else 'title/path discovery tags'})
 records.sort(key=lambda r:(-r['priority'],r.get('title',Path(path).stem.replace('-',' ').title()).lower()))
 model={'note':'Discovery tags describe title/path coverage, not validated indications, age suitability, evidence quality, or authorization to practice. Untagged materials remain searchable. Current Colorful resources only; retained originals are in the complete inventory.','facets':{k:list(v) for k,v in facets.items()},'resources':records}
 (ROOT/'data/clinical-finder.json').write_text(json.dumps(model,ensure_ascii=False,indent=2)+'\n')
