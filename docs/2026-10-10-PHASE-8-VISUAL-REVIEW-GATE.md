@@ -21,3 +21,7 @@ At 320, 390, 768 and desktop widths, inspect actual heading hierarchy, scroll an
 ## Outstanding limitations
 
 No qualified clinical review, formal tool validation, full source retrieval for restricted references, or complete rendered-browser/assistive-technology/print-dialog review is documented. Resource counts are not a measure of evidence quality or independent clinical suitability. Deployment and automated regression checks demonstrate technical availability, not clinical approval. Continue to hold all review flags open until evidence is recorded.
+
+## Source-access correction during QA
+
+NICE NG69 recommendations 1.2 (identification/referral), 1.10 (medical risk/monitoring) and 1.11 (level-of-care decisions) were independently available for inspection on October 10, 2026. The Phase 8 eating-care source metadata and all seven generated topic entry/resources have been updated from the former 403 retrieval report. NG69 does not establish a complete ARFID, pica or rumination pathway; formal medical/nutritional and clinical review remains pending. No absolute weight/BMI threshold is used to infer stability or level of care. Original tools are not validated clinical instruments.
