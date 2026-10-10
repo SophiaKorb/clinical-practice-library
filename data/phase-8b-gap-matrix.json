@@ -151,7 +151,12 @@
         "Relapse/return-to-use with response to overdose risk and coordination"
       ],
       "firstAction": "Substance use clinical assessment/level-of-care and integrated care guide",
-      "review": "addiction-medicine/qualified SUD review"
+      "review": "addiction-medicine/qualified SUD review",
+      "deliveredPaths": [
+        "resources/clinical-depth/substance-use-cooccurring-care.html",
+        "resources/clinical-depth/substance-use-parallel-care-map.html"
+      ],
+      "implementationStatus": "New clinical decision route and practical visual tool, linked to existing resources; specialized protocols, additional lifespan cases, qualified review and full PDF parity still pending"
     },
     {
       "key": "child-family",
@@ -169,7 +174,12 @@
         "Session scripts with observation, supported practice, fidelity and troubleshooting"
       ],
       "firstAction": "Child-development and caregiver coaching session series with safeguards",
-      "review": "child clinician/play/dyadic specialty review"
+      "review": "child clinician/play/dyadic specialty review",
+      "deliveredPaths": [
+        "resources/clinical-depth/child-caregiver-treatment-selection.html",
+        "resources/clinical-depth/caregiver-session-support-map.html"
+      ],
+      "implementationStatus": "New clinical decision route and practical visual tool, linked to existing resources; specialized protocols, additional lifespan cases, qualified review and full PDF parity still pending"
     },
     {
       "key": "eating",

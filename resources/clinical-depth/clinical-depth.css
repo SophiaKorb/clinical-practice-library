@@ -76,3 +76,35 @@ main#content .cycle-node span{font-size:.88rem;line-height:1.42;margin-top:8px}
 main#content .cycle-map figcaption{grid-column:1/-1}
 @media(max-width:760px){main#content .cycle-map{grid-template-columns:1fr;gap:14px}main#content .cycle-node{min-height:0}main#content .cycle-node:not(:nth-child(5))::after{content:"↓";right:50%;top:auto;bottom:-18px}}
 @media print{main#content .cycle-map{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}main#content .cycle-node{min-height:0;background:white!important;break-inside:avoid}main#content .cycle-node::after{display:none!important}}
+
+/* Phase 8B: Three parallel health/care streams retain individual identity at mobile widths. */
+main#content .three-tracks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:16px 0}
+main#content .parallel-care{border:1px solid #b6c9bd;padding:18px;border-radius:16px;background:#fff;max-width:960px;margin:20px 0}
+main#content .three-tracks .diagram-track{min-width:0}
+main#content .parallel-care .diagram-converge{margin-bottom:8px}
+main#content .caregiver-map{display:grid;grid-template-columns:minmax(0,1fr) 24px minmax(0,1fr) 24px minmax(0,1fr);gap:8px;align-items:center;border:1px solid #bed0c4;padding:15px;border-radius:14px;background:white;margin:20px 0}
+main#content .caregiver-map__phase{min-width:0;align-self:stretch;background:#ebf1ed;border:2px solid #709080;padding:14px;border-radius:11px}
+main#content .caregiver-map__phase:nth-of-type(3){background:#eef0fa;border-color:#687caa}
+main#content .caregiver-map__phase:nth-of-type(5){background:#fcf1e4;border-color:#a58155}
+main#content .caregiver-map__icon{display:inline-flex;align-items:center;justify-content:center;width:29px;height:29px;border:2px solid currentColor;border-radius:50%;font-weight:800;margin-bottom:4px}
+main#content .caregiver-map__phase h3{font-size:1rem;letter-spacing:.06em;margin:2px 0}
+main#content .caregiver-map__phase p{font-weight:650;font-size:.94rem;margin:2px 0 12px}
+main#content .caregiver-map__tiles{display:grid;gap:6px}
+main#content .caregiver-map__tiles span{background:white;border-left:3px solid #628874;border-radius:4px;padding:8px 9px;font-size:.85rem;line-height:1.35}
+main#content .caregiver-map__arrow{font-size:1.3rem;font-weight:900;color:#245e50;text-align:center}
+@media(max-width:800px){
+  main#content .three-tracks{grid-template-columns:1fr}
+  main#content .three-tracks .diagram-track{border-left-width:7px}
+  main#content .caregiver-map{grid-template-columns:1fr;gap:7px}
+  main#content .caregiver-map__arrow{transform:rotate(90deg)}
+  main#content .caregiver-map__phase{padding:13px}
+  main#content .caregiver-map__tiles{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:450px){main#content .caregiver-map__tiles{grid-template-columns:1fr}}
+@media print{
+  main#content .caregiver-map{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+  main#content .caregiver-map__arrow{display:none}
+  main#content .caregiver-map__phase,main#content .three-tracks .diagram-track{background:white!important;break-inside:avoid}
+  main#content .three-tracks{grid-template-columns:repeat(3,minmax(0,1fr))}
+  main#content .caregiver-map__tiles span{border:1px solid #777}
+}
