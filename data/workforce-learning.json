@@ -1,36 +1,36 @@
 {
   "tracks": [
     {
-      "id": "support",
-      "name": "High-school-diploma-level staff",
-      "goal": "Notice, support communication, and connect to help.",
-      "practice": "Describe one event without a label; rehearse offering two response routes and contacting the designated supervisor.",
-      "boundary": "Use assigned support plans and local response procedures. Do not independently diagnose, interpret tests, or design psychotherapy.",
-      "sequence": "Observation → communication → trauma-informed engagement → risk recognition → handoff"
+      "id": "notice",
+      "name": "Notice & Understand",
+      "goal": "Recognize patterns, describe observations, and understand what behavior might communicate.",
+      "practice": "Describe one event using observable details. Suggest two possible explanations and a question that could clarify the context.",
+      "boundary": "Observe and ask within your role. A pattern is a clue, not a diagnosis. Escalate urgent safety concerns using local procedures.",
+      "sequence": "Observe → describe → consider context → ask → review"
     },
     {
-      "id": "coordination",
-      "name": "Bachelor’s-level workers & case managers",
-      "goal": "Coordinate practical supports and close the referral loop.",
-      "practice": "Map one access barrier, identify the responsible service, obtain required permission, and verify follow-through.",
-      "boundary": "Degree level alone does not authorize clinical tasks. Use screenings or structured interventions only when role, training, policy, and supervision permit.",
-      "sequence": "Foundations → family engagement → observation patterns → documentation → coordination"
+      "id": "connect",
+      "name": "Connect & Support",
+      "goal": "Build trust, respond with empathy, navigate difficult conversations, and provide practical support.",
+      "practice": "Rehearse acknowledging distress, offering two feasible choices, and checking which support the person wants.",
+      "boundary": "Follow consent, privacy, safeguarding, and local response procedures. Specialist interventions require appropriate training and authorization.",
+      "sequence": "Listen → validate → ask preferences → offer support → follow through"
     },
     {
-      "id": "graduate",
-      "name": "Graduate clinical trainees",
-      "goal": "Build competing hypotheses and rehearse under supervision.",
-      "practice": "Bring two explanations, missing information, a supported intervention rationale, and a progress measure to supervision.",
-      "boundary": "Clinical assessment and treatment require the supervisor’s authorization and adequate training. Consult before interpreting specialized instruments or starting protocols.",
-      "sequence": "Foundations → interviewing → functional reasoning → supervised assessment/treatment → review"
+      "id": "explore",
+      "name": "Explore & Make Sense",
+      "goal": "Consider competing explanations, understand assessment, and connect experiences to their context.",
+      "practice": "Develop two plausible explanations, consider the evidence for and against each, and identify what information is still needed.",
+      "boundary": "Assessment, test interpretation, and diagnosis require appropriate competence and authorization. One observation or checklist is not definitive.",
+      "sequence": "Clarify the question → weigh explanations → gather context → assess appropriately → revise"
     },
     {
-      "id": "licensed",
-      "name": "Licensed clinicians",
-      "goal": "Integrate evidence, formulation, patient goals, and implementation.",
-      "practice": "Audit one treatment decision for guideline fit, access, consent, response, adverse effects, and referral thresholds.",
-      "boundary": "Licensure does not confer competence in every method. Seek consultation and training for unfamiliar populations, instruments, or procedures.",
-      "sequence": "Formulation → evidence appraisal → adapted delivery → measurement → consultation"
+      "id": "plan",
+      "name": "Plan & Put Into Practice",
+      "goal": "Choose appropriate responses, collaborate on plans, evaluate outcomes, and adapt when something isn't working.",
+      "practice": "Choose a meaningful goal with the person, agree on one feasible next step, and decide how and when to review its impact.",
+      "boundary": "Work within assigned responsibilities, training, and supervision. Seek consultation before unfamiliar methods, and keep safety and consent central.",
+      "sequence": "Choose a goal → plan together → act within scope → monitor → adapt"
     }
   ],
   "cases": [
