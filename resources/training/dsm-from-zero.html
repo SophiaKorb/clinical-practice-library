@@ -130,6 +130,35 @@ details.extra-examples>summary:hover{background:#f4ead4}
 }
 
 .concept-interlude{border-left:3px solid #88a79a;background:#f8faf8;padding:19px 19px 12px;margin:24px 0 20px;border-radius:0 12px 12px 0}.concept-interlude h3{font-size:1.3rem;margin:2px 0 10px}.concept-interlude>p{line-height:1.65}.concept-interlude .personality-map{margin:17px 0}.concept-interlude details.expand{background:#fff}@media(max-width:680px){.concept-interlude{padding:16px 13px 10px}.concept-interlude h3{font-size:1.2rem}}
+
+/* Pinned accessible course glossary */
+.vocab-dock{position:fixed;bottom:calc(16px + env(safe-area-inset-bottom,0px));right:calc(16px + env(safe-area-inset-right,0px));z-index:60;font:400 15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+.vocab-dock details{margin:0;padding:0;border:0;background:transparent}
+.vocab-dock-trigger{display:inline-flex;align-items:center;justify-content:center;gap:9px;list-style:none;min-height:48px;background:#214f47;color:white;padding:10px 15px;border-radius:24px;box-shadow:0 5px 19px #173d3366;border:1px solid #163e36;cursor:pointer;font-size:.9rem;font-weight:760}
+.vocab-dock-trigger::-webkit-details-marker{display:none}
+.vocab-dock-trigger:focus-visible,.vocab-close:focus-visible,.vocab-dock input:focus-visible{outline:3px solid #396cca;outline-offset:3px}
+.vocab-dock-trigger:hover,.vocab-dock details[open]>.vocab-dock-trigger{background:#153e35}
+.vocab-dock-count{display:inline-grid;place-items:center;background:#def2e5;color:#193f35;border-radius:11px;padding:2px 7px;font-size:.75rem;font-weight:800}
+.vocab-dock-panel{position:absolute;right:0;bottom:calc(100% + 10px);width:min(382px,calc(100vw - 30px));max-height:min(70vh,630px);max-height:min(70dvh,630px);overflow:auto;overscroll-behavior:contain;background:#fff;box-shadow:0 13px 40px #1236293d;border-radius:16px;border:1px solid #b6cfc0;padding:17px 18px 15px;color:#263f38}
+.vocab-dock-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.vocab-dock-kicker{display:block;font-size:.66rem;font-weight:800;letter-spacing:.12em;color:#517063}
+.vocab-dock-head h2{font:700 1.38rem/1.23 Georgia,serif;margin:3px 0 6px}
+.vocab-close{flex:none;width:36px;height:36px;display:grid;place-items:center;border:1px solid #c5d6cc;border-radius:50%;background:#f3f7f4;color:#21493d;cursor:pointer;font-size:1.4rem}
+.vocab-dock-description{font-size:.82rem;color:#4f6358;margin:1px 0 13px}
+.vocab-search-label{font-size:.78rem;font-weight:750;display:block;margin-bottom:5px}
+.vocab-dock input{width:100%;min-height:42px;padding:8px 11px;background:#fbfdfb;border:1px solid #9db7a8;border-radius:9px;font:inherit;color:#1d352c}
+.vocab-search-status{font-size:.76rem;margin:9px 0 10px;color:#526c60}
+.vocab-dock-list{margin:0;padding:0}
+.vocab-entry{border-top:1px solid #e2eae5;padding:11px 0}
+.vocab-entry dt{font-size:.96rem;font-weight:800}
+.vocab-entry dd{margin:4px 0 0;font-size:.84rem;color:#455f54;line-height:1.52}
+.vocab-empty{padding:20px 10px;font-size:.9rem;color:#576e62}
+@media(max-width:600px){
+ .vocab-dock{right:calc(10px + env(safe-area-inset-right,0px));bottom:calc(10px + env(safe-area-inset-bottom,0px))}
+ .vocab-dock-trigger{min-height:45px;padding:9px 12px;font-size:.85rem}
+ .vocab-dock-panel{padding:15px;width:calc(100vw - 20px);max-height:min(72dvh,580px)}
+}
+@media print{.vocab-dock{display:none!important}}
 </style>
 <script defer>
 document.addEventListener('DOMContentLoaded',()=>{
@@ -146,6 +175,35 @@ document.addEventListener('DOMContentLoaded',()=>{
     }));
   });
   update();
+
+  const vocabDetails=document.getElementById('vocab-dock-details');
+  const vocabSummary=document.getElementById('vocab-toggle');
+  const vocabSearch=document.getElementById('vocab-search');
+  const vocabEntries=[...document.querySelectorAll('[data-vocab-entry]')];
+  const vocabStatus=document.getElementById('vocab-search-status');
+  const vocabNone=document.getElementById('vocab-none');
+  const closeVocab=()=>{vocabDetails.open=false;vocabSummary.focus();};
+  document.getElementById('vocab-close').addEventListener('click',closeVocab);
+  vocabDetails.addEventListener('toggle',()=>{
+    if(vocabDetails.open) vocabSearch.focus();
+  });
+  vocabSearch.addEventListener('input',()=>{
+    const query=vocabSearch.value.trim().toLocaleLowerCase();
+    let count=0;
+    vocabEntries.forEach(entry=>{
+      const matches=entry.textContent.toLocaleLowerCase().includes(query);
+      entry.hidden=!matches;
+      if(matches) count++;
+    });
+    vocabStatus.textContent=query?count+' matching '+(count===1?'term':'terms'):'Showing all '+vocabEntries.length+' terms';
+    vocabNone.hidden=count!==0;
+  });
+  document.addEventListener('keydown',ev=>{
+    if(ev.key==='Escape' && vocabDetails.open){ev.preventDefault();closeVocab();}
+  });
+  document.addEventListener('pointerdown',ev=>{
+    if(vocabDetails.open && !vocabDetails.contains(ev.target))vocabDetails.open=false;
+  });
   let printState=[];
   window.addEventListener('beforeprint',()=>{
     printState=[...document.querySelectorAll('details')].map(el=>({el,wasOpen:el.open}));
@@ -167,10 +225,10 @@ document.addEventListener('DOMContentLoaded',()=>{
 <section class="hero">
 <p class="eyebrow">Clinical reasoning · Foundations</p>
 <h1>DSM Foundations</h1>
-<p class="intro">How behavioral-health professionals move from observations to diagnostic hypotheses—and why one intriguing symptom is not a complete formulation.</p>
+<p class="intro">How therapists and assessors move from observations to diagnostic hypotheses—and why one intriguing symptom is not a complete formulation.</p>
 <div class="hero-pills"><span>9 focused lessons</span><span>Fictional cases</span><span>27 practice questions</span><span>Printable</span></div>
 <a class="button" href="#lesson-1">Start lesson 1 →</a>
-<p class="boundary"><strong>Audience:</strong> students, behavioral-health workers, and clinical trainees who want a solid grounding in diagnostic reasoning. Familiarity with diagnostic language does not authorize diagnosis. Clinical decisions require qualified assessment, the current DSM-5-TR criteria, appropriate training, and supervision. This original course does not reproduce the manual.</p>
+<p class="boundary"><strong>Audience:</strong> students, therapy support staff, and supervised trainees who want a solid grounding in diagnostic reasoning. Familiarity with diagnostic language does not authorize diagnosis. Clinical decisions require qualified assessment, the current DSM-5-TR criteria, appropriate training, and supervision. This original course does not reproduce the manual.</p>
 </section>
 <nav class="track" aria-label="Nine lesson course">
 <h2>Course outline</h2>
@@ -194,7 +252,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 <div class="lesson-head"><div class="number">1</div><div><p>Orientation</p><h2 id="title-1">What is the DSM?</h2></div></div>
 <p class="simple">The DSM is a book that helps trained professionals describe and classify patterns of mental health difficulties.</p>
 <p><strong>DSM</strong> stands for <em>Diagnostic and Statistical Manual of Mental Disorders</em>. In the United States, the current text-revised fifth edition is called <strong>DSM-5-TR</strong>.</p>
-<div class="visual"><div class="tile"><b>What it gives you</b><p>Shared names and descriptions of disorders.</p></div><div class="tile"><b>What it does not give you</b><p>A mind-reading machine or an explanation of an entire person.</p></div><div class="tile"><b>Who uses it</b><p>Qualified behavioral-health professionals, supervised trainees, and researchers.</p></div></div>
+<div class="visual"><div class="tile"><b>What it gives you</b><p>Shared names and descriptions of disorders.</p></div><div class="tile"><b>What it does not give you</b><p>A mind-reading machine or an explanation of an entire person.</p></div><div class="tile"><b>Who uses it</b><p>Therapists, psychologists, other qualified assessors, supervised trainees, and researchers.</p></div></div>
 <p>Think of it as a <strong>map of diagnostic categories</strong>, not a complete map of someone’s life. A map of Tucson can show you where Sabino Canyon is; it cannot explain why someone scheduled a hike there for noon in July.</p>
 <details class="practice-set"><summary><span><span class="practice-eyebrow">KNOWLEDGE CHECK</span><span class="practice-label">Try the 3 core questions</span></span><span class="practice-indicator" aria-hidden="true">+</span></summary><div class="practice-content">
 <div class="check" data-quiz><h3>Question 1 of 3</h3><p>Does a DSM label tell you everything about a person?</p><div class="answers"><button type="button" data-answer="no" data-feedback="A diagnosis may name a pattern; it does not explain the person's whole story, strengths, culture, goals, or needs.">Yes, it explains the whole person</button><button type="button" data-answer="yes" data-feedback="A diagnosis is one piece of information, not a complete story.">No, it names only part of the picture</button></div><p class="feedback" role="status" aria-live="polite">Choose an answer for feedback.</p></div>
@@ -218,10 +276,10 @@ document.addEventListener('DOMContentLoaded',()=>{
 <div class="lesson-head"><div class="number">2</div><div><p>From observation to pattern</p><h2 id="title-2">Symptom ≠ diagnosis</h2></div></div>
 <p class="simple">A <span class="term">symptom</span> is an experience or problem. A <span class="term">diagnosis</span> is a carefully evaluated pattern—not one symptom on its own.</p>
 <div class="example"><strong>Example: the mystery browser tab</strong>Someone says, “I have read the same message four times and still cannot tell you what it said.” Trouble concentrating is a <em>clue</em>, not a diagnosis. Sleep, stress, physical health, medication, substances, and mental health conditions could all warrant exploration. No diagnosis follows from that sentence.</div>
-<p>Behavioral-health professionals also consider <strong>distress</strong> (how much the person is suffering) and <strong>functioning</strong> (what has become harder in daily life). Neither means the person is flawed.</p>
+<p>Therapists and assessors also consider <strong>distress</strong> (how much the person is suffering) and <strong>functioning</strong> (what has become harder in daily life). Neither means the person is flawed.</p>
 <details class="practice-set"><summary><span><span class="practice-eyebrow">KNOWLEDGE CHECK</span><span class="practice-label">Try the 3 core questions</span></span><span class="practice-indicator" aria-hidden="true">+</span></summary><div class="practice-content">
 <div class="check" data-quiz><h3>Question 1 of 3</h3><p>Someone feels nervous before an exam. What do you know?</p><div class="answers"><button type="button" data-answer="yes" data-feedback="One feeling can be a normal response. Ask about the bigger picture before considering a disorder.">They feel nervous; more information is needed</button><button type="button" data-answer="no" data-feedback="An isolated symptom does not establish a disorder. Look at time, intensity, context, impact, and other explanations.">They definitely have an anxiety disorder</button></div><p class="feedback" role="status" aria-live="polite">Choose an answer for feedback.</p></div>
-<div class="check" data-quiz><h3>Question 2 of 3</h3><p>A client says, “My brain has twenty-seven tabs open.” What is the clinical value of that phrase?</p><div class="answers"><button type="button" data-answer="yes" data-feedback="Ask about attention, thoughts, sleep, mood, onset, and functional impact.">It is a vivid description to explore, not a DSM criterion on its own.</button><button type="button" data-answer="no" data-feedback="A metaphor does not establish an ADHD symptom pattern, timing, or differential.">It confirms ADHD.</button><button type="button" data-answer="no" data-feedback="Sleep is relevant to ask about, not a conclusion from the phrase.">It confirms a sleep disorder.</button></div><p class="feedback" role="status" aria-live="polite">Choose an answer for feedback.</p></div>
+<div class="check" data-quiz><h3>Question 2 of 3</h3><p>A client says, “I keep losing my train of thought halfway through a sentence.” What is the clinical value of that phrase?</p><div class="answers"><button type="button" data-answer="yes" data-feedback="Ask about attention, thoughts, sleep, mood, onset, and functional impact.">It is a useful description to explore, not a DSM criterion on its own.</button><button type="button" data-answer="no" data-feedback="A self-description does not establish an ADHD symptom pattern, timing, or differential.">It confirms ADHD.</button><button type="button" data-answer="no" data-feedback="Sleep is relevant to ask about, not a conclusion from the phrase.">It confirms a sleep disorder.</button></div><p class="feedback" role="status" aria-live="polite">Choose an answer for feedback.</p></div>
 <div class="check" data-quiz><h3>Question 3 of 3</h3><p>Which additional detail would help distinguish ordinary stress from a clinical presentation?</p><div class="answers"><button type="button" data-answer="yes" data-feedback="These details contribute to deciding whether and which diagnostic criteria may apply.">Onset, duration, associated symptoms, context, and effect on functioning.</button><button type="button" data-answer="no" data-feedback="Unread messages are not a mental-health diagnostic instrument.">The number of unopened messages alone.</button><button type="button" data-answer="no" data-feedback="An iced coffee order tells you very little about diagnostic patterns, even in July.">Whether they still order iced coffee when it is 110°F outside.</button></div><p class="feedback" role="status" aria-live="polite">Choose an answer for feedback.</p></div>
 </div></details>
 <details class="expand"><summary><span>Go deeper: how to write a symptom without diagnosing it</span><span class="expand-arrow" aria-hidden="true">+</span></summary><p>Write <em>“Client reports difficulty concentrating after three nights of short sleep”</em> rather than <em>“Client has ADHD.”</em> The first statement preserves the report and relevant context; the second assumes a diagnostic conclusion. As evidence accumulates, documentation can distinguish observed findings, self-report, and professional interpretation.</p></details>
@@ -405,8 +463,8 @@ document.addEventListener('DOMContentLoaded',()=>{
 </section>
 
 <section class="lesson" id="lesson-7" aria-labelledby="title-7">
-<div class="lesson-head"><div class="number">7</div><div><p>From hypotheses to decisions</p><h2 id="title-7">How behavioral-health professionals use the DSM</h2></div></div>
-<p class="simple">The DSM helps behavioral-health professionals evaluate possibilities. It does not replace interviewing, context, judgment, or supervision.</p>
+<div class="lesson-head"><div class="number">7</div><div><p>From hypotheses to decisions</p><h2 id="title-7">How the DSM supports assessment and treatment</h2></div></div>
+<p class="simple">The DSM helps therapists and assessors compare diagnostic possibilities. It does not replace interviewing, context, judgment, or supervision.</p>
 <div class="visual">
 <div class="tile"><b>1 · Listen</b><p>Understand the person and their goals.</p></div>
 <div class="tile"><b>2 · Compare</b><p>Review plausible diagnoses and full current criteria, including exclusions.</p></div>
@@ -591,5 +649,45 @@ document.addEventListener('DOMContentLoaded',()=>{
 </section>
 <footer>Clinical Practice Library · DSM Foundations · All existing CPL guides and specialist learning paths remain available.</footer>
 </main>
+<aside class="vocab-dock" aria-label="Course vocabulary reference">
+<details id="vocab-dock-details">
+<summary id="vocab-toggle" class="vocab-dock-trigger"><span aria-hidden="true">▤</span><span>Vocabulary</span><span class="vocab-dock-count">25</span></summary>
+<div class="vocab-dock-panel">
+<div class="vocab-dock-head"><div><span class="vocab-dock-kicker">QUICK REFERENCE</span><h2 id="vocab-heading">Course vocabulary</h2></div><button class="vocab-close" id="vocab-close" type="button" aria-label="Close vocabulary">×</button></div>
+<p class="vocab-dock-description">A reference while reading—not a replacement for formal diagnostic criteria.</p>
+<label class="vocab-search-label" for="vocab-search">Find a term</label>
+<input id="vocab-search" type="search" autocomplete="off" placeholder="Search words or definitions">
+<p id="vocab-search-status" class="vocab-search-status" role="status" aria-live="polite">Showing all 25 terms</p>
+<dl class="vocab-dock-list">
+<div class="vocab-entry" data-vocab-entry><dt>DSM-5-TR</dt><dd>The current text revision of the DSM-5. A classification manual used in diagnosis.</dd></div>
+<div class="vocab-entry" data-vocab-entry><dt>Symptom</dt><dd>A reported or observed difficulty that might have several explanations.</dd></div>
+<div class="vocab-entry" data-vocab-entry><dt>Criterion</dt><dd>One requirement within a formal diagnostic definition.</dd></div>
+<div class="vocab-entry" data-vocab-entry><dt>Diagnosis</dt><dd>A qualified assessment's conclusion that a particular condition or clinical pattern is present.</dd></div>
+<div class="vocab-entry" data-vocab-entry><dt>Diagnostic impression</dt><dd>A working assessment conclusion that may be refined as more information becomes available.</dd></div>
+<div class="vocab-entry" data-vocab-entry><dt>Differential diagnosis</dt><dd>Comparing plausible explanations and the evidence that distinguishes them.</dd></div>
+<div class="vocab-entry" data-vocab-entry><dt>Clinical formulation</dt><dd>An individualized explanation of a person's difficulties, strengths, history, and context.</dd></div>
+<div class="vocab-entry" data-vocab-entry><dt>Distress</dt><dd>Suffering or discomfort associated with an experience.</dd></div>
+<div class="vocab-entry" data-vocab-entry><dt>Impairment</dt><dd>A limitation affecting important aspects of functioning.</dd></div>
+<div class="vocab-entry" data-vocab-entry><dt>Functioning</dt><dd>How someone manages activities and participates in daily life, with and without supports.</dd></div>
+<div class="vocab-entry" data-vocab-entry><dt>Disability</dt><dd>Limitations and participation barriers involving impairments and environmental context; legal standards vary.</dd></div>
+<div class="vocab-entry" data-vocab-entry><dt>Accommodation</dt><dd>A change to conditions, methods, or environments that helps reduce a barrier.</dd></div>
+<div class="vocab-entry" data-vocab-entry><dt>Neurodevelopmental</dt><dd>Relating to brain and nervous-system development, including conditions such as autism and ADHD.</dd></div>
+<div class="vocab-entry" data-vocab-entry><dt>Dissociation</dt><dd>A range of experiences involving absorption or changes in awareness, memory, identity, or perception.</dd></div>
+<div class="vocab-entry" data-vocab-entry><dt>Absorption</dt><dd>Becoming so immersed in something that awareness of other things recedes; it can be a dissociative experience.</dd></div>
+<div class="vocab-entry" data-vocab-entry><dt>OCD</dt><dd>Obsessive-compulsive disorder: characterized by obsessions and/or compulsions with specific criteria.</dd></div>
+<div class="vocab-entry" data-vocab-entry><dt>PTSD</dt><dd>Posttraumatic stress disorder: a diagnosis with specific exposure and symptom criteria.</dd></div>
+<div class="vocab-entry" data-vocab-entry><dt>Episode</dt><dd>A distinct period of symptoms considered within a condition's diagnostic criteria.</dd></div>
+<div class="vocab-entry" data-vocab-entry><dt>Mania</dt><dd>An episode involving a distinct change in mood and energy/activity, with other symptoms and duration criteria.</dd></div>
+<div class="vocab-entry" data-vocab-entry><dt>Personality disorder</dt><dd>A diagnosed enduring, pervasive pattern with specific clinical criteria and important contextual considerations.</dd></div>
+<div class="vocab-entry" data-vocab-entry><dt>Specifier</dt><dd>Additional qualifying information attached to certain diagnoses.</dd></div>
+<div class="vocab-entry" data-vocab-entry><dt>ICD-10-CM</dt><dd>The U.S. diagnosis coding system used for covered health-care reporting and claims.</dd></div>
+<div class="vocab-entry" data-vocab-entry><dt>Identity-first language</dt><dd>A phrasing such as 'autistic person' where an attribute is used as an identity descriptor.</dd></div>
+<div class="vocab-entry" data-vocab-entry><dt>Person-first language</dt><dd>A phrasing such as 'person with autism' that places the word person first.</dd></div>
+<div class="vocab-entry" data-vocab-entry><dt>Support needs</dt><dd>The assistance, changes, or resources a person needs to participate or function effectively.</dd></div>
+</dl>
+<p id="vocab-none" class="vocab-empty" hidden>No matches. Try a shorter word.</p>
+</div>
+</details>
+</aside>
 </body>
 </html>
