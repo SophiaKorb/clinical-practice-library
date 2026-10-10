@@ -16,10 +16,14 @@
   const print = () => {
     preparePrint();
     try {
+      // In browsers with asynchronous print preview, returning from
+      // window.print() does NOT mean the browser has captured the layout.
+      // Keep selected-print mode until the actual afterprint event.
       window.print();
-    } finally {
-      // Also clean up when printing is blocked or the dialog is suppressed.
+    } catch (error) {
+      // If the print API throws, reset immediately; no preview exists.
       restorePrint();
+      throw error;
     }
   };
   document.querySelector('[data-expand-tools]').addEventListener('click', () => examples.forEach(example => { example.open = true; }));
