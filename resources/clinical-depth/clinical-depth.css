@@ -1,0 +1,64 @@
+/* Phase 8B depth pages: constrained typography, actual parallel/decision spatial relationships */
+main#content{max-width:1050px;margin:28px auto 80px;padding:0 18px}
+main#content h1{font-size:clamp(2rem,4.7vw,3.45rem);line-height:1.1;margin:10px 0 16px;max-width:20ch}
+main#content h2{font-size:clamp(1.45rem,3.1vw,2.05rem);margin:0 0 14px}
+main#content h3{font-size:1.13rem;line-height:1.32}
+main#content p,main#content li{line-height:1.62}
+main#content section{margin:34px 0;scroll-margin-top:24px}
+main#content .lead{font-size:1.1rem;color:#405c52;max-width:76ch}
+main#content .kicker{text-transform:uppercase;letter-spacing:.10em;font-size:.77rem;font-weight:800;color:#346d5c}
+main#content .small{font-size:.87rem;color:#4a6057}
+main#content a{overflow-wrap:anywhere}
+main#content .notice{border-left:6px solid #326c58;background:#eef4ee;padding:15px 18px;margin:22px 0;max-width:86ch;border-radius:6px}
+main#content .notice.danger{background:#f9e9e3;border-color:#a44d39}
+main#content .within-page{display:flex;flex-wrap:wrap;gap:7px;margin:20px 0}
+main#content .within-page a{padding:8px 10px;border:1px solid #aec7b7;border-radius:8px;background:white;font-size:.89rem;font-weight:700;min-height:44px;display:inline-flex;align-items:center}
+main#content .two-col,main#content .two-tracks,main#content .question-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+main#content .panel,main#content .question-cards article{border:1px solid #c1d1c6;border-radius:12px;padding:18px;background:white;min-width:0}
+main#content .panel h3,main#content .question-cards h3{margin-top:0}
+main#content .panel ul{padding-left:22px}
+main#content .action-link{display:inline-flex;align-items:center;min-height:44px;padding:8px 12px;border:2px solid #226250;border-radius:8px;background:#eaf2eb;font-weight:800;text-decoration:none}
+main#content .relationship-diagram{max-width:920px;margin:24px 0;padding:22px;background:#fff;border:1px solid #b5cabd;border-radius:16px}
+main#content .diagram-origin,main#content .diagram-converge{padding:14px;border:2px solid #6c9580;border-radius:9px;background:#dcebe2;text-align:center;max-width:580px;margin:0 auto;font-weight:750}
+main#content .branch-arrows{display:flex;justify-content:space-around;font-weight:bold;font-size:2rem;line-height:1;color:#275c4a}
+main#content .diagram-track{padding:18px;border:2px solid #748b80;border-radius:12px;background:#eef4f0;min-width:0}
+main#content .diagram-track h3{margin:0 0 8px}
+main#content .diagram-track p{margin:6px 0}
+main#content .diagram-track.urgent-track{background:#fbece8;border-color:#a9604b}
+main#content .diagram-track.formulation-track{background:#ecf0f8;border-color:#6276a3}
+main#content .branch-converge{text-align:center;font-weight:bold;font-size:1.75rem;line-height:1.1;color:#275c4a}
+main#content .diagram-converge span{display:block;font-size:.86rem;font-weight:500}
+main#content figcaption{font-size:.86rem;color:#44594f;line-height:1.5;margin-top:12px}
+main#content .table-wrap{overflow-x:auto;max-width:100%;border:1px solid #b7ccc0;border-radius:10px}
+main#content table{border-collapse:collapse;width:100%;font-size:.94rem;background:#fff;min-width:570px}
+main#content th,main#content td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid #dce6df}
+main#content thead{background:#e1ede6}
+main#content tbody th{width:23%;font-weight:750;color:#234c3c}
+main#content .step-list{border-left:4px solid #6c9580;padding-left:22px}
+main#content .step-list section{margin:12px 0 20px}
+main#content .step-list h3{margin:0 0 5px}
+main#content .step-list p{margin:0}
+main#content .case{border:1px solid #bfd0c5;border-left:6px solid #667bab;border-radius:9px;background:#fff;padding:20px}
+main#content .case details{padding:12px;margin:8px 0}
+main#content .case summary{min-height:44px;display:flex;align-items:center}
+main#content .numbered{padding-left:25px}
+main#content .numbered li{padding:8px 0}
+main#content .outcome-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+main#content .outcome-grid>div{padding:17px;border-radius:10px;border:2px solid #577f6c;background:#eef5ef;min-width:0}
+main#content .outcome-grid>div:nth-child(2){border-color:#697baf;background:#eef1fa}
+main#content .outcome-grid b,main#content .outcome-grid strong,main#content .outcome-grid span{display:block}
+main#content .outcome-grid .outcome-join{grid-column:1/-1;text-align:center;background:#fff;border-style:dashed}
+main#content .outcome-grid figcaption{grid-column:1/-1}
+main#content .domain-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:15px 0}
+main#content .domain-list span{border:1px solid #b7cebd;border-radius:7px;background:#f1f5f1;padding:11px;font-size:.9rem}
+main#content label{margin:20px 0 6px}
+main#content textarea{background:#fff;min-height:90px}
+main#content .route-list{counter-reset:route;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding:0}
+main#content .route-list li{list-style:none;border-top:5px solid #356d57;background:#e6efe8;padding:15px;min-height:105px}
+main#content .route-list strong,main#content .route-list span{display:block}
+main#content .route-list span{font-size:.9rem}
+main#content .sources{padding:16px 18px;border-top:3px solid #b3ccbb;background:#f4f7f2}
+main#content .depth-footer{border-top:1px solid #bbcec0;margin-top:45px;padding:20px 0;font-size:.85rem;color:#435c50}
+@media(max-width:680px){main#content{margin:20px auto;padding:0 14px}main#content .two-col,main#content .two-tracks,main#content .question-cards{grid-template-columns:1fr}main#content .route-list{grid-template-columns:1fr 1fr}main#content .relationship-diagram{padding:13px}main#content .domain-list{grid-template-columns:1fr 1fr}main#content .table-wrap{margin-inline:-4px}main#content .within-page{gap:5px}main#content .within-page a{padding:6px 8px}main#content h1{font-size:clamp(1.9rem,8vw,2.7rem)}}
+@media(max-width:390px){main#content .route-list,main#content .domain-list{grid-template-columns:1fr}main#content .outcome-grid{grid-template-columns:1fr}main#content .outcome-grid .outcome-join{grid-column:1}}
+@media print{.cpl-static-nav,.within-page,.no-print{display:none!important}main#content{width:100%;margin:0;padding:0}main#content .relationship-diagram,main#content .diagram-track,main#content .outcome-grid>div{background:white!important;color:#000!important}main#content .case,main#content .panel,main#content table,main#content .diagram-track{break-inside:avoid}main#content a{color:black}main#content .table-wrap{overflow:visible}main#content table{min-width:0;font-size:9pt}main#content textarea{height:3rem;border:1px solid #777}}
