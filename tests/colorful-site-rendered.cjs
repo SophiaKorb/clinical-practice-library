@@ -47,6 +47,13 @@ fs.mkdirSync(out,{recursive:true});
      await page.screenshot({path:path.join(out,'cpl-'+name+'-'+width+'.png'),animations:'disabled'});
     }
     if(name==='dsm'){
+     const audience=page.locator('#audience');
+     assert.equal(await audience.getAttribute('open'),null,'audience closed on load');
+     await audience.locator('summary').focus();
+     await page.keyboard.press('Enter');
+     assert.equal(await audience.getAttribute('open'),'','keyboard opens audience');
+     await page.keyboard.press('Enter');
+     assert.equal(await audience.getAttribute('open'),null,'keyboard closes audience');
      assert.equal(await page.locator('.lesson').count(),12,'11 lessons and summary');
      assert.equal(await page.locator('[data-quiz]').count(),99);
      assert.equal(await page.locator('.worked-example').count(),33);
