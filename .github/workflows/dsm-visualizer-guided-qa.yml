@@ -1,0 +1,23 @@
+name: DSM visualizer guided explanation QA
+
+on:
+  push:
+    branches: [dsm-visualizer-guided-explanation]
+  pull_request:
+    paths:
+      - 'resources/therapy/dsm-structure-4d.html'
+      - 'tests/dsm-structure-smoke.cjs'
+
+permissions:
+  contents: read
+
+jobs:
+  dsm-visualizer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify original 3D interaction and teaching explanation
+        run: node tests/dsm-structure-smoke.cjs
