@@ -80,6 +80,10 @@ fs.mkdirSync(out,{recursive:true});
      assert.ok(await page.locator('a[href="/resources/clinical-depth/complex-dissociation-functional-care.html#assessment-instruments"]').count()>=1);
     }
     if(name==='visual'){
+     const fork=page.locator('#decision .decision-branches');
+     const branches=await fork.evaluate(e=>getComputedStyle(e).gridTemplateColumns.split(' ').length);
+     assert.equal(branches,2,'safety alternatives remain parallel at '+width);
+     assert.equal(await page.locator('#decision svg.branch-fork').count(),1,'visible fork connector');
      const firstVisual=await page.locator('#decision .visual').boundingBox();
      assert.ok(firstVisual,'decision graphic actually exists '+width);
      if(width<=390)assert.ok(firstVisual.y<480,'first graphic visible on initial phone viewport: y='+firstVisual.y+' @'+width);
@@ -97,8 +101,8 @@ fs.mkdirSync(out,{recursive:true});
      assert.equal(matrix,2,'skill vs access matrix stays two-dimensional at width '+width);
      if(width===390){
       for(const target of ['decision','cycle','quadrant','function']){
-       await page.locator('#'+target).scrollIntoViewIfNeeded();
-       await page.screenshot({path:path.join(out,'cpl-visual-'+target+'-390.png'),animations:'disabled'});
+       const selector=target==='decision'?'#decision .visual':target==='cycle'?'#cycle .loop':target==='quadrant'?'#quadrant .quadrant':'#function .visual';
+       await page.locator(selector).screenshot({path:path.join(out,'cpl-visual-'+target+'-390.png'),animations:'disabled'});
       }
      }
      const items=page.locator('[data-level]');
