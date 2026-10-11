@@ -37,9 +37,15 @@ assert.deepEqual(positions,[33,33,33],'avoid positional answer bias');
 const caseBanks=[...html.matchAll(/<details class="extra-examples">([\s\S]*?)<\/details>/g)];
 assert.equal(caseBanks.length,11);
 for(const [i,bank] of caseBanks.entries()){
- assert.equal((bank[1].match(/class="example worked-example"/g)||[]).length,3,'three worked cases in lesson '+(i+1));
- for(const label of ['1. What do we know?','2. What do we ask or test?','3. What does the result tell us?','4. What do we do next?','The takeaway:']){
-  assert.equal(bank[1].split(label).length-1,3,'three '+label+' sections in lesson '+(i+1));
+ const cases=[...bank[1].matchAll(/<div class="example worked-example">([\s\S]*?)<\/div>/g)];
+ assert.equal(cases.length,3,'three worked cases in lesson '+(i+1));
+ for(const [j,item] of cases.entries()){
+  const labels=[...item[1].matchAll(/<li><b>(\d)\. ([^<]+)<\/b>/g)].map(m=>m[1]+'. '+m[2]);
+  assert.deepEqual(labels,[
+   '1. What do we know?','2. What do we ask or test?',
+   '3. What does the result tell us?','4. What do we do next?'
+  ],'same four worked steps in lesson '+(i+1)+' case '+(j+1));
+  assert.ok(item[1].includes('The takeaway:'),'specific takeaway in worked case');
  }
 }
 const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
