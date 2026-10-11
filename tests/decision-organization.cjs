@@ -17,6 +17,8 @@ assert.match(css,/border-left:4px solid #83a48b/);
 assert.match(home,/class="mobile-find" href="\/resources\/start-here\.html"/);
 assert.ok(nav.includes('("/resources/start-here.html", "Start here", "Empezar")'));
 assert.ok(nav.includes('Complete directory'),'alternate directory preserved');
+assert.ok(fs.readFileSync('scripts/build-topic-expansion.py','utf8').includes('Prefer a clinical-task route?'),'topic index generator retains route');
+assert.ok(fs.readFileSync('resources/clinical-topics/index.html','utf8').includes('Prefer a clinical-task route?'),'topic index output retains route');
 const finder=JSON.parse(fs.readFileSync('data/clinical-finder.json','utf8'));
 assert.equal(finder.resources.filter(r=>r.url==='/resources/start-here.html').length,1);
 assert.ok(finder.resources.find(r=>r.url==='/resources/start-here.html').tags.role.includes('Clinician'));
