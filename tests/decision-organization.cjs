@@ -15,6 +15,6 @@ assert.match(css,/@media\(max-width:760px\)/);
 assert.match(css,/\.route-cycle\{grid-template-columns:1fr/);
 assert.match(css,/border-left:4px solid #83a48b/);
 assert.match(home,/class="mobile-find" href="\/resources\/start-here\.html"/);
-assert.match(nav,/\("/resources/start-here.html", "Start here", "Empezar"\)/);
+assert.ok(nav.includes('("/resources/start-here.html", "Start here", "Empezar")'));
 assert.ok(nav.includes('Complete directory'),'alternate directory preserved');
 console.log('PASS decision-first organization: 3 core intents, nonlinear mapped stages, alternate filters, historic directory and readable phone visuals');
