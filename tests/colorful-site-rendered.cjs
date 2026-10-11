@@ -72,6 +72,12 @@ fs.mkdirSync(out,{recursive:true});
      }
     }
     if(name==='visual'){
+     assert.equal(await page.locator('.loop-figure .loop .node').count(),4,'four distinct cycle stages');
+     assert.equal(await page.locator('.quadrant .node').count(),4,'actual two-by-two matrix');
+     const layout=await page.locator('.loop-figure .loop').evaluate(e=>getComputedStyle(e).gridTemplateColumns.split(' ').length);
+     assert.equal(layout,2,'cycle stays two-dimensional at width '+width);
+     const matrix=await page.locator('.quadrant').evaluate(e=>getComputedStyle(e).gridTemplateColumns.split(' ').length);
+     assert.equal(matrix,2,'skill vs access matrix stays two-dimensional at width '+width);
      const items=page.locator('[data-level]');
      assert.equal(await items.count(),6,'six thermometer levels');
      await items.nth(3).click();
