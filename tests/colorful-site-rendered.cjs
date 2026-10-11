@@ -80,12 +80,27 @@ fs.mkdirSync(out,{recursive:true});
      assert.ok(await page.locator('a[href="/resources/clinical-depth/complex-dissociation-functional-care.html#assessment-instruments"]').count()>=1);
     }
     if(name==='visual'){
+     const firstVisual=await page.locator('#decision .visual').boundingBox();
+     assert.ok(firstVisual,'decision graphic actually exists '+width);
+     if(width<=390)assert.ok(firstVisual.y<480,'first graphic visible on initial phone viewport: y='+firstVisual.y+' @'+width);
+     const toolMenu=page.locator('details.tool-jump');
+     assert.equal(await toolMenu.count(),1,'one compact tool menu');
+     assert.equal(await toolMenu.getAttribute('open'),null,'tool menu starts collapsed');
+     await toolMenu.locator('summary').click();
+     assert.ok(await toolMenu.locator('.menu a').count()>=8,'all other visuals remain reachable');
+     await toolMenu.locator('summary').click();
      assert.equal(await page.locator('.loop-figure .loop .node').count(),4,'four distinct cycle stages');
      assert.equal(await page.locator('.quadrant .node').count(),4,'actual two-by-two matrix');
      const layout=await page.locator('.loop-figure .loop').evaluate(e=>getComputedStyle(e).gridTemplateColumns.split(' ').length);
      assert.equal(layout,2,'cycle stays two-dimensional at width '+width);
      const matrix=await page.locator('.quadrant').evaluate(e=>getComputedStyle(e).gridTemplateColumns.split(' ').length);
      assert.equal(matrix,2,'skill vs access matrix stays two-dimensional at width '+width);
+     if(width===390){
+      for(const target of ['decision','cycle','quadrant','function']){
+       await page.locator('#'+target).scrollIntoViewIfNeeded();
+       await page.screenshot({path:path.join(out,'cpl-visual-'+target+'-390.png'),animations:'disabled'});
+      }
+     }
      const items=page.locator('[data-level]');
      assert.equal(await items.count(),6,'six thermometer levels');
      await items.nth(3).click();

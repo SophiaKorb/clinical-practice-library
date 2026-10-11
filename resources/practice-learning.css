@@ -70,3 +70,29 @@
   .visual .timeline .node::before{content:"●";display:block;position:absolute;left:-31px;top:12px;margin:0;color:#245b49;font-size:1.3rem}
 }
 @media print{.loop-figure .loop{grid-template-columns:repeat(2,minmax(0,1fr))}.loop-figure .loop .node{background:white!important}.matrix-headings span,.quadrant .node{background:white!important}.quadrant .node{border:1px solid #444}}
+
+/* The first mobile viewport must show an actual graphic, not a toolbar wall.
+   Tool jump links, display controls and provenance are available by disclosure
+   after the first decision graphic. Do not remove the first visual from print. */
+.tool-jump{border:1.5px solid #8db29c;background:#fff;border-radius:11px;margin:16px 0 23px;padding:0}
+.tool-jump>summary{min-height:50px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 15px;cursor:pointer;font-weight:800;color:#245b49;list-style:none}
+.tool-jump>summary::-webkit-details-marker{display:none}
+.tool-jump>summary span{font-size:1.15rem;transition:transform .15s ease}
+.tool-jump[open]>summary span{transform:rotate(180deg)}
+.tool-jump__content{padding:0 15px 15px}
+.tool-jump:not([open]) .tool-jump__content{display:none!important}
+.tool-jump .menu{margin:4px 0 16px}
+.tool-jump .controls{margin:9px 0 14px}
+@media(max-width:700px){
+ main#content{padding-top:13px}
+ main#content h1{font-size:clamp(1.85rem,8vw,2.2rem);line-height:1.12;margin:6px 0 8px}
+ main#content>.lede{font-size:.92rem;line-height:1.45;margin:6px 0 14px;color:#445b51}
+ main#content>.section:first-of-type{padding-top:7px;border-top:0}
+ main#content>.section:first-of-type h2{font-size:1.35rem;margin:0 0 4px}
+ main#content>.section:first-of-type>p{margin:4px 0 9px;font-size:.88rem;line-height:1.38}
+ main#content>.section:first-of-type .visual{margin:8px 0;padding:12px}
+ main#content>.section:first-of-type .visual>.node{padding:10px}
+ main#content>.section:first-of-type .visual>.node strong{font-size:.93rem;line-height:1.28}
+ main#content>.section:first-of-type .connector{margin:4px 0;font-size:.82rem}
+}
+@media print{.tool-jump{display:none!important}}
