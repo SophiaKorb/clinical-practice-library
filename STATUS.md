@@ -1,3 +1,17 @@
+## October 10, 2026 — Editorial review responses: Phase 8B
+
+The clinical library's **underlying organization and flagship mobile visual presentation were not approved**. The review approved the new clinical-depth editorial direction, with DES-II recommended as a screening option and MID assessment resources for clinicians.
+
+Implemented on Colorful preview only:
+- New `resources/start-here.html` maps **Understand/assess**, **Plan/intervene**, and **Practice/communicate** as task-entry routes. A four-stage formulate/choose/try/review loop explicitly returns to formulation. Diagnosis, specialty, professional role, old collection shelves and format remain alternate entry points; source URLs preserved. Homepage and global navigation prioritize Start/Find rather than Browse/Topics, and existing entry pages cross-link the new route.
+- The visual toolkit's mobile entry moved the **actual first decision graphic above tool navigation**. Its safety vs nonurgent branches are drawn as alternatives; the avoidance cycle has visible arrows and its skill/access matrix stays 2×2 on phones. Browser checks test the first graphic's visibility, narrow-screen geometry, keyboard operation and representative screenshots.
+- The complex dissociation guide now distinguishes **DES-II screening** from **MID detailed clinician assessment**. MID materials and professional training links are under an expandable, *not access-controlled*, specialist section. The Arizona Trauma Institute course is described as broad dissociation training; the official MID training is listed separately. No instrument items, scoring files or protected access materials are mirrored.
+- All Phase 8/8B qualified clinical sign-offs, complete IA migration, Spanish validation, PDF visual parity and full accessibility review remain pending. **Do not equate source/Chromium QA with clinical approval or visual usability sign-off.**
+
+Review source: `docs/phase-8b-information-architecture.md`; compiled site on `cpl-2-colorful-helpful`. Legacy production remains unchanged.
+
+---
+
 # Library status
 
 ## October 10, 2026: Colorful 2.0 project QA

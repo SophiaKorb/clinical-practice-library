@@ -34,3 +34,6 @@ Make authoritative starting points in each specialty, remove redundant *entry pa
 
 ## Immediate related clinical editorial decision
 DES-II recommended as a screening option; MID advanced assessment resources behind a native disclosure for trained clinicians. Arizona Trauma Institute offers general dissociation training, while official MID-specific training is linked separately.
+
+## Visual-first mobile repair checkpoint
+Rendered phone review found that the visual toolkit's initial 390px screenshot displayed only a title, explanations and controls. This was not a mere scrollbar issue. The actual decision graphic is now before the toolbar, which moved to an expandable “Explore other visuals” section. Safety vs nonurgent choices are distinct visual branches, not sequential text cards; the avoidance loop has directional connectors; skill/access retains a 2×2 matrix; the ABC chain and timeline retain visible connections on phones. Chromium screenshot tests now capture the diagram elements themselves. **No editor or end-user final visual approval is implied.**
