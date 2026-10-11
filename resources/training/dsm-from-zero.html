@@ -250,6 +250,20 @@ details.practice-set .practice-eyebrow,details.practice-set .practice-indicator,
 @media(max-width:680px){.sud-criteria{grid-template-columns:1fr}.sud-group{padding:13px 14px}.sud-severity>div{padding:9px 4px}.sud-severity strong{font-size:1.12rem}}
 @media print{.sud-group,.sud-severity>div,.safety-note{background:#fff!important;border:1px solid #777;color:#000}.course-color-key{display:none}}
 
+
+/* The audience guidance is optional and closed on initial load. */
+.audience-details{margin:17px 0 0;border:1px solid var(--line-neutral);border-radius:10px;background:var(--surface-neutral);overflow:hidden}
+.audience-details>summary{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 15px;cursor:pointer;font-weight:720;min-height:46px;list-style:none}
+.audience-details>summary::-webkit-details-marker{display:none}
+.audience-details>summary:hover{background:#ebf0ef}
+.audience-expand-indicator{font-size:1.25rem;line-height:1;font-weight:600;color:var(--muted)}
+.audience-details[open] .audience-expand-indicator{transform:rotate(45deg)}
+.audience-content{padding:3px 16px 16px;border-top:1px solid var(--line-neutral);max-width:77ch}
+.audience-content p{line-height:1.58;font-size:.92rem;margin:12px 0}
+.audience-content .audience-boundary{margin:15px 0 0;padding:12px 13px;border-left:3px solid var(--line);background:#fff}
+@media(max-width:680px){.audience-content{padding:2px 13px 13px}.audience-details>summary{padding:12px 13px}}
+@media print{.audience-details{break-inside:avoid}.audience-details>summary{font-size:.95rem}}
+
 </style>
 <script defer>
 document.addEventListener('DOMContentLoaded',()=>{
@@ -322,7 +336,16 @@ document.addEventListener('DOMContentLoaded',()=>{
 <div class="hero-pills"><span>11 focused lessons</span><span>Fictional cases</span><span>99 practice questions</span><span>Printable</span></div>
 <div class="course-color-key" aria-label="Course color meanings"><span><i class="key-case" aria-hidden="true"></i>Examples</span><span><i class="key-practice" aria-hidden="true"></i>Questions</span><span><i class="key-safety" aria-hidden="true"></i>Safety</span><span><i class="key-correct" aria-hidden="true"></i>Correct</span><span><i class="key-revisit" aria-hidden="true"></i>Reconsider</span></div>
 <a class="button" href="#lesson-1">Start lesson 1 →</a>
-<p class="boundary"><strong>Audience:</strong> students, therapy support staff, and supervised trainees who want a solid grounding in diagnostic reasoning. Familiarity with diagnostic language does not authorize diagnosis. Clinical decisions require qualified assessment, the current DSM-5-TR criteria, appropriate training, and supervision. This original course does not reproduce the manual.</p>
+<details class="audience-details" id="audience">
+<summary>Who this course is for <span aria-hidden="true" class="audience-expand-indicator">+</span></summary>
+<div class="audience-content">
+<p><strong>Anyone curious about diagnosis</strong> can start here. You do not need a clinical background to understand why people classify experiences, how diagnostic language works, or why a category never explains a whole person.</p>
+<p><strong>Clients, families, and advocates</strong> can use the course to understand terms they hear, think through questions for appointments, and distinguish self-knowledge, diagnosis, disability, and access needs.</p>
+<p><strong>Students, supervised trainees, therapists, psychologists, and other qualified assessors</strong> can use the deeper examples to practice asking better questions, considering alternatives, and recognizing limits of available evidence.</p>
+<p><strong>Support, peer, school, and case-management staff</strong> can learn to describe observations clearly, respond respectfully, identify barriers, and know when qualified assessment or safety escalation is needed.</p>
+<p class="audience-boundary"><strong>Important boundary:</strong> Reading this course does not authorize independent diagnosis. Diagnosis, treatment decisions, and formal assessments depend on professional role, competence, current criteria, and appropriate supervision. This original course is educational and does not reproduce the DSM-5-TR.</p>
+</div>
+</details>
 </section>
 <nav class="track" aria-label="Eleven lesson course">
 <h2>Course outline</h2>
