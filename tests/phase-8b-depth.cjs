@@ -26,6 +26,13 @@ assert.match(did,/2011/);
 assert.match(did,/not an RCT/);
 assert.ok(did.includes('dissociation-function-observation.html'));
 
+const dissociationScreen=fs.readFileSync(root+'complex-dissociation-functional-care.html','utf8');
+assert.match(dissociationScreen,/id="assessment-instruments"/);
+assert.match(dissociationScreen,/DES-II: screen/);
+assert.match(dissociationScreen,/<details class="specialist-resources">/);
+assert.match(dissociationScreen,/https:\/\/www.mid-assessment.com\/mid-training\//);
+assert.match(dissociationScreen,/https:\/\/aztrauma.org\/project\/trauma-and-dissociation-a-clinical-approach\//);
+assert.match(dissociationScreen,/not advertised as a MID-specific scoring course/);
 const personality=fs.readFileSync(root+'complex-personality-longitudinal-care.html','utf8');
 for(const term of ['NICE CG78','APA Practice Guideline','GPM','rupture','Engulfment','Abandonment','Leah','supervision']) assert.ok(personality.toLowerCase().includes(term.toLowerCase()));
 assert.match(personality,/cycle-map/);

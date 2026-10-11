@@ -69,3 +69,9 @@ Audit established; first clinical deepening batch in progress. The audit is a pr
 - Status is **materially deepened, not clinically approved**. Pediatric trauma, safeguarding, medical/addiction, disability access and lived-experience review remains pending. All routes require real render/keyboard/print verification after source and navigation integration.
 
 - P1 psychosis/bipolar: `resources/clinical-depth/psychosis-bipolar-longitudinal-care.html` with `resources/clinical-depth/episode-context-function-map.html` adds a multidimensional episode timeline, urgent and medical/substance differential, specialist CBT/family/support selection and functional recovery tracking. References NICE CG178/CG185. Clinical/psychiatric review and local adaptation pending.
+
+## Dissociation assessment instrument guidance (editorial, 2026-10-10)
+- DES-II is designated as a **screen**, not a diagnosis or automatic cutoff. ISSTD lists it under Screening Tools and addresses limitations in its DES-II webinar.
+- MID is designated a **multidimensional clinician assessment**, linked under a native, collapsed “Advanced clinician assessment” disclosure in the complex dissociation guide. Only official publisher materials and access/training instructions are linked, not redistributed.
+- Arizona Trauma Institute's “Trauma and Dissociation: A Clinical Approach” is included as *general clinical dissociation education*. The dedicated MID administration/interpretation courses remain separately linked to the official MID training provider. Do not suggest ATI currently advertises dedicated MID training.
+- The user chose to feature DES-II and MID; this editorial decision is not clinical validation or authorization to bypass eligibility restrictions.

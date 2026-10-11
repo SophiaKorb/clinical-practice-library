@@ -138,3 +138,23 @@ main#content .episode-map figcaption{margin-top:10px}
  main#content .episode-map{overflow:visible}
  main#content .episode-row{break-inside:avoid}
 }
+
+/* Assess with three separated purposes, not three diagnostic score thresholds. */
+main#content .assessment-levels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:18px 0 22px}
+main#content .assessment-level{padding:15px;background:#edf4ef;border:1.5px solid #9eb9a6;border-radius:11px;min-width:0}
+main#content .assessment-level:nth-child(2){background:#eaf0fa;border-color:#859cbd}
+main#content .assessment-level:nth-child(3){background:#f6f0e6;border-color:#b3a17e}
+main#content .assessment-level__number{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border:2px solid #426d56;border-radius:50%;font-weight:850;margin-bottom:9px}
+main#content .assessment-level strong,main#content .assessment-level span:not(.assessment-level__number){display:block}
+main#content .assessment-level strong{font-size:.97rem;line-height:1.3}
+main#content .assessment-level span:not(.assessment-level__number){font-size:.84rem;line-height:1.42;margin-top:7px}
+main#content .specialist-resources{margin:20px 0;border:2px solid #466959;border-radius:12px;padding:0;background:#fff}
+main#content .specialist-resources>summary{display:flex;align-items:center;gap:12px;cursor:pointer;list-style:none;padding:14px;min-height:60px}
+main#content .specialist-resources>summary::-webkit-details-marker{display:none}
+main#content .specialist-resources__marker{display:inline-flex;align-items:center;justify-content:center;flex:0 0 30px;height:30px;border:2px solid;border-radius:50%;font-size:1.2rem;font-weight:800}
+main#content .specialist-resources[open] .specialist-resources__marker{transform:rotate(45deg)}
+main#content .specialist-resources summary strong,main#content .specialist-resources summary small{display:block}
+main#content .specialist-resources summary small{font-size:.85rem;color:#445d52;font-weight:400}
+main#content .specialist-resources__body{padding:0 18px 18px}
+@media(max-width:700px){main#content .assessment-levels{grid-template-columns:1fr;gap:10px}main#content .assessment-level{display:grid;grid-template-columns:35px minmax(0,1fr);align-items:start;gap:12px;padding:12px}main#content .assessment-level__number{margin:0}main#content .assessment-level span:not(.assessment-level__number){margin-top:4px}}
+@media print{main#content .assessment-levels{grid-template-columns:repeat(3,minmax(0,1fr))}main#content .assessment-level{display:block;background:white!important}main#content .specialist-resources__body{display:block!important}main#content .specialist-resources[open]>summary{padding:10px} }
