@@ -127,7 +127,7 @@ function initSelectors(){
 function scoreTags(target,features,className,emptyText){
  const host=$(target);host.replaceChildren();
  if(!features.length){host.append(node("span","tag empty",emptyText));return}
- features.forEach(f=>host.append(node("span","tag "+className,(shortNames[f.id]||f.name)+" · "+rating(D[aIndex],f)+"/"+rating(D[bIndex],f))));
+ features.forEach(f=>host.append(node("span","tag "+className,(shortNames[f.id]||f.name)+" · A "+rating(D[aIndex],f)+" · B "+rating(D[bIndex],f))));
 }
 function update(){
  const a=D[aIndex],b=D[bIndex];
@@ -164,7 +164,7 @@ function renderBars(){
   });
   host.append(row);
  });
- $("showAllComparison").hidden=F.length<=featureList.length;
+ $("showAllComparison").hidden=false;
 }
 function renderMatrix(){
  const all=$("matrixMode").value==="all";
