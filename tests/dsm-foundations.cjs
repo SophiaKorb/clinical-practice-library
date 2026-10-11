@@ -11,6 +11,10 @@ assert.equal(outline.length,11);
 outline.forEach((m,i)=>assert.deepEqual([Number(m[1]),Number(m[2])],[i+1,i+1]));
 assert.match(html,/href="#lesson-1">Start lesson 1/,'Start points to Lesson 1');
 assert.match(html,/id="documentation-guide"/);
+assert.match(html,/id="all-questions-toggle" aria-pressed="false">Show all 99 questions/,'all-questions review available');
+assert.match(html,/Someone sorts plants into two groups/,'concrete category versus explanation scenario');
+assert.ok(!html.includes('What is the biggest risk of confusing a category with an explanation?'),'vague quiz removed');
+assert.match(html,/Follow your supervisor’s instructions, your agency’s documentation policies/,'documentation follows supervisor and agency rules');
 assert.match(html,/<details class="audience-details" id="audience">[\s\S]*?<summary>Who this course is for/,'audience is a native expandable disclosure');
 assert.doesNotMatch(html,/<details\b[^>]*\bopen\b[^>]*\bid="audience"/,'audience disclosure starts closed');
 for(const group of ['Anyone curious about diagnosis','Clients, families, and advocates','Students, supervised trainees','Support, peer, school, and case-management staff'])assert.ok(html.includes(group),'audience path '+group);
@@ -34,7 +38,7 @@ const caseBanks=[...html.matchAll(/<details class="extra-examples">([\s\S]*?)<\/
 assert.equal(caseBanks.length,11);
 for(const [i,bank] of caseBanks.entries()){
  assert.equal((bank[1].match(/class="example worked-example"/g)||[]).length,3,'three worked cases in lesson '+(i+1));
- for(const label of ['Situation:','Follow it through:','What changes:','The takeaway:']){
+ for(const label of ['1. What do we know?','2. What do we ask or test?','3. What does the result tell us?','4. What do we do next?','The takeaway:']){
   assert.equal(bank[1].split(label).length-1,3,'three '+label+' sections in lesson '+(i+1));
  }
 }
