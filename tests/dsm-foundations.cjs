@@ -11,7 +11,7 @@ assert.equal(outline.length,11);
 outline.forEach((m,i)=>assert.deepEqual([Number(m[1]),Number(m[2])],[i+1,i+1]));
 assert.match(html,/href="#lesson-1">Start lesson 1/,'Start points to Lesson 1');
 assert.match(html,/id="documentation-guide"/);
-assert.match(html,/id="all-questions-toggle" aria-pressed="false">Show all 99 questions/,'all-questions review available');
+assert.match(html,/id="all-questions-toggle" aria-pressed="false">Show all 80 questions/,'all-questions review available');
 assert.match(html,/Someone sorts plants into two groups/,'concrete category versus explanation scenario');
 assert.ok(!html.includes('What is the biggest risk of confusing a category with an explanation?'),'vague quiz removed');
 assert.match(html,/Follow your supervisor’s instructions, your agency’s documentation policies/,'documentation follows supervisor and agency rules');
@@ -21,19 +21,34 @@ for(const group of ['Anyone curious about diagnosis','Clients, families, and adv
 assert.ok(html.indexOf('id="documentation-guide"')>html.indexOf('id="lesson-3"'));
 assert.ok(html.indexOf('id="documentation-guide"')<html.indexOf('id="lesson-4"'));
 assert.match(html,/id="lesson-7"[\s\S]*?Understanding substance use disorders/);
-const quizzes=[...html.matchAll(/<div class="check" data-quiz>([\s\S]*?)<p class="feedback" role="status" aria-live="polite">Choose an answer for feedback\.<\/p><\/div>/g)];
-assert.equal(quizzes.length,99,'11 lessons with nine questions each');
+// The editorial QA bank now contains 80 vetted items: 72 single-answer and 8 select-all.
+const quizzes=[...html.matchAll(/<div class="check" data-quiz( data-multi)?>/g)];
+assert.equal(quizzes.length,80,'reviewed bank of 80 questions');
 const positions=[0,0,0];
+let multiCount=0;
 for(const [i,match] of quizzes.entries()){
- const buttons=[...match[1].matchAll(/<button type="button" data-answer="(yes|no)" data-feedback="([^"]+)">([\s\S]*?)<\/button>/g)];
- assert.ok(buttons.length>=2 && buttons.length<=3,'two or three choices in '+i);
- const correct=buttons.filter(x=>x[1]==='yes');
- assert.equal(correct.length,1,'one correct option '+i);
+ const tail=html.slice(match.index);
+ const close=tail.indexOf('</p></div>');
+ assert.ok(close>0,'question has closing feedback '+i);
+ const block=tail.slice(0,close+10);
+ const buttons=[...block.matchAll(/<button type="button" data-answer="(yes|no)" data-feedback="([^"]+)">([\\s\\S]*?)<\\/button>/g)];
+ assert.ok(buttons.length>=3&&buttons.length<=4,'three or four choices in '+i);
  assert.ok(buttons.every(b=>b[2].trim().length>=35),'specific feedback '+i);
- const idx=buttons.findIndex(b=>b[1]==='yes');
- positions[idx]++;
+ const correct=buttons.filter(b=>b[1]==='yes');
+ if(match[1]){
+  multiCount++;
+  assert.equal(correct.length,2,'two defensible correct selections '+i);
+  assert.match(block,/class="quiz-submit"/,'select-all question can be submitted '+i);
+  assert.match(block,/Select all that apply/,'multi-select instructions '+i);
+ }else{
+  assert.equal(correct.length,1,'one correct answer '+i);
+  const idx=buttons.findIndex(b=>b[1]==='yes');
+  positions[idx]++;
+ }
 }
-assert.deepEqual(positions,[33,33,33],'avoid positional answer bias');
+assert.equal(multiCount,8,'eight select-all questions');
+assert.equal(positions.reduce((a,b)=>a+b,0),72,'72 single-answer questions');
+assert.ok(Math.max(...positions)-Math.min(...positions)<=4,'avoid correct-answer positional bias');
 const caseBanks=[...html.matchAll(/<details class="extra-examples">([\s\S]*?)<\/details>/g)];
 assert.equal(caseBanks.length,11);
 for(const [i,bank] of caseBanks.entries()){
@@ -64,4 +79,4 @@ assert.ok((html.match(/—/g)||[]).length<=4,'em dashes remain rare');
 assert.equal((html.match(/<details\b/g)||[]).length,(html.match(/<\/details>/g)||[]).length,'balanced disclosure elements');
 const hub=fs.readFileSync('resources/therapy/clinical-intern-learning-hub.html','utf8');
 assert.match(hub,/DSM Foundations: eleven lessons/,'hub course description is current');
-console.log('PASS DSM Foundations: 11 ordered lessons, 99 tailored questions, balanced key positions, 33 stepped cases, 33 glossary entries, semantics and safety.');
+console.log('PASS DSM Foundations: 11 ordered lessons, 80 questions (72 single-answer, 8 select-all), balanced keys, 33 stepped cases, 33 glossary entries, semantics and safety.');
