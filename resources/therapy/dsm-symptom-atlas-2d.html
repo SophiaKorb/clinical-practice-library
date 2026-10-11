@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2D Symptom Pattern Atlas · Clinical Practice Library</title>
+<meta name="description" content="Explore and compare 38 fictional diagnostic teaching profiles using a readable 2D symptom matrix. Ratings are illustrative, not empirical diagnostic measurements.">
+<style>
+:root{--ink:#19343d;--muted:#55717b;--paper:#f5f5f0;--white:#fffefa;--line:#d6e1df;--teal:#19777a;--purple:#76559a;--mint:#e5f3ef;--gold:#e9a85f;--shadow:0 8px 34px rgba(17,48,56,.06)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,-apple-system,Segoe UI,sans-serif}
+button,select,input{font:inherit}button{cursor:pointer}button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid #df9c3b;outline-offset:3px}a{color:#125d68}h1,h2,h3,p{margin-top:0}h1,h2{font-family:Georgia,Times New Roman,serif;letter-spacing:-.026em;font-weight:500}h1{font-size:clamp(2.5rem,6vw,4.35rem);line-height:1.04;margin:.5rem 0 .8rem}h2{font-size:clamp(1.45rem,2.8vw,2.1rem);line-height:1.15;margin-bottom:.6rem}h3{font-size:1.1rem;line-height:1.24;margin:0 0 .55rem}
+.topbar{background:var(--white);border-bottom:1px solid var(--line);padding:.85rem max(16px,calc((100% - 1260px)/2));display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:.83rem}
+.topbar strong{letter-spacing:-.01em}.topbar nav{display:flex;gap:16px;align-items:center;flex-wrap:wrap}.topbar a{text-decoration:none;font-weight:750}.topbar a:hover{text-decoration:underline}
+main{max-width:1260px;margin:auto;padding:clamp(16px,3.5vw,36px) 18px 90px}
+.eyebrow{color:#287d80;letter-spacing:.16em;text-transform:uppercase;font-size:.73rem;font-weight:850}.lead{font-size:clamp(1.02rem,1.6vw,1.2rem);color:#43626b;max-width:890px;line-height:1.65}
+.hero{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(245px,.75fr);gap:20px;align-items:center;margin-bottom:19px}.hero-meta{background:#e2f0ed;border:1px solid #c2dbd5;border-radius:18px;padding:22px}.hero-meta strong{font-size:1.3rem;display:block;font-family:Georgia,serif;font-weight:500;margin-bottom:9px}.hero-meta p{color:#38565c;margin:0;font-size:.9rem}
+.notice{padding:13px 17px;margin:0 0 24px;background:#fff6e8;border:1px solid #eadbbf;border-left:4px solid #c38a3e;border-radius:9px;font-size:.89rem}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin:0 0 16px;flex-wrap:wrap}.section-head p{margin:0;color:var(--muted);font-size:.9rem;max-width:740px}
+.panel{background:var(--white);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow)}
+.selectors{display:grid;grid-template-columns:1fr 1fr;gap:13px;padding:19px;margin-bottom:14px}.selector{min-width:0;border:1px solid #d5e0df;border-radius:14px;padding:13px 15px;background:#fff}.selector-a{border-top:5px solid var(--teal)}.selector-b{border-top:5px solid var(--purple)}.selector label{display:block;font-weight:800;font-size:.83rem;margin-bottom:7px}.selector select{width:100%;min-width:0;background:#fff;border:1px solid #a9c1bf;color:var(--ink);border-radius:8px;padding:10px}.selector .hint{font-size:.78rem;color:var(--muted);margin:7px 0 0}
+.summary-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin-bottom:16px}.summary{padding:17px;min-height:164px}.summary h3{font-size:.92rem;margin:0 0 8px}.summary small{display:block;color:var(--muted);font-size:.77rem;margin-bottom:8px}.summary .tag-area{display:flex;gap:6px;flex-wrap:wrap}.tag{display:inline-block;border-radius:8px;border:1px solid #c9dddb;background:#e9f3f1;padding:5px 8px;font-size:.76rem;line-height:1.35;font-weight:650}.tag.only-a{background:#e6f3f1;border-color:#b7d9d4}.tag.only-b{background:#efeaf7;border-color:#d6c7e7}.tag.empty{background:#f0f1ee;border-color:#d6ddda;font-weight:400}
+.profile-line{font-size:.77rem;color:var(--muted);margin:0 0 10px}
+.compare{padding:20px 20px 12px;margin-bottom:16px}.legend{display:flex;gap:15px;flex-wrap:wrap;margin:8px 0 17px;color:#49656c;font-size:.78rem}.key-swatch{display:inline-block;vertical-align:middle;width:12px;height:12px;border-radius:3px;margin-right:5px}.key-a{background:var(--teal)}.key-b{background:var(--purple)}
+.bar-header{display:grid;grid-template-columns:minmax(95px,1fr) minmax(150px,1.16fr) minmax(150px,1.16fr);gap:13px;align-items:center;border-bottom:1px solid var(--line);padding:0 3px 10px;font-size:.78rem;font-weight:800}.bar-header .a{color:var(--teal)}.bar-header .b{color:var(--purple)}
+.feature-row{display:grid;grid-template-columns:minmax(95px,1fr) minmax(150px,1.16fr) minmax(150px,1.16fr);align-items:center;gap:13px;border-bottom:1px solid #e9eeeb;min-height:43px;padding:6px 3px}.feature-row:last-child{border-bottom:none}.feat-name{font-size:.84rem;line-height:1.3;font-weight:650}.feature-sub{display:block;color:var(--muted);font-size:.71rem;font-weight:400}.bar{display:flex;align-items:center;gap:8px;min-width:0}.track{height:15px;flex:1;min-width:10px;border-radius:5px;position:relative;background:repeating-linear-gradient(to right,#ecf0ef 0,#ecf0ef calc(33.333% - 1px),#fff calc(33.333% - 1px),#fff 33.333%);overflow:hidden}.fill{height:100%;display:block;border-radius:4px;transition:width .18s}.bar-a .fill{background:var(--teal)}.bar-b .fill{background:var(--purple)}.value{font-variant-numeric:tabular-nums;font-weight:750;font-size:.75rem;min-width:25px;color:#405c65;text-align:right}
+.more{border:1px solid #b9d1cf;background:#f4faf8;color:#225e61;border-radius:8px;padding:7px 13px;font-weight:800;font-size:.82rem;margin-top:10px}
+.questions{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0 0 27px}.qcard{padding:18px 19px}.qcard h3{margin-bottom:5px}.qcard .qtitle{font-size:.8rem;color:#536a73;margin-bottom:12px}.qcard p{margin-bottom:12px;font-size:.89rem}.qcard .subhead{text-transform:uppercase;font-weight:800;font-size:.71rem;color:#36787a;letter-spacing:.07em}
+.matrix{padding:19px 19px 15px}.matrix-filters{display:grid;grid-template-columns:minmax(170px,1.3fr) minmax(135px,.9fr) minmax(145px,.9fr);gap:12px;margin:16px 0}.field label{display:block;font-size:.76rem;font-weight:800;margin-bottom:5px}.field input,.field select{width:100%;padding:9px 10px;border:1px solid #b9d0cd;border-radius:8px;background:#fff;color:var(--ink)}
+.matrix-scroll{overflow-x:auto;overscroll-behavior-inline:contain;border:1px solid #d8e3df;border-radius:12px;max-height:570px;overflow-y:auto}
+.matrix table{border-spacing:0;border-collapse:separate;min-width:800px;width:100%;font-size:.75rem}
+.matrix th,.matrix td{border-bottom:1px solid #e3eae7;padding:5px;text-align:center}
+.matrix thead th{position:sticky;top:0;z-index:2;background:#eff4f1;color:#3b5b63;font-weight:750;height:83px;min-width:56px;vertical-align:bottom}
+.matrix thead th .short{writing-mode:vertical-rl;transform:rotate(180deg);display:inline-block;white-space:nowrap;font-size:.72rem;line-height:1.1;margin:auto;max-height:80px}
+.matrix th.rowhead{position:sticky;left:0;z-index:1;background:#fffefa;width:215px;min-width:215px;max-width:215px;text-align:left;padding:6px 9px}
+.matrix thead th.rowhead{z-index:3;background:#eff4f1;vertical-align:middle}
+.matrix .row-button{border:0;background:none;text-align:left;padding:4px 5px 4px 0;font-size:.78rem;font-weight:750;color:var(--ink);width:100%;line-height:1.2}.matrix .row-button:hover{text-decoration:underline}.matrix .group-mini{display:block;font-weight:500;color:#628089;font-size:.66rem;line-height:1.3;margin-top:3px}
+.matrix tr.pick-a th.rowhead{box-shadow:inset 4px 0 var(--teal);background:#eaf5f2}.matrix tr.pick-b th.rowhead{box-shadow:inset 4px 0 var(--purple);background:#f2eef8}
+.matrix tr.pick-a.pick-b th.rowhead{box-shadow:inset 4px 0 var(--teal),inset 8px 0 var(--purple)}
+.matrix td{min-width:49px}.matrix .score{display:flex;align-items:center;justify-content:center;border-radius:6px;min-width:31px;min-height:30px;font-variant-numeric:tabular-nums;font-size:.73rem;font-weight:700}
+.matrix .lvl0{background:#f3f5f3;color:#96a6a1}.matrix .lvl1{background:#d7ebe7;color:#275b5c}.matrix .lvl2{background:#8cbfbd;color:#0e383d}.matrix .lvl3{background:#24757b;color:white}
+.matrix-note{display:flex;align-items:center;justify-content:space-between;gap:9px;flex-wrap:wrap;margin:10px 0 0;color:#587179;font-size:.79rem}
+.scale-key{display:flex;align-items:center;flex-wrap:wrap;gap:8px}.scale-key .score{display:inline-block;text-align:center;min-width:22px;padding:2px 5px;border-radius:4px;font-weight:800;font-size:.71rem}
+.insight{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:15px}.insight>div{padding:19px}.insight p,.insight li{font-size:.89rem;color:#45616a}.insight ul{padding-left:20px;margin:.5rem 0 0}.insight li{margin:7px 0}
+footer{font-size:.77rem;color:#668087;line-height:1.8;margin-top:25px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:850px){.hero{grid-template-columns:1fr}.hero-meta{padding:15px}.summary-grid{grid-template-columns:1fr 1fr}.summary-grid .summary:last-child{grid-column:1 / -1}}
+@media(max-width:600px){main{padding:17px 11px 60px}.topbar{padding:11px}.selectors,.summary-grid,.questions,.insight{grid-template-columns:1fr}.summary-grid .summary:last-child{grid-column:auto}.compare,.matrix{padding:15px 11px}.bar-header,.feature-row{grid-template-columns:minmax(90px,.92fr) minmax(75px,1fr) minmax(75px,1fr);gap:8px}.feature-row{min-height:46px}.feat-name{font-size:.74rem}.bar{gap:2px}.value{font-size:.67rem;min-width:19px}.matrix-filters{grid-template-columns:1fr 1fr}.matrix-filters .field:first-child{grid-column:1 / -1}.topbar nav{gap:10px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.fill{transition:none}}
+@media print{body{background:white}.topbar,button,.matrix-filters{display:none}.panel{box-shadow:none}.matrix-scroll{max-height:none}.matrix thead th{position:static}.matrix th.rowhead{position:static}}
+</style>
+</head>
+<body>
+<header class="topbar"><strong>Clinical Practice Library · Learning Lab</strong><nav><a href="/">Library home</a><a href="/resources/therapy/dsm-structure-4d.html">Original 3D map ↗</a><a href="#all-patterns">Browse all profiles</a></nav></header>
+<main>
+<div class="hero">
+  <div><div class="eyebrow">An alternative to the 3D constellation</div><h1>The 2D Symptom Pattern Atlas</h1>
+  <p class="lead">Compare what two illustrative diagnostic profiles have in common—and what separates them. Instead of placing diagnoses on mysterious axes, this view shows the actual features and ratings behind the picture.</p></div>
+  <aside class="hero-meta"><strong>What am I looking at?</strong><p><b>38 fictional examples · 26 features.</b> Darker cells mean a higher author-assigned teaching rating (0–3), not a more severe diagnosis, a clinical score, or a measured patient.</p></aside>
+</div>
+<div class="notice"><strong>Educational model, not diagnostic evidence.</strong> Profiles were hand-authored; no patient data or independent clinical validation is involved. Similar ratings are not diagnostic probabilities. Use fictional cases only.</div>
+
+<section aria-labelledby="compare-heading">
+<div class="section-head"><div><span class="eyebrow">Start here</span><h2 id="compare-heading">Put two patterns side by side</h2><p>Choose profiles below. The bars, shared features, differences, and follow-up questions update immediately.</p></div></div>
+<div class="panel selectors">
+ <div class="selector selector-a"><label for="selectA">Profile A · teal</label><select id="selectA"></select><p class="hint" id="descA"></p></div>
+ <div class="selector selector-b"><label for="selectB">Profile B · violet</label><select id="selectB"></select><p class="hint" id="descB"></p></div>
+</div>
+<div class="summary-grid">
+ <div class="panel summary"><h3>What overlaps?</h3><small>Both examples have ratings of 2 or 3</small><div class="tag-area" id="shared"></div></div>
+ <div class="panel summary"><h3>More prominent in A</h3><small>Features at least 2 rating steps higher in A</small><div class="tag-area" id="onlyA"></div></div>
+ <div class="panel summary"><h3>More prominent in B</h3><small>Features at least 2 rating steps higher in B</small><div class="tag-area" id="onlyB"></div></div>
+</div>
+<div class="panel compare">
+ <div class="section-head"><div><h2>What does each profile emphasize?</h2><p>Read each feature across the row; both bars use exactly the same 0–3 illustrative scale.</p></div></div>
+ <div class="legend"><span><span class="key-swatch key-a"></span><span id="titleA">Profile A</span></span><span><span class="key-swatch key-b"></span><span id="titleB">Profile B</span></span></div>
+ <div class="bar-header"><span>Rated feature</span><span class="a">A · teal</span><span class="b">B · violet</span></div>
+ <div id="barRows" aria-live="polite"></div>
+ <button class="more" id="showAllComparison" type="button" aria-expanded="false">Show all 26 features</button>
+</div>
+<div class="questions">
+ <div class="panel qcard"><h3>Ask about A</h3><p class="qtitle" id="askTitleA"></p><div class="subhead">A possible opening question</div><p id="askA"></p><div class="subhead">Then clarify</div><p id="followA"></p></div>
+ <div class="panel qcard"><h3>Ask about B</h3><p class="qtitle" id="askTitleB"></p><div class="subhead">A possible opening question</div><p id="askB"></p><div class="subhead">Then clarify</div><p id="followB"></p></div>
+</div>
+</section>
+
+<section id="all-patterns" aria-labelledby="matrix-heading">
+ <div class="section-head"><div><span class="eyebrow">Zoom out</span><h2 id="matrix-heading">Browse the whole pattern landscape</h2><p>Each row is a teaching profile. Each column is an observable or reported feature. This is a comparison table—not a map of how close diagnoses exist in nature. Choose a row to set Profile B.</p></div></div>
+ <div class="panel matrix">
+ <div class="matrix-filters">
+  <div class="field"><label for="search">Find a profile</label><input id="search" type="search" placeholder="Search name or chapter"></div>
+  <div class="field"><label for="groupFilter">Chapter grouping</label><select id="groupFilter"><option value="all">All examples</option></select></div>
+  <div class="field"><label for="matrixMode">Feature columns</label><select id="matrixMode"><option value="focus">12 most relevant to A + B</option><option value="all">All 26 features</option></select></div>
+ </div>
+ <div class="matrix-scroll" role="region" tabindex="0" aria-label="Scrollable matrix of illustrative feature ratings"><table id="matrixTable"><thead id="matrixHead"></thead><tbody id="matrixBody"></tbody></table></div>
+ <div class="matrix-note"><span id="matrixCount">38 profiles shown</span><span class="scale-key"><span class="score lvl0">0</span> not included <span class="score lvl1">1</span> small <span class="score lvl2">2</span> notable <span class="score lvl3">3</span> prominent</span></div>
+ <p style="font-size:.79rem;color:var(--muted);margin:11px 0 2px">Ratings describe the author's examples, not clinical intensity thresholds. A zero means this feature was not selected for that teaching profile; it does not mean the feature cannot occur in that condition.</p>
+ </div>
+</section>
+<div class="insight">
+ <div class="panel"><h2>Why this is 2D without arbitrary axes</h2><p>A conventional scatterplot compresses 26 features to two coordinates. The apparent distance between dots can suggest a real diagnostic geography. This atlas instead displays the underlying ratings directly: rows are examples, columns are features, and comparisons are visible rather than hidden inside a projection.</p></div>
+ <div class="panel"><h2>What to ask before diagnosis</h2><ul><li>When did these experiences begin, and what is their course?</li><li>What actually interferes with life, and in what settings?</li><li>How do development, culture, trauma, medical conditions, and substance exposures change the interpretation?</li><li>Which distinguishing criteria and alternative explanations must be checked?</li></ul></div>
+</div>
+<footer>Designed for training with fictional examples. Not a validated diagnostic, severity, screening, or risk instrument. <a href="/resources/therapy/dsm-structure-4d.html">Compare with the original experimental 3D symptom constellation</a>.</footer>
+</main>
+<script>
+"use strict";
+const DATA={"features":[{"id":"w","name":"Worry / fear"},{"id":"p","name":"Panic / autonomic arousal"},{"id":"av","name":"Avoidance"},{"id":"m","name":"Low mood"},{"id":"an","name":"Reduced pleasure"},{"id":"up","name":"Activation / elevated energy"},{"id":"it","name":"Unwanted intrusive thoughts"},{"id":"co","name":"Repetitive rituals"},{"id":"tr","name":"Trauma reexperiencing"},{"id":"ds","name":"Detachment / dissociation"},{"id":"ps","name":"Unusual perceptions / beliefs"},{"id":"at","name":"Attention / organization"},{"id":"im","name":"Impulse-control difficulty"},{"id":"sc","name":"Social communication differences"},{"id":"sl","name":"Sleep disruption"},{"id":"so","name":"Physical symptom distress"},{"id":"ea","name":"Eating / feeding changes"},{"id":"su","name":"Substance-related symptoms"},{"id":"cg","name":"Cognitive / memory change"},{"id":"re","name":"Interpersonal instability"},{"id":"ir","name":"Irritability / anger"},{"id":"gr","name":"Grief / loss"},{"id":"rp","name":"Restricted / repetitive patterns"},{"id":"ss","name":"Sensory sensitivities"},{"id":"nd","name":"Reduced need for sleep without fatigue"},{"id":"lc","name":"Loss of control over eating"}],"groups":[{"name":"Anxiety","color":"cyan"},{"name":"Depressive / bipolar","color":"lavender"},{"name":"Trauma / dissociation","color":"amber"},{"name":"OCD related","color":"mint"},{"name":"Psychosis","color":"rose"},{"name":"Neurodevelopmental","color":"blue"},{"name":"Personality / regulation","color":"orange"},{"name":"Substance-related","color":"coral"},{"name":"Sleep / somatic","color":"sage"},{"name":"Eating / feeding","color":"pink"},{"name":"Neurocognitive","color":"grey"}],"disorders":[{"name":"Generalized anxiety disorder","g":0,"features":{"w":3,"av":1,"sl":2,"so":1,"at":1},"desc":"Broad worry, muscle tension and difficulty managing uncertainty.","ask":"Is the worry broad or centered on a specific feared situation?","follow":"Clarify duration, impairment, medical/substance causes and other anxiety patterns."},{"name":"Panic disorder","g":0,"features":{"p":3,"w":2,"av":2,"so":2,"sl":1},"desc":"Recurrent panic attacks and concern or behavior changes related to attacks.","ask":"What happens during the sudden episodes, and what changes between them?","follow":"Separate unexpected panic attacks from other anxiety, medical and substance causes."},{"name":"Social anxiety disorder","g":0,"features":{"w":2,"av":3,"p":1,"so":1},"desc":"Fear of scrutiny or negative evaluation in social situations.","ask":"What are you afraid other people might notice or think?","follow":"Clarify performance-only versus broader patterns; distinguish autism-related differences."},{"name":"Agoraphobia","g":0,"features":{"av":3,"p":2,"w":2},"desc":"Fear and avoidance of situations where escaping or obtaining help feels difficult.","ask":"Which places feel difficult, and what might happen there?","follow":"Clarify situations and feared consequences separately from panic disorder."},{"name":"Separation anxiety disorder","g":0,"features":{"w":2,"av":3,"p":1,"sl":1},"desc":"Intense distress or fear tied to separation from attachment figures.","ask":"What worries you when you are away from someone important?","follow":"Assess developmentally expected patterns and functional impairment."},{"name":"Major depressive disorder","g":1,"features":{"m":3,"an":3,"sl":2,"at":1,"ir":1},"desc":"Depressed mood or loss of interest with associated changes in functioning.","ask":"What has changed in your mood, enjoyment, energy, or daily routine?","follow":"Establish discrete episodes; assess suicide risk and lifetime manic/hypomanic symptoms."},{"name":"Persistent depressive disorder","g":1,"features":{"m":3,"an":2,"sl":1,"at":1},"desc":"Long-lasting depressive symptoms and reduced well-being.","ask":"Has this been your usual experience for a long period, or a more recent change?","follow":"Clarify chronicity and superimposed depressive episodes."},{"name":"Bipolar I disorder","g":1,"features":{"up":3,"im":2,"ir":2,"m":1,"nd":3},"desc":"History of a manic episode; depressive episodes may also occur.","ask":"Were there distinct periods of much more energy or less need for sleep?","follow":"Characterize episode duration, consequences, substances/medications, and hospitalization."},{"name":"Bipolar II disorder","g":1,"features":{"up":2,"m":3,"an":2,"im":1,"nd":2},"desc":"History of hypomania and major depression; no history of mania.","ask":"Have there been clearly different periods of energy and mood between lows?","follow":"Establish hypomanic and depressive episode timelines and distinguish activation from insomnia."},{"name":"Posttraumatic stress disorder","g":2,"features":{"tr":3,"it":2,"av":3,"w":2,"sl":2,"ir":1,"ds":1},"desc":"Trauma-associated intrusions, avoidance, shifts in cognition/mood, and arousal.","ask":"Do reminders of what happened interrupt your day or lead you to avoid things?","follow":"Confirm qualifying exposure, timing, symptom clusters and current safety without unnecessary detail."},{"name":"Adjustment disorder","g":2,"features":{"w":2,"m":2,"sl":1,"ir":1},"desc":"Emotional or behavioral symptoms arising in relation to an identifiable stressor.","ask":"What changed after the stressor, and how has daily life been affected?","follow":"Check timing and whether another disorder better accounts for the presentation."},{"name":"Prolonged grief disorder","g":2,"features":{"gr":3,"m":2,"an":1,"sl":1},"desc":"Persistent grief-related distress with impairment.","ask":"What aspects of the loss feel most difficult in your daily life?","follow":"Consider cultural context, time course and differences from depression."},{"name":"Depersonalization/derealization disorder","g":2,"features":{"ds":3,"w":1,"so":1},"desc":"Distressing detachment from self or surroundings with intact reality testing.","ask":"What does feeling detached or unreal feel like to you?","follow":"Review neurological, substance and panic-related explanations."},{"name":"Dissociative identity disorder","g":2,"features":{"ds":3,"cg":2,"tr":1},"desc":"Identity disruption and recurrent memory gaps affecting functioning.","ask":"Have there been times you could not account for or remember?","follow":"Assess memory/function carefully and consider neurological and substance alternatives."},{"name":"Obsessive-compulsive disorder","g":3,"features":{"it":3,"co":3,"av":2,"w":2},"desc":"Intrusive thoughts and/or compulsions that are distressing or time-consuming.","ask":"What are you worried could happen if you resist a ritual?","follow":"Distinguish compulsions from routines, habits and psychosis."},{"name":"Body dysmorphic disorder","g":3,"features":{"it":3,"co":2,"av":2,"m":1},"desc":"Preoccupation with perceived appearance flaws and repetitive behaviors.","ask":"How much time do appearance concerns take, and what do you do in response?","follow":"Differentiate eating-disorder concerns, normative appearance worries and delusional conviction."},{"name":"Trichotillomania","g":3,"features":{"co":2,"im":2,"so":1},"desc":"Recurrent hair pulling with attempts to stop or reduce the behavior.","ask":"When does pulling happen, and what do you notice just before or after?","follow":"Explore automatic/focused behaviors and related medical conditions."},{"name":"Schizophrenia","g":4,"features":{"ps":3,"cg":1,"sc":1,"m":1},"desc":"Psychotic symptoms with changes in cognition or everyday functioning.","ask":"Could you describe the experience in your own words?","follow":"Review time course, function, cultural context, substances, mood and medical causes."},{"name":"Schizoaffective disorder","g":4,"features":{"ps":3,"m":2,"up":2,"sl":1},"desc":"Psychotic illness with major mood episodes and a specific temporal relationship.","ask":"When did changes in mood occur relative to the unusual experiences?","follow":"Map psychotic and mood symptoms longitudinally; confirm formal diagnostic sequence."},{"name":"Brief psychotic disorder","g":4,"features":{"ps":3,"sl":1,"at":1},"desc":"A sudden, time-limited psychotic presentation.","ask":"When did the changes start, and how have they developed?","follow":"Check urgency, medical and substance causes, safety and symptom duration."},{"name":"Attention-deficit/hyperactivity disorder","g":5,"features":{"at":3,"im":2,"sl":1,"ir":1},"desc":"Developmental attention and/or hyperactivity–impulsivity difficulties across settings.","ask":"What was attention and activity like for you growing up?","follow":"Confirm developmental onset, multiple settings and functional impact."},{"name":"Autism spectrum disorder","g":5,"features":{"sc":3,"av":1,"at":1,"rp":3,"ss":2},"desc":"Developmental social-communication differences and restricted/repetitive patterns; no single presentation fits all autistic people.","ask":"What kinds of communication and sensory supports help you?","follow":"Review developmental history, adaptive strengths, sensory/access needs and differential diagnoses."},{"name":"Borderline personality disorder","g":6,"features":{"re":3,"im":2,"ir":2,"m":2,"ds":1},"desc":"Pervasive patterns involving interpersonal functioning, affect regulation and identity.","ask":"Do similar relationship and emotion patterns recur in different situations?","follow":"Assess long-term context and alternatives including trauma, mood, and neurodevelopment."},{"name":"Avoidant personality disorder","g":6,"features":{"av":3,"re":2,"w":2,"m":1},"desc":"Longstanding social inhibition and sensitivity to negative evaluation.","ask":"How long have you felt reluctant to connect with people, and why?","follow":"Differentiate social anxiety and environmental/cultural influences."},{"name":"Intermittent explosive disorder","g":6,"features":{"im":3,"ir":3,"re":1},"desc":"Recurrent impulsive aggressive outbursts not adequately explained by alternatives.","ask":"What happens before and after an outburst?","follow":"Review development, frequency, consequences, and substance/medical causes."},{"name":"Oppositional defiant disorder","g":6,"features":{"ir":3,"im":1,"re":2},"desc":"Pattern of irritable/angry mood or argumentative/defiant behavior, assessed in context.","ask":"Where and with whom do conflicts usually happen?","follow":"Assess developmental abilities, trauma, family/contextual factors and neurodevelopment."},{"name":"Alcohol use disorder","g":7,"features":{"su":3,"im":2,"sl":1,"m":1},"desc":"Problems with alcohol use and functioning, potentially including medical withdrawal risk.","ask":"What happens when you try to reduce or stop drinking?","follow":"Assess quantity, context, consequences and urgent withdrawal risks."},{"name":"Opioid use disorder","g":7,"features":{"su":3,"so":2,"sl":1},"desc":"Problems with opioid use and functioning, with overdose and withdrawal considerations.","ask":"What has your opioid use looked like recently?","follow":"Assess overdose risk, treatment, medical factors and withdrawal protocols."},{"name":"Insomnia disorder","g":8,"features":{"sl":3,"w":1,"at":1,"m":1},"desc":"Persistent problems with initiating or maintaining sleep or nonrestorative sleep-related functioning.","ask":"What is your sleep pattern, and how does daytime functioning change?","follow":"Assess sleep environment, medical issues, sleep disorders and substances."},{"name":"Somatic symptom disorder","g":8,"features":{"so":3,"w":2,"av":1},"desc":"Physical symptoms accompanied by disproportionate and persistent symptom-related distress/behaviors.","ask":"What feels most concerning about these symptoms and their effect on life?","follow":"Do not dismiss symptoms; coordinate medical evaluation and assess functioning."},{"name":"Illness anxiety disorder","g":8,"features":{"w":3,"so":2,"av":2},"desc":"Heightened concern about serious illness when somatic symptoms are absent or mild.","ask":"What illness concerns come to mind, and what do you do when worried?","follow":"Review medical history, reassurance patterns and differential with somatic symptom disorder."},{"name":"Functional neurological symptom disorder","g":8,"features":{"so":3,"ds":1},"desc":"Altered motor or sensory function evaluated alongside positive clinical findings and medical assessment.","ask":"What changes have you noticed in movement or sensation?","follow":"Medical evaluation is required; do not infer that symptoms are intentional."},{"name":"Anorexia nervosa","g":9,"features":{"ea":3,"co":1,"av":2,"m":1},"desc":"Restrictive eating and weight-related fears or behaviors with possible medical instability.","ask":"What changes have occurred in eating, weight-related thoughts and daily life?","follow":"Medical and nutritional risk assessment are crucial; screen urgently when indicated."},{"name":"Bulimia nervosa","g":9,"features":{"ea":3,"m":1,"lc":3},"desc":"Binge eating and compensatory behaviors with potential medical risk.","ask":"What happens before and after episodes of eating and attempts to compensate?","follow":"Assess medical stability and do not assume weight indicates severity."},{"name":"Binge-eating disorder","g":9,"features":{"ea":3,"m":1,"lc":3},"desc":"Recurrent binge-eating experiences with distress, without regular compensatory behaviors.","ask":"How do eating episodes feel, and what happens afterward?","follow":"Clarify subjective loss of control and alternatives."},{"name":"Avoidant/restrictive food intake disorder","g":9,"features":{"ea":3,"av":2,"sc":1,"ss":2},"desc":"Restricted food intake due to factors other than weight/shape concerns.","ask":"What makes particular foods hard to eat, and what happens if you try?","follow":"Assess nutritional impact, medical causes, sensory issues and other eating disorders."},{"name":"Delirium","g":10,"features":{"cg":3,"ps":2,"sl":2,"at":2},"desc":"Acute, fluctuating disturbance in attention/awareness, often associated with medical causes.","ask":"Have you or others noticed a sudden change in awareness or thinking?","follow":"A possible acute delirium requires urgent medical assessment."},{"name":"Major neurocognitive disorder","g":10,"features":{"cg":3,"at":2,"sc":1},"desc":"Acquired cognitive decline with significant effects on independence.","ask":"What everyday tasks have become harder compared with before?","follow":"Compare with baseline, assess medical/neurological contributors and adapt consent support."}]};
+const F=DATA.features, G=DATA.groups, D=DATA.disorders;
+const $=id=>document.getElementById(id);
+const shortNames={"w":"Worry","p":"Panic","av":"Avoidance","m":"Low mood","an":"Pleasure","up":"Activation","it":"Intrusions","co":"Rituals","tr":"Trauma","ds":"Dissociation","ps":"Perceptions","at":"Attention","im":"Impulse","sc":"Social","sl":"Sleep","so":"Somatic","ea":"Eating","su":"Substances","cg":"Cognition","re":"Relations","ir":"Irritability","gr":"Grief","rp":"Repetition","ss":"Sensory","nd":"Low sleep need","lc":"Eating control"};
+let aIndex=0,bIndex=Math.max(1,D.findIndex(d=>d.name==="Posttraumatic stress disorder"));
+let expanded=false;
+const rating=(d,f)=>Number(d.features[f.id]||0);
+function node(tag,classes,text){const el=document.createElement(tag);if(classes)el.className=classes;if(text!==undefined)el.textContent=text;return el}
+function initSelectors(){
+ for(const key of ["selectA","selectB"]){
+  let select=$(key);
+  G.forEach((g,gi)=>{const group=node("optgroup");group.label=g.name; D.forEach((d,di)=>{if(d.g!==gi)return;const o=node("option",null,d.name);o.value=String(di);group.append(o)});if(group.children.length)select.append(group)});
+ }
+ G.forEach((g,i)=>{const o=node("option",null,g.name);o.value=String(i);$("groupFilter").append(o)});
+ $("selectA").value=String(aIndex);$("selectB").value=String(bIndex);
+ $("selectA").addEventListener("change",e=>{aIndex=Number(e.target.value);update()});
+ $("selectB").addEventListener("change",e=>{bIndex=Number(e.target.value);update()});
+ $("search").addEventListener("input",renderMatrix);
+ $("groupFilter").addEventListener("change",renderMatrix);
+ $("matrixMode").addEventListener("change",renderMatrix);
+ $("showAllComparison").addEventListener("click",()=>{expanded=!expanded;$("showAllComparison").textContent=expanded?"Show the most relevant features":"Show all 26 features";$("showAllComparison").setAttribute("aria-expanded",String(expanded));renderBars()});
+}
+function scoreTags(target,features,className,emptyText){
+ const host=$(target);host.replaceChildren();
+ if(!features.length){host.append(node("span","tag empty",emptyText));return}
+ features.forEach(f=>host.append(node("span","tag "+className,(shortNames[f.id]||f.name)+" · "+rating(D[aIndex],f)+"/"+rating(D[bIndex],f))));
+}
+function update(){
+ const a=D[aIndex],b=D[bIndex];
+ $("selectA").value=String(aIndex);$("selectB").value=String(bIndex);
+ $("descA").textContent=a.desc;$("descB").textContent=b.desc;
+ $("titleA").textContent=a.name;$("titleB").textContent=b.name;
+ $("askTitleA").textContent=a.name;$("askTitleB").textContent=b.name;
+ $("askA").textContent=a.ask;$("askB").textContent=b.ask;
+ $("followA").textContent=a.follow;$("followB").textContent=b.follow;
+ scoreTags("shared",F.filter(f=>rating(a,f)>=2&&rating(b,f)>=2),"","No features rated 2+ by both in these examples.");
+ scoreTags("onlyA",F.filter(f=>rating(a,f)-rating(b,f)>=2),"only-a","No features differ by 2+ in A's direction.");
+ scoreTags("onlyB",F.filter(f=>rating(b,f)-rating(a,f)>=2),"only-b","No features differ by 2+ in B's direction.");
+ renderBars();renderMatrix();
+}
+function orderedFeatures(){
+ const a=D[aIndex],b=D[bIndex];
+ return F.slice().sort((x,y)=>{
+  const sx=Math.max(rating(a,x),rating(b,x))*7+Math.abs(rating(a,x)-rating(b,x))*2+(rating(a,x)+rating(b,x))*.01;
+  const sy=Math.max(rating(a,y),rating(b,y))*7+Math.abs(rating(a,y)-rating(b,y))*2+(rating(a,y)+rating(b,y))*.01;
+  return sy-sx||F.indexOf(x)-F.indexOf(y);
+ });
+}
+function renderBars(){
+ const list=orderedFeatures();const featureList=expanded?list:list.filter(f=>rating(D[aIndex],f)>0||rating(D[bIndex],f)>0).slice(0,12);
+ const host=$("barRows");host.replaceChildren();
+ featureList.forEach(f=>{
+  let row=node("div","feature-row");
+  const label=node("span","feat-name",f.name);row.append(label);
+  [aIndex,bIndex].forEach((idx,n)=>{
+   const v=rating(D[idx],f);const bar=node("div","bar "+(n?"bar-b":"bar-a"));
+   const track=node("span","track");track.setAttribute("aria-hidden","true");
+   const fill=node("span","fill");fill.style.width=(v/3*100)+"%";track.append(fill);
+   const txt=node("span","value",v+"/3");bar.setAttribute("aria-label",(n?"B: ":"A: ")+f.name+": "+v+" out of 3");bar.append(track,txt);row.append(bar);
+  });
+  host.append(row);
+ });
+ $("showAllComparison").hidden=F.length<=featureList.length;
+}
+function renderMatrix(){
+ const all=$("matrixMode").value==="all";
+ const cols=all?F:orderedFeatures().slice(0,12);
+ const head=$("matrixHead"),body=$("matrixBody");head.replaceChildren();body.replaceChildren();
+ let tr=node("tr");const left=node("th","rowhead","Profile / chapter");left.scope="col";tr.append(left);
+ cols.forEach(f=>{const th=node("th");th.scope="col";th.title=f.name;th.setAttribute("aria-label",f.name);th.append(node("span","short",shortNames[f.id]||f.name));tr.append(th)});head.append(tr);
+ const search=$("search").value.toLowerCase().trim();const group=$("groupFilter").value;
+ let count=0;
+ D.forEach((d,i)=>{
+  if(group!=="all"&&String(d.g)!==group)return;
+  if(search&&!((d.name+" "+G[d.g].name+" "+d.desc).toLowerCase().includes(search)))return;
+  count++;
+  const row=node("tr",(i===aIndex?"pick-a ":"")+(i===bIndex?"pick-b":""));
+  const th=node("th","rowhead");th.scope="row";
+  const btn=node("button","row-button",d.name);
+  btn.type="button";btn.title="Select "+d.name+" as Profile B";btn.addEventListener("click",()=>{bIndex=i;update();window.scrollTo({top:Math.max(0,$("compare-heading").getBoundingClientRect().top+window.scrollY-15),behavior:"smooth"})});
+  th.append(btn,node("span","group-mini",G[d.g].name+(i===aIndex?" · A":"")+(i===bIndex?" · B":"")));row.append(th);
+  cols.forEach(f=>{const v=rating(d,f);const td=node("td");const box=node("span","score lvl"+v,v===0?"·":String(v));td.title=d.name+" · "+f.name+": "+v+"/3";td.setAttribute("aria-label",d.name+", "+f.name+": "+v+" out of 3");td.append(box);row.append(td)});body.append(row);
+ });
+ if(!count){const tr=node("tr");const td=node("td",null,"No profiles match your search.");td.colSpan=cols.length+1;td.style.textAlign="left";td.style.padding="22px";tr.append(td);body.append(tr)}
+ $("matrixCount").textContent=count+" of "+D.length+" illustrative profiles shown · "+cols.length+" features";
+}
+initSelectors();update();
+</script>
+</body></html>
