@@ -6,6 +6,7 @@ const assert=require('node:assert/strict');
 const root='http://127.0.0.1:8765';
 const out='/tmp/cpl-phase-8b-rendered';
 const routes=[
+ ['start','/resources/start-here.html'],
  ['dsm','/resources/training/dsm-from-zero.html'],
  ['visual','/resources/therapy/visual-reasoning-toolkit.html'],
  ['communication','/resources/therapy/communication-supports-toolkit.html'],
@@ -70,6 +71,13 @@ fs.mkdirSync(out,{recursive:true});
       await page.screenshot({path:path.join(out,'cpl-dsm-sud-mobile.png'),animations:'disabled'});
       await page.pdf({path:path.join(out,'cpl-dsm-print.pdf'),format:'Letter',printBackground:true});
      }
+    }
+    if(name==='start'){
+     assert.equal(await page.locator('.door-grid .door').count(),3,'exactly three high-level routes');
+     assert.equal(await page.locator('.route-cycle .cycle-stage').count(),4,'four linked stages');
+     const cycleCols=await page.locator('.route-cycle').evaluate(e=>getComputedStyle(e).gridTemplateColumns.split(' ').length);
+     assert.equal(cycleCols,width<=760?1:7,'responsive decision loop '+width);
+     assert.ok(await page.locator('a[href="/resources/clinical-depth/complex-dissociation-functional-care.html#assessment-instruments"]').count()>=1);
     }
     if(name==='visual'){
      assert.equal(await page.locator('.loop-figure .loop .node').count(),4,'four distinct cycle stages');

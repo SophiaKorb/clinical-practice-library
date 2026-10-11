@@ -5,6 +5,8 @@ on:
     paths:
       - '.github/workflows/phase-8b-rendered-qa.yml'
       - 'resources/clinical-depth/**'
+      - 'resources/start-here.html'
+      - 'resources/clinical-navigation.css'
       - 'resources/site-navigation.css'
       - 'tests/phase-8b-rendered.cjs'
       - 'tests/colorful-site-rendered.cjs'

@@ -1,0 +1,20 @@
+/* IA contract: meaningful tasks first; subjects and professions are alternate routes. */
+const fs=require('node:fs'),assert=require('node:assert/strict');
+const p=fs.readFileSync('resources/start-here.html','utf8');
+const css=fs.readFileSync('resources/clinical-navigation.css','utf8');
+const home=fs.readFileSync('index.html','utf8');
+const nav=fs.readFileSync('scripts/site-navigation.py','utf8');
+assert.match(p,/<main>/);
+assert.equal((p.match(/class="door door-/g)||[]).length,3,'three first-level intents');
+for(const id of ['routes','understand','intervene','tools'])assert.ok(p.includes('id="'+id+'"'),'task area '+id);
+for(const path of ['/resources/clinical-resource-finder.html','/resources/clinical-depth/index.html','/resources/clinical-depth/neuropsych-evaluation-access-validity.html','/resources/clinical-depth/self-harm-safety-continuity.html','/resources/therapy/visual-reasoning-toolkit.html','/resources/therapy/communication-supports-toolkit.html','/resources/index.html'])assert.ok(p.includes('href="'+path+'"'),'route preserved '+path);
+assert.ok(p.includes('role="group" aria-label="Clinical decision loop'));
+assert.equal((p.match(/class="cycle-stage"/g)||[]).length,4);
+assert.ok(p.includes('Return to formulation whenever the pattern changes'),'nonlinear route');
+assert.match(css,/@media\(max-width:760px\)/);
+assert.match(css,/\.route-cycle\{grid-template-columns:1fr/);
+assert.match(css,/border-left:4px solid #83a48b/);
+assert.match(home,/class="mobile-find" href="\/resources\/start-here\.html"/);
+assert.match(nav,/\("/resources/start-here.html", "Start here", "Empezar"\)/);
+assert.ok(nav.includes('Complete directory'),'alternate directory preserved');
+console.log('PASS decision-first organization: 3 core intents, nonlinear mapped stages, alternate filters, historic directory and readable phone visuals');

@@ -16,6 +16,7 @@ for(const p of targets){
  const mainAt=h.search(/<main\b/i);
  if(mainAt!==-1)assert.ok(h.indexOf('<nav class="cpl-static-nav"')<mainAt,'navigation precedes main: '+p);
  assert.ok(h.includes('href="/resources/clinical-resource-finder.html"'),'finder access: '+p);
+ assert.ok(h.includes('href="/resources/start-here.html"'),'decision-first entry: '+p);
  assert.ok(h.includes('href="/resources/therapy/visual-reasoning-toolkit.html"'),'visual tools access: '+p);
  assert.equal((h.match(/class="cpl-static-nav__mobile"/g)||[]).length,1,'one mobile compact strip: '+p);
  assert.equal((h.match(/class="cpl-static-nav__more"/g)||[]).length,1,'one native more disclosure: '+p);
@@ -36,7 +37,8 @@ assert.match(css,/@media print/);
 const legacy=fs.readFileSync('legacy/index.html','utf8');
 assert.ok(!legacy.includes('cpl-static-nav'),'retained legacy remains unchanged');
 cp.execFileSync('python',['scripts/site-navigation.py','--check'],{stdio:'inherit'});
-assert.ok(spanish.includes('cpl-static-nav__quick--0" href="/resources/clinical-resource-finder.html">Buscar</a>'));
+assert.ok(spanish.includes('cpl-static-nav__quick--0" href="/resources/start-here.html">Empezar</a>'));
+assert.ok(spanish.includes('cpl-static-nav__quick--1" href="/resources/clinical-resource-finder.html">Buscar</a>'));
 assert.ok(spanish.includes('<summary>Más '));
 const home=fs.readFileSync('index.html','utf8');
 assert.ok(home.includes('data-replaces-header="true"'),'hide duplicate homepage header only on mobile');

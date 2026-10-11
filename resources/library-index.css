@@ -59,3 +59,9 @@
   .shelf.expandable-shelf>.shelf-body{padding:12px 14px 16px}
 }
 @media print{.mobile-hero-actions,.mobile-lede{display:none!important}}
+
+/* Decision-first route is the primary entry on desktop too; old per-subject
+   pathways remain accessible in the retained full directory and finder. */
+@media screen and (min-width:701px){
+  .hero>.clinical-pathway-links,.hero>.index-nav{display:none!important}
+}

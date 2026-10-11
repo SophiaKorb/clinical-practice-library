@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 STYLE = '<link rel="stylesheet" href="/resources/site-navigation.css">'
 LINKS = (
     ("/", "Home", "Inicio"),
-    ("/resources/index.html", "Browse", "Explorar"),
+    ("/resources/start-here.html", "Start here", "Empezar"),
     ("/resources/clinical-resource-finder.html", "Find resources", "Buscar"),
     ("/resources/clinical-topics/index.html", "Clinical topics", "Temas clínicos"),
     ("/resources/therapy/visual-reasoning-toolkit.html", "Visual tools", "Herramientas visuales"),
@@ -31,6 +31,8 @@ NAV = re.compile(r'<nav\s+class=["\']cpl-static-nav["\'][^>]*>[\s\S]*?</nav>', r
 def page_section(path: str) -> str | None:
     if path in ("index.html", "preview/cpl2.html"):
         return "/"
+    if path == "resources/start-here.html":
+        return "/resources/start-here.html"
     if path in ("resources/index.html", "library.html"):
         return "/resources/index.html"
     for prefix, link in (
@@ -59,9 +61,8 @@ def navigation(path: str, spanish: bool) -> str:
     # reachable through a native, keyboard-accessible details disclosure.
     # No JavaScript, sticky overlay or extra vertical navigation row.
     quick = (
+        ("/resources/start-here.html", "Start", "Empezar"),
         ("/resources/clinical-resource-finder.html", "Find", "Buscar"),
-        ("/resources/clinical-topics/index.html", "Topics", "Temas"),
-        ("/resources/therapy/visual-reasoning-toolkit.html", "Tools", "Visuales"),
     )
     quick_html = ''.join(
         '<a class="cpl-static-nav__quick cpl-static-nav__quick--' + str(i) +
@@ -84,6 +85,7 @@ def navigation(path: str, spanish: bool) -> str:
         "/#diagnosis-guides",
     )
     labels = {url: (es if spanish else en) for url, en, es in LINKS}
+    labels["/resources/index.html"] = "Directorio completo" if spanish else "Complete directory"
     labels["/#diagnosis-guides"] = "Guías de diagnóstico" if spanish else "Diagnosis guides"
     more_links = ''.join(
         '<a href="' + url + '"' +

@@ -122,3 +122,9 @@
   .cpl-static-nav__quick--1{display:none!important}
 }
 @media print{.cpl-static-nav__mobile{display:none!important}}
+
+/* Decision-first IA: small phone header presents only Start, Find, More.
+   Existing tool, topic, audience, state and legacy directory routes stay in More. */
+@media screen and (max-width:360px){
+  .cpl-static-nav__quick--1{display:inline-flex!important}
+}
