@@ -273,9 +273,50 @@ details.practice-set .practice-eyebrow,details.practice-set .practice-indicator,
 .worked-steps li>b{display:block;color:var(--ink-example);font-size:.94rem;margin-bottom:5px}
 .worked-steps li>p{margin:0;line-height:1.6}
 @media(max-width:680px){.worked-steps{gap:8px}.worked-steps li{padding-top:9px}}
+
+/* Full quiz review uses original question elements, preserving feedback and answer state. */
+.questions-review-toolbar{margin:14px 0 26px;padding:17px 19px;border:1px solid var(--line-question);border-radius:12px;background:var(--surface-question)}
+.questions-review-toolbar button{border:1px solid #795da0;border-radius:8px;background:#fff;color:var(--ink-question);font:700 .95rem/1.4 system-ui,sans-serif;padding:11px 15px;min-height:46px;cursor:pointer}
+.questions-review-toolbar button[aria-pressed="true"]{background:var(--ink-question);color:#fff}
+.questions-review-toolbar button:focus-visible{outline:3px solid #396cca;outline-offset:3px}
+.questions-review-toolbar p{margin:9px 0 0;color:#584f67;font-size:.88rem;line-height:1.5}
+.questions-review-mode .lesson> :not(.lesson-head):not(details.practice-set):not(details.optional-bank){display:none!important}
+.questions-review-mode .doc-guide{display:none!important}
+.questions-review-mode .lesson{padding:18px 23px;margin:13px 0}
+.questions-review-mode .lesson-head{margin-bottom:12px}
+.questions-review-mode .lesson>details.practice-set,.questions-review-mode .lesson>details.optional-bank{display:block!important;margin:12px 0}
+.questions-review-mode .practice-content .check{scroll-margin-top:26px}
+@media(max-width:680px){.questions-review-toolbar{padding:13px 14px}.questions-review-mode .lesson{padding:14px 12px}.questions-review-mode .lesson-head h2{font-size:1.38rem}}
+@media print{.questions-review-toolbar{display:none!important}.questions-review-mode .answers button{display:block!important;border:1px solid #999!important;background:white!important;color:black!important;padding:5px 8px!important;min-height:0!important}.questions-review-mode .answers::after{display:none!important}}
+
 </style>
 <script defer>
 document.addEventListener('DOMContentLoaded',()=>{
+  // One review view of the same quiz elements; no duplicated answer state.
+  const reviewToggle=document.getElementById('all-questions-toggle');
+  const reviewStatus=document.getElementById('all-questions-status');
+  const quizPanels=[...document.querySelectorAll('details.practice-set, details.optional-bank')];
+  let priorQuizPanelStates=[];
+  reviewToggle.addEventListener('click',()=>{
+    const turningOn=!document.body.classList.contains('questions-review-mode');
+    if(turningOn){
+      priorQuizPanelStates=quizPanels.map(panel=>panel.open);
+      quizPanels.forEach(panel=>{panel.open=true;});
+      document.body.classList.add('questions-review-mode');
+      reviewToggle.textContent='Return to full lessons';
+      reviewToggle.setAttribute('aria-pressed','true');
+      reviewStatus.textContent='All 99 questions are visible below. Choose an answer for detailed feedback, or return to the lessons.';
+      document.querySelector('#lesson-1 .check')?.scrollIntoView({block:'start',behavior:'auto'});
+    }else{
+      document.body.classList.remove('questions-review-mode');
+      quizPanels.forEach((panel,i)=>{panel.open=priorQuizPanelStates[i]||false;});
+      reviewToggle.textContent='Show all 99 questions';
+      reviewToggle.setAttribute('aria-pressed','false');
+      reviewStatus.textContent='See every question together, grouped by lesson, without opening each practice section.';
+      reviewToggle.scrollIntoView({block:'center',behavior:'auto'});
+      reviewToggle.focus({preventScroll:true});
+    }
+  });
   const checks=[...document.querySelectorAll('[data-done]')];
   const summary=document.getElementById('progress-text');
   const bar=document.getElementById('progress-bar');
@@ -376,8 +417,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 <div class="meter" aria-hidden="true"><span id="progress-bar"></span></div>
 <p class="tiny">Marking a lesson complete is only a personal reading aid; it is not a competency score. Progress is not saved or sent anywhere.</p>
 </nav>
-
-
+<div class="questions-review-toolbar" id="questions-review-toolbar"><button type="button" id="all-questions-toggle" aria-pressed="false">Show all 99 questions</button><p id="all-questions-status" role="status" aria-live="polite">See every question together, grouped by lesson, without opening each practice section.</p></div>
 <section class="lesson" id="lesson-1" aria-labelledby="title-1">
 <div class="lesson-head"><div class="number">1</div><div><p>Before opening the manual</p><h2 id="title-1">Why classify anything?</h2></div></div>
 <p class="simple">People classify things for many reasons. Sometimes a category helps with a decision. Other times it helps us remember something, share an experience, or name a connection that matters to us.</p>
@@ -399,7 +439,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 <details class="practice-set"><summary><span><span class="practice-eyebrow">KNOWLEDGE CHECK</span><span class="practice-label">Try the 3 core questions</span></span><span class="practice-indicator" aria-hidden="true">+</span></summary><div class="practice-content">
 <div class="check" data-quiz><h3>Question 1 of 3</h3><p>Which statement best explains why people create categories?</p><div class="answers"><button type="button" data-answer="no" data-feedback="Categories deliberately leave things out. 'Wash cold' tells you something useful about a shirt, but not who owns it or why it is covered in glitter. A diagnostic label likewise cannot describe a whole person.">To capture absolutely everything important about each item or person.</button><button type="button" data-answer="yes" data-feedback="Categories help us notice connections. Some are practical, like sorting laundry. Others are personal, like grouping songs that remind you of a friend. Diagnostic categories are more formal and have specific purposes, but personal categories do not need professional approval to be meaningful.">To organize information, communicate, make decisions, or express personal meaning.</button><button type="button" data-answer="no" data-feedback="Categories are ways of finding patterns or meaning, not permanent boxes built into everything. A family could sort the same clothes by washing instructions, owner, or sentimental value. The clothes do not change.">Because everything naturally belongs in one perfect and permanent box.</button></div><p class="feedback" role="status" aria-live="polite">Choose an answer for feedback.</p></div>
 <div class="check" data-quiz><h3>Question 2 of 3</h3><p>A child struggles with worksheets. Which way of grouping <em>possible reasons for the difficulty</em> would help a teacher choose supports?</p><div class="answers"><button type="button" data-answer="yes" data-feedback="These are all possible sources of difficulty with the same task. Checking them suggests practical next steps. A crowded layout calls for a different support than a reading difficulty; neither observation alone proves a diagnosis.">Whether the barrier involves directions, reading, layout, skills, or distress.</button><button type="button" data-answer="no" data-feedback="Enjoyment may affect participation, but it does not show whether the directions are readable or the problem fits the child's current skills. Plenty of children dislike worksheets, especially by Friday afternoon. The teaching question remains unanswered.">Whether the child enjoys worksheets or dislikes them.</button><button type="button" data-answer="no" data-feedback="That groups possible causes into judgments about character. It doesn't help the teacher check whether the child understands the directions, can read the page, or has the skills the task requires.">Whether the cause is a lack of effort or a poor attitude.</button></div><p class="feedback" role="status" aria-live="polite">Choose an answer for feedback.</p></div>
-<div class="check" data-quiz><h3>Question 3 of 3</h3><p>What is the biggest risk of confusing a category with an explanation?</p><div class="answers"><button type="button" data-answer="yes" data-feedback="A category summarizes a pattern. It does not automatically tell us why the pattern developed, how it affects this person, or which intervention they want. Classification is a useful map, not the whole terrain.">We might assume one label explains every part of a person's life.</button><button type="button" data-answer="no" data-feedback="Labels and categories can make communication more efficient. The problem is using shorthand as though it were a complete history, not using any shorthand at all.">It would make all professional communication impossible.</button><button type="button" data-answer="no" data-feedback="Questions are often exactly what prevents oversimplification. The danger is not curiosity; it is substituting a label for questions about causes, circumstances, and supports.">We might ask too many curious questions.</button></div><p class="feedback" role="status" aria-live="polite">Choose an answer for feedback.</p></div>
+<div class="check" data-quiz><h3>Question 3 of 3</h3><p>Someone sorts plants into two groups: “wilting” and “healthy.” They then say, “This plant is wilting because it belongs to the wilting group.” What question have they skipped?</p><div class="answers"><button type="button" data-answer="yes" data-feedback="The category describes what we observe; it does not explain the cause. Checking water, light, temperature, or roots may clarify why this particular plant is wilting. Diagnoses can work similarly: naming a pattern is not the same as explaining why it developed.">What conditions might explain why this plant is wilting?</button><button type="button" data-answer="no" data-feedback="A more precise description can help track changes, but it still does not tell us what caused the wilting. Different conditions could produce a similar appearance.">How much have the leaves drooped since yesterday?</button><button type="button" data-answer="no" data-feedback="Renaming the category “severely wilted” adds descriptive detail but not a cause. We would still need to examine the plant's circumstances.">Would “severely wilted” be a better category?</button></div><p class="feedback" role="status" aria-live="polite">Choose an answer for feedback.</p></div>
 </div></details>
 <details class="extra-examples"><summary><span><span class="practice-eyebrow">OPTIONAL CASES</span><span class="practice-label">Work through 3 cases, step by step</span></span><span class="practice-indicator" aria-hidden="true">+</span></summary><div class="extra-content"><p class="worked-case-guide"><strong>Each case uses the same four steps:</strong> 1. What do we know? 2. What do we ask or test? 3. What does the result tell us? 4. What do we do next? The final takeaway connects the steps to the lesson.</p>
 <div class="example worked-example"><strong>The playlist nobody else would make</strong><ol class="worked-steps"><li><b>1. What do we know?</b><p>A college student organizes a playlist into songs they heard on Saturdays with their grandfather. The songs are from different decades and genres, and the grouping makes no sense to their friends.</p></li><li><b>2. What do we ask or test?</b><p>Ask why the songs belong together. The student describes the drives they took with their grandfather and the conversations they remember. A second playlist organized by musical genre serves a different purpose.</p></li><li><b>3. What does the result tell us?</b><p>The grouping is coherent because it tracks a personal history, not shared musical features. The student can use both ways of classifying the very same songs without either system being wrong.</p></li><li><b>4. What do we do next?</b><p>Keep the memory-based playlist. If a genre-based list would also help, make a separate one instead of correcting the person's personal grouping.</p></li></ol><p class="worked-takeaway"><b>The takeaway:</b> An idiosyncratic category can preserve meaning and memory. Not every category needs to optimize a task or satisfy an outsider.</p></div>
