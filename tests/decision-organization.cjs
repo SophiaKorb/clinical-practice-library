@@ -17,4 +17,7 @@ assert.match(css,/border-left:4px solid #83a48b/);
 assert.match(home,/class="mobile-find" href="\/resources\/start-here\.html"/);
 assert.ok(nav.includes('("/resources/start-here.html", "Start here", "Empezar")'));
 assert.ok(nav.includes('Complete directory'),'alternate directory preserved');
+const finder=JSON.parse(fs.readFileSync('data/clinical-finder.json','utf8'));
+assert.equal(finder.resources.filter(r=>r.url==='/resources/start-here.html').length,1);
+assert.ok(finder.resources.find(r=>r.url==='/resources/start-here.html').tags.role.includes('Clinician'));
 console.log('PASS decision-first organization: 3 core intents, nonlinear mapped stages, alternate filters, historic directory and readable phone visuals');

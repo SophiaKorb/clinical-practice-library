@@ -581,6 +581,60 @@ depth_routes = [
   },
   "searchTerms": ["mood episode","voices","sleep change","bipolar episode","psychosis recovery","function timeline"],
     "metadataBasis": "Phase 8B curated clinical decision/role tags; not validated indications or clinical approval"
+},
+{
+  "url": "/resources/start-here.html",
+  "title": "Start here: choose a clinical decision",
+  "priority": 96,
+  "format": "HTML",
+  "tags": {
+    "diagnosis": [],
+    "symptom": [],
+    "function": [
+      "Communication / participation",
+      "Safety / stabilization"
+    ],
+    "intervention": [],
+    "stage": [
+      "Across ages / adapt to person"
+    ],
+    "role": [
+      "Clinician",
+      "Graduate trainee",
+      "Staff / case manager",
+      "Client / caregiver",
+      "School team"
+    ],
+    "task": [
+      "Formulation",
+      "Assessment planning",
+      "Treatment planning",
+      "Skill rehearsal / supervision",
+      "Client education",
+      "Progress review"
+    ],
+    "step": [
+      "What am I seeing?",
+      "Understanding",
+      "What should I do?",
+      "What tool?",
+      "What to watch next?"
+    ]
+  },
+  "searchTerms": [
+    "start here",
+    "clinical decision",
+    "clinical route",
+    "need a tool",
+    "where to begin",
+    "what am i seeing",
+    "assess",
+    "formulation",
+    "intervention",
+    "access",
+    "progress"
+  ],
+  "metadataBasis": "Phase 8B curated decision-first primary entry; no diagnostic endorsement"
 }
 ]
 by_url = {r['url']: r for r in records}
