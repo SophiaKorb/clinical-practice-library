@@ -163,6 +163,10 @@
   body.cpl-visual-toolkit .tool-jump {display:none!important}
   body.cpl-visual-toolkit.client-view .advanced {display:none!important}
   body.cpl-visual-toolkit .scale {grid-template-columns:repeat(6,minmax(0,1fr));gap:5px}
+  body.cpl-visual-toolkit #scale,
+  body.cpl-visual-toolkit #choices {break-inside:avoid-page;page-break-inside:avoid}
+  body.cpl-visual-toolkit #scale h2,
+  body.cpl-visual-toolkit #choices h2 {break-after:avoid-page}
   body.cpl-visual-toolkit #scale .visual,
   body.cpl-visual-toolkit #choices .visual {break-inside:avoid}
 }
