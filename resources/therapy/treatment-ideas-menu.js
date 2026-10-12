@@ -61,7 +61,7 @@ function makeCard(item,type){
  const edit=el('button','Edit this idea','edit-idea');edit.type='button';
  edit.setAttribute('aria-expanded','false');
  const copy=el('button','Copy','copy-idea');copy.type='button';
- const reset=el('button','Restore original','restore-idea');reset.type='button';reset.hidden=true;
+ const reset=el('button','Restore original','restore-idea');reset.type='button';reset.hidden=!existing||(existing.try===original.try&&existing.measure===original.measure);
  function updateDraft(){
   const next={try:tryEdit.value,measure:measureEdit.value};
   state.edits.set(key,next);
