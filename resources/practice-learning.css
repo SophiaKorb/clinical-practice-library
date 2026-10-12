@@ -114,3 +114,55 @@
   .decision-branches .node+.connector{min-height:28px;margin:2px 0}
 }
 @media print{.branch-fork{height:25px}.decision-branches{grid-template-columns:1fr 1.3fr!important}}
+
+
+/* Flagship printable tools: preserve the actual scale and supported-choice cards.
+   Shared print rules hide ordinary action buttons; these are content, not actions. */
+@media print {
+  body.cpl-visual-toolkit #scale .scale button {
+    display:flex!important;
+    min-width:0;
+    min-height:112px;
+    padding:8px 5px;
+    align-items:center;
+    justify-content:flex-end;
+    border:1.5px solid #333!important;
+    border-top:var(--height) solid #333!important;
+    border-radius:2px;
+    color:#000!important;
+    background:#fff!important;
+    font-size:9pt;
+    line-height:1.2;
+    text-align:center;
+    overflow-wrap:anywhere;
+    break-inside:avoid;
+  }
+  body.cpl-visual-toolkit #scale .scale button b {font-size:14pt}
+  body.cpl-visual-toolkit #choices .choices button,
+  body.cpl-visual-toolkit #body .choices button {
+    display:inline-flex!important;
+    flex:0 1 auto;
+    min-width:70px;
+    min-height:34px;
+    padding:5px 9px;
+    align-items:center;
+    justify-content:center;
+    color:#000!important;
+    background:#fff!important;
+    border:1.5px solid #333!important;
+    border-radius:5px;
+    font-size:10pt;
+    break-inside:avoid;
+  }
+  body.cpl-visual-toolkit #scale .scale button[aria-pressed="true"],
+  body.cpl-visual-toolkit #choices .choices button[aria-pressed="true"],
+  body.cpl-visual-toolkit #body .choices button[aria-pressed="true"] {
+    border:3px double #000!important;
+    font-weight:900;
+  }
+  body.cpl-visual-toolkit .tool-jump {display:none!important}
+  body.cpl-visual-toolkit.client-view .advanced {display:none!important}
+  body.cpl-visual-toolkit .scale {grid-template-columns:repeat(6,minmax(0,1fr));gap:5px}
+  body.cpl-visual-toolkit #scale .visual,
+  body.cpl-visual-toolkit #choices .visual {break-inside:avoid}
+}
