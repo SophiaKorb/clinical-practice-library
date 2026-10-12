@@ -13,7 +13,7 @@ assert.equal(outline.length,11,'all lesson outline links');
 outline.forEach((m,i)=>assert.deepEqual([Number(m[1]),Number(m[2])],[i+1,i+1]));
 assert.match(html,/href="#lesson-1">Start lesson 1/);
 assert.match(html,/id="documentation-guide"/);
-assert.match(html,/class="course-color-key"/,'colour semantics are visible');
+assert.doesNotMatch(html,/<[^>]+class="course-color-key"/,'noninteractive color legend remains removed');
 assert.match(html,/class="safety-note"/,'safety callouts remain distinct');
 assert.match(html,/Follow your supervisor’s instructions, your agency’s documentation policies/);
 assert.match(html,/<details class="audience-details" id="audience">[\s\S]*?<summary>Who this course is for/);
@@ -65,10 +65,10 @@ assert.equal((html.match(/class="vocab-entry" data-vocab-entry/g)||[]).length,33
 const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
 assert.equal(ids.length,new Set(ids).size,'unique anchor ids');
 for(const href of html.matchAll(/href="#([^"]+)"/g))assert.ok(ids.includes(href[1]),'valid fragment '+href[1]);
-assert.equal((html.match(/class="concept-stage stage-\d+"/g)||[]).length,11,'11 custom visual teaching diagrams');
+assert.equal((html.match(/<figure class="concept-stage relationship-stage" aria-labelledby="stage-title-\d+"/g)||[]).length,11,'11 labeled relationship teaching diagrams');
 for(let i=1;i<=11;i++){
  assert.ok(html.includes('id="stage-title-'+i+'"'),'unique diagram heading '+i);
- assert.ok(html.includes('class="concept-stage stage-'+i+'"'),'visual stage '+i);
+ assert.ok(html.includes('aria-labelledby="stage-title-'+i+'"'),'visual diagram labelled by heading '+i);
 }
 assert.match(html,/<body data-experience="studio">/,'visual studio initial mode');
 assert.match(html,/data-experience-choice="studio" aria-pressed="true"/);
