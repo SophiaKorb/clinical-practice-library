@@ -28,6 +28,9 @@ for width in (390,1280):
                     x0,y0,x1,y1=block[:4]
                     assert x0>=-3 and y0>=-3 and x1<=p.rect.width+3 and y1<=p.rect.height+3,(filename,p.number,(x0,y0,x1,y1))
         scale_page=next(i for i,v in enumerate(page_text) if 'How much support do I need?' in v)
+        assert '0 Settled' in page_text[scale_page] and '5 Urgent help needed' in page_text[scale_page],(filename,'orphaned heading separated from scale')
+        choices_page=next(i for i,v in enumerate(page_text) if 'What would help right now?' in v)
+        assert 'Quiet' in page_text[choices_page] and 'Not now' in page_text[choices_page],(filename,'orphaned supported-choice heading')
         doc[scale_page].get_pixmap(matrix=pymupdf.Matrix(1.25,1.25),alpha=False).save(root/f'{variant}-{width}-scale.png')
         print(f'{filename}: {doc.page_count} pages; scale, choices, privacy and clinician guidance checked')
 print('PASS focused client and clinician PDF print QA across phone and desktop.')
