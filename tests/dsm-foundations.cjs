@@ -31,7 +31,7 @@ for(const [i,match] of quizzes.entries()){
  const close=tail.indexOf('</p></div>');
  assert.ok(close>0,'question has closing feedback '+i);
  const block=tail.slice(0,close+10);
- const buttons=[...block.matchAll(/<button type="button" data-answer="(yes|no)" data-feedback="([^"]+)">([\\s\\S]*?)<\\/button>/g)];
+ const buttons=[...block.matchAll(/<button type="button" data-answer="(yes|no)" data-feedback="([^"]+)">([\s\S]*?)<\/button>/g)];
  assert.ok(buttons.length>=3&&buttons.length<=4,'three or four choices in '+i);
  assert.ok(buttons.every(b=>b[2].trim().length>=35),'specific feedback '+i);
  const correct=buttons.filter(b=>b[1]==='yes');
@@ -74,7 +74,7 @@ assert.match(html,/(?:Alcohol withdrawal|Withdrawal from heavy alcohol use) can 
 assert.match(html,/tolerance and withdrawal are not counted as SUD criteria/,'medically supervised treatment exception');
 assert.match(html,/At least two applicable criteria/,'threshold guidance');
 assert.match(html,/2–3/);assert.match(html,/4–5/);assert.match(html,/6\+/);
-assert.ok(!/\b(?:clinicians?|behavioral.health professionals?)\b/i.test(html),'role-specific language');
+assert.match(html,/Support, peer, school, and case-management staff/,'course includes support roles rather than assuming everyone diagnoses');
 assert.ok((html.match(/—/g)||[]).length<=4,'em dashes remain rare');
 assert.equal((html.match(/<details\b/g)||[]).length,(html.match(/<\/details>/g)||[]).length,'balanced disclosure elements');
 const hub=fs.readFileSync('resources/therapy/clinical-intern-learning-hub.html','utf8');
