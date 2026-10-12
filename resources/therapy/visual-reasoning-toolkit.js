@@ -30,9 +30,13 @@ bodyControls.forEach(btn=>{
   btn.setAttribute('aria-pressed','false');
   const activate=()=>selectBody(btn.dataset.body);
   btn.addEventListener('click',activate);
-  if(btn.tagName.toLowerCase()==='circle')btn.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();activate();}});
+  // Keyboard and screen-reader activation use the equivalent labeled buttons.
 });
-document.querySelectorAll('[data-choice]').forEach(btn=>btn.addEventListener('click',()=>{by('choice-result').textContent='You chose: '+btn.dataset.choice+'. Confirm together whether this is helpful and available. You can change your mind.';}));
+const choiceButtons=[...document.querySelectorAll('[data-choice]')];
+choiceButtons.forEach(btn=>btn.addEventListener('click',()=>{
+ choiceButtons.forEach(item=>item.setAttribute('aria-pressed',String(item===btn)));
+ by('choice-result').textContent='You chose: '+btn.dataset.choice+'. Confirm together whether this is helpful and available. You can change your mind.';
+}));
 by('example').addEventListener('click',()=>{const ids=['before','behavior','after','trial'];if(ids.some(id=>by(id).value.trim())){by('map-status').textContent='Example not loaded: clear your map first to avoid overwriting it.';return;}['Three spoken instructions in a loud room','Pushed worksheet away; said no','Adult removed work and spoke quietly','Model one step in a quieter space; review starts, accuracy, distress, and support needed'].forEach((v,i)=>by(ids[i]).value=v);by('map-status').textContent='Fictional example loaded. Function remains a hypothesis.';});
 by('clear-map').addEventListener('click',()=>{['before','behavior','after','trial'].forEach(id=>by(id).value='');by('map-status').textContent='Map cleared.';});
 })();
