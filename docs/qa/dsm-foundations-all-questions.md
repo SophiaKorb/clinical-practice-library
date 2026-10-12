@@ -1,1737 +1,766 @@
-# DSM Foundations: all 99 questions
+# DSM Foundations: all 80 questions
 
-> **Editorial review copy.** This is a snapshot of the 11-lesson course on `cpl-2-colorful-helpful`. Every prompt and option appears in lesson order. Correct options are marked **✓**, and feedback for every choice is available beneath each question. Changes to the teaching course should be made in `resources/training/dsm-from-zero.html`, not only in this review copy.
+Editorial review copy generated from the current 11-lesson course. Includes 72 single-answer questions and 8 select-all questions. Correct options and each choice's feedback are included. Edit the teaching source in resources/training/dsm-from-zero.html, then regenerate this copy.
 
-Source blob: `4f67019d727b3f79094e936194785b01538c724f`. The course is not a professional assessment or qualification.
+## Lesson 1: Why classify anything?
 
-## Question index
+### 1. A librarian groups books by topic to help readers find them, then groups those same books by size to plan shelf space. What does this show?
 
-- [Lesson 1: Why classify anything?](#lesson-1)
-- [Lesson 2: What is the DSM?](#lesson-2)
-- [Lesson 3: Symptom ≠ diagnosis](#lesson-3)
-- [Lesson 4: Everyday words versus clinical terms](#lesson-4)
-- [Lesson 5: Six questions that change the picture](#lesson-5)
-- [Lesson 6: Where does the pattern belong?](#lesson-6)
-- [Lesson 7: Understanding substance use disorders](#lesson-7)
-- [Lesson 8: Two case studies](#lesson-8)
-- [Lesson 9: How the DSM supports assessment and treatment](#lesson-9)
-- [Lesson 10: Diagnosis, identity & self-knowledge](#lesson-10)
-- [Lesson 11: Disability, functioning & access](#lesson-11)
+- **A.** A book must belong to only one group, regardless of why someone is sorting it.
+  - Feedback: An item can belong to different groupings. Topic helps someone find a book; size helps someone plan where it fits.
+- **B.** The same items can be grouped differently for different purposes. **✓ Correct**
+  - Feedback: Both groupings can be useful because each answers a different practical question about the same books.
+- **C.** Changing the grouping changes the books themselves.
+  - Feedback: The books stay the same. What changes is the feature used to group them and the question that grouping helps answer.
 
----
-
-## Lesson 1
-
-**Why classify anything?**
-
-### 1. Which statement best explains why people create categories?
-
-- **A.** To capture absolutely everything important about each item or person.
-- **B.** To organize information, communicate, make decisions, or express personal meaning. **✓ Correct**
-- **C.** Because everything naturally belongs in one perfect and permanent box.
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** Categories deliberately leave things out. 'Wash cold' tells you something useful about a shirt, but not who owns it or why it is covered in glitter. A diagnostic label likewise cannot describe a whole person.
-
-**B (correct):** Categories help us notice connections. Some are practical, like sorting laundry. Others are personal, like grouping songs that remind you of a friend. Diagnostic categories are more formal and have specific purposes, but personal categories do not need professional approval to be meaningful.
-
-**C:** Categories are ways of finding patterns or meaning, not permanent boxes built into everything. A family could sort the same clothes by washing instructions, owner, or sentimental value. The clothes do not change.
-
-</details>
-
-### 2. A child struggles with worksheets. Which way of grouping possible reasons for the difficulty would help a teacher choose supports?
+### 2. A teacher wants to sort possible causes of difficulty with worksheets into distinct areas for assessment. Which grouping covers multiple kinds of barriers?
 
 - **A.** Whether the barrier involves directions, reading, layout, skills, or distress. **✓ Correct**
-- **B.** Whether the child enjoys worksheets or dislikes them.
-- **C.** Whether the cause is a lack of effort or a poor attitude.
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A (correct):** These are all possible sources of difficulty with the same task. Checking them suggests practical next steps. A crowded layout calls for a different support than a reading difficulty; neither observation alone proves a diagnosis.
-
-**B:** Enjoyment may affect participation, but it does not show whether the directions are readable or the problem fits the child's current skills. Plenty of children dislike worksheets, especially by Friday afternoon. The teaching question remains unanswered.
-
-**C:** That groups possible causes into judgments about character. It doesn't help the teacher check whether the child understands the directions, can read the page, or has the skills the task requires.
-
-</details>
+  - Feedback: These are all possible sources of difficulty with the same task. Checking them suggests practical next steps. A crowded layout calls for a different support than a reading difficulty; neither observation alone proves a diagnosis.
+- **B.** Whether frustration appears even when instructions and task demands are made accessible.
+  - Feedback: Emotional response matters, but it does not replace understanding the task and any barriers to access.
+- **C.** Whether the student's effort differs from classmates completing the same activity.
+  - Feedback: Relative effort is hard to infer from appearance and does not identify the learning barrier.
 
 ### 3. Someone sorts plants into two groups: “wilting” and “healthy.” They then say, “This plant is wilting because it belongs to the wilting group.” What question have they skipped?
 
 - **A.** What conditions might explain why this plant is wilting? **✓ Correct**
-- **B.** How much have the leaves drooped since yesterday?
+  - Feedback: The category describes what we observe; it does not explain the cause. Checking water, light, temperature, or roots may clarify why this particular plant is wilting. Diagnoses can work similarly: naming a pattern is not the same as explaining why it developed.
+- **B.** Whether a change in leaf appearance would justify another descriptive category.
+  - Feedback: Describing degree can be useful, but it does not answer what explains the condition.
 - **C.** Would “severely wilted” be a better category?
+  - Feedback: Renaming the category “severely wilted” adds descriptive detail but not a cause. We would still need to examine the plant's circumstances.
 
-<details>
-<summary>Show explanations for each choice</summary>
+### 4. What does this example demonstrate about personally meaningful categories?
 
-**A (correct):** The category describes what we observe; it does not explain the cause. Checking water, light, temperature, or roots may clarify why this particular plant is wilting. Diagnoses can work similarly: naming a pattern is not the same as explaining why it developed.
-
-**B:** A more precise description can help track changes, but it still does not tell us what caused the wilting. Different conditions could produce a similar appearance.
-
-**C:** Renaming the category “severely wilted” adds descriptive detail but not a cause. We would still need to examine the plant's circumstances.
-
-</details>
-
-### 4. Someone groups foods together because they remind them of Mexico. What is a reasonable response?
-
-- **A.** A category only counts if a professional can verify it.
-- **B.** That is a meaningful personal category. I'd be curious about the memories. **✓ Correct**
-- **C.** They should sort the foods by refrigeration requirements instead.
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** Diagnostic claims need evidence, but a personal category doesn't require formal validation. Nostalgia is not a licensed sorting system, and it doesn't need to be.
-
-**B (correct):** A category can make sense because of a memory, relationship, identity, or feeling, even if it is not useful for shopping. Instead of imposing a practical explanation, ask what the foods mean to the person.
-
-**C:** Refrigeration is useful when storing groceries, but it misses what this category is doing. You don't need to reorganize someone's cherished memories into a shelf-life chart.
-
-</details>
+- **A.** Dates offer a more consistent method, so changing the system is the best next step.
+  - Feedback: Chronological filing could help someone searching by date, but that is a different purpose. The existing arrangement is meaningful and works for the person using it.
+- **B.** The grouping can be useful for this person without being the best system for every task. **✓ Correct**
+  - Feedback: The emotional grouping has personal meaning and meets the person's retrieval needs. A different index might help if new needs arise; subjectivity alone is not dysfunction.
+- **C.** Emotional groupings require outside agreement before they count as useful categories.
+  - Feedback: A privately meaningful grouping need not be independently verifiable. The relevant questions are how it functions and whether it creates problems.
 
 ### 5. A teacher labels a student 'noncompliant.' What should happen before using that label as an explanation?
 
-- **A.** Add a second label immediately so the first one looks better supported.
+- **A.** Compare whether the student behaves similarly with other teachers before examining the task.
+  - Feedback: Comparing settings can be helpful, but understanding immediate task demands and meaning should not be skipped.
 - **B.** Treat the label as proof the student chose not to cooperate.
-- **C.** Ask what happened, what the task required, and what changes when support is offered. **✓ Correct**
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** Two unsupported labels are still unsupported. The vocabulary may grow, but the evidence has not. Ask what happened and what the student needed.
-
-**B:** That confuses a description of how a task looked to an adult with evidence of the child's motive. First ask whether the directions were understood, the task was accessible, and the student had a way to communicate difficulty.
-
-**C (correct):** The category 'noncompliant' may obscure language, learning, sensory, or emotional barriers. Concrete observations and a trial of support offer information that can guide action instead of just renaming the problem.
-
-</details>
+  - Feedback: That confuses a description of how a task looked to an adult with evidence of the child's motive. First ask whether the directions were understood, the task was accessible, and the student had a way to communicate difficulty.
+- **C.** Ask what happened, what was required, and whether support changes the result. **✓ Correct**
+  - Feedback: An inquiry into task demands, meaning, and access is more informative than inferring motive.
 
 ### 6. Why can a shared diagnosis help therapists and assessors?
 
-- **A.** It guarantees that every person with the label needs identical treatment.
-- **B.** It eliminates the need to ask about history or functioning.
-- **C.** It is a common reference point for evidence, documentation, and communication. **✓ Correct**
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** A shared diagnosis may point toward relevant research and treatment options, but it does not set a person's goals or predict the exact supports they need. Personalized care still requires assessment and collaboration.
-
-**B:** A diagnosis saves some explanatory work, not all of it. History, impairment, strengths, risks, preferences, and context remain crucial. A code is not a conversation in disguise.
-
-**C (correct):** Common language helps teams compare findings and connect presentations with relevant research, referral decisions, or documentation. It improves coordination, provided the category remains an aid rather than the entire assessment.
-
-</details>
+- **A.** It gives a common treatment starting point, so identical plans are usually appropriate.
+  - Feedback: Research-based starting points still require tailoring to individual goals, culture, context, and response.
+- **B.** It provides a shared vocabulary that makes assessment of personal history less necessary.
+  - Feedback: Shared terminology helps coordinate care but never replaces individualized history.
+- **C.** It supports communication and evidence-informed questions across the care team. **✓ Correct**
+  - Feedback: Diagnosis provides useful common language, not a complete treatment formula.
 
 ### 7. What makes a category potentially harmful?
 
 - **A.** When it is used to stereotype people or replace observation and curiosity. **✓ Correct**
-- **B.** The existence of any shared vocabulary.
-- **C.** That the category cannot tell you today's weather.
+  - Feedback: Even a useful category can become damaging when people infer intentions, identity, or abilities that have not been assessed. The category's usefulness never authorizes a complete story about a person.
+- **B.** When it is mainly used as a brief organizing shorthand rather than a complete description.
+  - Feedback: Using shorthand can be practical, provided it does not replace observation and individual context.
+- **C.** When its definition follows shared criteria instead of personal shorthand.
+  - Feedback: Shared definitions can make a category clearer; harm arises from stereotyping, rigid use, or replacing individual observations.
+- **D.** When it is revised after new information changes how it should be used.
+  - Feedback: Revising a category when new evidence arises is usually a strength, not a harm. Risk grows when the category is applied rigidly or used to stereotype people.
 
-<details>
-<summary>Show explanations for each choice</summary>
+## Lesson 2: What is the DSM?
 
-**A (correct):** Even a useful category can become damaging when people infer intentions, identity, or abilities that have not been assessed. The category's usefulness never authorizes a complete story about a person.
+### 8. Does a DSM label tell you everything about a person?
 
-**B:** Shared words can help people understand experiences, find information, and coordinate support. The danger comes from rigid or careless use, not simply from having words.
+- **A.** No. It describes a clinical pattern, not the person's whole life. **✓ Correct**
+  - Feedback: A diagnosis can aid clinical decisions without summarizing someone's relationships, values, or individual functioning.
+- **B.** Yes. Once accurate, it summarizes needs and typical responses across settings.
+  - Feedback: People with the same diagnosis can differ markedly in goals, presentation, and support needs.
+- **C.** It describes present symptoms completely but not a person's preferences.
+  - Feedback: Even the symptom picture may need more information and change over time; the label is not exhaustive.
 
-**C:** Most categories are purpose-limited. A diagnosis not predicting the monsoon is not a defect in diagnostic science. Tucson's summer storms are challenge enough for weather forecasts.
+### 9. A parent keeps the family board games arranged in strict alphabetical order. Which statements are supported by this observation?
 
-</details>
+- **A.** It could reflect a compulsion if arranging games feels difficult to resist or interferes with life. **✓ Correct**
+  - Feedback: The reason for arranging may warrant investigation, but whether the behavior represents a compulsion needs further clinical context.
+- **B.** It suggests obsessive-compulsive disorder if the preference is especially consistent.
+  - Feedback: Strong routines or preferences, without specific intrusive phenomena and impact, do not establish OCD.
+- **C.** It is a preference or behavior that cannot establish a diagnosis on its own. **✓ Correct**
+  - Feedback: Explore meaning, distress, and function before considering any diagnosis.
 
-### 8. Someone recognizes themself in several descriptions. What should classification do first?
+### 10. Which task is actually within the DSM’s purpose?
 
-- **A.** Assign every matching diagnostic category at once.
-- **B.** Acknowledge the person's reaction and explain that categories overlap; assess further when useful. **✓ Correct**
-- **C.** Tell the person they are mistaken about their own experiences.
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** Similar descriptions can occur in different conditions and ordinary experiences. More checked boxes do not equal more disorders; that would turn classification into an unfortunate collecting hobby.
-
-**B (correct):** If the lists are alarming, respond to that worry first. People can recognize real experiences without immediately having a diagnosis. Explain that lists overlap, avoid making unsupported promises, and explore concerns with their permission.
-
-**C:** The person may know exactly what they experience even if a symptom list doesn't settle the explanation. Rejecting their account confuses self-knowledge with formal diagnosis.
-
-</details>
-
-### 9. Which statement captures the spirit of this course?
-
-- **A.** Once we have a label, no more questions are needed.
-- **B.** We should avoid every category, even when people need coordinated care.
-- **C.** Categories can help us decide, communicate, or make personal meaning without defining the whole person. **✓ Correct**
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** A label may tell you where to begin looking, not when to stop. If labels completed every assessment, the rest of this course could be replaced with an office stamp. Fortunately for learning, it cannot.
-
-**B:** Categories can be helpful and sometimes necessary for care, research, and documentation. The more thoughtful response is to use them honestly and proportionately, not pretend they have no value.
-
-**C (correct):** Categories can be shared or private, practical or emotional. In assessment, formal categories have specific standards. In everyday life, someone's own associations can matter without serving a practical purpose.
-
-</details>
-
-## Lesson 2
-
-**What is the DSM?**
-
-### 10. Does a DSM label tell you everything about a person?
-
-- **A.** No, it names only part of the picture **✓ Correct**
-- **B.** Yes, it explains the whole person
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A (correct):** A diagnosis names a pattern of symptoms using shared criteria; it does not describe the person's history, relationships, values, strengths, or goals. Those require an actual conversation and an individualized formulation.
-
-**B:** A diagnosis may name a pattern; it does not explain the person's whole story, strengths, culture, goals, or needs.
-
-</details>
-
-### 11. A parent keeps the family board games arranged in strict alphabetical order. What does that tell you diagnostically?
-
-- **A.** They definitely have a clinical compulsion.
-- **B.** They have obsessive-compulsive disorder.
-- **C.** Not enough to identify a disorder. **✓ Correct**
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** Even an impressively organized game shelf is not diagnostic evidence on its own.
-
-**B:** Keeping games organized does not establish OCD.
-
-**C (correct):** An orderly game shelf tells us that someone prefers order, not whether they experience unwanted intrusive thoughts, compulsions, distress, or interference. OCD is evaluated from the fuller pattern. An organized game shelf is not enough.
-
-</details>
-
-### 12. Which task is actually within the DSM’s purpose?
-
-- **A.** Predicting how someone will behave in every setting.
+- **A.** Explaining a person's behavior from their diagnostic label without gathering more history.
+  - Feedback: DSM categories organize clinical patterns, not the full explanation for a person's behavior or choices.
 - **B.** Providing shared diagnostic descriptions and criteria. **✓ Correct**
+  - Feedback: The DSM provides common diagnostic descriptions and criteria so qualified assessors and treatment teams can compare findings and communicate. Interviewing, understanding context, and planning care still require professional judgment; the manual cannot do those jobs itself.
 - **C.** Determining who was right during a family disagreement.
+  - Feedback: The DSM is not a tool for deciding who was right in a disagreement.
 
-<details>
-<summary>Show explanations for each choice</summary>
+### 11. Two clients share a diagnosis. Which conclusions could both be true?
 
-**A:** A diagnostic category does not predict every choice or context.
-
-**B (correct):** The DSM provides common diagnostic descriptions and criteria so qualified assessors and treatment teams can compare findings and communicate. Interviewing, understanding context, and planning care still require professional judgment; the manual cannot do those jobs itself.
-
-**C:** The DSM is not a tool for deciding who was right in a disagreement.
-
-</details>
-
-### 13. A diagnosis is best understood as…
-
-- **A.** A structured clinical classification, interpreted alongside the person's context. **✓ Correct**
-- **B.** A full account of personality.
-- **C.** A reliable prediction of every behavior.
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A (correct):** A diagnostic label is a standardized shorthand; the rest of the picture comes from history, culture, functioning, strengths, and the person's own perspective.
-
-**B:** A diagnostic code does not come with a fully annotated biography. Personality, relationships, choices, and life circumstances still have to be learned from the person.
-
-**C:** A diagnosis can inform what patterns are worth asking about; it does not grant supernatural powers of behavioral prediction. Even the DSM cannot tell you who will eat the last slice of pizza.
-
-</details>
-
-### 14. Two clients share a diagnosis. Which conclusion follows?
-
-- **A.** They will benefit from identical therapy scripts.
+- **A.** They may benefit from similar evidence-based strategies without needing the same plan. **✓ Correct**
+  - Feedback: A shared diagnosis can suggest some evidence-based approaches, but neither person's plan should be copied automatically.
 - **B.** They may still have different goals, strengths, functioning, and support needs. **✓ Correct**
-- **C.** Their lives are clinically interchangeable.
+  - Feedback: The same criteria can coexist with very different needs. Treatment is based on formulation and collaboration, not identical scripts.
+- **C.** Their key difficulties and strengths can be predicted from their shared diagnostic criteria.
+  - Feedback: The same criteria do not determine identical functioning or clinical priorities.
 
-<details>
-<summary>Show explanations for each choice</summary>
+### 12. A worker reads a DSM checklist online. Can they independently diagnose?
 
-**A:** Identical therapy scripts presume identical histories and priorities. Even two people with the same diagnosis may need entirely different goals or ways of communicating.
+- **A.** They can independently diagnose if they can explain every item on the checklist.
+  - Feedback: Knowledge of symptoms alone does not establish legal authority, competence, or required supervision.
+- **B.** They may diagnose after discussing the checklist with a clinician, regardless of their role.
+  - Feedback: A discussion can support learning; it does not expand someone's authorized scope of practice.
+- **C.** Only when their role, training, and applicable rules authorize independent diagnosis. **✓ Correct**
+  - Feedback: Competence, professional authorization, and supervision requirements all matter.
 
-**B (correct):** The same criteria can coexist with very different needs. Treatment is based on formulation and collaboration, not identical scripts.
+### 13. Someone says, “I recognized myself in five symptom lists, and now I'm worried something is seriously wrong with me.” What should you say first?
 
-**C:** People are not interchangeable entries in a diagnostic spreadsheet. Shared labels describe overlapping patterns, not identical functioning or identities.
+- **A.** “Let's write down which descriptions fit, then sort them into five likely diagnoses.”
+  - Feedback: Recognizing overlap is a useful starting point, but inferring five disorders prematurely may increase distress.
+- **B.** “Maybe one of the lists is right; we should choose the closest match now.”
+  - Feedback: Picking a label first turns an exploratory conversation into premature confirmation.
+- **C.** “That sounds unsettling. Let's explore what fits, what overlaps, and what worries you.” **✓ Correct**
+  - Feedback: Validation and exploratory questions acknowledge distress without treating symptom lists as confirmed diagnoses.
 
-</details>
-
-### 15. A worker reads a DSM checklist online. Can they independently diagnose?
-
-- **A.** Yes, after reading enough social media threads.
-- **B.** Yes, if the checklist sounds familiar.
-- **C.** Only within their applicable professional scope, training, and competence. **✓ Correct**
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** A hundred confident social-media posts still do not add up to licensure or diagnostic competence. Popularity is an exceptionally unreliable credential.
-
-**B:** Recognizing yourself in a checklist is a reason to investigate, not a professional qualification. Familiarity with symptoms cannot replace an assessment and scope of practice.
-
-**C (correct):** Scope of practice and demonstrated competence matter; access to a checklist does not provide the authority or skill to independently diagnose.
-
-</details>
-
-### 16. Someone says, “I recognized myself in five symptom lists, and now I'm worried something is seriously wrong with me.” What should you say first?
-
-- **A.** “To be safe, let's assume all five diagnoses apply.”
-- **B.** “Let's pick the diagnosis that sounds most like you.”
-- **C.** “That sounds unsettling. A lot of symptom lists overlap, and recognizing yourself in them does not mean you have five disorders. We can talk about what worries you.” **✓ Correct**
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** Treating five internet checklists as five established disorders could increase fear and produce an inaccurate conclusion. Symptom lists overlap; they're not collectible diagnoses. First reassure the person that overlap is normal, while taking their actual concerns seriously.
-
-**B:** Selecting a familiar-sounding label skips the person's anxiety and the need for evidence. Recognizing a description can start a useful conversation, but it doesn't settle a diagnosis. Reassure them first; if they want to explore the symptoms, do that together afterward.
-
-**C (correct):** Begin with reassurance because the person is frightened, not asking for a differential on the spot. Many symptom lists overlap with one another and with common human experiences. Recognizing yourself in several lists does not establish five disorders. Acknowledge the worry, explain that overlap is common without promising that nothing is wrong, and then invite questions or further assessment if helpful.
-
-</details>
-
-### 17. Which is a limitation of the DSM?
+### 14. Which is a limitation of the DSM?
 
 - **A.** Its categories do not capture every individual and cultural context. **✓ Correct**
-- **B.** It has no relevance to care or research.
-- **C.** It cannot be used to communicate across treatment teams.
+  - Feedback: Classification is useful but imperfect; its boundaries are not a complete description of someone's culture, values, development, or experience.
+- **B.** Because its clinical categories cannot guide any part of care planning.
+  - Feedback: The DSM may help organize care and research while still requiring individual formulation.
+- **C.** Because its categories prevent effective communication between professionals.
+  - Feedback: A shared classification can support communication, but cannot capture the whole clinical picture.
 
-<details>
-<summary>Show explanations for each choice</summary>
+### 15. Why preserve the person's own words?
 
-**A (correct):** Classification is useful but imperfect; its boundaries are not a complete description of someone's culture, values, development, or experience.
+- **A.** Translate the person's experience into a clinical term before using their exact words.
+  - Feedback: Clinical shorthand may be useful but can conceal meanings specific to the person.
+- **B.** They preserve meanings that diagnostic shorthand may not capture. **✓ Correct**
+  - Feedback: The person's own description offers evidence beyond the label used to classify it.
+- **C.** Use quotations mainly when symptoms cannot be linked to a DSM definition.
+  - Feedback: Quotations are useful even when diagnosis is clear, and do not eliminate further assessment.
 
-**B:** There is a substantial research and care literature connected to diagnostic categories. Critiquing the system means understanding what it does well as well as its limits.
+## Lesson 3: Symptom ≠ diagnosis
 
-**C:** The DSM gives teams a common vocabulary, which helps with documentation and research. The fact that a map is incomplete does not make it useless.
+### 16. Someone feels nervous before an exam. What do you know?
 
-</details>
+- **A.** We know the person is nervous; context and impact would clarify its significance. **✓ Correct**
+  - Feedback: Exam-related anxiety is common and does not on its own establish a disorder.
+- **B.** The exam has triggered a psychiatric disorder if the nervousness is intense.
+  - Feedback: Intensity matters, but patterns, duration, associated features, and impact also matter.
+- **C.** The feeling is likely harmless if the exam ends within a few hours.
+  - Feedback: An ordinary setting does not guarantee mild symptoms; ask about distress, function, and safety as appropriate.
 
-### 18. Why preserve the person's own words?
+### 17. A client says, “I keep losing my train of thought halfway through a sentence.” What is the clinical value of that phrase?
 
-- **A.** Clinical terms always say exactly the same thing.
-- **B.** They describe subjective experience that may be lost in shorthand labels. **✓ Correct**
-- **C.** Quotes eliminate the need for further assessment.
+- **A.** It identifies a specific symptom of ADHD if concentration lapses interrupt speech.
+  - Feedback: A reported experience can arise for several reasons and is not specific to ADHD.
+- **B.** It is a useful description to explore, not a diagnosis. **✓ Correct**
+  - Feedback: Ask about onset, setting, sleep, mood, health, and functional effects.
+- **C.** It establishes a sleep-related disorder if the person feels tired when speaking.
+  - Feedback: Sleep may be relevant, but one reported experience does not establish a sleep disorder.
 
-<details>
-<summary>Show explanations for each choice</summary>
+### 18. Someone reports new anxiety and stress-related difficulties. Which details help evaluate the pattern's clinical significance?
 
-**A:** Clinical shorthand can be useful, but a phrase such as 'anxiety' cannot substitute for what the person actually experienced, how they described it, or what happened.
+- **A.** How long the change has lasted and how it compares with the person's usual functioning. **✓ Correct**
+  - Feedback: Time course and a person's baseline help distinguish different patterns.
+- **B.** Whether distress is accompanied by other symptoms or changes in daily functioning. **✓ Correct**
+  - Feedback: Associated symptoms and interference in daily life matter for clinical interpretation.
+- **C.** Whether one especially intense symptom proves an enduring anxiety disorder.
+  - Feedback: One intense symptom cannot establish a full diagnosis or its required course.
+- **D.** Whether lacking a remembered trigger establishes a psychiatric cause.
+  - Feedback: A trigger may not be known; its absence does not establish a specific cause.
 
-**B (correct):** Quoting people accurately distinguishes their reported experience from our interpretation. Both matter in a well-supported record.
+### 19. A symptom is…
 
-**C:** A quote is a starting point, not the last page of an assessment. 'I blacked out' still needs follow-up about memory, context, safety, and possible causes.
-
-</details>
-
-## Lesson 3
-
-**Symptom ≠ diagnosis**
-
-### 19. Someone feels nervous before an exam. What do you know?
-
-- **A.** They feel nervous; more information is needed **✓ Correct**
-- **B.** They definitely have an anxiety disorder
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A (correct):** Exam-related nervousness has an obvious context and may be an ordinary response to something important. To consider a disorder, first ask how often the fear occurs, whether it extends beyond this event, and whether it causes clinically important distress or interference.
-
-**B:** An isolated symptom does not establish a disorder. Look at time, intensity, context, impact, and other explanations.
-
-</details>
-
-### 20. A client says, “I keep losing my train of thought halfway through a sentence.” What is the clinical value of that phrase?
-
-- **A.** It confirms ADHD.
-- **B.** It is a useful description to explore, not a DSM criterion on its own. **✓ Correct**
-- **C.** It confirms a sleep disorder.
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** A self-description does not establish an ADHD symptom pattern, timing, or differential.
-
-**B (correct):** The phrase tells us the person notices attention difficulty, but not what causes it. Ask when it happens, what else accompanies it, how sleep or stress affects it, and whether it creates functional problems before choosing a diagnostic explanation.
-
-**C:** Sleep is relevant to ask about, not a conclusion from the phrase.
-
-</details>
-
-### 21. Which additional detail would help distinguish ordinary stress from a clinical presentation?
-
-- **A.** The number of unopened messages alone.
-- **B.** Whether they still order iced coffee when it is 110°F outside.
-- **C.** Onset, duration, associated symptoms, context, and effect on functioning. **✓ Correct**
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** Unread messages are not a mental-health diagnostic instrument.
-
-**B:** An iced coffee order tells you very little about diagnostic patterns, even in July.
-
-**C (correct):** Onset and duration distinguish a temporary reaction from a persistent or recurrent pattern. Associated symptoms, circumstances, and functional impact then help determine whether a particular set of diagnostic criteria might fit, or whether another explanation is stronger.
-
-</details>
-
-### 22. A symptom is…
-
-- **A.** A personality defect.
-- **B.** A diagnosis whenever it lasts more than a day.
+- **A.** A negative personal quality inferred from behavior rather than a reported difficulty.
+  - Feedback: Moral language cannot substitute for understanding an experience or observable problem.
+- **B.** A persistent difficulty that receives a diagnostic label as soon as it is reported.
+  - Feedback: One experience may have many causes and is not automatically a diagnosis.
 - **C.** An experience or observable difficulty that can have multiple causes. **✓ Correct**
+  - Feedback: Ask what actually occurred, when, for how long, and with what consequences. A symptom is evidence to consider, not a verdict.
 
-<details>
-<summary>Show explanations for each choice</summary>
+### 20. A client cannot concentrate after sleeping only three hours. Which assessments could help clarify the cause?
 
-**A:** Symptoms are not moral defects. Trouble focusing or sleeping deserves curiosity and assessment, not a character review written in invisible ink.
+- **A.** An attention disorder, since poor sleep often reveals underlying attentional problems.
+  - Feedback: Sleep deprivation itself can impair concentration. An ADHD evaluation would require history beyond this episode.
+- **B.** Sleep, health, environmental demands, and psychiatric factors as relevant. **✓ Correct**
+  - Feedback: A broader assessment avoids treating concentration trouble as proof of one cause.
+- **C.** Whether the person's motivation is the primary reason the task feels difficult.
+  - Feedback: A motivation hypothesis cannot be established by three hours of sleep, and it risks obscuring sleep or health needs.
+- **D.** Whether the concentration problem persists after adequate sleep over time. **✓ Correct**
+  - Feedback: Comparing concentration after adequate sleep with the person's usual baseline helps identify whether the difficulty persists beyond acute sleep restriction.
 
-**B:** One day is not a magic conversion point from feeling to disorder. Criteria vary; duration is only one part of the pattern.
+### 21. A person feels sad after a major disappointment. What does that establish?
 
-**C (correct):** Ask what actually occurred, when, for how long, and with what consequences. A symptom is evidence to consider, not a verdict.
-
-</details>
-
-### 23. A client cannot concentrate after sleeping three hours. What should be assessed?
-
-- **A.** ADHD alone.
-- **B.** Sleep and other relevant medical, contextual, and psychiatric possibilities. **✓ Correct**
-- **C.** Whether the client is lazy.
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** ADHD may belong in a differential, but short sleep is an obvious competing factor. Ignoring it would be like checking the radio before noticing the car is out of gas.
-
-**B (correct):** Three hours of sleep can make concentration difficult on its own. Examine sleep, health, context, and other possibilities before interpreting attention symptoms.
-
-**C:** 'Lazy' is an interpretation of motive, not a measured symptom or diagnosis. Ask what demands and constraints the person is actually dealing with.
-
-</details>
-
-### 24. A person feels sad after a major disappointment. What does that establish?
-
-- **A.** A chronic personality disorder.
+- **A.** That an enduring emotional-regulation problem is the most likely cause.
+  - Feedback: A difficult reaction after disappointment does not, without broader evidence, establish an enduring disorder.
 - **B.** A reported emotion, not automatically a depressive disorder. **✓ Correct**
-- **C.** A major depressive episode.
+  - Feedback: Disappointment can produce real sadness without constituting a depressive episode. Examine the associated symptoms, course, and impact.
+- **C.** That a depressive episode has begun, pending confirmation of its duration.
+  - Feedback: Duration is only part of the picture; other episode criteria and differential assessment still matter.
 
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** A single emotional reaction does not demonstrate an enduring personality pattern. Personality pathology is considerably more complicated than having a rough afternoon.
-
-**B (correct):** Disappointment can produce real sadness without constituting a depressive episode. Examine the associated symptoms, course, and impact.
-
-**C:** A major depressive episode is defined by a broader symptom pattern and criteria. One reaction to disappointment cannot establish that pattern.
-
-</details>
-
-### 25. Someone struggles in one classroom but not another. Why ask about both?
+### 22. A student struggles with a task in one classroom but not another. Which conclusions are justified?
 
 - **A.** Environmental demands and supports may explain the difference. **✓ Correct**
-- **B.** Only the first classroom matters.
+  - Feedback: Compare demands, instructions, relationships, and accommodations across classrooms. The contrast may tell you what improves access.
+- **B.** Comparing classroom demands and supports may reveal what changes the student's access. **✓ Correct**
+  - Feedback: Comparing both settings can reveal differences in demands, instructions, relationships, and supports.
 - **C.** The discrepancy means the student is pretending.
+  - Feedback: Different performance in different settings is common and informative. It is not automatically evidence of pretending; sometimes the worksheet itself is the plot twist.
 
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A (correct):** Compare demands, instructions, relationships, and accommodations across classrooms. The contrast may tell you what improves access.
-
-**B:** Looking at only the difficult classroom hides useful information about what changes when the student succeeds. The comparison is the point, not an inconvenience.
-
-**C:** Different performance in different settings is common and informative. It is not automatically evidence of pretending; sometimes the worksheet itself is the plot twist.
-
-</details>
-
-### 26. Someone reports waking repeatedly and feeling tired all day. What does that tell us?
+### 23. Someone reports waking repeatedly and feeling tired all day. What does that tell us?
 
 - **A.** They have a sleep and fatigue problem, but we still need to understand the cause. **✓ Correct**
-- **B.** They're simply unmotivated.
-- **C.** They must have major depression.
+  - Feedback: The report establishes the person's experience, not its cause. Consider sleep patterns, medical issues, medication effects, stress, mood, and the extent of the impact before concluding which condition, if any, explains the problem.
+- **B.** That the fatigue may reflect insufficient personal effort.
+  - Feedback: Fatigue and disturbed sleep deserve assessment, not a judgment about effort.
+- **C.** That depression should be assessed before any sleep or health explanation.
+  - Feedback: Mood is relevant but sleep, medications, health, and context may also contribute.
 
-<details>
-<summary>Show explanations for each choice</summary>
+### 24. Which response reflects good functional assessment?
 
-**A (correct):** The report establishes the person's experience, not its cause. Consider sleep patterns, medical issues, medication effects, stress, mood, and the extent of the impact before concluding which condition, if any, explains the problem.
+- **A.** Count the number of symptoms present before asking whether the daily routine has changed.
+  - Feedback: Frequency and counts help, but do not replace asking about actual consequences for functioning.
+- **B.** Compare grades across semesters and use performance as the primary impairment index.
+  - Feedback: Grades are useful evidence but can conceal substantial effort, barriers, or added support.
+- **C.** Ask how daily activities and relationships have changed. **✓ Correct**
+  - Feedback: Function should be assessed in real settings rather than inferred from symptom counts.
 
-**B:** Fatigue does not prove a lack of motivation. Calling someone unmotivated substitutes a judgment about character for investigating why they are exhausted.
+## Lesson 4: Everyday words versus clinical terms
 
-**C:** Fatigue and disturbed sleep can occur in depression, but also in many other situations. Depression requires a broader symptom pattern and careful differential assessment.
+### 25. During an intake, a client says, “I'm so OCD about keeping my desk neat.” Which additional finding specifically raises concern for a compulsive cycle?
 
-</details>
+- **A.** They enjoy an orderly desk but can leave it messy when other priorities arise.
+  - Feedback: A flexible preference for order alone does not indicate compulsions.
+- **B.** They repeatedly rearrange objects to neutralize an unwanted intrusive fear, losing substantial time. **✓ Correct**
+  - Feedback: A driven, repetitive action linked to an intrusion and significant interference warrants further OCD assessment.
+- **C.** They concentrate more easily when their workspace has an established layout.
+  - Feedback: Organization may be helpful without indicating a compulsive cycle.
 
-### 27. Which response reflects good functional assessment?
+### 26. Someone says, “I had a panic attack before my road test.” What can you conclude?
 
-- **A.** Count symptoms without asking about impact.
-- **B.** Assume good grades rule out impairment.
-- **C.** Ask what has changed at home, school, work, and in relationships. **✓ Correct**
+- **A.** A road test may be a situational trigger, so the event should be classified as panic disorder.
+  - Feedback: A trigger can help explain fear, but one reported 'panic attack' does not establish panic disorder.
+- **B.** They describe an alarming episode; ask about onset, symptoms, and subsequent effects. **✓ Correct**
+  - Feedback: Suddenness, physical features, context, and later avoidance help clarify the experience.
+- **C.** The reported episode is a formal panic attack if the person felt intense fear.
+  - Feedback: Intense fear alone does not specify the episode's formal features or establish panic disorder.
 
-<details>
-<summary>Show explanations for each choice</summary>
+### 27. Someone says, “I'm bipolar because my mood changes every hour.” What should you do first?
 
-**A:** Symptom numbers can be important, but functional impact varies widely. A checklist without context is an inventory, not a full assessment.
+- **A.** Focus on how many mood changes occur in a day to classify the mood disorder.
+  - Feedback: Frequency matters but cannot replace episode timing, sleep, energy, and context.
+- **B.** Ask about mood, energy, sleep, triggers, duration, and changes in functioning. **✓ Correct**
+  - Feedback: The pattern and course help differentiate episodes from shorter, situational changes in emotion.
+- **C.** Correct the person's wording before asking about their experience.
+  - Feedback: Clarifying terminology can help, but it should not shut down the account being offered.
 
-**B:** Good grades may coexist with substantial effort, exhaustion, outside help, or uneven access. A report card is not a universal disability detector.
-
-**C (correct):** Ask what has become difficult, what still works, and what supports are needed. A symptom count alone cannot show the person's daily-life experience.
-
-</details>
-
-## Lesson 4
-
-**Everyday words versus clinical terms**
-
-### 28. A colleague says, “I’m so OCD about my desk.” What is the most useful response in a clinical interview?
-
-- **A.** Record obsessive-compulsive disorder immediately.
-- **B.** Assume the colleague has a secret color-coding compulsion.
-- **C.** Ask what they mean and whether intrusive thoughts, repetitive behaviors, distress, or interference are involved. **✓ Correct**
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** A preference for tidiness alone does not establish OCD or its criteria.
-
-**B:** The stationery may be meticulously organized. The clinical evidence, however, is not.
-
-**C (correct):** 'I'm so OCD' can mean 'I like things tidy,' whereas OCD has specific features involving obsessions and/or compulsions. Asking what the person experiences preserves their meaning and tells you whether there are symptoms worth evaluating. A tidy desk alone is not enough.
-
-</details>
-
-### 29. Someone says, “I had a panic attack before my road test.” What can you conclude?
-
-- **A.** Taking a road test automatically proves panic disorder.
-- **B.** They felt overwhelmed; clarify the suddenness, symptoms, duration, context, and impact. **✓ Correct**
-- **C.** They have panic disorder.
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** A challenging road test does not determine whether panic-disorder criteria are met.
-
-**B (correct):** 'Panic attack' is meaningful as the person's description, but panic attacks have specific features and panic disorder requires more than one alarming event. Asking about suddenness, physical symptoms, timing, and subsequent avoidance helps distinguish the experiences.
-
-**C:** A self-described panic attack does not establish panic disorder. Panic attacks can occur across conditions.
-
-</details>
-
-### 30. Someone says, “I'm bipolar because my mood changes every hour.” What should you do first?
-
-- **A.** Assume frequent mood changes establish bipolar disorder.
-- **B.** Ask what the person means, including the timing, energy, sleep, context, and impact of those changes. **✓ Correct**
-- **C.** Tell them they must stop using the word bipolar.
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** Bipolar disorders involve specific mood episodes and associated changes, not every rapid shift in feelings. The description deserves exploration rather than an immediate label.
-
-**B (correct):** This takes the person's account seriously without turning everyday language into a diagnostic conclusion. It helps distinguish episode patterns from emotional changes connected to particular events or relationships.
-
-**C:** Correcting the person's vocabulary before understanding their experience can shut down a useful conversation. Ask what they mean first; explain clinical terminology later if helpful.
-
-</details>
-
-### 31. Someone says, “I felt completely unheard, so I called her narcissistic.” What can you conclude?
+### 28. Someone says, “I felt completely unheard, so I called her narcissistic.” What can you conclude?
 
 - **A.** The person felt unheard and hurt; no personality disorder has been established. **✓ Correct**
-- **B.** A stable pattern across life contexts.
-- **C.** Narcissistic personality disorder.
+  - Feedback: Take the experience of feeling dismissed seriously. Ask what happened and what the person needs. Diagnosing someone who is not present would require appropriate assessment, not a single report about an interaction.
+- **B.** The person reports repeated interpersonal patterns that may warrant exploration.
+  - Feedback: A single quote does not establish repetition or a pervasive interpersonal pattern.
+- **C.** The person may have witnessed a personality disorder, pending proper assessment.
+  - Feedback: A report of hurt is not an assessment of the other person's personality.
 
-<details>
-<summary>Show explanations for each choice</summary>
+### 29. A client reports “zoning out” during a quiet task. What is accurate?
 
-**A (correct):** Take the experience of feeling dismissed seriously. Ask what happened and what the person needs. Diagnosing someone who is not present would require appropriate assessment, not a single report about an interaction.
+- **A.** Zoning out may be absorption; ask about context and impact. **✓ Correct**
+  - Feedback: Absorption can be dissociative without establishing a dissociative disorder. Clarify the experience and disruption.
+- **B.** Zoning out is better understood as distraction unless it includes clear distress.
+  - Feedback: Everyday absorption can be a dissociative experience even without clinical distress; clarification matters.
+- **C.** Recurrent zoning out suggests DID when the person loses awareness of time.
+  - Feedback: DID has specific, complex criteria; zoning out or uncertain time perception does not establish it.
 
-**B:** That moment could have many explanations. It cannot establish how the other person behaves across settings and over time. The speaker need not produce a lifetime dossier to have their feelings taken seriously.
+### 30. What separates a personality trait from a personality disorder?
 
-**C:** Feeling hurt by someone’s apparent lack of empathy matters. That feeling does not establish a pervasive personality disorder in the other person. Support the speaker without diagnosing a third party.
+- **A.** An interpersonal pattern that creates friction with others in a particular context.
+  - Feedback: Context-specific conflict can occur without a pervasive clinical pattern.
+- **B.** A persistent cross-context pattern meeting criteria and causing significant difficulty. **✓ Correct**
+  - Feedback: Personality disorder assessment asks about duration, pervasiveness, clinical criteria, and impact.
+- **C.** A trait description shared by several relatives or observers.
+  - Feedback: Agreement among observers may provide history but is not diagnostic evidence by itself.
 
-</details>
+### 31. A client avoids contact after a traumatic event. What should be clarified before interpreting the avoidance as a lasting personality pattern?
 
-### 32. A client reports “zoning out” during a quiet task. What is accurate?
+- **A.** Clarify whether avoidance relates to threat, trauma responses, safety, or other factors. **✓ Correct**
+  - Feedback: Avoidance can have multiple functions and does not support a personality diagnosis on its own.
+- **B.** Prioritize personality testing because avoiding contact suggests a stable trait.
+  - Feedback: A context-linked change following a traumatic event should not be treated as proof of an enduring trait.
+- **C.** Treat avoidance as evidence of avoidant personality disorder and confirm with history.
+  - Feedback: A diagnosis requires the relevant pervasive pattern and assessment of alternatives.
 
-- **A.** This may be ordinary dissociative absorption; clarify nature, context, and impact. **✓ Correct**
-- **B.** Zoning out is never dissociation.
-- **C.** It automatically proves DID.
+### 32. Which statement about personality disorders is fair?
 
-<details>
-<summary>Show explanations for each choice</summary>
+- **A.** One repeated behavior that others find disruptive during a relationship conflict.
+  - Feedback: Conflict and difficulty can matter but do not alone establish a pervasive personality disorder.
+- **B.** A longstanding pattern when several people independently call it a personality problem.
+  - Feedback: Collateral views can inform assessment, but do not by themselves establish criteria.
+- **C.** A clinical pattern can be treatable without being a moral verdict. **✓ Correct**
+  - Feedback: A personality disorder is a diagnostic category that requires assessment, not an accusation.
 
-**A (correct):** Absorption and zoning out can fall within dissociative experience. Clarify quality, context, duration, and impact before asking whether it is clinically significant.
+### 33. A client describes mood shifts over hours during conflict. What is needed?
 
-**B:** Zoning out can indeed be dissociative. The mistake is treating 'everyday' and 'dissociative' as mutually exclusive categories; intensity and impairment are separate questions.
+- **A.** Explore whether the conflict is part of distinct mood episodes before deciding.
+  - Feedback: Useful, but narrower than needed; also consider trauma, relationship context, development and functioning.
+- **B.** Assess borderline personality disorder first because conflict triggers rapid shifts.
+  - Feedback: Conflict-linked shifts do not establish borderline personality disorder; broader history and differential work matter.
+- **C.** Compare episode course, trauma history, conflict context, functioning, and alternatives. **✓ Correct**
+  - Feedback: The differential requires evidence across time and settings rather than matching a label to one reaction.
 
-**C:** Dissociation covers a range of experiences. Ordinary absorption does not by itself show the amnesia, identity disruption, and other evidence needed for DID.
+## Lesson 5: Six questions that change the picture
 
-</details>
-
-### 33. What separates a personality trait from a personality disorder?
-
-- **A.** One irritating behavior.
-- **B.** An enduring, pervasive pattern with diagnostic criteria and clinically significant consequences. **✓ Correct**
-- **C.** A relative's opinion.
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** One irritating behavior can deserve a conversation about boundaries; it cannot carry a personality-disorder diagnosis on its own. The DSM has not added a 'rude once' category.
-
-**B (correct):** Personality-disorder assessment considers a persistent pattern, clinical consequences, culture, development, and competing explanations.
-
-**C:** A relative's account may be useful collateral information, but opinion alone is not a longitudinal, multi-context assessment. Family dinners do not count as diagnostic certification.
-
-</details>
-
-### 34. A client frequently avoids contact after a traumatic event. Which claim is justified?
-
-- **A.** Ask about safety, avoidance, trauma responses, and the broader history. **✓ Correct**
-- **B.** Avoidance proves the client dislikes people.
-- **C.** Avoidant personality disorder is certain.
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A (correct):** Avoidance after trauma may be connected to safety, hyperarousal, grief, mood, learning, or circumstances. The broader history guides evaluation.
-
-**B:** Avoiding contact may reflect fear, overwhelm, exhaustion, or a need for safety; it does not establish dislike of other people. We must ask, rather than narrate motives.
-
-**C:** Avoidant personality disorder cannot be determined from one behavior after a traumatic event. A response to danger is not automatically an enduring personality pattern.
-
-</details>
-
-### 35. Which statement about personality disorders is fair?
-
-- **A.** Every disagreement suggests one.
-- **B.** They make people incapable of change.
-- **C.** They are complex and potentially treatable; diagnosis is not a moral judgment. **✓ Correct**
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** Disagreement is a normal human activity, including within healthy relationships. If it were a diagnostic criterion, family board-game nights would become a public-health emergency.
-
-**B:** Longstanding patterns are not necessarily permanent. Structured psychotherapy, safety, supportive relationships, and new coping skills can produce meaningful change.
-
-**C (correct):** Personality patterns are complex and can change with treatment and support. A diagnosis should support understanding and care, not moral condemnation.
-
-</details>
-
-### 36. A client describes mood shifts over hours during conflict. What is needed?
-
-- **A.** Write “bipolar” automatically.
-- **B.** Write “borderline” automatically.
-- **C.** Clarify episodes, developmental history, trauma, triggers, functioning, and alternatives. **✓ Correct**
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** Bipolar disorders involve episode patterns, not merely changing emotions during a disagreement. Assess sleep, energy, duration, and other relevant features before naming a diagnosis.
-
-**B:** Borderline personality disorder is not the default explanation for intense emotions in relationships. It requires careful consideration of a broader enduring pattern, context, and other causes.
-
-**C (correct):** Differentiating mood episodes from affective shifts linked to context requires timing, associated symptoms, developmental history, and alternatives.
-
-</details>
-
-## Lesson 5
-
-**Six questions that change the picture**
-
-### 37. A student becomes upset when given a crowded worksheet. Which opening question is most informative?
+### 34. A student becomes upset when given a crowded worksheet. Which question invites the student's perspective without presuming a cause?
 
 - **A.** “What part of this page feels hardest? You can point or tell me.” **✓ Correct**
-- **B.** “Why are you refusing to cooperate?”
-- **C.** “Which disorder is causing this?”
+  - Feedback: An open question about which part of the page is difficult gathers the student's perspective without assuming refusal or a disorder. Offering pointing as an option also reduces communication demands, so the student has a better chance to show what they understand.
+- **B.** “When did you decide to stop doing the assignment?”
+  - Feedback: The wording assumes a deliberate choice; it does not explore whether the child understands the task.
+- **C.** “Does the page make you anxious enough to need a diagnosis?”
+  - Feedback: Anxiety might matter, but this imposes a diagnostic frame before learning what is difficult.
 
-<details>
-<summary>Show explanations for each choice</summary>
+### 35. A person reports that problems began soon after switching to night shifts. What does that change?
 
-**A (correct):** An open question about which part of the page is difficult gathers the student's perspective without assuming refusal or a disorder. Offering pointing as an option also reduces communication demands, so the student has a better chance to show what they understand.
-
-**B:** It assumes motive and can obscure access or skill barriers.
-
-**C:** This asks the student to supply a diagnosis before you understand the task.
-
-</details>
-
-### 38. A person reports that problems began soon after switching to night shifts. What does that change?
-
-- **A.** It makes the reported symptoms irrelevant.
-- **B.** It confirms a bipolar disorder.
+- **A.** The work schedule could explain the symptoms, so other factors can wait.
+  - Feedback: Timing is informative, but other causes or co-occurring difficulties may still matter.
+- **B.** Night shifts can cause mood change, so bipolar assessment is the next required step.
+  - Feedback: A temporal connection is not enough to select that diagnosis; assess the overall presentation.
 - **C.** It makes sleep timing and context important to assess. **✓ Correct**
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** The difficulty may be real even when its causes are uncertain.
-
-**B:** A schedule change alone is not evidence sufficient for a bipolar diagnosis.
-
-**C (correct):** The change in schedule provides a plausible temporal clue: disrupted sleep and daily rhythms can influence concentration, mood, and functioning. That clue belongs in the differential alongside other causes; it does not automatically explain everything.
-
-</details>
-
-### 39. During an interview, a safety concern becomes apparent. What is the appropriate response?
-
-- **A.** Assume the person is joking unless they use clinical vocabulary.
-- **B.** Follow the trained safety procedure and arrange prompt qualified assessment or emergency response as indicated. **✓ Correct**
-- **C.** Finish the diagnostic worksheet first.
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** Concerning statements require clarification and appropriate follow-through, regardless of wording.
-
-**B (correct):** An immediate safety concern can change the priority of the encounter. Follow the procedures for your role, consult a qualified assessor or emergency service when indicated, and document the response; finishing a routine questionnaire is not the priority.
-
-**C:** Do not postpone an urgent safety response to complete routine documentation.
-
-</details>
-
-### 40. Why ask when a problem began?
-
-- **A.** Onset can reveal changes, triggers, and which explanations are plausible. **✓ Correct**
-- **B.** Because a recent onset always excludes a disorder.
-- **C.** Only because diagnostic forms need a date.
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A (correct):** The timeline can connect onset with sleep changes, transitions, illness, losses, stressors, or an evolving pattern. That changes which hypotheses are reasonable.
-
-**B:** A recent change can reflect a genuine disorder, acute stress, medication effects, or other factors. Recent onset changes the differential; it doesn't cancel all disorders.
-
-**C:** Forms need dates, but assessment needs meaning. The relevant question is what changed around the beginning, not whether the box in the form can be filled.
-
-</details>
-
-### 41. What does “where does it happen?” help establish?
-
-- **A.** Whether the waiting room chairs match.
-- **B.** Whether the person can be described by one label.
-- **C.** Context, environmental demands, and setting-specific differences. **✓ Correct**
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** The paint color might matter in an unusual sensory context, but decor is not the point of the question. Ask about concrete environmental demands and effects on functioning.
-
-**B:** A setting-specific pattern cannot be understood through a label alone. If difficulty occurs only during long spoken instructions, find out what changes elsewhere.
-
-**C (correct):** Differences across situations help identify stressors, sensory demands, task complexity, available supports, and protective factors.
-
-</details>
-
-### 42. If a problem improves with written instructions, what should be concluded?
-
-- **A.** That the original difficulty was intentionally exaggerated.
-- **B.** That support may improve access and provides information for assessment. **✓ Correct**
-- **C.** That all learning disorders are ruled out.
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** Improvement when access improves is evidence about the task and environment. It does not prove the original difficulty was exaggerated. The instructions may finally have become readable.
-
-**B (correct):** Written steps can reduce working-memory or language demands; the improvement is useful assessment data and a practical support.
-
-**C:** A support working well does not rule out a learning difference. Accommodations can reveal capability without eliminating an underlying barrier.
-
-</details>
-
-### 43. A person gives an unclear description of memory gaps. What next?
-
-- **A.** Diagnose DID from the phrase alone.
-- **B.** Assume they mean normal distraction.
-- **C.** Clarify examples, triggers, functioning, safety, and relevant medical and psychiatric alternatives. **✓ Correct**
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** DID has specific diagnostic requirements; an unclear report of missing time is not enough. The right next step is an assessment, not a leap to a label.
-
-**B:** Not all memory gaps are normal distraction. The degree, type, safety implications, and possible medical or dissociative causes need careful exploration.
-
-**C (correct):** Memory gaps deserve respectful clarification about what was forgotten, when, how long, associated symptoms, and relevant medical or neurological factors.
-
-</details>
-
-### 44. What question protects against guessing motives?
-
-- **A.** “What was happening just before this, and what was hard about the situation?” **✓ Correct**
-- **B.** “Which label are we assigning today?”
-- **C.** “Why do you always choose to be difficult?”
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A (correct):** Start with antecedents, task demands, and the person's perspective. Good questions gather information before ascribing motives.
-
-**B:** Assigning a label before hearing the story is the opposite of assessment. The diagnostic menu is not a substitute for asking what actually happened.
-
-**C:** 'Always choose to be difficult' presumes both intent and a global pattern. It may shut down the conversation before you learn whether the task was accessible.
-
-</details>
-
-### 45. What is the proper response to immediate safety concerns?
-
-- **A.** Assume safety questions are separate from assessment.
-- **B.** Follow role-specific safety procedures and seek timely qualified assessment or emergency help as indicated. **✓ Correct**
-- **C.** Finish every worksheet before responding.
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** Safety is part of assessment and care, not a separate optional topic. Follow your setting's procedures and obtain qualified help where needed.
-
-**B (correct):** Safety concerns call for prompt, trained, role-appropriate response, including consultation or emergency action when indicated.
-
-**C:** Routine documentation cannot take priority over an urgent safety need. The worksheet will survive an interruption; a delayed safety response may not.
-
-</details>
-
-## Lesson 6
-
-**Where does the pattern belong?**
-
-### 46. If someone is distracted, should you immediately open the ADHD chapter and stop there?
-
-- **A.** Yes, distraction means ADHD
-- **B.** No, first learn the larger pattern **✓ Correct**
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** Distraction has many possible explanations. Consider context and competing possibilities.
-
-**B (correct):** Distraction can follow poor sleep, anxiety, learning barriers, environmental demands, ADHD, or several factors at once. Understanding the timing, settings, and associated symptoms helps identify which diagnostic chapters are worth consulting and helps prevent tunnel vision.
-
-</details>
-
-### 47. A client describes a stretch of very little sleep and unusually fast speech. What should happen before choosing a category?
-
-- **A.** Assess the timeline, other symptoms, health and substance factors, and functional change. **✓ Correct**
-- **B.** Count the number of sentences spoken per minute and stop there.
-- **C.** Automatically select the bipolar chapter as the answer.
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A (correct):** Fast speech and reduced sleep can raise questions about mood episodes, but the details matter: reduced need for sleep differs from simply not getting sleep. The assessor needs the time course, energy and mood changes, additional symptoms, impact, and possible medical or substance-related explanations.
-
-**B:** Speech rate alone does not decide the diagnosis.
-
-**C:** That might be among the areas to consider, but it is not a diagnosis by itself.
-
-</details>
-
-### 48. Someone checks the front-door lock twice before leaving. What diagnostic conclusion follows?
-
-- **A.** It always belongs in the OCD chapter.
-- **B.** None from that action alone. **✓ Correct**
-- **C.** It establishes a personality disorder.
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** Checking a lock twice is not itself sufficient evidence of OCD.
-
-**B (correct):** Checking a lock twice could be sensible, habitual, or connected with obsessive concerns; the action alone does not identify its purpose. Ask about intrusive fears, perceived necessity, time spent, control, and interference before considering OCD or other explanations.
-
-**C:** One behavior cannot establish a pervasive pattern or a diagnosis.
-
-</details>
-
-### 49. A symptom appears in multiple DSM chapters. What should guide the differential?
-
-- **A.** Whichever category has the shortest name.
-- **B.** The first chapter in the table of contents.
-- **C.** History, course, associated features, exclusions, and clinically relevant alternatives. **✓ Correct**
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** Short diagnostic labels are not necessarily more accurate. Word count makes an extraordinarily poor substitute for a differential diagnosis.
-
-**B:** The table of contents was written for navigation, not triage. First position is not evidence that a particular diagnosis fits this person.
-
-**C (correct):** Consider the full pattern, chronology, associated features, relevant exclusions, and alternative explanations. Chapter names help organize, not decide.
-
-</details>
-
-### 50. Someone avoids social gatherings. Which area might matter?
-
-- **A.** Social anxiety, sensory demands, preferences, depression, safety, and context. **✓ Correct**
-- **B.** Only a personality disorder.
-- **C.** Only social anxiety disorder.
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A (correct):** Social withdrawal may be shaped by preference, sensory environments, safety, anxiety, mood, relationships, or access. Ask what the person wants.
-
-**B:** A personality disorder requires much more than avoiding gatherings. The context, time course, alternatives, and associated difficulties matter.
-
-**C:** Social anxiety is one possible explanation, but it is not the only one. Someone may avoid noisy gatherings for sensory reasons or simply prefer different ways to connect.
-
-</details>
-
-### 51. A client speaks quickly and sleeps little. What is missing?
-
-- **A.** Only a family member's guess.
-- **B.** A definitive bipolar subtype.
-- **C.** Episode timeline, changes in energy and mood, medical/substance context, and impact. **✓ Correct**
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** Family reports may add information, but a guess alone cannot replace history or assessment. A confident uncle is not a diagnostic instrument.
-
-**B:** A bipolar subtype cannot be chosen from two clues. Episode duration and additional features matter, and medical or substance-related explanations must be considered.
-
-**C (correct):** Assess whether reduced sleep reflects lack of opportunity or reduced need for sleep, and look at mood, energy, episodes, substances, and impact.
-
-</details>
-
-### 52. Why does the age or developmental history matter?
-
-- **A.** Children and adults always meet identical criteria.
-- **B.** Developmental history is irrelevant once someone reaches adulthood.
+  - Feedback: The change in schedule provides a plausible temporal clue: disrupted sleep and daily rhythms can influence concentration, mood, and functioning. That clue belongs in the differential alongside other causes; it does not automatically explain everything.
+
+### 36. During an interview, a safety concern becomes apparent. What is the appropriate response?
+
+- **A.** First check whether the person means the statement literally before deciding whether to act.
+  - Feedback: Clarification may be part of trained assessment, but urgent warning signs still require timely role-appropriate response.
+- **B.** Follow the applicable safety protocol and obtain timely qualified help as indicated. **✓ Correct**
+  - Feedback: Safety concerns take priority over routine diagnostic categorization.
+- **C.** Complete the interview first if the concern has not yet been linked to a diagnosis.
+  - Feedback: Safety decisions are not contingent on assigning a diagnosis.
+
+### 37. A learner reports a difficulty only in certain situations. What can comparing settings reveal?
+
+- **A.** Whether physical features of the setting appear comfortable to the interviewer.
+  - Feedback: The interviewer's comfort is not the same as identifying symptom-related environmental demands.
+- **B.** Whether the pattern fits a diagnosis regardless of specific setting.
+  - Feedback: Settings and supports matter: a pattern is not understood by a label alone.
+- **C.** The settings, demands, and supports associated with the difficulty. **✓ Correct**
+  - Feedback: Comparing settings can reveal environmental barriers and changes in functioning.
+- **D.** Whether the problem appears mainly in unfamiliar places or under certain demands. **✓ Correct**
+  - Feedback: Situations where the difficulty does and does not occur help identify context and specific task demands.
+
+### 38. Written instructions improve access to a task. Which question directly assesses the student's remaining support needs?
+
+- **A.** “Should we assume the original task difficulty was mostly unwillingness?”
+  - Feedback: Improved access is evidence that conditions matter, not that the initial difficulty was deliberate.
+- **B.** “What can the student complete with support, and what still requires help?” **✓ Correct**
+  - Feedback: Comparing participation and effort with supports helps describe functional impact.
+- **C.** “Do written instructions show that further learning assessment is unnecessary?”
+  - Feedback: A successful support may change performance without resolving every underlying issue.
+
+### 39. A person gives an unclear description of memory gaps. What next?
+
+- **A.** Diagnose DID provisionally when memory gaps have no clear external explanation.
+  - Feedback: DID should not be inferred from gaps alone; assess nature, chronology, impairment, and alternatives.
+- **B.** Treat the account as a memory concern only if another person confirms an episode.
+  - Feedback: Collateral history may help, but it is not a prerequisite for taking memory concerns seriously.
+- **C.** Clarify examples, impact, safety, and possible alternative causes. **✓ Correct**
+  - Feedback: Memory gaps can have several explanations and require a careful, individualized assessment.
+
+## Lesson 6: Where does the pattern belong?
+
+### 40. A student reports distractibility across several settings. Which initial approach supports a sound differential?
+
+- **A.** Begin with ADHD criteria because problems appear in more than one setting.
+  - Feedback: Cross-setting difficulties may be relevant to ADHD but can arise from sleep, mood, medical, or contextual factors.
+- **B.** Compare symptoms, development, timing, impairment, and possible competing causes. **✓ Correct**
+  - Feedback: The broader clinical pattern and differential should guide what is assessed next.
+- **C.** First establish the impairment level; postpone exploration of contributing conditions.
+  - Feedback: Impairment is important but cannot replace considering which mechanisms explain the pattern.
+
+### 41. A client describes a period of very little sleep and unusually fast speech. Which additional information matters when assessing a possible mood episode?
+
+- **A.** Whether mood, energy, activity, and functioning changed from baseline, and the time course. **✓ Correct**
+  - Feedback: A distinct change in mood and energy or activity, associated symptoms, and course matter in episode assessment.
+- **B.** Whether substances, medications, health conditions, or sleep schedule changes might contribute. **✓ Correct**
+  - Feedback: Alternative medical, substance-related, and contextual explanations belong in the differential.
+- **C.** Whether fast speech alone confirms a manic or hypomanic episode when others notice it.
+  - Feedback: Fast speech does not independently establish a mood episode.
+- **D.** Whether reduced sleep means decreased need for sleep even when the client feels exhausted.
+  - Feedback: Sleep deprivation is not equivalent to a decreased need for sleep; assess the distinction.
+
+### 42. A symptom appears in multiple DSM chapters. What should guide the differential?
+
+- **A.** The most recognizable label, since shared terms may communicate more clearly.
+  - Feedback: Familiarity can bias diagnosis even when the term seems easy to communicate.
+- **B.** Whichever chapter first describes the symptom in the manual's structure.
+  - Feedback: Manual order does not indicate which explanation best fits a particular person.
+- **C.** Timing, associated features, relevant exclusions, and contrasting evidence. **✓ Correct**
+  - Feedback: A differential depends on evidence for and against plausible causes.
+- **D.** The category associated with the most common disorder in that age group.
+  - Feedback: Base rates can inform the differential, but cannot substitute for individual evidence.
+
+### 43. A person avoids social gatherings. Which set explicitly includes clinical and non-clinical explanations?
+
+- **A.** Social fear, sensory demands, depressed mood, safety concerns, and preference. **✓ Correct**
+  - Feedback: Avoidance may reflect different mechanisms, including an informed preference rather than a disorder.
+- **B.** Social anxiety and avoidant personality patterns, with minimal contextual inquiry.
+  - Feedback: Both may belong in a differential, but this omits important non-disorder and contextual possibilities.
+- **C.** Depression and social anxiety, since both can reduce participation in groups.
+  - Feedback: These are plausible possibilities but too narrow without asking about the person's experience and context.
+
+### 44. Why does the age or developmental history matter?
+
+- **A.** Age changes how symptoms are expressed but rarely affects diagnostic requirements.
+  - Feedback: Some diagnoses have specific age and developmental criteria as well as age-related differences in presentation.
+- **B.** Adult assessment need not revisit development unless the person remembers childhood symptoms.
+  - Feedback: Developmental onset and history may be diagnostically important even with incomplete recall.
 - **C.** Some disorders have developmental onset and age-specific diagnostic considerations. **✓ Correct**
+  - Feedback: Developmental stage, onset, and age-related criteria can affect the interpretation of symptoms and the choice of diagnosis.
 
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** Children and adults can express symptoms differently; some diagnoses have specific onset or age requirements. One checklist cannot be pasted unchanged onto every age.
-
-**B:** Developmental history can remain relevant throughout adulthood, particularly when evaluating neurodevelopmental and longstanding patterns. Turning eighteen doesn't erase childhood data.
-
-**C (correct):** Developmental stage, onset, and age-related criteria can affect the interpretation of symptoms and the choice of diagnosis.
-
-</details>
-
-### 53. A person experiences intrusive thoughts and repeated checking. What follows?
+### 45. A person experiences intrusive thoughts and repeated checking. What follows?
 
 - **A.** Assess the exact phenomena, interference, context, and differential diagnoses. **✓ Correct**
-- **B.** Diagnose OCD without asking more.
-- **C.** Assume all checking is a compulsion.
+  - Feedback: Explore what the thoughts are like, why checking occurs, how much time it takes, the impact, and relevant diagnostic alternatives.
+- **B.** Consider OCD likely enough to confirm it from checking behavior and distress alone.
+  - Feedback: Intrusive thoughts and checking warrant investigation, but diagnostic features, impairment and alternatives still require assessment.
+- **C.** Classify checking as a compulsion whenever the person experiences worry.
+  - Feedback: Repeated acts can have different functions; understand the specific behavior and context.
 
-<details>
-<summary>Show explanations for each choice</summary>
+### 46. What is an example of clinically useful restraint?
 
-**A (correct):** Explore what the thoughts are like, why checking occurs, how much time it takes, the impact, and relevant diagnostic alternatives.
-
-**B:** Intrusive thoughts and checking may raise OCD as a possibility, but criteria and differential still matter. Don't complete the assessment in your head after the first clue.
-
-**C:** Checking can be practical, habitual, anxiety-related, or compulsive depending on context and function. The action alone doesn't reveal the reason.
-
-</details>
-
-### 54. What is an example of clinically useful restraint?
-
-- **A.** Adding several diagnoses to avoid uncertainty.
+- **A.** Recording several provisional diagnoses to ensure no possible explanation is missed.
+  - Feedback: A longer list does not compensate for missing evidence; use reasoned hypotheses.
 - **B.** Maintaining multiple plausible hypotheses until enough evidence is available. **✓ Correct**
-- **C.** Avoiding the topic entirely.
+  - Feedback: Thoughtful uncertainty helps direct the next question. Keep explanations proportionate to the available evidence rather than manufacturing certainty.
+- **C.** Deferring all clinical questions until a supervisor names a diagnosis.
+  - Feedback: Consultation matters, but useful evidence can still be gathered within one's scope.
 
-<details>
-<summary>Show explanations for each choice</summary>
+## Lesson 7: Understanding substance use disorders
 
-**A:** Adding diagnoses simply to hedge makes the record less accurate and can create consequences for care. A diagnostic collection is not a souvenir shelf.
-
-**B (correct):** Thoughtful uncertainty helps direct the next question. Keep explanations proportionate to the available evidence rather than manufacturing certainty.
-
-**C:** Avoiding diagnostic reasoning altogether is also a problem when treatment and documentation require it. The goal is targeted investigation, not paralysis.
-
-</details>
-
-## Lesson 7
-
-**Understanding substance use disorders**
-
-### 55. A person drinks alcohol some weekends. What can we conclude?
+### 47. A person drinks alcohol some weekends. What can we conclude?
 
 - **A.** Use alone does not establish alcohol use disorder. **✓ Correct**
+  - Feedback: Frequency and quantity matter for discussing health and safety, but diagnosis requires applicable criteria and a broader pattern. Ask what happens and how the person is affected.
 - **B.** Any repeated alcohol use means alcohol use disorder.
+  - Feedback: The DSM does not define all use as a disorder. Assess impaired control, consequences, risk, and other applicable criteria rather than treating a calendar as a diagnosis.
 - **C.** Safety does not matter unless they already have a diagnosis.
+  - Feedback: A person can face immediate risk without meeting disorder criteria. A conversation about safety can be appropriate before, or without, a formal diagnosis.
 
-<details>
-<summary>Show explanations for each choice</summary>
+### 48. Someone drinks heavily every day and has shaken during attempts to stop. What comes first?
 
-**A (correct):** Frequency and quantity matter for discussing health and safety, but diagnosis requires applicable criteria and a broader pattern. Ask what happens and how the person is affected.
+- **A.** Offer a plan to stop alcohol at home and reassess symptoms tomorrow.
+  - Feedback: Alcohol withdrawal can be dangerous; substantial use plus previous shaking calls for medical evaluation.
+- **B.** Complete all diagnostic criteria first, then determine whether medical assessment is needed.
+  - Feedback: Immediate withdrawal risk is a separate safety priority and should not await classification.
+- **C.** Prioritize medical evaluation for potentially dangerous alcohol withdrawal. **✓ Correct**
+  - Feedback: Shaking after reducing heavy alcohol use can signal a potentially serious withdrawal syndrome.
 
-**B:** The DSM does not define all use as a disorder. Assess impaired control, consequences, risk, and other applicable criteria rather than treating a calendar as a diagnosis.
+### 49. Four applicable SUD criteria occur in the same 12-month period. What severity generally applies?
 
-**C:** A person can face immediate risk without meeting disorder criteria. A conversation about safety can be appropriate before, or without, a formal diagnosis.
+- **A.** Mild, if the four features cause relatively little observable disruption.
+  - Feedback: DSM-5 SUD severity generally uses number of applicable criteria, not a subjective impression of disruption.
+- **B.** Severe, if the same four criteria were present throughout the year.
+  - Feedback: The severe band generally begins with six applicable criteria, although clinical risk is a separate assessment.
+- **C.** Moderate, when four applicable criteria occur within a 12-month period. **✓ Correct**
+  - Feedback: Generally, 2–3 is mild, 4–5 moderate, and six or more severe, with substance-specific caveats.
 
-</details>
-
-### 56. An adult develops tolerance while taking an opioid medication exactly as prescribed. What follows?
-
-- **A.** Tolerance proves opioid use disorder.
-- **B.** Tolerance alone does not establish opioid use disorder. **✓ Correct**
-- **C.** They should immediately stop their medication.
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** Tolerance may be physiological adaptation. When opioids are taken solely under appropriate medical supervision, this alone is not counted toward the disorder.
-
-**B (correct):** Assess how the medication is used and whether there is evidence of impaired control or other criteria. Dose adjustments are a medical decision for the prescriber, not a diagnosis by themselves.
-
-**C:** Sudden discontinuation can create risks. Do not direct prescription changes from a therapy session; raise concerns with the prescriber and assess safety.
-
-</details>
-
-### 57. Someone drinks heavily every day and has shaken during attempts to stop. What comes first?
-
-- **A.** Suggest quitting alone tonight.
-- **B.** Complete the full DSM checklist before discussing the risk.
-- **C.** Arrange timely medical evaluation of withdrawal risk. **✓ Correct**
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** Alcohol withdrawal can become life-threatening. Prior shaking is a reason to assess withdrawal risk medically rather than recommending an unsupervised abrupt stop.
-
-**B:** Immediate safety can take priority over diagnostic classification. The checklist is not treatment for potentially serious withdrawal.
-
-**C (correct):** The reported pattern raises concern for potentially dangerous withdrawal. Medical assessment can determine what level of monitoring or treatment is needed before cessation.
-
-</details>
-
-### 58. Four applicable SUD criteria occur in the same 12-month period. What severity generally applies?
-
-- **A.** Mild, because the symptoms may not seem dramatic.
-- **B.** Severe, because four criteria always means an emergency.
-- **C.** Moderate, assuming these are valid criteria for that substance. **✓ Correct**
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** DSM severity counts applicable criteria, not how dramatic an observer thinks the symptoms sound. The usual mild range is two or three.
-
-**B:** Any acute danger can require immediate action, independent of DSM severity. The usual severe threshold is six or more applicable criteria.
-
-**C (correct):** The usual SUD thresholds are 2–3 mild, 4–5 moderate, and 6 or more severe over a 12-month period. Substance-specific exceptions and medical supervision still matter.
-
-</details>
-
-### 59. A teen says cannabis helps with sleep. What is a helpful opening?
+### 50. A teen says cannabis helps with sleep. What is a helpful opening?
 
 - **A.** Ask about sleep, what seems helpful, concerns, and what they want to change. **✓ Correct**
-- **B.** State that cannabis use automatically means cannabis use disorder.
-- **C.** Ignore cannabis because the stated concern is sleep.
+  - Feedback: This respects the teen's account and creates room to discuss developmental concerns, use patterns, sleep, and possible risks without assigning a diagnosis or giving a lecture.
+- **B.** Ask what the teen means by 'helps,' then use the answer to classify cannabis use disorder.
+  - Feedback: Discussion of perceived benefit is useful; the diagnosis requires the broader criteria and assessment.
+- **C.** Address the insomnia first and defer all cannabis questions until sleep improves.
+  - Feedback: Sleep and cannabis use may affect each other; a collaborative conversation can explore both.
 
-<details>
-<summary>Show explanations for each choice</summary>
+### 51. What distinguishes intoxication from substance use disorder?
 
-**A (correct):** This respects the teen's account and creates room to discuss developmental concerns, use patterns, sleep, and possible risks without assigning a diagnosis or giving a lecture.
+- **A.** Intoxication is a substance-related state, and dependence may follow repeated exposure.
+  - Feedback: A current intoxicated state does not establish a substance use disorder or any particular ongoing pattern.
+- **B.** Intoxication is an acute state; SUD concerns a broader pattern. **✓ Correct**
+  - Feedback: A person may have either condition without the other, although both merit relevant safety assessment.
+- **C.** Illicit substances commonly cause intoxication; prescribed ones generally do not.
+  - Feedback: Alcohol and prescribed medications can also cause dangerous intoxication.
 
-**B:** Use can be risky, especially for adolescents, but a disorder requires assessment of applicable criteria. A premature declaration can shut down the conversation.
+### 52. Someone says, “Drinking causes problems with my partner, but I'm not ready to stop.” What helps?
 
-**C:** Substance use and sleep influence each other. Exploring the relationship may help identify risks and possible supports.
-
-</details>
-
-### 60. What distinguishes intoxication from substance use disorder?
-
-- **A.** Being intoxicated always means someone meets SUD criteria.
-- **B.** Intoxication is an acute state; SUD requires assessment of an ongoing pattern. **✓ Correct**
-- **C.** Legal substances cannot cause dangerous intoxication.
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** Intoxication describes a substance-related state. A disorder requires a broader pattern over time; one intoxicated episode can still be dangerous.
-
-**B (correct):** The two questions are different. A person can be intoxicated without meeting SUD criteria or have an SUD without currently being intoxicated. Both may require attention.
-
-**C:** Alcohol and prescribed medications can cause serious impairment or overdose. Legal status is not a safety assessment.
-
-</details>
-
-### 61. Someone says, “Drinking causes problems with my partner, but I'm not ready to stop.” What helps?
-
-- **A.** Refuse to explore goals unless they promise abstinence.
-- **B.** Assume the person will never change.
+- **A.** Ask the person to commit to abstinence before discussing any change goals.
+  - Feedback: Immediate safety can require action, but exploratory support is not contingent on a promise of abstinence.
+- **B.** Document low motivation and postpone further discussion until readiness improves.
+  - Feedback: Ambivalence is useful material for motivational interviewing, not evidence of permanent unwillingness.
 - **C.** Explore their concerns and goals collaboratively, without shame. **✓ Correct**
+  - Feedback: Motivational interviewing uses reflection, curiosity, and autonomy support. Harm reduction can address immediate risks while options are considered; alcohol withdrawal risk still needs attention if changing use.
 
-<details>
-<summary>Show explanations for each choice</summary>
+### 53. A person develops tolerance and withdrawal while taking a prescribed sedative as directed. What matters?
 
-**A:** Demands can close off a useful discussion. Explore values, risks, and choices, while addressing any medical or immediate safety concerns.
+- **A.** Separate expected physiological adaptation from SUD criteria. **✓ Correct**
+  - Feedback: Tolerance or withdrawal under appropriate medical supervision do not by themselves satisfy SUD criteria.
+- **B.** Count tolerance and withdrawal as independent SUD criteria whenever both occur.
+  - Feedback: These may be medication-related physiological effects rather than criteria of a use disorder.
+- **C.** Advise a sedative pause to see if the withdrawal symptoms go away.
+  - Feedback: Abrupt cessation of some sedatives is dangerous; prescriber-guided assessment is important.
 
-**B:** Mixed feelings are common. Motivational interviewing takes ambivalence seriously instead of interpreting it as a permanent inability to change.
+### 54. Which statement about opioid use disorder treatment is accurate?
 
-**C (correct):** Motivational interviewing uses reflection, curiosity, and autonomy support. Harm reduction can address immediate risks while options are considered; alcohol withdrawal risk still needs attention if changing use.
+- **A.** Use counseling instead of medications when the client has strong personal motivation.
+  - Feedback: Motivation can support counseling but does not replace the evidence for medication treatment in OUD.
+- **B.** Buprenorphine or methadone can be part of effective OUD care. **✓ Correct**
+  - Feedback: Evidence-based medication treatment can reduce harms; selection and additional supports are individualized.
+- **C.** Use naloxone for ongoing maintenance treatment and reserve medication for overdoses.
+  - Feedback: Naloxone is emergency overdose reversal, not ongoing OUD maintenance treatment.
 
-</details>
+## Lesson 8: Two case studies
 
-### 62. A person develops tolerance and withdrawal while taking a prescribed sedative as directed. What matters?
+### 55. Maya reports low energy and seeing her friends less often. What can we conclude?
 
-- **A.** Distinguish medically supervised adaptation from other SUD criteria. **✓ Correct**
-- **B.** Treat both changes as proof of sedative use disorder.
-- **C.** Tell them to stop the sedative immediately.
+- **A.** Her changes deserve attention, but the cause and diagnosis are not yet established. **✓ Correct**
+  - Feedback: Low energy and reduced contact may relate to mood, health, sleep, life changes, or other factors.
+- **B.** Major depression is the leading conclusion because both changes often occur in depression.
+  - Feedback: These concerns can occur in depression, but this short report does not establish a depressive episode.
+- **C.** It suggests a social withdrawal pattern, so a personality explanation should lead the interview.
+  - Feedback: A change in social participation is important but does not indicate a persistent personality pattern.
 
-<details>
-<summary>Show explanations for each choice</summary>
+### 56. Eli gets upset with lengthy spoken directions and crowded worksheets. Which approach tests whether task format contributes to the difficulty?
 
-**A (correct):** Tolerance and withdrawal in appropriate medical treatment do not automatically meet SUD criteria. Ask about the broader pattern and coordinate concerns with the prescriber.
+- **A.** Remove the academic demand for several weeks and monitor whether distress stops.
+  - Feedback: Reducing demands may ease stress but does not reveal which part of the task is inaccessible.
+- **B.** Record the behavior as task refusal and ask educators whether it happens frequently.
+  - Feedback: Frequency is useful; labeling motive before assessing understanding is premature.
+- **C.** Compare performance with shorter modeled directions and record what changes. **✓ Correct**
+  - Feedback: A small instructional change can help test whether task demands are contributing.
 
-**B:** These changes may be expected physiological effects. A diagnosis needs other evidence rather than assigning a disorder from adaptation alone.
+### 57. Maya feels worn out and sees friends less often. Which question investigates timing and multiple possible causes?
 
-**C:** Abrupt sedative withdrawal can be dangerous. Medication changes and medical withdrawal care require appropriate medical involvement.
+- **A.** “Did you used to enjoy school or work more than you do now?”
+  - Feedback: This may be relevant history but does not sufficiently examine timing, health, mood, and function.
+- **B.** “Which diagnosis from an online checklist sounds most familiar to you?”
+  - Feedback: A self-description can start a discussion, not replace a comprehensive assessment.
+- **C.** “When did this begin, and what changed in sleep, health, mood, and daily life?” **✓ Correct**
+  - Feedback: A structured open question elicits features that may distinguish depression, sleep and health difficulties, and context.
 
-</details>
+### 58. Which case-note sentence reports time-linked behavior rather than substituting an interpretation?
 
-### 63. Which statement about opioid use disorder treatment is accurate?
+- **A.** The caregiver said the student was disruptive all morning.
+  - Feedback: This repeats an impression without describing a specific event.
+- **B.** At 9:15 a.m., after spoken directions began, the student covered both ears and asked to leave. **✓ Correct**
+  - Feedback: This specifies behavior, context, and time without assuming the student's motive.
+- **C.** The teacher said the student was obviously trying to gain attention.
+  - Feedback: It attributes motive instead of providing observations that could test that interpretation.
 
-- **A.** Counseling must always replace medication.
-- **B.** Medication such as buprenorphine or methadone can be important, with individualized supports. **✓ Correct**
-- **C.** Naloxone is a replacement for ongoing treatment.
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** Medication is standard evidence-based care for opioid use disorder. Counseling may add support, but should not be used to deny or replace indicated medical treatment.
-
-**B (correct):** Treatment may combine medication, behavioral strategies, harm reduction, and support for co-occurring needs. Prescribers and patients determine suitable medical options.
-
-**C:** Naloxone can reverse an overdose and is critical for emergency response. It does not substitute for ongoing treatment of opioid use disorder.
-
-</details>
-
-## Lesson 8
-
-**Two case studies**
-
-### 64. Maya reports low energy and seeing her friends less often. What can we conclude?
-
-- **A.** These concerns are real, but the information is not enough to establish a specific diagnosis. **✓ Correct**
-- **B.** Maya definitely has major depression.
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A (correct):** Maya has described important changes. We still need to ask when they began, what else is happening, and how they affect her life. Those questions come before choosing a disorder.
-
-**B:** Reduced energy and social contact can occur with depression, but can also reflect health problems, sleep loss, stress, circumstances, or personal choice. The vignette lacks enough information to conclude major depression.
-
-</details>
-
-### 65. In Eli’s case, what would be the strongest next step?
-
-- **A.** Remove all academic expectations permanently.
-- **B.** Document ‘defiant’ after the first refusal.
-- **C.** Test whether shorter, modeled directions change access, and document the result. **✓ Correct**
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** Supports and expectations need an individualized, collaborative review, not a permanent change from one episode.
-
-**B:** That jumps from an action to an assumed motive.
-
-**C (correct):** Trying short, modeled directions changes one environmental demand and shows whether Eli can access the task more easily. Comparing the response provides useful evidence about language, learning, attention, or sensory demands instead of simply labeling the behavior 'defiant.'
-
-</details>
-
-### 66. Which follow-up would most improve your understanding of Maya’s report?
-
-- **A.** Ask only whether Maya enjoys Mondays.
-- **B.** Ask Maya to select her diagnosis from an internet quiz.
-- **C.** Ask about the timeline, sleep and health, mood, functioning, and safety. **✓ Correct**
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** Possibly good small talk, but not a substitute for an assessment.
-
-**B:** A self-label or online quiz is not a comprehensive clinical assessment.
-
-**C (correct):** Questions about the timeline, sleep, health, mood, activity, and safety can separate several plausible explanations for reduced energy and social contact. A good follow-up identifies the missing evidence rather than asking Maya to choose a diagnosis.
-
-</details>
-
-### 67. Which part of a case vignette is strongest evidence?
-
-- **A.** The first diagnostic guess a reader has.
-- **B.** A direct quote with clear timing and specific observed behavior. **✓ Correct**
-- **C.** A colorful adjective supplied by an observer.
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** A first diagnostic guess is a hypothesis, not stronger evidence than a person's report or observed behavior. Intuition can start a question; it cannot finish the assessment.
-
-**B (correct):** A quote or clearly sourced observation lets the reader see the evidence rather than just an interpretation. Add timing, setting, and relevant limits.
-
-**C:** Adjectives such as 'manipulative' or 'defiant' are interpretations and may conceal what actually occurred. If the adjective is doing all the work, the note has skipped a step.
-
-</details>
-
-### 68. An educator says a child is “defiant” when reading instructions. What next?
-
-- **A.** Ignore the student's account.
-- **B.** Treat the adjective as a diagnosis.
-- **C.** Check comprehension, task access, setting, and the child's perspective. **✓ Correct**
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** Ignoring the student's account removes the most direct source of information about comprehension and distress. The worksheet cannot testify on the student's behalf.
-
-**B:** 'Defiant' is a description of someone else's interpretation, not a diagnosis. First determine whether the student understood the instructions and could access the task.
-
-**C (correct):** The student's perspective and the task's accessibility help separate skill demands, communication barriers, anxiety, and intentional behavior.
-
-</details>
-
-### 69. A client completes a task more easily when visual cues are provided. What does that suggest?
+### 59. A client completes a task more easily when visual cues are provided. What does that suggest?
 
 - **A.** Visual cues may improve access. Compare task performance with and without that support. **✓ Correct**
-- **B.** All of the client's symptoms have disappeared.
-- **C.** Any earlier diagnosis must have been wrong.
+  - Feedback: Changes in performance can help identify which demands are creating a barrier. The improvement is meaningful, and the support itself may be necessary for the person to demonstrate their skills.
+- **B.** The improvement shows the difficulty was caused entirely by environmental demands.
+  - Feedback: Environmental barriers may matter, but one successful support does not settle the full cause.
+- **C.** The change means the earlier evaluation must have overestimated impairment.
+  - Feedback: Accommodations may reveal capacity while the need for support remains.
 
-<details>
-<summary>Show explanations for each choice</summary>
+### 60. Which approach separates observations, interpretations, and remaining uncertainty in a case discussion?
 
-**A (correct):** Changes in performance can help identify which demands are creating a barrier. The improvement is meaningful, and the support itself may be necessary for the person to demonstrate their skills.
-
-**B:** Doing one task well under supported conditions does not establish that every difficulty has resolved. Functioning can change with the environment and the assistance available.
-
-**C:** An accommodation working well does not automatically invalidate a diagnosis. Glasses helping someone read do not mean they never needed glasses.
-
-</details>
-
-### 70. What makes a short case discussion more useful for choosing the next step?
-
-- **A.** Combine observations and guesses into one general statement.
+- **A.** Synthesize all impressions into a single confident conclusion before asking further questions.
+  - Feedback: This can obscure the difference between observations and assumptions.
 - **B.** Separate what people reported, what was observed, possible explanations, and what is still unknown. **✓ Correct**
-- **C.** Choose a diagnosis first and treat every later detail as confirmation.
+  - Feedback: This preserves the evidence and highlights the questions that could distinguish competing explanations. It keeps the discussion focused on what can be learned next, rather than how confidently someone can name a disorder.
+- **C.** Rank diagnoses first and reinterpret ambiguous findings through the leading diagnosis.
+  - Feedback: That is confirmation bias rather than a transparent comparison of evidence.
 
-<details>
-<summary>Show explanations for each choice</summary>
+### 61. An adult avoids friends after a move. What questions should follow?
 
-**A:** A vague summary makes it difficult to tell what actually happened and what still needs clarification. It hides the very information that should shape the next question.
-
-**B (correct):** This preserves the evidence and highlights the questions that could distinguish competing explanations. It keeps the discussion focused on what can be learned next, rather than how confidently someone can name a disorder.
-
-**C:** That invites confirmation bias. New information needs a chance to challenge the initial hypothesis, or the assessment becomes an exercise in defending an early guess.
-
-</details>
-
-### 71. An adult avoids friends after a move. What questions should follow?
-
-- **A.** Treat being alone as proof of impairment.
+- **A.** Measure how many activities were declined before asking whether the person wants more contact.
+  - Feedback: Activity counts can be informative, but desired connection and circumstances shape significance.
 - **B.** Ask about desired connections, loss, stress, mood, energy, transportation, and duration. **✓ Correct**
-- **C.** Conclude major depressive disorder immediately.
+  - Feedback: A move can alter community, transport, energy, safety, or preferences. Find out whether the person wants more contact and what is preventing it.
+- **C.** Prioritize depressive episode criteria before asking about the recent move.
+  - Feedback: Depression may be relevant, but adjustment, loss, access, preferences, and timing also matter.
 
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** Time alone may be chosen, restorative, or circumstantial. Being by oneself is not automatically an impairment; social needs are not measured with a party-attendance counter.
-
-**B (correct):** A move can alter community, transport, energy, safety, or preferences. Find out whether the person wants more contact and what is preventing it.
-
-**C:** Withdrawal can occur in depression, but avoiding friends after a move is not enough to establish major depression. Ask about mood, other symptoms, duration, and desired connection.
-
-</details>
-
-### 72. What makes a case question useful for supervision?
+### 62. What makes a case question useful for supervision?
 
 - **A.** Naming alternative explanations and the specific evidence needed to distinguish them. **✓ Correct**
-- **B.** Avoiding uncertainty in the case.
-- **C.** Choosing the most dramatic diagnosis.
+  - Feedback: A useful supervision question specifies two or more plausible explanations and the evidence that could separate them. It invites reasoning, not applause.
+- **B.** Choosing a working diagnosis with confidence, even when the reasons are not explicit.
+  - Feedback: A useful supervision question makes uncertainty and needed evidence visible.
+- **C.** Naming the most concerning diagnosis so the supervisor will focus on it first.
+  - Feedback: Risk may need priority, but drama is not a substitute for a differential.
 
-<details>
-<summary>Show explanations for each choice</summary>
+## Lesson 9: How the DSM supports assessment and treatment
 
-**A (correct):** A useful supervision question specifies two or more plausible explanations and the evidence that could separate them. It invites reasoning, not applause.
+### 63. Two explanations could account for the same symptoms. What is a differential diagnosis?
 
-**B:** Avoiding uncertainty hides where supervision could help. Naming the missing information is a professional strength; it gives the next session a purpose.
+- **A.** Listing all plausible explanations, then treating them as equally likely until testing.
+  - Feedback: Listing is a start, but the differential compares patterns, contradictions, and probabilities.
+- **B.** Comparing plausible explanations using criteria, course, and distinguishing evidence. **✓ Correct**
+  - Feedback: A differential needs explicit comparison, not simply multiple labels.
+- **C.** Choosing the most inclusive label to avoid overlooking associated symptoms.
+  - Feedback: A broad label can hide alternatives if it is selected without examining evidence.
+- **D.** Considering developmental history but setting aside medical possibilities until diagnosis.
+  - Feedback: Developmental history is important, but medical, medication, and substance causes may matter too.
 
-**C:** A dramatic label makes for good television and poor differential diagnosis. The strongest possibility is the one supported by evidence, not the most alarming title.
+### 64. A psychiatric condition seems plausible, but a medical explanation has not been assessed. What next?
 
-</details>
-
-## Lesson 9
-
-**How the DSM supports assessment and treatment**
-
-### 73. Two explanations could account for the same symptoms. What is a differential diagnosis?
-
-- **A.** Listing every DSM category in alphabetical order.
-- **B.** Comparing explanations using the history, criteria, and evidence that separates them. **✓ Correct**
-- **C.** Selecting the explanation with the longest name.
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** A differential is focused on plausible explanations and evidence.
-
-**B (correct):** A differential is an evidence-based comparison of plausible causes of the same findings. You identify what supports each possibility, what does not fit, and which additional history or assessment would distinguish them. The goal is not simply a longer list of labels.
-
-**C:** Length and Latin-sounding syllables are not standards of evidence.
-
-</details>
-
-### 74. After completing this course, who may make an independent diagnosis?
-
-- **A.** Anyone who answered all the questions correctly.
-- **B.** Only a professional authorized and competent to do so under applicable rules. **✓ Correct**
-- **C.** Whoever owns the newest edition of the manual.
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** A knowledge check is not a professional credential.
-
-**B (correct):** Completing a learning module demonstrates exposure to concepts, not authorization to diagnose. Independent diagnostic decisions depend on the person's professional role, applicable rules, relevant training, competence, and supervision requirements.
-
-**C:** Having a reference book is not a license, however impressive its weight.
-
-</details>
-
-### 75. A psychiatric condition seems plausible, but a medical explanation has not been assessed. What next?
-
-- **A.** Treat the diagnostic code as proof the medical question is settled.
-- **B.** Assign the psychiatric diagnosis immediately and ignore the concern.
+- **A.** Use the current code provisionally while postponing the medical differential.
+  - Feedback: A code does not resolve relevant unresolved medical explanations.
+- **B.** Choose the psychiatric diagnosis first if symptoms resemble its familiar presentation.
+  - Feedback: Similarity is insufficient when a plausible medical or medication-related cause remains.
 - **C.** Investigate the relevant alternative or coordinate appropriate qualified medical assessment. **✓ Correct**
+  - Feedback: Medical or medication-related problems can sometimes resemble psychiatric presentations or coexist with them. Investigating clinically relevant alternatives, or coordinating appropriate medical assessment, reduces the risk of missing a condition that changes the care plan.
 
-<details>
-<summary>Show explanations for each choice</summary>
+### 65. When is it appropriate to keep a diagnosis tentative?
 
-**A:** Codes classify decisions; they do not resolve unanswered clinical questions.
-
-**B:** A premature conclusion can lead to missed causes and ineffective care.
-
-**C (correct):** Medical or medication-related problems can sometimes resemble psychiatric presentations or coexist with them. Investigating clinically relevant alternatives, or coordinating appropriate medical assessment, reduces the risk of missing a condition that changes the care plan.
-
-</details>
-
-### 76. When should a diagnosis remain tentative?
-
-- **A.** Never. Uncertainty means the assessor is incompetent.
+- **A.** When several competing hypotheses remain relevant, even if the symptoms are distressing. **✓ Correct**
+  - Feedback: Unresolved, plausible alternatives can justify a tentative impression while distinguishing evidence is gathered.
 - **B.** When important criteria or alternative explanations have not yet been evaluated. **✓ Correct**
-- **C.** Whenever a symptom is mild, even if all relevant evidence is available.
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** Uncertainty is sometimes the correct conclusion. Pretending a diagnosis has been established when important criteria remain unknown is less responsible than keeping the possibilities open.
-
-**B (correct):** A tentative impression makes sense when missing information might materially change the conclusion. Focus the next assessment on what could distinguish the possibilities instead of treating an early hypothesis as final.
-
-**C:** Mild symptoms do not automatically imply that a diagnosis must stay tentative. The key issue is whether applicable criteria and alternatives have been evaluated, not whether the presentation appears dramatic.
-
-</details>
-
-### 77. Which part of a handoff is important beyond diagnosis?
-
-- **A.** Presenting problems, function, goals, strengths, safety, and treatment response. **✓ Correct**
-- **B.** Only the longest possible diagnosis name.
-- **C.** Only a code from last year.
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A (correct):** A diagnosis helps with shared language, but a safe handoff also needs functional needs, preferences, treatment response, risks, and goals.
-
-**B:** A longer diagnosis name is not a richer handoff. Word length does not communicate a client's safety plan, strengths, or previous treatment response.
-
-**C:** A year-old code may be outdated or poorly supported. It cannot tell the next therapist what makes sessions accessible or what the person hopes will change.
-
-</details>
-
-### 78. An adult's previous diagnosis no longer seems to explain their current difficulties. What should happen?
-
-- **A.** Continue to use the previous diagnosis without reviewing new information.
-- **B.** Ignore the previous diagnosis because the person has changed.
-- **C.** Review the previous assessment, current presentation, and possible alternative explanations. **✓ Correct**
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** Earlier conclusions can be valuable history, but they should not be treated as permanently immune to new evidence. Changes in symptoms or circumstances may call for reassessment.
-
-**B:** A prior diagnosis may still matter. Review the history and earlier treatment response alongside current findings instead of discarding useful information.
-
-**C (correct):** This respects both past evidence and new information. An accurate diagnosis is an evidence-informed conclusion that can be updated, not a label that must remain unchanged forever.
-
-</details>
-
-### 79. What does differential diagnosis require?
-
-- **A.** Evidence distinguishing among reasonable explanations. **✓ Correct**
-- **B.** Listing every possible label without considering likelihood.
-- **C.** The most familiar diagnosis.
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A (correct):** A differential compares plausible explanations using actual evidence, including data that do not fit each possibility. It narrows questions rather than multiplying labels.
-
-**B:** Listing every diagnosis creates an impressive-looking paragraph but not a useful comparison. The DSM's table of contents has already done the listing for you.
-
-**C:** Familiarity can bias an assessor toward a favorite diagnosis. Ask what the current evidence supports, especially when an alternative explains the symptoms better.
-
-</details>
-
-### 80. What limits a good assessment?
-
-- **A.** Scope of practice, available evidence, supervision, and the person's context. **✓ Correct**
-- **B.** Only the number of pages in the DSM.
-- **C.** Whether the label sounds technical enough.
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A (correct):** Qualifications and evidence matter. Scope, evidence, supervision, and the person's context determine what can responsibly be concluded. Not every role can make independent diagnoses.
-
-**B:** The number of DSM pages has no relationship to whether a particular assessment is valid. A heavy manual does not confer expertise through osmosis. Qualifications and evidence matter.
-
-**C:** Technical-sounding language can conceal weak reasoning. A short, well-supported explanation is better than an impressive but unjustified label. Qualifications and evidence matter.
-
-</details>
-
-### 81. What makes diagnosis useful but incomplete?
-
-- **A.** It predicts every symptom and preference.
-- **B.** It is irrelevant to clinical decisions.
-- **C.** It helps coordinate care, while formulation and goals remain individualized. **✓ Correct**
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** A diagnosis may identify a pattern, but it does not predict every preference or experience. People sharing the label are not duplicates wearing different shirts.
-
-**B:** Ignoring diagnosis entirely can weaken referral, differential assessment, and required coding. Criticism should improve how diagnostic tools are used, not require throwing them away.
-
-**C (correct):** Diagnostic categories enable communication and research, while an individualized formulation connects symptoms to this person's circumstances, goals, and care.
-
-</details>
-
-## Lesson 10
-
-**Diagnosis, identity & self-knowledge**
-
-### 82. Someone says, “ADHD explains so much about how I move through the world, although I have not had a formal evaluation.” What is a thoughtful response?
-
-- **A.** “Your experiences and self-understanding matter. We can explore them without treating a self-description as a confirmed clinical diagnosis.” **✓ Correct**
-- **B.** “If you identify with ADHD, all diagnostic questions are settled.”
-- **C.** “Without a diagnostic report, you cannot know anything meaningful about how your attention works.”
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A (correct):** The person's account can be accurate and important even before a formal evaluation. A therapist can respect patterns, support needs, and identity language while honestly distinguishing self-description from a DSM diagnosis that requires assessment.
-
-**B:** Respect for personal identity does not mean bypassing differential diagnosis when clinical decisions depend on it.
-
-**C:** People can observe patterns, understand their needs, and use helpful strategies without prior professional permission.
-
-</details>
-
-### 83. What is a fair limitation of a diagnosis?
-
-- **A.** It is never useful if someone already understands their own experiences.
-- **B.** It is a clinical classification that cannot capture someone's entire context or identity. **✓ Correct**
-- **C.** It tells the therapist exactly which treatment works for every person with the label.
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** Self-knowledge and diagnosis serve different purposes. Formal diagnosis may still help with care, communication, and records.
-
-**B (correct):** Diagnostic categories intentionally group people with overlapping features; they cannot contain every person's meaning, culture, environmental demands, or strengths. They are useful for communication and care, but treating the label as a full biography would erase important clinical information.
-
-**C:** Treatment planning also needs context, preferences, clinical formulation, and progress monitoring.
-
-</details>
-
-### 84. Why might a therapist or assessor still need an accurate diagnosis in routine practice?
-
-- **A.** To communicate a clinical formulation efficiently and support appropriate care and documentation, including required coding when applicable. **✓ Correct**
-- **B.** Because every person seeking advice must receive a permanent DSM label.
-- **C.** To replace the client's account with a clinical label.
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A (correct):** An accurate diagnosis can guide differential assessment, communicate with other care providers, support treatment planning, and meet documentation or coding requirements. It still requires evidence and may need revision; neither the code nor the label replaces an individualized understanding.
-
-**B:** Not every encounter supports or requires a definitive disorder diagnosis; use appropriately supported documentation and coding.
-
-**C:** A diagnosis must not erase the person's experiences or preferences.
-
-</details>
-
-### 85. A person identifies as neurodivergent without a formal evaluation. What can you respect now?
-
-- **A.** Nothing until they submit medical proof.
-- **B.** A confirmed disorder diagnosis without assessment.
-- **C.** Their observed needs, self-understanding, preferences, and goals. **✓ Correct**
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** Medical documentation may be required for a particular service or administrative decision, but it is not permission to know your own experience. Self-knowledge predates the chart.
-
-**B:** Respecting a person's neurodivergent identity does not mean documenting an unverified DSM disorder as confirmed. Ask what they mean and what support they want.
-
-**C (correct):** People can notice their needs, choose useful descriptions, and seek supportive communities before evaluation. Formal diagnostic conclusions are a distinct process.
-
-</details>
-
-### 86. How can autism function as part of identity?
+  - Feedback: A tentative impression makes sense when missing information might materially change the conclusion. Focus the next assessment on what could distinguish the possibilities instead of treating an early hypothesis as final.
+- **C.** When the current presentation is mild, regardless of how much evidence has already been gathered.
+  - Feedback: Severity and diagnostic certainty are separate questions; mild presentations can still meet criteria.
+
+### 66. Which part of a handoff is important beyond diagnosis?
+
+- **A.** Client goals, relevant risks, support needs, strengths, and treatment response. **✓ Correct**
+  - Feedback: A useful handoff includes relevant individualized information beyond a diagnostic code.
+- **B.** A detailed diagnostic list with every rule-out condition from prior sessions.
+  - Feedback: The handoff should be relevant and usable rather than maximizing the number of labels.
+- **C.** The latest coding history even if the clinical plan and adaptations are omitted.
+  - Feedback: Codes cannot tell a new clinician what worked or what remains difficult.
+- **D.** Medication history and recent attendance without the client's expressed priorities.
+  - Feedback: Both may be useful, but a safe individualized handoff also describes goals, functioning, and strengths.
+
+### 67. An adult's previous diagnosis no longer seems to explain their current difficulties. What should happen?
+
+- **A.** Keep the original label when no clinician has documented an explicit rule-out.
+  - Feedback: Past findings can inform care, but new evidence may warrant reassessment rather than indefinite reuse.
+- **B.** Discard the past assessment and begin again, since new symptoms invalidate it.
+  - Feedback: Past information may remain relevant and should be weighed against current findings.
+- **C.** Review the history, current pattern, and competing explanations. **✓ Correct**
+  - Feedback: Changes warrant reassessment, not automatic retention or rejection of an earlier diagnosis.
+
+### 68. An assessor has only a brief visit, inconsistent reports, and no developmental history. Why can't the assessor yet draw a well-supported conclusion?
+
+- **A.** The available evidence and whether the assessor has the expertise to interpret it. **✓ Correct**
+  - Feedback: Missing corroborating history and limited observations restrict justified conclusions.
+- **B.** The number of criteria listed in the diagnostic manual being consulted.
+  - Feedback: Criteria matter, but manual length does not repair missing individual evidence.
+- **C.** The precision of the clinical vocabulary used to describe the interview.
+  - Feedback: Precise words can clarify but cannot make absent evidence appear.
+- **D.** The absence of a standardized measure, even when a full interview is otherwise available.
+  - Feedback: Measures can add evidence, but their absence is not universally decisive; the question is adequacy of the entire assessment.
+
+## Lesson 10: Diagnosis, identity & self-knowledge
+
+### 69. Someone says, “ADHD explains so much about how I move through the world, although I have not had a formal evaluation.” What is a thoughtful response?
+
+- **A.** “Your self-understanding matters; let's explore it without assuming a diagnosis.” **✓ Correct**
+  - Feedback: Respect the person's experience while separating their identification with a term from criteria-based assessment.
+- **B.** “Your identification with ADHD is sufficient to make a clinical diagnosis.”
+  - Feedback: Self-description matters but does not replace clinical assessment for decisions requiring diagnosis.
+- **C.** “We should avoid talking about attention until a specialist evaluation is complete.”
+  - Feedback: Exploring experiences and accommodations need not depend on already having a diagnostic label.
+
+### 70. Why might a therapist or assessor still need an accurate diagnosis in routine practice?
+
+- **A.** To support shared clinical communication and applicable care or coding decisions. **✓ Correct**
+  - Feedback: Accurate diagnostic information can facilitate care, but individual formulation is still needed.
+- **B.** To assign a durable classification before developing the person's own goals.
+  - Feedback: Goals and support needs should be developed collaboratively; labels need not be permanent.
+- **C.** To give clinicians a more consistent account than the client's own perspective.
+  - Feedback: The client's report remains essential evidence, not something a code replaces.
+
+### 71. How can autism function as part of identity?
 
 - **A.** It can shape self-understanding and community for some autistic people. **✓ Correct**
-- **B.** It must define every person's identity.
-- **C.** Identity language is determined solely by the DSM.
+  - Feedback: Autistic identity can be central, peripheral, or something a person relates to differently. Their own language and goals take priority over an assumed narrative.
+- **B.** It is best treated as an identity category for all people with an autism diagnosis.
+  - Feedback: Identity and language preferences vary among autistic people.
+- **C.** It is primarily determined by the terminology used in clinical documentation.
+  - Feedback: A chart's wording does not dictate a person's understanding of autism or preferred identity language.
 
-<details>
-<summary>Show explanations for each choice</summary>
+### 72. Someone with DID prefers the term “parts.” What is a sensible response?
 
-**A (correct):** Autistic identity can be central, peripheral, or something a person relates to differently. Their own language and goals take priority over an assumed narrative.
-
-**B:** Autism does not occupy the same place in every autistic person's identity. Assuming it must define everybody is just another stereotype, even when intended positively.
-
-**C:** The DSM is a classification system, not a committee assigning everyone's preferred self-description. Ask what language the person finds accurate and respectful.
-
-</details>
-
-### 87. Someone with DID prefers the term “parts.” What is a sensible response?
-
-- **A.** Insist on a different word because the chart uses a diagnostic code.
-- **B.** Assume every person with DID prefers the same terminology.
+- **A.** Use the technical vocabulary in the chart rather than discussing the client's wording.
+  - Feedback: Respectful clinical language can coexist with accurate documentation.
+- **B.** Treat 'parts' as proof that the person experiences a specific type of identity state.
+  - Feedback: Terms are not interchangeable with formal assessment findings; ask what the person means.
 - **C.** Ask what the term means to them and use respectful, clinically accurate language. **✓ Correct**
+  - Feedback: Identity words should not be imposed. Ask how the person uses 'parts' and what experiences they are describing. Respectful terminology and careful dissociative assessment can coexist.
 
-<details>
-<summary>Show explanations for each choice</summary>
+### 73. A risk of diagnostic labels is that…
 
-**A:** A chart code does not give a therapist ownership of someone's self-description. Clarify the meaning while keeping clinical documentation accurate. Identity words should not be imposed.
+- **A.** Labels usually cause more harm than benefit when used in psychotherapy.
+  - Feedback: Categories can aid coordination and research, though uncritical use can be harmful.
+- **B.** Diagnostic labels tend to replace the need for context once criteria are confirmed.
+  - Feedback: Even a supported diagnosis does not remove the need to assess the person's context and goals.
+- **C.** They may become stereotypes and hide individual context. **✓ Correct**
+  - Feedback: Labels can oversimplify when treated as explanations of an entire person.
 
-**B:** People with DID differ in how they describe internal experience. Treating one community term as universal erases individual meaning. The question asks us to respect that difference. Identity words should not be imposed.
+## Lesson 11: Disability, functioning & access
 
-**C (correct):** Identity words should not be imposed. Ask how the person uses 'parts' and what experiences they are describing. Respectful terminology and careful dissociative assessment can coexist.
-
-</details>
-
-### 88. A diagnosis can be useful because it…
-
-- **A.** Automatically selects the same treatment for everyone.
-- **B.** Supports communication, research-informed care, documentation, and sometimes access to services. **✓ Correct**
-- **C.** Explains the person's entire life.
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** A label cannot choose a treatment without considering goals, history, co-occurring problems, circumstances, and preference. There is no 'insert diagnosis, dispense identical therapy' machine.
-
-**B (correct):** Diagnosis provides a shared reference for treatment, evidence, referral, and documentation. It remains a tool rather than a complete explanation.
-
-**C:** No diagnostic category captures the person's whole life, relationships, values, or coping strategies. That richer understanding comes from listening and formulation.
-
-</details>
-
-### 89. A risk of diagnostic labels is that…
-
-- **A.** They always make treatment worse.
-- **B.** They remove all need for evidence.
-- **C.** They can become stereotypes or obscure context when used uncritically. **✓ Correct**
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** 'Always worse' ignores the ways accurate diagnosis can improve explanation, access, treatment selection, and coordination. Balanced criticism requires both benefits and costs.
-
-**B:** A label does not erase the need for evidence. A diagnostic conclusion still needs supporting evidence. Certainty by naming is still just certainty by naming.
-
-**C (correct):** Labels can guide care but can also obscure culture, environment, strengths, or individual variation when used carelessly. Reflect on what the label leaves out.
-
-</details>
-
-### 90. Which statement balances identity and diagnostic assessment?
-
-- **A.** “Identifying with a term always confirms the DSM criteria.”
-- **B.** “Your self-description matters; we'll also review the relevant clinical evidence for decisions that require diagnosis.” **✓ Correct**
-- **C.** “No diagnosis means no self-knowledge.”
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** Personal identification may be meaningful without satisfying specific criteria. Formal diagnosis asks a different question that requires appropriate evidence. Respect and accuracy can coexist.
-
-**B (correct):** Respect and accuracy can coexist. Respect for identity and accuracy about assessment are complementary. A person can describe their experience before formal evaluation and still choose to seek it.
-
-**C:** A missing report does not cancel someone's ability to notice sensory overload, attention patterns, or what helps. Self-knowledge is not an insurance benefit awaiting approval. Respect and accuracy can coexist.
-
-</details>
-
-## Lesson 11
-
-**Disability, functioning & access**
-
-### 91. An adult with a DID diagnosis reports greater internal cooperation, but continues to experience serious gaps in everyday memory. Which conclusion is supported?
+### 74. An adult with a DID diagnosis reports greater internal cooperation, but continues to experience serious gaps in everyday memory. Which conclusion is supported?
 
 - **A.** Describe improvements and remaining limitations separately, including required supports and daily-life impact. **✓ Correct**
-- **B.** The person's own words for their internal experience should be corrected to fit the therapist's preferred vocabulary.
-- **C.** Better internal cooperation proves that disability has ended.
+  - Feedback: Improvement in internal cooperation and continued memory impairment can both be true. Functional assessment looks separately at recall, continuity of daily activities, independence, safety, and the supports required; progress in one domain does not cancel limitations in another.
+- **B.** Prioritize the client's preferred terminology because memory problems may reflect communication style.
+  - Feedback: Respect preferences but document functional memory limitations and supports separately.
+- **C.** Assume improved cooperation indicates better daily independence until a new impairment is shown.
+  - Feedback: Improvement in one area does not establish restored memory or functioning in others.
 
-<details>
-<summary>Show explanations for each choice</summary>
+### 75. An autistic student succeeds with written directions, predictable routines, and a quiet space. Which interpretation reflects how access and functioning interact?
 
-**A (correct):** Improvement in internal cooperation and continued memory impairment can both be true. Functional assessment looks separately at recall, continuity of daily activities, independence, safety, and the supports required; progress in one domain does not cancel limitations in another.
+- **A.** Use the same supports for autistic students who share this diagnosis.
+  - Feedback: Supports should be tailored to the particular student and setting.
+- **B.** Conclude the student has no disability because classroom performance improved.
+  - Feedback: Successful accommodations may reduce barriers without eliminating the underlying difficulty.
+- **C.** Describe the student's abilities, access barriers, supports, and identity preferences. **✓ Correct**
+  - Feedback: This respects autistic identity while recording individual functioning and what makes participation possible.
 
-**B:** Ask what terms the person uses, keep clinical boundaries clear, and avoid imposing identity terminology.
+### 76. In many jurisdictions, a worker with memory limitations requests written instructions. What is a reasonable documentation focus, subject to local law and agency policy?
 
-**C:** Improvement in one area does not establish restored functioning in memory or other domains.
+- **A.** The full diagnostic record to establish that the worker's condition is sufficiently serious.
+  - Feedback: Documentation may need relevant limitations and accommodation rationale, not necessarily a complete clinical history.
+- **B.** The specific memory-related barrier and why written instructions may help. **✓ Correct**
+  - Feedback: The scope of documentation depends on applicable law, employer process, role, and consent.
+- **C.** The diagnostic label as sufficient proof that any requested accommodation is required.
+  - Feedback: A code does not settle which accommodation is appropriate or legally required.
 
-</details>
+### 77. If accommodations improve performance, what does that mean?
 
-### 92. An autistic student succeeds at school because of written directions, predictable routines, and quiet space. What is the strongest interpretation?
-
-- **A.** The same accommodations should be applied to every autistic person.
-- **B.** Success proves they never needed those supports.
-- **C.** Describe the person's skills and the supports that make participation possible, without assuming the diagnosis defines their identity. **✓ Correct**
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** Needs differ substantially across people and environments, even when they share a diagnosis.
-
-**B:** Effective accommodations can create access; success with them does not show they were unnecessary.
-
-**C (correct):** Written directions, quiet space, and predictable routines may be why the student can demonstrate their skills. Effective support does not make access needs imaginary, and the student's preferred identity language remains a separate question from their functioning.
-
-</details>
-
-### 93. A worker asks for written instructions due to significant memory difficulty. Which statement best reflects workplace accommodation guidance?
-
-- **A.** Their employer always needs a specific DSM disorder name before discussing support.
-- **B.** The focus should be on the functional limitation and an effective accommodation; documentation requirements depend on the circumstances. **✓ Correct**
-- **C.** A diagnosis alone proves any requested accommodation must be granted.
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** Depending on circumstances, an employer may ask for reasonable documentation when disability or need is not obvious, but a particular DSM label is not automatically required.
-
-**B (correct):** Accommodation decisions consider the functional limitation and whether a change will address a relevant barrier. Depending on the circumstances, appropriate documentation may be requested, but a particular DSM label is not automatically needed for every workplace adjustment.
-
-**C:** Accommodation considers the person, limitations, job duties, and applicable law; a diagnosis does not settle each question.
-
-</details>
-
-### 94. If accommodations improve performance, what does that mean?
-
-- **A.** The original limitation must have been imaginary.
-- **B.** All evaluations should stop.
+- **A.** That the previous assessment overstated limitations because support removes the symptoms.
+  - Feedback: An accommodation can change functional impact without negating the underlying difficulty.
+- **B.** That monitoring can end once tasks are completed in the supported setting.
+  - Feedback: Monitoring may still need to address effort, generalization, and needs elsewhere.
 - **C.** Supports may reduce barriers; the underlying limitation may still exist. **✓ Correct**
+  - Feedback: An effective accommodation often makes participation possible; success with support does not retroactively prove the barrier imaginary.
 
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** The fact that a person succeeds with written directions shows the support may be effective. It does not show the limitation never existed; the support may be precisely why they succeed.
-
-**B:** Evaluations do not automatically stop because a support helps. Assess what still requires support and what functioning looks like under different conditions.
-
-**C (correct):** An effective accommodation often makes participation possible; success with support does not retroactively prove the barrier imaginary.
-
-</details>
-
-### 95. Two people share a diagnosis. Must their disability be identical?
-
-- **A.** Yes, the same diagnosis means the same limitations.
-- **B.** Only the diagnostic code matters.
-- **C.** No; domains, environments, demands, and supports differ. **✓ Correct**
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** Two people can have the same diagnostic category and dramatically different limitations, adaptations, and priorities. The code does not supply an individualized functioning report.
-
-**B:** Codes are useful for classification and reporting but say too little about memory, communication, stamina, or independence on their own. They cannot stand in for functional assessment.
-
-**C (correct):** Disability concerns specific functioning and participation, shaped by environments and supports. Shared diagnosis is not identical disability.
-
-</details>
-
-### 96. A person has serious memory trouble but completes a short appointment well. What follows?
+### 78. A person has serious memory trouble but completes a short appointment well. What follows?
 
 - **A.** The appointment alone may not represent daily functional capacity. **✓ Correct**
-- **B.** No further history is needed.
-- **C.** Their memory must be normal.
+  - Feedback: A short, structured appointment may be easier than navigating an unscripted day. Ask about memory in real settings, strategies, consistency, and support.
+- **B.** The structured appointment provides sufficient evidence to discount other reports.
+  - Feedback: One observation in controlled conditions cannot stand in for longitudinal or ecologically valid functioning evidence.
+- **C.** Any memory problem reported outside the appointment should be considered self-perception.
+  - Feedback: Reported difficulties require contextual assessment; they cannot be dismissed by a brief observation.
 
-<details>
-<summary>Show explanations for each choice</summary>
+### 79. What matters when exploring school access?
 
-**A (correct):** A short, structured appointment may be easier than navigating an unscripted day. Ask about memory in real settings, strategies, consistency, and support.
-
-**B:** A brief observation is one data point, not a complete longitudinal history. It cannot replace examples of missed tasks, compensatory supports, or safety concerns.
-
-**C:** Performing well for half an hour does not disprove significant memory limitations elsewhere. The person may be relying on notes, routines, assistance, or a highly structured interaction.
-
-</details>
-
-### 97. What matters when exploring school access?
-
-- **A.** Only whether the child obeyed immediately.
+- **A.** Compliance during lessons and whether the student completes instructions without prompting.
+  - Feedback: These are observations, but access also depends on understanding, sensory load, and supports.
 - **B.** Task comprehension, sensory environment, instruction format, learning needs, and supports. **✓ Correct**
-- **C.** Only grades.
+  - Feedback: Functional access requires context. Academic access involves comprehension, learning demands, sensory factors, instruction format, and supports. Ask what helps the student succeed.
+- **C.** Grades across courses, with minimal attention to how the student achieved them.
+  - Feedback: Grades may reflect substantial scaffolding or effort and do not establish access on their own.
 
-<details>
-<summary>Show explanations for each choice</summary>
+### 80. What is a useful functional follow-up?
 
-**A:** Immediate obedience is not a measure of whether directions were understood. A child can be working hard while looking 'noncompliant' to a frustrated observer. Functional access requires context.
+- **A.** “Can you complete the activity once if I show you how to do it?”
+  - Feedback: One supported success does not establish reliability, independence, or sustainable effort.
+- **B.** “What changes with support, and what effort does it require?” **✓ Correct**
+  - Feedback: A functional interview compares participation, independence, consistency, and cost of effort.
+- **C.** “Would the diagnostic category predict how much help this task will require?”
+  - Feedback: A label alone cannot specify the supports, settings, or effort involved in a task.
 
-**B (correct):** Functional access requires context. Academic access involves comprehension, learning demands, sensory factors, instruction format, and supports. Ask what helps the student succeed.
-
-**C:** Grades do not reveal how much help, exhaustion, compensation, or inaccessible instruction lies behind performance. A passing mark is not an access audit. Functional access requires context.
-
-</details>
-
-### 98. What might workplace documentation focus on?
-
-- **A.** Relevant limitations and the reason a requested accommodation could help. **✓ Correct**
-- **B.** Always a specific DSM label for every request.
-- **C.** A full, unnecessary disclosure of private history.
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A (correct):** Depending on the context, documentation may appropriately describe the functional limitation and need for accommodation. Privacy and legal requirements matter.
-
-**B:** Not every accommodation request requires a specific DSM label. Applicable procedures may call for limited documentation of disability and need, not a complete diagnostic autobiography.
-
-**C:** Demanding unnecessary private history can expose sensitive information without improving the accommodation decision. Relevance is the standard, not maximum disclosure.
-
-</details>
-
-### 99. What is a useful functional follow-up?
-
-- **A.** “Can you do it once? Then you have no disability.”
-- **B.** “What is possible with support, without support, and at what cost or effort?” **✓ Correct**
-- **C.** “Does this diagnosis tell us everything?”
-
-<details>
-<summary>Show explanations for each choice</summary>
-
-**A:** Doing something once in ideal conditions says little about doing it reliably, safely, or independently. Nobody measures a whole week by its easiest ten minutes. Participation and effort both matter.
-
-**B (correct):** Participation and effort both matter. Comparing performance with and without support, across settings and over time, clarifies barriers and actual participation. Effort matters as well as outcomes.
-
-**C:** A diagnosis can be relevant, but it does not tell you which tasks are difficult or how much support is needed. That must be asked and assessed separately. Participation and effort both matter.
-
-</details>
+## Lesson undefined: Key takeaways
 
