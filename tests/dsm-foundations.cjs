@@ -17,8 +17,8 @@ assert.doesNotMatch(html,/<[^>]+class="course-color-key"/,'noninteractive color 
 assert.match(html,/class="safety-note"/,'safety callouts remain distinct');
 assert.match(html,/Follow your supervisor’s instructions, your agency’s documentation policies/);
 assert.match(html,/<details class="audience-details" id="audience">[\s\S]*?<summary>Who this course is for/);
-assert.ok(html.indexOf('id="documentation-guide"')>html.indexOf('id="lesson-3"'));
-assert.ok(html.indexOf('id="documentation-guide"')<html.indexOf('id="lesson-4"'));
+assert.ok(html.indexOf('id="documentation-guide"')>html.indexOf('id="lesson-11"'),'documentation appendix follows the lessons');
+assert.ok(html.indexOf('id="documentation-guide"')<html.indexOf('id="finish"'),'documentation appendix remains accessible before course conclusion');
 for(const group of ['Anyone curious about diagnosis','Clients, families, and advocates','Students, supervised trainees','Support, peer, school, and case-management staff'])assert.ok(html.includes(group));
 assert.match(html,/(?:Alcohol withdrawal|Withdrawal from heavy alcohol use) can be life-threatening/);
 assert.match(html,/tolerance and withdrawal are not counted as SUD criteria/);
