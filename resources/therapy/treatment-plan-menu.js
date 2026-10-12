@@ -20,6 +20,9 @@ function drawFamily(){
     const label=node('label',undefined,'check');
     const box=node('input');box.type='checkbox';box.checked=selected.has(t.id);box.value=t.id;
     label.append(box,node('span',t.label));card.append(label);
+    const preview=node('div',undefined,'goal-preview');
+    preview.append(node('span','Desired outcome','goal-caption'),node('p',t.goal),node('span','How to notice change','goal-caption'),node('p',t.measure));
+    card.append(preview);
     const dl=node('dl');
     targetFields.forEach(([key,title])=>dl.append(node('dt',title),node('dd',t[key])));card.append(dl);
     box.addEventListener('change',()=>{
@@ -61,7 +64,19 @@ function planText(){
   lines.push('Clinician signature / date: [Complete in approved chart]','Client / representative attestation: [Document per practice policy]');
   return lines.join('\n');
 }
-function refresh(){byId('output').textContent=planText();byId('feedback').textContent='';}
+function reviewDraft(){
+  const host=byId('readiness');
+  if(!selected.size){host.textContent='No goals selected yet. Choose one or more targets to begin a draft.';return;}
+  const core=['formulation','priorities','service','review','participation'];
+  const missing=core.filter(id=>!byId(id).value.trim()).map(id=>fieldLabels[fieldIds.indexOf(id)]);
+  const prompts=[...selected.values()].flatMap(t=>targetFields.flatMap(([key])=>t[key].match(/\[[^\]]+\]/g)||[]));
+  const parts=[selected.size+' selected goal'+(selected.size===1?'':'s')+'.'];
+  if(missing.length)parts.push('Complete core sections: '+missing.join(', ')+'.');
+  if(prompts.length)parts.push('Replace '+prompts.length+' bracketed target prompt'+(prompts.length===1?'':'s')+'.');
+  if(!missing.length&&!prompts.length)parts.push('Core fields and target prompts are filled; confirm clinical fit, review schedule, and local requirements.');
+  host.textContent=parts.join(' ');
+}
+function refresh(){byId('output').textContent=planText();byId('feedback').textContent='';reviewDraft();}
 function preparationMessage(){return /\[[^\]]+\]/.test(planText())?'Draft copied. Replace bracketed prompts, confirm the targets with the client, and complete chart attestation.':'Draft copied. Review clinical fit and complete chart attestation.';}
 async function init(){
   try{
@@ -76,6 +91,14 @@ async function init(){
     if(families.some(f=>f.id===requested))select.value=requested;
     byId('scope').textContent=families.length+' diagnosis families and presentations · '+families.reduce((n,f)=>n+f.targets.length,0)+' adaptable targets';
     select.addEventListener('change',()=>{drawFamily();const url=new URL(location.href);url.searchParams.set('diagnosis',select.value);history.replaceState(null,'',url);});
+    document.querySelectorAll('[data-goal-view]').forEach(button=>button.addEventListener('click',()=>{
+      const view=button.dataset.goalView;
+      byId('family').dataset.view=view;
+      document.querySelectorAll('[data-goal-view]').forEach(choice=>choice.setAttribute('aria-pressed',String(choice===button)));
+      byId('view-help').textContent=view==='goals'
+        ?'Start with what the person wants to gain, protect, or change. Switch to clinical details for the need, objective, intervention, and review measure.'
+        :'Review the functional need, measurable objective, planned intervention, and progress measure. Select only targets that match the person’s priorities.';
+    }));
     fieldIds.forEach(id=>byId(id).addEventListener('input',refresh));
     byId('copy').addEventListener('click',async()=>{
       try{await navigator.clipboard.writeText(planText());byId('feedback').textContent=preparationMessage();}
