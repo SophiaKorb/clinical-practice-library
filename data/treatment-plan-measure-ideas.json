@@ -1,0 +1,99 @@
+{
+  "version": "2026-10-12",
+  "note": "Illustrative examples, not thresholds, diagnoses, or validated scales unless identified as such. Confirm feasibility, accessibility and source permissions.",
+  "measures": [
+    {
+      "id": "participation",
+      "area": "Participation",
+      "name": "Participation frequency",
+      "track": "Days or opportunities spent in a personally meaningful activity with appropriate supports.",
+      "example": "For discussion: from one to three chosen activities each week, based on baseline."
+    },
+    {
+      "id": "meaning",
+      "area": "Participation",
+      "name": "Personal meaning rating",
+      "track": "Use an individual, anchored rating for meaning or satisfaction after an activity.",
+      "example": "For discussion: identify two activities the person describes as meaningful."
+    },
+    {
+      "id": "initiation",
+      "area": "Organization",
+      "name": "Time to start a chosen task",
+      "track": "Minutes from an agreed start cue to the first concrete step; note useful supports.",
+      "example": "For discussion: begin within ten minutes in four of five opportunities."
+    },
+    {
+      "id": "return",
+      "area": "Organization",
+      "name": "Restart or reschedule",
+      "track": "Proportion of interruptions followed by a supported restart or intentional reschedule.",
+      "example": "For discussion: use the agreed cue in three of four interruptions."
+    },
+    {
+      "id": "choice",
+      "area": "Communication",
+      "name": "Choices, requests and refusals",
+      "track": "Count genuine opportunities to communicate a preference, request or refusal, and whether it is respected.",
+      "example": "For discussion: communicate a choice with preferred support in four of five opportunities."
+    },
+    {
+      "id": "support",
+      "area": "Communication",
+      "name": "Support needed for participation",
+      "track": "Describe accommodations that enable chosen participation and whether they remain effective.",
+      "example": "For discussion: use a preferred visual cue in three selected routines."
+    },
+    {
+      "id": "repair",
+      "area": "Relationships",
+      "name": "Request, boundary or repair attempt",
+      "track": "Frequency of a directly communicated need, boundary or collaborative repair.",
+      "example": "For discussion: make one chosen repair attempt in three of four suitable situations."
+    },
+    {
+      "id": "recovery",
+      "area": "Regulation",
+      "name": "Use of regulation supports",
+      "track": "Proportion of early-warning opportunities when a preferred rest, break or support was accessible and useful.",
+      "example": "For discussion: use agreed support in four of five observed opportunities."
+    },
+    {
+      "id": "routines",
+      "area": "Health and routines",
+      "name": "Routine stability and functioning",
+      "track": "Track feasible routines and meaningful daytime functioning, not sleep timing alone.",
+      "example": "For discussion: try an agreed routine on four chosen days per week."
+    },
+    {
+      "id": "access",
+      "area": "Participation",
+      "name": "Access to roles and settings",
+      "track": "Chosen school, work, family or community participation with reasonable accommodations.",
+      "example": "For discussion: attend a chosen role activity in three of four opportunities."
+    },
+    {
+      "id": "context",
+      "area": "Regulation",
+      "name": "Context and support log",
+      "track": "Record the situation, need, chosen support and what happened afterward.",
+      "example": "For discussion: compare four meaningful situations and identify one helpful change."
+    },
+    {
+      "id": "goal-attainment",
+      "area": "Individualized method",
+      "name": "Individualized goal attainment",
+      "track": "Define observable levels of change around one person-defined goal before tracking.",
+      "example": "For discussion: agree on a current level and a realistically observable next level.",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10301855/"
+    },
+    {
+      "id": "whodas",
+      "area": "Standardized option",
+      "name": "WHODAS 2.0 functioning",
+      "track": "Consider WHO's 12- or 36-item adult-functioning measures when appropriate.",
+      "example": "For discussion: combine an appropriate functioning assessment with personally meaningful outcomes.",
+      "source": "https://www.who.int/classifications/international-classification-of-functioning-disability-and-health/who-disability-assessment-schedule"
+    }
+  ]
+}
