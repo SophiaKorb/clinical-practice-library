@@ -12,7 +12,7 @@
   </section>
 
   <section class="menu-controls" aria-label="Filter the ideas">
-    <label for="menu-search">Search the menu<input id="menu-search" type="search" placeholder="e.g., daily tasks, boundaries, autonomy, avoidance"></label>
+    <label for="menu-search">Search goal and target ideas<input id="menu-search" type="search" placeholder="e.g., daily tasks, boundaries, autonomy, avoidance"></label>
     <label for="menu-diagnosis">Target ideas by presentation<select id="menu-diagnosis"><option value="">All presentations</option></select></label>
     <label for="menu-area">Progress-measure category<select id="menu-area"><option value="">All measure categories</option></select></label>
     <button type="button" class="reset" id="menu-reset">Reset filters</button>
@@ -29,7 +29,7 @@
     <section class="idea-section" aria-labelledby="measures-title">
       <div class="section-top"><div><p class="section-kicker">2 · Decide how to notice change</p><h2 id="measures-title">Progress-measure ideas</h2></div><span id="measure-count" class="count" aria-live="polite"></span></div>
       <p class="section-description">These options work independently of diagnosis. Pair one with a goal based on what matters and what can realistically be observed.</p>
-      <div id="measure-ideas" class="idea-grid"></div>
+      <label class="measure-search" for="measure-search">Search progress measures<input id="measure-search" type="search" placeholder="e.g., frequency, access, routines"></label><div id="measure-ideas" class="idea-grid"></div>
       <p id="measure-empty" class="empty" hidden>No measures match these filters. Reset the measure category or try a different term.</p>
     </section>
   </div>
