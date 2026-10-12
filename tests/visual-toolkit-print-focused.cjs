@@ -34,7 +34,7 @@ fs.mkdirSync(output,{recursive:true});
    assert.match(await page.locator('#choice-result').innerText(),/You chose: Not now/);
    const bodyCircles=page.locator('#body svg circle[data-body]');
    assert.equal(await bodyCircles.count(),4,'four tappable regions remain pictured');
-   assert.equal(await bodyCircles.evaluateAll(items=>items.filter(x=>x.getAttribute('tabindex')!=='-1'||x.getAttribute('aria-hidden')!=='true').length),0,'SVG hotspots do not create duplicate screen-reader/tab stops');
+   assert.equal(await bodyCircles.evaluateAll(items=>items.filter(x=>x.hasAttribute('tabindex')||x.getAttribute('aria-hidden')!=='true').length),0,'SVG hotspots do not create duplicate screen-reader/tab stops');
    const head=page.locator('#body button[data-body="head"]');
    await head.focus();
    await page.keyboard.press('Space');
