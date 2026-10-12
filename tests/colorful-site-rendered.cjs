@@ -156,7 +156,7 @@ fs.mkdirSync(out,{recursive:true});
      assert.ok(await page.locator('details').count()>=10,'progressive disclosure available');
     }
     if(name==='treatment'){
-     await page.locator('#diagnosis option[value="autism"]').waitFor();
+     await page.locator('#diagnosis option[value="autism"]').waitFor({state:'attached'});
      await page.locator('#diagnosis').selectOption('autism');
      assert.equal(await page.locator('#family .target').count(),2,'autism choices loaded');
      assert.equal(await page.locator('#family').getAttribute('data-view'),'goals','goal-first default');
