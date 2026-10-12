@@ -298,6 +298,8 @@ details.practice-set .practice-eyebrow,details.practice-set .practice-indicator,
 @media print{.questions-review-toolbar{display:none!important}.questions-review-mode .answers button{display:block!important;border:1px solid #999!important;background:white!important;color:black!important;padding:5px 8px!important;min-height:0!important}.questions-review-mode .answers::after{display:none!important}}
 
 </style>
+<link rel="stylesheet" href="/resources/training/dsm-foundations-experience.css">
+<script defer src="/resources/training/dsm-foundations-experience.js"></script>
 <script defer>
 document.addEventListener('DOMContentLoaded',()=>{
   // One review view of the same quiz elements; no duplicated answer state.
@@ -410,13 +412,22 @@ document.addEventListener('DOMContentLoaded',()=>{
 });
 </script>
 </head>
-<body>
+<body data-experience="studio">
 <a class="skip" href="#main">Skip to lesson</a>
 <nav class="cpl-static-nav" aria-label="Clinical Practice Library sections"><a class="cpl-static-nav__brand" href="/" aria-label="Clinical Practice Library home">CPL</a><div class="cpl-static-nav__links"><a href="/">Home</a><a href="/resources/start-here.html">Start here</a><a href="/resources/clinical-resource-finder.html">Find resources</a><a href="/resources/clinical-topics/index.html">Clinical topics</a><a href="/resources/therapy/visual-reasoning-toolkit.html">Visual tools</a><a href="/resources/therapy/communication-supports-toolkit.html">Communication</a><a href="/resources/therapy/treatment-plan-menu.html">Treatment plans</a><a href="/resources/assessment/assessment-start-here.html">Assessment</a><a href="/resources/training/workforce-learning-center.html" aria-current="page">Learning</a><a href="/#espanol">Español</a></div><div class="cpl-static-nav__mobile"><a class="cpl-static-nav__quick cpl-static-nav__quick--0" href="/resources/start-here.html">Start</a><a class="cpl-static-nav__quick cpl-static-nav__quick--1" href="/resources/clinical-resource-finder.html">Find</a><details class="cpl-static-nav__more"><summary>More <span aria-hidden="true">⌄</span></summary><div class="cpl-static-nav__menu" aria-label="More sections"><a href="/resources/index.html">Complete directory</a><a href="/resources/clinical-topics/index.html">Clinical topics</a><a href="/resources/therapy/visual-reasoning-toolkit.html">Visual tools</a><a href="/resources/therapy/communication-supports-toolkit.html">Communication</a><a href="/resources/therapy/treatment-plan-menu.html">Treatment plans</a><a href="/resources/assessment/assessment-start-here.html">Assessment</a><a href="/resources/training/workforce-learning-center.html" aria-current="page">Learning</a><a href="/#espanol">Español</a><a href="/#diagnosis-guides">Diagnosis guides</a></div></details></div></nav>
 
 <header class="course-utility"><div class="top"><a href="/resources/training/workforce-learning-center.html">← Learning center</a><a href="/resources/therapy/clinical-intern-learning-hub.html">Clinical intern reference ↗</a></div></header>
 <main id="main">
+<div class="experience-bar" role="group" aria-label="Choose course presentation">
+<div class="experience-label">Your course, your way</div>
+<div class="experience-options">
+<button type="button" data-experience-choice="studio" aria-pressed="true">✦ Visual studio</button>
+<button type="button" data-experience-choice="clarity" aria-pressed="false">Clarity mode</button>
+</div>
+<p class="experience-status" id="experience-status" role="status" aria-live="polite">Visual studio: conceptual maps and editorial illustrations, with the full course and all practice questions.</p>
+</div>
 <section class="hero">
+<div class="hero-copy">
 <p class="eyebrow">Understanding classification · Foundations</p>
 <h1>DSM Foundations</h1>
 <p class="intro">Why we put experiences into categories, when those categories help, and how diagnosis fits into understanding a person.</p>
@@ -433,6 +444,19 @@ document.addEventListener('DOMContentLoaded',()=>{
 <p class="audience-boundary"><strong>Important boundary:</strong> Reading this course does not authorize independent diagnosis. Diagnosis, treatment decisions, and formal assessments depend on professional role, competence, current criteria, and appropriate supervision. This original course is educational and does not reproduce the DSM-5-TR.</p>
 </div>
 </details>
+</div>
+<div class="hero-display" aria-label="Illustrative learning path: notice, understand, compare, consider context, and consult">
+<div class="hero-orbit">
+<span class="orbit-ring ring-outer" aria-hidden="true"></span><span class="orbit-ring" aria-hidden="true"></span><span class="orbit-ring ring-inner" aria-hidden="true"></span>
+<div class="orbit-core"><span>Beyond<br>the label</span></div>
+<span class="orbit-tag tag-1"><small>01</small>Notice</span>
+<span class="orbit-tag tag-2"><small>02</small>Understand</span>
+<span class="orbit-tag tag-3"><small>03</small>Compare</span>
+<span class="orbit-tag tag-4"><small>04</small>Context</span>
+<span class="orbit-tag tag-5"><small>05</small>Consult</span>
+</div>
+<p class="hero-display-caption">An illustrated learning path, not a diagnostic model or a map of real patient data.</p>
+</div>
 </section>
 <nav class="track" aria-label="Eleven lesson course">
 <h2>Course outline</h2>
@@ -458,6 +482,11 @@ document.addEventListener('DOMContentLoaded',()=>{
 <section class="lesson" id="lesson-1" aria-labelledby="title-1">
 <div class="lesson-head"><div class="number">1</div><div><p>Before opening the manual</p><h2 id="title-1">Why classify anything?</h2></div></div>
 <p class="simple">People classify things for many reasons. Sometimes a category helps with a decision. Other times it helps us remember something, share an experience, or name a connection that matters to us.</p>
+<figure class="concept-stage stage-1" aria-labelledby="stage-title-1">
+<figcaption><div><span class="stage-kicker">VISUAL FIELD NOTE · 01 / 11</span><strong class="stage-title" id="stage-title-1">A category depends on its purpose.</strong></div></figcaption>
+<div class="stage-scene"><div class="stage-node"><span class="node-index">01</span><b>PRACTICAL</b><span>Helps someone decide what to do.</span></div><div class="stage-node"><span class="node-index">02</span><b>SHARED</b><span>Gives people language for a pattern.</span></div><div class="stage-node feature"><span class="node-index">03</span><b>PERSONAL</b><span>Holds memories, meaning, or identity.</span></div></div>
+<p class="stage-footnote">A useful label still does not explain the cause of what it names.</p>
+</figure>
 <p>We might organize clothing by care instructions, photographs by occasion, or books by the project they support. Another person may use memories or personal associations rather than conventional labels. <strong>Categories can be practical, personal, emotional, cultural, or simply interesting.</strong> Their usefulness depends on their purpose and consequences.</p>
 <div class="visual" aria-label="Three ways categories can be meaningful">
 <div class="tile"><b>Practical</b><p>Group household tasks by deadline or tools by the jobs they help with.</p></div>
@@ -497,6 +526,11 @@ document.addEventListener('DOMContentLoaded',()=>{
 <section class="lesson" id="lesson-2" aria-labelledby="title-2">
 <div class="lesson-head"><div class="number">2</div><div><p>Orientation</p><h2 id="title-2">What is the DSM?</h2></div></div>
 <p class="simple">The DSM is a manual that provides shared descriptions and criteria for mental disorders.</p>
+<figure class="concept-stage stage-2" aria-labelledby="stage-title-2">
+<figcaption><div><span class="stage-kicker">VISUAL FIELD NOTE · 02 / 11</span><strong class="stage-title" id="stage-title-2">A manual is not a whole person.</strong></div></figcaption>
+<div class="stage-scene"><div class="stage-node"><span class="node-index">01</span><b>THE MANUAL</b><span>Shared terms and formal criteria.</span></div><div class="stage-node feature"><span class="node-index">02</span><b>THE PERSON</b><span>History, goals, relationships, culture, strengths, context, and supports.</span></div></div>
+<p class="stage-footnote">These are complementary kinds of information, not equivalent portraits.</p>
+</figure>
 <p><strong>DSM</strong> stands for <em>Diagnostic and Statistical Manual of Mental Disorders</em>. In the United States, the current text-revised fifth edition is called <strong>DSM-5-TR</strong>.</p>
 <div class="visual"><div class="tile"><b>What it gives you</b><p>Shared names and descriptions of disorders.</p></div><div class="tile"><b>What it does not give you</b><p>A complete explanation of someone's experiences, circumstances, or needs.</p></div><div class="tile"><b>Who uses it</b><p>Therapists, psychologists, other qualified assessors, supervised trainees, and researchers.</p></div></div>
 <p>Think of it as a <strong>map of diagnostic categories</strong>, not a complete map of someone’s life. A map of Tucson can show you where Sabino Canyon is; it cannot explain why someone scheduled a hike there for noon in July.</p>
@@ -521,6 +555,11 @@ document.addEventListener('DOMContentLoaded',()=>{
 <section class="lesson" id="lesson-3" aria-labelledby="title-3">
 <div class="lesson-head"><div class="number">3</div><div><p>From observation to pattern</p><h2 id="title-3">Symptom ≠ diagnosis</h2></div></div>
 <p class="simple">A <span class="term">symptom</span> is something a person experiences or others observe. A <span class="term">diagnosis</span> is based on a broader pattern, not one symptom alone.</p>
+<figure class="concept-stage stage-3" aria-labelledby="stage-title-3">
+<figcaption><div><span class="stage-kicker">VISUAL FIELD NOTE · 03 / 11</span><strong class="stage-title" id="stage-title-3">One observation can open several questions.</strong></div></figcaption>
+<div class="stage-scene"><div class="stage-node"><span class="node-index">01</span><b>OBSERVATION</b><span>“I cannot focus on this message.”</span></div><div class="stage-node"><span class="node-index">02</span><b>POSSIBLE CONTEXT</b><span>Sleep, stress, or competing demands.</span></div><div class="stage-node"><span class="node-index">03</span><b>OTHER QUESTIONS</b><span>Health, medication, substances, or other patterns.</span></div><div class="stage-node feature"><span class="node-index">04</span><b>NEXT STEP</b><span>Ask, compare, consult. Do not leap from one clue to a diagnosis.</span></div></div>
+<p class="stage-footnote">The possibilities shown are examples, not a differential diagnosis for an individual.</p>
+</figure>
 <div class="example"><strong>Example: losing track of a sentence</strong>Someone says, “I've read the same message four times and still can't tell you what it said.” This describes a concentration difficulty. It does not tell us what caused it. Sleep, stress, physical health, medication, substances, and mental health conditions could all warrant exploration. That single report is not enough to establish a diagnosis.</div>
 <p>Therapists and assessors also consider <strong>distress</strong> (how much the person is suffering) and <strong>functioning</strong> (what has become harder in daily life). Neither is a judgment about someone's character.</p>
 <details class="practice-set"><summary><span><span class="practice-eyebrow">KNOWLEDGE CHECK</span><span class="practice-label">Try the 3 core questions</span></span><span class="practice-indicator" aria-hidden="true">+</span></summary><div class="practice-content">
@@ -580,6 +619,11 @@ document.addEventListener('DOMContentLoaded',()=>{
 <section class="lesson" id="lesson-4" aria-labelledby="title-4">
 <div class="lesson-head"><div class="number">4</div><div><p>Language and diagnostic precision</p><h2 id="title-4">Everyday words versus clinical terms</h2></div></div>
 <p class="simple">Many diagnostic terms are also everyday words. Their meanings depend on the context.</p>
+<figure class="concept-stage stage-4" aria-labelledby="stage-title-4">
+<figcaption><div><span class="stage-kicker">VISUAL FIELD NOTE · 04 / 11</span><strong class="stage-title" id="stage-title-4">Two meanings. One careful conversation.</strong></div></figcaption>
+<div class="stage-scene"><div class="stage-node"><span class="node-index">01</span><b>WHAT SOMEONE SAYS</b><span>“I’m so OCD about this.”</span></div><div class="stage-node feature"><span class="node-index">02</span><b>WHAT TO EXPLORE</b><span>What does that phrase mean to them? Are there intrusions, rituals, distress, or effects on life?</span></div></div>
+<p class="stage-footnote">Respect ordinary speech; reserve formal diagnostic conclusions for proper assessment.</p>
+</figure>
 <p>People may use words such as <em>depressed</em>, <em>panic</em>, <em>trauma</em>, and <em>OCD</em> to describe their experiences, sometimes informally. In a clinical setting, those same words may refer to <strong>specific patterns, criteria, and important distinctions</strong>. Everyday and diagnostic meanings serve different purposes. Start by asking what the person means.</p>
 <div class="visual" aria-label="Three stages of translating language">
 <div class="tile"><b>Everyday language</b><p>“I'm totally manic today.” What does this person mean?</p></div>
@@ -653,6 +697,11 @@ document.addEventListener('DOMContentLoaded',()=>{
 <section class="lesson" id="lesson-5" aria-labelledby="title-5">
 <div class="lesson-head"><div class="number">5</div><div><p>Before choosing a label</p><h2 id="title-5">Six questions that change the picture</h2></div></div>
 <p class="simple">Use six prompts in sequence. Each of the six questions below practices one prompt: What, When, Safety, Where, How much, and What else.</p>
+<figure class="concept-stage stage-5" aria-labelledby="stage-title-5">
+<figcaption><div><span class="stage-kicker">VISUAL FIELD NOTE · 05 / 11</span><strong class="stage-title" id="stage-title-5">Six lenses reveal a fuller story.</strong></div></figcaption>
+<div class="stage-scene"><div class="stage-node"><span class="node-index">01</span><b>01 · WHAT</b><span>What is being experienced?</span></div><div class="stage-node"><span class="node-index">02</span><b>02 · WHEN</b><span>Onset, frequency, duration.</span></div><div class="stage-node"><span class="node-index">03</span><b>03 · WHERE</b><span>Settings and exceptions.</span></div><div class="stage-node"><span class="node-index">04</span><b>04 · IMPACT</b><span>Distress and functioning.</span></div><div class="stage-node"><span class="node-index">05</span><b>05 · WHAT ELSE</b><span>Other relevant explanations.</span></div><div class="stage-node feature"><span class="node-index">06</span><b>06 · SAFETY</b><span>Urgent concerns and action.</span></div></div>
+<p class="stage-footnote">These are learning prompts, not an exhaustive assessment or mandatory interview sequence.</p>
+</figure>
 <ol class="plain">
 <li><strong>What?</strong> What is happening? Use the person's own words and observable facts.</li>
 <li><strong>When?</strong> When did it begin? How often? How long does it last?</li>
@@ -684,6 +733,11 @@ document.addEventListener('DOMContentLoaded',()=>{
 <section class="lesson" id="lesson-6" aria-labelledby="title-6">
 <div class="lesson-head"><div class="number">6</div><div><p>Understanding the landscape</p><h2 id="title-6">Where does the pattern belong?</h2></div></div>
 <p class="simple">The DSM groups related conditions into chapters. Learn how the categories relate, then consult the actual criteria rather than trying to memorize the entire manual.</p>
+<figure class="concept-stage stage-6" aria-labelledby="stage-title-6">
+<figcaption><div><span class="stage-kicker">VISUAL FIELD NOTE · 06 / 11</span><strong class="stage-title" id="stage-title-6">A chapter is a starting place, not a shortcut.</strong></div></figcaption>
+<div class="stage-scene"><div class="stage-node"><span class="node-index">01</span><b>ORIENT</b><span>Recognize broad groups of conditions.</span></div><div class="stage-node"><span class="node-index">02</span><b>DISTINGUISH</b><span>Patterns can overlap across chapters.</span></div><div class="stage-node feature"><span class="node-index">03</span><b>VERIFY</b><span>Use current criteria, exclusions, context, and appropriate consultation.</span></div></div>
+<p class="stage-footnote">Proximity in this teaching illustration does not represent empirical similarity.</p>
+</figure>
 <div class="visual">
 <div class="tile"><b>Mood</b><p>Examples: depressive and bipolar-related conditions. They are different categories.</p></div>
 <div class="tile"><b>Fear and worry</b><p>Examples: anxiety disorders and obsessive-compulsive-related disorders. They also have distinct chapters.</p></div>
@@ -715,6 +769,11 @@ document.addEventListener('DOMContentLoaded',()=>{
 <section class="lesson" id="lesson-7" aria-labelledby="title-7">
 <div class="lesson-head"><div class="number">7</div><div><p>Use, risk and diagnosis</p><h2 id="title-7">Understanding substance use disorders</h2></div></div>
 <p class="simple">Using a substance, becoming intoxicated, experiencing withdrawal, and having a substance use disorder are different things. They can overlap, but they are not synonyms.</p>
+<figure class="concept-stage stage-7" aria-labelledby="stage-title-7">
+<figcaption><div><span class="stage-kicker">VISUAL FIELD NOTE · 07 / 11</span><strong class="stage-title" id="stage-title-7">Four distinct questions, not one continuum.</strong></div></figcaption>
+<div class="stage-scene"><div class="stage-node"><span class="node-index">01</span><b>USE</b><span>What, how much, and when?</span></div><div class="stage-node"><span class="node-index">02</span><b>INTOXICATION</b><span>What is happening during or after use?</span></div><div class="stage-node"><span class="node-index">03</span><b>WITHDRAWAL</b><span>What happens as use stops or reduces?</span></div><div class="stage-node feature"><span class="node-index">04</span><b>DISORDER</b><span>Is there a qualifying sustained pattern of problems?</span></div></div>
+<p class="stage-footnote">These concepts may overlap. The arrangement does not imply a progression or diagnose a substance use disorder.</p>
+</figure>
 <p>Alcohol, cannabis, opioids, stimulants, sedatives, tobacco, and other substances have different effects and safety concerns. A substance use disorder (SUD) describes a problematic pattern of use with clinically significant impairment or distress. Risky use can warrant help even when disorder criteria are not met.</p>
 <div class="visual" aria-label="Four concepts to keep separate">
 <div class="tile"><b>Use</b><p>What is taken, how often, how much, and in what circumstances?</p></div>
@@ -770,6 +829,11 @@ document.addEventListener('DOMContentLoaded',()=>{
 <section class="lesson" id="lesson-8" aria-labelledby="title-8">
 <div class="lesson-head"><div class="number">8</div><div><p>Learning through cases</p><h2 id="title-8">Two case studies</h2></div></div>
 <p class="simple">Read a story. Separate what you know from what you still need to ask.</p>
+<figure class="concept-stage stage-8" aria-labelledby="stage-title-8">
+<figcaption><div><span class="stage-kicker">VISUAL FIELD NOTE · 08 / 11</span><strong class="stage-title" id="stage-title-8">The same four steps, every case.</strong></div></figcaption>
+<div class="stage-scene"><div class="stage-node"><span class="node-index">01</span><b>01 · NOTICE</b><span>What do we actually know?</span></div><div class="stage-node"><span class="node-index">02</span><b>02 · INVESTIGATE</b><span>What do we ask or test?</span></div><div class="stage-node"><span class="node-index">03</span><b>03 · INTERPRET</b><span>What does the information mean?</span></div><div class="stage-node feature"><span class="node-index">04</span><b>04 · ACT</b><span>What is a responsible next step?</span></div></div>
+<p class="stage-footnote">Repeat the method; do not assume that two people with similar experiences need identical conclusions.</p>
+</figure>
 <div class="case-grid">
 <div class="case"><h3>Case A: Maya</h3><p>“I have stopped seeing friends. I feel worn out most days.”</p><details><summary>What do we know?</summary><p>Maya reports reduced social contact and low energy. No diagnosis can be established from this sentence.</p></details><details><summary>What would you ask?</summary><p>For how long? What changed? Sleep? Mood? Health? Stress? Safety? Impact on activities? What does Maya think is happening?</p></details></div>
 <div class="case"><h3>Case B: Eli</h3><p>“He gets upset when the teacher gives several spoken instructions and hands out a crowded worksheet.”</p><details><summary>What do we know?</summary><p>Someone reports a situation-specific pattern; we do not yet know the child's perspective, communication needs, or contributing conditions.</p></details><details><summary>What would you ask?</summary><p>What happens before and after? Is the direction understood? What works in other settings? What about learning, language, sensory load, worry, and access?</p></details></div>
@@ -795,6 +859,11 @@ document.addEventListener('DOMContentLoaded',()=>{
 <section class="lesson" id="lesson-9" aria-labelledby="title-9">
 <div class="lesson-head"><div class="number">9</div><div><p>From hypotheses to decisions</p><h2 id="title-9">How the DSM supports assessment and treatment</h2></div></div>
 <p class="simple">The DSM helps organize diagnostic questions and compare possible explanations. Assessment still requires interviewing, context, judgment, and supervision when indicated.</p>
+<figure class="concept-stage stage-9" aria-labelledby="stage-title-9">
+<figcaption><div><span class="stage-kicker">VISUAL FIELD NOTE · 09 / 11</span><strong class="stage-title" id="stage-title-9">Good assessment stays revisable.</strong></div></figcaption>
+<div class="stage-scene"><div class="stage-node"><span class="node-index">01</span><b>LISTEN</b><span>Start with the person's account and aims.</span></div><div class="stage-node"><span class="node-index">02</span><b>COMPARE</b><span>Consider multiple plausible explanations.</span></div><div class="stage-node feature"><span class="node-index">03</span><b>CHECK AGAIN</b><span>Consult, gather context, and refine the plan.</span></div></div>
+<p class="stage-footnote">A working hypothesis is not a substitute for assessment or supervision.</p>
+</figure>
 <div class="visual">
 <div class="tile"><b>1 · Listen</b><p>Understand the person and their goals.</p></div>
 <div class="tile"><b>2 · Compare</b><p>Review plausible diagnoses and full current criteria, including exclusions.</p></div>
@@ -827,6 +896,11 @@ document.addEventListener('DOMContentLoaded',()=>{
 <section class="lesson" id="lesson-10" aria-labelledby="title-10">
 <div class="lesson-head"><div class="number">10</div><div><p>Personal meaning and clinical purpose</p><h2 id="title-10">Diagnosis, identity &amp; self-knowledge</h2></div></div>
 <p class="simple">A diagnosis is a clinical description. Identity is how someone understands themselves. They can be connected, but one is not a substitute for the other.</p>
+<figure class="concept-stage stage-10" aria-labelledby="stage-title-10">
+<figcaption><div><span class="stage-kicker">VISUAL FIELD NOTE · 10 / 11</span><strong class="stage-title" id="stage-title-10">A person is always more than a label.</strong></div></figcaption>
+<div class="stage-scene"><div class="stage-node feature"><span class="node-index">01</span><b>THE PERSON</b><span>Values, culture, relationships, preferences, history, and self-knowledge.</span></div><div class="stage-node"><span class="node-index">02</span><b>DIAGNOSIS</b><span>One clinical description, when supported.</span></div><div class="stage-node"><span class="node-index">03</span><b>IDENTITY</b><span>How someone understands and names their own experience.</span></div></div>
+<p class="stage-footnote">Do not infer a person's preferred identity language from their diagnosis.</p>
+</figure>
 <div class="visual visual-pair" aria-label="Diagnosis and identity are different, though related, concepts">
 <div class="tile"><b>Diagnosis</b><p>“Which clinical pattern, if any, fits?” Requires evidence, criteria, context, and diagnostic judgment.</p></div>
 <div class="tile"><b>Identity</b><p>“What does this experience mean to me?” Includes self-understanding, community, preferred language, and values.</p></div>
@@ -899,6 +973,11 @@ document.addEventListener('DOMContentLoaded',()=>{
 <section class="lesson" id="lesson-11" aria-labelledby="title-11">
 <div class="lesson-head"><div class="number">11</div><div><p>Functioning in context</p><h2 id="title-11">Disability, functioning &amp; access</h2></div></div>
 <p class="simple">Disability is not a synonym for a diagnosis. It concerns the interaction between health-related impairments, daily activities, participation, and the environments in which people live and work.</p>
+<figure class="concept-stage stage-11" aria-labelledby="stage-title-11">
+<figcaption><div><span class="stage-kicker">VISUAL FIELD NOTE · 11 / 11</span><strong class="stage-title" id="stage-title-11">Access changes what becomes possible.</strong></div></figcaption>
+<div class="stage-scene"><div class="stage-node"><span class="node-index">01</span><b>PERSON + ACTIVITY</b><span>What is being asked, and at what effort?</span></div><div class="stage-node"><span class="node-index">02</span><b>ENVIRONMENT</b><span>Which barriers or demands are present?</span></div><div class="stage-node feature"><span class="node-index">03</span><b>SUPPORTS</b><span>Which changes improve participation, and what limits remain?</span></div></div>
+<p class="stage-footnote">A supported success can coexist with continuing impairment or disability.</p>
+</figure>
 <div class="visual" aria-label="Disability learning map: functioning, context, and support">
 <div class="tile"><b>Functioning</b><p>What can the person do? What is difficult? In which domains, and with how much effort?</p></div>
 <div class="tile"><b>Environment</b><p>What barriers make participation more difficult? What settings are more accessible?</p></div>
