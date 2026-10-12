@@ -1,0 +1,47 @@
+name: Visual toolkit print focused QA
+on:
+  push:
+    branches: [cpl-2-colorful-helpful]
+    paths:
+      - '.github/workflows/visual-toolkit-print-focused.yml'
+      - 'resources/therapy/visual-reasoning-toolkit.html'
+      - 'resources/therapy/visual-reasoning-toolkit.js'
+      - 'resources/practice-learning.css'
+      - 'tests/visual-toolkit-print-focused.cjs'
+      - 'tests/visual-toolkit-print-focused.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  clinician-client-print:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Install browser and print verifier
+        run: |
+          npm install --no-save --no-package-lock playwright@1.56.1
+          npx playwright install --with-deps chromium
+          python -m pip install --quiet pymupdf
+      - name: Start local site
+        run: |
+          python -m http.server 8765 --bind 127.0.0.1 >/tmp/cpl-visual-print-server.log 2>&1 &
+          sleep 2
+      - name: Print clinician and client versions
+        run: node tests/visual-toolkit-print-focused.cjs
+      - name: Inspect printed content and page geometry
+        run: python tests/visual-toolkit-print-focused.py
+      - name: Save print QA evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-toolkit-print-focused
+          path: /tmp/cpl-visual-print-focused
+          if-no-files-found: ignore
+          retention-days: 10
