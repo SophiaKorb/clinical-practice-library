@@ -46,7 +46,7 @@ inputs[0].value="adhd";inputs[1].value="gad";inputs[2].value="";
 function element(tag,text,scope){const e=document.createElement(tag);e.textContent=text;if(scope)e.scope=scope;return e;}
 function render(){const ids=inputs.map(x=>x.value).filter(Boolean);const unique=new Set(ids).size===ids.length;
 document.getElementById("status").textContent=unique?"Comparing "+ids.length+" distinct diagnoses.":"Duplicate selections: choose a different diagnosis for each column.";
-const h=document.getElementById("thead"),body=document.getElementById("tbody");h.replaceChildren();body.replaceChildren();
+const h=document.getElementById("thead"),body=document.getElementById("tbody");h.replaceChildren();body.replaceChildren();if(!unique){document.getElementById("insight").replaceChildren(element("h3","Choose distinct diagnoses"),element("p","Each comparison column needs a different diagnosis. Select another option to continue."));return;}
 const hr=document.createElement("tr");hr.append(element("th","Comparison","col"));ids.forEach(id=>hr.append(element("th",byId[id].name,"col")));h.append(hr);
 for(const [field,label] of [["pattern","Central pattern"],["course","Time course"],["ask","Ask next"],["caveat","Clinical cautions"]]){const tr=document.createElement("tr");tr.append(element("th",label,"row"));ids.forEach(id=>tr.append(element("td",byId[id][field])));body.append(tr);}
 const pair=ids.length===2?presetsData.find(x=>ids.includes(x.a)&&ids.includes(x.b)):null;
