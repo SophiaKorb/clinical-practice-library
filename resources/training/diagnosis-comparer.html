@@ -99,7 +99,7 @@ const vennPairs=new Map(vennData.map(item=>[[item.a,item.b].sort().join("|"),ite
 const svgNS="http://www.w3.org/2000/svg";
 function setSvgLabel(id,name){
  const el=document.getElementById(id);el.replaceChildren();
- const lines=(vennNames[name]||byId[name].name).split("\\n");
+ const lines=(vennNames[name]||byId[name].name).split("\n");
  for(let i=0;i<lines.length;i++){
   const t=document.createElementNS(svgNS,"tspan");
   t.setAttribute("x",el.getAttribute("x"));t.setAttribute("dy",String(i===0?(lines.length===1?0:-7):23));
