@@ -160,6 +160,7 @@ fs.mkdirSync(out,{recursive:true});
      assert.equal(await page.locator('#target-ideas .target-card').count(),12,'menu initially shows bounded browseable choices');
      assert.equal(await page.locator('#measure-ideas .measure-card').count(),13,'independent measure menu');
      assert.equal(await page.locator('#formulation').count(),0,'full plan form is no longer on menu');
+     assert.equal(await page.locator('#target-ideas .target-card details').count(),0,'target suggestions contain no intervention-plan sections');
      assert.ok(await page.locator('#targets-more').isVisible(),'remaining goals accessible');
      await page.locator('#menu-diagnosis').selectOption('autism');
      assert.equal(await page.locator('#target-ideas .target-card').count(),2,'presentation filter narrows goal examples');
