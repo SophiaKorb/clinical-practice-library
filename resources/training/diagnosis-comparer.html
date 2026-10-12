@@ -24,7 +24,7 @@ footer{padding:5px 0 42px;font-size:.83rem;color:var(--muted)}
 
 .venn-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:5px 15px}
 .venn-intro{margin:2px 0 8px;max-width:69ch;color:#47615b}
-.venn-stage{background:#f6faf8;border:1px solid #d4e5d9;border-radius:14px;padding:10px;overflow:hidden}
+.venn-stage{background:#f6faf8;border:1px solid #d4e5d9;border-radius:14px;padding:10px;overflow-x:auto;overflow-y:hidden}
 .venn-stage svg{display:block;width:100%;height:auto;max-height:350px;overflow:visible}
 .venn-stage .circle-a{fill:#b9e2d4;fill-opacity:.72;stroke:#2c7767;stroke-width:3}
 .venn-stage .circle-b{fill:#c4d6f3;fill-opacity:.7;stroke:#4474af;stroke-width:3}
@@ -47,7 +47,7 @@ footer{padding:5px 0 42px;font-size:.83rem;color:var(--muted)}
 .venn-pair-details{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:12px}
 .venn-pair-details article{background:#f7faf8;border:1px solid #d0ded8;border-radius:9px;padding:12px;font-size:.88rem}
 .venn-pair-details strong{display:block;margin-bottom:5px}
-@media(max-width:740px){.venn-grid,.venn-pair-details{grid-template-columns:1fr}.venn-stage svg{max-height:300px}}
+@media(max-width:740px){.venn-grid,.venn-pair-details{grid-template-columns:1fr}.venn-stage svg{min-width:500px;max-height:none}}
 @media print{.venn-stage{-webkit-print-color-adjust:exact;print-color-adjust:exact}.venn-stage svg{max-height:250px}.venn-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.venn-card{break-inside:avoid}.venn-pair-details{grid-template-columns:repeat(3,minmax(0,1fr))}}
 </style><link rel="stylesheet" href="/resources/site-navigation.css"></head><body>
 <a class="skip" href="#main">Skip to comparer</a>
@@ -61,6 +61,7 @@ footer{padding:5px 0 42px;font-size:.83rem;color:var(--muted)}
 <section class="surface" id="venn-section" aria-labelledby="venn-title">
 <div class="venn-head"><h2 id="venn-title">Where do these diagnoses overlap?</h2><p class="small">Visual differential · updates with your selections</p></div>
 <p class="venn-intro">The circles represent <strong>features worth comparing</strong>, not the proportion of people with each condition. Shared symptoms are not the same as shared diagnoses, and the areas are <strong>not to scale</strong>.</p>
+<p class="small mobile-hint">On a phone, swipe the diagram sideways as needed. Every teaching point also appears in the text cards below.</p>
 <div class="venn-stage">
 <svg id="venn-svg" viewBox="0 0 600 365" role="img" aria-labelledby="venn-svg-title venn-svg-desc">
 <title id="venn-svg-title">Selected diagnosis overlap illustration</title><desc id="venn-svg-desc">Two or three overlapping circles and a separate text description below. Diagram is conceptual, not a measure of diagnostic similarity, symptom prevalence or comorbidity.</desc>
