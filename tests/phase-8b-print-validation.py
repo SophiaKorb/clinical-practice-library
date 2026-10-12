@@ -44,8 +44,10 @@ for filename,client_view in [
   assert label.lower() in full.lower(),(filename,'missing printed scale/choice: '+label)
  if client_view:
   assert 'Clinician instructions' not in full,(filename,'clinician-only details leaked')
+  assert 'An improved response to one support is contextual evidence' not in full,(filename,'clinician body text leaked')
  else:
   assert 'Clinician instructions' in full,(filename,'clinician notes unexpectedly absent')
+  assert 'An improved response to one support is contextual evidence' in full,(filename,'clinician guidance content missing from print')
  for page in doc:
   for block in page.get_text('blocks'):
    x0,y0,x1,y1=block[:4]
