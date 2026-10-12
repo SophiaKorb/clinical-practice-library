@@ -155,7 +155,7 @@
       "sources": [
         "nimh-bipolar"
       ],
-      "limits": "Original timeline and examples are teaching aids, not a bipolar screening instrument. The source supports broad education, not a complete diagnostic or medication protocol. Qualified review of episode and escalation language remains pending."
+      "limits": "Original timeline for learning about mood episodes. Use a full assessment for diagnosis and qualified prescribing care for medication decisions. Qualified review of episode and escalation language pending."
     },
     {
       "slug": "voices-collaborative-coping",
@@ -210,7 +210,7 @@
       "sources": [
         "nice-depression"
       ],
-      "limits": "Original planning prompts are not a behavioral-activation manual or validated depression measure. Treatment selection depends on severity, preference, history and qualified assessment."
+      "limits": "Original behavioral-activation planning prompts. Select treatment through qualified assessment of severity, preferences and history. These prompts are not a standardized measure."
     },
     {
       "slug": "trauma-cue-orientation",
@@ -220,7 +220,7 @@
         "nice-ptsd",
         "va-dissociation"
       ],
-      "limits": "Original orientation map is not a trauma-treatment protocol. Dissociation does not automatically exclude trauma-focused treatment; selection is individualized. Clinical review pending."
+      "limits": "Original present-orientation support map. Select trauma treatment individually; dissociation alone does not exclude it. Clinical review pending."
     },
     {
       "slug": "dissociation-function-orientation",
@@ -238,7 +238,7 @@
       "sources": [
         "nctsn-grief"
       ],
-      "limits": "NCTSN supports child traumatic-grief education. This original remembrance aid is not a grief-treatment protocol or diagnostic measure. Age, culture, family context and qualified review remain essential."
+      "limits": "NCTSN informs this original remembrance aid. Adapt to age, culture and family context. Grief treatment requires its own assessment and protocol; qualified review pending."
     },
     {
       "slug": "restrictive-eating-coordination",
@@ -256,7 +256,7 @@
       "sources": [
         "nice-eating"
       ],
-      "limits": "Original pattern aid is not a binge-eating measure or treatment manual. Specialist treatment, medical assessment and individualized nutrition planning remain outside its scope."
+      "limits": "Original pattern-mapping aid. Coordinate specialist treatment, medical assessment and individualized nutrition planning separately."
     },
     {
       "slug": "adult-autism-load-recovery",
@@ -274,7 +274,7 @@
       "sources": [
         "nice-adhd"
       ],
-      "limits": "Original initiation aid is not an ADHD screening test or executive-function measure. Scaffold effectiveness is individualized and does not prove diagnosis. No medication advice provided."
+      "limits": "Original task-initiation aid. Review whether the scaffold helps this person; assess ADHD separately."
     },
     {
       "slug": "aphasia-communication-access",
@@ -283,7 +283,7 @@
       "sources": [
         "asha-aphasia"
       ],
-      "limits": "ASHA source concerns acquired adult aphasia. This unvalidated access aid does not establish capacity, rehabilitation effectiveness or validity of modified standardized scores. Qualified clinical review pending."
+      "limits": "ASHA informs this access aid for acquired adult aphasia. Assess capacity separately and check whether test adaptations permit standard-score interpretation. Tool validation and qualified clinical review pending."
     },
     {
       "slug": "learning-instruction-access",
@@ -301,7 +301,7 @@
       "sources": [
         "nice-id"
       ],
-      "limits": "Original supported-choice aid is not a capacity test or intellectual-disability assessment. UK terminology and jurisdiction limits are explicit. Qualified clinical and rights review pending."
+      "limits": "Original supported-choice aid. Capacity and intellectual-disability assessment require separate procedures. UK terminology is explained here; qualified clinical and rights review pending."
     },
     {
       "slug": "tics-context-impact",
@@ -339,7 +339,7 @@
       "sources": [
         "cci-health"
       ],
-      "limits": "CCI is public CBT education. This original aid is not a medical triage algorithm, reassurance-withholding protocol or health-anxiety measure. Qualified clinical review pending."
+      "limits": "CCI informs this original CBT planning aid. Use clinical pathways for medical triage and an individualized plan for reassurance-related treatment. Qualified clinical review pending."
     },
     {
       "slug": "chronic-pain-pacing",
@@ -367,7 +367,7 @@
         "pbis-fba",
         "nctsn-family"
       ],
-      "limits": "Original observation/coaching aid, not a comprehensive FBA or a manual for any caregiver treatment. No functional causation or diagnosis is inferred from one event. Qualified review pending."
+      "limits": "Original observation and coaching aid. Use repeated observations and qualified assessment to test functional hypotheses. Qualified review pending."
     },
     {
       "slug": "sibling-conflict-safety-repair",

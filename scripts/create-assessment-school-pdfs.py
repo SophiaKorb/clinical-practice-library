@@ -21,14 +21,14 @@ def box(c,x,y,w,h,fill=colors.white,stroke=LINE):
 def field(c,name,x,y,w,h):
  c.acroForm.textfield(name=name,tooltip=name.replace('_',' '),x=x,y=y,width=w,height=h,fontName='Helvetica',fontSize=10,borderWidth=.6,borderColor=LINE,fillColor=colors.white,textColor=INK,fieldFlags='multiline',forceBorder=True)
 def base(path,title,subtitle):
- c=canvas.Canvas(str(path),pagesize=(W,H));c.setTitle(title);c.setAuthor('Sophia Cohon, PhD');c.setFillColor(TEAL);c.rect(0,H-18,W,18,fill=1,stroke=0)
+ c=canvas.Canvas(str(path),pagesize=(W,H));c.setTitle(title);c.setAuthor('Sophia Korb Cohon, PhD');c.setFillColor(TEAL);c.rect(0,H-18,W,18,fill=1,stroke=0)
  text(c,'CPL / CLINICAL REASONING',30,566,9,bold=True,color=TEAL)
  size=25
  while pdfmetrics.stringWidth(title,'CPLSans-Bold',size)>732:size-=.5
  text(c,title,30,533,size,bold=True,width=732);text(c,subtitle,30,510,9,width=730)
  return c
 def footer(c,source):
- text(c,'Sophia Cohon, PhD | Clinical Practice Library | Original educational tool; not a validated measure.',30,37,8,width=730)
+ text(c,'Sophia Korb Cohon, PhD | Clinical Practice Library | Original educational tool; not a validated measure.',30,37,8,width=730)
  text(c,source,30,24,7.5,width=730);c.showPage();c.save()
 name='learning-and-access-two-track-plan.pdf';c=base(OUT/name,'Learning and access: two tracks, one plan','Teach the missing skill and support participation together. Use fictional data on shared devices; save clinical data in approved systems.')
 text(c,'Meaningful goal / target skill',30,483,10,bold=True);field(c,'goal',211,470,551,24)

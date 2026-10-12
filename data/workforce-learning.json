@@ -53,7 +53,7 @@
         },
         {
           "label": "Remove all demands indefinitely.",
-          "feedback": "A pause may help; a permanent change needs collaborative review. Preserve access while assessing learning needs and goals.",
+          "feedback": "Use a pause to restore access, then review lasting changes collaboratively. Preserve access while assessing learning needs and goals.",
           "appropriate": false
         }
       ],
