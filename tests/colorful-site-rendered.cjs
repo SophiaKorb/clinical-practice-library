@@ -159,7 +159,11 @@ fs.mkdirSync(out,{recursive:true});
      await page.locator('#menu-diagnosis option[value="autism"]').waitFor({state:'attached'});
      assert.match(await page.locator('#menu-count').innerText(),/181 ideas across 29 concerns/,'expanded idea bank present');
      assert.equal(await page.locator('#target-ideas .target-card').count(),12,'anxiety examples visible at first load');
-     if(width===390)await page.screenshot({path:path.join(out,'cpl-treatment-ideas-390.png'),animations:'disabled'});
+     if(width===390){
+      const firstCard=await page.locator('#target-ideas .target-card').first().boundingBox();
+      assert.ok(firstCard&&firstCard.y<800,'first practical idea starts within initial phone viewport: '+firstCard?.y);
+      await page.screenshot({path:path.join(out,'cpl-treatment-ideas-390.png'),animations:'disabled'});
+     }
      assert.equal(await page.locator('#menu-diagnosis').inputValue(),'anxiety','anxiety demonstrates distinct approaches first');
      assert.equal(await page.locator('#formulation').count(),0,'no full plan form in menu');
      assert.equal(await page.locator('#target-ideas .card-edit').count(),24,'editable wording and measures provided');
