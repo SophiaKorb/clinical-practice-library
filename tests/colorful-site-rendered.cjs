@@ -156,7 +156,32 @@ fs.mkdirSync(out,{recursive:true});
      assert.ok(await page.locator('details').count()>=10,'progressive disclosure available');
     }
     if(name==='treatment'){
-     assert.ok(await page.locator('button').count()>=3,'interactive planning controls');
+     await page.locator('#diagnosis option[value="autism"]').waitFor();
+     await page.locator('#diagnosis').selectOption('autism');
+     assert.equal(await page.locator('#family .target').count(),2,'autism choices loaded');
+     assert.equal(await page.locator('#family').getAttribute('data-view'),'goals','goal-first default');
+     assert.ok(await page.locator('#family .goal-preview').first().isVisible(),'functional goal visible first');
+     assert.equal(await page.locator('#family .target dl').first().isVisible(),false,'clinical detail deferred');
+     await page.locator('[data-goal-view="clinical"]').click();
+     assert.equal(await page.locator('[data-goal-view="clinical"]').getAttribute('aria-pressed'),'true');
+     assert.ok(await page.locator('#family .target dl').first().isVisible(),'clinical detail available');
+     await page.locator('[data-goal-view="goals"]').click();
+     assert.equal(await page.locator('[data-goal-view="goals"]').getAttribute('aria-pressed'),'true');
+     await page.locator('#family .target input[type="checkbox"]').first().check();
+     assert.equal(await page.locator('#selected .selected-target').count(),1,'chosen goal adds one editable target');
+     assert.match(await page.locator('#readiness').innerText(),/bracketed target prompts/,'unfinished objective visible');
+     await page.locator('#priorities').fill('Preferred communication and genuine choice');
+     assert.match(await page.locator('#output').innerText(),/Preferred communication and genuine choice/,'client priority in draft');
+     await page.locator('#diagnosis').selectOption('adhd');
+     assert.equal(await page.locator('#selected .selected-target').count(),1,'switching presentation retains chosen goal');
+     await page.locator('#family .target input[type="checkbox"]').first().check();
+     assert.equal(await page.locator('#selected .selected-target').count(),2,'multi-presentation planning supported');
+     await page.evaluate(()=>window.dispatchEvent(new Event('beforeprint')));
+     assert.match(await page.locator('#print-plan').textContent(),/Preferred communication and genuine choice/,'print draft includes edits');
+     await page.locator('#clear').click();
+     assert.equal(await page.locator('#selected .selected-target').count(),0,'clear removes all targets');
+     assert.match(await page.locator('#readiness').innerText(),/No goals selected/,'readiness resets');
+     assert.equal(await page.locator('#copy').isDisabled(),true,'empty plan cannot be copied');
     }
    }
    await context.close();
