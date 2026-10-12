@@ -330,7 +330,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   const checks=[...document.querySelectorAll('[data-done]')];
   const summary=document.getElementById('progress-text');
   const bar=document.getElementById('progress-bar');
-  function update(){const n=checks.filter(b=>b.getAttribute('aria-pressed')==='true').length;summary.textContent=n+' of '+checks.length+' lessons marked complete';bar.style.width=(100*n/checks.length)+'%';}
+  function update(){const n=checks.filter(b=>b.getAttribute('aria-pressed')==='true').length;summary.textContent=n+' of '+checks.length+' lessons marked complete';bar.style.width=(100*n/checks.length)+'%';document.querySelectorAll('.steps a[href^="#lesson-"]').forEach((link,i)=>{const done=checks[i]&&checks[i].getAttribute('aria-pressed')==='true';link.classList.toggle('is-complete',Boolean(done));if(done)link.setAttribute('aria-label',link.textContent.trim()+' — marked complete');else link.removeAttribute('aria-label');});}
   checks.forEach(b=>b.addEventListener('click',()=>{const yes=b.getAttribute('aria-pressed')!=='true';b.setAttribute('aria-pressed',String(yes));b.textContent=yes?'✓ Lesson complete (undo)':'Mark lesson complete';update();}));
   document.querySelectorAll('[data-quiz]').forEach(group=>{
     const fb=group.querySelector('.feedback');
