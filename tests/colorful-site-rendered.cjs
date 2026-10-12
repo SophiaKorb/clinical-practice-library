@@ -171,7 +171,7 @@ fs.mkdirSync(out,{recursive:true});
      await page.locator('#measure-search').fill('Restart');
      assert.equal(await page.locator('#measure-ideas .measure-card').count(),1,'measure search independent of target search');
      await page.locator('#target-ideas .copy-idea').first().click();
-     assert.match(await page.locator('#copy-status').innerText(),/copied|Clipboard unavailable/,'individual target copy provides feedback');
+     await page.waitForFunction(()=>/copied|Clipboard unavailable/.test(document.getElementById('copy-status').textContent),null,{timeout:7000});
      await page.locator('#menu-reset').click();
      assert.equal(await page.locator('#target-ideas .target-card').count(),12,'reset restores target menu');
      assert.equal(await page.locator('#measure-ideas .measure-card').count(),13,'reset restores measure menu');
