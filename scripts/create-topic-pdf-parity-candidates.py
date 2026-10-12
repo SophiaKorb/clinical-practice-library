@@ -72,7 +72,7 @@ def diagram(c,t,mode):
         box(c,d[0],L,659,257,57,0);box(c,d[1],L+283,659,257,57,1)
         link(c,170,601,306,592);link(c,443,601,306,592)
         box(c,d[2],170,585,272,54,2,'gate')
-        small_label(c,'SAFETY / FREEDOM TO DECLINE DECIDES THE ROUTE',153,523)
+        small_label(c,'SAFETY / FREEDOM TO DECLINE DECIDES THE ROUTE',149,399)
         link(c,306,531,173,507);link(c,306,531,439,507)
         box(c,d[3],L,499,257,76,3,'branch',border='#885337')
         box(c,d[4],L+283,499,257,76,4,'branch',border='#28645b')
@@ -81,7 +81,7 @@ def diagram(c,t,mode):
     elif mode=='parallel-assess':
         box(c,d[0],L,658,W,45,0)
         link(c,306,613,167,596);link(c,306,613,445,596)
-        small_label(c,'PARALLEL, NOT A WAITING SEQUENCE',191,597)
+        small_label(c,'PARALLEL, NOT A WAITING SEQUENCE',183,395)
         box(c,d[1],L,583,257,72,1,'branch',border='#885337')
         box(c,d[2],L+283,583,257,72,2,'branch')
         link(c,165,511,306,494);link(c,447,511,306,494)
@@ -97,15 +97,22 @@ def diagram(c,t,mode):
         box(c,d[4],L+283,504,257,91,4,'branch')
     elif mode in ('return-loop','loop-choice'):
         for i,item in enumerate(d[:4]):
-            col=i%2;row=i//2
+            # 1 upper-left -> 2 upper-right -> 3 lower-right -> 4 lower-left.
+            col,row=((0,0),(1,0),(1,1),(0,1))[i]
             box(c,item,L+col*283,652-row*91,257,73,i)
         link(c,293,614,318,614)
         link(c,450,578,450,563)
         link(c,319,524,293,524)
         link(c,170,488,170,578)
-        small_label(c,'POSSIBLE RETURN TO THE EARLIER PATTERN - NOT A CERTAINTY',81,471)
         box(c,d[4],L,460,W,57,4,'branch')
-        small_label(c,'REVIEW THE FUNCTION; KEEP INDICATED CARE AND ACCESS SUPPORTS',67,392)
+        if mode=='return-loop':
+            link(c,170,488,170,466)
+            c.setStrokeColor(HexColor(LINES));c.setLineWidth(1.4)
+            c.line(36,432,24,432);c.line(24,432,24,615)
+            link(c,24,615,35,615)
+            small_label(c,'SHORT-TERM RESPONSE MAY SHAPE THE NEXT TRIGGER',146,391)
+        else:
+            small_label(c,'THE FIRST FOUR MAY REPEAT; FIFTH IS A SUPPORTED ALTERNATIVE',121,391)
     elif mode=='attention-split':
         box(c,d[0],L,651,257,76,0)
         box(c,d[1],L+283,651,257,76,1)
@@ -175,8 +182,8 @@ def write_page(out,t,mode):
     c.roundRect(36,41,540,99,5,fill=1,stroke=1)
     line_text(c,46,126,'SAFETY & SCOPE - DO NOT REPLACE CLINICAL ASSESSMENT',8.2,True)
     wrapped(c,t['safety'],46,112,518,size=7.55,leading=10,max_lines=7)
-    line_text(c,36,29,'CPL | original teaching aid | clinical & accessibility review pending | source and evidence at:',7)
-    line_text(c,36,18,'clinical-practice-library.vercel.app/resources/clinical-topics/'+t['slug']+'/support-map.html',7)
+    line_text(c,36,29,'CPL | review-only teaching aid | unvalidated | source: GitHub SophiaKorb/clinical-practice-library',7)
+    line_text(c,36,18,'Colorful branch: resources/clinical-topics/'+t['slug']+'/support-map.html',7)
     c.showPage();c.save()
 
 def main():
