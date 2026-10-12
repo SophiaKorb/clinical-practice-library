@@ -222,3 +222,30 @@ body[data-experience="clarity"] .steps a.is-complete{background:#edf6f1;border-c
  .stage-7 .stage-node:not(:last-child):before{display:none}
 }
 @media print{.steps a.is-complete:after{display:none}}
+
+/* Responsive title, explicit contrast, and reference hierarchy. */
+.hero-copy{container-type:inline-size}
+.hero h1 .course-title-line{display:block;white-space:nowrap;overflow-wrap:normal;word-break:normal}
+body[data-experience="studio"] .hero h1{font-size:clamp(1.5rem,12cqw,6.7rem);line-height:1.06;letter-spacing:-.045em}
+body[data-experience="clarity"] .hero h1{font-size:clamp(1.5rem,10cqw,4.5rem)}
+.course-byline{font-size:1rem;font-weight:700;color:#344e4b;margin:14px 0 18px}
+body[data-experience="studio"] .course-byline{color:#f4d8a2}
+body[data-experience="studio"] .audience-content,
+body[data-experience="studio"] .audience-content p,
+body[data-experience="studio"] .audience-expand-indicator{color:#f1eff4}
+body[data-experience="studio"] .number{color:#fff}
+.stage-node.feature b{color:#fff5e8}
+.stage-node.feature span,.stage-node.feature .node-index{color:#f0eaf5}
+.stage-5 .stage-node.feature{background:#273b54}
+body[data-experience="studio"] .doc-guide{color:#253837}
+.documentation-appendix{padding:0;overflow:hidden}
+.documentation-appendix>summary{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:20px 24px;list-style:none;color:#264d3b;font-weight:750}
+.documentation-appendix>summary::-webkit-details-marker{display:none}
+.documentation-appendix[open]>summary{border-bottom:1px solid #c9d7d3}
+.documentation-appendix[open]>summary .expand-arrow{transform:rotate(45deg)}
+.documentation-appendix-content{padding:20px 24px}
+@media print{
+ .course-byline{color:#000!important}
+ .documentation-appendix-content{display:block!important}
+ .hero h1 .course-title-line{display:inline}
+}
