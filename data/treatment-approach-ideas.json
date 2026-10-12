@@ -1,0 +1,1006 @@
+{
+  "version": "2026-10-12",
+  "scope": "Collaborative examples; no universal targets or clinical mandates. Differential assessment, safety, medical needs, age and consent govern selection.",
+  "approaches": [
+    "Thinking & meaning",
+    "Environment & access",
+    "Behavior & practice",
+    "People & support",
+    "Routines & regulation",
+    "Values & autonomy"
+  ],
+  "ideas": [
+    {
+      "id": "anxiety-1",
+      "presentation": "anxiety",
+      "approach": "Thinking & meaning",
+      "title": "Test a frightening prediction",
+      "try": "Choose one manageable prediction such as 'I will lose control in the meeting.' Write what happened after the meeting, including surprises.",
+      "measure": "Compare prediction with observation, not simply whether anxiety dropped."
+    },
+    {
+      "id": "anxiety-2",
+      "presentation": "anxiety",
+      "approach": "Environment & access",
+      "title": "Reduce avoidable sensory load",
+      "try": "Try turning off unneeded alerts, moving to a quieter seat, or asking for written directions for two work periods.",
+      "measure": "Track participation and mental effort with and without the change."
+    },
+    {
+      "id": "anxiety-3",
+      "presentation": "anxiety",
+      "approach": "Environment & access",
+      "title": "Make expectations predictable",
+      "try": "Ask for an agenda, a specific starting time, or clear next steps before one stressful event.",
+      "measure": "Record whether the information improved access and decision-making."
+    },
+    {
+      "id": "anxiety-4",
+      "presentation": "anxiety",
+      "approach": "Behavior & practice",
+      "title": "Make one choice without extra reassurance",
+      "try": "Choose a low-stakes decision, decide with the available information, and return to a meaningful task without repeated checking.",
+      "measure": "Notice extra reassurance attempts and whether the action was completed."
+    },
+    {
+      "id": "anxiety-5",
+      "presentation": "anxiety",
+      "approach": "Routines & regulation",
+      "title": "Build a reset routine",
+      "try": "Try a chosen rest, food, movement, or sensory break before a difficult task on three occasions.",
+      "measure": "Compare ability to participate and personal comfort afterward."
+    },
+    {
+      "id": "anxiety-6",
+      "presentation": "anxiety",
+      "approach": "People & support",
+      "title": "Share a useful support request",
+      "try": "Ask one person for concrete help, such as a brief check-in or a written summary, without asking them to guarantee an outcome.",
+      "measure": "Track whether the specific support was available and helpful."
+    },
+    {
+      "id": "anxiety-7",
+      "presentation": "anxiety",
+      "approach": "Values & autonomy",
+      "title": "Act on what matters while uncertain",
+      "try": "Choose one small valued action and try it even if worry is still present, without pressuring yourself to feel calm first.",
+      "measure": "Count meaningful actions and note how freely you could choose."
+    },
+    {
+      "id": "anxiety-8",
+      "presentation": "anxiety",
+      "approach": "Thinking & meaning",
+      "title": "Notice worry versus useful planning",
+      "try": "For one worry, identify what is actionable today and what has no useful next step. Spend ten minutes on the actionable part and move on.",
+      "measure": "Note decisions made and time lost to looping."
+    },
+    {
+      "id": "anxiety-9",
+      "presentation": "anxiety",
+      "approach": "Environment & access",
+      "title": "Adjust an unreasonable demand",
+      "try": "Identify one unnecessary task step, unclear expectation, or inaccessible deadline and negotiate a feasible alternative.",
+      "measure": "Track task completion, effort, and whether the adjustment was accepted."
+    },
+    {
+      "id": "anxiety-10",
+      "presentation": "anxiety",
+      "approach": "Behavior & practice",
+      "title": "Explore a safe avoided situation",
+      "try": "With a clinician when exposure is indicated, select a small step toward a genuinely safe activity and repeat it on two occasions.",
+      "measure": "Track avoidance, participation, and learning rather than forced calm."
+    },
+    {
+      "id": "anxiety-11",
+      "presentation": "anxiety",
+      "approach": "People & support",
+      "title": "Ask for accompaniment, not rescue",
+      "try": "Try having a trusted person join the first attempt at a difficult but safe activity, with an agreed plan to preserve your choice.",
+      "measure": "Record what support enabled and whether it reinforced independence or dependence."
+    },
+    {
+      "id": "anxiety-12",
+      "presentation": "anxiety",
+      "approach": "Values & autonomy",
+      "title": "Protect choice and limits",
+      "try": "Name one demand you can decline or renegotiate. Practice a direct response once without supplying a long justification.",
+      "measure": "Notice whether your boundary was honored and how it affected functioning."
+    },
+    {
+      "id": "depression-1",
+      "presentation": "depression",
+      "approach": "Environment & access",
+      "title": "Lower the barrier to starting",
+      "try": "Put needed materials within reach or use a ready-to-go activity kit for one enjoyable task this week.",
+      "measure": "Note whether access improved and whether effort became more manageable."
+    },
+    {
+      "id": "depression-2",
+      "presentation": "depression",
+      "approach": "Thinking & meaning",
+      "title": "Respond to one self-critical story",
+      "try": "Write down a harsh conclusion after a setback and identify one equally plausible, less condemning account.",
+      "measure": "Track willingness to try the next step afterward."
+    },
+    {
+      "id": "depression-3",
+      "presentation": "depression",
+      "approach": "People & support",
+      "title": "Choose connection on your terms",
+      "try": "Ask a supportive person for a short shared activity instead of an open-ended social obligation.",
+      "measure": "Notice connection quality and energy cost."
+    },
+    {
+      "id": "depression-4",
+      "presentation": "depression",
+      "approach": "Values & autonomy",
+      "title": "Protect one personally meaningful role",
+      "try": "Pick a small step toward being the friend, artist, parent, or community member you want to be.",
+      "measure": "Record meaningful participation, not just mood improvement."
+    },
+    {
+      "id": "bipolar-1",
+      "presentation": "bipolar",
+      "approach": "Environment & access",
+      "title": "Protect routine from avoidable disruption",
+      "try": "With the care team, reduce one source of unnecessary sleep or schedule disruption and review whether the adjustment works.",
+      "measure": "Track feasible routine consistency and next-day functioning."
+    },
+    {
+      "id": "bipolar-2",
+      "presentation": "bipolar",
+      "approach": "Thinking & meaning",
+      "title": "Name the personal warning pattern",
+      "try": "Describe two changes that have preceded episodes, using your history rather than generic checklists.",
+      "measure": "Check whether you can recognize the pattern and know who to contact."
+    },
+    {
+      "id": "bipolar-3",
+      "presentation": "bipolar",
+      "approach": "People & support",
+      "title": "Share the early-response plan",
+      "try": "With consent, agree on one way a trusted supporter can raise a concern and one step the client can choose next.",
+      "measure": "Review clarity, acceptability, and how promptly support can be accessed."
+    },
+    {
+      "id": "bipolar-4",
+      "presentation": "bipolar",
+      "approach": "Values & autonomy",
+      "title": "Preserve meaningful activities safely",
+      "try": "Choose a valued routine that can remain accessible during treatment changes, adjusting the intensity with the care team.",
+      "measure": "Track participation and stability rather than productivity alone."
+    },
+    {
+      "id": "gad-1",
+      "presentation": "gad",
+      "approach": "Thinking & meaning",
+      "title": "Separate predictions from facts",
+      "try": "For a recurring worry, write the specific feared outcome, available evidence, and what remains unknown. Revisit after one real opportunity.",
+      "measure": "Count decisions or actions completed without resolving all uncertainty."
+    },
+    {
+      "id": "gad-2",
+      "presentation": "gad",
+      "approach": "Environment & access",
+      "title": "Ask for clearer information",
+      "try": "Replace one vague responsibility with a written next step, named contact, or predictable deadline.",
+      "measure": "Track the amount of time spent seeking clarification and task completion."
+    },
+    {
+      "id": "gad-3",
+      "presentation": "gad",
+      "approach": "Behavior & practice",
+      "title": "Delay unnecessary checking",
+      "try": "If checking is not needed for safety, agree to postpone one repeated check and return to a valued action.",
+      "measure": "Track checking frequency and ability to carry on while unsure."
+    },
+    {
+      "id": "gad-4",
+      "presentation": "gad",
+      "approach": "Routines & regulation",
+      "title": "Schedule practical problem-solving",
+      "try": "Set a brief time for one actionable problem; afterward, practice returning attention to the current activity.",
+      "measure": "Notice decisions made and time spent revisiting the same issue."
+    },
+    {
+      "id": "panic-1",
+      "presentation": "panic",
+      "approach": "Thinking & meaning",
+      "title": "Review the feared meaning of sensations",
+      "try": "With your clinician, compare a catastrophic prediction about a familiar panic sensation with what has been observed medically and in practice.",
+      "measure": "Track conviction in the prediction and participation."
+    },
+    {
+      "id": "panic-2",
+      "presentation": "panic",
+      "approach": "Environment & access",
+      "title": "Create a navigable route",
+      "try": "For a safe destination, choose a practical route, clear directions, and an accessible exit without turning the plan into repeated escape checking.",
+      "measure": "Track whether access improves and which supports are genuinely needed."
+    },
+    {
+      "id": "panic-3",
+      "presentation": "panic",
+      "approach": "Behavior & practice",
+      "title": "Practice safe interoceptive learning",
+      "try": "When medically appropriate and clinician-guided, try a small sensation exercise and review what was predicted versus what happened.",
+      "measure": "Record learning and willingness to participate, not just symptom intensity."
+    },
+    {
+      "id": "panic-4",
+      "presentation": "panic",
+      "approach": "People & support",
+      "title": "Explain the support that helps",
+      "try": "Agree on a response a trusted person can offer during panic that avoids excessive reassurance while respecting medical needs.",
+      "measure": "Review whether the support maintains choice and activity."
+    },
+    {
+      "id": "social-1",
+      "presentation": "social",
+      "approach": "Thinking & meaning",
+      "title": "Test the mind-reading story",
+      "try": "After a chosen interaction, compare a feared judgment with the actual information available rather than assuming you know what others thought.",
+      "measure": "Notice self-criticism and willingness to interact again."
+    },
+    {
+      "id": "social-2",
+      "presentation": "social",
+      "approach": "Environment & access",
+      "title": "Choose a workable social setting",
+      "try": "Try a smaller gathering, a quiet meeting space, or a structured activity that suits your sensory and social needs.",
+      "measure": "Compare comfort, participation and authenticity across settings."
+    },
+    {
+      "id": "social-3",
+      "presentation": "social",
+      "approach": "Behavior & practice",
+      "title": "Reduce one safety performance",
+      "try": "In an agreed, safe conversation, practice speaking without rehearsing every sentence or apologizing automatically.",
+      "measure": "Track engagement, predicted outcomes, and the aftermath."
+    },
+    {
+      "id": "social-4",
+      "presentation": "social",
+      "approach": "People & support",
+      "title": "Practice a genuine connection bid",
+      "try": "Send a specific invitation or ask a question about an interest you share with someone.",
+      "measure": "Notice reciprocity and whether the connection feels worthwhile."
+    },
+    {
+      "id": "phobia-1",
+      "presentation": "phobia",
+      "approach": "Thinking & meaning",
+      "title": "Compare expectation with observation",
+      "try": "Before an agreed safe step toward the feared situation, name the predicted consequence; afterward, note what actually occurred.",
+      "measure": "Track learning from the attempt, not whether fear vanished."
+    },
+    {
+      "id": "phobia-2",
+      "presentation": "phobia",
+      "approach": "Environment & access",
+      "title": "Make the activity accessible",
+      "try": "Separate real sensory, physical or safety barriers from the feared cue and address a concrete access barrier first.",
+      "measure": "Track whether participation becomes possible without invalidating the fear."
+    },
+    {
+      "id": "phobia-3",
+      "presentation": "phobia",
+      "approach": "Behavior & practice",
+      "title": "Build a collaborative approach ladder",
+      "try": "With an appropriate clinician, choose two manageable steps toward a safe valued activity, allowing assent and pacing.",
+      "measure": "Record approach attempts and functional access."
+    },
+    {
+      "id": "phobia-4",
+      "presentation": "phobia",
+      "approach": "People & support",
+      "title": "Plan supported participation",
+      "try": "Ask a caregiver or trusted companion to support a first step without forcing, shaming, or taking over.",
+      "measure": "Track the person's choice, participation and trust."
+    },
+    {
+      "id": "ocd-1",
+      "presentation": "ocd",
+      "approach": "Thinking & meaning",
+      "title": "Label the uncertainty loop",
+      "try": "During an agreed ERP plan, notice when a thought asks for impossible certainty rather than a genuinely new safety fact.",
+      "measure": "Track time spent in mental reviewing and progress with valued actions."
+    },
+    {
+      "id": "ocd-2",
+      "presentation": "ocd",
+      "approach": "Environment & access",
+      "title": "Reduce ritual invitations in routines",
+      "try": "With the person and clinician, change one predictable family or setting cue that unnecessarily prompts reassurance or accommodation.",
+      "measure": "Track ritual-support requests and respectful alternative responses."
+    },
+    {
+      "id": "ocd-3",
+      "presentation": "ocd",
+      "approach": "Behavior & practice",
+      "title": "Practice response prevention",
+      "try": "With an ERP clinician, choose a manageable exposure and practice not doing the agreed overt or mental ritual while continuing the valued task.",
+      "measure": "Track response prevention and functional participation."
+    },
+    {
+      "id": "ocd-4",
+      "presentation": "ocd",
+      "approach": "People & support",
+      "title": "Rehearse a supportive, non-reassuring reply",
+      "try": "Choose one brief validating answer to a repeated OCD reassurance request and practice it consistently by agreement.",
+      "measure": "Track accommodation, agency and quality of support."
+    },
+    {
+      "id": "bdd-1",
+      "presentation": "bdd",
+      "approach": "Thinking & meaning",
+      "title": "Notice appearance certainty-seeking",
+      "try": "Identify a specific appearance judgment and the checking or comparison cycle that follows, without arguing about whether the judgment is true.",
+      "measure": "Track time spent pursuing certainty and activities missed."
+    },
+    {
+      "id": "bdd-2",
+      "presentation": "bdd",
+      "approach": "Environment & access",
+      "title": "Reduce unnecessary checking triggers",
+      "try": "Try moving a magnifying mirror or social-media comparison cue out of one daily routine with agreement.",
+      "measure": "Notice time recovered and participation, not appearance ratings."
+    },
+    {
+      "id": "bdd-3",
+      "presentation": "bdd",
+      "approach": "Behavior & practice",
+      "title": "Return to an avoided activity",
+      "try": "With suitable clinical support, practice one chosen activity while reducing an agreed checking or concealment ritual.",
+      "measure": "Track engagement and safety behaviors."
+    },
+    {
+      "id": "bdd-4",
+      "presentation": "bdd",
+      "approach": "People & support",
+      "title": "Ask for functional rather than appearance feedback",
+      "try": "Agree with a supporter on replies that emphasize needs, choice and activity rather than repeated attractiveness reassurance.",
+      "measure": "Track usefulness and checking requests."
+    },
+    {
+      "id": "ptsd-1",
+      "presentation": "ptsd",
+      "approach": "Environment & access",
+      "title": "Make one setting genuinely safer",
+      "try": "Identify a current environmental cue that creates an avoidable access or safety problem and change it where possible.",
+      "measure": "Track felt safety, choice and participation after the change."
+    },
+    {
+      "id": "ptsd-2",
+      "presentation": "ptsd",
+      "approach": "Thinking & meaning",
+      "title": "Distinguish now from then",
+      "try": "With clinician support, identify one concrete piece of present-day information that can help orient during a trauma reminder.",
+      "measure": "Track the ability to regain orientation and make a choice."
+    },
+    {
+      "id": "ptsd-3",
+      "presentation": "ptsd",
+      "approach": "Behavior & practice",
+      "title": "Return to one safe valued activity",
+      "try": "Collaboratively plan a tolerable return to an activity that is currently safe but restricted by reminders.",
+      "measure": "Track choice, participation and avoidance without forced exposure."
+    },
+    {
+      "id": "ptsd-4",
+      "presentation": "ptsd",
+      "approach": "People & support",
+      "title": "Agree on trauma-informed support",
+      "try": "Tell a trusted person one way to offer options, consent and predictability when reminders arise.",
+      "measure": "Track whether support respects boundaries and aids recovery."
+    },
+    {
+      "id": "adjustment-1",
+      "presentation": "adjustment",
+      "approach": "Thinking & meaning",
+      "title": "Reconsider an impossible standard",
+      "try": "Name one expectation that suited the previous situation but no longer fits. Choose a workable temporary alternative.",
+      "measure": "Review strain and actual follow-through."
+    },
+    {
+      "id": "adjustment-2",
+      "presentation": "adjustment",
+      "approach": "Environment & access",
+      "title": "Change the daily setup",
+      "try": "Move a task, share one responsibility or reduce an unnecessary deadline conflict while adapting to the transition.",
+      "measure": "Track hours or effort recovered and essential tasks completed."
+    },
+    {
+      "id": "adjustment-3",
+      "presentation": "adjustment",
+      "approach": "People & support",
+      "title": "Make support specific",
+      "try": "Ask someone for one defined kind of help this week instead of a vague offer to 'be available.'",
+      "measure": "Notice whether help arrives and preserves agency."
+    },
+    {
+      "id": "adjustment-4",
+      "presentation": "adjustment",
+      "approach": "Values & autonomy",
+      "title": "Keep one continuity ritual",
+      "try": "Choose an activity that connects past values with the new life situation and try it once this week.",
+      "measure": "Rate its personal meaning and practical feasibility."
+    },
+    {
+      "id": "grief-1",
+      "presentation": "grief",
+      "approach": "Thinking & meaning",
+      "title": "Allow mixed feelings without judgment",
+      "try": "When grief and enjoyment occur together, try naming both experiences without treating one as a betrayal of the other.",
+      "measure": "Notice freedom to participate in the moment."
+    },
+    {
+      "id": "grief-2",
+      "presentation": "grief",
+      "approach": "Environment & access",
+      "title": "Make space for reminders and rest",
+      "try": "Choose when and where to engage with belongings or memories, including the option to pause, instead of reacting to every cue.",
+      "measure": "Track sense of choice and daily functioning."
+    },
+    {
+      "id": "grief-3",
+      "presentation": "grief",
+      "approach": "People & support",
+      "title": "Ask for the kind of presence you want",
+      "try": "Tell one supporter whether you want company, practical assistance or time to talk about the person.",
+      "measure": "Notice support fit and connection."
+    },
+    {
+      "id": "grief-4",
+      "presentation": "grief",
+      "approach": "Values & autonomy",
+      "title": "Carry a chosen connection forward",
+      "try": "Try a remembrance activity that fits your own beliefs and relationships rather than a prescribed stage of grief.",
+      "measure": "Reflect on meaning and whether it remains your choice."
+    },
+    {
+      "id": "dissociation-1",
+      "presentation": "dissociation",
+      "approach": "Thinking & meaning",
+      "title": "Name experiences without blame",
+      "try": "With appropriate clinical support, replace a self-critical explanation for a memory gap with a descriptive account of what is known and unknown.",
+      "measure": "Track shame, cooperation and ability to plan safely."
+    },
+    {
+      "id": "dissociation-2",
+      "presentation": "dissociation",
+      "approach": "Environment & access",
+      "title": "Create consistent orientation cues",
+      "try": "Try a visible date board, predictable room setup or quiet grounding location chosen by the person.",
+      "measure": "Notice orientation and access without imposing sensory input."
+    },
+    {
+      "id": "dissociation-3",
+      "presentation": "dissociation",
+      "approach": "People & support",
+      "title": "Agree on consent-respecting assistance",
+      "try": "Ask a trusted person to use one chosen orientation prompt and to stop if it becomes intrusive.",
+      "measure": "Track felt control, distress and usefulness."
+    },
+    {
+      "id": "dissociation-4",
+      "presentation": "dissociation",
+      "approach": "Values & autonomy",
+      "title": "Keep continuity around valued tasks",
+      "try": "Use a consensual note or reminder for one personally meaningful daily task and review whether it supports cooperation.",
+      "measure": "Track continuity, autonomy and conflict."
+    },
+    {
+      "id": "bpd-1",
+      "presentation": "bpd",
+      "approach": "Thinking & meaning",
+      "title": "Hold more than one interpretation",
+      "try": "After a manageable relational misunderstanding, name two possible explanations before drawing a conclusion.",
+      "measure": "Notice urges to act immediately and whether communication improves."
+    },
+    {
+      "id": "bpd-2",
+      "presentation": "bpd",
+      "approach": "Environment & access",
+      "title": "Create a predictable pause option",
+      "try": "Agree with a partner on a clear break-and-return routine before a difficult discussion, without using silence as punishment.",
+      "measure": "Track whether breaks protect safety and lead to return."
+    },
+    {
+      "id": "bpd-3",
+      "presentation": "bpd",
+      "approach": "Behavior & practice",
+      "title": "Practice one alternative to escalation",
+      "try": "Rehearse a preferred distress-tolerance or direct-request step when emotions are moderate, then review actual use.",
+      "measure": "Track safety, agency and communication."
+    },
+    {
+      "id": "bpd-4",
+      "presentation": "bpd",
+      "approach": "People & support",
+      "title": "Ask directly rather than test",
+      "try": "Try one clear request for contact, information or boundaries without withdrawing or escalating as an indirect signal.",
+      "measure": "Notice whether the request is understood and respected."
+    },
+    {
+      "id": "personality-1",
+      "presentation": "personality",
+      "approach": "Thinking & meaning",
+      "title": "Check the familiar relationship story",
+      "try": "Identify an assumption about another person's intention and ask what current evidence does or does not support it.",
+      "measure": "Track flexibility and chosen responses."
+    },
+    {
+      "id": "personality-2",
+      "presentation": "personality",
+      "approach": "Environment & access",
+      "title": "Change a recurring conflict setup",
+      "try": "Move an important conversation out of a rushed or public setting and agree on a manageable time.",
+      "measure": "Track whether choice and mutual understanding improve."
+    },
+    {
+      "id": "personality-3",
+      "presentation": "personality",
+      "approach": "People & support",
+      "title": "Practice a boundary without attacking",
+      "try": "State one preference or limit clearly while making room for the other person's response and safety.",
+      "measure": "Notice follow-through and relational impact."
+    },
+    {
+      "id": "personality-4",
+      "presentation": "personality",
+      "approach": "Values & autonomy",
+      "title": "Choose a response that fits identity",
+      "try": "Before one difficult interaction, identify the kind of person you want to be and one workable behavior that expresses that value.",
+      "measure": "Track value-consistent actions rather than conflict avoidance."
+    },
+    {
+      "id": "psychosis-1",
+      "presentation": "psychosis",
+      "approach": "Thinking & meaning",
+      "title": "Explore distress without arguing over beliefs",
+      "try": "With the clinician, focus on what an experience means to the person and what affects distress, while keeping dialogue collaborative.",
+      "measure": "Track distress and ability to do chosen activities."
+    },
+    {
+      "id": "psychosis-2",
+      "presentation": "psychosis",
+      "approach": "Environment & access",
+      "title": "Reduce avoidable stressors",
+      "try": "Try one practical adjustment such as quieter space, predictable instructions or reduced task load while maintaining needed care.",
+      "measure": "Track participation, stress and support availability."
+    },
+    {
+      "id": "psychosis-3",
+      "presentation": "psychosis",
+      "approach": "People & support",
+      "title": "Clarify a recovery support plan",
+      "try": "Choose one trusted contact and an agreed way to ask for help when experiences become harder to manage.",
+      "measure": "Track access to support and self-defined recovery."
+    },
+    {
+      "id": "psychosis-4",
+      "presentation": "psychosis",
+      "approach": "Values & autonomy",
+      "title": "Protect a chosen role",
+      "try": "Select a personally important activity and identify the accommodations needed to take part safely.",
+      "measure": "Track satisfaction, choice and participation."
+    },
+    {
+      "id": "adhd-1",
+      "presentation": "adhd",
+      "approach": "Thinking & meaning",
+      "title": "Replace moral judgments with task information",
+      "try": "After a delayed task, identify whether the obstacle was starting, remembering, sequencing or accessing materials instead of calling it laziness.",
+      "measure": "Track which change improves follow-through."
+    },
+    {
+      "id": "adhd-2",
+      "presentation": "adhd",
+      "approach": "Environment & access",
+      "title": "Put the next step where it happens",
+      "try": "Place a single visual cue and required materials at the real starting location for one task.",
+      "measure": "Track time to start and prompts needed."
+    },
+    {
+      "id": "adhd-3",
+      "presentation": "adhd",
+      "approach": "Behavior & practice",
+      "title": "Try a two-minute entry step",
+      "try": "For one chosen task, commit only to opening the file, placing the first item or completing another visible beginning.",
+      "measure": "Track starts versus opportunities, with supports."
+    },
+    {
+      "id": "adhd-4",
+      "presentation": "adhd",
+      "approach": "People & support",
+      "title": "Request accountability that helps",
+      "try": "Ask a supportive person for a brief body-double session or neutral check-in without criticism.",
+      "measure": "Track task completion and whether support feels acceptable."
+    },
+    {
+      "id": "autism-1",
+      "presentation": "autism",
+      "approach": "Thinking & meaning",
+      "title": "Validate the communication mismatch",
+      "try": "When a social task goes poorly, compare interpretations such as lack of clarity, different expectations or sensory overload rather than assuming deficient motivation.",
+      "measure": "Track whether needs are understood."
+    },
+    {
+      "id": "autism-2",
+      "presentation": "autism",
+      "approach": "Environment & access",
+      "title": "Change the sensory and instruction load",
+      "try": "Offer a quiet option, visual schedule or written sequence chosen with the autistic person.",
+      "measure": "Track access, overload and decision-making."
+    },
+    {
+      "id": "autism-3",
+      "presentation": "autism",
+      "approach": "People & support",
+      "title": "Make refusal a real choice",
+      "try": "Build yes, no, not now and another option into one everyday decision using the person's communication mode.",
+      "measure": "Track whether choices are respected."
+    },
+    {
+      "id": "autism-4",
+      "presentation": "autism",
+      "approach": "Values & autonomy",
+      "title": "Choose goals beyond normalization",
+      "try": "Ask what matters to the person, including belonging, autonomy, interests and support, without targeting harmless autistic traits.",
+      "measure": "Track personally meaningful participation and agency."
+    },
+    {
+      "id": "id-1",
+      "presentation": "id",
+      "approach": "Thinking & meaning",
+      "title": "Make information understandable",
+      "try": "Try explaining one real choice with short language, images and time to respond, then check comprehension without leading.",
+      "measure": "Notice whether the person can express their actual preference."
+    },
+    {
+      "id": "id-2",
+      "presentation": "id",
+      "approach": "Environment & access",
+      "title": "Remove a preventable access barrier",
+      "try": "Change one environment, instruction or communication format that stops participation in a chosen activity.",
+      "measure": "Track access and required support."
+    },
+    {
+      "id": "id-3",
+      "presentation": "id",
+      "approach": "People & support",
+      "title": "Honor refusal and consent",
+      "try": "Offer a genuine no or later option in a routine choice, using supported communication as needed.",
+      "measure": "Track opportunities offered and choices honored."
+    },
+    {
+      "id": "id-4",
+      "presentation": "id",
+      "approach": "Values & autonomy",
+      "title": "Build on existing strengths",
+      "try": "Choose one preferred activity and identify the minimum practical assistance required to participate meaningfully.",
+      "measure": "Track participation and autonomy, not independence for its own sake."
+    },
+    {
+      "id": "disruptive-1",
+      "presentation": "disruptive",
+      "approach": "Thinking & meaning",
+      "title": "Look for the unmet function",
+      "try": "In one repeated conflict, consider whether unclear directions, a difficult task, sensory load or relational stress precede escalation.",
+      "measure": "Compare contexts and support responses without labeling intent."
+    },
+    {
+      "id": "disruptive-2",
+      "presentation": "disruptive",
+      "approach": "Environment & access",
+      "title": "Prevent a predictable conflict",
+      "try": "Shorten an unclear instruction, prepare materials or change a transition routine with the young person's input.",
+      "measure": "Track conflict and task access."
+    },
+    {
+      "id": "disruptive-3",
+      "presentation": "disruptive",
+      "approach": "Behavior & practice",
+      "title": "Practice a replacement request",
+      "try": "During a calm moment, teach and rehearse a clear break, help or return request for one common trigger.",
+      "measure": "Record use and adult follow-through."
+    },
+    {
+      "id": "disruptive-4",
+      "presentation": "disruptive",
+      "approach": "People & support",
+      "title": "Coordinate adult responses",
+      "try": "Agree among caregivers on one calm response to the child's replacement request and avoid escalating power struggles.",
+      "measure": "Track consistency and felt safety."
+    },
+    {
+      "id": "anger-1",
+      "presentation": "anger",
+      "approach": "Thinking & meaning",
+      "title": "Spot the interpretation before escalation",
+      "try": "After a low-stakes frustration, name an assumption about intent and consider another explanation before responding.",
+      "measure": "Track flexibility and the chosen next action."
+    },
+    {
+      "id": "anger-2",
+      "presentation": "anger",
+      "approach": "Environment & access",
+      "title": "Build a safe pause point",
+      "try": "Agree on an exit to a quiet space or a pause-and-return arrangement that does not trap others in conflict.",
+      "measure": "Track safer exits and return to discussion."
+    },
+    {
+      "id": "anger-3",
+      "presentation": "anger",
+      "approach": "Behavior & practice",
+      "title": "Rehearse a safer first response",
+      "try": "Practice a concrete step such as stepping away, asking for help or stating a boundary during two calm moments.",
+      "measure": "Track use during real early-warning opportunities."
+    },
+    {
+      "id": "anger-4",
+      "presentation": "anger",
+      "approach": "People & support",
+      "title": "Repair without demanding forgiveness",
+      "try": "After a manageable conflict, acknowledge the impact and offer a specific corrective action while respecting the other person's choice.",
+      "measure": "Track safety and actual follow-through."
+    },
+    {
+      "id": "sud-1",
+      "presentation": "sud",
+      "approach": "Thinking & meaning",
+      "title": "Explore the trade-off without shame",
+      "try": "Write down one reason for current substance use and one personally important cost or concern, then choose what to examine next.",
+      "measure": "Track clarity and readiness for change, not compliance."
+    },
+    {
+      "id": "sud-2",
+      "presentation": "sud",
+      "approach": "Environment & access",
+      "title": "Adjust one high-risk context",
+      "try": "With the treatment team, identify a practical environment change that reduces exposure to an unwanted trigger or makes support easier to reach.",
+      "measure": "Track harm events and feasibility."
+    },
+    {
+      "id": "sud-3",
+      "presentation": "sud",
+      "approach": "People & support",
+      "title": "Identify low-barrier help",
+      "try": "Find one person or service the client is willing and able to contact when support is needed; rehearse how to reach them.",
+      "measure": "Track support access and usefulness."
+    },
+    {
+      "id": "sud-4",
+      "presentation": "sud",
+      "approach": "Values & autonomy",
+      "title": "Set a personally meaningful change goal",
+      "try": "Choose one collaborative, clinically appropriate next step toward reducing harm or meeting the client's stated recovery goal.",
+      "measure": "Track relevant function and harms without punishment."
+    },
+    {
+      "id": "anorexia-1",
+      "presentation": "anorexia",
+      "approach": "Thinking & meaning",
+      "title": "Notice a recovery-blocking rule",
+      "try": "With the eating-disorder team, identify one rigid rule interfering with specialist-agreed care and review its role without negotiating medical necessity.",
+      "measure": "Track engagement with team-approved care."
+    },
+    {
+      "id": "anorexia-2",
+      "presentation": "anorexia",
+      "approach": "Environment & access",
+      "title": "Reduce access barriers to treatment",
+      "try": "With the care team, arrange privacy, transportation, predictable appointments or other practical access needs.",
+      "measure": "Track attendance and barriers addressed."
+    },
+    {
+      "id": "anorexia-3",
+      "presentation": "anorexia",
+      "approach": "People & support",
+      "title": "Specify helpful meal support",
+      "try": "Ask the specialist team and trusted supporters to agree on one respectful, non-coercive form of assistance.",
+      "measure": "Track participation, safety and experienced support."
+    },
+    {
+      "id": "anorexia-4",
+      "presentation": "anorexia",
+      "approach": "Values & autonomy",
+      "title": "Preserve identity beyond symptoms",
+      "try": "Choose a valued relationship, interest or role that can be supported during treatment without compromising medical care.",
+      "measure": "Track meaningful participation."
+    },
+    {
+      "id": "bulimia-1",
+      "presentation": "bulimia",
+      "approach": "Thinking & meaning",
+      "title": "Examine shame without punitive tracking",
+      "try": "With the clinician, identify a harsh conclusion after an episode and practice a compassionate next step toward the agreed recovery plan.",
+      "measure": "Track return to treatment, not self-punishment."
+    },
+    {
+      "id": "bulimia-2",
+      "presentation": "bulimia",
+      "approach": "Environment & access",
+      "title": "Improve access to approved support",
+      "try": "Arrange private check-ins, predictable treatment contact or practical assistance for the care plan.",
+      "measure": "Track barriers and adherence to team-agreed care."
+    },
+    {
+      "id": "bulimia-3",
+      "presentation": "bulimia",
+      "approach": "People & support",
+      "title": "Plan one supportive response",
+      "try": "Agree on how a trusted person can respond helpfully to distress without policing, shaming or encouraging rituals.",
+      "measure": "Track perceived support and clinical participation."
+    },
+    {
+      "id": "bulimia-4",
+      "presentation": "bulimia",
+      "approach": "Values & autonomy",
+      "title": "Reclaim an activity unrelated to food or weight",
+      "try": "Choose one meaningful activity that can be sustained safely alongside eating-disorder treatment.",
+      "measure": "Track access, enjoyment and personal connection."
+    },
+    {
+      "id": "arfid-1",
+      "presentation": "arfid",
+      "approach": "Thinking & meaning",
+      "title": "Name the actual barrier",
+      "try": "With appropriate assessment, distinguish sensory sensitivity, fear of aversive consequences and limited interest rather than assuming defiance.",
+      "measure": "Track whether support matches the identified need."
+    },
+    {
+      "id": "arfid-2",
+      "presentation": "arfid",
+      "approach": "Environment & access",
+      "title": "Make eating access more predictable",
+      "try": "With specialist guidance, change one sensory or scheduling barrier, such as seating, noise or a clear menu preview.",
+      "measure": "Track safe participation and tolerability."
+    },
+    {
+      "id": "arfid-3",
+      "presentation": "arfid",
+      "approach": "People & support",
+      "title": "Create a usable needs signal",
+      "try": "Agree on a simple way to ask for a pause, help or a suitable option during eating-related activities.",
+      "measure": "Track whether needs are recognized and honored."
+    },
+    {
+      "id": "arfid-4",
+      "presentation": "arfid",
+      "approach": "Values & autonomy",
+      "title": "Protect dignity and choice",
+      "try": "Include the person in decisions about the pace and form of team-approved feeding practices rather than requiring public performance.",
+      "measure": "Track agency and participation."
+    },
+    {
+      "id": "sleep-1",
+      "presentation": "sleep",
+      "approach": "Thinking & meaning",
+      "title": "Reduce sleep-performance pressure",
+      "try": "With appropriate CBT-I guidance, notice one 'I must sleep now' rule and choose a less adversarial response to wakefulness.",
+      "measure": "Track sleep-related distress and daytime function."
+    },
+    {
+      "id": "sleep-2",
+      "presentation": "sleep",
+      "approach": "Environment & access",
+      "title": "Change one practical sleep barrier",
+      "try": "Adjust a manageable source of light, noise or interruptions consistent with medical and caregiving needs.",
+      "measure": "Track comfort and next-day functioning."
+    },
+    {
+      "id": "sleep-3",
+      "presentation": "sleep",
+      "approach": "Behavior & practice",
+      "title": "Try a feasible wake routine",
+      "try": "With clinician input where indicated, choose one consistent morning step that fits real-life responsibilities.",
+      "measure": "Track feasibility and daytime function."
+    },
+    {
+      "id": "sleep-4",
+      "presentation": "sleep",
+      "approach": "People & support",
+      "title": "Negotiate shared sleep needs",
+      "try": "Ask a household member for one concrete change that makes rest more accessible while respecting everyone's needs.",
+      "measure": "Review whether the accommodation worked."
+    },
+    {
+      "id": "somatic-1",
+      "presentation": "somatic",
+      "approach": "Thinking & meaning",
+      "title": "Balance uncertainty with medical care",
+      "try": "Identify one catastrophic interpretation of a familiar symptom, then discuss alternative explanations and appropriate follow-up with the clinician.",
+      "measure": "Track functional impact without dismissing symptoms."
+    },
+    {
+      "id": "somatic-2",
+      "presentation": "somatic",
+      "approach": "Environment & access",
+      "title": "Make valued activity accessible",
+      "try": "Modify pacing, location or physical setup for one important activity while following appropriate medical advice.",
+      "measure": "Track participation and after-effects."
+    },
+    {
+      "id": "somatic-3",
+      "presentation": "somatic",
+      "approach": "Behavior & practice",
+      "title": "Reduce unnecessary reassurance loops",
+      "try": "Only after determining what monitoring is medically indicated, try one agreed reduction in repetitive non-indicated checking.",
+      "measure": "Track checking and meaningful activity."
+    },
+    {
+      "id": "somatic-4",
+      "presentation": "somatic",
+      "approach": "People & support",
+      "title": "Agree on consistent medical communication",
+      "try": "Choose one appropriate contact plan with the medical team to avoid fragmented, confusing advice.",
+      "measure": "Track clarity and care access."
+    },
+    {
+      "id": "pain-1",
+      "presentation": "pain",
+      "approach": "Thinking & meaning",
+      "title": "Notice all-or-nothing activity judgments",
+      "try": "After a difficult day, test whether a small adapted version of a valued activity can still count as meaningful participation.",
+      "measure": "Track choice and impact rather than pain elimination."
+    },
+    {
+      "id": "pain-2",
+      "presentation": "pain",
+      "approach": "Environment & access",
+      "title": "Adapt the task setup",
+      "try": "Try ergonomic, sensory or scheduling supports for a valued activity, guided by clinical and medical advice as appropriate.",
+      "measure": "Track ability to participate and flare effects."
+    },
+    {
+      "id": "pain-3",
+      "presentation": "pain",
+      "approach": "Behavior & practice",
+      "title": "Try sustainable pacing",
+      "try": "Choose a manageable amount of a meaningful activity and review after-effects before increasing it.",
+      "measure": "Track sustainable participation across days."
+    },
+    {
+      "id": "pain-4",
+      "presentation": "pain",
+      "approach": "People & support",
+      "title": "Make assistance specific",
+      "try": "Ask a support person for help with one painful or exhausting step while keeping desired control over the task.",
+      "measure": "Track autonomy, participation and support fit."
+    },
+    {
+      "id": "neurocognitive-1",
+      "presentation": "neurocognitive",
+      "approach": "Thinking & meaning",
+      "title": "Interpret distress as information",
+      "try": "When a familiar routine fails, consider confusion, pain, noise or unmet needs rather than treating the response as willful behavior.",
+      "measure": "Track which context change helps."
+    },
+    {
+      "id": "neurocognitive-2",
+      "presentation": "neurocognitive",
+      "approach": "Environment & access",
+      "title": "Simplify a familiar setting",
+      "try": "Try consistent object placement, a single visual cue, or reduced distraction for one meaningful routine.",
+      "measure": "Track ease, enjoyment and safety."
+    },
+    {
+      "id": "neurocognitive-3",
+      "presentation": "neurocognitive",
+      "approach": "People & support",
+      "title": "Offer supported choices",
+      "try": "Present one or two meaningful, understandable options, allowing time and a genuine decline.",
+      "measure": "Track preferences communicated and honored."
+    },
+    {
+      "id": "neurocognitive-4",
+      "presentation": "neurocognitive",
+      "approach": "Values & autonomy",
+      "title": "Keep a valued identity visible",
+      "try": "With the person and caregivers, choose a familiar hobby or role and adapt its demands so participation remains possible.",
+      "measure": "Track engagement and connection."
+    }
+  ]
+}
