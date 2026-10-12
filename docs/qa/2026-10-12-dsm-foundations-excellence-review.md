@@ -23,12 +23,13 @@ Comparison is by disclosed learning approach and publicly described materials, n
 ## Checks completed
 - Source-level preflight before push: **PASS** (11 lessons, 80 quizzes, 33 worked examples; 3–4 answer controls per question).
 - Branch comparison against `cpl-2-colorful-helpful`: focused changes to course HTML, CSS, and one test file; base remains untouched.
-- Vercel preview creation triggered automatically by the pushed commits.
-- Existing test suite is reviewed but full Node/browser execution has **not** yet been independently completed for this branch.
+- Vercel final-commit preview \`f60c1ad21b73ef49f4c5701026062772ea3e00ba\`: **READY** at https://clinical-practice-library-colorful-gsbvvsnj2-cohon-family.vercel.app/resources/training/dsm-from-zero.html .
+- Verified final deployed course HTML, Studio/Clarity stylesheet, and mode-switch JavaScript all return **HTTP 200**. The deployed HTML contains both revised question texts and the new learning loop; the deployed CSS contains the new responsive layout.
+- Extended source inspection: 11 lesson sections, 80 quiz sections, 33 worked cases, 11 diagrams, 33 glossary terms; zero duplicate IDs, zero missing internal fragment targets, zero answer-choice-count anomalies, and all 80 questions have feedback strings of at least 20 characters. This is a static inspection only.
+- Existing test suite is reviewed but full Node/browser execution has **not** yet been independently completed for this branch. Browser automation could not start because its external browser-service wallet had insufficient funds.
 
 ## Outstanding gate before merging or calling QA complete
-- Confirm final-commit Vercel preview is READY and serves HTML/CSS/JS.
-- Run `node tests/dsm-foundations.cjs` and the related site suite in a checked-out working tree or CI.
+- **PASS:** Final-commit Vercel preview READY; HTML/CSS/JS respond 200.\n- Run `node tests/dsm-foundations.cjs` and the related site suite in a checked-out working tree or CI.
 - Signed-in/authorized real-browser screenshot QA: desktop + Android width; Studio/Clarity toggle, 80-answer feedback, all-questions display, link navigation, glossary filtering, contrast, keyboard navigation, and overflow.
 - Peer clinical review of a representative sample of diagnostic and SUD reasoning items; formal DSM manual remains the criterion authority.
 - Review the changed panel visually in both modes before promotion.
