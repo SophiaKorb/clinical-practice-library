@@ -32,7 +32,8 @@ for i,(topic,m) in enumerate(zip(topics,manifest)):
         assert norm(title).lower() in text.lower(),(file,'missing node title',title)
     if m['mode']=='safety-gate': assert 'VOLUNTARY REPAIR ONLY IF SAFE' in text and 'PROTECT / SAFEGUARD IF UNSAFE' in text
     if m['mode']=='parallel-assess': assert 'PARALLEL, NOT A WAITING SEQUENCE' in text
-    if m['mode'] in ('loop-choice','return-loop'):assert 'POSSIBLE RETURN TO THE EARLIER PATTERN' in text
+    if m['mode']=='return-loop': assert 'SHORT-TERM RESPONSE MAY SHAPE THE NEXT TRIGGER' in text
+    if m['mode']=='loop-choice': assert 'THE FIRST FOUR MAY REPEAT' in text
     assert len(text)>400,(file,'missing content')
     for block in page.get_text('blocks'):
         if not str(block[4]).strip():continue
