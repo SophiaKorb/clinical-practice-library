@@ -1,0 +1,35 @@
+name: Phase 8 topic PDF spatial parity candidates
+on:
+  push:
+    branches: [cpl-2-colorful-helpful]
+    paths:
+      - '.github/workflows/topic-pdf-parity-candidates.yml'
+      - 'scripts/create-topic-pdf-parity-candidates.py'
+      - 'scripts/expansion-topics.py'
+      - 'tests/topic-pdf-parity-candidates.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  generate-inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Install PDF generators and review tools
+        run: python -m pip install --quiet reportlab pymupdf Pillow
+      - name: Generate spatial candidate PDFs without overwriting published PDFs
+        run: python scripts/create-topic-pdf-parity-candidates.py --waves 5
+      - name: Validate all twenty-five structures and render grayscale/color evidence
+        run: python tests/topic-pdf-parity-candidates.py
+      - name: Save candidate PDFs, manifest and visual evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: topic-pdf-parity-candidates
+          path: /tmp/cpl-topic-parity-candidates
+          if-no-files-found: ignore
+          retention-days: 10
