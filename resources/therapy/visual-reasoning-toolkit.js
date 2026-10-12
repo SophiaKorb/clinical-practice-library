@@ -8,7 +8,7 @@ const by=id=>document.getElementById(id);
 function toggle(id,cls){by(id).addEventListener('click',()=>{const on=document.body.classList.toggle(cls);by(id).setAttribute('aria-pressed',String(on));});}
 toggle('client-view','client-view');toggle('contrast','high-contrast');by('print').addEventListener('click',()=>window.print());
 const openedOnlyForPrint=[];
-window.addEventListener('beforeprint',()=>{
+window.addEventListener?.('beforeprint',()=>{
   // A collapsed details summary is not a usable clinician guide on paper.
   // Open only the clinician sections that were previously closed.
   if(document.body.classList.contains('client-view'))return;
@@ -16,7 +16,7 @@ window.addEventListener('beforeprint',()=>{
     if(!panel.open){panel.open=true;openedOnlyForPrint.push(panel);}
   });
 });
-window.addEventListener('afterprint',()=>{
+window.addEventListener?.('afterprint',()=>{
   openedOnlyForPrint.splice(0).forEach(panel=>{panel.open=false;});
 });
 const showBarrier=()=>by('barrier-result').textContent=supports[by('barrier').value];by('barrier').addEventListener('change',showBarrier);showBarrier();
