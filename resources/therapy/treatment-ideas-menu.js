@@ -38,12 +38,6 @@ function makeTarget(family,target){
   addPair(article,'Desired outcome',target.goal);
   addPair(article,'Possible measurable target',target.objective,'idea-detail target-example');
   const bottom=el('div',undefined,'card-end');
-  const more=el('details');
-  more.append(el('summary','Related clinical context'));
-  addPair(more,'Functional need',target.need);
-  addPair(more,'Intervention direction',target.intervention);
-  addPair(more,'Linked progress idea',target.measure);
-  article.append(more);
   bottom.append(makeCopyButton(
     'Goal idea: '+target.goal+'\nPossible measurable target: '+target.objective+'\nAdapt to observed baseline, client priorities, access needs and review interval.',
     target.label
