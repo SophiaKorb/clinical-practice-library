@@ -85,3 +85,37 @@ button.reset:hover{background:#e5f0e9}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 @media(forced-colors:active){.idea-card,.idea-tag,.progress-detail,.approach-choice[aria-pressed="true"]{border:2px solid CanvasText}}
 @media print{header,.menu-controls,.approach-filters,.card-actions,.show-more,.copy-status,.copy-fallback,.menu-notes{display:none!important}body,main,.idea-section,.idea-card{background:white;box-shadow:none}main{padding:0}.menu-hero{padding:0;border:none}.idea-grid{display:block}.idea-card{break-inside:avoid;margin:12px 0}.measure-library:not([open]){display:none}.measure-library summary{border:none}.idea-section{border:0}}
+
+
+/* After rendered-review: show usable choices sooner, particularly on a phone. */
+header{display:none}
+main{padding-top:14px}
+.menu-hero{padding:22px clamp(20px,3vw,30px);border-radius:16px}
+.menu-hero .eyebrow{margin:0 0 5px}
+h1{font-size:clamp(2rem,3.2vw,2.85rem)}
+.lede{margin:8px 0 0;line-height:1.45;font-size:1.01rem}
+.library-count{margin:10px 0 0;font-size:.81rem}
+.menu-controls{margin:12px 0;padding:13px 16px}
+.idea-section{padding:19px}
+.section-description{margin:7px 0 11px}
+.approach-filters{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin;scrollbar-color:#b2c5b9 transparent;gap:7px;padding:0 0 9px}
+.approach-choice{flex:0 0 auto;min-height:39px}
+.active-view{margin:4px 0 13px}
+@media(max-width:540px){
+ main{padding:9px 10px 45px}
+ .menu-hero{padding:16px 17px;border-radius:13px}
+ .menu-hero .eyebrow{font-size:.66rem;letter-spacing:.08em}
+ h1{font-size:1.95rem;line-height:1.08}
+ .lede{font-size:.93rem;line-height:1.4;margin-top:8px}
+ .library-count{font-size:.76rem;margin-top:9px}
+ .menu-controls{margin:10px 0;padding:12px;gap:9px}
+ .menu-controls label{font-size:.82rem}
+ .menu-controls select,.menu-controls input{min-height:42px;margin-top:3px;padding:7px 10px}
+ .menu-controls .reset{min-height:35px;padding:5px 10px}
+ .idea-section{padding:13px 13px}
+ .section-kicker{font-size:.65rem;margin-bottom:2px}
+ h2{font-size:1.6rem}
+ .section-description{font-size:.83rem;margin:4px 0 9px}
+ .approach-choice{font-size:.83rem;min-height:37px;padding:6px 11px}
+ .active-view{font-size:.76rem;margin:3px 0 11px}
+}
