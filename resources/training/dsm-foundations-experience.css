@@ -249,3 +249,7 @@ body[data-experience="studio"] .doc-guide{color:#253837}
  .documentation-appendix-content{display:block!important}
  .hero h1 .course-title-line{display:inline}
 }
+
+/* Only the example heading starts a new line; inline emphasis stays in the sentence. */
+.example strong{display:inline}
+.example>strong:first-child{display:block}
