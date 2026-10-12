@@ -151,6 +151,27 @@ fs.mkdirSync(out,{recursive:true});
      assert.equal(await items.count(),6,'six thermometer levels');
      await items.nth(3).click();
      assert.equal(await items.nth(3).getAttribute('aria-pressed'),'true');
+     // On paper, the scale and supported-choice labels are content, not hidden controls.
+     await page.emulateMedia({media:'print'});
+     assert.equal(await page.locator('#scale .scale button').first().evaluate(e=>getComputedStyle(e).display),'flex','scale printed');
+     assert.ok(await page.locator('#choices [data-choice]').first().evaluate(e=>getComputedStyle(e).display!=='none'),'supported choices print');
+     assert.ok(await page.locator('#body .choices button').first().evaluate(e=>getComputedStyle(e).display!=='none'),'body map labels print');
+     assert.equal(await page.locator('.tool-jump').evaluate(e=>getComputedStyle(e).display),'none','interactive menu omitted on paper');
+     if(width===390){
+      await page.pdf({path:path.join(out,'cpl-visual-toolkit-print.pdf'),format:'Letter',printBackground:true});
+      await page.emulateMedia({media:'screen'});
+      await toolMenu.locator('summary').click();
+      await page.locator('#client-view').click();
+      await toolMenu.locator('summary').click();
+      await page.emulateMedia({media:'print'});
+      assert.equal(await page.locator('#decision .advanced').evaluate(e=>getComputedStyle(e).display),'none','client print excludes clinician notes');
+      assert.equal(await page.locator('#scale .scale button').first().evaluate(e=>getComputedStyle(e).display),'flex','client print keeps six levels');
+      await page.pdf({path:path.join(out,'cpl-visual-toolkit-client-print.pdf'),format:'Letter',printBackground:true});
+      await page.emulateMedia({media:'screen'});
+      await toolMenu.locator('summary').click();
+      await page.locator('#client-view').click();
+      await toolMenu.locator('summary').click();
+     }else await page.emulateMedia({media:'screen'});
     }
     if(name==='communication'){
      assert.ok(await page.locator('details').count()>=10,'progressive disclosure available');
