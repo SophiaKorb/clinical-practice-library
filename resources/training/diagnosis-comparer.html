@@ -132,7 +132,7 @@ function renderVenn(ids,valid){
   }
   regions.append(regionCard("More characteristic: "+byId[ids[1]].name,points[1]));
   if(found){const article=document.createElement("article");article.append(element("strong","Ask next"),element("p",found.probe));pairwise.append(article);}
-
+ }
 }
 
 const inputs=["a","b"].map(id=>document.getElementById(id));
