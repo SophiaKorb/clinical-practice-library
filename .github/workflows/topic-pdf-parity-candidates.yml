@@ -6,6 +6,9 @@ on:
       - '.github/workflows/topic-pdf-parity-candidates.yml'
       - 'scripts/create-topic-pdf-parity-candidates.py'
       - 'scripts/expansion-topics.py'
+      - 'scripts/build-topic-expansion.py'
+      - 'resources/clinical-topics/**/support-map.html'
+      - 'resources/clinical-topics/topic-tools.css'
       - 'tests/topic-pdf-parity-candidates.py'
   workflow_dispatch:
 permissions:
