@@ -1,0 +1,44 @@
+name: DSM Symptom Lab interactive accessibility QA
+on:
+  push:
+    branches: [dsm-visualizer-guided-explanation]
+    paths:
+      - '.github/workflows/dsm-lab-accessibility.yml'
+      - 'resources/therapy/dsm-structure-4d.html'
+      - 'tests/dsm-structure-smoke.cjs'
+      - 'tests/dsm-lab-rendered-accessibility.cjs'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  lab-browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Verify existing 3D calculation and control invariants
+        run: node tests/dsm-structure-smoke.cjs
+      - name: Install browser
+        run: |
+          npm install --no-save --no-package-lock playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Start local prototype
+        run: |
+          python -m http.server 8765 --bind 127.0.0.1 >/tmp/cpl-dsm-lab.log 2>&1 &
+          sleep 2
+      - name: Exercise keyboard/mobile interactions and capture visual evidence
+        run: node tests/dsm-lab-rendered-accessibility.cjs
+      - name: Preserve review screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dsm-lab-interactive-accessibility
+          path: /tmp/cpl-dsm-lab-accessibility
+          if-no-files-found: ignore
+          retention-days: 10
