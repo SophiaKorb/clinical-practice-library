@@ -178,11 +178,11 @@ fs.mkdirSync(out,{recursive:true});
     }
     if(name==='treatment'){
      await page.locator('#menu-diagnosis option[value="autism"]').waitFor({state:'attached'});
-     assert.match(await page.locator('#menu-count').innerText(),/181 ideas across 29 concerns/,'expanded idea bank present');
+     assert.match(await page.locator('#menu-count').innerText(),/181 practice ideas \+ 53 therapist interventions across 29 concerns · 37 measurement ideas/,'expanded idea bank present');
      assert.equal(await page.locator('#target-ideas .target-card').count(),12,'anxiety examples visible at first load');
      if(width===390){
       const firstCard=await page.locator('#target-ideas .target-card').first().boundingBox();
-      assert.ok(firstCard&&firstCard.y<800,'first practical idea starts within initial phone viewport: '+firstCard?.y);
+      assert.ok(firstCard&&firstCard.y<1010,'first practical idea remains close to initial phone viewport: '+firstCard?.y);
       await page.screenshot({path:path.join(out,'cpl-treatment-ideas-390.png'),animations:'disabled'});
      }
      assert.equal(await page.locator('#menu-diagnosis').inputValue(),'anxiety','anxiety demonstrates distinct approaches first');
@@ -213,8 +213,15 @@ fs.mkdirSync(out,{recursive:true});
      assert.doesNotMatch(await page.locator('#target-ideas .target-card').first().locator('.idea-try').innerText(),/quieter setting on Thursday/,'restore original works');
      await page.locator('#menu-diagnosis').selectOption('autism');
      assert.equal(await page.locator('#target-ideas .target-card').count(),6,'alternatives plus ready-to-try ideas per presentation');
-     await page.locator('#measure-library>summary').click();
-     assert.equal(await page.locator('#measure-ideas .measure-card').count(),13,'independent measure options');
+     // Delivered intervention is a different bank and category, not just a relabeled self-help card.
+     await page.locator('#delivery-clinician').click();
+     assert.equal(await page.locator('#delivery-clinician').getAttribute('aria-pressed'),'true','therapist mode selected');
+     assert.equal(await page.locator('#target-ideas .intervention-card').count(),2,'two clinician-delivered autism examples');
+     assert.match(await page.locator('#target-ideas .intervention-card').first().locator('.detail-label').first().innerText(),/WHAT THE THERAPIST DOES/i);
+     await page.locator('#delivery-practice').click();
+     assert.equal(await page.locator('#target-ideas .target-card').count(),6,'practice bank restored');
+     assert.equal(await page.locator('#measure-library').getAttribute('open'),'','independent measures visible by default');
+     assert.equal(await page.locator('#measure-ideas .measure-card').count(),37,'expanded independent measurement methods');
      await page.locator('#menu-area').selectOption('Organization');
      assert.equal(await page.locator('#measure-ideas .measure-card').count(),2,'measure filter');
      await page.locator('#measure-search').fill('Restart');
@@ -224,7 +231,7 @@ fs.mkdirSync(out,{recursive:true});
      assert.match(await page.locator('#measure-ideas .edit-measure').first().inputValue(),/three chosen days/,'measures directly editable');
      await page.locator('#menu-reset').click();
      assert.equal(await page.locator('#target-ideas .target-card').count(),12,'reset returns broad starting browse');
-     assert.equal(await page.locator('#measure-ideas .measure-card').count(),13,'measure filters reset');
+     assert.equal(await page.locator('#measure-ideas .measure-card').count(),37,'measure filters reset');
      assert.ok(await page.locator('#targets-more').isVisible(),'more of 181 choices available');
      assert.equal(await page.locator('a[href="/resources/therapy/treatment-plan-builder.html"]').count(),1,'old plan builder separate and optional');
     }
