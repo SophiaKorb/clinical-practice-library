@@ -3,7 +3,8 @@ on:
   push:
     branches: [cpl-2-colorful-helpful]
     paths:
-      - 'scripts/build-dsm-foundations-book.py'\n      - 'scripts/prepare-dsm-print-fonts.py'
+      - 'scripts/build-dsm-foundations-book.py'
+      - 'scripts/prepare-dsm-print-fonts.py'
       - 'tests/dsm-print-book-parity.py'
       - 'resources/training/dsm-from-zero.html'
       - 'docs/qa/dsm-foundations-all-questions.md'
@@ -21,7 +22,9 @@ jobs:
         run: sudo apt-get update -qq && sudo apt-get install -y fonts-noto-core fonts-lato fonts-dejavu-core
       - name: Install PDF-generation and preflight dependencies
         run: python -m pip install --disable-pip-version-check reportlab beautifulsoup4 pymupdf fonttools
-      - name: Prepare open-license editorial fonts for PDF embedding\n        run: python scripts/prepare-dsm-print-fonts.py\n      - name: Generate intentional book from canonical course (not website printing)
+      - name: Prepare open-license editorial fonts for PDF embedding
+        run: python scripts/prepare-dsm-print-fonts.py
+      - name: Generate intentional book from canonical course (not website printing)
         run: python scripts/build-dsm-foundations-book.py
       - name: Preflight complete book and check all page geometry
         run: |
@@ -33,11 +36,13 @@ jobs:
           manifest=json.loads(Path('build/dsm-foundations-book-manifest.json').read_text())
           assert len(d)>=65, ('Suspiciously short book',len(d))
           assert all(round(p.rect.width)==612 and round(p.rect.height)==792 for p in d)
-          assert manifest['font_mode']=='editorial', 'Editorial typeface was not embedded'\n          assert manifest['lessons']==11 and manifest['cases']==33 and manifest['concept_maps']==11
+          assert manifest['font_mode']=='editorial', 'Editorial typeface was not embedded'
+          assert manifest['lessons']==11 and manifest['cases']==33 and manifest['concept_maps']==11
           assert manifest['vocabulary']==33 and manifest['questions']==80
           assert manifest['options']==249 and manifest['select_all']==8 and manifest['single']==72
           pages=[p.get_text() for p in d]
-          full='\n'.join(pages)
+          full='
+'.join(pages)
           for i in range(1,12):assert 'CHAPTER %02d'%i in full
           for i in range(1,34):assert re.search(r'CASE\s+'+str(i)+r'\s*/',full),('Missing case',i)
           for i in range(1,81):assert re.search(r'(?m)^%02d\.'%i,full),('missing number',i)
