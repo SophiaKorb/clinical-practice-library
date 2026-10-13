@@ -26,11 +26,20 @@ for i,(topic,m) in enumerate(zip(topics,manifest)):
     for phrase in [topic['title'],'REFLECTION / CHOSEN SUPPORT','SAFETY & SCOPE']:
         assert phrase.lower() in text.lower(),(file,'missing',phrase)
     # Titles and descriptions are authored from the same source as the HTML.
-    for title,description in topic['diagram']:
-        norm=lambda s:' '.join(s.replace('→',' to ').replace('↔',' and ').replace('’',"'").replace('—','-').replace('–','-').split())
-        # PyMuPDF can split wrapped lines but text order must remain extractable.
-        assert norm(title).lower() in text.lower(),(file,'missing node title',title)
-    if m['mode']=='safety-gate': assert 'VOLUNTARY REPAIR ONLY IF SAFE' in text and 'PROTECT / SAFEGUARD IF UNSAFE' in text
+    if m['mode']=='safety-gate':
+        # The approved replacement is a true fork, not five repurposed sequential source boxes.
+        must=['Adult responsibility - always','Unsafe or coercive','Safe and voluntary',
+              'Protect','Assess risk','Follow safeguarding procedures','Understand each perspective',
+              'Offer coaching or repair','Do not require forgiveness','Ongoing support for all siblings']
+        for phrase in must:assert phrase.lower() in text.lower(),(file,'missing safety fork element',phrase)
+        assert text.index('Adult responsibility - always') < text.index('Unsafe or coercive')
+        assert text.index('Adult responsibility - always') < text.index('Safe and voluntary')
+        assert text.index('Ongoing support for all siblings') > text.index('Do not require forgiveness')
+    else:
+        for title,description in topic['diagram']:
+            norm=lambda s:' '.join(s.replace('→',' to ').replace('↔',' and ').replace('’',"'").replace('—','-').replace('–','-').split())
+            # PyMuPDF can split wrapped lines but text order must remain extractable.
+            assert norm(title).lower() in text.lower(),(file,'missing node title',title)
     if m['mode']=='parallel-assess': assert 'PARALLEL, NOT A WAITING SEQUENCE' in text
     if m['mode']=='return-loop': assert 'SHORT-TERM RESPONSE MAY SHAPE THE NEXT TRIGGER' in text
     if m['mode']=='loop-choice': assert 'THE FIRST FOUR MAY REPEAT' in text
