@@ -119,3 +119,50 @@
  .restrictive-parallel__plan{margin-top:15px}
  .restrictive-parallel__plan:before{margin-top:-26px}
 }
+
+
+/* Panic alarm loop: six ordered accessible cards with genuinely circular arrows. */
+.panic-cycle{margin:24px 0;max-width:990px}
+.panic-cycle__canvas{position:relative;aspect-ratio:840/640;width:100%;max-width:900px;margin:0 auto}
+.panic-cycle__arrows{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
+.panic-cycle__steps{list-style:none;margin:0;padding:0;display:block;counter-reset:none}
+.panic-cycle__step{box-sizing:border-box;position:absolute;width:29%;height:18%;background:#edf2ee;border:2px solid #346355;border-radius:13px;padding:9px 10px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 1px 0 #a8beb3;color:#173832;overflow-wrap:anywhere}
+.panic-cycle__step--1{left:37%;top:1.5%;width:26%;background:#e5f1ed}
+.panic-cycle__step--2{left:68%;top:27%;background:#f7eedc;border-color:#956c2d}
+.panic-cycle__step--3{left:68%;top:57%;background:#e7eef8;border-color:#416487}
+.panic-cycle__step--4{left:37%;top:79%;width:26%;background:#f7e7e2;border-color:#98523f}
+.panic-cycle__step--5{left:2%;top:57%;background:#e7f0e7}
+.panic-cycle__step--6{left:2%;top:27%;background:#e9edf8;border-color:#5d6691}
+.panic-cycle__number{flex:none;border-radius:50%;background:#315f53;color:white;font-weight:800;font-size:.86rem;min-width:1.55em;line-height:1.55em;text-align:center;margin-bottom:3px}
+.panic-cycle__step strong{font-size:clamp(.72rem,1.5vw,1rem);line-height:1.18}
+.panic-cycle__step>span:last-child{font-size:clamp(.66rem,1.13vw,.87rem);line-height:1.25;margin-top:5px}
+.panic-cycle figcaption{font-weight:650;border-left:4px solid #315f53;background:#edf3ee;padding:10px 14px;margin:12px 0;max-width:86ch}
+@media(max-width:750px){
+ .panic-cycle__canvas{aspect-ratio:auto}
+ .panic-cycle__arrows{display:none}
+ .panic-cycle__steps{display:grid;gap:22px}
+ .panic-cycle__step{position:relative;left:auto;top:auto;width:100%;height:auto;min-height:95px;padding:12px 16px}
+ .panic-cycle__step--1,.panic-cycle__step--4{width:100%;left:auto;top:auto}
+ .panic-cycle__step strong{font-size:1rem}
+ .panic-cycle__step>span:last-child{font-size:.9rem}
+ .panic-cycle__step:not(:last-child)::after{content:'↓';position:absolute;top:calc(100% + 3px);left:calc(50% - .55em);font-size:1.4rem;line-height:1;color:#285f52;font-weight:800}
+ .panic-cycle__step:last-child::after{content:'↶ Can return to the first cue';display:block;margin-top:8px;font-size:.82rem;font-weight:700}
+}
+@media print{
+ .panic-cycle{break-inside:avoid;max-width:100%}
+ .panic-cycle__canvas{aspect-ratio:840/640;width:100%}
+ .panic-cycle__steps{display:block}
+ .panic-cycle__arrows{display:block}
+ .panic-cycle__step{position:absolute;min-height:0;padding:6px}
+ .panic-cycle__step--1{left:37%;top:1.5%;width:26%}
+ .panic-cycle__step--2{left:68%;top:27%;width:29%}
+ .panic-cycle__step--3{left:68%;top:57%;width:29%}
+ .panic-cycle__step--4{left:37%;top:79%;width:26%}
+ .panic-cycle__step--5{left:2%;top:57%;width:29%}
+ .panic-cycle__step--6{left:2%;top:27%;width:29%}
+ .panic-cycle__step strong{font-size:8pt}
+ .panic-cycle__step>span:last-child{font-size:6.5pt}
+ .panic-cycle__number{font-size:7pt}
+ .panic-cycle__step::after{display:none!important}
+ .panic-cycle figcaption{background:white;padding:6px}
+}
