@@ -22,6 +22,13 @@ for(const r of ledger.resources){
    assert.ok(html.indexOf('Adult responsibility — always')<html.indexOf('Safe and voluntary'));
    assert.ok(html.indexOf('Ongoing support for all siblings')>html.indexOf('Do not require forgiveness'));
    assert.equal((html.match(/<li><strong>/g)||[]).length,6,'three distinct actions per safety route');
+  } else if(r.topic==='panic-alarm-loop'){
+   assert.ok(html.includes('class="panic-cycle"'),'approved circular feedback model missing');
+   assert.equal((html.match(/class="panic-cycle__step panic-cycle__step--/g)||[]).length,6,'six distinct panic cycle stages');
+   assert.equal((html.match(/marker-end="url\(#panic-cycle-arrow\)"/g)||[]).length,6,'six directed curved arrows');
+   assert.ok(html.includes('Renewed monitoring / fear'));
+   assert.ok(html.includes('not a certainty or a diagnosis'));
+   assert.doesNotMatch(html,/class="clinical-map return-loop"/);
   } else if(r.topic==='restrictive-eating-coordination'){
    assert.ok(html.includes('class="restrictive-parallel"'),'explicit concurrent tracks missing');
    assert.ok(html.indexOf('TWO TRACKS — ASSESS IN PARALLEL')<html.indexOf('Medical and nutritional safety'));
@@ -37,7 +44,7 @@ for(const r of ledger.resources){
 }
 for(const set of byTopic.values())assert.equal(set.size,6);
 // Structural checks for meaningful visual models; source-level QA only, not rendered approval.
-const models={'panic-alarm-loop':'return-loop','ocd-mental-rituals':'loop-choice','aphasia-communication-access':'access-tracks','child-aggression-caregiver-coaching':'abc-tracks','intellectual-disability-supported-choice':'access-tracks','health-anxiety-medical-plan':'loop-choice','body-dysmorphia-checking':'loop-choice','adult-autism-load-recovery':'context-budget','social-anxiety-attention':'attention-split','depression-activity-reward':'loop-choice','binge-eating-patterns':'loop-choice'};
+const models={'ocd-mental-rituals':'loop-choice','aphasia-communication-access':'access-tracks','child-aggression-caregiver-coaching':'abc-tracks','intellectual-disability-supported-choice':'access-tracks','health-anxiety-medical-plan':'loop-choice','body-dysmorphia-checking':'loop-choice','adult-autism-load-recovery':'context-budget','social-anxiety-attention':'attention-split','depression-activity-reward':'loop-choice','binge-eating-patterns':'loop-choice'};
 for(const [slug,cls] of Object.entries(models)){
  for(const page of ['support-map.html','index.html']){
   const html=fs.readFileSync('resources/clinical-topics/'+slug+'/'+page,'utf8');
@@ -69,8 +76,21 @@ for(const page of ['support-map.html','index.html']){
  assert.ok(html.includes('Check medical safety now'));
  assert.doesNotMatch(html,/class="clinical-map parallel-assess"/);
 }
+for(const page of ['support-map.html','index.html']){
+ const html=fs.readFileSync('resources/clinical-topics/panic-alarm-loop/'+page,'utf8');
+ assert.ok(html.includes('class="panic-cycle"'));
+ assert.ok(html.includes('viewBox="0 0 840 640"'));
+ assert.equal((html.match(/class="panic-cycle__step panic-cycle__step--[1-6]"/g)||[]).length,6);
+ assert.equal((html.match(/marker-end="url\(#panic-cycle-arrow\)"/g)||[]).length,6);
+ assert.ok(html.indexOf('Body sensation or trigger')<html.indexOf('Feared interpretation'));
+ assert.ok(html.indexOf('Feared interpretation')<html.indexOf('Alarm / panic surge'));
+ assert.ok(html.indexOf('Alarm / panic surge')<html.indexOf('Protective response'));
+ assert.ok(html.indexOf('Protective response')<html.indexOf('Short-term relief'));
+ assert.ok(html.indexOf('Short-term relief')<html.indexOf('Renewed monitoring / fear'));
+ assert.ok(html.includes('medically indicated care'));
+}
 const mapCss=fs.readFileSync('resources/clinical-topics/topic-tools.css','utf8');
-assert.ok(mapCss.includes('@media print')&&mapCss.includes('.sibling-safety-flow')&&mapCss.includes('.restrictive-parallel__tracks'));
+assert.ok(mapCss.includes('@media print')&&mapCss.includes('.sibling-safety-flow')&&mapCss.includes('.restrictive-parallel__tracks')&&mapCss.includes('.panic-cycle__arrows'));
 const api=require('../resources/clinical-topics/topic-tools.js');
 const b=(s)=>({attrs:{'data-feedback':s},getAttribute(k){return this.attrs[k]},setAttribute(k,v){this.attrs[k]=v}});
 const one=b('Incomplete: missing access assessment'),two=b('Best supported: keep access and assess');let out={textContent:''};
