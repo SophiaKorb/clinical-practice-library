@@ -36,7 +36,7 @@ jobs:
           pages=[p.get_text() for p in d]
           full='\n'.join(pages)
           for i in range(1,12):assert 'CHAPTER %02d'%i in full
-          for i in range(1,34):assert re.search(r'CASE\\s+'+str(i)+r'\\s*/',full),('Missing case',i)
+          for i in range(1,34):assert re.search(r'CASE\s+'+str(i)+r'\s*/',full),('Missing case',i)
           for i in range(1,81):assert re.search(r'(?m)^%02d\.'%i,full),('missing number',i)
           assert len(d.get_toc())>=15, ('Missing PDF bookmarks',len(d.get_toc()))
           flagged=[]
