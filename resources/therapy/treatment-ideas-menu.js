@@ -1,6 +1,6 @@
 'use strict';
 const $=id=>document.getElementById(id);
-const state={families:[],ideas:[],measures:[],visible:12,approach:'',edits:new Map()};
+const state={families:[],ideas:[],interventions:[],measures:[],delivery:'practice',visible:12,approach:'',edits:new Map()};
 const approaches=[
  ['','All approaches'],
  ['Thinking & meaning','Thinking'],
@@ -33,30 +33,37 @@ async function copyText(text,label){
 }
 function makeCard(item,type){
  const key=type+':'+item.id;
+ const isMeasure=type==='measure',isIntervention=type==='intervention';
  const original={try:item.try,measure:item.measure};
  const existing=state.edits.get(key);
  const draft=existing?{...existing}:{...original};
- const card=el('article',undefined,'idea-card '+(type==='measure'?'measure-card':'target-card'));
+ const card=el('article',undefined,'idea-card '+(isMeasure?'measure-card':isIntervention?'intervention-card':'target-card'));
  card.dataset.ideaId=item.id;
  const top=el('div',undefined,'card-top');
- top.append(el('span',type==='measure'?item.area:item.approach,'idea-tag'));
- if(type!=='measure')top.append(el('span',item.presentationName,'topic-tag'));
+ top.append(el('span',isMeasure?item.area:item.approach,'idea-tag'));
+ if(!isMeasure)top.append(el('span',item.presentationName,'topic-tag'));
+ if(isMeasure&&item.method)top.append(el('span',item.method,'method-tag'));
  card.append(top,el('h3',item.title));
  const tryBox=el('div',undefined,'idea-detail');
- const tryTitle=el('span',type==='measure'?'What to track':'Try this','detail-label');
+ const tryTitle=el('span',isMeasure?'What to track':isIntervention?'What the therapist does':'Try this','detail-label');
  const tryView=el('p',draft.try,'idea-try');
  const tryEdit=el('textarea',undefined,'card-edit edit-try');
  tryEdit.value=draft.try;tryEdit.rows=4;tryEdit.hidden=true;
  tryEdit.setAttribute('aria-label','Edit '+item.title+' suggestion');
  tryBox.append(tryTitle,tryView,tryEdit);
  const measureBox=el('div',undefined,'idea-detail progress-detail');
- const measureTitle=el('span',type==='measure'?'Example you could adapt':'Notice progress','detail-label');
+ const measureTitle=el('span',isMeasure?'Example target you could adapt':isIntervention?'How to measure response':'Notice progress','detail-label');
  const measureView=el('p',draft.measure,'idea-measure');
  const measureEdit=el('textarea',undefined,'card-edit edit-measure');
  measureEdit.value=draft.measure;measureEdit.rows=3;measureEdit.hidden=true;
  measureEdit.setAttribute('aria-label','Edit '+item.title+' progress example');
  measureBox.append(measureTitle,measureView,measureEdit);
  card.append(tryBox,measureBox);
+ if(isIntervention&&item.scope){
+  const scope=el('p',undefined,'scope-note');
+  scope.append(el('strong','Clinical boundary: '),document.createTextNode(item.scope));
+  card.append(scope);
+ }
  const controls=el('div',undefined,'card-actions');
  const edit=el('button','Edit this idea','edit-idea');edit.type='button';
  edit.setAttribute('aria-expanded','false');
@@ -84,7 +91,7 @@ function makeCard(item,type){
  });
  copy.addEventListener('click',()=>{
   const current=state.edits.get(key)||original;
-  return copyText(item.title+'\n'+(type==='measure'?'What to track: ':'Try this: ')+current.try+'\n'+(type==='measure'?'Example: ':'Notice progress: ')+current.measure,item.title);
+  return copyText(item.title+'\n'+(isMeasure?'What to track: ':isIntervention?'Therapist-delivered intervention: ':'Practice idea: ')+current.try+'\n'+(isMeasure?'Example target: ':isIntervention?'How to measure response: ':'Notice progress: ')+current.measure+(isIntervention&&item.scope?'\nClinical boundary: '+item.scope:''),item.title);
  });
  controls.append(edit,copy,reset);
  if(item.source){
@@ -103,21 +110,34 @@ function renderChips(){
   host.append(b);
  }
 }
+function renderDelivery(){
+ const clinician=state.delivery==='clinician';
+ $('delivery-practice').setAttribute('aria-pressed',String(!clinician));
+ $('delivery-clinician').setAttribute('aria-pressed',String(clinician));
+ $('delivery-explanation').textContent=clinician
+  ?'Therapist-delivered work includes assessment, collaborative formulation, in-session intervention, and care coordination. These examples require appropriate qualifications, consent and clinical judgment; they are not step-by-step treatment protocols.'
+  :'Practice ideas are actions or adjustments a person may choose to try. A therapist may help teach, adapt or review them; coaching does not automatically make an everyday practice a therapist-delivered intervention.';
+ $('approach-title').textContent=clinician?'Therapist-delivered interventions':'Practice ideas to try';
+ $('approach-description').textContent=clinician
+  ?'Browse what a qualified clinician might do in treatment across thinking, behavior, environment, support and regulation. Each card offers an outcome-measure idea and, when relevant, a clinical boundary.'
+  :'Browse self-directed or therapist-coached practice across thinking, environment, action, relationships, routines and autonomy.';
+}
 function renderTargets(){
  const query=normalize($('menu-search').value),selected=$('menu-diagnosis').value;
- const items=state.ideas.filter(i=>
+ const choices=state.delivery==='clinician'?state.interventions:state.ideas;
+ const items=choices.filter(i=>
   (!selected||i.presentation===selected)&&(!state.approach||i.approach===state.approach)&&
-  (!query||normalize([i.presentationName,i.approach,i.title,i.try,i.measure].join(' ')).includes(query))
+  (!query||normalize([i.presentationName,i.approach,i.title,i.try,i.measure,i.scope].join(' ')).includes(query))
  );
  const shown=items.slice(0,state.visible);
- $('target-ideas').replaceChildren(...shown.map(i=>makeCard(i,'target')));
- $('target-count').textContent=items.length+' ideas';
+ $('target-ideas').replaceChildren(...shown.map(i=>makeCard(i,state.delivery==='clinician'?'intervention':'target')));
+ $('target-count').textContent=items.length+(state.delivery==='clinician'?' therapist interventions':' practice ideas');
  $('target-empty').hidden=items.length!==0;
  $('targets-more').hidden=items.length<=state.visible;
  $('targets-more').textContent='Show '+Math.min(12,items.length-state.visible)+' more ideas';
  const selectedText=selected?$('menu-diagnosis').selectedOptions[0]?.textContent:'All concerns';
  const approachText=approaches.find(([id])=>id===state.approach)?.[1]||'All approaches';
- $('active-view').textContent=selectedText+' · '+approachText;
+ $('active-view').textContent=selectedText+' · '+approachText+' · '+(state.delivery==='clinician'?'Therapist-delivered':'Self-help / coached practice');
 }
 function renderMeasures(){
  const area=$('menu-area').value,query=normalize($('measure-search').value);
@@ -133,15 +153,17 @@ async function init(){
    '/data/treatment-plan-menu.json',
    '/data/treatment-goal-try-it-examples.json',
    '/data/treatment-approach-ideas.json',
-   '/data/treatment-plan-measure-ideas.json'
+   '/data/treatment-plan-measure-ideas.json',
+   '/data/treatment-clinician-interventions.json'
   ];
   const responses=await Promise.all(sources.map(path=>fetch(path)));
   if(responses.some(r=>!r.ok))throw Error('One or more source files could not load');
-  const [catalog,ready,alternative,measureData]=await Promise.all(responses.map(r=>r.json()));
-  if(!Array.isArray(catalog.families)||!Array.isArray(alternative.ideas)||!Array.isArray(measureData.measures))throw Error('Unexpected idea library format');
+  const [catalog,ready,alternative,measureData,clinicalData]=await Promise.all(responses.map(r=>r.json()));
+  if(!Array.isArray(catalog.families)||!Array.isArray(alternative.ideas)||!Array.isArray(measureData.measures)||!Array.isArray(clinicalData.interventions))throw Error('Unexpected idea library format');
   state.families=catalog.families;
   const familyById=new Map(catalog.families.map(f=>[f.id,f]));
   state.ideas=alternative.ideas.map(i=>({...i,presentationName:i.presentation==='anxiety'?'Anxiety and overwhelm':familyById.get(i.presentation)?.name||i.presentation}));
+  state.interventions=clinicalData.interventions.map(i=>({...i,presentationName:i.presentation==='anxiety'?'Anxiety and overwhelm':familyById.get(i.presentation)?.name||i.presentation}));
   for(const f of catalog.families)for(const target of f.targets){
    const suggestion=ready.examples?.[target.id];
    if(!suggestion)continue;
@@ -166,17 +188,24 @@ async function init(){
   for(const area of [...new Set(state.measures.map(m=>m.area))].sort()){
    const o=el('option',area);o.value=area;measureSelect.append(o);
   }
+  for(const [id,delivery] of [['delivery-practice','practice'],['delivery-clinician','clinician']]){
+   $(id).addEventListener('click',()=>{
+    if(state.delivery===delivery)return;
+    state.delivery=delivery;state.approach='';state.visible=12;
+    renderDelivery();renderChips();renderTargets();
+   });
+  }
   $('menu-search').addEventListener('input',()=>{state.visible=12;renderTargets();});
   selector.addEventListener('change',()=>{state.visible=12;renderTargets();});
   $('targets-more').addEventListener('click',()=>{state.visible+=12;renderTargets();});
   $('menu-reset').addEventListener('click',()=>{
-   selector.value='';$('menu-search').value='';state.approach='';state.visible=12;
-   $('measure-search').value='';measureSelect.value='';renderChips();renderTargets();renderMeasures();
+   selector.value='';$('menu-search').value='';state.approach='';state.delivery='practice';state.visible=12;
+   $('measure-search').value='';measureSelect.value='';renderDelivery();renderChips();renderTargets();renderMeasures();
   });
   $('menu-area').addEventListener('change',renderMeasures);
   $('measure-search').addEventListener('input',renderMeasures);
-  $('menu-count').textContent=state.ideas.length+' ideas across '+(catalog.families.length+1)+' concerns · '+state.measures.length+' progress measures';
-  renderChips();renderTargets();renderMeasures();
+  $('menu-count').textContent=state.ideas.length+' practice ideas + '+state.interventions.length+' therapist interventions across '+(catalog.families.length+1)+' concerns · '+state.measures.length+' measurement ideas';
+  renderDelivery();renderChips();renderTargets();renderMeasures();
  }catch(err){
   $('menu-count').textContent='The idea library could not load. Please reload this page.';
   $('target-empty').hidden=false;
