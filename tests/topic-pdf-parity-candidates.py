@@ -35,6 +35,16 @@ for i,(topic,m) in enumerate(zip(topics,manifest)):
         assert text.index('Adult responsibility - always') < text.index('Unsafe or coercive')
         assert text.index('Adult responsibility - always') < text.index('Safe and voluntary')
         assert text.index('Ongoing support for all siblings') > text.index('Do not require forgiveness')
+    elif m['mode']=='return-loop':
+        required=['1. Body sensation or trigger','2. Feared interpretation',
+                  '3. Alarm / panic surge','4. Protective response',
+                  '5. Short-term relief','6. Renewed monitoring / fear',
+                  'ARROWS RETURN FROM 6 TO 1']
+        for phrase in required:assert phrase.lower() in text.lower(),(file,'missing stage',phrase)
+        assert all(text.index(required[i]) < text.index(required[i+1]) for i in range(5)),(file,'misordered six stages')
+        # The actual PDF arrows must have bezier curves, rather than disconnected line boxes.
+        curves=sum(sum(item[0]=='c' for item in drawing['items']) for drawing in page.get_drawings())
+        assert curves>=6,(file,'missing curved return arrows',curves)
     elif m['mode']=='parallel-assess':
         required=['BOTH ASSESSMENTS START TOGETHER','MEDICAL / NUTRITIONAL SAFETY',
                   'PSYCHOLOGICAL / SENSORY / ACCESS','URGENT CONCERN? ACT NOW',
@@ -48,7 +58,6 @@ for i,(topic,m) in enumerate(zip(topics,manifest)):
             norm=lambda s:' '.join(s.replace('→',' to ').replace('↔',' and ').replace('’',"'").replace('—','-').replace('–','-').split())
             # PyMuPDF can split wrapped lines but text order must remain extractable.
             assert norm(title).lower() in text.lower(),(file,'missing node title',title)
-    if m['mode']=='return-loop': assert 'SHORT-TERM RESPONSE MAY SHAPE THE NEXT TRIGGER' in text
     if m['mode']=='loop-choice': assert 'THE FIRST FOUR MAY REPEAT' in text
     assert len(text)>400,(file,'missing content')
     for block in page.get_text('blocks'):
