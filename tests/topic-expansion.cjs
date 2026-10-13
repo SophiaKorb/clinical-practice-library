@@ -24,10 +24,10 @@ for(const r of ledger.resources){
    assert.equal((html.match(/<li><strong>/g)||[]).length,6,'three distinct actions per safety route');
   } else if(r.topic==='restrictive-eating-coordination'){
    assert.ok(html.includes('class="restrictive-parallel"'),'explicit concurrent tracks missing');
-   assert.ok(html.indexOf('START BOTH TRACKS TOGETHER')<html.indexOf('TRACK A'));
-   assert.ok(html.indexOf('START BOTH TRACKS TOGETHER')<html.indexOf('TRACK B'));
-   assert.ok(html.includes('Do not wait for Track B'),'urgent medical action must be independent');
-   assert.ok(html.includes('ONE coordinated, person-centered plan'));
+   assert.ok(html.indexOf('TWO TRACKS — ASSESS IN PARALLEL')<html.indexOf('Medical and nutritional safety'));
+   assert.ok(html.indexOf('TWO TRACKS — ASSESS IN PARALLEL')<html.indexOf('Psychological, sensory and access understanding'));
+   assert.ok(html.includes('Do not wait for the other track'),'urgent medical action must be independent');
+   assert.ok(html.includes('One coordinated plan — as findings become available'));
    assert.doesNotMatch(html,/class="clinical-map parallel-assess"/,'legacy chain returned');
   } else assert.equal((html.match(/<li><strong>/g)||[]).length,5);
   assert.equal((html.match(/<textarea/g)||[]).length,4);
@@ -62,11 +62,11 @@ for(const page of ['support-map.html','index.html']){
 for(const page of ['support-map.html','index.html']){
  const html=fs.readFileSync('resources/clinical-topics/restrictive-eating-coordination/'+page,'utf8');
  assert.ok(html.includes('role="group" aria-label="Restrictive eating: medical safety and psychological, sensory and access assessment begin together'));
- assert.ok(html.includes('START BOTH TRACKS TOGETHER'));
- assert.ok(html.includes('Urgent warning signs?'));
- assert.ok(html.includes('Do not wait for Track B'));
- assert.ok(html.includes('Review both tracks'));
- assert.ok(html.includes('Medical safety must not wait for a behavioral explanation'));
+ assert.ok(html.includes('TWO TRACKS — ASSESS IN PARALLEL'));
+ assert.ok(html.includes('Urgent concerns? Act without waiting.'));
+ assert.ok(html.includes('Do not wait for the other track'));
+ assert.ok(html.includes('both medical safety and everyday participation'));
+ assert.ok(html.includes('Check medical safety now'));
  assert.doesNotMatch(html,/class="clinical-map parallel-assess"/);
 }
 const mapCss=fs.readFileSync('resources/clinical-topics/topic-tools.css','utf8');
