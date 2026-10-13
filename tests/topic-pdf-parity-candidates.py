@@ -59,6 +59,16 @@ for i,(topic,m) in enumerate(zip(topics,manifest)):
             # PyMuPDF can split wrapped lines but text order must remain extractable.
             assert norm(title).lower() in text.lower(),(file,'missing node title',title)
     if m['mode']=='loop-choice': assert 'THE FIRST FOUR MAY REPEAT' in text
+    if m['mode'] in ('return-loop','parallel-assess','safety-gate'):
+        # Long answer rules must not cross the next prompt's ink (regression caught by render inspection).
+        rules=[item[1].y for drawing in page.get_drawings() for item in drawing['items']
+               if item[0]=='l' and abs(item[1].x-36)<0.3 and abs(item[2].x-576)<0.3
+               and abs(item[1].y-item[2].y)<0.3 and 510<item[1].y<650]
+        labels=[(block[1],block[3]) for block in page.get_text('blocks')
+                if block[1]>510 and __import__('re').match(r'^[1-4]\\. ',str(block[4]))]
+        assert len(labels)==4,(file,'expected four distinct reflection prompts',labels)
+        for top,bottom in labels:
+            assert not any(top-0.5<line_y<bottom+0.5 for line_y in rules),(file,'answer line crosses prompt',(top,bottom),rules)
     assert len(text)>400,(file,'missing content')
     for block in page.get_text('blocks'):
         if not str(block[4]).strip():continue
