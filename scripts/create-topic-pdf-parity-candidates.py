@@ -18,6 +18,8 @@ def mode_for(slug):
     source=ROOT/'resources/clinical-topics'/slug/'support-map.html'
     page=source.read_text(encoding='utf-8')
     hit=re.search(r'<ol class="clinical-map(?: ([^"]+))?"',page)
+    if not hit and slug=='sibling-conflict-safety-repair' and 'class="sibling-safety-flow"' in page:
+        return 'safety-gate',hashlib.sha256(page.encode()).hexdigest()
     if not hit:raise ValueError('Missing canonical HTML map: '+slug)
     mode=(hit.group(1) or 'sequence').strip()
     if mode not in MODES and mode!='sequence':raise ValueError((slug,mode))
