@@ -310,7 +310,7 @@ def build():
     for i,sec in enumerate(secs,1):
         title,count=add_chapter(sec,i,book,count)
         chapters.append(dict(number=i,title=title,cases=len(sec.select(".worked-example")),questions=len(sec.select(".check[data-quiz]"))))
-    book.append(PageBreak())
+    # Do not force an empty interstitial sheet when the final chapter exactly fills a page.
     book.append(bookmark(P("Appendix A  /  Full vocabulary","h1"),"vocabulary"))
     for ent in vocab:
         dt=ent.find("dt")
