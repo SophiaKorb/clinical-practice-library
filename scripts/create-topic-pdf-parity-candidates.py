@@ -266,7 +266,7 @@ def write_page(out,t,mode):
     for i,prompt in enumerate(t['fields']):
         top=(257-i*29) if compact else (313-i*41)
         wrapped(c,str(i+1)+'. '+prompt,36,top,540,8.3,10,max_lines=2,bold=True)
-        c.setStrokeColor(HexColor('#8ca39c'));c.line(36,top-22,576,top-22)
+        c.setStrokeColor(HexColor('#8ca39c'));c.line(36,(top-15 if compact else top-22),576,(top-15 if compact else top-22))
     # The safety content must stay visible on every copy.
     c.setFillColor(HexColor('#f5f6f5'));c.setStrokeColor(HexColor('#47645e'))
     c.roundRect(36,41,540,99,5,fill=1,stroke=1)
