@@ -52,6 +52,7 @@ WIDTH=PAGE_W-LEFT-RIGHT
 style={
     "booktitle":ParagraphStyle("BookTitle",fontName="DJ-Bold",fontSize=29,leading=36,textColor=NAVY,spaceAfter=14),
     "covercopy":ParagraphStyle("CoverCopy",fontName="DJ",fontSize=13,leading=20,textColor=INK,spaceAfter=14),
+    "author":ParagraphStyle("BookAuthor",fontName="DJ-Bold",fontSize=14,leading=20,textColor=TEAL,spaceAfter=12),
     "h1":ParagraphStyle("BookH1",fontName="DJ-Bold",fontSize=20,leading=25,textColor=NAVY,spaceBefore=12,spaceAfter=12,keepWithNext=1),
     "h2":ParagraphStyle("BookH2",fontName="DJ-Bold",fontSize=12.5,leading=17,textColor=TEAL,spaceBefore=12,spaceAfter=6,keepWithNext=1),
     "h3":ParagraphStyle("BookH3",fontName="DJ-Bold",fontSize=10.5,leading=14.5,textColor=NAVY,spaceBefore=9,spaceAfter=5,keepWithNext=1),
@@ -116,7 +117,7 @@ def chapter_bars(s):
 
 class BookDoc(BaseDocTemplate):
     def __init__(self,path,**kw):
-        super().__init__(str(path),pagesize=letter,leftMargin=LEFT,rightMargin=RIGHT,topMargin=61,bottomMargin=54,title="DSM Foundations | Complete Print Review Edition",author="Clinical Practice Library",**kw)
+        super().__init__(str(path),pagesize=letter,leftMargin=LEFT,rightMargin=RIGHT,topMargin=61,bottomMargin=54,title="DSM Foundations | Complete Print Edition",author="Sophia Korb Cohon, PhD",**kw)
         frm=Frame(LEFT,53,WIDTH,PAGE_H-108,leftPadding=0,rightPadding=0,topPadding=0,bottomPadding=0,id="content")
         self.addPageTemplates(PageTemplate(id="normal",frames=[frm],onPage=self.paginate))
         self.seen=set()
@@ -126,12 +127,12 @@ class BookDoc(BaseDocTemplate):
         canvas.line(LEFT,PAGE_H-39,PAGE_W-RIGHT,PAGE_H-39)
         canvas.setFont("DJ-Bold",8)
         canvas.setFillColor(TEAL)
-        canvas.drawString(LEFT,PAGE_H-31,"DSM FOUNDATIONS  /  COMPLETE PRINT REVIEW")
+        canvas.drawString(LEFT,PAGE_H-31,"DSM FOUNDATIONS  /  PRINT EDITION")
         canvas.setFont("DJ",8)
         canvas.setFillColor(GREY)
         canvas.drawRightString(PAGE_W-RIGHT,PAGE_H-31,"OCTOBER 2026")
         canvas.line(LEFT,42,PAGE_W-RIGHT,42)
-        canvas.drawString(LEFT,30,"Educational edition  |  Not a substitute for the DSM-5-TR")
+        canvas.drawString(LEFT,30,"Sophia Korb Cohon, PhD  |  Clinical Practice Library")
         canvas.drawRightString(PAGE_W-RIGHT,30,str(doc.page))
         canvas.restoreState()
     def afterFlowable(self,f):
@@ -342,18 +343,19 @@ def build():
     assert sum(len(q.select("button[data-answer='yes']"))>0 for _,q in questions)==80
     OUT.parent.mkdir(parents=True,exist_ok=True)
     book=[]
-    book.append(Spacer(1,82))
+    book.append(Spacer(1,64))
     book.append(P("DSM FOUNDATIONS","booktitle"))
-    book.append(HRFlowable(width="100%",thickness=3,color=TEAL,spaceBefore=4,spaceAfter=18))
-    book.append(P("A complete printable course in diagnostic reasoning, clinical context, and responsible use of classification.","covercopy"))
-    book.append(Spacer(1,20))
-    book.append(box([P("REVIEW EDITION  /  OCTOBER 2026","caption"),
-                     P("11 lessons · 33 worked cases · 11 concept maps · 33 glossary concepts · 80 practice questions + instructor answer key","body"),
-                     P("Based on the interactive DSM Foundations learning course. Written as an educational textbook rather than printed from the website.","small")],SEA,pad=16))
+    book.append(P("Diagnostic reasoning, clinical context, and the person beyond the label.","covercopy"))
+    book.append(Spacer(1,7))
+    book.append(P("Sophia Korb Cohon, PhD","author"))
+    book.append(HRFlowable(width="100%",thickness=3,color=TEAL,spaceBefore=11,spaceAfter=24))
+    book.append(box([P("COMPLETE PRINT EDITION  /  OCTOBER 2026","caption"),
+                     P("11 lessons · 33 worked cases · 11 concept maps · 33 glossary concepts · 80 practice questions with a separate instructor key","body"),
+                     P("Adapted from the interactive DSM Foundations course as a readable, illustrated learning book.","small")],SEA,pad=16))
     book.append(Spacer(1,28))
-    book.append(P("Clinical boundary","h2"))
-    book.append(P("For education and structured critical thinking. This book is not the DSM-5-TR, does not reproduce the manual's full diagnostic criteria, and is not a substitute for qualified assessment, direct examination, current official guidance, or supervision. Apparent patterns do not establish diagnosis. Immediate safety and medical concerns require their own response.","body"))
-    book.append(P("Editorial note: this is a technical print-review candidate, not a clinically peer-reviewed release or PDF/UA-certified accessible edition.","small"))
+    book.append(P("About this book","h2"))
+    book.append(P("Diagnosis is a way to describe and communicate patterns, not a complete explanation of a person. These lessons begin with the purpose of classification and develop a practical way to notice, investigate, compare, and respond with appropriate context.","body"))
+    book.append(P("For full formal criteria, see the current DSM-5-TR.","tiny"))
     book.append(PageBreak())
     book.append(bookmark(P("Contents and use","h1"),"contents"))
     book.append(P("Use chapters 1–11 for the conceptual teaching and all 33 worked examples. The 80-item paper practice follows the lessons. The instructor key is deliberately separated after the questions. Select-all items are marked explicitly.","body"))
@@ -414,8 +416,8 @@ def build():
             if feedback:book.append(P(xml_escape(feedback),"answer"))
         book.append(Spacer(1,6))
     # Keep brief source notes on the last answer-key sheet when space permits.
-    book.append(bookmark(P("Sources and release status","h1"),"sources"))
-    book.append(P("Curriculum: Clinical Practice Library, DSM Foundations online interactive course, development review branch, October 2026. Print text, examples, concept-map nodes, questions, feedback and terms are derived from the same source file. This book is an original educational adaptation, not a facsimile of the DSM manual.","body"))
+    book.append(bookmark(P("References and credits","h1"),"sources"))
+    book.append(P("Created by <b>Sophia Korb Cohon, PhD</b>. Adapted for print from the author's interactive DSM Foundations course in the Clinical Practice Library. The teaching material and fictional cases are designed to make diagnostic reasoning more understandable.","body"))
     for label,url in [
         ("American Psychiatric Association, DSM-5-TR","https://www.psychiatry.org/psychiatrists/practice/dsm"),
         ("NIMH: Bipolar disorder","https://www.nimh.nih.gov/health/publications/bipolar-disorder"),
@@ -423,7 +425,6 @@ def build():
         ("EEOC: disability-related inquiries and documentation","https://www.eeoc.gov/laws/guidance/enforcement-guidance-disability-related-inquiries-and-medical-examinations-employees")
     ]:
         book.append(P(xml_escape(label)+": "+xml_escape(url),"small"))
-    book.append(P("Prepublication gates: clinical expert review against the authorized DSM-5-TR; independent accessibility audit including tags and screen-reader reading order; complete rendered print page review; formal sign-off before public release.","body"))
     doc=BookDoc(OUT)
     doc.build(book)
     counts=dict(lessons=len(secs),cases=count,concept_maps=len(figs),vocabulary=len(vocab),questions=len(keys),options=sum(x["options"] for x in keys),select_all=sum(x["multi"] for x in keys),single=sum(not x["multi"] for x in keys),chapters=chapters,pdf=str(OUT.relative_to(ROOT)))
