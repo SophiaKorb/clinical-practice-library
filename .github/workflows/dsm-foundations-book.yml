@@ -1,0 +1,62 @@
+name: DSM Foundations — complete review-book build
+on:
+  push:
+    branches: [cpl-2-colorful-helpful]
+    paths:
+      - 'scripts/build-dsm-foundations-book.py'
+      - 'resources/training/dsm-from-zero.html'
+      - 'docs/qa/dsm-foundations-all-questions.md'
+      - '.github/workflows/dsm-foundations-book.yml'
+  workflow_dispatch:
+jobs:
+  book-and-preflight:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install PDF-generation and preflight dependencies
+        run: python -m pip install --disable-pip-version-check reportlab beautifulsoup4 pymupdf
+      - name: Generate intentional book from canonical course (not website printing)
+        run: python scripts/build-dsm-foundations-book.py
+      - name: Preflight complete book and check all page geometry
+        run: |
+          python - <<'PY'
+          import fitz,json,re
+          from pathlib import Path
+          pdf=Path('build/dsm-foundations-complete-review-book.pdf')
+          d=fitz.open(pdf)
+          manifest=json.loads(Path('build/dsm-foundations-book-manifest.json').read_text())
+          assert len(d)>=65, ('Suspiciously short book',len(d))
+          assert all(round(p.rect.width)==612 and round(p.rect.height)==792 for p in d)
+          assert manifest['lessons']==11 and manifest['cases']==33 and manifest['concept_maps']==11
+          assert manifest['vocabulary']==33 and manifest['questions']==80
+          assert manifest['options']==249 and manifest['select_all']==8 and manifest['single']==72
+          pages=[p.get_text() for p in d]
+          full='\n'.join(pages)
+          for i in range(1,12):assert 'CHAPTER %02d'%i in full
+          for i in range(1,34):assert 'CASE '+str(i)+'  /' in full
+          for i in range(1,81):assert re.search(r'(?m)^%02d\.'%i,full),('missing number',i)
+          assert len(d.get_toc())>=15, ('Missing PDF bookmarks',len(d.get_toc()))
+          flagged=[]
+          sparse=[]
+          for idx,p in enumerate(d):
+            if len(p.get_text().strip())<100:sparse.append(idx+1)
+            for w in p.get_text('words'):
+              if w[0]<24 or w[1]<14 or w[2]>p.rect.width-22 or w[3]>p.rect.height-18:
+                flagged.append((idx+1,w[:5]))
+          assert not flagged[:4],flagged[:4]
+          assert len(sparse)<=7,('Many near-empty pages',sparse)
+          print(f'PASS: {len(d)} pages; {len(d.get_toc())} outline entries; no out-of-bounds text; sparse pages {sparse}')
+          PY
+      - name: Retain book, manifest and source for QA, without deployment
+        uses: actions/upload-artifact@v4
+        with:
+          name: dsm-foundations-complete-book-review
+          if-no-files-found: error
+          retention-days: 30
+          path: |
+            build/dsm-foundations-complete-review-book.pdf
+            build/dsm-foundations-book-manifest.json
+            resources/training/dsm-from-zero.html
