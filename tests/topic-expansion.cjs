@@ -61,7 +61,7 @@ for(const page of ['support-map.html','index.html']){
 }
 for(const page of ['support-map.html','index.html']){
  const html=fs.readFileSync('resources/clinical-topics/restrictive-eating-coordination/'+page,'utf8');
- assert.ok(html.includes('role="group" aria-label="Restrictive eating: medical safety and psychological, sensory and access assessment begin together'));
+ assert.ok(html.includes('role="group" aria-label="Two parallel assessments of restrictive eating, with immediate medical escalation when indicated'));
  assert.ok(html.includes('TWO TRACKS — ASSESS IN PARALLEL'));
  assert.ok(html.includes('Urgent concerns? Act without waiting.'));
  assert.ok(html.includes('Do not wait for the other track'));
