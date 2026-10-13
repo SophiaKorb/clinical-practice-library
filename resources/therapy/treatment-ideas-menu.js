@@ -171,7 +171,7 @@ async function init(){
     approach:'Ready-to-try example',title:target.label,try:suggestion,measure:target.measure});
   }
   state.measures=measureData.measures.map(m=>({
-   id:m.id,area:m.area,title:m.name,try:m.track,measure:m.example,source:m.source
+   id:m.id,area:m.area,title:m.name,method:m.method,try:m.track,measure:m.example,source:m.source
   }));
   const selector=$('menu-diagnosis');
   const all=el('option','All concerns');all.value='';selector.replaceChildren(all);
