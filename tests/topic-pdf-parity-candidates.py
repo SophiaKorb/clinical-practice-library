@@ -65,7 +65,7 @@ for i,(topic,m) in enumerate(zip(topics,manifest)):
                if item[0]=='l' and abs(item[1].x-36)<0.3 and abs(item[2].x-576)<0.3
                and abs(item[1].y-item[2].y)<0.3 and 510<item[1].y<650]
         labels=[(block[1],block[3]) for block in page.get_text('blocks')
-                if block[1]>510 and __import__('re').match(r'^[1-4]\\. ',str(block[4]))]
+                if block[1]>510 and __import__('re').match(r'^[1-4][.] ',str(block[4]))]
         assert len(labels)==4,(file,'expected four distinct reflection prompts',labels)
         for top,bottom in labels:
             assert not any(top-0.5<line_y<bottom+0.5 for line_y in rules),(file,'answer line crosses prompt',(top,bottom),rules)
