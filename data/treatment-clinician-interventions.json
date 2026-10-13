@@ -81,7 +81,7 @@
       "presentation": "panic",
       "approach": "Thinking & meaning",
       "title": "Panic-cycle case formulation",
-      "try": "Use an actual event to map sensation, interpretation, alarm, response and possible recurrence. Check medical and contextual explanations and identify a collaborative treatment focus.",
+      "try": "In session, use an actual event to map sensation, interpretation, alarm, response and possible recurrence. Check medical and contextual explanations and identify a collaborative treatment focus.",
       "measure": "Ask how accurately the cycle captures episodes and whether the person can identify useful next steps.",
       "scope": "New, severe or changed symptoms need medically appropriate evaluation."
     },
@@ -107,7 +107,7 @@
       "presentation": "social",
       "approach": "Thinking & meaning",
       "title": "Social evaluation hypothesis test",
-      "try": "Help the person formulate one fear of being judged; check actual discrimination or relationship danger. Design a consented experiment or role-play and compare prediction and observed outcomes.",
+      "try": "In session, help the person formulate one fear of being judged; check actual discrimination or relationship danger. Design a consented experiment or role-play and compare prediction and observed outcomes.",
       "measure": "Measure personally meaningful engagement and accuracy of predictions in context."
     },
     {
@@ -141,7 +141,7 @@
       "presentation": "bdd",
       "approach": "Thinking & meaning",
       "title": "Body-image meaning and checking formulation",
-      "try": "Collaboratively explore appearance beliefs, mirror/photo checking, shame, social pressures and avoidance. Use a structured case formulation to select a treatment approach without debating actual appearance.",
+      "try": "In session, collaboratively explore appearance beliefs, mirror/photo checking, shame, social pressures and avoidance. Use a structured case formulation to select a treatment approach without debating actual appearance.",
       "measure": "Track distress and interference plus chosen social/work participation."
     },
     {
@@ -175,7 +175,7 @@
       "presentation": "grief",
       "approach": "People & support",
       "title": "Grief-focused therapeutic meaning work",
-      "try": "With sensitivity to culture and relationship, help the person explore loss-related distress, changing roles, ongoing bonds and wishes for connection without prescribing a timetable.",
+      "try": "In session, with sensitivity to culture and relationship, help the person explore loss-related distress, changing roles, ongoing bonds and wishes for connection without prescribing a timetable.",
       "measure": "Review impairment, meaningful connection and personally valued adaptation rather than grief 'completion'."
     },
     {
@@ -200,7 +200,7 @@
       "presentation": "bpd",
       "approach": "People & support",
       "title": "Therapist-delivered interpersonal chain analysis",
-      "try": "With a collaborative and nonjudgmental approach, review a difficult interpersonal event, vulnerabilities, cue, actions, consequences and alternatives, without assuming intent or blame.",
+      "try": "In session, with a collaborative and nonjudgmental approach, review a difficult interpersonal event, vulnerabilities, cue, actions, consequences and alternatives, without assuming intent or blame.",
       "measure": "Monitor relationship functioning, repair choices and ability to apply an agreed skill."
     },
     {
@@ -249,7 +249,7 @@
       "presentation": "adhd",
       "approach": "Behavior & practice",
       "title": "In-session task initiation coaching",
-      "try": "Rehearse identifying the smallest functional step, arranging materials, planning a restart cue and handling interruptions during an actual selected task.",
+      "try": "In session, rehearse identifying the smallest functional step, arranging materials, planning a restart cue and handling interruptions during an actual selected task.",
       "measure": "Track supported starting and restarting across real opportunities."
     },
     {
@@ -257,7 +257,7 @@
       "presentation": "autism",
       "approach": "Environment & access",
       "title": "Therapist-guided sensory and demand assessment",
-      "try": "Map sensory demands, unpredictability and communication access across contexts. Trial environmental changes collaboratively rather than imposing habituation or masking.",
+      "try": "In session, map sensory demands, unpredictability and communication access across contexts. Trial environmental changes collaboratively rather than imposing habituation or masking.",
       "measure": "Compare participation, aftereffects, recovery cost and the person's choice."
     },
     {
@@ -299,7 +299,7 @@
       "presentation": "disruptive",
       "approach": "Behavior & practice",
       "title": "In-session caregiver skill rehearsal",
-      "try": "Model one specific validation, limit-setting or co-regulation response; rehearse it with the caregiver and help plan a feasible real-world context for trying it.",
+      "try": "In session, model one specific validation, limit-setting or co-regulation response; rehearse it with the caregiver and help plan a feasible real-world context for trying it.",
       "measure": "Monitor caregiver response quality, child safety and opportunities for child communication."
     },
     {
@@ -420,7 +420,7 @@
       "presentation": "pain",
       "approach": "Values & autonomy",
       "title": "Therapist-guided pacing and participation design",
-      "try": "Differentiate flare patterns, medical guidance, accessible effort and valued activities. Collaboratively build flexible pacing based on sustainable participation instead of mandatory pushing.",
+      "try": "In session, differentiate flare patterns, medical guidance, accessible effort and valued activities. Collaboratively build flexible pacing based on sustainable participation instead of mandatory pushing.",
       "measure": "Track chosen activities, recovery time, flare impact and burden of the plan."
     },
     {
@@ -436,7 +436,7 @@
       "presentation": "neurocognitive",
       "approach": "Environment & access",
       "title": "Cognitive-access and environment consultation",
-      "try": "With the person and appropriate supports, evaluate memory, comprehension, wayfinding and functional safety; trial simpler cues and adaptations to daily routines.",
+      "try": "In a clinician-led review, with the person and appropriate supports, evaluate memory, comprehension, wayfinding and functional safety; trial simpler cues and adaptations to daily routines.",
       "measure": "Track successful chosen tasks with supports and caregiver burden rather than unaided performance alone."
     },
     {
@@ -444,7 +444,7 @@
       "presentation": "neurocognitive",
       "approach": "People & support",
       "title": "Supported communication and care planning",
-      "try": "Facilitate accessible discussion of preferences, goals, roles and future supports, accounting for decision-specific ability, communication needs and consent.",
+      "try": "In a clinician-led conversation, facilitate accessible discussion of preferences, goals, roles and future supports, accounting for decision-specific ability, communication needs and consent.",
       "measure": "Review whether choices are expressed and honored, participation preserved and supports realistically available."
     }
   ]
