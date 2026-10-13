@@ -96,11 +96,25 @@ def markup(t):
         return "".join(out).replace("\n"," ").strip()
     return xml_escape(str(t)).replace("\n"," ").strip()
 
+def print_summary(summary):
+    """Return an editorial section heading with online navigation symbols removed."""
+    if summary is None:
+        return ""
+    cleaned=copy.deepcopy(summary)
+    for child in cleaned.select(".expand-arrow, .practice-indicator, .expand-hint, .audience-expand-indicator, [aria-hidden='true']"):
+        child.decompose()
+    result=text(cleaned)
+    return re.sub(r"\s+\+\s*$", "", result).strip()
+
+
 def plain(s):
     return re.sub(r"\s+"," ",str(s)).strip()
 
 def P(s, kind="body"):
     v=plain(s)
+    # The serif font lacks diagram arrows; retain source meaning through a glyph-complete fallback.
+    for glyph in "→↔↩⇢↘↙↓⇒←⇄":
+        v=v.replace(glyph, '<font name="BookSymbols">'+glyph+'</font>')
     return Paragraph(v if v else " ",style[kind])
 
 def plain_para(el,kind="body"):
@@ -224,7 +238,7 @@ def add_additional_item(el,story):
         return
     if el.name=="details":
         summary=el.find("summary",recursive=False)
-        if summary:story.append(P(xml_escape(text(summary)),"h3"))
+        if summary:story.append(P(xml_escape(print_summary(summary)),"h3"))
     if el.name=="div" and "example" in cls:
         story.append(box([P("EXAMPLE","caption"),P(xml_escape(text(el)),"small")],PALE,pad=9))
         return
@@ -272,7 +286,7 @@ def add_body_item(el,story):
             story.append(P("Further explanation","h2"))
             for dt in el.select("details.expand"):
                 summ=dt.find("summary")
-                if summ:story.append(P(xml_escape(text(summ)),"h3"))
+                if summ:story.append(P(xml_escape(print_summary(summ)),"h3"))
                 for p in dt.find_all("p",recursive=False):
                     story.append(plain_para(p,"small"))
         elif "key-takeaways" in classes:
