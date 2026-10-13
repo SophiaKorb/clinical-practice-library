@@ -82,3 +82,43 @@
  .sibling-safety-flow p{font-size:.85rem}
  .sibling-safety-branches>section:before{display:none}
 }
+
+
+/* Restrictive-eating formulation: simultaneous tracks, with an independent medical escalation. */
+.restrictive-parallel{display:grid;gap:0;margin:24px 0;max-width:1050px}
+.restrictive-parallel section{min-width:0;border:2px solid #45675d;border-radius:12px;padding:14px 18px;background:#fff}
+.restrictive-parallel h3{font-size:1.12rem;margin:0 0 6px;line-height:1.3}
+.restrictive-parallel p{margin:5px 0 0;line-height:1.55}
+.restrictive-parallel__start{background:#e7f0ed!important;text-align:center}
+.restrictive-parallel__signal{text-align:center;font-weight:750;padding:15px 12px 18px;margin:14px 0 2px;border-block:3px double #173f38}
+.restrictive-parallel__signal strong{display:block;font-size:1.08rem;letter-spacing:.04em}
+.restrictive-parallel__signal span{display:block;font-size:.89rem;font-weight:550}
+.restrictive-parallel__tracks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:stretch}
+.restrictive-parallel__tracks>section{position:relative}
+.restrictive-parallel__tracks>section:before{content:"↓ begins now";font-size:.81rem;font-weight:800;display:block;margin:-4px 0 8px}
+.restrictive-parallel__medical{background:#f8e9e2!important;border-color:#96563d!important}
+.restrictive-parallel__context{background:#e8eff7!important;border-color:#416487!important}
+.restrictive-parallel__urgent{background:#fff;border:2px solid #9e533b;border-left-width:6px;border-radius:8px;padding:12px;margin-top:15px}
+.restrictive-parallel__urgent strong{display:block;font-size:1rem}
+.restrictive-parallel__urgent p{font-size:.9rem}
+.restrictive-parallel__plan{background:#e8f0eb!important;text-align:center;margin-top:22px;position:relative}
+.restrictive-parallel__plan:before{content:"↓ combine findings, not waiting periods";display:block;font-weight:800;font-size:.8rem;margin:-35px auto 14px;background:var(--paper,#fff);width:max-content;max-width:100%;padding:1px 6px}
+.restrictive-parallel__review{background:#e9eef3!important;text-align:center;margin-top:18px}
+.restrictive-parallel__review:before{content:"↓";display:block;font-size:1.2rem;line-height:1}
+@media(max-width:740px){
+ .restrictive-parallel__tracks{grid-template-columns:1fr;gap:10px}
+ .restrictive-parallel__tracks>section:before{content:"STARTS AT THE SAME TIME AS THE OTHER TRACK";font-size:.77rem}
+ .restrictive-parallel__plan:before{content:"↓ combine both tracks";margin-top:-30px}
+}
+@media print{
+ .restrictive-parallel{gap:0}
+ .restrictive-parallel__tracks{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ .restrictive-parallel section{padding:9px 10px;break-inside:avoid}
+ .restrictive-parallel h3{font-size:.96rem}
+ .restrictive-parallel p{font-size:.82rem;line-height:1.36}
+ .restrictive-parallel__signal{padding:8px;margin:7px 0}
+ .restrictive-parallel__signal strong{font-size:1rem}
+ .restrictive-parallel__urgent{padding:8px;margin-top:8px}
+ .restrictive-parallel__plan{margin-top:16px}
+ .restrictive-parallel__plan:before{margin-top:-25px}
+}
