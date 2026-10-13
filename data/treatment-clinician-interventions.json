@@ -1,0 +1,451 @@
+{
+  "version": "2026-10-12",
+  "description": "Original examples of therapist-delivered clinical interventions for professional discussion; not a protocol, directive, or evidence-of-efficacy ranking. Qualifications, medical safety, consent and formulation matter.",
+  "interventions": [
+    {
+      "id": "clinician-anxiety-1",
+      "presentation": "anxiety",
+      "approach": "Thinking & meaning",
+      "title": "Collaborative anxiety formulation",
+      "try": "In session, map the feared meaning, context, attention, responses and consequences of a real situation. Examine realistic danger and access needs before selecting a change.",
+      "measure": "Review whether the explanation fits the person's experience and identifies workable choices."
+    },
+    {
+      "id": "clinician-anxiety-2",
+      "presentation": "anxiety",
+      "approach": "Behavior & practice",
+      "title": "Therapist-guided approach experiment",
+      "try": "Assess actual risks and needed accommodations, negotiate a voluntary manageable experiment, coach during it and debrief predictions against what occurred.",
+      "measure": "Track chosen participation and learning; do not treat anxiety reduction as the sole outcome.",
+      "scope": "Clinician screens medical/safety issues; never remove necessary accommodations."
+    },
+    {
+      "id": "clinician-anxiety-3",
+      "presentation": "anxiety",
+      "approach": "Environment & access",
+      "title": "Clinical accommodation experiment",
+      "try": "Jointly analyze which demands create barriers and which responses reflect fear. In session compare feasible access changes, enlist relevant partners with consent, and review impacts.",
+      "measure": "Compare participation, effort and overload in equivalent situations with and without the support."
+    },
+    {
+      "id": "clinician-depression-1",
+      "presentation": "depression",
+      "approach": "Behavior & practice",
+      "title": "Behavioral activation with therapist formulation",
+      "try": "Map mood, fatigue, overload, rewards and opportunity restrictions. Use a session to choose and troubleshoot accessible, meaningful activity experiments with the person.",
+      "measure": "Compare personally meaningful engagement and feasibility over repeated opportunities."
+    },
+    {
+      "id": "clinician-depression-2",
+      "presentation": "depression",
+      "approach": "Thinking & meaning",
+      "title": "Guided work on self-critical beliefs",
+      "try": "Help the person examine a self-critical conclusion, evidence, life context and possible alternatives. Rehearse a personally credible response in session.",
+      "measure": "Use individualized self-criticism ratings alongside functioning and personally valued action."
+    },
+    {
+      "id": "clinician-bipolar-1",
+      "presentation": "bipolar",
+      "approach": "Routines & regulation",
+      "title": "Relapse signature and coordinated response plan",
+      "try": "Map the person's pattern of sleep, activation, mood and functioning across episodes; distinguish baseline variation and medication effects. Coordinate a response plan with the treating team.",
+      "measure": "Track individualized early warning changes, plan use and functional stability.",
+      "scope": "Requires appropriate coordination with prescribing care; never substitute for urgent mania, psychosis or safety assessment."
+    },
+    {
+      "id": "clinician-bipolar-2",
+      "presentation": "bipolar",
+      "approach": "People & support",
+      "title": "Therapist-facilitated family support planning",
+      "try": "With consent, help the person and supporters define what changes should prompt contact, which help is welcome and who makes which decisions. Rehearse the plan together.",
+      "measure": "Monitor whether helpful actions are available when needed while autonomy is respected."
+    },
+    {
+      "id": "clinician-gad-1",
+      "presentation": "gad",
+      "approach": "Thinking & meaning",
+      "title": "Therapist-led worry differentiation",
+      "try": "In session distinguish solvable problems, uncertain outcomes and unavoidable demands. Guide appropriate problem-solving and values-based uncertainty work rather than using one technique for everything.",
+      "measure": "Track time lost to repetitive worry, problem actions completed and tolerable uncertainty."
+    },
+    {
+      "id": "clinician-gad-2",
+      "presentation": "gad",
+      "approach": "Behavior & practice",
+      "title": "Uncertainty tolerance rehearsal",
+      "try": "Together choose a low-risk decision, assess the need for more information, guide one decision without repeated guarantees and process what the person learned.",
+      "measure": "Compare decision participation and checking/reassurance burden across comparable choices."
+    },
+    {
+      "id": "clinician-panic-1",
+      "presentation": "panic",
+      "approach": "Thinking & meaning",
+      "title": "Panic-cycle case formulation",
+      "try": "Use an actual event to map sensation, interpretation, alarm, response and possible recurrence. Check medical and contextual explanations and identify a collaborative treatment focus.",
+      "measure": "Ask how accurately the cycle captures episodes and whether the person can identify useful next steps.",
+      "scope": "New, severe or changed symptoms need medically appropriate evaluation."
+    },
+    {
+      "id": "clinician-panic-2",
+      "presentation": "panic",
+      "approach": "Behavior & practice",
+      "title": "Clinician-supervised panic experiment",
+      "try": "When medically appropriate, a qualified therapist formulates feared predictions, obtains consent, structures an exposure/response experiment and debriefs outcomes together.",
+      "measure": "Track prediction learning and restored chosen participation, not induced symptoms for their own sake.",
+      "scope": "Interoceptive exposure requires indicated medical screening and qualified supervision."
+    },
+    {
+      "id": "clinician-social-1",
+      "presentation": "social",
+      "approach": "People & support",
+      "title": "Therapist-led interpersonal rehearsal",
+      "try": "Explore the real communication demand, then model and rehearse a chosen interaction in session. Give collaborative feedback and support culturally and neurodevelopmentally appropriate styles.",
+      "measure": "Evaluate usable self-advocacy, choice and communication access instead of eye contact or conformity."
+    },
+    {
+      "id": "clinician-social-2",
+      "presentation": "social",
+      "approach": "Thinking & meaning",
+      "title": "Social evaluation hypothesis test",
+      "try": "Help the person formulate one fear of being judged; check actual discrimination or relationship danger. Design a consented experiment or role-play and compare prediction and observed outcomes.",
+      "measure": "Measure personally meaningful engagement and accuracy of predictions in context."
+    },
+    {
+      "id": "clinician-phobia-1",
+      "presentation": "phobia",
+      "approach": "Behavior & practice",
+      "title": "Collaborative graded exposure treatment",
+      "try": "A qualified therapist evaluates safety, consent and functional aims, develops a flexible hierarchy, guides graded approach and processes learning.",
+      "measure": "Track voluntary participation and feared outcome learning alongside accommodations.",
+      "scope": "No unsafe exposures or pressure to override consent/medical advice."
+    },
+    {
+      "id": "clinician-ocd-1",
+      "presentation": "ocd",
+      "approach": "Behavior & practice",
+      "title": "Specialist ERP formulation and practice",
+      "try": "An OCD-qualified clinician differentiates obsessions, rituals, reassurance and necessary safety actions; agrees on exposure/response prevention targets, coaches practice and revisits effects.",
+      "measure": "Monitor time or interference from compulsions and return to chosen life activities.",
+      "scope": "Do not confuse legitimate safety, medical care, disability supports or eating care with rituals."
+    },
+    {
+      "id": "clinician-ocd-2",
+      "presentation": "ocd",
+      "approach": "People & support",
+      "title": "Family accommodation consultation",
+      "try": "With consent, identify which reassurance patterns may unintentionally reinforce compulsions and which are genuine support needs. Co-design nonpunitive changes and rehearse responses with supporters.",
+      "measure": "Track supporter confidence and whether useful assistance remains accessible."
+    },
+    {
+      "id": "clinician-bdd-1",
+      "presentation": "bdd",
+      "approach": "Thinking & meaning",
+      "title": "Body-image meaning and checking formulation",
+      "try": "Collaboratively explore appearance beliefs, mirror/photo checking, shame, social pressures and avoidance. Use a structured case formulation to select a treatment approach without debating actual appearance.",
+      "measure": "Track distress and interference plus chosen social/work participation."
+    },
+    {
+      "id": "clinician-ptsd-1",
+      "presentation": "ptsd",
+      "approach": "Thinking & meaning",
+      "title": "Trauma-informed stabilization and shared formulation",
+      "try": "Assess readiness, current safety, dissociation, supports and goals. Collaboratively link triggers and responses while avoiding unnecessary trauma detail, and select an appropriate phase of care.",
+      "measure": "Monitor perceived safety, choice, coping effectiveness and functional participation.",
+      "scope": "Trauma-processing treatments require suitable qualification and informed consent."
+    },
+    {
+      "id": "clinician-ptsd-2",
+      "presentation": "ptsd",
+      "approach": "Behavior & practice",
+      "title": "Specialist trauma-focused therapy",
+      "try": "A qualified therapist uses an evidence-based trauma-focused method with individualized pacing, consent, response monitoring and active reassessment of stability and goals.",
+      "measure": "Use appropriate symptom and function measures plus the person's assessment of safety and benefit.",
+      "scope": "Do not treat this prompt as a protocol for unsupervised trauma exposure."
+    },
+    {
+      "id": "clinician-adjustment-1",
+      "presentation": "adjustment",
+      "approach": "Values & autonomy",
+      "title": "Collaborative transition-focused problem solving",
+      "try": "Structure sessions around what changed, controllable and uncontrollable demands, losses, supports and person-defined priorities. Rehearse communication and one feasible adjustment strategy.",
+      "measure": "Track goal progress, role participation and felt agency during the transition."
+    },
+    {
+      "id": "clinician-grief-1",
+      "presentation": "grief",
+      "approach": "People & support",
+      "title": "Grief-focused therapeutic meaning work",
+      "try": "With sensitivity to culture and relationship, help the person explore loss-related distress, changing roles, ongoing bonds and wishes for connection without prescribing a timetable.",
+      "measure": "Review impairment, meaningful connection and personally valued adaptation rather than grief 'completion'."
+    },
+    {
+      "id": "clinician-dissociation-1",
+      "presentation": "dissociation",
+      "approach": "Routines & regulation",
+      "title": "Dissociation-focused grounding and continuity planning",
+      "try": "A trained therapist assesses episodes and safety, identifies individualized early signs, practices consensual grounding or orientation methods in session and documents what helps or worsens functioning.",
+      "measure": "Record orientation, participation, aftereffects and support needs across contexts.",
+      "scope": "Avoid suggestive memory-recovery techniques or assuming one explanatory model."
+    },
+    {
+      "id": "clinician-dissociation-2",
+      "presentation": "dissociation",
+      "approach": "Thinking & meaning",
+      "title": "Non-leading functional dissociation assessment",
+      "try": "Use careful phenomenological questions and functional observation to distinguish experiences, triggers, memory problems and possible medical causes; coordinate indicated assessment.",
+      "measure": "Track time lost, continuity of daily roles and changes reported in a neutral language."
+    },
+    {
+      "id": "clinician-bpd-1",
+      "presentation": "bpd",
+      "approach": "People & support",
+      "title": "Therapist-delivered interpersonal chain analysis",
+      "try": "With a collaborative and nonjudgmental approach, review a difficult interpersonal event, vulnerabilities, cue, actions, consequences and alternatives, without assuming intent or blame.",
+      "measure": "Monitor relationship functioning, repair choices and ability to apply an agreed skill."
+    },
+    {
+      "id": "clinician-bpd-2",
+      "presentation": "bpd",
+      "approach": "Routines & regulation",
+      "title": "Structured emotion-regulation skills therapy",
+      "try": "In session teach, model and rehearse an indicated skill; help the person adapt it for sensory or access needs, troubleshoot obstacles and review use without punitive compliance targets.",
+      "measure": "Measure function after difficult emotions, skill usefulness and chosen safety goals."
+    },
+    {
+      "id": "clinician-personality-1",
+      "presentation": "personality",
+      "approach": "Thinking & meaning",
+      "title": "Longitudinal interpersonal pattern formulation",
+      "try": "The therapist and person explore repeated relationship themes across settings and time, including contextual harms, strengths and alternative explanations. Revise the formulation collaboratively.",
+      "measure": "Review valued relationships, self-understanding and functioning rather than an assumed personality label."
+    },
+    {
+      "id": "clinician-psychosis-1",
+      "presentation": "psychosis",
+      "approach": "People & support",
+      "title": "Collaborative coping and relapse-support planning",
+      "try": "Assess immediate risks and strengths, discuss distressing experiences without confrontation, coordinate with psychiatric care and negotiate usable coping and help-seeking responses.",
+      "measure": "Track distress, role functioning, adherence to chosen supports and ability to obtain timely care.",
+      "scope": "Medication and acute risk decisions belong to qualified medical teams."
+    },
+    {
+      "id": "clinician-psychosis-2",
+      "presentation": "psychosis",
+      "approach": "Thinking & meaning",
+      "title": "CBT-informed work with distressing experiences",
+      "try": "A trained clinician collaboratively examines meaning, threat and coping around unusual experiences without forcing agreement about their cause. Test safer alternatives only when appropriate.",
+      "measure": "Monitor distress, agency, sleep and daily participation; symptoms alone do not measure benefit."
+    },
+    {
+      "id": "clinician-adhd-1",
+      "presentation": "adhd",
+      "approach": "Environment & access",
+      "title": "Therapist-led executive-function design",
+      "try": "Observe task demands and access barriers, co-design external structure, practice a realistic task sequence in session and iteratively adjust cues with the person's feedback.",
+      "measure": "Measure initiation latency, completion with supports and cognitive effort."
+    },
+    {
+      "id": "clinician-adhd-2",
+      "presentation": "adhd",
+      "approach": "Behavior & practice",
+      "title": "In-session task initiation coaching",
+      "try": "Rehearse identifying the smallest functional step, arranging materials, planning a restart cue and handling interruptions during an actual selected task.",
+      "measure": "Track supported starting and restarting across real opportunities."
+    },
+    {
+      "id": "clinician-autism-1",
+      "presentation": "autism",
+      "approach": "Environment & access",
+      "title": "Therapist-guided sensory and demand assessment",
+      "try": "Map sensory demands, unpredictability and communication access across contexts. Trial environmental changes collaboratively rather than imposing habituation or masking.",
+      "measure": "Compare participation, aftereffects, recovery cost and the person's choice."
+    },
+    {
+      "id": "clinician-autism-2",
+      "presentation": "autism",
+      "approach": "People & support",
+      "title": "Affirming communication-access intervention",
+      "try": "With the person, adjust communication methods and practice boundaries or support requests in session; include partners only with consent and avoid enforcing normative social behavior.",
+      "measure": "Measure whether authentic communication, refusals and preferences are understood and respected."
+    },
+    {
+      "id": "clinician-id-1",
+      "presentation": "id",
+      "approach": "People & support",
+      "title": "Supported decision-making assessment and coaching",
+      "try": "Assess which accessible information, response methods and trusted supports make choices possible. Rehearse presenting real options, checking understanding and respecting refusal.",
+      "measure": "Track opportunities offered, preferences expressed and choices honored.",
+      "scope": "Do not infer global capacity from speech or one response."
+    },
+    {
+      "id": "clinician-id-2",
+      "presentation": "id",
+      "approach": "Environment & access",
+      "title": "Clinician-guided adaptive support experiment",
+      "try": "Observe a person-chosen daily task with consent, identify environmental or communication barriers, model aids/supports and review participation without equating assistance with failure.",
+      "measure": "Compare role participation and needed support; monitor dignity and effort."
+    },
+    {
+      "id": "clinician-disruptive-1",
+      "presentation": "disruptive",
+      "approach": "People & support",
+      "title": "Caregiver-child functional consultation",
+      "try": "Assess safety and context, collect descriptive before/behavior/after observations, and collaboratively coach caregivers in co-regulation, predictable routines and repair.",
+      "measure": "Track frequency with context, child safety, caregiver consistency and improved function.",
+      "scope": "Avoid coercion or interpreting all distress as willful misconduct."
+    },
+    {
+      "id": "clinician-disruptive-2",
+      "presentation": "disruptive",
+      "approach": "Behavior & practice",
+      "title": "In-session caregiver skill rehearsal",
+      "try": "Model one specific validation, limit-setting or co-regulation response; rehearse it with the caregiver and help plan a feasible real-world context for trying it.",
+      "measure": "Monitor caregiver response quality, child safety and opportunities for child communication."
+    },
+    {
+      "id": "clinician-anger-1",
+      "presentation": "anger",
+      "approach": "Routines & regulation",
+      "title": "Clinician-guided escalation chain and interruption",
+      "try": "Review a recent escalation from context to body signs, threat meaning, available choices and consequences. Rehearse a preferred pause, boundary or recovery response in session.",
+      "measure": "Track time to notice early cues, harm reduction and successful safe reconnection."
+    },
+    {
+      "id": "clinician-sud-1",
+      "presentation": "sud",
+      "approach": "Behavior & practice",
+      "title": "Motivational interviewing for ambivalence",
+      "try": "The trained therapist elicits the person's values and concerns with a nonjudgmental stance, clarifies ambivalence and collaborates on harm-reduction or treatment goals without coercion.",
+      "measure": "Record self-chosen goals, engagement and functional change.",
+      "scope": "Withdrawal and overdose risks require appropriate medical assessment."
+    },
+    {
+      "id": "clinician-sud-2",
+      "presentation": "sud",
+      "approach": "People & support",
+      "title": "Relapse/return-to-use safety planning",
+      "try": "Explore triggers, access, relationships and practical barriers; coordinate medications or specialty care as indicated, and rehearse a nonpunitive re-entry plan after a setback.",
+      "measure": "Monitor risk reduction, timely access to services and personally meaningful functioning.",
+      "scope": "Do not replace medically managed withdrawal or prescribing care."
+    },
+    {
+      "id": "clinician-anorexia-1",
+      "presentation": "anorexia",
+      "approach": "People & support",
+      "title": "Eating-disorder multidisciplinary coordination",
+      "try": "An appropriately trained clinician helps coordinate medical/nutritional monitoring, family or support involvement with consent, and individualized psychological care within scope.",
+      "measure": "Review medical status with the team and patient-centered participation; avoid relying on body size alone.",
+      "scope": "Medical instability and refeeding decisions require qualified specialist oversight."
+    },
+    {
+      "id": "clinician-anorexia-2",
+      "presentation": "anorexia",
+      "approach": "Thinking & meaning",
+      "title": "Specialist eating-disorder cognitive work",
+      "try": "Within coordinated care, assess rules, fear, self-evaluation, access needs and maintaining context. Use a collaboratively selected treatment model without prescribing restriction or numeric intake goals here.",
+      "measure": "Review functioning, psychological flexibility and medically reviewed progress.",
+      "scope": "Not a self-help exposure or refeeding protocol."
+    },
+    {
+      "id": "clinician-bulimia-1",
+      "presentation": "bulimia",
+      "approach": "Behavior & practice",
+      "title": "Specialist binge/purge pattern formulation",
+      "try": "With qualified care, map contextual triggers, cycles, compensatory behavior and physical risk. Select coordinated evidence-based treatment components and ensure medical review.",
+      "measure": "Monitor frequency and harm, functioning, and agreed clinical indicators without shaming.",
+      "scope": "Electrolyte and other medical risks require appropriate assessment."
+    },
+    {
+      "id": "clinician-bulimia-2",
+      "presentation": "bulimia",
+      "approach": "Thinking & meaning",
+      "title": "Therapist-supported eating-rule flexibility",
+      "try": "Explore rigid rules and shame in a consented, specialist setting; co-design safer behavior-change work coordinated with nutritional/medical care.",
+      "measure": "Monitor reduced impairment and sustainable participation, with medical outcomes interpreted by the team."
+    },
+    {
+      "id": "clinician-arfid-1",
+      "presentation": "arfid",
+      "approach": "Environment & access",
+      "title": "Multidisciplinary feeding access formulation",
+      "try": "Distinguish sensory, fear, appetite, swallowing, nutritional and environmental contributors with appropriate specialist assessment; adapt context and meal access with consent.",
+      "measure": "Review nutritional/medical stability, tolerable participation and accommodation effectiveness.",
+      "scope": "Do not prescribe unmonitored food exposures or assume no medical risk."
+    },
+    {
+      "id": "clinician-arfid-2",
+      "presentation": "arfid",
+      "approach": "Behavior & practice",
+      "title": "Clinician-led graded food participation",
+      "try": "Qualified clinicians, with appropriate medical/nutritional clearance, collaboratively structure noncoercive, paced food-participation work and adjust to sensory/communication needs.",
+      "measure": "Track choice, functional eating participation and medical safety as assessed by the team.",
+      "scope": "No pressure, forced intake or substitution for indicated medical evaluation."
+    },
+    {
+      "id": "clinician-sleep-1",
+      "presentation": "sleep",
+      "approach": "Routines & regulation",
+      "title": "CBT-I sleep-pattern formulation",
+      "try": "A qualified clinician reviews a structured sleep diary, daytime functioning, medications and relevant medical causes; identifies an appropriate treatment component and checks safety.",
+      "measure": "Measure sleep patterns alongside daytime participation and unwanted effects.",
+      "scope": "Sleep restriction is not a generic self-help exercise; screen for bipolar, seizure and other relevant risks."
+    },
+    {
+      "id": "clinician-sleep-2",
+      "presentation": "sleep",
+      "approach": "Environment & access",
+      "title": "Therapist-guided sleep environment review",
+      "try": "Assess noise, light, pain, caregiving demands, neurodivergent needs and routines with the person; prioritize realistic modifications and review impact.",
+      "measure": "Compare sleep continuity and daytime fatigue across feasible changes."
+    },
+    {
+      "id": "clinician-somatic-1",
+      "presentation": "somatic",
+      "approach": "Thinking & meaning",
+      "title": "Integrated symptom-and-care formulation",
+      "try": "Validate the reported symptoms and suffering, review indicated medical care, stress and attention patterns without prematurely psychologizing, and coordinate a shared care plan.",
+      "measure": "Measure functional burden, care access and quality of life as well as symptom distress.",
+      "scope": "Do not use symptom response to rule out disease or delay appropriate investigation."
+    },
+    {
+      "id": "clinician-somatic-2",
+      "presentation": "somatic",
+      "approach": "People & support",
+      "title": "Collaborative medical communication session",
+      "try": "Help the person prepare questions and a coherent account of symptoms and functional impact; with consent coordinate expectations among treating clinicians.",
+      "measure": "Track whether medically indicated follow-up occurred and whether the person felt heard and could function."
+    },
+    {
+      "id": "clinician-pain-1",
+      "presentation": "pain",
+      "approach": "Values & autonomy",
+      "title": "Therapist-guided pacing and participation design",
+      "try": "Differentiate flare patterns, medical guidance, accessible effort and valued activities. Collaboratively build flexible pacing based on sustainable participation instead of mandatory pushing.",
+      "measure": "Track chosen activities, recovery time, flare impact and burden of the plan."
+    },
+    {
+      "id": "clinician-pain-2",
+      "presentation": "pain",
+      "approach": "Thinking & meaning",
+      "title": "Pain-related threat and coping formulation",
+      "try": "In session examine perceived threat, lived constraints, uncertainty, avoidance and supports without dismissing pain as psychological. Integrate with appropriate medical treatment.",
+      "measure": "Measure function, agency, pain interference and whether the person's concerns receive appropriate care."
+    },
+    {
+      "id": "clinician-neurocognitive-1",
+      "presentation": "neurocognitive",
+      "approach": "Environment & access",
+      "title": "Cognitive-access and environment consultation",
+      "try": "With the person and appropriate supports, evaluate memory, comprehension, wayfinding and functional safety; trial simpler cues and adaptations to daily routines.",
+      "measure": "Track successful chosen tasks with supports and caregiver burden rather than unaided performance alone."
+    },
+    {
+      "id": "clinician-neurocognitive-2",
+      "presentation": "neurocognitive",
+      "approach": "People & support",
+      "title": "Supported communication and care planning",
+      "try": "Facilitate accessible discussion of preferences, goals, roles and future supports, accounting for decision-specific ability, communication needs and consent.",
+      "measure": "Review whether choices are expressed and honored, participation preserved and supports realistically available."
+    }
+  ]
+}
