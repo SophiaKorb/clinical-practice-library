@@ -139,3 +139,24 @@ h1{font-size:clamp(2rem,3.2vw,2.85rem)}
 @media(max-width:700px){.delivery-options{grid-template-columns:1fr}.delivery-section{padding:15px}.delivery-choice{padding:11px 13px}}
 @media(forced-colors:active){.delivery-choice[aria-pressed=true],.intervention-card,.scope-note{border:3px solid Highlight}}
 @media print{.delivery-section .delivery-options{display:none}.delivery-section{padding:6px 0;border:0}.delivery-explanation{margin-top:6px}.scope-note{break-inside:avoid}}
+
+/* Mobile first: show the idea cards sooner without hiding the distinction between levels. */
+@media(max-width:540px){
+ .menu-hero .lede{display:none}
+ .menu-controls{grid-template-columns:minmax(0,1fr) auto;align-items:end}
+ .menu-controls label[for="menu-diagnosis"]{grid-column:1/-1}
+ .menu-controls label[for="menu-search"]{grid-column:1;min-width:0}
+ .menu-controls .reset{grid-column:2;min-width:0;font-size:.75rem;padding:6px 8px;align-self:end;line-height:1.18}
+ .delivery-section{padding:11px;margin:10px 0}
+ .delivery-section h2{font-size:1.16rem;margin-bottom:7px}
+ .delivery-options{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+ .delivery-choice{padding:8px 9px;min-height:110px}
+ .delivery-choice strong{font-size:.84rem;line-height:1.18}
+ .delivery-choice span{font-size:.75rem;line-height:1.2;margin-top:5px}
+ .delivery-explanation{display:none}
+ .idea-section{padding:13px 12px}
+ .section-top h2{font-size:1.36rem}
+ .section-description{font-size:.85rem;line-height:1.32}
+ .active-view{margin:2px 0 7px}
+ .idea-grid{gap:9px}
+}
