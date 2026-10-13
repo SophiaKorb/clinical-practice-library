@@ -44,7 +44,7 @@ for(const m of methods.measures){
  assert.ok(m.name&&m.track&&m.example&&m.method,'each method is an independently editable idea with type and example');
  if(m.method==='Standardized instrument')assert.ok(/^https:\/\//.test(m.source),'standardized options identify original scale source');
 }
-assert.match(methods.note,/None of the custom counts/i,'never imply custom tracking is a validated measure');
+assert.match(methods.note,/custom ratings and informal tracking ideas are NOT validated instruments/i,'never imply custom tracking is a validated measure');
 for(const selector of ['id="delivery-practice"','id="delivery-clinician"','id="measure-library"','id="measure-search"','id="menu-area"'])
  assert.ok(html.includes(selector),'visible menu control '+selector);
 assert.match(html,/therapist-coached practice/i);
