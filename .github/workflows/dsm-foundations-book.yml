@@ -41,8 +41,7 @@ jobs:
           assert manifest['vocabulary']==33 and manifest['questions']==80
           assert manifest['options']==249 and manifest['select_all']==8 and manifest['single']==72
           pages=[p.get_text() for p in d]
-          full='
-'.join(pages)
+          full='\n'.join(pages)
           for i in range(1,12):assert 'CHAPTER %02d'%i in full
           for i in range(1,34):assert re.search(r'CASE\s+'+str(i)+r'\s*/',full),('Missing case',i)
           for i in range(1,81):assert re.search(r'(?m)^%02d\.'%i,full),('missing number',i)
