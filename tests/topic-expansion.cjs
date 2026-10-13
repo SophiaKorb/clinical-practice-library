@@ -15,13 +15,22 @@ for(const r of ledger.resources){
   assert.ok(options[0][1]!==options[1][1]);assert.ok(html.includes('role="status"'));
   assert.ok(html.includes('Worked formulation'));assert.ok(html.includes('Fictional case:'));
  }
- if(r.type==='support-map'){assert.equal((html.match(/<li><strong>/g)||[]).length,5);assert.equal((html.match(/<textarea/g)||[]).length,4);}
+ if(r.type==='support-map'){
+  if(r.topic==='sibling-conflict-safety-repair'){
+   assert.ok(html.includes('class="sibling-safety-flow"'),'approved safeguarding flow missing');
+   assert.ok(html.indexOf('Adult responsibility — always')<html.indexOf('Unsafe or coercive'));
+   assert.ok(html.indexOf('Adult responsibility — always')<html.indexOf('Safe and voluntary'));
+   assert.ok(html.indexOf('Ongoing support for all siblings')>html.indexOf('Do not require forgiveness'));
+   assert.equal((html.match(/<li><strong>/g)||[]).length,6,'three distinct actions per safety route');
+  } else assert.equal((html.match(/<li><strong>/g)||[]).length,5);
+  assert.equal((html.match(/<textarea/g)||[]).length,4);
+ }
  if(r.type==='progress-review'){assert.equal((html.match(/<th scope="row">/g)||[]).length,4);assert.ok(html.includes('Missing data is missing data'));}
  assert.ok(fs.existsSync('resources/downloads/topic-'+r.topic+'.pdf'));
 }
 for(const set of byTopic.values())assert.equal(set.size,6);
 // Structural checks for meaningful visual models; source-level QA only, not rendered approval.
-const models={'panic-alarm-loop':'return-loop','ocd-mental-rituals':'loop-choice','aphasia-communication-access':'access-tracks','child-aggression-caregiver-coaching':'abc-tracks','sibling-conflict-safety-repair':'safety-gate','restrictive-eating-coordination':'parallel-assess','intellectual-disability-supported-choice':'access-tracks','health-anxiety-medical-plan':'loop-choice','body-dysmorphia-checking':'loop-choice','adult-autism-load-recovery':'context-budget','social-anxiety-attention':'attention-split','depression-activity-reward':'loop-choice','binge-eating-patterns':'loop-choice'};
+const models={'panic-alarm-loop':'return-loop','ocd-mental-rituals':'loop-choice','aphasia-communication-access':'access-tracks','child-aggression-caregiver-coaching':'abc-tracks','restrictive-eating-coordination':'parallel-assess','intellectual-disability-supported-choice':'access-tracks','health-anxiety-medical-plan':'loop-choice','body-dysmorphia-checking':'loop-choice','adult-autism-load-recovery':'context-budget','social-anxiety-attention':'attention-split','depression-activity-reward':'loop-choice','binge-eating-patterns':'loop-choice'};
 for(const [slug,cls] of Object.entries(models)){
  for(const page of ['support-map.html','index.html']){
   const html=fs.readFileSync('resources/clinical-topics/'+slug+'/'+page,'utf8');
@@ -29,14 +38,22 @@ for(const [slug,cls] of Object.entries(models)){
   assert.ok(html.includes('class="map-legend"'),'missing accessible explanation '+slug);
   assert.equal((html.match(/<li><strong>/g)||[]).length,5,'five map parts '+slug);
   if(slug==='sibling-conflict-safety-repair'){
-   assert.ok(html.includes('role="group" aria-label="Two safety-dependent response routes"'));
-   assert.ok(html.includes('Do not require joint mediation'));
-   assert.ok(html.includes('may refuse without penalty'));
+ 
   }
  }
 }
+for(const page of ['support-map.html','index.html']){
+ const html=fs.readFileSync('resources/clinical-topics/sibling-conflict-safety-repair/'+page,'utf8');
+ assert.ok(html.includes('role="group" aria-label="Sibling conflict: adult responsibility applies in both pathways'));
+ assert.ok(html.indexOf('Adult responsibility — always') < html.indexOf('Unsafe or coercive'));
+ assert.ok(html.indexOf('Adult responsibility — always') < html.indexOf('Safe and voluntary'));
+ assert.ok(html.indexOf('Ongoing support for all siblings') > html.indexOf('Do not require forgiveness'));
+ assert.ok(html.includes('Do not require joint mediation'));
+ assert.ok(html.includes('A child may refuse without penalty'));
+ assert.doesNotMatch(html,/class="clinical-map safety-gate"/,'outdated misleading sequence must not recur');
+}
 const mapCss=fs.readFileSync('resources/clinical-topics/topic-tools.css','utf8');
-assert.ok(mapCss.includes('@media print')&&mapCss.includes('clinical-map.safety-gate'));
+assert.ok(mapCss.includes('@media print')&&mapCss.includes('.sibling-safety-flow'));
 const api=require('../resources/clinical-topics/topic-tools.js');
 const b=(s)=>({attrs:{'data-feedback':s},getAttribute(k){return this.attrs[k]},setAttribute(k,v){this.attrs[k]=v}});
 const one=b('Incomplete: missing access assessment'),two=b('Best supported: keep access and assess');let out={textContent:''};
