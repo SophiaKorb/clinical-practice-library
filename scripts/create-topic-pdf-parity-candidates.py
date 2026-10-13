@@ -69,15 +69,41 @@ def diagram(c,t,mode):
     d=t['diagram'];L=36;W=540
     small_label(c,'VISUAL RELATIONSHIP: '+mode.replace('-',' ').upper(),L,671)
     if mode=='safety-gate':
-        box(c,d[0],L,659,257,57,0);box(c,d[1],L+283,659,257,57,1)
-        link(c,170,601,306,592);link(c,443,601,306,592)
-        box(c,d[2],170,585,272,54,2,'gate')
-        small_label(c,'SAFETY / FREEDOM TO DECLINE DECIDES THE ROUTE',149,399)
-        link(c,306,531,173,507);link(c,306,531,439,507)
-        box(c,d[3],L,499,257,76,3,'branch',border='#885337')
-        box(c,d[4],L+283,499,257,76,4,'branch',border='#28645b')
-        small_label(c,'PROTECT / SAFEGUARD IF UNSAFE',46,412)
-        small_label(c,'VOLUNTARY REPAIR ONLY IF SAFE',332,412)
+        # One adult responsibility across BOTH outcomes, then genuinely distinct protective/voluntary pathways.
+        box(c,('Adult responsibility - always',
+               'Ensure safety, provide support, set clear expectations, and guide next steps.'),
+            L,658,W,58,0,'gate')
+        c.setStrokeColor(HexColor(LINES));c.setLineWidth(1.6)
+        c.line(306,600,306,592);c.line(170,592,442,592)
+        link(c,170,592,170,582);link(c,442,592,442,582)
+        box(c,('Unsafe or coercive',
+               'Harm, threats, intimidation, sexual harm, coercion, or inability to refuse safely.'),
+            L,579,257,69,1,'branch',border='#90513f')
+        box(c,('Safe and voluntary',
+               'No current risk or coercion; both children may decline repair without penalty.'),
+            L+283,579,257,69,2,'branch',border='#366455')
+        def actions_panel(x,items,tint):
+            top=503;h=122
+            c.setFillColor(HexColor(tint));c.setStrokeColor(HexColor(LINES))
+            c.roundRect(x,top-h,257,h,7,fill=1,stroke=1)
+            for i,(name,desc) in enumerate(items):
+                baseline=top-15-i*39
+                line_text(c,x+10,baseline,name,8.3,True)
+                wrapped(c,desc,x+10,baseline-12,237,size=7.5,leading=9,max_lines=2)
+        actions_panel(L,[
+            ('1. Protect','Stop the harm; ensure immediate safety.'),
+            ('2. Assess risk','Plan safety, supervision and reporting duties.'),
+            ('3. Follow safeguarding procedures','Coordinate services. No forced repair or apology.')
+        ],'#f9eeea')
+        actions_panel(L+283,[
+            ('1. Understand each perspective','Listen without presuming equal responsibility.'),
+            ('2. Offer coaching or repair','Support accountability and amends by choice.'),
+            ('3. Do not require forgiveness','A child may freely decline without penalty.')
+        ],'#eaf2ee')
+        link(c,165,381,165,373);link(c,447,381,447,373)
+        box(c,('Ongoing support for all siblings',
+               'Monitor wellbeing and safety; reinforce expectations and healthier ways to interact.'),
+            L,368,W,52,4,'gate')
     elif mode=='parallel-assess':
         box(c,d[0],L,658,W,45,0)
         link(c,306,613,167,596);link(c,306,613,445,596)
@@ -144,7 +170,7 @@ def diagram(c,t,mode):
         box(c,d[3],L,519,257,85,3);box(c,d[4],L+283,519,257,85,4)
         link(c,293,475,318,475)
     if mode=='safety-gate':
-        return 'Safety is the gate: protection does not require joint repair; either child can decline.'
+        return 'Adult responsibility applies to both pathways. Safeguard when unsafe; offer repair only when safe and freely chosen.'
     if mode=='parallel-assess':
         return 'Medical stability and psychological/sensory assessment proceed together; urgent care cannot wait.'
     if mode=='access-tracks':
@@ -170,11 +196,12 @@ def write_page(out,t,mode):
     wrapped(c,'Original educational worksheet. Discuss with qualified care; not a diagnosis, risk score or validated tool.',36,697,540,8,10,max_lines=2)
     diagram_note=diagram(c,t,mode)
     # Brief text equivalent to the spatial relationship, useful for monochrome or extraction.
-    wrapped(c,diagram_note,36,369,540,8.2,11,max_lines=2,bold=True)
-    c.setStrokeColor(HexColor('#b7c7c2'));c.line(36,348,576,348)
-    line_text(c,36,333,'REFLECTION / CHOSEN SUPPORT - write, draw or dictate; use fictional or de-identified notes',8,True)
+    gate=(mode=='safety-gate')
+    wrapped(c,diagram_note,36,307 if gate else 369,540,8.2,11,max_lines=2,bold=True)
+    c.setStrokeColor(HexColor('#b7c7c2'));c.line(36,288 if gate else 348,576,288 if gate else 348)
+    line_text(c,36,272 if gate else 333,'REFLECTION / CHOSEN SUPPORT - write, draw or dictate; use fictional or de-identified notes',8,True)
     for i,prompt in enumerate(t['fields']):
-        top=313-i*41
+        top=(257-i*29) if gate else (313-i*41)
         wrapped(c,str(i+1)+'. '+prompt,36,top,540,8.3,10,max_lines=2,bold=True)
         c.setStrokeColor(HexColor('#8ca39c'));c.line(36,top-22,576,top-22)
     # The safety content must stay visible on every copy.
