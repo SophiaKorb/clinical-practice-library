@@ -21,12 +21,27 @@
     <button id="menu-reset" type="button" class="reset">Clear filters</button>
   </section>
 
+  <section class="delivery-section" aria-labelledby="delivery-title">
+    <h2 id="delivery-title">Choose the kind of help</h2>
+    <div class="delivery-options" role="group" aria-label="Browse by who delivers the approach">
+      <button type="button" id="delivery-practice" class="delivery-choice" aria-pressed="true" aria-controls="target-ideas">
+        <strong>Self-help &amp; therapist-coached practice</strong>
+        <span>Actions the person can try, independently or with support</span>
+      </button>
+      <button type="button" id="delivery-clinician" class="delivery-choice" aria-pressed="false" aria-controls="target-ideas">
+        <strong>Therapist-delivered intervention</strong>
+        <span>Assessment, formulation, in-session treatment and clinical coordination</span>
+      </button>
+    </div>
+    <p id="delivery-explanation" class="delivery-explanation">Practice ideas are activities or changes a person may choose to try. A therapist may help adapt, teach or review them; therapist coaching alone does not turn every activity into a delivered psychotherapy intervention.</p>
+  </section>
+
   <section class="idea-section" aria-labelledby="approach-title">
     <div class="section-top">
-      <div><p class="section-kicker">A MENU, NOT A PRESCRIPTION</p><h2 id="approach-title">What might help?</h2></div>
+      <div><p class="section-kicker">A MENU, NOT A PRESCRIPTION</p><h2 id="approach-title">Practice ideas to try</h2></div>
       <span id="target-count" class="count" role="status" aria-live="polite"></span>
     </div>
-    <p class="section-description">Try changing thinking, surroundings, actions, relationships, or support—not just symptoms.</p>
+    <p id="approach-description" class="section-description">Try changing thinking, surroundings, actions, relationships, or support—not just symptoms.</p>
     <div id="approach-filters" class="approach-filters" role="group" aria-label="Choose a way of approaching the problem"></div>
     <div class="active-view" id="active-view" aria-live="polite"></div>
     <div id="target-ideas" class="idea-grid"></div>
@@ -34,10 +49,10 @@
     <button id="targets-more" type="button" class="show-more" hidden>See more ideas</button>
   </section>
 
-  <details id="measure-library" class="measure-library">
-    <summary><span><span class="section-kicker">OPTIONAL</span><strong>How could you notice progress?</strong><span class="summary-note">Browse independent measures and editable examples</span></span><span id="measure-count" class="count"></span></summary>
+  <details id="measure-library" class="measure-library" open>
+    <summary><span><span class="section-kicker">MEASUREMENT IDEA BANK</span><strong>What would meaningful change look like?</strong><span class="summary-note">Custom counts, ratings, functioning, access, treatment-process indicators, and standardized options</span></span><span id="measure-count" class="count"></span></summary>
     <div class="measure-inside">
-      <p>Choose a measure that reflects what matters: participation, autonomy, access to supports, symptoms when clinically relevant, or the person's own sense of change.</p>
+      <p>Choose what matters to the person and what can realistically be observed. Agree on a baseline, a time window, appropriate supports and a measurable next step. These editable suggestions are <strong>not validated scales</strong>; standardized instruments are labeled and linked separately.</p>
       <div class="measure-filters">
         <label for="measure-search">Find a measure<input type="search" id="measure-search" placeholder="Participation, routines, choices…"></label>
         <label for="menu-area">Type of measure<select id="menu-area"><option value="">All kinds</option></select></label>
@@ -47,10 +62,10 @@
     </div>
   </details>
 
-  <p class="small-print">All examples are starting points, not universal clinical targets. Choose with the person, consider medical and developmental needs, and distinguish unnecessary avoidance from reasonable accommodations. Nothing you edit is saved or transmitted by this menu. Avoid entering identifying client information.</p>
+  <p class="small-print">A self-help practice, even when a clinician coaches it, is not the same as a therapist-delivered intervention. Clinician interventions require appropriate assessment, training, consent and scope of practice. All examples are starting points, not universal clinical targets. Choose with the person, consider medical and developmental needs, and distinguish unnecessary avoidance from reasonable accommodations. Nothing you edit is saved or transmitted by this menu. Avoid entering identifying client information.</p>
   <details class="menu-notes"><summary>Sources, clinical scope, and previous plan builder</summary>
     <p>These are original, editable ideas, not a licensed treatment planner, diagnosis algorithm, or required sequence. Treatment appropriateness depends on formulation, cultural and individual context, access, consent, and clinician qualifications. Exposure practices and eating-disorder treatment require appropriately qualified guidance; medical concerns require suitable medical assessment and coordination.</p>
-    <p>Standardized measures are identified separately with external source links. An individually devised frequency count or rating is not a validated symptom measure. The prior <a href="/resources/therapy/treatment-plan-builder.html">full plan builder</a> is preserved outside this menu.</p>
+    <p>Standardized measures are identified separately with external source links; confirm original administration, interpretation and permissions. An individually devised frequency count or rating is not a validated symptom measure. Repeated measurements must inform collaborative decisions rather than compliance judgments. The prior <a href="/resources/therapy/treatment-plan-builder.html">full plan builder</a> is preserved outside this menu.</p>
     <p>Created by Sophia Korb Cohon, PhD.</p>
   </details>
   <p id="copy-status" class="copy-status" role="status" aria-live="polite"></p>
