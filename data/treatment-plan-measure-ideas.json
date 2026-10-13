@@ -1,83 +1,94 @@
 {
-  "version": "2026-10-12",
-  "note": "Illustrative examples, not thresholds, diagnoses, or validated scales unless identified as such. Confirm feasibility, accessibility and source permissions.",
+  "version": "2026-10-12-scope-measurement",
+  "note": "Idea bank includes informal, individualized tracking suggestions alongside clearly labeled standardized instrument pointers. None of the custom counts, ratings or targets is a validated scale. Choose baselines, denominators, time windows, adaptations and goals collaboratively; respect medical and safety needs and the person's own interpretation of change. Consult original measure sources and licensing for standardized tools.",
   "measures": [
     {
       "id": "participation",
       "area": "Participation",
       "name": "Participation frequency",
       "track": "Days or opportunities spent in a personally meaningful activity with appropriate supports.",
-      "example": "For discussion: from one to three chosen activities each week, based on baseline."
+      "example": "For discussion: from one to three chosen activities each week, based on baseline.",
+      "method": "Opportunity-based count"
     },
     {
       "id": "meaning",
       "area": "Participation",
       "name": "Personal meaning rating",
       "track": "Use an individual, anchored rating for meaning or satisfaction after an activity.",
-      "example": "For discussion: identify two activities the person describes as meaningful."
+      "example": "For discussion: identify two activities the person describes as meaningful.",
+      "method": "Person-rated outcome"
     },
     {
       "id": "initiation",
       "area": "Organization",
       "name": "Time to start a chosen task",
       "track": "Minutes from an agreed start cue to the first concrete step; note useful supports.",
-      "example": "For discussion: begin within ten minutes in four of five opportunities."
+      "example": "For discussion: begin within ten minutes in four of five opportunities.",
+      "method": "Time / latency"
     },
     {
       "id": "return",
       "area": "Organization",
       "name": "Restart or reschedule",
       "track": "Proportion of interruptions followed by a supported restart or intentional reschedule.",
-      "example": "For discussion: use the agreed cue in three of four interruptions."
+      "example": "For discussion: use the agreed cue in three of four interruptions.",
+      "method": "Opportunity-based count"
     },
     {
       "id": "choice",
       "area": "Communication",
       "name": "Choices, requests and refusals",
       "track": "Count genuine opportunities to communicate a preference, request or refusal, and whether it is respected.",
-      "example": "For discussion: communicate a choice with preferred support in four of five opportunities."
+      "example": "For discussion: communicate a choice with preferred support in four of five opportunities.",
+      "method": "Opportunity-based count"
     },
     {
       "id": "support",
       "area": "Communication",
       "name": "Support needed for participation",
       "track": "Describe accommodations that enable chosen participation and whether they remain effective.",
-      "example": "For discussion: use a preferred visual cue in three selected routines."
+      "example": "For discussion: use a preferred visual cue in three selected routines.",
+      "method": "Support and access review"
     },
     {
       "id": "repair",
       "area": "Relationships",
       "name": "Request, boundary or repair attempt",
       "track": "Frequency of a directly communicated need, boundary or collaborative repair.",
-      "example": "For discussion: make one chosen repair attempt in three of four suitable situations."
+      "example": "For discussion: make one chosen repair attempt in three of four suitable situations.",
+      "method": "Opportunity-based count"
     },
     {
       "id": "recovery",
       "area": "Regulation",
       "name": "Use of regulation supports",
       "track": "Proportion of early-warning opportunities when a preferred rest, break or support was accessible and useful.",
-      "example": "For discussion: use agreed support in four of five observed opportunities."
+      "example": "For discussion: use agreed support in four of five observed opportunities.",
+      "method": "Opportunity-based count"
     },
     {
       "id": "routines",
       "area": "Health and routines",
       "name": "Routine stability and functioning",
       "track": "Track feasible routines and meaningful daytime functioning, not sleep timing alone.",
-      "example": "For discussion: try an agreed routine on four chosen days per week."
+      "example": "For discussion: try an agreed routine on four chosen days per week.",
+      "method": "Routine and function log"
     },
     {
       "id": "access",
       "area": "Participation",
       "name": "Access to roles and settings",
       "track": "Chosen school, work, family or community participation with reasonable accommodations.",
-      "example": "For discussion: attend a chosen role activity in three of four opportunities."
+      "example": "For discussion: attend a chosen role activity in three of four opportunities.",
+      "method": "Participation count"
     },
     {
       "id": "context",
       "area": "Regulation",
       "name": "Context and support log",
       "track": "Record the situation, need, chosen support and what happened afterward.",
-      "example": "For discussion: compare four meaningful situations and identify one helpful change."
+      "example": "For discussion: compare four meaningful situations and identify one helpful change.",
+      "method": "Context log"
     },
     {
       "id": "goal-attainment",
@@ -85,7 +96,8 @@
       "name": "Individualized goal attainment",
       "track": "Define observable levels of change around one person-defined goal before tracking.",
       "example": "For discussion: agree on a current level and a realistically observable next level.",
-      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10301855/"
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10301855/",
+      "method": "Individualized scaling"
     },
     {
       "id": "whodas",
@@ -93,7 +105,201 @@
       "name": "WHODAS 2.0 functioning",
       "track": "Consider WHO's 12- or 36-item adult-functioning measures when appropriate.",
       "example": "For discussion: combine an appropriate functioning assessment with personally meaningful outcomes.",
-      "source": "https://www.who.int/classifications/international-classification-of-functioning-disability-and-health/who-disability-assessment-schedule"
+      "source": "https://www.who.int/classifications/international-classification-of-functioning-disability-and-health/who-disability-assessment-schedule",
+      "method": "Standardized instrument"
+    },
+    {
+      "id": "practice-engagement",
+      "area": "Treatment process",
+      "name": "Between-session practice usefulness",
+      "method": "Person-rated feedback",
+      "track": "Ask whether a chosen practice was attempted, felt safe, fit access needs, and helped a valued goal. Do not score attendance or compliance as therapeutic success.",
+      "example": "After a week, discuss two trials, one barrier and one adaptation."
+    },
+    {
+      "id": "session-alliance",
+      "area": "Treatment process",
+      "name": "Does therapy feel collaborative?",
+      "method": "Person-rated feedback",
+      "track": "Briefly ask whether the client felt understood, could disagree and had influence over goals and pace. Treat criticism as information for the therapist.",
+      "example": "At the end of each chosen session, ask which part helped, what felt off, and what should change."
+    },
+    {
+      "id": "goal-ownership",
+      "area": "Autonomy",
+      "name": "Goal is chosen, not assigned",
+      "method": "Goal ownership audit",
+      "track": "Review whether the person selected the goal, could say no, can explain why it matters, and would still choose it without approval pressure.",
+      "example": "For a three-goal plan, check each goal for explicit choice and an available opt-out."
+    },
+    {
+      "id": "support-burden",
+      "area": "Access and environment",
+      "name": "Cost of coping or accommodations",
+      "method": "Effort / burden rating",
+      "track": "Alongside functioning, ask about fatigue, time, embarrassment, money and added work required to use a strategy.",
+      "example": "Compare participation and post-activity fatigue with two feasible support options."
+    },
+    {
+      "id": "meaningful-actions",
+      "area": "Participation",
+      "name": "Chosen valued actions",
+      "method": "Opportunity-based count",
+      "track": "Count attempts or completed personally meaningful activities relative to real opportunities, including with assistance.",
+      "example": "Baseline: one chosen activity in four opportunities; agree a personally realistic next step."
+    },
+    {
+      "id": "avoided-settings",
+      "area": "Participation",
+      "name": "Return to meaningful settings",
+      "method": "Participation count",
+      "track": "Record participation in agreed settings, what supports were provided, and whether safety or access made attendance feasible.",
+      "example": "Review weekly opportunities, not simply a blanket target of attending more."
+    },
+    {
+      "id": "confidence-experiment",
+      "area": "Thinking and learning",
+      "name": "Prediction versus outcome",
+      "method": "Learning log",
+      "track": "Before a voluntary, safe experiment, record a feared prediction and confidence. Afterwards compare what actually happened and what remains uncertain.",
+      "example": "For two chosen low-stakes situations, note anticipated event and observed result without forcing confidence to change."
+    },
+    {
+      "id": "worry-interference",
+      "area": "Thinking and learning",
+      "name": "Time lost to repetitive worry",
+      "method": "Time estimate",
+      "track": "Estimate minutes of worry that interfered with a chosen task; differentiate purposeful planning, grief, or realistic hazard review.",
+      "example": "Compare an ordinary day with a high-demand day and discuss useful supports."
+    },
+    {
+      "id": "reassurance-burden",
+      "area": "Thinking and learning",
+      "name": "Reassurance or checking interference",
+      "method": "Frequency and context log",
+      "track": "When clinically appropriate, record repeat checking/reassurance episodes and their functional cost, while separating necessary health and safety actions.",
+      "example": "Choose a context and note repeated checking plus reasonable information-seeking; avoid rewarding risk."
+    },
+    {
+      "id": "attention-to-task",
+      "area": "Executive functioning",
+      "name": "Sustained attention with supports",
+      "method": "Time / task observation",
+      "track": "Observe ability to sustain a self-chosen activity and identify conditions that help or overwhelm; interruptions need not be framed as failure.",
+      "example": "Review two supported work periods for feasible minutes engaged and effort afterward."
+    },
+    {
+      "id": "working-memory",
+      "area": "Executive functioning",
+      "name": "Remembering and following steps",
+      "method": "Functional observation",
+      "track": "Track completion of a chosen multistep activity with appropriate external memory supports, rather than an unaided test alone.",
+      "example": "At baseline, note which of three steps can be completed with a visual checklist."
+    },
+    {
+      "id": "communication-clarity",
+      "area": "Communication",
+      "name": "Message understood and confirmed",
+      "method": "Communication access audit",
+      "track": "Record whether the person had time and their preferred modality, whether the recipient confirmed meaning and whether responses were honored.",
+      "example": "Across four chosen interactions, track opportunities and successful understanding with supports."
+    },
+    {
+      "id": "boundary-respected",
+      "area": "Relationships",
+      "name": "Boundaries acknowledged",
+      "method": "Opportunity-based count",
+      "track": "Count whether requests or refusals were understood and respected, not merely whether the person voiced them.",
+      "example": "Discuss two situations where saying no was possible and what happened next."
+    },
+    {
+      "id": "safety-agreement",
+      "area": "Safety and care",
+      "name": "Safety plan can be accessed and used",
+      "method": "Collaborative process audit",
+      "track": "Without attempting to predict risk, review whether the person knows who to contact, can access help and finds the plan relevant.",
+      "example": "Rehearse finding a chosen support contact and revise barriers. Continue routine risk assessment as indicated."
+    },
+    {
+      "id": "medical-followthrough",
+      "area": "Safety and care",
+      "name": "Access to indicated medical care",
+      "method": "Access and care coordination",
+      "track": "Track whether necessary medical assessment, follow-up or treatment is available and coordinated without counting avoidance of medically appropriate care as progress.",
+      "example": "After a care-planning visit, check whether a clear next step and responsible team member were identified."
+    },
+    {
+      "id": "sleep-function",
+      "area": "Health and routines",
+      "name": "Sleep and next-day functioning",
+      "method": "Diary + function check",
+      "track": "Combine sleep diary patterns (timing, awakenings, restfulness) with daytime participation, fatigue and context.",
+      "example": "Review a week of nights and next-day function without prescribing fixed sleep restriction."
+    },
+    {
+      "id": "pain-interference",
+      "area": "Health and routines",
+      "name": "Pain interference with valued roles",
+      "method": "Person-rated interference",
+      "track": "Use the person's anchors for how pain affected chosen roles and recovery needs; include medical input and accessibility.",
+      "example": "For one chosen activity, rate interference and time needed to recover over successive attempts."
+    },
+    {
+      "id": "emotion-range",
+      "area": "Regulation",
+      "name": "Emotional recovery and choice",
+      "method": "Duration / personal rating",
+      "track": "Record how long distress interfered with chosen actions and which coping or access supports helped, rather than expecting emotion absence.",
+      "example": "Review two difficult moments: choice available, supports offered and whether recovery felt sustainable."
+    },
+    {
+      "id": "sensory-overload",
+      "area": "Regulation",
+      "name": "Overload exposure and recovery",
+      "method": "Context + recovery log",
+      "track": "Note sensory load, ability to choose breaks, and recovery costs, without treating sensory distress as maladaptive behavior.",
+      "example": "Compare a busy and a quieter session, including participation and next-day fatigue."
+    },
+    {
+      "id": "parent-response",
+      "area": "Caregiver and family",
+      "name": "Caregiver support opportunity",
+      "method": "Observed response audit",
+      "track": "Observe whether caregivers use agreed validation, boundary or accommodation when the child needs it, while recording feasibility and context.",
+      "example": "Compare support opportunities offered and successful child access across several typical situations."
+    },
+    {
+      "id": "rupture-repair",
+      "area": "Treatment process",
+      "name": "Therapy rupture and repair",
+      "method": "Collaborative feedback",
+      "track": "Invite the person to identify misunderstandings, conflict or coercion in therapy and collaboratively revise approach. No numeric score is required.",
+      "example": "At check-in ask: 'What felt unhelpful or different from what you wanted?' and note agreed repair."
+    },
+    {
+      "id": "skills-generalization",
+      "area": "Treatment process",
+      "name": "Skill use in real life with support",
+      "method": "Opportunity-based count",
+      "track": "Track whether an in-session rehearsed skill becomes available in actual chosen situations, and what coaching or environment is needed.",
+      "example": "For three real opportunities, note support offered, skill usefulness and whether the person preferred another strategy."
+    },
+    {
+      "id": "pcl5",
+      "area": "Standardized option",
+      "name": "PTSD Checklist for DSM-5 (PCL-5)",
+      "method": "Standardized instrument",
+      "track": "Consider the VA's 20-item self-report measure to monitor PTSD symptoms in appropriate adult contexts. Use official instructions and qualified interpretation; do not infer a diagnosis from this menu.",
+      "example": "Pair an appropriately administered PCL-5 with trauma-related functioning, choice, safety and the person's priorities.",
+      "source": "https://www.ptsd.va.gov/professional/assessment/adult-sr/ptsd-checklist.asp"
+    },
+    {
+      "id": "readiness-consent",
+      "area": "Autonomy",
+      "name": "Voluntary consent and readiness",
+      "method": "Decision process review",
+      "track": "Record whether a proposed intervention was understood, offered meaningful alternatives, and continued with voluntary consent; revisit after distress or changed circumstances.",
+      "example": "At each treatment change, check understanding, permission, and what the person would rather try."
     }
   ]
 }
