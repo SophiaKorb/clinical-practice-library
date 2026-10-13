@@ -113,7 +113,7 @@ def diagram(c,t,mode):
         box(c,('Reported eating or intake difficulty',
                'Changes in intake, physical health, access and everyday participation.'),
             L,658,W,48,0,'gate')
-        line_text(c,148,586,'START BOTH ASSESSMENTS TOGETHER - NOT ONE AFTER THE OTHER',8,True)
+        line_text(c,197,586,'START BOTH TRACKS TOGETHER - NOT IN SEQUENCE',8,True)
         c.setStrokeColor(HexColor(LINES));c.setLineWidth(1.5)
         c.line(306,610,306,597);c.line(170,597,444,597)
         link(c,170,597,170,574);link(c,444,597,444,574)
