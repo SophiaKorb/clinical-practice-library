@@ -35,12 +35,17 @@ for i,(topic,m) in enumerate(zip(topics,manifest)):
         assert text.index('Adult responsibility - always') < text.index('Unsafe or coercive')
         assert text.index('Adult responsibility - always') < text.index('Safe and voluntary')
         assert text.index('Ongoing support for all siblings') > text.index('Do not require forgiveness')
+    elif m['mode']=='parallel-assess':
+        required=['START BOTH ASSESSMENTS TOGETHER','TRACK A - Medical','TRACK B - Psychological',
+                  'URGENT SIGNS? ACT NOW','do not wait for Track B','ONE coordinated plan and ongoing review']
+        for phrase in required:assert phrase.lower() in text.lower(),(file,'missing concurrent-track element',phrase)
+        assert text.index('TRACK A - Medical') > text.index('START BOTH ASSESSMENTS TOGETHER')
+        assert text.index('TRACK B - Psychological') > text.index('START BOTH ASSESSMENTS TOGETHER')
     else:
         for title,description in topic['diagram']:
             norm=lambda s:' '.join(s.replace('→',' to ').replace('↔',' and ').replace('’',"'").replace('—','-').replace('–','-').split())
             # PyMuPDF can split wrapped lines but text order must remain extractable.
             assert norm(title).lower() in text.lower(),(file,'missing node title',title)
-    if m['mode']=='parallel-assess': assert 'PARALLEL, NOT A WAITING SEQUENCE' in text
     if m['mode']=='return-loop': assert 'SHORT-TERM RESPONSE MAY SHAPE THE NEXT TRIGGER' in text
     if m['mode']=='loop-choice': assert 'THE FIRST FOUR MAY REPEAT' in text
     assert len(text)>400,(file,'missing content')
