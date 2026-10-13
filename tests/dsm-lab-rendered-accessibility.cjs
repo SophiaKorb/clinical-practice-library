@@ -53,7 +53,7 @@ fs.mkdirSync(out,{recursive:true});
    assert.equal(await page.locator('#case-features .sym-row').count()>0,true,'vignette creates editable features');
    await page.locator('#impact').fill('4');
    assert.match(await page.locator('#impact-label').innerText(),/Extensive/);
-   assert.match(await page.locator('#impact-help').innerText(),/fictional|impact|interference|function/i);
+   assert.match(await page.locator('#impact-help').innerText(),/fictional|impact|interference|function|disruption|life domains|safety/i);
    await page.screenshot({path:path.join(out,'lab-interactions-'+width+'.png'),animations:'disabled'});
    assert.deepEqual(errors,[],'no browser JS errors at '+width);
    await context.close();
