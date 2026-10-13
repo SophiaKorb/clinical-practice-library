@@ -4,6 +4,7 @@ on:
     branches: [cpl-2-colorful-helpful]
     paths:
       - 'scripts/build-dsm-foundations-book.py'
+      - 'tests/dsm-print-book-parity.py'
       - 'resources/training/dsm-from-zero.html'
       - 'docs/qa/dsm-foundations-all-questions.md'
       - '.github/workflows/dsm-foundations-book.yml'
@@ -50,6 +51,8 @@ jobs:
           assert len(sparse)<=7,('Many near-empty pages',sparse)
           print(f'PASS: {len(d)} pages; {len(d.get_toc())} outline entries; no out-of-bounds text; sparse pages {sparse}')
           PY
+      - name: Verify actual lesson, case, glossary, safety and question text parity
+        run: python tests/dsm-print-book-parity.py
       - name: Retain book, manifest and source for QA, without deployment
         uses: actions/upload-artifact@v4
         with:
