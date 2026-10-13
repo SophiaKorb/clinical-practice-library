@@ -1,0 +1,52 @@
+name: Treatment menu support levels and measurement QA
+on:
+  push:
+    branches: [cpl-2-colorful-helpful]
+    paths:
+      - '.github/workflows/treatment-menu-levels-focused.yml'
+      - 'resources/therapy/treatment-plan-menu.html'
+      - 'resources/therapy/treatment-ideas-menu.js'
+      - 'resources/therapy/treatment-ideas-menu.css'
+      - 'data/treatment-clinician-interventions.json'
+      - 'data/treatment-plan-measure-ideas.json'
+      - 'data/treatment-approach-ideas.json'
+      - 'data/treatment-goal-try-it-examples.json'
+      - 'tests/treatment-menu-levels.cjs'
+      - 'tests/treatment-menu-levels-rendered.cjs'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  practice-clinician-measurement:
+    runs-on: ubuntu-latest
+    timeout-minutes: 13
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Verify valid script and independent idea banks
+        run: |
+          node --check resources/therapy/treatment-ideas-menu.js
+          node tests/treatment-menu-levels.cjs
+      - name: Install Chromium
+        run: |
+          npm install --no-save --no-package-lock playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Serve repository
+        run: |
+          python -m http.server 8765 --bind 127.0.0.1 >/tmp/cpl-treatment-menu-server.log 2>&1 &
+          sleep 2
+      - name: Test user flows and capture clinician-practice-measurement views
+        run: node tests/treatment-menu-levels-rendered.cjs
+      - name: Save independent review screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: treatment-menu-clinical-levels-review
+          path: /tmp/cpl-treatment-menu-clinical-review
+          if-no-files-found: ignore
+          retention-days: 10
