@@ -184,6 +184,61 @@ def add_worked(case,story,index):
         story.append(box([plain_para(takeaway,"callout")],SEA,pad=8))
     story.append(Spacer(1,10))
 
+def add_additional_item(el,story):
+    """Preserve substantive nested sections, lists, safety notes and case grids.
+
+    The source lesson has nested clinical sections beyond its top-level
+    paragraphs. Silently ignoring those would delete differential and
+    safety instruction from the printed adaptation.
+    """
+    if not isinstance(el,Tag):
+        return
+    cls=el.get("class",[])
+    if "lesson-footer" in cls:
+        return
+    if "safety-note" in cls:
+        story.append(box([P("SAFETY NOTE","caption"),P(xml_escape(text(el)),"small")],SEA,pad=10))
+        return
+    if "sud-severity" in cls:
+        story.append(P("Severity thresholds (number of applicable criteria)","h3"))
+        for panel in el.find_all("div",recursive=False):
+            story.append(P(xml_escape(text(panel)),"small"))
+        return
+    if el.name in ("h2","h3","h4","h5"):
+        story.append(plain_para(el,"h2" if el.name in ("h2","h3") else "h3"))
+        return
+    if el.name=="p":
+        story.append(plain_para(el,"small"))
+        return
+    if el.name=="li":
+        # Treat one list item as one flowable so nested inline tags aren't repeated.
+        story.append(P("•  "+markup(el),"small"))
+        return
+    if el.name=="details":
+        summary=el.find("summary",recursive=False)
+        if summary:story.append(P(xml_escape(text(summary)),"h3"))
+    if el.name=="div" and "example" in cls:
+        story.append(box([P("EXAMPLE","caption"),P(xml_escape(text(el)),"small")],PALE,pad=9))
+        return
+    if el.name=="div" and "visual" in cls:
+        for tile in el.find_all("div",class_="tile",recursive=False):
+            heading=tile.find("b")
+            if heading:story.append(P(xml_escape(text(heading)),"h3"))
+            for para in tile.find_all("p",recursive=False):story.append(plain_para(para,"small"))
+        return
+    if el.name=="div" and "sources" in cls:
+        story.append(P("Further reading from this lesson","h3"))
+        for link in el.find_all("a"):
+            story.append(P(xml_escape(text(link)),"small"))
+        for para in el.find_all("p",recursive=False):story.append(plain_para(para,"small"))
+        return
+    for sub in el.children:
+        if not isinstance(sub,Tag) or sub.name in ("script","style","button","svg"):
+            continue
+        if el.name=="details" and sub.name=="summary":
+            continue
+        add_additional_item(sub,story)
+
 def add_body_item(el,story):
     if el.name=="p":
         story.append(plain_para(el,"body"))
@@ -216,6 +271,10 @@ def add_body_item(el,story):
             story.append(P(xml_escape(text(el)),"small"))
         elif "quiz-case-context" in classes or "practice-context" in classes:
             story.append(P(xml_escape(text(el)),"small"))
+        else:
+            add_additional_item(el,story)
+    else:
+        add_additional_item(el,story)
 
 def add_chapter(sec,n,story,casecount):
     h=sec.find("h2",id=f"title-{n}")
