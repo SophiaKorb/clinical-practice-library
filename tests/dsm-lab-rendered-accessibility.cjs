@@ -50,7 +50,7 @@ fs.mkdirSync(out,{recursive:true});
    await page.locator('#scene').focus();await page.keyboard.press('ArrowLeft');await page.keyboard.press('ArrowUp');
    await page.locator('#reset').click();assert.equal(await mode.getAttribute('aria-pressed'),'false');
    await page.locator('#preset').selectOption('activation');
-   assert.equal(await page.locator('#case-features .profile-row').count()>0,true,'vignette creates editable features');
+   assert.equal(await page.locator('#case-features .sym-row').count()>0,true,'vignette creates editable features');
    await page.locator('#impact').fill('4');
    assert.match(await page.locator('#impact-label').innerText(),/Extensive/);
    assert.match(await page.locator('#impact-help').innerText(),/fictional|impact|interference|function/i);
