@@ -57,7 +57,7 @@ fs.mkdirSync(out,{recursive:true});
    await m.locator('.edit-measure').fill('Review with the person after two sessions.');
    assert.match(await m.locator('.edit-measure').inputValue(),/after two sessions/);
    await page.locator('#menu-area').selectOption('');
-   if(width===390)await page.locator('#measure-library').screenshot({path:path.join(out,'measures-expanded-390.png'),animations:'disabled'});
+   if(width===390){await page.locator('#measure-library>summary').scrollIntoViewIfNeeded();await page.screenshot({path:path.join(out,'measures-expanded-390.png'),animations:'disabled'});}
    await page.locator('#menu-reset').click();
    assert.equal(await page.locator('#target-ideas .target-card').count(),12);
    assert.equal(await page.locator('#delivery-practice').getAttribute('aria-pressed'),'true');
