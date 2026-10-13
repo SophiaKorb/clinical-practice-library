@@ -36,11 +36,11 @@ for i,(topic,m) in enumerate(zip(topics,manifest)):
         assert text.index('Adult responsibility - always') < text.index('Safe and voluntary')
         assert text.index('Ongoing support for all siblings') > text.index('Do not require forgiveness')
     elif m['mode']=='parallel-assess':
-        required=['START BOTH ASSESSMENTS TOGETHER','TRACK A - Medical','TRACK B - Psychological',
+        required=['START BOTH TRACKS TOGETHER','TRACK A - Medical','TRACK B - Psychological',
                   'URGENT SIGNS? ACT NOW','do not wait for Track B','ONE coordinated plan and ongoing review']
         for phrase in required:assert phrase.lower() in text.lower(),(file,'missing concurrent-track element',phrase)
-        assert text.index('TRACK A - Medical') > text.index('START BOTH ASSESSMENTS TOGETHER')
-        assert text.index('TRACK B - Psychological') > text.index('START BOTH ASSESSMENTS TOGETHER')
+        assert text.index('TRACK A - Medical') > text.index('START BOTH TRACKS TOGETHER')
+        assert text.index('TRACK B - Psychological') > text.index('START BOTH TRACKS TOGETHER')
     else:
         for title,description in topic['diagram']:
             norm=lambda s:' '.join(s.replace('→',' to ').replace('↔',' and ').replace('’',"'").replace('—','-').replace('–','-').split())
