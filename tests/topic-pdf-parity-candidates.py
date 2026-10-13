@@ -69,6 +69,28 @@ for i,(topic,m) in enumerate(zip(topics,manifest)):
         assert len(labels)==4,(file,'expected four distinct reflection prompts',labels)
         for top,bottom in labels:
             assert not any(top-0.5<line_y<bottom+0.5 for line_y in rules),(file,'answer line crosses prompt',(top,bottom),rules)
+    # Verify rendered text has no substantial overlap anywhere on the worksheet.
+    # This is separate from simple page-boundary checking; a past compact-sheet
+    # regression placed a response line over the next question.
+    spans=[]
+    for block in page.get_text('dict')['blocks']:
+        if block.get('type')!=0:continue
+        for line in block['lines']:
+            for span in line['spans']:
+                if span['text'].strip():
+                    spans.append((pymupdf.Rect(span['bbox']),span['text'].strip()))
+    for j,(rect,label) in enumerate(spans):
+        for other,other_label in spans[j+1:]:
+            shared=rect&other
+            if shared.is_empty:continue
+            area=shared.get_area()
+            denominator=min(rect.get_area(),other.get_area())
+            assert not (area>2 and denominator>0 and area/denominator>0.2),(
+                file,'overlapping textual labels',label[:55],other_label[:55],
+                round(area/denominator,3))
+    # Every candidate must carry an unambiguous scope warning and no approval claim.
+    assert 'not a validated' in text.lower() or 'not diagnosis' in text.lower() or 'scope' in text.lower(),(
+        file,'missing scope explanation')
     assert len(text)>400,(file,'missing content')
     for block in page.get_text('blocks'):
         if not str(block[4]).strip():continue
