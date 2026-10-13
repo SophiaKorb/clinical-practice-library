@@ -20,6 +20,8 @@ def mode_for(slug):
     hit=re.search(r'<ol class="clinical-map(?: ([^"]+))?"',page)
     if not hit and slug=='sibling-conflict-safety-repair' and 'class="sibling-safety-flow"' in page:
         return 'safety-gate',hashlib.sha256(page.encode()).hexdigest()
+    if not hit and slug=='restrictive-eating-coordination' and 'class="restrictive-parallel"' in page:
+        return 'parallel-assess',hashlib.sha256(page.encode()).hexdigest()
     if not hit:raise ValueError('Missing canonical HTML map: '+slug)
     mode=(hit.group(1) or 'sequence').strip()
     if mode not in MODES and mode!='sequence':raise ValueError((slug,mode))
@@ -107,15 +109,31 @@ def diagram(c,t,mode):
                'Monitor wellbeing and safety; reinforce expectations and healthier ways to interact.'),
             L,368,W,52,4,'gate')
     elif mode=='parallel-assess':
-        box(c,d[0],L,658,W,45,0)
-        link(c,306,613,167,596);link(c,306,613,445,596)
-        small_label(c,'PARALLEL, NOT A WAITING SEQUENCE',183,395)
-        box(c,d[1],L,583,257,72,1,'branch',border='#885337')
-        box(c,d[2],L+283,583,257,72,2,'branch')
-        link(c,165,511,306,494);link(c,447,511,306,494)
-        box(c,d[3],L,489,W,42,3)
-        link(c,306,447,306,435)
-        box(c,d[4],L,430,W,38,4)
+        # Both begin together. Medical instability never waits for a completed formulation.
+        box(c,('Reported eating or intake difficulty',
+               'Changes in intake, physical health, access and everyday participation.'),
+            L,658,W,48,0,'gate')
+        line_text(c,148,586,'START BOTH ASSESSMENTS TOGETHER - NOT ONE AFTER THE OTHER',8,True)
+        c.setStrokeColor(HexColor(LINES));c.setLineWidth(1.5)
+        c.line(306,610,306,597);c.line(170,597,444,597)
+        link(c,170,597,170,574);link(c,444,597,444,574)
+        box(c,('TRACK A - Medical & nutritional safety',
+               'Assess stability, nutrition, physical symptoms and medical contributors.'),
+            L,571,257,86,1,'branch',border='#90513f')
+        box(c,('TRACK B - Psychological, sensory & access',
+               'Explore fear, eating concerns, sensory experience, food access and the person\'s account.'),
+            L+283,571,257,86,2,'branch',border='#416487')
+        link(c,170,485,170,475);link(c,444,485,444,475)
+        box(c,('URGENT SIGNS? ACT NOW.',
+               'Fainting, dehydration, chest symptoms, severe weakness or rapid decline: arrange timely medical care; do not wait for Track B.'),
+            L,470,257,76,3,'branch',border='#9e533b')
+        box(c,('Both tracks continue as appropriate',
+               'A medical decision does not depend on completing the psychological/sensory explanation.'),
+            L+283,470,257,76,4,'branch')
+        link(c,170,394,170,387);link(c,444,394,444,387)
+        box(c,('ONE coordinated plan and ongoing review',
+               'Agree responsibilities, medical monitoring, specialist supports and access; recheck stability AND participation.'),
+            L,384,W,48,0,'gate')
     elif mode in ('access-tracks','abc-tracks'):
         small_label(c,'CONCURRENT ACCESS CHANNELS' if mode=='access-tracks' else 'DESCRIBE OBSERVATIONS FIRST',L,651)
         for i,item in enumerate(d[:3]):box(c,item,L+i*184,640,172,91,i,'branch')
@@ -198,12 +216,12 @@ def write_page(out,t,mode):
     wrapped(c,'Original educational worksheet. Discuss with qualified care; not a diagnosis, risk score or validated tool.',36,697,540,8,10,max_lines=2)
     diagram_note=diagram(c,t,mode)
     # Brief text equivalent to the spatial relationship, useful for monochrome or extraction.
-    gate=(mode=='safety-gate')
-    wrapped(c,diagram_note,36,307 if gate else 369,540,8.2,11,max_lines=2,bold=True)
-    c.setStrokeColor(HexColor('#b7c7c2'));c.line(36,288 if gate else 348,576,288 if gate else 348)
-    line_text(c,36,272 if gate else 333,'REFLECTION / CHOSEN SUPPORT - write, draw or dictate; use fictional or de-identified notes',8,True)
+    compact=(mode in ('safety-gate','parallel-assess'))
+    wrapped(c,diagram_note,36,307 if compact else 369,540,8.2,11,max_lines=2,bold=True)
+    c.setStrokeColor(HexColor('#b7c7c2'));c.line(36,288 if compact else 348,576,288 if compact else 348)
+    line_text(c,36,272 if compact else 333,'REFLECTION / CHOSEN SUPPORT - write, draw or dictate; use fictional or de-identified notes',8,True)
     for i,prompt in enumerate(t['fields']):
-        top=(257-i*29) if gate else (313-i*41)
+        top=(257-i*29) if compact else (313-i*41)
         wrapped(c,str(i+1)+'. '+prompt,36,top,540,8.3,10,max_lines=2,bold=True)
         c.setStrokeColor(HexColor('#8ca39c'));c.line(36,top-22,576,top-22)
     # The safety content must stay visible on every copy.
