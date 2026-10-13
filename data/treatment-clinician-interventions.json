@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-12",
-  "description": "Original examples of therapist-delivered clinical interventions for professional discussion; not a protocol, directive, or evidence-of-efficacy ranking. Qualifications, medical safety, consent and formulation matter.",
+  "version": "2026-10-12-breadth-pass",
+  "description": "Browsable, non-prescriptive intervention directions across distinct modalities and life contexts. This pass expands choices and what progress may look like; formal baselines, numeric targets, deadlines, efficacy rankings and patient-specific selection are deferred until clinical review. All clinical interventions require appropriate qualifications, consent, safety assessment and contextual formulation.",
   "interventions": [
     {
       "id": "clinician-anxiety-1",
@@ -446,6 +446,488 @@
       "title": "Supported communication and care planning",
       "try": "In a clinician-led conversation, facilitate accessible discussion of preferences, goals, roles and future supports, accounting for decision-specific ability, communication needs and consent.",
       "measure": "Review whether choices are expressed and honored, participation preserved and supports realistically available."
+    },
+    {
+      "id": "clinician-anxiety-4",
+      "presentation": "anxiety",
+      "approach": "Routines & regulation",
+      "title": "Regulation skills fitted to the person's nervous system",
+      "try": "In session, the therapist explores what overload feels like and rehearses several chosen settling or orientation approaches, adjusting for sensory needs and past adverse reactions.",
+      "measure": "Notice which approaches improve access, steadiness, agency and participation rather than demanding immediate calm."
+    },
+    {
+      "id": "clinician-anxiety-5",
+      "presentation": "anxiety",
+      "approach": "People & support",
+      "title": "Work on reassurance and helpful support",
+      "try": "The therapist and person map when requests for help provide needed access versus when repetitive reassurance briefly reduces fear. They rehearse responses that preserve safety, connection and choice.",
+      "measure": "Review whether supportive relationships remain available and whether worry interferes less with personally meaningful decisions."
+    },
+    {
+      "id": "clinician-depression-3",
+      "presentation": "depression",
+      "approach": "Environment & access",
+      "title": "Therapist-supported barrier removal",
+      "try": "In session, examine how illness, money, caregiving, pain, executive demands, social isolation or access barriers constrain action. Co-develop practical supports alongside psychological treatment.",
+      "measure": "Notice feasible re-entry to personally valued roles and reduction of unnecessary effort or obstacles."
+    },
+    {
+      "id": "clinician-depression-4",
+      "presentation": "depression",
+      "approach": "People & support",
+      "title": "Interpersonal therapy focus on role and connection",
+      "try": "A qualified therapist helps the person explore grief, role transitions, conflict and relational patterns when indicated, with collaborative communication work that respects actual safety and context.",
+      "measure": "Review relational satisfaction, support access, meaningful connection and depressive interference."
+    },
+    {
+      "id": "clinician-bipolar-3",
+      "presentation": "bipolar",
+      "approach": "Thinking & meaning",
+      "title": "Collaborative episode interpretation and self-management",
+      "try": "In session, a clinician and person review early episode signals, what those signals have and have not predicted, relevant medications and context, and how to respond without overpathologizing everyday changes.",
+      "measure": "Notice earlier recognition of relevant changes, timely care coordination, and preservation of function and autonomy.",
+      "scope": "Psychiatric assessment and medication decisions remain with qualified medical clinicians."
+    },
+    {
+      "id": "clinician-bipolar-4",
+      "presentation": "bipolar",
+      "approach": "Environment & access",
+      "title": "Context and routine protection consultation",
+      "try": "The therapist helps examine shift work, caregiving schedules, sensory demands and social pressures that complicate stability, and collaborates with the person and care team on sustainable accommodations.",
+      "measure": "Track sustainable participation, manageable sleep-related demands and whether supports are available without sacrificing meaningful roles."
+    },
+    {
+      "id": "clinician-gad-3",
+      "presentation": "gad",
+      "approach": "People & support",
+      "title": "Relational uncertainty and boundary work",
+      "try": "In session, the therapist differentiates valid requests for information and safety from unproductive certainty seeking, and rehearses boundaries or direct communication when appropriate.",
+      "measure": "Review capacity for shared decisions, relational confidence and reduced interference from repetitive worry."
+    },
+    {
+      "id": "clinician-gad-4",
+      "presentation": "gad",
+      "approach": "Routines & regulation",
+      "title": "Therapist-guided attention flexibility practice",
+      "try": "The clinician teaches and adapts a chosen attention-shifting or present-moment skill, checks for adverse effects and practices using it when worry pulls attention away from a valued task.",
+      "measure": "Notice whether the person can return to chosen activities without requiring thoughts or feelings to disappear."
+    },
+    {
+      "id": "clinician-panic-3",
+      "presentation": "panic",
+      "approach": "Environment & access",
+      "title": "Contextual panic-access planning",
+      "try": "The therapist maps where panic appears alongside actual environmental, disability or medical access barriers and helps develop safe, feasible ways to keep chosen roles available.",
+      "measure": "Review participation, perceived choice and adequacy of safety or accommodation supports.",
+      "scope": "Medical warning signs require appropriate assessment; do not assume every bodily symptom is panic."
+    },
+    {
+      "id": "clinician-panic-4",
+      "presentation": "panic",
+      "approach": "People & support",
+      "title": "Collaborative support-person rehearsal",
+      "try": "The therapist and person identify how supporters can respond to an episode, including what helps, what feels intrusive and when medical help is indicated. They rehearse a consent-based response.",
+      "measure": "Notice whether the person feels understood, safer and more able to choose next steps rather than only whether distress subsides."
+    },
+    {
+      "id": "clinician-social-3",
+      "presentation": "social",
+      "approach": "Environment & access",
+      "title": "Social demand and communication access assessment",
+      "try": "In session, distinguish fear of judgment from discrimination, sensory barriers, language or communication demands. Plan reasonable changes before assigning social participation homework.",
+      "measure": "Notice whether authentic participation becomes easier without requiring masking or tolerating unsafe situations."
+    },
+    {
+      "id": "clinician-social-4",
+      "presentation": "social",
+      "approach": "Behavior & practice",
+      "title": "Guided interpersonal experiment",
+      "try": "The clinician collaborates on a voluntary, realistic interaction experiment, prepares for actual social consequences and debriefs learning rather than treating every negative outcome as a distorted belief.",
+      "measure": "Review personally meaningful participation, prediction accuracy and whether communication choices are honored."
+    },
+    {
+      "id": "clinician-phobia-2",
+      "presentation": "phobia",
+      "approach": "Thinking & meaning",
+      "title": "Therapist-led threat appraisal and risk differentiation",
+      "try": "A trained therapist explores the feared outcome, actual hazards, learning history and person-defined reasons to approach or decline. They develop a working formulation before selecting exposure.",
+      "measure": "Notice a clearer distinction between realistic danger and fear-based predictions and increased voluntary choice."
+    },
+    {
+      "id": "clinician-phobia-3",
+      "presentation": "phobia",
+      "approach": "People & support",
+      "title": "Supported approach and context coordination",
+      "try": "The therapist helps arrange accessible, consensual supports for a valued situation and negotiates the role of companions so help does not become coercive or a test of compliance.",
+      "measure": "Observe chosen engagement, useful supports and the person's sense of safety and control.",
+      "scope": "Exclude genuinely hazardous exposures and coordinate relevant medical care."
+    },
+    {
+      "id": "clinician-ocd-3",
+      "presentation": "ocd",
+      "approach": "Thinking & meaning",
+      "title": "OCD-specific uncertainty formulation",
+      "try": "An OCD-qualified clinician maps obsessions, feared responsibility, mental rituals and neutralizing actions while distinguishing them from culturally meaningful practices or genuine safety behaviors.",
+      "measure": "Review reductions in ritual-related interference and increased capacity to act with uncertainty.",
+      "scope": "Avoid assigning exposure targets without consent or misclassifying medical care as ritual."
+    },
+    {
+      "id": "clinician-ocd-4",
+      "presentation": "ocd",
+      "approach": "Values & autonomy",
+      "title": "Values-based response prevention planning",
+      "try": "In session, an appropriately trained clinician connects treatment choices to person-defined roles, clarifies what matters more than ritual rules, and collaboratively adapts ERP to consent and disability needs.",
+      "measure": "Notice broader choice, engagement in valued routines and reduced OCD-driven restriction."
+    },
+    {
+      "id": "clinician-bdd-2",
+      "presentation": "bdd",
+      "approach": "Behavior & practice",
+      "title": "Appearance checking and avoidance intervention",
+      "try": "A trained clinician collaboratively maps mirror or photo checking, camouflage, comparison and social withdrawal; when appropriate, conducts consented behavioral work tailored to the maintaining pattern.",
+      "measure": "Review checking interference, freedom to participate and distress tolerance, not body appearance or attractiveness."
+    },
+    {
+      "id": "clinician-bdd-3",
+      "presentation": "bdd",
+      "approach": "People & support",
+      "title": "Body-image social context consultation",
+      "try": "The therapist explores stigma, bullying, appearance-related discrimination and the responses of others, and helps plan protective boundaries or changes in the social environment.",
+      "measure": "Measure felt dignity, safety, social participation and access to relationships without reassurance about appearance."
+    },
+    {
+      "id": "clinician-ptsd-3",
+      "presentation": "ptsd",
+      "approach": "People & support",
+      "title": "Trauma-informed relational safety work",
+      "try": "A clinician and person map the effects of trust, boundaries and current relationships on recovery, establish transparent choices and practice consent-respecting support requests.",
+      "measure": "Notice increased sense of agency, real-world support availability and reduction in unsafe or coercive situations.",
+      "scope": "A safety plan must address current danger independently of symptom-focused therapy."
+    },
+    {
+      "id": "clinician-ptsd-4",
+      "presentation": "ptsd",
+      "approach": "Environment & access",
+      "title": "Trauma-related environmental access planning",
+      "try": "In session, identify trauma reminders alongside actual present threats and sensory overload, then adapt settings and expectations while preserving choice about therapeutic exposure.",
+      "measure": "Review chosen participation, recovery burden and whether current safety has genuinely improved."
+    },
+    {
+      "id": "clinician-adjustment-2",
+      "presentation": "adjustment",
+      "approach": "People & support",
+      "title": "Role-transition communication treatment",
+      "try": "The therapist explores the meanings of a life change and helps rehearse negotiations of responsibility, boundaries and practical support with relevant people, if safe and desired.",
+      "measure": "Review role functioning, collaborative decision-making and ability to ask for or decline help."
+    },
+    {
+      "id": "clinician-adjustment-3",
+      "presentation": "adjustment",
+      "approach": "Environment & access",
+      "title": "Life-change demand and resource formulation",
+      "try": "In session, a clinician maps new demands against available time, money, housing, care responsibilities and accessibility, and collaboratively chooses practical adaptations.",
+      "measure": "Notice reduced friction, more feasible routines and greater ability to meet the person's own priorities."
+    },
+    {
+      "id": "clinician-grief-2",
+      "presentation": "grief",
+      "approach": "Values & autonomy",
+      "title": "Meaning and continuing-bonds exploration",
+      "try": "The therapist makes room for both pain and chosen connections with the person who died, using culturally congruent practices and the person's preferences rather than imposed closure.",
+      "measure": "Notice personally meaningful remembrance, valued identity and manageable engagement in daily roles."
+    },
+    {
+      "id": "clinician-grief-3",
+      "presentation": "grief",
+      "approach": "Environment & access",
+      "title": "Grief-related functioning and support consultation",
+      "try": "A clinician explores how bereavement intersects with exhaustion, childcare, community expectations and everyday demands, and helps negotiate accommodations and supportive connection.",
+      "measure": "Review functioning with realistic supports, isolation or companionship preferences, and burden rather than a timetable for grief."
+    },
+    {
+      "id": "clinician-dissociation-3",
+      "presentation": "dissociation",
+      "approach": "Environment & access",
+      "title": "Environmental cue and continuity intervention",
+      "try": "In session, the clinician identifies settings associated with disconnection, overload or lost time, then collaboratively tests orienting cues, routines or task supports while monitoring adverse effects.",
+      "measure": "Notice continuity of chosen activities, memory support effectiveness and post-episode functioning."
+    },
+    {
+      "id": "clinician-dissociation-4",
+      "presentation": "dissociation",
+      "approach": "People & support",
+      "title": "Coordination for function and safety",
+      "try": "The therapist, with permission, coordinates with appropriate clinicians or supporters about neutral observations, medical rule-outs, communication preferences and practical continuity needs.",
+      "measure": "Review whether support is experienced as safe and respectful and whether important daily roles remain accessible.",
+      "scope": "Do not solicit recovered memories or force interpretations of dissociative experiences."
+    },
+    {
+      "id": "clinician-bpd-3",
+      "presentation": "bpd",
+      "approach": "Thinking & meaning",
+      "title": "Therapist-guided alternative-perspective work",
+      "try": "In session, the therapist helps examine how intense emotions, relationship history and current facts can coexist, considering alternative interpretations without invalidating actual mistreatment.",
+      "measure": "Observe more usable choices during interpersonal strain and personally meaningful relationship functioning."
+    },
+    {
+      "id": "clinician-bpd-4",
+      "presentation": "bpd",
+      "approach": "Values & autonomy",
+      "title": "Values and crisis-prevention collaboration",
+      "try": "The therapist helps the person select goals that matter beyond crisis reduction, collaboratively planning safe choices and treatment continuity for periods of high arousal or changing motivation.",
+      "measure": "Notice agency, continuity of support and participation in self-selected roles.",
+      "scope": "Current suicide or self-harm risk still requires appropriate individualized assessment."
+    },
+    {
+      "id": "clinician-personality-2",
+      "presentation": "personality",
+      "approach": "People & support",
+      "title": "Collaborative therapy-relationship review",
+      "try": "A clinician invites feedback about misunderstandings, ruptures and recurring expectations in the therapeutic relationship, using the process to refine boundaries and strengthen shared work.",
+      "measure": "Review whether the person can disagree openly, experiences repair and sustains chosen relationships."
+    },
+    {
+      "id": "clinician-personality-3",
+      "presentation": "personality",
+      "approach": "Behavior & practice",
+      "title": "Interpersonal response rehearsal",
+      "try": "In session, the therapist explores the consequences and context of a recurring interaction, then rehearses specific boundary-setting, listening or repair alternatives selected by the person.",
+      "measure": "Notice safer communication, appropriate boundaries and valued relationship participation."
+    },
+    {
+      "id": "clinician-psychosis-3",
+      "presentation": "psychosis",
+      "approach": "Environment & access",
+      "title": "Stress and sensory-access support formulation",
+      "try": "The therapist collaboratively identifies environmental demands, sleep disruptions, isolation or practical barriers that may intensify distress, and negotiates tolerable adjustments with the care team.",
+      "measure": "Review distress, role participation and recovery costs with accommodations in place.",
+      "scope": "Never delay assessment of acute medical, psychotic or safety deterioration."
+    },
+    {
+      "id": "clinician-psychosis-4",
+      "presentation": "psychosis",
+      "approach": "Values & autonomy",
+      "title": "Recovery-oriented goal negotiation",
+      "try": "In session, the clinician helps the person identify roles, identity, relationships and self-defined recovery aims that are not contingent on elimination of all unusual experiences.",
+      "measure": "Track personally meaningful engagement, choice, functioning and how easily support can be accessed."
+    },
+    {
+      "id": "clinician-adhd-3",
+      "presentation": "adhd",
+      "approach": "Routines & regulation",
+      "title": "In-session sustainable routine design",
+      "try": "The clinician and person examine energy, variability, transitions and sleep or sensory demands, then build adaptable routines with recovery options instead of rigid compliance rules.",
+      "measure": "Review initiation, feasible continuation, recovery effort and satisfaction with chosen supports."
+    },
+    {
+      "id": "clinician-adhd-4",
+      "presentation": "adhd",
+      "approach": "People & support",
+      "title": "Workplace or school support rehearsal",
+      "try": "In session, the therapist helps the person prepare an accessible support request and rehearses disclosure options, boundaries and follow-up suited to their context.",
+      "measure": "Notice whether requested accommodations are available and whether chosen role participation improves."
+    },
+    {
+      "id": "clinician-autism-3",
+      "presentation": "autism",
+      "approach": "Thinking & meaning",
+      "title": "Neurodiversity-affirming formulation review",
+      "try": "The therapist collaboratively examines distress, stigma, sensory experience and social mismatch without assuming autistic traits need correction, then revises goals around wellbeing and access.",
+      "measure": "Review autonomy, distress related to barriers and ability to participate without unwanted masking."
+    },
+    {
+      "id": "clinician-autism-4",
+      "presentation": "autism",
+      "approach": "Routines & regulation",
+      "title": "Shutdown and overload recovery planning",
+      "try": "In session, identify personal overload patterns and plan an individualized communication, pause and recovery approach with the person, testing whether the plan feels safe and usable.",
+      "measure": "Notice lower recovery burden, respected need for breaks and preserved participation."
+    },
+    {
+      "id": "clinician-id-3",
+      "presentation": "id",
+      "approach": "Thinking & meaning",
+      "title": "Accessible strengths-based formulation",
+      "try": "The clinician uses plain language, visuals or communication aids to explore the person's preferences and understanding, checking comprehension without treating speech limits as global incapacity.",
+      "measure": "Review opportunities to understand, choose, refuse and participate with agreed supports."
+    },
+    {
+      "id": "clinician-id-4",
+      "presentation": "id",
+      "approach": "Routines & regulation",
+      "title": "Supported daily-routine rehearsal",
+      "try": "In session, the clinician and person practice a personally chosen routine with accessible cues, adjust assistance and check whether the routine serves the person's own goals.",
+      "measure": "Measure participation, satisfaction and the fit of support rather than unaided independence."
+    },
+    {
+      "id": "clinician-disruptive-3",
+      "presentation": "disruptive",
+      "approach": "Environment & access",
+      "title": "Context-first functional behavior consultation",
+      "try": "The clinician examines demands, sensory conditions, communication access, adult responses and safety risks across settings, then collaborates on environmental and relational prevention.",
+      "measure": "Review unmet needs addressed, function, safety and whether replacement communication is accessible."
+    },
+    {
+      "id": "clinician-disruptive-4",
+      "presentation": "disruptive",
+      "approach": "Values & autonomy",
+      "title": "Child-centered collaborative problem solving",
+      "try": "With appropriate developmental adaptation, a therapist helps caregivers and child describe concerns, agree on realistic needs and build choices without coercion or automatic blame.",
+      "measure": "Notice improved communication, respect for refusal where appropriate and fewer harmful conflicts."
+    },
+    {
+      "id": "clinician-anger-2",
+      "presentation": "anger",
+      "approach": "Thinking & meaning",
+      "title": "Collaborative threat-meaning and context formulation",
+      "try": "The therapist reviews an escalating episode with attention to actual injustice, threat appraisals, body cues, cultural context and available alternatives, avoiding assumptions about intent.",
+      "measure": "Review harm reduction, more available choices and whether legitimate boundaries can be asserted safely."
+    },
+    {
+      "id": "clinician-anger-3",
+      "presentation": "anger",
+      "approach": "People & support",
+      "title": "Relationship repair and boundary coaching",
+      "try": "In session, the clinician rehearses accountability, repair, assertive requests and disengagement from unsafe conflicts, without requiring forgiveness or mutual responsibility.",
+      "measure": "Track safe communication, meaningful repair when freely chosen and reduced relational harm."
+    },
+    {
+      "id": "clinician-sud-3",
+      "presentation": "sud",
+      "approach": "Environment & access",
+      "title": "Harm-reduction barriers consultation",
+      "try": "The therapist explores access to shelter, transport, medications, safer-use resources, stigma and treatment logistics without making abstinence a precondition for support.",
+      "measure": "Review access to chosen care, reduction in preventable harm and daily functioning.",
+      "scope": "Immediate overdose and withdrawal risks require appropriate emergency or medical support."
+    },
+    {
+      "id": "clinician-sud-4",
+      "presentation": "sud",
+      "approach": "Values & autonomy",
+      "title": "Values-consistent change planning",
+      "try": "In session, the clinician helps the person identify what they want to preserve or change about substance use and collaboratively selects a feasible next step without imposing one outcome.",
+      "measure": "Notice ownership of goals, trust in treatment and person-reported benefits or harms."
+    },
+    {
+      "id": "clinician-anorexia-3",
+      "presentation": "anorexia",
+      "approach": "Environment & access",
+      "title": "Eating-disorder care-access problem solving",
+      "try": "Within multidisciplinary treatment, the clinician explores barriers to attending specialist care, nutritional support and daily roles and coordinates needed accommodations with permission.",
+      "measure": "Review medical-care access, engagement and meaningful functioning, with health indicators interpreted by qualified team members.",
+      "scope": "Does not substitute for medical stabilization or prescribed nutrition plans."
+    },
+    {
+      "id": "clinician-anorexia-4",
+      "presentation": "anorexia",
+      "approach": "Values & autonomy",
+      "title": "Identity and recovery values exploration",
+      "try": "A specialist therapist helps distinguish disorder-driven restrictions, personal identity and cultural values, supporting choices that align with recovery and safety in coordinated care.",
+      "measure": "Review valued role engagement, sense of identity and team-monitored clinical safety.",
+      "scope": "Avoid unmonitored experiments with intake, weight or exercise."
+    },
+    {
+      "id": "clinician-bulimia-3",
+      "presentation": "bulimia",
+      "approach": "People & support",
+      "title": "Shame-reducing therapeutic alliance work",
+      "try": "In session, a clinician explores shame, secrecy and barriers to asking for medical and psychological help, using nonpunitive collaboration and appropriate team communication.",
+      "measure": "Notice ability to seek indicated care, honesty without punishment and recovery-relevant functioning.",
+      "scope": "Assessment and management of medical complications belong to the clinical team."
+    },
+    {
+      "id": "clinician-bulimia-4",
+      "presentation": "bulimia",
+      "approach": "Environment & access",
+      "title": "Meal-support access consultation",
+      "try": "The therapist, within an appropriate treatment team, assesses practical barriers, schedules and environment that affect use of an indicated nutrition and mental-health plan.",
+      "measure": "Review access to prescribed care, dignity, functioning and the person's experience of support.",
+      "scope": "Do not offer generic restriction, purging or food-exposure instructions."
+    },
+    {
+      "id": "clinician-arfid-3",
+      "presentation": "arfid",
+      "approach": "People & support",
+      "title": "Caregiver coaching for feeding access",
+      "try": "A qualified clinician and caregivers explore pressure, sensory needs and the person's communication, practicing supportive noncoercive interactions compatible with medical care.",
+      "measure": "Review availability of safe intake supports, child choice and family burden.",
+      "scope": "Feeding/swallowing and nutritional safety require appropriate medical or specialist oversight."
+    },
+    {
+      "id": "clinician-arfid-4",
+      "presentation": "arfid",
+      "approach": "Routines & regulation",
+      "title": "Predictability and sensory support planning",
+      "try": "In session, the clinician and person develop routines and environmental choices that reduce eating-related overwhelm, carefully evaluating what is medically safe and personally tolerable.",
+      "measure": "Notice access to eating opportunities, distress burden and clinical safety as monitored by the team.",
+      "scope": "Do not use unsupported appetite or intake targets."
+    },
+    {
+      "id": "clinician-sleep-3",
+      "presentation": "sleep",
+      "approach": "Thinking & meaning",
+      "title": "Therapist-guided sleep threat and performance work",
+      "try": "The clinician explores catastrophic sleep predictions and conditioned arousal, then selects appropriate cognitive or behavioral components within a qualified sleep assessment.",
+      "measure": "Review worry about sleep, daytime function, fatigue and unwanted effects.",
+      "scope": "Screen for bipolar activation and relevant medical or neurological risk before restrictive sleep methods."
+    },
+    {
+      "id": "clinician-sleep-4",
+      "presentation": "sleep",
+      "approach": "People & support",
+      "title": "Family and caregiving sleep-demand coordination",
+      "try": "In session, a therapist examines the realities of shift work, parenting, household noise and care duties and helps negotiate achievable boundaries or supports.",
+      "measure": "Track next-day functioning, burden of sleep demands and whether family support is realistically available."
+    },
+    {
+      "id": "clinician-somatic-3",
+      "presentation": "somatic",
+      "approach": "Behavior & practice",
+      "title": "Values-led symptom-aware participation therapy",
+      "try": "The clinician and person plan manageable, medically appropriate participation around persistent symptoms, modifying pace and accessibility without dismissing physical suffering.",
+      "measure": "Review chosen activity, symptom interference, medical follow-through and recovery burden.",
+      "scope": "Do not replace or delay evaluation of new, worsening or concerning symptoms."
+    },
+    {
+      "id": "clinician-somatic-4",
+      "presentation": "somatic",
+      "approach": "Environment & access",
+      "title": "Care-continuity and accommodation review",
+      "try": "The therapist helps map fragmented appointments, communication barriers and practical demands that complicate health care, then coordinates with consent and clarifies realistic options.",
+      "measure": "Notice whether essential care is easier to access and functioning is supported."
+    },
+    {
+      "id": "clinician-pain-3",
+      "presentation": "pain",
+      "approach": "Routines & regulation",
+      "title": "Therapist-guided flare-response options",
+      "try": "The therapist and person explore early overload or flare cues, medically appropriate pacing and alternatives to all-or-nothing activity, rehearsing flexible responses in session.",
+      "measure": "Review sustainable participation, recovery effort, valued action and symptom interference."
+    },
+    {
+      "id": "clinician-pain-4",
+      "presentation": "pain",
+      "approach": "People & support",
+      "title": "Family understanding and help negotiation",
+      "try": "In session, a clinician supports communication about invisible pain, practical needs, expectations and boundaries, involving others only when wanted and safe.",
+      "measure": "Notice helpful support availability, reduced conflict and the person's autonomy."
+    },
+    {
+      "id": "clinician-neurocognitive-3",
+      "presentation": "neurocognitive",
+      "approach": "Routines & regulation",
+      "title": "Person-centered cue and memory support therapy",
+      "try": "A clinician observes memory and sequence demands during a chosen task and collaboratively teaches accessible external cues or habits with appropriate supporters.",
+      "measure": "Review success with supports, safety, preserved choice and caregiver burden."
+    },
+    {
+      "id": "clinician-neurocognitive-4",
+      "presentation": "neurocognitive",
+      "approach": "Values & autonomy",
+      "title": "Life-role and preference continuity intervention",
+      "try": "The therapist facilitates discussion of valued roles and supported decisions with the person and trusted supporters, adapting communication and obligations to actual abilities.",
+      "measure": "Notice meaningful engagement, preference expression and whether decisions are respected.",
+      "scope": "Decision-making ability is task-specific; reassess safety and consent as indicated."
     }
   ]
 }
