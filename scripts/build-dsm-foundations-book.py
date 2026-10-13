@@ -167,29 +167,85 @@ def bookmark(p,key,level=0):
     p._level=level
     return p
 
+class ConnectorArrow(Flowable):
+    """Draw a readable, print-safe directional connector as vector ink."""
+    def __init__(self,label=""):
+        super().__init__()
+        self.label=label
+        self.width=WIDTH
+        self.height=42 if label else 29
+    def wrap(self,availWidth,availHeight):
+        self.width=min(WIDTH,availWidth)
+        return self.width,self.height
+    def draw(self):
+        c=self.canv
+        middle=self.width/2
+        stemtop=self.height-5
+        tip=17 if self.label else 6
+        c.setStrokeColor(TEAL)
+        c.setFillColor(TEAL)
+        c.setLineWidth(3.2)
+        c.setLineCap(1)
+        c.line(middle,stemtop,middle,tip+10)
+        p=c.beginPath()
+        p.moveTo(middle-9,tip+10)
+        p.lineTo(middle+9,tip+10)
+        p.lineTo(middle,tip)
+        p.close()
+        c.drawPath(p,fill=1,stroke=0)
+        if self.label:
+            c.setFont("Lato-Bold",9.1)
+            c.setFillColor(GREY)
+            caption=self.label
+            if pdfmetrics.stringWidth(caption,"Lato-Bold",9.1)>self.width-40:
+                caption=caption[:76].rstrip()+"…"
+            c.drawCentredString(middle,3,caption)
+
+
 def add_concept_map(fig,story):
-    if not fig:return
+    if not fig:
+        return
     heading=fig.find("strong",class_="stage-title")
     story.append(P("CONCEPT MAP  /  "+markup(heading or "Clinical reasoning"),"caption"))
-    nodes=fig.select(".relation-node")
-    edges=fig.select(".relation-edge")
-    # Render each actual relationship node as an ink-friendly labeled card, in source order.
-    if not nodes:
-        story.append(P(text(fig),"small"))
+    structure=fig.select_one(".relationship-map")
+    if structure is None:
+        story.append(P(xml_escape(text(fig)),"small"))
         return
-    cell_content=[]
-    for node in nodes:
-        label=node.find("b")
-        explanation=node.find("span")
-        pieces=[P(markup(label) if label else "Concept","h3")]
-        if explanation:pieces.append(P(markup(explanation),"small"))
-        cell_content.append(pieces)
-    for j,part in enumerate(cell_content):
-        story.append(box(part,SEA if j==0 else PALE,pad=8))
-        if j<len(cell_content)-1:
-            connector=(text(edges[min(j,len(edges)-1)]) if edges else "related question")
-            story.append(P("↓ "+xml_escape(connector).replace("↓ ",""),"mono"))
-    story.append(Spacer(1,8))
+
+    def append_card(node,branch=False):
+        label=node.find("b",recursive=False)
+        if label is None:
+            label=node.find(["h3","h4","strong"],recursive=False)
+        explanation=node.find("span",recursive=False)
+        if explanation is None:explanation=node.find("p",recursive=False)
+        title=markup(label) if label else xml_escape(text(node))
+        body=[P(title,"h3")]
+        if explanation:body.append(P(markup(explanation),"small"))
+        story.append(box(body,PALE if branch else SEA,pad=11))
+
+    for block in structure.find_all(recursive=False):
+        classes=block.get("class",[])
+        if "relation-edge" in classes:
+            label=re.sub(r"^[\s↓↘↙→⇒]+", "", text(block)).strip()
+            story.append(ConnectorArrow(label))
+        elif "relation-node" in classes:
+            append_card(block)
+        elif "relation-branches" in classes:
+            branches=block.select(".relation-node")
+            if branches:
+                for branch in branches:
+                    append_card(branch,branch=True)
+            else:
+                story.append(P(xml_escape(text(block)),"small"))
+        elif "person-map-heading" in classes:
+            story.append(box([P(xml_escape(text(block)),"small")],SEA,pad=11))
+        elif "relation-link" in classes:
+            story.append(P(xml_escape(text(block)),"center"))
+    for cls in ("relation-safety","relation-loop"):
+        special=fig.select_one("."+cls)
+        if special:
+            story.append(P(xml_escape(text(special)),"small"))
+    story.append(Spacer(1,11))
 
 def add_worked(case,story,index):
     label=case.find("strong")
