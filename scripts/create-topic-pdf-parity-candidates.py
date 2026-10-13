@@ -22,6 +22,8 @@ def mode_for(slug):
         return 'safety-gate',hashlib.sha256(page.encode()).hexdigest()
     if not hit and slug=='restrictive-eating-coordination' and 'class="restrictive-parallel"' in page:
         return 'parallel-assess',hashlib.sha256(page.encode()).hexdigest()
+    if not hit and slug=='panic-alarm-loop' and 'class="panic-cycle"' in page:
+        return 'return-loop',hashlib.sha256(page.encode()).hexdigest()
     if not hit:raise ValueError('Missing canonical HTML map: '+slug)
     mode=(hit.group(1) or 'sequence').strip()
     if mode not in MODES and mode!='sequence':raise ValueError((slug,mode))
@@ -151,7 +153,36 @@ def diagram(c,t,mode):
         small_label(c,'VERIFY & PARTICIPATE' if mode=='access-tracks' else 'POSSIBLE HYPOTHESES / SAFER SUPPORT',L,519)
         box(c,d[3],L,504,257,91,3,'branch')
         box(c,d[4],L+283,504,257,91,4,'branch')
-    elif mode in ('return-loop','loop-choice'):
+    elif mode=='return-loop':
+        # Six authored stages around a genuine circular series of curved arrows.
+        # Every arrow leads clockwise to the next card; 6 returns to 1.
+        import math
+        def curved_arrow(start,c1,c2,end):
+            c.setStrokeColor(HexColor('#285f52'));c.setLineWidth(2.1)
+            p=c.beginPath();p.moveTo(*start);p.curveTo(*c1,*c2,*end);c.drawPath(p,stroke=1,fill=0)
+            angle=math.atan2(end[1]-c2[1],end[0]-c2[0])
+            for off in (2.70,-2.70):
+                c.line(end[0],end[1],end[0]+6.7*math.cos(angle+off),end[1]+6.7*math.sin(angle+off))
+        stages=[
+            ('1. Body sensation or trigger','Heart rate, dizziness, breathlessness or another cue.'),
+            ('2. Feared interpretation','What might happen? What does the sensation mean?'),
+            ('3. Alarm / panic surge','Fear, arousal and stronger attention to body sensations.'),
+            ('4. Protective response','Checking, escaping, avoiding, reassurance or other coping.'),
+            ('5. Short-term relief','What eased briefly, and what was the later cost?'),
+            ('6. Renewed monitoring / fear','Scanning for symptoms or anticipating another episode.')
+        ]
+        positions=[(221,663,170,60),(390,585,186,76),(390,487,186,76),
+                   (221,405,170,60),(36,487,186,76),(36,585,186,76)]
+        for i,(item,(x,top,w,h)) in enumerate(zip(stages,positions)):
+            box(c,item,x,top,w,h,i,'card')
+        curved_arrow((396,638),(413,636),(421,605),(438,591))
+        curved_arrow((483,505),(493,501),(493,494),(483,488))
+        curved_arrow((385,437),(406,414),(414,390),(397,383))
+        curved_arrow((215,376),(211,390),(227,418),(226,438))
+        curved_arrow((129,491),(125,498),(125,503),(129,508))
+        curved_arrow((225,562),(275,582),(199,614),(216,629))
+        small_label(c,'SIX POSSIBLE STAGES - ARROWS RETURN FROM 6 TO 1',128,332)
+    elif mode=='loop-choice':
         for i,item in enumerate(d[:4]):
             # 1 upper-left -> 2 upper-right -> 3 lower-right -> 4 lower-left.
             col,row=((0,0),(1,0),(1,1),(0,1))[i]
@@ -207,7 +238,9 @@ def diagram(c,t,mode):
         return 'Message, response mode and access conditions work together; communication is not capacity.'
     if mode=='abc-tracks':
         return 'Before, observed behavior and after are observations; function remains a hypothesis.'
-    if mode in ('return-loop','loop-choice'):
+    if mode=='return-loop':
+        return 'A possible six-stage panic loop. Renewed monitoring can feed back to new sensations, but this is not inevitable. Respect medical care and consent.'
+    if mode=='loop-choice':
         return 'A possible feedback loop, not a diagnosis or certainty. Preserve safety and consent.'
     if mode=='two-track':return 'Instruction and usable access are simultaneous; review both separately.'
     if mode=='attention-split':return 'Compare attention and genuine access needs before altering supports.'
@@ -226,7 +259,7 @@ def write_page(out,t,mode):
     wrapped(c,'Original educational worksheet. Discuss with qualified care; not a diagnosis, risk score or validated tool.',36,697,540,8,10,max_lines=2)
     diagram_note=diagram(c,t,mode)
     # Brief text equivalent to the spatial relationship, useful for monochrome or extraction.
-    compact=(mode in ('safety-gate','parallel-assess'))
+    compact=(mode in ('safety-gate','parallel-assess','return-loop'))
     wrapped(c,diagram_note,36,307 if compact else 369,540,8.2,11,max_lines=2,bold=True)
     c.setStrokeColor(HexColor('#b7c7c2'));c.line(36,288 if compact else 348,576,288 if compact else 348)
     line_text(c,36,272 if compact else 333,'REFLECTION / CHOSEN SUPPORT - write, draw or dictate; use fictional or de-identified notes',8,True)
