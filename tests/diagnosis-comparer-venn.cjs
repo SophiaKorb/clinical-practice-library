@@ -30,7 +30,7 @@ try{
   if(width<=390)assert.ok(bbox.diagram>=500,"mobile uses readable scrollable SVG instead of tiny text");
   await page.locator('#presets button[data-key="ocd|ocpd"]').click();
   assert.match(await page.locator("#venn-regions .venn-shared").innerText(),/rigidity|repetitive/i);
-  assert.match(await page.locator("#venn-pairwise").innerText(),/purpose of repeated acts/i);
+  assert.match(await page.locator("#venn-pairwise").innerText(),/obsessions or urges/i);
   assert.equal(await page.locator("#venn-two").evaluate(e=>getComputedStyle(e).display),"inline");
   await page.locator("#a").selectOption("ocd");
   await page.locator("#b").selectOption("schizo");
