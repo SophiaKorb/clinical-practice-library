@@ -1,6 +1,6 @@
 # DSM Foundations: all 80 questions
 
-Editorial review copy generated from the current 11-lesson course. Includes 72 single-answer questions and 8 select-all questions. Correct options and each choice's feedback are included. Edit the teaching source in resources/training/dsm-from-zero.html, then regenerate this copy.
+Editorial review copy generated from the current 11-lesson course. Includes 72 single-answer questions and 8 select-all questions. Correct options and each choice’s feedback are included. Edit the teaching source in resources/training/dsm-from-zero.html, then regenerate this copy.
 
 ## Lesson 1: Why classify anything?
 
@@ -31,7 +31,7 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
 - **C.** Would “severely wilted” be a better category?
   - Feedback: Renaming the category “severely wilted” adds descriptive detail but not a cause. We would still need to examine the plant's circumstances.
 
-### 4. What does this example demonstrate about personally meaningful categories?
+### 4. A person sorts travel photographs by the feelings each trip evokes, rather than by date. The arrangement helps them find the photographs they want. What does this demonstrate?
 
 - **A.** Dates offer a more consistent method, so changing the system is the best next step.
   - Feedback: Chronological filing could help someone searching by date, but that is a different purpose. The existing arrangement is meaningful and works for the person using it.
@@ -82,8 +82,8 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
 
 ### 9. A parent keeps the family board games arranged in strict alphabetical order. Which statements are supported by this observation?
 
-- **A.** It could reflect a compulsion if arranging games feels difficult to resist or interferes with life. **✓ Correct**
-  - Feedback: The reason for arranging may warrant investigation, but whether the behavior represents a compulsion needs further clinical context.
+- **A.** It may warrant assessing for compulsions if arranging is driven by unwanted intrusive thoughts or rigid internal rules. **✓ Correct**
+  - Feedback: Compulsions may involve repetitive behavior or mental acts driven by obsessions or rigid rules. Explore purpose, time, distress, and interference; the observation alone proves nothing.
 - **B.** It suggests obsessive-compulsive disorder if the preference is especially consistent.
   - Feedback: Strong routines or preferences, without specific intrusive phenomena and impact, do not establish OCD.
 - **C.** It is a preference or behavior that cannot establish a diagnosis on its own. **✓ Correct**
@@ -128,9 +128,9 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
 ### 14. Which is a limitation of the DSM?
 
 - **A.** Its categories do not capture every individual and cultural context. **✓ Correct**
-  - Feedback: Classification is useful but imperfect; its boundaries are not a complete description of someone's culture, values, development, or experience.
+  - Feedback: Classification organizes clinical patterns. Individual assessment adds culture, values, development, and lived experience.
 - **B.** Because its clinical categories cannot guide any part of care planning.
-  - Feedback: The DSM may help organize care and research while still requiring individual formulation.
+  - Feedback: The DSM helps organize care and research; formulation connects that knowledge to the individual.
 - **C.** Because its categories prevent effective communication between professionals.
   - Feedback: A shared classification can support communication, but cannot capture the whole clinical picture.
 
@@ -203,12 +203,12 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
 - **C.** That a depressive episode has begun, pending confirmation of its duration.
   - Feedback: Duration is only part of the picture; other episode criteria and differential assessment still matter.
 
-### 22. A student struggles with a task in one classroom but not another. Which conclusions are justified?
+### 22. A student struggles with a task in one classroom but not another. Which interpretations and next steps are justified?
 
 - **A.** Environmental demands and supports may explain the difference. **✓ Correct**
   - Feedback: Compare demands, instructions, relationships, and accommodations across classrooms. The contrast may tell you what improves access.
-- **B.** Comparing classroom demands and supports may reveal what changes the student's access. **✓ Correct**
-  - Feedback: Comparing both settings can reveal differences in demands, instructions, relationships, and supports.
+- **B.** Ask the student what feels different across classrooms, rather than assuming the discrepancy reflects motivation. **✓ Correct**
+  - Feedback: The student's own perspective may reveal sensory, relational, instructional, or other differences adults have not noticed.
 - **C.** The discrepancy means the student is pretending.
   - Feedback: Different performance in different settings is common and informative. It is not automatically evidence of pretending; sometimes the worksheet itself is the plot twist.
 
@@ -639,9 +639,9 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
 - **C.** Review the history, current pattern, and competing explanations. **✓ Correct**
   - Feedback: Changes warrant reassessment, not automatic retention or rejection of an earlier diagnosis.
 
-### 68. An assessor has only a brief visit, inconsistent reports, and no developmental history. Why can't the assessor yet draw a well-supported conclusion?
+### 68. An assessor has only a brief visit, inconsistent reports, and no developmental history. Which limitation most directly prevents a well-supported diagnostic conclusion?
 
-- **A.** The available evidence and whether the assessor has the expertise to interpret it. **✓ Correct**
+- **A.** Important information is missing or conflicting, so the available evidence cannot yet support a confident conclusion. **✓ Correct**
   - Feedback: Missing corroborating history and limited observations restrict justified conclusions.
 - **B.** The number of criteria listed in the diagnostic manual being consulted.
   - Feedback: Criteria matter, but manual length does not repair missing individual evidence.
@@ -717,12 +717,12 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
 - **C.** Describe the student's abilities, access barriers, supports, and identity preferences. **✓ Correct**
   - Feedback: This respects autistic identity while recording individual functioning and what makes participation possible.
 
-### 76. In many jurisdictions, a worker with memory limitations requests written instructions. What is a reasonable documentation focus, subject to local law and agency policy?
+### 76. A worker with memory limitations requests written instructions. Which information connects the requested support to the work-related barrier?
 
 - **A.** The full diagnostic record to establish that the worker's condition is sufficiently serious.
-  - Feedback: Documentation may need relevant limitations and accommodation rationale, not necessarily a complete clinical history.
-- **B.** The specific memory-related barrier and why written instructions may help. **✓ Correct**
-  - Feedback: The scope of documentation depends on applicable law, employer process, role, and consent.
+  - Feedback: Document the relevant limitation and how the requested accommodation addresses it.
+- **B.** The specific memory-related barrier and how written instructions address it. **✓ Correct**
+  - Feedback: Connect the functional barrier to the requested support. Follow the documentation requirements introduced at the start of the course.
 - **C.** The diagnostic label as sufficient proof that any requested accommodation is required.
   - Feedback: A code does not settle which accommodation is appropriate or legally required.
 
@@ -731,13 +731,13 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
 - **A.** That the previous assessment overstated limitations because support removes the symptoms.
   - Feedback: An accommodation can change functional impact without negating the underlying difficulty.
 - **B.** That monitoring can end once tasks are completed in the supported setting.
-  - Feedback: Monitoring may still need to address effort, generalization, and needs elsewhere.
-- **C.** Supports may reduce barriers; the underlying limitation may still exist. **✓ Correct**
+  - Feedback: Monitor effort, performance across settings, and remaining support needs.
+- **C.** Success with support does not establish that the underlying limitation has resolved. **✓ Correct**
   - Feedback: An effective accommodation often makes participation possible; success with support does not retroactively prove the barrier imaginary.
 
 ### 78. A person has serious memory trouble but completes a short appointment well. What follows?
 
-- **A.** The appointment alone may not represent daily functional capacity. **✓ Correct**
+- **A.** The appointment alone does not establish daily functional capacity. **✓ Correct**
   - Feedback: A short, structured appointment may be easier than navigating an unscripted day. Ask about memory in real settings, strategies, consistency, and support.
 - **B.** The structured appointment provides sufficient evidence to discount other reports.
   - Feedback: One observation in controlled conditions cannot stand in for longitudinal or ecologically valid functioning evidence.
@@ -761,6 +761,3 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
   - Feedback: A functional interview compares participation, independence, consistency, and cost of effort.
 - **C.** “Would the diagnostic category predict how much help this task will require?”
   - Feedback: A label alone cannot specify the supports, settings, or effort involved in a task.
-
-## Lesson undefined: Key takeaways
-

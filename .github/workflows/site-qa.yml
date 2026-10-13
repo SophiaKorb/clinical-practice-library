@@ -41,6 +41,7 @@ jobs:
       - run: node tests/practice-learning.cjs
       - run: node tests/treatment-menu-levels.cjs
       - run: node tests/dsm-foundations.cjs
+      - run: node scripts/generate-dsm-question-bank.cjs --check
       - run: node tests/clinical-finder.cjs
       - run: node tests/topic-expansion.cjs
       - run: python scripts/audit-navigation-accessibility.py
