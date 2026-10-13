@@ -176,7 +176,7 @@ class BookDoc(BaseDocTemplate):
         canvas.setFillColor(GREY)
         canvas.drawRightString(PAGE_W-RIGHT,PAGE_H-31,"OCTOBER 2026")
         canvas.line(LEFT,42,PAGE_W-RIGHT,42)
-        canvas.drawString(LEFT,30,"Sophia Korb Cohon, PhD  |  Clinical Practice Library")
+        canvas.drawString(LEFT,30,"CLINICAL PRACTICE LIBRARY  /  EDUCATIONAL EDITION")
         canvas.drawRightString(PAGE_W-RIGHT,30,str(doc.page))
         canvas.restoreState()
     def afterFlowable(self,f):
@@ -517,7 +517,7 @@ def build():
         book.append(Spacer(1,6))
     # Keep brief source notes on the last answer-key sheet when space permits.
     book.append(bookmark(P("References and credits","h1"),"sources"))
-    book.append(P("Created by <b>Sophia Korb Cohon, PhD</b>. Adapted for print from the author's interactive DSM Foundations course in the Clinical Practice Library. The teaching material and fictional cases are designed to make diagnostic reasoning more understandable.","body"))
+    book.append(P("Adapted for print from the interactive DSM Foundations course in the Clinical Practice Library. The teaching material and fictional cases are designed to make diagnostic reasoning more understandable.","body"))
     for label,url in [
         ("American Psychiatric Association, DSM-5-TR","https://www.psychiatry.org/psychiatrists/practice/dsm"),
         ("NIMH: Bipolar disorder","https://www.nimh.nih.gov/health/publications/bipolar-disorder"),
