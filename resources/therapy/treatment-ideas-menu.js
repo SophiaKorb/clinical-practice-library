@@ -52,16 +52,16 @@ function makeCard(item,type){
  tryEdit.setAttribute('aria-label','Edit '+item.title+' suggestion');
  tryBox.append(tryTitle,tryView,tryEdit);
  const measureBox=el('div',undefined,'idea-detail progress-detail');
- const measureTitle=el('span',isMeasure?'Example target you could adapt':isIntervention?'How to measure response':'Notice progress','detail-label');
+ const measureTitle=el('span',isMeasure?'What improvement might look like':isIntervention?'What might indicate progress':'Notice progress','detail-label');
  const measureView=el('p',draft.measure,'idea-measure');
  const measureEdit=el('textarea',undefined,'card-edit edit-measure');
  measureEdit.value=draft.measure;measureEdit.rows=3;measureEdit.hidden=true;
  measureEdit.setAttribute('aria-label','Edit '+item.title+' progress example');
  measureBox.append(measureTitle,measureView,measureEdit);
  card.append(tryBox,measureBox);
- if(isIntervention&&item.scope){
+ if(!isMeasure&&item.scope){
   const scope=el('p',undefined,'scope-note');
-  scope.append(el('strong','Clinical boundary: '),document.createTextNode(item.scope));
+  scope.append(el('strong',isIntervention?'Clinical boundary: ':'Safety and access: '),document.createTextNode(item.scope));
   card.append(scope);
  }
  const controls=el('div',undefined,'card-actions');
@@ -91,7 +91,7 @@ function makeCard(item,type){
  });
  copy.addEventListener('click',()=>{
   const current=state.edits.get(key)||original;
-  return copyText(item.title+'\n'+(isMeasure?'What to track: ':isIntervention?'Therapist-delivered intervention: ':'Practice idea: ')+current.try+'\n'+(isMeasure?'Example target: ':isIntervention?'How to measure response: ':'Notice progress: ')+current.measure+(isIntervention&&item.scope?'\nClinical boundary: '+item.scope:''),item.title);
+  return copyText(item.title+'\n'+(isMeasure?'What to track: ':isIntervention?'Therapist-delivered intervention: ':'Practice idea: ')+current.try+'\n'+(isMeasure?'Possible signs of change: ':isIntervention?'What might indicate progress: ':'Notice progress: ')+current.measure+(item.scope&&!isMeasure?'\n'+(isIntervention?'Clinical boundary: ':'Safety and access: ')+item.scope:''),item.title);
  });
  controls.append(edit,copy,reset);
  if(item.source){
