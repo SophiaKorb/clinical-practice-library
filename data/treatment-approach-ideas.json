@@ -1,5 +1,5 @@
 {
-  "version": "2026-10-12",
+  "version": "2026-10-12-breadth-pass",
   "scope": "Collaborative examples; no universal targets or clinical mandates. Differential assessment, safety, medical needs, age and consent govern selection.",
   "approaches": [
     "Thinking & meaning",
@@ -1001,6 +1001,243 @@
       "title": "Keep a valued identity visible",
       "try": "With the person and caregivers, choose a familiar hobby or role and adapt its demands so participation remains possible.",
       "measure": "Track engagement and connection."
+    },
+    {
+      "id": "anxiety-breadth-13",
+      "presentation": "anxiety",
+      "approach": "People & support",
+      "title": "Choose how a helper responds",
+      "try": "With someone you trust, describe the difference between useful help, unnecessary reassurance and a real safety need. Choose what you want them to do when worry rises.",
+      "measure": "Notice whether support feels respectful, available and useful without increasing dependence."
+    },
+    {
+      "id": "depression-breadth-5",
+      "presentation": "depression",
+      "approach": "Environment & access",
+      "title": "Remove friction from a meaningful activity",
+      "try": "Choose a valued activity and identify what makes it inaccessible right now, such as transport, fatigue, clutter or timing. Adjust one barrier rather than demanding more motivation.",
+      "measure": "Notice whether the activity becomes more feasible and what effort or recovery it requires."
+    },
+    {
+      "id": "bipolar-breadth-5",
+      "presentation": "bipolar",
+      "approach": "Values & autonomy",
+      "title": "Preserve autonomy in the support plan",
+      "try": "With your clinician and trusted supports, describe which changes you want help noticing, which choices you wish to retain and how you want concerns raised respectfully.",
+      "measure": "Notice whether the plan is understandable, collaborative and usable when support is needed."
+    },
+    {
+      "id": "gad-breadth-5",
+      "presentation": "gad",
+      "approach": "Environment & access",
+      "title": "Ask for information once, in a useful format",
+      "try": "In one uncertain but safe situation, identify information you genuinely need and request it clearly in a form you can use. Distinguish a necessary answer from repeated guarantees.",
+      "measure": "Notice whether the information lets you act and whether additional reassurance changes the decision."
+    },
+    {
+      "id": "panic-breadth-5",
+      "presentation": "panic",
+      "approach": "Routines & regulation",
+      "title": "Keep a personally workable episode support card",
+      "try": "Choose short reminders that help you orient to a familiar environment, consider medical guidance, and reconnect with a meaningful activity when it is safe to do so.",
+      "measure": "Notice whether the card supports choice and functioning without being treated as proof symptoms are harmless."
+    },
+    {
+      "id": "social-breadth-5",
+      "presentation": "social",
+      "approach": "Values & autonomy",
+      "title": "Define connection without performing normality",
+      "try": "Choose a form of social connection that feels authentic, such as shared activity, direct conversation, text or a quiet setting. Name what you will not change simply to appear typical.",
+      "measure": "Notice whether connection feels mutual, chosen and sustainable."
+    },
+    {
+      "id": "phobia-breadth-5",
+      "presentation": "phobia",
+      "approach": "Environment & access",
+      "title": "Make a valued setting genuinely accessible",
+      "try": "Before attempting a feared but safe activity, identify transport, sensory, communication and physical barriers. Arrange practical supports without framing every accommodation as avoidance.",
+      "measure": "Notice whether the setting becomes usable and whether any remaining fear-based restriction matters to you."
+    },
+    {
+      "id": "ocd-breadth-5",
+      "presentation": "ocd",
+      "approach": "Values & autonomy",
+      "title": "Distinguish personal values from ritual rules",
+      "try": "Name a role or action that matters to you and identify whether a repetitive rule pulls time or choice away from it. Discuss any planned response prevention with qualified care.",
+      "measure": "Notice whether you have more freedom for valued actions without abandoning legitimate safety practices."
+    },
+    {
+      "id": "bdd-breadth-5",
+      "presentation": "bdd",
+      "approach": "Values & autonomy",
+      "title": "Practice identity beyond appearance checking",
+      "try": "Choose a meaningful role, interest or relationship that has nothing to do with appearance. Consider a small, safe way to reconnect with it while preserving dignity and self-determination.",
+      "measure": "Notice engagement, connection and whether checking interferes less with that chosen role."
+    },
+    {
+      "id": "ptsd-breadth-5",
+      "presentation": "ptsd",
+      "approach": "People & support",
+      "title": "Choose a consent-based support signal",
+      "try": "With someone safe, agree on how to indicate needing space, grounding, practical help or no discussion. Make sure the signal can be changed or declined.",
+      "measure": "Notice whether the request is honored and whether the interaction preserves control and safety."
+    },
+    {
+      "id": "adjustment-breadth-5",
+      "presentation": "adjustment",
+      "approach": "Routines & regulation",
+      "title": "Build one continuity anchor during change",
+      "try": "Choose a flexible ritual or predictable cue that connects daily life before and after a change. Adapt the routine to actual time, finances and responsibilities.",
+      "measure": "Notice whether it helps orientation, connection and feasibility without becoming another obligation."
+    },
+    {
+      "id": "grief-breadth-5",
+      "presentation": "grief",
+      "approach": "Values & autonomy",
+      "title": "Choose how a bond remains present",
+      "try": "Consider a freely chosen way to remember, speak about or honor someone important, or decide not to engage with reminders right now. Cultural and personal differences are welcome.",
+      "measure": "Notice whether your choice feels meaningful and whether you can change it without pressure."
+    },
+    {
+      "id": "dissociation-breadth-5",
+      "presentation": "dissociation",
+      "approach": "People & support",
+      "title": "Clarify how you want others to check in",
+      "try": "When safe, describe the kind of question, cue, privacy or assistance that helps if you feel disconnected. Agree on ways others can avoid startling, overriding or interpreting your experience.",
+      "measure": "Notice whether check-ins support orientation, consent and everyday participation."
+    },
+    {
+      "id": "bpd-breadth-5",
+      "presentation": "bpd",
+      "approach": "Environment & access",
+      "title": "Make a difficult conversation more predictable",
+      "try": "Choose a safe relationship and discuss a time, format, pause signal or agenda that makes a hard topic more manageable. Keep space to decline or reschedule.",
+      "measure": "Notice whether conflict can be handled without losing access to boundaries or support."
+    },
+    {
+      "id": "personality-breadth-5",
+      "presentation": "personality",
+      "approach": "Values & autonomy",
+      "title": "Try one response that fits who you want to be",
+      "try": "In a recurring but safe relationship situation, choose a response that expresses your values while protecting boundaries. Avoid making yourself responsible for another person's actions.",
+      "measure": "Notice whether the response increases agency and supports healthy connection."
+    },
+    {
+      "id": "psychosis-breadth-5",
+      "presentation": "psychosis",
+      "approach": "Routines & regulation",
+      "title": "Plan a comfortable return after distress",
+      "try": "With your treating team when relevant, choose familiar actions or support contacts that help after an overwhelming experience without arguing over its cause.",
+      "measure": "Notice whether access to care, rest and chosen roles becomes more dependable.",
+      "scope": "Urgent deterioration or safety concerns need appropriate care."
+    },
+    {
+      "id": "adhd-breadth-5",
+      "presentation": "adhd",
+      "approach": "Values & autonomy",
+      "title": "Choose a support that belongs to you",
+      "try": "Consider whether reminders, accountability, visual plans or assistance feel useful or intrusive. Select the form of support you want and negotiate the right to change it.",
+      "measure": "Notice whether tasks become more possible without losing independence of choice."
+    },
+    {
+      "id": "autism-breadth-5",
+      "presentation": "autism",
+      "approach": "People & support",
+      "title": "Tell a supporter what communication actually helps",
+      "try": "Choose a communication preference such as processing time, written information, direct wording, movement or breaks. Ask a trusted person to use it while respecting refusal.",
+      "measure": "Notice whether your meaning is understood and the support lowers strain."
+    },
+    {
+      "id": "id-breadth-5",
+      "presentation": "id",
+      "approach": "Routines & regulation",
+      "title": "Use a preferred cue for a valued routine",
+      "try": "Choose a familiar task you want to do and a cue you understand, such as a picture, demonstration or companion. Keep the amount of assistance adjustable.",
+      "measure": "Notice participation, satisfaction and whether your preferences are honored."
+    },
+    {
+      "id": "disruptive-breadth-5",
+      "presentation": "disruptive",
+      "approach": "Routines & regulation",
+      "title": "Co-create a predictable recovery routine",
+      "try": "With a trusted adult or child as appropriate, identify early signs of overload and a safe choice of pauses, sensory supports or ways to communicate. Avoid punishments for needing a break.",
+      "measure": "Notice safer reconnection and whether needs can be expressed before escalation."
+    },
+    {
+      "id": "anger-breadth-5",
+      "presentation": "anger",
+      "approach": "Values & autonomy",
+      "title": "Choose accountability without forced reconciliation",
+      "try": "After a conflict, consider what responsibility you can genuinely take and what boundary you still need. Offer repair if appropriate, without requiring anyone else to forgive.",
+      "measure": "Notice safer interactions, preserved self-respect and willingness to discuss harm."
+    },
+    {
+      "id": "sud-breadth-5",
+      "presentation": "sud",
+      "approach": "People & support",
+      "title": "Find a low-barrier route back to help",
+      "try": "Identify a contact or service you could use after a setback without having to pretend progress was perfect. Choose how you prefer to ask for support.",
+      "measure": "Notice whether help remains accessible, respectful and safe.",
+      "scope": "Seek appropriate urgent care for overdose, withdrawal or serious medical symptoms."
+    },
+    {
+      "id": "anorexia-breadth-5",
+      "presentation": "anorexia",
+      "approach": "Routines & regulation",
+      "title": "Clarify what meal support feels helpful",
+      "try": "Within your specialist treatment plan, discuss which communication, privacy, sensory or relational supports make indicated nutrition and care easier to access.",
+      "measure": "Notice whether support feels respectful and whether the clinical team can carry out its safety plan.",
+      "scope": "Do not independently alter prescribed intake or medical monitoring."
+    },
+    {
+      "id": "bulimia-breadth-5",
+      "presentation": "bulimia",
+      "approach": "Values & autonomy",
+      "title": "Preserve valued life outside the eating cycle",
+      "try": "Identify an interest, relationship or role you want protected during treatment and ask the care team how support can accommodate it without compromising safety.",
+      "measure": "Notice connection, engagement and reduced interference, alongside clinically guided safety review."
+    },
+    {
+      "id": "arfid-breadth-5",
+      "presentation": "arfid",
+      "approach": "People & support",
+      "title": "Create a clear eating-related needs signal",
+      "try": "With an appropriate clinician or supporter, choose a way to communicate sensory distress, swallowing concern, food availability or a need for a pause without being pressured.",
+      "measure": "Notice whether the message is understood and whether medically safe access improves.",
+      "scope": "Swallowing and nutritional concerns require qualified assessment."
+    },
+    {
+      "id": "sleep-breadth-5",
+      "presentation": "sleep",
+      "approach": "Values & autonomy",
+      "title": "Define sleep success by daytime life too",
+      "try": "Consider which daytime activities, restfulness or responsibilities matter most rather than judging yourself solely by a sleep number. Discuss medical concerns and your chosen priorities with care.",
+      "measure": "Notice whether your sleep plan serves daily function without adding harmful sleep-performance pressure."
+    },
+    {
+      "id": "somatic-breadth-5",
+      "presentation": "somatic",
+      "approach": "Values & autonomy",
+      "title": "Describe your symptoms and goals in your own terms",
+      "try": "Prepare a brief account of what changed, what you fear, what function is affected and what medical questions you want answered, without minimizing or exaggerating symptoms.",
+      "measure": "Notice whether care decisions are clearer and whether you feel heard and supported."
+    },
+    {
+      "id": "pain-breadth-5",
+      "presentation": "pain",
+      "approach": "People & support",
+      "title": "Agree on useful assistance during a flare",
+      "try": "Choose a helper and describe assistance that enables participation while respecting your preferences, such as flexible tasks, transport or a predictable check-in.",
+      "measure": "Notice practical access and reduced conflict or exhaustion, not just pain intensity."
+    },
+    {
+      "id": "neurocognitive-breadth-5",
+      "presentation": "neurocognitive",
+      "approach": "People & support",
+      "title": "Preserve familiar connection with accessible communication",
+      "try": "With a chosen person, adapt conversation using preferred topics, familiar objects, processing time or alternative response methods and allow genuine choice.",
+      "measure": "Notice whether connection remains meaningful and communication or refusals are respected."
     }
-  ]
+  ],
+  "note": "Browsable choices for self-help or therapist-coached practice. First prioritize distinct options and person-defined outcomes. Do not interpret these examples as numeric treatment targets, medical directions, or instructions to remove needed accommodations. Patient-specific baselines and measurable targets are a later collaborative refinement."
 }
