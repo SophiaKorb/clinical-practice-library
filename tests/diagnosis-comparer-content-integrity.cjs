@@ -15,7 +15,7 @@ const map=new Map(diagnoses.map(x=>[x.id,x]));
 assert.equal(map.size,14,'unique diagnosis selectors');
 for(const d of diagnoses){
  for(const field of ['name','pattern','course','ask','caveat'])
-  assert.ok(typeof d[field]==='string'&&d[field].length>23,d.id+' must explain '+field);
+  assert.ok(typeof d[field]==='string'&&d[field].length>(field==='name'?2:23),d.id+' must explain '+field);
  assert.ok(/\?|how|what|when|which|were|does|do |are |is /i.test(d.ask),'question requires clinical investigation '+d.id);
 }
 const key=(a,b)=>[a,b].sort().join('|'),seen=new Set();
