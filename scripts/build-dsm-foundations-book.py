@@ -33,23 +33,46 @@ HTML=ROOT/"resources/training/dsm-from-zero.html"
 OUT=ROOT/"build/dsm-foundations-complete-review-book.pdf"
 QA=ROOT/"build/dsm-foundations-book-manifest.json"
 
-NAVY=colors.HexColor("#18354A")
-INK=colors.HexColor("#233744")
-TEAL=colors.HexColor("#12756F")
-SEA=colors.HexColor("#EAF4F2")
-PALE=colors.HexColor("#F3F6F7")
-GOLD=colors.HexColor("#A77D37")
-GREY=colors.HexColor("#546775")
-BORDER=colors.HexColor("#D7E2E2")
+# Print identity: literary ink, oxblood hierarchy, warm paper-compatible neutrals.
+NAVY=colors.HexColor("#272526")
+INK=colors.HexColor("#272526")
+TEAL=colors.HexColor("#6B283B")
+SEA=colors.HexColor("#F7F0EB")
+PALE=colors.HexColor("#FAF7F1")
+GOLD=colors.HexColor("#80582E")
+GREY=colors.HexColor("#595151")
+BORDER=colors.HexColor("#DED6CD")
 PAGE_W,PAGE_H=letter
-# Book typography: Noto Serif narrative and Lato labels; symbols use complete fallback.
-pdfmetrics.registerFont(TTFont("NS","/usr/share/fonts/truetype/noto/NotoSerif-Regular.ttf"))
-pdfmetrics.registerFont(TTFont("NS-Bold","/usr/share/fonts/truetype/noto/NotoSerif-Bold.ttf"))
-pdfmetrics.registerFont(TTFont("NS-Italic","/usr/share/fonts/truetype/noto/NotoSerif-Italic.ttf"))
-pdfmetrics.registerFont(TTFont("NS-BoldItalic","/usr/share/fonts/truetype/noto/NotoSerif-BoldItalic.ttf"))
+# Use the prepared OFL type system in CI; local fallback remains available for
+# editing without downloads. QA manifest names the actual embedded font mode.
+FONT_ROOT=ROOT/"build/fonts"
+FONT_MODE="editorial" if (FONT_ROOT/"LibreBaskerville-Regular.ttf").exists() else "fallback"
+if FONT_MODE=="editorial":
+    expected=["LibreBaskerville-Regular.ttf","LibreBaskerville-Bold.ttf",
+              "SourceSerif4-Regular.ttf","SourceSerif4-Bold.ttf",
+              "SourceSerif4-Italic.ttf","SourceSerif4-BoldItalic.ttf",
+              "SourceSans3-Regular.ttf","SourceSans3-Bold.ttf"]
+    if not all((FONT_ROOT/x).is_file() for x in expected):
+        raise RuntimeError("Incomplete editorial fonts; run prepare-dsm-print-fonts.py")
+    pdfmetrics.registerFont(TTFont("LB",str(FONT_ROOT/"LibreBaskerville-Regular.ttf")))
+    pdfmetrics.registerFont(TTFont("LB-Bold",str(FONT_ROOT/"LibreBaskerville-Bold.ttf")))
+    pdfmetrics.registerFont(TTFont("NS",str(FONT_ROOT/"SourceSerif4-Regular.ttf")))
+    pdfmetrics.registerFont(TTFont("NS-Bold",str(FONT_ROOT/"SourceSerif4-Bold.ttf")))
+    pdfmetrics.registerFont(TTFont("NS-Italic",str(FONT_ROOT/"SourceSerif4-Italic.ttf")))
+    pdfmetrics.registerFont(TTFont("NS-BoldItalic",str(FONT_ROOT/"SourceSerif4-BoldItalic.ttf")))
+    pdfmetrics.registerFont(TTFont("Lato",str(FONT_ROOT/"SourceSans3-Regular.ttf")))
+    pdfmetrics.registerFont(TTFont("Lato-Bold",str(FONT_ROOT/"SourceSans3-Bold.ttf")))
+else:
+    pdfmetrics.registerFont(TTFont("LB","/usr/share/fonts/truetype/noto/NotoSerif-Regular.ttf"))
+    pdfmetrics.registerFont(TTFont("LB-Bold","/usr/share/fonts/truetype/noto/NotoSerif-Bold.ttf"))
+    pdfmetrics.registerFont(TTFont("NS","/usr/share/fonts/truetype/noto/NotoSerif-Regular.ttf"))
+    pdfmetrics.registerFont(TTFont("NS-Bold","/usr/share/fonts/truetype/noto/NotoSerif-Bold.ttf"))
+    pdfmetrics.registerFont(TTFont("NS-Italic","/usr/share/fonts/truetype/noto/NotoSerif-Italic.ttf"))
+    pdfmetrics.registerFont(TTFont("NS-BoldItalic","/usr/share/fonts/truetype/noto/NotoSerif-BoldItalic.ttf"))
+    pdfmetrics.registerFont(TTFont("Lato","/usr/share/fonts/truetype/lato/Lato-Regular.ttf"))
+    pdfmetrics.registerFont(TTFont("Lato-Bold","/usr/share/fonts/truetype/lato/Lato-Bold.ttf"))
 pdfmetrics.registerFontFamily("NS",normal="NS",bold="NS-Bold",italic="NS-Italic",boldItalic="NS-BoldItalic")
-pdfmetrics.registerFont(TTFont("Lato","/usr/share/fonts/truetype/lato/Lato-Regular.ttf"))
-pdfmetrics.registerFont(TTFont("Lato-Bold","/usr/share/fonts/truetype/lato/Lato-Bold.ttf"))
+pdfmetrics.registerFontFamily("LB",normal="LB",bold="LB-Bold")
 pdfmetrics.registerFontFamily("Lato",normal="Lato",bold="Lato-Bold",italic="Lato",boldItalic="Lato-Bold")
 pdfmetrics.registerFont(TTFont("BookSymbols","/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"))
 LEFT=58
@@ -57,17 +80,17 @@ RIGHT=58
 WIDTH=PAGE_W-LEFT-RIGHT
 
 style={
-    "booktitle":ParagraphStyle("BookTitle",fontName="NS-Bold",fontSize=37,leading=46,textColor=NAVY,spaceAfter=17),
+    "booktitle":ParagraphStyle("BookTitle",fontName="LB-Bold",fontSize=37,leading=46,textColor=NAVY,spaceAfter=17),
     "covercopy":ParagraphStyle("CoverCopy",fontName="NS",fontSize=15.3,leading=24,textColor=INK,spaceAfter=15),
     "author":ParagraphStyle("BookAuthor",fontName="NS-Bold",fontSize=17,leading=24,textColor=TEAL,spaceAfter=14),
-    "h1":ParagraphStyle("BookH1",fontName="NS-Bold",fontSize=24,leading=31,textColor=NAVY,spaceAfter=13,spaceBefore=12,keepWithNext=1),
-    "h2":ParagraphStyle("BookH2",fontName="NS-Bold",fontSize=15.2,leading=21,textColor=TEAL,spaceAfter=8,spaceBefore=15,keepWithNext=1),
-    "h3":ParagraphStyle("BookH3",fontName="NS-Bold",fontSize=11.8,leading=17.1,textColor=NAVY,spaceAfter=6,spaceBefore=11,keepWithNext=1),
+    "h1":ParagraphStyle("BookH1",fontName="LB-Bold",fontSize=24,leading=31,textColor=NAVY,spaceAfter=13,spaceBefore=12,keepWithNext=1),
+    "h2":ParagraphStyle("BookH2",fontName="LB-Bold",fontSize=15.2,leading=21,textColor=TEAL,spaceAfter=8,spaceBefore=15,keepWithNext=1),
+    "h3":ParagraphStyle("BookH3",fontName="LB-Bold",fontSize=11.8,leading=17.1,textColor=NAVY,spaceAfter=6,spaceBefore=11,keepWithNext=1),
     "body":ParagraphStyle("BookBody",fontName="NS",fontSize=11.25,leading=18.2,textColor=INK,spaceAfter=11,allowWidows=0,allowOrphans=0),
     "small":ParagraphStyle("BookSmall",fontName="NS",fontSize=10.65,leading=16.6,textColor=INK,spaceAfter=7,allowWidows=0,allowOrphans=0),
     "tiny":ParagraphStyle("BookTiny",fontName="Lato",fontSize=9.6,leading=13.9,textColor=INK,spaceAfter=5),
     "mono":ParagraphStyle("BookMonotype",fontName="Lato",fontSize=10.1,leading=15,textColor=GREY,spaceAfter=8),
-    "case":ParagraphStyle("BookCase",fontName="NS-Bold",fontSize=14.2,leading=19,textColor=NAVY,spaceAfter=10,spaceBefore=17,keepWithNext=1),
+    "case":ParagraphStyle("BookCase",fontName="LB-Bold",fontSize=14.2,leading=19,textColor=NAVY,spaceAfter=10,spaceBefore=17,keepWithNext=1),
     "step":ParagraphStyle("BookStep",fontName="Lato-Bold",fontSize=11.2,leading=16.2,textColor=TEAL,spaceAfter=5,spaceBefore=10,keepWithNext=1),
     "caption":ParagraphStyle("BookCaption",fontName="Lato-Bold",fontSize=10.7,leading=15.5,textColor=TEAL,spaceAfter=7,keepWithNext=1),
     "option":ParagraphStyle("BookOption",fontName="Lato",fontSize=10.85,leading=16.3,textColor=INK,spaceAfter=7,leftIndent=19,firstLineIndent=-19),
@@ -504,7 +527,7 @@ def build():
         book.append(P(xml_escape(label)+": "+xml_escape(url),"small"))
     doc=BookDoc(OUT)
     doc.build(book)
-    counts=dict(lessons=len(secs),cases=count,concept_maps=len(figs),vocabulary=len(vocab),questions=len(keys),options=sum(x["options"] for x in keys),select_all=sum(x["multi"] for x in keys),single=sum(not x["multi"] for x in keys),chapters=chapters,pdf=str(OUT.relative_to(ROOT)))
+    counts=dict(font_mode=FONT_MODE,print_identity='Libre Baskerville / Source Serif 4 / Source Sans 3' if FONT_MODE=='editorial' else 'fallback fonts',lessons=len(secs),cases=count,concept_maps=len(figs),vocabulary=len(vocab),questions=len(keys),options=sum(x["options"] for x in keys),select_all=sum(x["multi"] for x in keys),single=sum(not x["multi"] for x in keys),chapters=chapters,pdf=str(OUT.relative_to(ROOT)))
     QA.write_text(json.dumps(counts,indent=2)+"\n",encoding="utf-8")
     print(json.dumps(counts,indent=2))
 
