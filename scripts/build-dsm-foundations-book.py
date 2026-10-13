@@ -7,6 +7,7 @@ full 80-question practice/answer key. Never deploys or replaces published files.
 """
 from __future__ import annotations
 from collections import Counter
+import copy
 from datetime import date
 from html import escape as xml_escape
 from pathlib import Path
@@ -23,7 +24,7 @@ from reportlab.lib.pagesizes import letter
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.units import inch
 from reportlab.platypus import (
-    BaseDocTemplate, PageTemplate, Frame, PageBreak, NextPageTemplate,
+    BaseDocTemplate, PageTemplate, Frame, PageBreak, NextPageTemplate, Flowable,
     Paragraph, Spacer, Table, TableStyle, KeepTogether, HRFlowable
 )
 
@@ -41,33 +42,39 @@ GOLD=colors.HexColor("#A77D37")
 GREY=colors.HexColor("#546775")
 BORDER=colors.HexColor("#D7E2E2")
 PAGE_W,PAGE_H=letter
-# Unicode-capable installed system fonts are needed for arrows, curly quotes and checkbox glyphs.
-pdfmetrics.registerFont(TTFont("DJ","/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"))
-pdfmetrics.registerFont(TTFont("DJ-Bold","/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"))
-pdfmetrics.registerFontFamily("DJ", normal="DJ", bold="DJ-Bold", italic="DJ", boldItalic="DJ-Bold")
+# Book typography: Noto Serif narrative and Lato labels; symbols use complete fallback.
+pdfmetrics.registerFont(TTFont("NS","/usr/share/fonts/truetype/noto/NotoSerif-Regular.ttf"))
+pdfmetrics.registerFont(TTFont("NS-Bold","/usr/share/fonts/truetype/noto/NotoSerif-Bold.ttf"))
+pdfmetrics.registerFont(TTFont("NS-Italic","/usr/share/fonts/truetype/noto/NotoSerif-Italic.ttf"))
+pdfmetrics.registerFont(TTFont("NS-BoldItalic","/usr/share/fonts/truetype/noto/NotoSerif-BoldItalic.ttf"))
+pdfmetrics.registerFontFamily("NS",normal="NS",bold="NS-Bold",italic="NS-Italic",boldItalic="NS-BoldItalic")
+pdfmetrics.registerFont(TTFont("Lato","/usr/share/fonts/truetype/lato/Lato-Regular.ttf"))
+pdfmetrics.registerFont(TTFont("Lato-Bold","/usr/share/fonts/truetype/lato/Lato-Bold.ttf"))
+pdfmetrics.registerFontFamily("Lato",normal="Lato",bold="Lato-Bold",italic="Lato",boldItalic="Lato-Bold")
+pdfmetrics.registerFont(TTFont("BookSymbols","/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"))
 LEFT=58
 RIGHT=58
 WIDTH=PAGE_W-LEFT-RIGHT
 
 style={
-    "booktitle":ParagraphStyle("BookTitle",fontName="DJ-Bold",fontSize=29,leading=36,textColor=NAVY,spaceAfter=14),
-    "covercopy":ParagraphStyle("CoverCopy",fontName="DJ",fontSize=13,leading=20,textColor=INK,spaceAfter=14),
-    "author":ParagraphStyle("BookAuthor",fontName="DJ-Bold",fontSize=14,leading=20,textColor=TEAL,spaceAfter=12),
-    "h1":ParagraphStyle("BookH1",fontName="DJ-Bold",fontSize=20,leading=25,textColor=NAVY,spaceBefore=12,spaceAfter=12,keepWithNext=1),
-    "h2":ParagraphStyle("BookH2",fontName="DJ-Bold",fontSize=12.5,leading=17,textColor=TEAL,spaceBefore=12,spaceAfter=6,keepWithNext=1),
-    "h3":ParagraphStyle("BookH3",fontName="DJ-Bold",fontSize=10.5,leading=14.5,textColor=NAVY,spaceBefore=9,spaceAfter=5,keepWithNext=1),
-    "body":ParagraphStyle("BookBody",fontName="DJ",fontSize=10.2,leading=15.7,textColor=INK,spaceAfter=8,allowWidows=0,allowOrphans=0),
-    "small":ParagraphStyle("BookSmall",fontName="DJ",fontSize=9.35,leading=13.8,textColor=INK,spaceAfter=5,allowWidows=0,allowOrphans=0),
-    "tiny":ParagraphStyle("BookTiny",fontName="DJ",fontSize=8.9,leading=12.6,textColor=INK,spaceAfter=3),
-    "mono":ParagraphStyle("BookMonotype",fontName="DJ",fontSize=9.3,leading=13.3,textColor=GREY,spaceAfter=6),
-    "case":ParagraphStyle("BookCase",fontName="DJ-Bold",fontSize=12,leading=16,textColor=NAVY,spaceBefore=13,spaceAfter=8,keepWithNext=1),
-    "step":ParagraphStyle("BookStep",fontName="DJ-Bold",fontSize=9.6,leading=14,textColor=TEAL,spaceBefore=6,spaceAfter=3,keepWithNext=1),
-    "caption":ParagraphStyle("BookCaption",fontName="DJ-Bold",fontSize=10,leading=14,textColor=TEAL,spaceAfter=5,keepWithNext=1),
-    "option":ParagraphStyle("BookOption",fontName="DJ",fontSize=9.5,leading=13.5,textColor=INK,leftIndent=15,firstLineIndent=-15,spaceAfter=5),
-    "answer":ParagraphStyle("BookAnswer",fontName="DJ",fontSize=9.6,leading=14,textColor=INK,spaceAfter=6),
-    "contents":ParagraphStyle("BookContents",fontName="DJ",fontSize=11,leading=19,textColor=INK,spaceAfter=6),
-    "callout":ParagraphStyle("BookCallout",fontName="DJ",fontSize=9.8,leading=14.8,textColor=INK),
-    "center":ParagraphStyle("BookCenter",fontName="DJ",fontSize=9.7,leading=14,textColor=GREY,alignment=TA_CENTER),
+    "booktitle":ParagraphStyle("BookTitle",fontName="NS-Bold",fontSize=37,leading=46,textColor=NAVY,spaceAfter=17),
+    "covercopy":ParagraphStyle("CoverCopy",fontName="NS",fontSize=15.3,leading=24,textColor=INK,spaceAfter=15),
+    "author":ParagraphStyle("BookAuthor",fontName="NS-Bold",fontSize=17,leading=24,textColor=TEAL,spaceAfter=14),
+    "h1":ParagraphStyle("BookH1",fontName="NS-Bold",fontSize=24,leading=31,textColor=NAVY,spaceAfter=13,spaceBefore=12,keepWithNext=1),
+    "h2":ParagraphStyle("BookH2",fontName="NS-Bold",fontSize=15.2,leading=21,textColor=TEAL,spaceAfter=8,spaceBefore=15,keepWithNext=1),
+    "h3":ParagraphStyle("BookH3",fontName="NS-Bold",fontSize=11.8,leading=17.1,textColor=NAVY,spaceAfter=6,spaceBefore=11,keepWithNext=1),
+    "body":ParagraphStyle("BookBody",fontName="NS",fontSize=11.25,leading=18.2,textColor=INK,spaceAfter=11,allowWidows=0,allowOrphans=0),
+    "small":ParagraphStyle("BookSmall",fontName="NS",fontSize=10.65,leading=16.6,textColor=INK,spaceAfter=7,allowWidows=0,allowOrphans=0),
+    "tiny":ParagraphStyle("BookTiny",fontName="Lato",fontSize=9.6,leading=13.9,textColor=INK,spaceAfter=5),
+    "mono":ParagraphStyle("BookMonotype",fontName="Lato",fontSize=10.1,leading=15,textColor=GREY,spaceAfter=8),
+    "case":ParagraphStyle("BookCase",fontName="NS-Bold",fontSize=14.2,leading=19,textColor=NAVY,spaceAfter=10,spaceBefore=17,keepWithNext=1),
+    "step":ParagraphStyle("BookStep",fontName="Lato-Bold",fontSize=11.2,leading=16.2,textColor=TEAL,spaceAfter=5,spaceBefore=10,keepWithNext=1),
+    "caption":ParagraphStyle("BookCaption",fontName="Lato-Bold",fontSize=10.7,leading=15.5,textColor=TEAL,spaceAfter=7,keepWithNext=1),
+    "option":ParagraphStyle("BookOption",fontName="Lato",fontSize=10.85,leading=16.3,textColor=INK,spaceAfter=7,leftIndent=19,firstLineIndent=-19),
+    "answer":ParagraphStyle("BookAnswer",fontName="NS",fontSize=10.55,leading=16.3,textColor=INK,spaceAfter=8),
+    "contents":ParagraphStyle("BookContents",fontName="NS",fontSize=12.1,leading=20.5,textColor=INK,spaceAfter=6),
+    "callout":ParagraphStyle("BookCallout",fontName="NS",fontSize=10.7,leading=16.5,textColor=INK),
+    "center":ParagraphStyle("BookCenter",fontName="Lato",fontSize=9.8,leading=14,textColor=GREY,alignment=TA_CENTER),
 }
 
 def text(el):
@@ -125,10 +132,10 @@ class BookDoc(BaseDocTemplate):
         canvas.saveState()
         canvas.setStrokeColor(BORDER)
         canvas.line(LEFT,PAGE_H-39,PAGE_W-RIGHT,PAGE_H-39)
-        canvas.setFont("DJ-Bold",8)
+        canvas.setFont("Lato-Bold",8.1)
         canvas.setFillColor(TEAL)
         canvas.drawString(LEFT,PAGE_H-31,"DSM FOUNDATIONS  /  PRINT EDITION")
-        canvas.setFont("DJ",8)
+        canvas.setFont("Lato",8.1)
         canvas.setFillColor(GREY)
         canvas.drawRightString(PAGE_W-RIGHT,PAGE_H-31,"OCTOBER 2026")
         canvas.line(LEFT,42,PAGE_W-RIGHT,42)
