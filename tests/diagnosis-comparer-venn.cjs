@@ -20,11 +20,11 @@ try{
   assert.equal(await page.locator("#venn-two circle").count(),2);
   assert.equal(await page.locator("#c").count(),0,"third diagnosis selector intentionally removed");
   assert.equal(await page.locator("#venn-regions .venn-card").count(),3);
-  assert.equal(await page.locator("#venn-regions .venn-shared li").count(),3,"default ADHD/GAD overlap mapped");
+  assert.equal(await page.locator("#venn-regions .venn-shared li").count(),3,"default OCD/OCPD overlap mapped");
   assert.match(await page.locator("#venn-message").innerText(),/curated comparison/i);
-  assert.match(await page.locator("#venn-svg").getAttribute("aria-label"),/ADHD/);
+  assert.match(await page.locator("#venn-svg").getAttribute("aria-label"),/Obsessive-compulsive/);
 
-  assert.ok((await page.locator("#venn-regions").innerText()).includes("Childhood-onset"),"distinctive feature present");
+  assert.ok((await page.locator("#venn-regions").innerText()).includes("Obsessions"),"distinctive feature present");
   const bbox=await page.evaluate(()=>({doc:document.documentElement.scrollWidth,window:innerWidth,diagram:document.querySelector(".venn-stage").scrollWidth}));
   assert.ok(bbox.doc<=bbox.window+3,"no document overflow at "+width+": "+JSON.stringify(bbox));
   if(width<=390)assert.ok(bbox.diagram>=500,"mobile uses readable scrollable SVG instead of tiny text");
