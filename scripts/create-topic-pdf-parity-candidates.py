@@ -117,7 +117,10 @@ def diagram(c,t,mode):
         c.setStrokeColor(HexColor(LINES));c.setLineWidth(1.6)
         c.line(306,609,306,584);c.line(170,584,444,584)
         link(c,170,584,170,566);link(c,444,584,444,566)
-        line_text(c,204,593,'ASSESS IN PARALLEL - BEGIN BOTH',8.5,True)
+        # A dark central label sits ON the fork, rather than allowing the connector through text.
+        c.setFillColor(HexColor(INK));c.setStrokeColor(HexColor(INK))
+        c.roundRect(200,585,212,21,10,fill=1,stroke=0)
+        line_text(c,222,592,'BOTH ASSESSMENTS START TOGETHER',8.2,True,color='#ffffff')
         # Upper medical/sensory assessments remain visibly aligned.
         c.setFillColor(HexColor('#f8eedb'));c.setStrokeColor(HexColor('#90513f'))
         c.roundRect(L,413,257,151,8,fill=1,stroke=1)
