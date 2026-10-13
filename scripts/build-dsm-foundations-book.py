@@ -413,7 +413,7 @@ def build():
             book.append(P("<b>"+letter+". "+xml_escape(option)+"</b>","small"))
             if feedback:book.append(P(xml_escape(feedback),"answer"))
         book.append(Spacer(1,6))
-    book.append(PageBreak())
+    # Keep brief source notes on the last answer-key sheet when space permits.
     book.append(bookmark(P("Sources and release status","h1"),"sources"))
     book.append(P("Curriculum: Clinical Practice Library, DSM Foundations online interactive course, development review branch, October 2026. Print text, examples, concept-map nodes, questions, feedback and terms are derived from the same source file. This book is an original educational adaptation, not a facsimile of the DSM manual.","body"))
     for label,url in [
