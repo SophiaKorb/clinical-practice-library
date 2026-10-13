@@ -16,6 +16,9 @@ import sys
 from bs4 import BeautifulSoup, Tag
 from reportlab.lib import colors
 from reportlab.lib.enums import TA_LEFT, TA_CENTER
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
+
 from reportlab.lib.pagesizes import letter
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.units import inch
@@ -38,28 +41,32 @@ GOLD=colors.HexColor("#A77D37")
 GREY=colors.HexColor("#546775")
 BORDER=colors.HexColor("#D7E2E2")
 PAGE_W,PAGE_H=letter
+# Unicode-capable installed system fonts are needed for arrows, curly quotes and checkbox glyphs.
+pdfmetrics.registerFont(TTFont("DJ","/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"))
+pdfmetrics.registerFont(TTFont("DJ-Bold","/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"))
+pdfmetrics.registerFontFamily("DJ", normal="DJ", bold="DJ-Bold", italic="DJ", boldItalic="DJ-Bold")
 LEFT=58
 RIGHT=58
 WIDTH=PAGE_W-LEFT-RIGHT
 
 style={
-    "booktitle":ParagraphStyle("BookTitle",fontName="Helvetica-Bold",fontSize=29,leading=36,textColor=NAVY,spaceAfter=14),
-    "covercopy":ParagraphStyle("CoverCopy",fontName="Helvetica",fontSize=13,leading=20,textColor=INK,spaceAfter=14),
-    "h1":ParagraphStyle("BookH1",fontName="Helvetica-Bold",fontSize=20,leading=25,textColor=NAVY,spaceBefore=12,spaceAfter=12,keepWithNext=1),
-    "h2":ParagraphStyle("BookH2",fontName="Helvetica-Bold",fontSize=12.5,leading=17,textColor=TEAL,spaceBefore=12,spaceAfter=6,keepWithNext=1),
-    "h3":ParagraphStyle("BookH3",fontName="Helvetica-Bold",fontSize=10.5,leading=14.5,textColor=NAVY,spaceBefore=9,spaceAfter=5,keepWithNext=1),
-    "body":ParagraphStyle("BookBody",fontName="Helvetica",fontSize=10.2,leading=15.7,textColor=INK,spaceAfter=8,allowWidows=0,allowOrphans=0),
-    "small":ParagraphStyle("BookSmall",fontName="Helvetica",fontSize=9.35,leading=13.8,textColor=INK,spaceAfter=5,allowWidows=0,allowOrphans=0),
-    "tiny":ParagraphStyle("BookTiny",fontName="Helvetica",fontSize=8.9,leading=12.6,textColor=INK,spaceAfter=3),
-    "mono":ParagraphStyle("BookMonotype",fontName="Helvetica",fontSize=9.3,leading=13.3,textColor=GREY,spaceAfter=6),
-    "case":ParagraphStyle("BookCase",fontName="Helvetica-Bold",fontSize=12,leading=16,textColor=NAVY,spaceBefore=13,spaceAfter=8,keepWithNext=1),
-    "step":ParagraphStyle("BookStep",fontName="Helvetica-Bold",fontSize=9.6,leading=14,textColor=TEAL,spaceBefore=6,spaceAfter=3,keepWithNext=1),
-    "caption":ParagraphStyle("BookCaption",fontName="Helvetica-Bold",fontSize=10,leading=14,textColor=TEAL,spaceAfter=5,keepWithNext=1),
-    "option":ParagraphStyle("BookOption",fontName="Helvetica",fontSize=9.5,leading=13.5,textColor=INK,leftIndent=15,firstLineIndent=-15,spaceAfter=5),
-    "answer":ParagraphStyle("BookAnswer",fontName="Helvetica",fontSize=9.6,leading=14,textColor=INK,spaceAfter=6),
-    "contents":ParagraphStyle("BookContents",fontName="Helvetica",fontSize=11,leading=19,textColor=INK,spaceAfter=6),
-    "callout":ParagraphStyle("BookCallout",fontName="Helvetica",fontSize=9.8,leading=14.8,textColor=INK),
-    "center":ParagraphStyle("BookCenter",fontName="Helvetica",fontSize=9.7,leading=14,textColor=GREY,alignment=TA_CENTER),
+    "booktitle":ParagraphStyle("BookTitle",fontName="DJ-Bold",fontSize=29,leading=36,textColor=NAVY,spaceAfter=14),
+    "covercopy":ParagraphStyle("CoverCopy",fontName="DJ",fontSize=13,leading=20,textColor=INK,spaceAfter=14),
+    "h1":ParagraphStyle("BookH1",fontName="DJ-Bold",fontSize=20,leading=25,textColor=NAVY,spaceBefore=12,spaceAfter=12,keepWithNext=1),
+    "h2":ParagraphStyle("BookH2",fontName="DJ-Bold",fontSize=12.5,leading=17,textColor=TEAL,spaceBefore=12,spaceAfter=6,keepWithNext=1),
+    "h3":ParagraphStyle("BookH3",fontName="DJ-Bold",fontSize=10.5,leading=14.5,textColor=NAVY,spaceBefore=9,spaceAfter=5,keepWithNext=1),
+    "body":ParagraphStyle("BookBody",fontName="DJ",fontSize=10.2,leading=15.7,textColor=INK,spaceAfter=8,allowWidows=0,allowOrphans=0),
+    "small":ParagraphStyle("BookSmall",fontName="DJ",fontSize=9.35,leading=13.8,textColor=INK,spaceAfter=5,allowWidows=0,allowOrphans=0),
+    "tiny":ParagraphStyle("BookTiny",fontName="DJ",fontSize=8.9,leading=12.6,textColor=INK,spaceAfter=3),
+    "mono":ParagraphStyle("BookMonotype",fontName="DJ",fontSize=9.3,leading=13.3,textColor=GREY,spaceAfter=6),
+    "case":ParagraphStyle("BookCase",fontName="DJ-Bold",fontSize=12,leading=16,textColor=NAVY,spaceBefore=13,spaceAfter=8,keepWithNext=1),
+    "step":ParagraphStyle("BookStep",fontName="DJ-Bold",fontSize=9.6,leading=14,textColor=TEAL,spaceBefore=6,spaceAfter=3,keepWithNext=1),
+    "caption":ParagraphStyle("BookCaption",fontName="DJ-Bold",fontSize=10,leading=14,textColor=TEAL,spaceAfter=5,keepWithNext=1),
+    "option":ParagraphStyle("BookOption",fontName="DJ",fontSize=9.5,leading=13.5,textColor=INK,leftIndent=15,firstLineIndent=-15,spaceAfter=5),
+    "answer":ParagraphStyle("BookAnswer",fontName="DJ",fontSize=9.6,leading=14,textColor=INK,spaceAfter=6),
+    "contents":ParagraphStyle("BookContents",fontName="DJ",fontSize=11,leading=19,textColor=INK,spaceAfter=6),
+    "callout":ParagraphStyle("BookCallout",fontName="DJ",fontSize=9.8,leading=14.8,textColor=INK),
+    "center":ParagraphStyle("BookCenter",fontName="DJ",fontSize=9.7,leading=14,textColor=GREY,alignment=TA_CENTER),
 }
 
 def text(el):
@@ -117,10 +124,10 @@ class BookDoc(BaseDocTemplate):
         canvas.saveState()
         canvas.setStrokeColor(BORDER)
         canvas.line(LEFT,PAGE_H-39,PAGE_W-RIGHT,PAGE_H-39)
-        canvas.setFont("Helvetica-Bold",8)
+        canvas.setFont("DJ-Bold",8)
         canvas.setFillColor(TEAL)
         canvas.drawString(LEFT,PAGE_H-31,"DSM FOUNDATIONS  /  COMPLETE PRINT REVIEW")
-        canvas.setFont("Helvetica",8)
+        canvas.setFont("DJ",8)
         canvas.setFillColor(GREY)
         canvas.drawRightString(PAGE_W-RIGHT,PAGE_H-31,"OCTOBER 2026")
         canvas.line(LEFT,42,PAGE_W-RIGHT,42)
