@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Learn to compare two or three diagnoses across core patterns, longitudinal course, clinical questions and caveats.">
+<meta name="description" content="Learn to compare two diagnoses across core patterns, longitudinal course, clinical questions and caveats.">
 <title>Diagnosis Comparer | DSM Foundations</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <style>
@@ -13,7 +13,7 @@ header nav{display:flex;flex-wrap:wrap;gap:20px;font-weight:700}h1,h2{font-famil
 .surface{background:#fff;border:1px solid var(--line);border-radius:17px;margin:20px 0;padding:22px;box-shadow:0 2px 13px #132c1e0a}
 .pills{display:flex;gap:9px;flex-wrap:wrap;margin:12px 0 20px}.pills button{border:1px solid #a7c6b5;border-radius:90px;padding:9px 12px;min-height:44px;background:#f3faf5;color:#245248;cursor:pointer;font:700 .89rem/1.35 system-ui;text-align:left}
 .pills button:hover,.pills button[aria-pressed=true]{background:#dcefe3;border-color:#386954}
-.choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.choices label{display:block;font-size:.82rem;font-weight:800;margin-bottom:6px}.choices select{width:100%;border:1px solid #85a095;border-radius:9px;background:white;padding:10px;min-height:46px;font:inherit;color:var(--ink)}
+.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.choices label{display:block;font-size:.82rem;font-weight:800;margin-bottom:6px}.choices select{width:100%;border:1px solid #85a095;border-radius:9px;background:white;padding:10px;min-height:46px;font:inherit;color:var(--ink)}
 .small{font-size:.86rem;color:var(--muted)}#insight{background:var(--soft);border:1px solid #c7ddcc;border-radius:12px;padding:17px;margin-bottom:17px}#insight p{margin:5px 0 0}
 .scroller{overflow-x:auto;scrollbar-color:#76978c #e7f0e9}table{border-collapse:separate;border-spacing:0;width:100%;min-width:680px;border:1px solid var(--line);border-radius:9px;overflow:hidden}caption{text-align:left;padding-bottom:11px;font-weight:750}
 th,td{padding:13px 15px;text-align:left;vertical-align:top;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}tr>*:last-child{border-right:0}tbody tr:last-child>*{border-bottom:0}thead th{background:var(--deep);color:white}thead th:first-child{background:#143b34;width:17%}tbody th{background:#eaf3ed;width:17%;font-size:.91rem}tbody tr:nth-child(even) td{background:#fcfdfc}
@@ -55,31 +55,27 @@ footer{padding:5px 0 42px;font-size:.83rem;color:var(--muted)}
 
 <header><div class="wrap"><strong>DSM Foundations · Companion tool</strong><nav aria-label="Navigation"><a href="/resources/training/dsm-from-zero.html">DSM beginner course</a><a href="/resources/index.html">Clinical Practice Library</a></nav></div></header>
 <main class="wrap" id="main">
-<section class="hero"><p class="eyebrow">Educational prototype · 2026</p><h1>Diagnosis Comparer</h1><p class="intro">Place two or three diagnoses side by side to see what overlaps—and what you should ask next to distinguish them.</p><p class="small">No diagnostic scoring, probabilities, personal data entry or 3D symptom map. This is a teaching aid, not a diagnostic instrument.</p></section>
-<section class="surface" aria-labelledby="choose-title"><h2 id="choose-title">Choose diagnoses</h2><h3>Common differentials</h3><div id="presets" class="pills" role="group" aria-label="Suggested pairs"></div>
-<div class="choices"><div><label for="a">First diagnosis</label><select id="a"></select></div><div><label for="b">Second diagnosis</label><select id="b"></select></div><div><label for="c">Optional third diagnosis</label><select id="c"></select></div></div><p id="status" class="small" role="status" aria-live="polite"></p></section>
+<section class="hero"><p class="eyebrow">Educational prototype · 2026</p><h1>Diagnosis Comparer</h1><p class="intro">Place two diagnoses side by side to see what overlaps—and what you should ask next to distinguish them.</p><p class="small">No diagnostic scoring, probabilities, personal data entry or 3D symptom map. This is a teaching aid, not a diagnostic instrument.</p></section>
+<section class="surface" aria-labelledby="choose-title"><h2 id="choose-title">Choose diagnoses</h2><h3>Common differentials — including OCD vs OCPD</h3><div id="presets" class="pills" role="group" aria-label="Suggested pairs"></div>
+<div class="choices"><div><label for="a">First diagnosis</label><select id="a"></select></div><div><label for="b">Second diagnosis</label><select id="b"></select></div></div><p id="status" class="small" role="status" aria-live="polite"></p></section>
 <section class="surface" id="venn-section" aria-labelledby="venn-title">
 <div class="venn-head"><h2 id="venn-title">Where do these diagnoses overlap?</h2><p class="small">Visual differential · updates with your selections</p></div>
 <p class="venn-intro">The circles represent <strong>features worth comparing</strong>, not the proportion of people with each condition. Shared symptoms are not the same as shared diagnoses, and the areas are <strong>not to scale</strong>.</p>
 <p class="small mobile-hint">On a phone, swipe the diagram sideways as needed. Every teaching point also appears in the text cards below.</p>
 <div class="venn-stage">
 <svg id="venn-svg" viewBox="0 0 600 365" role="img" aria-labelledby="venn-svg-title venn-svg-desc">
-<title id="venn-svg-title">Selected diagnosis overlap illustration</title><desc id="venn-svg-desc">Two or three overlapping circles and a separate text description below. Diagram is conceptual, not a measure of diagnostic similarity, symptom prevalence or comorbidity.</desc>
+<title id="venn-svg-title">Selected diagnosis overlap illustration</title><desc id="venn-svg-desc">Two overlapping circles and a separate text description below. Diagram is conceptual, not a measure of diagnostic similarity, symptom prevalence or comorbidity.</desc>
 <g id="venn-two">
 <circle class="circle-a" cx="228" cy="180" r="150"/><circle class="circle-b" cx="372" cy="180" r="150"/>
 <text class="venn-label" id="venn-two-a" x="153" y="180"></text><text class="venn-label" id="venn-two-b" x="447" y="180"></text>
 <text class="venn-center" x="300" y="180"><tspan x="300" dy="-7">Possible</tspan><tspan x="300" dy="20">overlap</tspan></text></g>
-<g id="venn-three" style="display:none">
-<circle class="circle-a" cx="245" cy="145" r="130"/><circle class="circle-b" cx="355" cy="145" r="130"/><circle class="circle-c" cx="300" cy="242" r="130"/>
-<text class="venn-label" id="venn-three-a" x="151" y="111"></text><text class="venn-label" id="venn-three-b" x="449" y="111"></text><text class="venn-label" id="venn-three-c" x="300" y="319"></text>
-<text class="venn-center" x="300" y="174"><tspan x="300">Assess</tspan><tspan x="300" dy="18">overlap</tspan></text></g>
 </svg>
 <div id="venn-legend" class="venn-legend" aria-label="Circle labels"></div>
 </div>
 <div id="venn-message" class="venn-status" role="status" aria-live="polite"></div>
 <div id="venn-regions" class="venn-grid" aria-label="Selected diagnoses: distinctive and overlapping features"></div>
 <div id="venn-pairwise" class="venn-pair-details" aria-label="Pairwise learning prompts"></div>
-<p class="small">"More characteristic" does <strong>not</strong> mean exclusive to that disorder. Features can co-occur, have different causes, or be absent in some presentations. For three diagnoses, the center is a question to investigate—not an assertion that a common symptom is required or present in all three.</p>
+<p class="small">"More characteristic" does <strong>not</strong> mean exclusive to that disorder. Features can co-occur, have different causes, or be absent in some presentations. The drawn intersection is a teaching prompt, not a claim that symptoms must be shared.</p>
 </section>
 <section class="surface" aria-labelledby="compare-title"><h2 id="compare-title">Compare the clinical patterns</h2><div id="insight" aria-live="polite"></div><p class="small mobile-hint">On phones, swipe the table sideways to read additional columns.</p>
 <div class="scroller" role="region" tabindex="0" aria-label="Comparison table, horizontally scrollable"><table><caption>Selected diagnoses — educational side-by-side view</caption><thead id="thead"></thead><tbody id="tbody"></tbody></table></div>
@@ -118,8 +114,7 @@ function overlapCard(title,items){
 function renderVenn(ids,valid){
  const regions=document.getElementById("venn-regions"),legend=document.getElementById("venn-legend"),pairwise=document.getElementById("venn-pairwise"),message=document.getElementById("venn-message");
  regions.replaceChildren();legend.replaceChildren();pairwise.replaceChildren();
- document.getElementById("venn-two").style.display=ids.length===3?"none":"";
- document.getElementById("venn-three").style.display=ids.length===3?"":"none";
+ document.getElementById("venn-two").style.display="";
  document.getElementById("venn-svg").setAttribute("aria-label",ids.map(id=>byId[id].name).join(", ")+". Conceptual overlap, not a diagnostic similarity measure.");
  if(!valid){message.textContent="Choose distinct diagnoses to show a meaningful diagram.";return;}
  ids.forEach((id,i)=>{const span=document.createElement("span");span.className="legend-"+("abc"[i]);const swatch=document.createElement("i");swatch.setAttribute("aria-hidden","true");span.append(swatch,document.createTextNode(byId[id].name));legend.append(span);});
@@ -137,24 +132,13 @@ function renderVenn(ids,valid){
   }
   regions.append(regionCard("More characteristic: "+byId[ids[1]].name,points[1]));
   if(found){const article=document.createElement("article");article.append(element("strong","Ask next"),element("p",found.probe));pairwise.append(article);}
- }else{
-  for(let i=0;i<3;i++)setSvgLabel("venn-three-"+("abc"[i]),ids[i]);
-  ids.forEach(id=>regions.append(regionCard("Focus: "+byId[id].name,vennFocus[id],"venn-third")));
-  message.textContent="Three-way view: three diagnostic patterns. The central region does not assert that a symptom is shared by all three.";
-  for(let i=0;i<3;i++)for(let j=i+1;j<3;j++){
-   const a=ids[i],b=ids[j],p=vennPairs.get([a,b].sort().join("|"));
-   const art=document.createElement("article");
-   art.append(element("strong",byId[a].name+" + "+byId[b].name));
-   art.append(element("p",p?"Possible shared features: "+p.shared.join("; ")+". "+p.probe:"No curated pairwise overlap for this combination. Use the comparison table to investigate."));
-   pairwise.append(art);
-  }
- }
+
 }
 
-const inputs=["a","b","c"].map(id=>document.getElementById(id));
+const inputs=["a","b"].map(id=>document.getElementById(id));
 const pbox=document.getElementById("presets");
-inputs.forEach((el,i)=>{if(i===2)el.add(new Option("None — compare two",""));for(const d of diagnoses)el.add(new Option(d.name,d.id));});
-inputs[0].value="adhd";inputs[1].value="gad";inputs[2].value="";
+inputs.forEach(el=>{for(const d of diagnoses)el.add(new Option(d.name,d.id));});
+inputs[0].value="ocd";inputs[1].value="ocpd";
 function element(tag,text,scope){const e=document.createElement(tag);e.textContent=text;if(scope)e.scope=scope;return e;}
 function render(){const ids=inputs.map(x=>x.value).filter(Boolean);const unique=new Set(ids).size===ids.length;
 document.getElementById("status").textContent=unique?"Comparing "+ids.length+" distinct diagnoses.":"Duplicate selections: choose a different diagnosis for each column.";
@@ -166,6 +150,6 @@ const pair=ids.length===2?presetsData.find(x=>ids.includes(x.a)&&ids.includes(x.
 const insight=document.getElementById("insight");insight.replaceChildren(element("h3",pair?pair.title:"Compare course, context and impact"),element("p",pair?pair.description:"Shared words in these summaries are prompts to investigate, not diagnostic similarity scores. Compare developmental history, episodes, triggers, baseline functioning, and alternative explanations."));
 pbox.querySelectorAll("button").forEach(btn=>btn.setAttribute("aria-pressed",String(!!pair&&btn.dataset.key===pair.a+"|"+pair.b)));
 }
-for(const p of presetsData){const b=document.createElement("button");b.type="button";b.dataset.key=p.a+"|"+p.b;b.textContent=byId[p.a].name+" vs "+byId[p.b].name;b.addEventListener("click",()=>{inputs[0].value=p.a;inputs[1].value=p.b;inputs[2].value="";render();document.getElementById("compare-title").scrollIntoView({block:"start",behavior:"smooth"});});pbox.append(b);}
+for(const p of presetsData){const b=document.createElement("button");b.type="button";b.dataset.key=p.a+"|"+p.b;b.textContent=byId[p.a].name+" vs "+byId[p.b].name;b.addEventListener("click",()=>{inputs[0].value=p.a;inputs[1].value=p.b;render();document.getElementById("compare-title").scrollIntoView({block:"start",behavior:"smooth"});});pbox.append(b);}
 inputs.forEach(x=>x.addEventListener("change",render));document.getElementById("print").addEventListener("click",()=>window.print());render();
 </script></body></html>
