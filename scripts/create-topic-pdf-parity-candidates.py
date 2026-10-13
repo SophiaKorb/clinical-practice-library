@@ -109,31 +109,38 @@ def diagram(c,t,mode):
                'Monitor wellbeing and safety; reinforce expectations and healthier ways to interact.'),
             L,368,W,52,4,'gate')
     elif mode=='parallel-assess':
-        # Both begin together. Medical instability never waits for a completed formulation.
-        box(c,('Reported eating or intake difficulty',
-               'Changes in intake, physical health, access and everyday participation.'),
-            L,658,W,48,0,'gate')
-        line_text(c,197,586,'START BOTH TRACKS TOGETHER - NOT IN SEQUENCE',8,True)
-        c.setStrokeColor(HexColor(LINES));c.setLineWidth(1.5)
-        c.line(306,610,306,597);c.line(170,597,444,597)
-        link(c,170,597,170,574);link(c,444,597,444,574)
-        box(c,('TRACK A - Medical & nutritional safety',
-               'Assess stability, nutrition, physical symptoms and medical contributors.'),
-            L,571,257,86,1,'branch',border='#90513f')
-        box(c,('TRACK B - Psychological, sensory & access',
-               'Explore fear, eating concerns, sensory experience, food access and the person\'s account.'),
-            L+283,571,257,86,2,'branch',border='#416487')
-        link(c,170,485,170,475);link(c,444,485,444,475)
-        box(c,('URGENT SIGNS? ACT NOW.',
-               'Fainting, dehydration, chest symptoms, severe weakness or rapid decline: arrange timely medical care; do not wait for Track B.'),
-            L,470,257,76,3,'branch',border='#9e533b')
-        box(c,('Both tracks continue as appropriate',
-               'A medical decision does not depend on completing the psychological/sensory explanation.'),
-            L+283,470,257,76,4,'branch')
-        link(c,170,394,170,387);link(c,444,394,444,387)
-        box(c,('ONE coordinated plan and ongoing review',
-               'Agree responsibilities, medical monitoring, specialist supports and access; recheck stability AND participation.'),
-            L,384,W,48,0,'gate')
+        # One fork, two parallel lanes, with urgent medical action INSIDE the medical lane.
+        # Urgent intervention is not a sequential step needed before coordinating care.
+        box(c,('Eating or intake difficulty',
+               'Notice physical changes, eating, access and daily participation; do not infer risk from body size.'),
+            L,658,W,49,0,'gate')
+        c.setStrokeColor(HexColor(LINES));c.setLineWidth(1.6)
+        c.line(306,609,306,584);c.line(170,584,444,584)
+        link(c,170,584,170,566);link(c,444,584,444,566)
+        line_text(c,204,593,'ASSESS IN PARALLEL - BEGIN BOTH',8.5,True)
+        # Upper medical/sensory assessments remain visibly aligned.
+        c.setFillColor(HexColor('#f8eedb'));c.setStrokeColor(HexColor('#90513f'))
+        c.roundRect(L,413,257,151,8,fill=1,stroke=1)
+        line_text(c,47,548,'MEDICAL / NUTRITIONAL SAFETY',9,True)
+        wrapped(c,'Check stability, nutrition and physical symptoms with qualified care.',
+                47,532,234,size=8,leading=11,max_lines=4)
+        c.setFillColor(HexColor('#fff7f3'));c.setStrokeColor(HexColor('#ab593d'))
+        c.setLineWidth(2.1);c.roundRect(47,425,235,76,6,fill=1,stroke=1)
+        line_text(c,58,483,'URGENT CONCERN? ACT NOW',8.8,True)
+        wrapped(c,'Fainting, dehydration, chest symptoms, severe weakness or rapid decline: prompt/urgent care as indicated. Do not wait.',
+                58,469,212,size=7.5,leading=10,max_lines=4)
+        c.setFillColor(HexColor('#e9edf8'));c.setStrokeColor(HexColor('#416487'))
+        c.setLineWidth(1.5);c.roundRect(L+283,413,257,151,8,fill=1,stroke=1)
+        line_text(c,330,548,'PSYCHOLOGICAL / SENSORY / ACCESS',8.5,True)
+        wrapped(c,"Explore eating-disorder concerns, fear, sensory differences, swallowing difficulty, food access, culture and the person's experience. This does NOT delay medical care.",
+                330,531,234,size=8.2,leading=11,max_lines=9)
+        # Both assessments contribute as information arrives, rather than both having to finish.
+        link(c,170,413,170,400);link(c,444,413,444,400)
+        c.setStrokeColor(HexColor(LINES));c.setLineWidth(1.4)
+        c.line(170,400,444,400);link(c,306,400,306,388)
+        box(c,('ONE SHARED PLAN - review as findings arrive',
+               'Coordinate medical follow-up, specialist care and chosen supports; monitor safety AND participation.'),
+            L,384,W,55,4,'gate')
     elif mode in ('access-tracks','abc-tracks'):
         small_label(c,'CONCURRENT ACCESS CHANNELS' if mode=='access-tracks' else 'DESCRIBE OBSERVATIONS FIRST',L,651)
         for i,item in enumerate(d[:3]):box(c,item,L+i*184,640,172,91,i,'branch')
