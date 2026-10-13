@@ -47,3 +47,38 @@
 .clinical-map.attention-split li:nth-child(3){grid-column:1/-1;border-left:6px solid #336a76;border-right:6px solid #336a76}
 @media(max-width:850px){.clinical-map.context-budget,.clinical-map.attention-split{grid-template-columns:1fr}.clinical-map.context-budget li,.clinical-map.attention-split li{grid-column:1/-1!important}}
 @media print{.clinical-map.context-budget,.clinical-map.attention-split{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.clinical-map.context-budget li,.clinical-map.attention-split li{grid-column:span 1!important}.clinical-map.context-budget li:nth-child(5),.clinical-map.attention-split li:nth-child(3){grid-column:1/-1!important}}
+
+
+/* Sibling safeguarding flow: adult duty governs both routes, never a third option. */
+.sibling-safety-flow{margin:24px 0;display:grid;gap:0;max-width:1050px}
+.sibling-safety-flow section{min-width:0;border:2px solid #45645d;border-radius:13px;padding:16px 18px;background:#fff}
+.sibling-safety-flow h3{margin:0 0 6px;font-size:1.15rem}
+.sibling-safety-flow p{margin:4px 0 0}
+.sibling-adult-duty{background:#eee8df!important;text-align:center}
+.sibling-adult-duty:after{content:"↓";display:block;font-size:1.4rem;line-height:1;margin-bottom:-36px;position:relative;top:23px}
+.sibling-safety-branches{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:24px}
+.sibling-safety-branches>section{position:relative}
+.sibling-safety-branches>section:before{content:"↓";position:absolute;top:-28px;left:50%;font-size:1.4rem;line-height:1}
+.sibling-unsafe{background:#f8eae3!important;border-color:#90513f!important}
+.sibling-safe{background:#e9f2ec!important;border-color:#366455!important}
+.sibling-safety-flow ol{padding:0;margin:14px 0 0;list-style:none;display:grid;gap:8px}
+.sibling-safety-flow li{background:#ffffffcf;border:1px solid #9eaea8;border-radius:6px;padding:9px 11px}
+.sibling-safety-flow li strong{font-weight:750}
+.sibling-ongoing{background:#e8eef4!important;text-align:center;margin-top:24px;position:relative}
+.sibling-ongoing:before{content:"↓";position:absolute;top:-30px;left:50%;font-size:1.4rem}
+@media(max-width:740px){
+ .sibling-safety-branches{grid-template-columns:1fr;gap:18px}
+ .sibling-adult-duty:after{display:none}
+ .sibling-safety-branches>section:before{display:none}
+ .sibling-safety-branches>section:first-child:before{display:block}
+}
+@media print{
+ .sibling-safety-flow{gap:0}
+ .sibling-safety-branches{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .sibling-safety-flow section{padding:10px;break-inside:avoid}
+ .sibling-safety-flow ol{gap:5px}
+ .sibling-safety-flow li{padding:6px;font-size:.83rem;line-height:1.3;break-inside:avoid}
+ .sibling-safety-flow h3{font-size:1rem}
+ .sibling-safety-flow p{font-size:.85rem}
+ .sibling-safety-branches>section:before{display:none}
+}
