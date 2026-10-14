@@ -23,6 +23,7 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.lib.pagesizes import letter
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.units import inch
+from reportlab.lib.utils import simpleSplit
 from reportlab.platypus import (
     BaseDocTemplate, PageTemplate, Frame, PageBreak, NextPageTemplate, Flowable,
     Paragraph, Spacer, Table, TableStyle, KeepTogether, HRFlowable
@@ -98,6 +99,9 @@ style={
     "contents":ParagraphStyle("BookContents",fontName="NS",fontSize=12.1,leading=20.5,textColor=INK,spaceAfter=6),
     "callout":ParagraphStyle("BookCallout",fontName="NS",fontSize=10.7,leading=16.5,textColor=INK),
     "center":ParagraphStyle("BookCenter",fontName="Lato",fontSize=9.8,leading=14,textColor=GREY,alignment=TA_CENTER),
+    "mapbody":ParagraphStyle("BookMapBody",fontName="NS",fontSize=11.7,leading=18.3,textColor=INK,spaceAfter=7),
+    "maplink":ParagraphStyle("BookMapLink",fontName="Lato-Bold",fontSize=11.6,leading=16.8,textColor=INK,alignment=TA_CENTER,spaceAfter=8),
+    "maptitle":ParagraphStyle("BookMapTitle",fontName="LB-Bold",fontSize=12.6,leading=18.4,textColor=NAVY,spaceAfter=6,keepWithNext=1),
 }
 
 def text(el):
@@ -196,15 +200,19 @@ class ConnectorArrow(Flowable):
         super().__init__()
         self.label=label
         self.width=WIDTH
-        self.height=42 if label else 29
+        self.height=59 if label else 29
+        self.lines=[]
     def wrap(self,availWidth,availHeight):
         self.width=min(WIDTH,availWidth)
+        if self.label:
+            self.lines=simpleSplit(self.label,"Lato-Bold",11.7,self.width-52)
+            self.height=59+14.5*(len(self.lines)-1)
         return self.width,self.height
     def draw(self):
         c=self.canv
         middle=self.width/2
         stemtop=self.height-5
-        tip=17 if self.label else 6
+        tip=(25+14.5*(len(self.lines)-1)) if self.label else 6
         c.setStrokeColor(TEAL)
         c.setFillColor(TEAL)
         c.setLineWidth(3.2)
@@ -217,12 +225,10 @@ class ConnectorArrow(Flowable):
         p.close()
         c.drawPath(p,fill=1,stroke=0)
         if self.label:
-            c.setFont("Lato-Bold",9.1)
-            c.setFillColor(GREY)
-            caption=self.label
-            if pdfmetrics.stringWidth(caption,"Lato-Bold",9.1)>self.width-40:
-                caption=caption[:76].rstrip()+"…"
-            c.drawCentredString(middle,3,caption)
+            c.setFont("Lato-Bold",11.7)
+            c.setFillColor(INK)
+            for idx,caption in enumerate(reversed(self.lines)):
+                c.drawCentredString(middle,8+14.5*idx,caption)
 
 
 def add_concept_map(fig,story):
@@ -242,8 +248,8 @@ def add_concept_map(fig,story):
         explanation=node.find("span",recursive=False)
         if explanation is None:explanation=node.find("p",recursive=False)
         title=markup(label) if label else xml_escape(text(node))
-        body=[P(title,"h3")]
-        if explanation:body.append(P(markup(explanation),"small"))
+        body=[P(title,"maptitle")]
+        if explanation:body.append(P(markup(explanation),"mapbody"))
         story.append(box(body,PALE if branch else SEA,pad=11))
 
     for block in structure.find_all(recursive=False):
@@ -263,7 +269,7 @@ def add_concept_map(fig,story):
         elif "person-map-heading" in classes:
             story.append(box([P(xml_escape(text(block)),"small")],SEA,pad=11))
         elif "relation-link" in classes:
-            story.append(P(xml_escape(text(block)),"center"))
+            story.append(P(xml_escape(text(block)),"maplink"))
     for cls in ("relation-safety","relation-loop"):
         special=fig.select_one("."+cls)
         if special:
@@ -401,15 +407,13 @@ def add_question(q,num,story,keys):
     question=text(stem)
     options=q.select("button[data-answer]")
     multi=q.has_attr("data-multi")
-    kind="Select every supported answer." if multi else "Select the most supported answer."
     story.append(bookmark(P(f"{num:02d}. "+xml_escape(question),"h3"),f"q-{num}",1))
-    story.append(P(kind,"mono"))
+    if multi:story.append(P("SELECT ALL THAT APPLY","mono"))
     answers=[]
     for i,op in enumerate(options):
         letter=chr(65+i)
         story.append(P(f"□  {letter}. "+markup(op),"option"))
         if op.get("data-answer")=="yes":answers.append((letter,text(op),op.get("data-feedback","")))
-    story.append(P("Reasoning / evidence / next assessment question:","mono"))
     story.append(Spacer(1,8))
     # Writing area is genuinely provided for learners, not a browser print of hidden answers.
     for i in range(2):
@@ -497,7 +501,7 @@ def build():
             book.append(HRFlowable(width="100%",thickness=.4,color=BORDER,spaceBefore=8,spaceAfter=11))
     book.append(PageBreak())
     book.append(bookmark(P("Written and multiple-choice practice","h1"),"practice"))
-    book.append(P("Questions below are reproduced from the canonical interactive course. Choose an answer or answers and write why. The response area lets learners articulate both the evidence and an appropriate next question. Keep the key separate until finished.","body"))
+    book.append(P("Choose the most supported answer for each question. For items marked <b>SELECT ALL THAT APPLY</b>, more than one option may be correct. Use the lines under each question to record your reasoning, evidence and any further assessment questions. The answer key follows separately.","body"))
     keys=[]
     previous=None
     for n,(chapter,q) in enumerate(questions,1):
@@ -509,8 +513,8 @@ def build():
     book.append(bookmark(P("Separate instructor answer key","h1"),"key"))
     book.append(P("These are teaching explanations, not automated clinical determinations. Multiple interpretations can remain plausible; focus on the evidence described in the stem, diagnostic restraint, safety and appropriate next steps.","body"))
     for a in keys:
-        book.append(P(f"{a['number']:02d}.  "+xml_escape(a["stem"]),"h3"))
-        book.append(P(("Correct selections: " if a["multi"] else "Best selection: ")+", ".join(x[0] for x in a["correct"]),"small"))
+        letters=", ".join(x[0] for x in a["correct"])
+        book.append(P(f"{a['number']:02d}.  "+("Answers: " if a["multi"] else "Answer: ")+letters,"h3"))
         for letter,option,feedback in a["correct"]:
             book.append(P("<b>"+letter+". "+xml_escape(option)+"</b>","small"))
             if feedback:book.append(P(xml_escape(feedback),"answer"))
