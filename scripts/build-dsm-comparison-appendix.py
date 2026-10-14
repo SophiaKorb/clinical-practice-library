@@ -26,7 +26,7 @@ PAIRS=json.loads((ROOT/"scripts/data/dsm-comparison-atlas-pairs.json").read_text
 MAIN=BUILD/"dsm-foundations-complete-review-book.pdf"
 OUT=BUILD/"dsm-foundations-complete-with-comparison-atlas.pdf"
 SINGLE=BUILD/"dsm-comparison-atlas-standalone-review.pdf"
-APPENDIX=BUILD/"dsm-comparison-atlas-appendix-c.pdf"
+APPENDIX=BUILD/"dsm-comparison-atlas-appendix-a.pdf"
 INK=HexColor("#272526")
 WINE=HexColor("#6b283b")
 MUTED=HexColor("#595151")
@@ -58,7 +58,7 @@ def draw_atlas(output:Path,offset:int,appendix:bool):
     Circle area is conceptual, not symptom prevalence or diagnostic probability.
     """
     c=canvas.Canvas(str(output),pagesize=(W,H),pageCompression=1)
-    c.setTitle("DSM Foundations — Appendix C Diagnostic Comparison Atlas" if appendix else "DSM Diagnostic Comparison Atlas — Standalone Review")
+    c.setTitle("DSM Foundations — Appendix A Diagnostic Comparison Atlas" if appendix else "DSM Diagnostic Comparison Atlas — Standalone Review")
     c.setAuthor("Sophia Korb Cohon, PhD")
     c.setSubject("Educational differential diagnosis; specialist clinical review still required")
     def rule(x1,y,x2,color=LINE,width=.8):
@@ -89,7 +89,7 @@ def draw_atlas(output:Path,offset:int,appendix:bool):
             text(part,48,y-27*i,"DisplayBold",22.8)
         return y-27*(len(pieces)-1)-26
     def footer(kicker,num):
-        label("DSM FOUNDATIONS / APPENDIX C" if appendix else "DSM FOUNDATIONS",48,750,9.2)
+        label("DSM FOUNDATIONS / APPENDIX A" if appendix else "DSM FOUNDATIONS",48,750,9.2)
         c.setFont("Sans",8.5);c.setFillColor(MUTED)
         c.drawRightString(564,750,"DIAGNOSTIC COMPARISON ATLAS")
         rule(48,735,564,WINE,1.15)
@@ -141,7 +141,7 @@ def draw_atlas(output:Path,offset:int,appendix:bool):
 
     # Front divider and reference index. Name is intentionally not repeated.
     footer("COMPANION REFERENCE / OCTOBER 2026" if appendix else "PRINT REVIEW / OCTOBER 2026",1)
-    if appendix:label("APPENDIX C",48,687,10.5)
+    if appendix:label("APPENDIX A",48,687,10.5)
     text("Diagnostic",48,629,"DisplayBold",39)
     text("Comparison Atlas",48,583,"DisplayBold",34)
     rule(48,560,149,WINE,2.5)
@@ -262,12 +262,13 @@ def set_numbered_contents(page, entries):
         name,page_no=matches[0]
         chapter_rows.append((name.replace("CHAPTER ","",1).replace(" / ","  ",1),page_no))
     prefixes=[
-        ("Appendix A /", "Appendix A / Full vocabulary"),
-        ("Appendix B /", "Appendix B / Assessment worksheet"),
+        ("Appendix A —", "Appendix A / Diagnostic Comparison Atlas"),
+        ("Appendix B /", "Appendix B / Full vocabulary"),
+        ("Appendix C /", "Appendix C / Assessment worksheet"),
         ("Written and multiple-choice practice", "Practice questions 1-80"),
         ("Separate instructor answer key", "Instructor answer key"),
         ("References and credits", "References and credits"),
-        ("Appendix C —", "Appendix C / Diagnostic Comparison Atlas"),
+
     ]
     section_rows=[]
     for source_prefix,title in prefixes:
@@ -334,73 +335,151 @@ def set_numbered_contents(page, entries):
     return all_rows
 
 def combine():
+    """Build the book in reading order: lessons, Atlas A, glossary B, worksheet C."""
     original=fitz.open(MAIN)
     assert len(PAIRS)==10
     n=len(original)
     assert n>=80
+    old_outline=original.get_toc()
+    original_bookmark_count=len(old_outline)
+    # Number of pages before the glossary. Insert Appendix A immediately here.
+    glossary_hits=[page for depth,title,page in old_outline
+                  if depth==1 and title.startswith("Appendix B / Full vocabulary")]
+    worksheet_hits=[page for depth,title,page in old_outline
+                  if depth==1 and title.startswith("Appendix C / Working assessment worksheet")]
+    assert len(glossary_hits)==1 and len(worksheet_hits)==1
+    split=glossary_hits[0]-1
+    assert split>30 and worksheet_hits[0]>split+1
     draw_atlas(SINGLE,0,False)
-    draw_atlas(APPENDIX,n,True)
-    append=fitz.open(APPENDIX)
-    assert len(append)==23
-    entries=original.get_toc()
-    original_bookmark_count=len(entries)
-    original.insert_pdf(append)
-    entries.append([1,"Appendix C — Full Diagnostic Comparison Atlas",n+1])
-    for idx,p in enumerate(PAIRS,1):
-        intro=n+2+2*(idx-1)
-        entries.append([2,f"{idx:02d}. {p['a']} / {p['b']} — Venn overview",intro])
-        entries.append([3,"Definitions and shared / distinctive features",intro])
-        entries.append([3,"Clinical differential and three-part workspace",intro+1])
-    entries.extend([[2,"Differential assessment checklist",n+22],
-                    [2,"Clinical sources and limits",n+23]])
-    original.set_toc(entries)
-    indexed_rows=set_numbered_contents(original[1],entries)
-    metadata={**original.metadata,"title":"DSM Foundations — Complete with Diagnostic Comparison Atlas","author":"Sophia Korb Cohon, PhD","subject":"Educational print-review edition with complete ten-pair appendix"}
-    original.set_metadata(metadata)
-    original.save(OUT,garbage=4,deflate=True)
-    original.close();append.close()
+    draw_atlas(APPENDIX,split,True)
+    appendix=fitz.open(APPENDIX)
+    assert len(appendix)==23
+
+    combined=fitz.open()
+    combined.insert_pdf(original,from_page=0,to_page=split-1)
+    combined.insert_pdf(appendix)
+    combined.insert_pdf(original,from_page=split,to_page=n-1)
+
+    early=[row for row in old_outline if row[2]<=split]
+    late=[[depth,title,page+23] for depth,title,page in old_outline if page>split]
+    atlas_outline=[[1,"Appendix A — Full Diagnostic Comparison Atlas",split+1]]
+    for idx,pair in enumerate(PAIRS,1):
+        overview=split+2+2*(idx-1)
+        atlas_outline.extend([
+            [2,f"{idx:02d}. {pair['a']} / {pair['b']} — Venn overview",overview],
+            [3,"Definitions and shared / distinctive features",overview],
+            [3,"Clinical differential and three-part workspace",overview+1]
+        ])
+    atlas_outline.extend([
+        [2,"Differential assessment checklist",split+22],
+        [2,"Clinical sources and limits",split+23]
+    ])
+    entries=early+atlas_outline+late
+    combined.set_toc(entries)
+
+    # Only trailing pages move. Rewrite their numeric footers, not their prose.
+    numerals=fitz.Font(fontfile=str(FONTS/"SourceSans3-Regular.ttf"))
+    for old_page in range(split,n):
+        index=old_page+23
+        page=combined[index]
+        number=str(index+1)
+        old_number=str(old_page+1)
+        bottom_words=[w for w in page.get_text("words")
+                      if w[1]>751 and w[0]>524 and w[2]<=555
+                      and w[4]==old_number]
+        assert len(bottom_words)==1,("Unable to locate old footer number",old_page+1,bottom_words)
+        page.add_redact_annot(fitz.Rect(531,752,564,769),fill=(1,1,1))
+        page.apply_redactions(images=0,graphics=1,text=0)
+        page.insert_font(fontname="FooterSans",fontfile=str(FONTS/"SourceSans3-Regular.ttf"))
+        x=554-numerals.text_length(number,fontsize=8.1)
+        page.insert_text((x,762),number,fontname="FooterSans",fontsize=8.1,
+                         color=(.35,.32,.32),overlay=True)
+
+    indexed_rows=set_numbered_contents(combined[1],entries)
+    combined.set_metadata({
+        **original.metadata,
+        "title":"DSM Foundations — Complete with Appendix A Diagnostic Comparison Atlas",
+        "author":"Sophia Korb Cohon, PhD",
+        "subject":"Educational print-review edition: Comparison Atlas A, vocabulary B, worksheet C"
+    })
+    combined.save(OUT,garbage=4,deflate=True)
+    combined.close()
+    appendix.close()
+
     check=fitz.open(OUT)
     assert len(check)==n+23
-    assert all(round(x.rect.width)==612 and round(x.rect.height)==792 for x in check)
-    assert all(s in check[n].get_text() for s in ["APPENDIX C","Comparison Atlas"])
+    assert all(round(page.rect.width)==612 and round(page.rect.height)==792 for page in check)
+    assert all(term in check[split].get_text() for term in ("APPENDIX A","Comparison Atlas"))
     assert sum("Sophia Korb Cohon, PhD" in page.get_text() for page in check)==1
-    assert sum("CLINICAL REASONING / WRITING WORKSPACE" in check[n+2+2*i].get_text() for i in range(10))==10
-    for i in range(10):
-        p=PAIRS[i]
-        overview=check[n+1+2*i].get_text()
-        clinical=check[n+2+2*i].get_text()
-        def norm(value):return re.sub(r"\W+","",value).casefold()
-        for field in ("a_text","b_text"):
-            assert norm(p[field]) in norm(overview),(i+1,field)
-        for label_line in p["venn_unique_a"]+p["venn_unique_b"]+p["venn_shared"]:
-            assert label_line in overview,("Missing Venn label",i+1,label_line)
-        for field in ("a_bullets","b_bullets","shared_bullets","investigate_bullets"):
-            for value in p[field]:
-                assert norm(value) in norm(clinical),("Lost clinical bullet",i+1,field,value)
+    assert sum("CLINICAL REASONING / WRITING WORKSPACE" in check[split+2+2*i].get_text() for i in range(10))==10
+    for i,pair in enumerate(PAIRS):
+        overview=check[split+1+2*i].get_text()
+        clinical=check[split+2+2*i].get_text()
+        norm=lambda value:re.sub(r"\W+","",value).casefold()
+        for key in ("a_text","b_text"):
+            assert norm(pair[key]) in norm(overview),(i+1,key)
+        for line in pair["venn_unique_a"]+pair["venn_unique_b"]+pair["venn_shared"]:
+            assert line in overview,("Missing Venn feature",i+1,line)
+        for key in ("a_bullets","b_bullets","shared_bullets","investigate_bullets"):
+            for value in pair[key]:
+                assert norm(value) in norm(clinical),("Missing clinical distinction",i+1,key,value)
         for marker in ("SUPPORTS","AGAINST","MISSING","WHAT TO INVESTIGATE"):
             assert marker in clinical,(i+1,marker)
     assert len(check.get_toc())==len(entries)
-    # Every visible index number and every PDF link must target the matching bookmark.
+    toc=check.get_toc()
+    appendix_tops=[(title,pageno) for level,title,pageno in toc
+                   if level==1 and title.startswith("Appendix ")]
+    assert [(t.split(" ")[1],p) for t,p in appendix_tops]==[
+        ("A",split+1),("B",glossary_hits[0]+23),("C",worksheet_hits[0]+23)
+    ],appendix_tops
     index_page=check[1]
     index_text=index_page.get_text()
     index_links=index_page.get_links()
-    assert len(indexed_rows)==17 and len(index_links)==17, (len(indexed_rows),len(index_links))
-    for label,destination in indexed_rows:
-        normspaces=lambda text:re.sub(r"\\s+"," ",text).strip()
-        assert normspaces(label) in normspaces(index_text), ("Missing index label",label)
-        assert re.search(r"(?m)^"+str(destination)+r"$",index_text), ("Missing printed page",label,destination)
-        assert any(link.get("page")==destination-1 for link in index_links), ("Broken page link",label,destination)
-
-    for pi,page in enumerate(check):
-        for x0,y0,x1,y1,word,*_ in page.get_text("words"):
+    assert len(indexed_rows)==17 and len(index_links)==17,(len(indexed_rows),len(index_links))
+    for label,dest in indexed_rows:
+        normspaces=lambda value:re.sub(r"\s+"," ",value).strip()
+        assert normspaces(label) in normspaces(index_text),("Missing contents label",label)
+        assert re.search(r"(?m)^"+str(dest)+r"$",index_text),("Missing printed page number",label,dest)
+        assert any(link.get("page")==dest-1 for link in index_links),("Broken contents link",label,dest)
+    for i,page in enumerate(check):
+        words=page.get_text("words")
+        for x0,y0,x1,y1,word,*_ in words:
             if x0<33 or y0<13 or x1>580 or y1>779:
-                raise RuntimeError(f"Text outside page {pi+1}: {word}")
-    manifest={"pages":len(check),"foundations_pages":n,"appendix_pages":23,
-              "comparisons":10,"three_part_workspaces":10,"venn_diagrams":10,"pages_per_comparison":2,
-              "appendix_start":n+1,"appendix_label":"Appendix C",
-              "original_bookmarks":original_bookmark_count,"total_bookmarks":len(entries),
-              "source":"scripts/data/dsm-comparison-atlas-pairs.json",
-              "release":"Review only; clinical specialist and PDF/UA signoff outstanding"}
+                raise RuntimeError(f"Text outside page {i+1}: {word}")
+        numbers=[w[4] for w in words if 750<w[1]<758 and w[0]>530 and w[4].isdigit()]
+        assert numbers==[str(i+1)],("Wrong footer page number",i+1,numbers)
+    # Verbatim chapter material; relocated pages have only new footer numbers.
+    for i in range(n):
+        target=i if i<split else i+23
+        if i==1:continue
+        oldpage=original[i].get_text()
+        newpage=check[target].get_text()
+        def clean_body(value):
+            lines=value.splitlines()
+            return "".join(line.strip() for line in lines
+                           if line.strip() not in (str(i+1),str(target+1)))
+        assert clean_body(oldpage)==clean_body(newpage),("Main content changed",i+1)
+    original.close()
+    manifest={
+        "pages":len(check),
+        "foundations_pages":n,
+        "appendix_pages":23,
+        "comparisons":10,
+        "three_part_workspaces":10,
+        "venn_diagrams":10,
+        "pages_per_comparison":2,
+        "appendix_start":split+1,
+        "appendix_label":"Appendix A",
+        "appendix_order":[
+            {"name":"A","title":"Diagnostic Comparison Atlas","page":split+1},
+            {"name":"B","title":"Full vocabulary","page":glossary_hits[0]+23},
+            {"name":"C","title":"Working assessment worksheet","page":worksheet_hits[0]+23}
+        ],
+        "original_bookmarks":original_bookmark_count,
+        "total_bookmarks":len(entries),
+        "source":"scripts/data/dsm-comparison-atlas-pairs.json",
+        "release":"Review only; clinical specialist and PDF/UA signoff outstanding"
+    }
     (BUILD/"dsm-foundations-with-atlas-manifest.json").write_text(json.dumps(manifest,indent=2)+"\n")
     print(json.dumps(manifest,indent=2))
 
