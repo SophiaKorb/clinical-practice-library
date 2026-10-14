@@ -297,6 +297,8 @@ details.practice-set .practice-eyebrow,details.practice-set .practice-indicator,
 @media(max-width:680px){.questions-review-toolbar{padding:13px 14px}.questions-review-mode .lesson{padding:14px 12px}.questions-review-mode .lesson-head h2{font-size:1.38rem}}
 @media print{.questions-review-toolbar{display:none!important}.questions-review-mode .answers button{display:block!important;border:1px solid #999!important;background:white!important;color:black!important;padding:5px 8px!important;min-height:0!important}.questions-review-mode .answers::after{display:none!important}}
 
+
+.dsm-language-bar{display:flex;align-items:center;flex-wrap:wrap;gap:12px;padding:12px 16px;margin-bottom:16px;border:1px solid var(--line);border-radius:12px;background:#fff}.dsm-language-bar button{font:700 .9rem system-ui;cursor:pointer;padding:9px 14px;min-height:44px;border:1px solid var(--teal);background:white;color:var(--teal);border-radius:22px}.dsm-language-bar button[aria-pressed=true]{background:var(--teal);color:white}.dsm-language-bar button:focus-visible{outline:3px solid var(--focus);outline-offset:3px}.dsm-language-status{flex-basis:100%;font-size:.83rem;color:var(--muted)}@media print{.dsm-language-bar{display:none}}
 </style>
 <link rel="stylesheet" href="/resources/training/dsm-foundations-experience.css">
 <script defer src="/resources/training/dsm-foundations-experience.js"></script>
@@ -417,7 +419,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 <nav class="cpl-static-nav" aria-label="Clinical Practice Library sections"><a class="cpl-static-nav__brand" href="/" aria-label="Clinical Practice Library home">CPL</a><div class="cpl-static-nav__links"><a href="/">Home</a><a href="/resources/start-here.html">Start here</a><a href="/resources/clinical-resource-finder.html">Find resources</a><a href="/resources/clinical-topics/index.html">Clinical topics</a><a href="/resources/therapy/visual-reasoning-toolkit.html">Visual tools</a><a href="/resources/therapy/communication-supports-toolkit.html">Communication</a><a href="/resources/therapy/treatment-plan-menu.html">Treatment plans</a><a href="/resources/assessment/assessment-start-here.html">Assessment</a><a href="/resources/training/workforce-learning-center.html" aria-current="page">Learning</a><a href="/#espanol">Español</a></div><div class="cpl-static-nav__mobile"><a class="cpl-static-nav__quick cpl-static-nav__quick--0" href="/resources/start-here.html">Start</a><a class="cpl-static-nav__quick cpl-static-nav__quick--1" href="/resources/clinical-resource-finder.html">Find</a><details class="cpl-static-nav__more"><summary>More <span aria-hidden="true">⌄</span></summary><div class="cpl-static-nav__menu" aria-label="More sections"><a href="/resources/index.html">Complete directory</a><a href="/resources/clinical-topics/index.html">Clinical topics</a><a href="/resources/therapy/visual-reasoning-toolkit.html">Visual tools</a><a href="/resources/therapy/communication-supports-toolkit.html">Communication</a><a href="/resources/therapy/treatment-plan-menu.html">Treatment plans</a><a href="/resources/assessment/assessment-start-here.html">Assessment</a><a href="/resources/training/workforce-learning-center.html" aria-current="page">Learning</a><a href="/#espanol">Español</a><a href="/#diagnosis-guides">Diagnosis guides</a></div></details></div></nav>
 
 <header class="course-utility"><div class="top"><a href="/resources/training/workforce-learning-center.html">← Learning center</a><a href="/resources/training/diagnosis-comparer.html">Diagnosis overlap Venn + comparer ↗</a><a href="/resources/therapy/clinical-intern-learning-hub.html">Clinical intern reference ↗</a></div></header>
-<main id="main">
+<main id="main"><div class="dsm-language-bar" role="group" aria-label="DSM Foundations reading language"><strong>Reading level</strong><button type="button" id="dsm-language-clinical" aria-pressed="true">Clinical</button><button type="button" id="dsm-language-plain" aria-pressed="false">Plain language</button><span class="dsm-language-status" id="dsm-language-status" role="status" aria-live="polite"></span></div>
 <div class="experience-bar" role="group" aria-label="Choose course presentation">
 <div class="experience-label">Your course, your way</div>
 <div class="experience-options">
@@ -431,7 +433,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 <p class="eyebrow">Understanding classification · Foundations</p>
 <h1><span class="course-title-line">DSM</span> <span class="course-title-line">Foundations</span></h1>
 <p class="course-byline">Created by Sophia Korb Cohon, PhD</p>
-<p class="intro">Why we put experiences into categories, when those categories help, and how diagnosis fits into understanding a person.</p>
+<p class="intro"><span data-clinical="Why we put experiences into categories, when those categories help, and how diagnosis fits into understanding a person." data-plain="Learn what diagnoses mean, why clinicians use them, and why understanding the whole person matters more than a label.">Why we put experiences into categories, when those categories help, and how diagnosis fits into understanding a person.</span></p>
 <div class="hero-pills"><span>11 focused lessons</span><span>Fictional cases</span><span>80 practice questions</span><span>Printable</span></div>
 <a class="button" href="#lesson-1">Start lesson 1 →</a>
 <details class="audience-details" id="audience">
@@ -1070,5 +1072,6 @@ document.addEventListener('DOMContentLoaded',()=>{
 </div>
 </details>
 </aside>
+<script defer>document.addEventListener("DOMContentLoaded",()=>{const buttons={clinical:document.getElementById("dsm-language-clinical"),plain:document.getElementById("dsm-language-plain")};const status=document.getElementById("dsm-language-status");function setMode(mode){for(const [key,button] of Object.entries(buttons))button.setAttribute("aria-pressed",String(key===mode));document.querySelectorAll("[data-clinical][data-plain]").forEach(el=>el.textContent=el.dataset[mode]);status.textContent=mode==="plain"?"Plain-language explanations are being expanded lesson by lesson; unadapted material remains in its original wording.":"Clinical wording selected.";try{localStorage.setItem("dsm-foundations-language",mode)}catch{}}let initial="clinical";try{if(localStorage.getItem("dsm-foundations-language")==="plain")initial="plain"}catch{}for(const [mode,button] of Object.entries(buttons))button.addEventListener("click",()=>setMode(mode));setMode(initial);});</script>
 </body>
 </html>
