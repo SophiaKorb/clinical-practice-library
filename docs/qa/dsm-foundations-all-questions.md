@@ -234,11 +234,11 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
 
 ### 25. During an intake, a client says, “I'm so OCD about keeping my desk neat.” Which additional finding specifically raises concern for a compulsive cycle?
 
-- **A.** They enjoy an orderly desk but can leave it messy when other priorities arise.
+- **A.** They check the desk before leaving and prefer to maintain a consistent arrangement across workdays.
   - Feedback: A flexible preference for order alone does not indicate compulsions.
 - **B.** They repeatedly rearrange objects to neutralize an unwanted intrusive fear, losing substantial time. **✓ Correct**
   - Feedback: A driven, repetitive action linked to an intrusion and significant interference warrants further OCD assessment.
-- **C.** They concentrate more easily when their workspace has an established layout.
+- **C.** They repeatedly straighten the desk because a predictable arrangement makes it easier to find materials.
   - Feedback: Organization may be helpful without indicating a compulsive cycle.
 
 ### 26. Someone says, “I had a panic attack before my road test.” What can you conclude?
@@ -256,7 +256,7 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
   - Feedback: Frequency matters but cannot replace episode timing, sleep, energy, and context.
 - **B.** Ask about mood, energy, sleep, triggers, duration, and changes in functioning. **✓ Correct**
   - Feedback: The pattern and course help differentiate episodes from shorter, situational changes in emotion.
-- **C.** Correct the person's wording before asking about their experience.
+- **C.** Ask whether others have noticed the changes, then decide on a mood-disorder label from their reports.
   - Feedback: Clarifying terminology can help, but it should not shut down the account being offered.
 
 ### 28. Someone says, “I felt completely unheard, so I called her narcissistic.” What can you conclude?
@@ -283,7 +283,7 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
   - Feedback: Context-specific conflict can occur without a pervasive clinical pattern.
 - **B.** A persistent cross-context pattern meeting criteria and causing significant difficulty. **✓ Correct**
   - Feedback: Personality disorder assessment asks about duration, pervasiveness, clinical criteria, and impact.
-- **C.** A trait description shared by several relatives or observers.
+- **C.** A stable characteristic reported across years by several relatives or observers, regardless of impairment.
   - Feedback: Agreement among observers may provide history but is not diagnostic evidence by itself.
 
 ### 31. A client avoids contact after a traumatic event. What should be clarified before interpreting the avoidance as a lasting personality pattern?
@@ -545,11 +545,11 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
 
 ### 58. Which case-note sentence reports time-linked behavior rather than substituting an interpretation?
 
-- **A.** The caregiver said the student was disruptive all morning.
+- **A.** The caregiver reported difficulty completing the morning routine and frequent interruptions before school.
   - Feedback: This repeats an impression without describing a specific event.
 - **B.** At 9:15 a.m., after spoken directions began, the student covered both ears and asked to leave. **✓ Correct**
   - Feedback: This specifies behavior, context, and time without assuming the student's motive.
-- **C.** The teacher said the student was obviously trying to gain attention.
+- **C.** The teacher described repeated requests for help and interpreted them as deliberate attempts to attract attention.
   - Feedback: It attributes motive instead of providing observations that could test that interpretation.
 
 ### 59. A client completes a task more easily when visual cues are provided. What does that suggest?
@@ -563,11 +563,11 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
 
 ### 60. Which approach separates observations, interpretations, and remaining uncertainty in a case discussion?
 
-- **A.** Synthesize all impressions into a single confident conclusion before asking further questions.
+- **A.** Combine direct observations and secondhand reports into one initial formulation and then test its accuracy.
   - Feedback: This can obscure the difference between observations and assumptions.
 - **B.** Separate what people reported, what was observed, possible explanations, and what is still unknown. **✓ Correct**
   - Feedback: This preserves the evidence and highlights the questions that could distinguish competing explanations. It keeps the discussion focused on what can be learned next, rather than how confidently someone can name a disorder.
-- **C.** Rank diagnoses first and reinterpret ambiguous findings through the leading diagnosis.
+- **C.** Choose the most familiar hypothesis first, then organize unclear observations around its expected features.
   - Feedback: That is confirmation bias rather than a transparent comparison of evidence.
 
 ### 61. An adult avoids friends after a move. What questions should follow?
@@ -710,9 +710,9 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
 
 ### 75. An autistic student succeeds with written directions, predictable routines, and a quiet space. Which interpretation reflects how access and functioning interact?
 
-- **A.** Use the same supports for autistic students who share this diagnosis.
+- **A.** Recommend this combination of accommodations whenever an autistic student reports sensory sensitivity.
   - Feedback: Supports should be tailored to the particular student and setting.
-- **B.** Conclude the student has no disability because classroom performance improved.
+- **B.** Record the student's successful performance as evidence that additional accommodation is unnecessary.
   - Feedback: Successful accommodations may reduce barriers without eliminating the underlying difficulty.
 - **C.** Describe the student's abilities, access barriers, supports, and identity preferences. **✓ Correct**
   - Feedback: This respects autistic identity while recording individual functioning and what makes participation possible.
