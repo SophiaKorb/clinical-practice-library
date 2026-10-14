@@ -383,11 +383,13 @@ def add_body_item(el,story):
     else:
         add_additional_item(el,story)
 
-def add_chapter(sec,n,story,casecount):
+def add_chapter(sec,n,story,casecount,question_range):
     h=sec.find("h2",id=f"title-{n}")
     title=text(h)
     story.append(PageBreak())
     story.append(bookmark(P(f"CHAPTER {n:02d}  /  "+xml_escape(title),"h1"),f"lesson-{n}"))
+    first,last=question_range
+    story.append(P(f"Practice questions {first}–{last} are grouped by lesson in the practice section.","tiny"))
     head=sec.find("div",class_="lesson-head")
     # Chapter number and title already provide orientation; omit the redundant kicker.
     for el in sec.find_all(recursive=False):
@@ -471,8 +473,16 @@ def build():
     book.append(P("Instructor  /  Answer key 1–80 with explanations","contents"))
     book.append(P("Method: Explore the information → Apply the concept → Recall what would change your conclusion.","small"))
     count=0
+    question_ranges={}
+    cursor=1
+    for lesson in range(1,12):
+        amount=sum(chapter==lesson for chapter,_ in questions)
+        assert amount>0,("Missing lesson questions",lesson)
+        question_ranges[lesson]=(cursor,cursor+amount-1)
+        cursor+=amount
+    assert cursor==81
     for i,sec in enumerate(secs,1):
-        title,count=add_chapter(sec,i,book,count)
+        title,count=add_chapter(sec,i,book,count,question_ranges[i])
         chapters.append(dict(number=i,title=title,cases=len(sec.select(".worked-example")),questions=len(sec.select(".check[data-quiz]"))))
     # Editorial separation: the glossary must never share a page with the final
     # teaching chapter, especially when Appendix A is inserted between them.
@@ -502,7 +512,7 @@ def build():
             book.append(HRFlowable(width="100%",thickness=.4,color=BORDER,spaceBefore=8,spaceAfter=11))
     book.append(PageBreak())
     book.append(bookmark(P("Written and multiple-choice practice","h1"),"practice"))
-    book.append(P("Choose the most supported answer for each question. For items marked <b>SELECT ALL THAT APPLY</b>, more than one option may be correct. Use the lines under each question to record your reasoning, evidence and any further assessment questions. The answer key follows separately.","body"))
+    book.append(P("Choose the most supported answer for each question. For items marked <b>SELECT ALL THAT APPLY</b>, more than one option may be correct. Use the lines under each question to record your reasoning, evidence and any further assessment questions. The answer key is the final section: print up to, but not including, its first page for a student copy.","body"))
     keys=[]
     previous=None
     for n,(chapter,q) in enumerate(questions,1):
@@ -510,17 +520,7 @@ def build():
             previous=chapter
             book.append(P(f"Practice {chapter:02d}  /  "+xml_escape(titlemap[chapter-1]),"h2"))
         add_question(q,n,book,keys)
-    book.append(PageBreak())
-    book.append(bookmark(P("Separate instructor answer key","h1"),"key"))
-    book.append(P("These are teaching explanations, not automated clinical determinations. Multiple interpretations can remain plausible; focus on the evidence described in the stem, diagnostic restraint, safety and appropriate next steps.","body"))
-    for a in keys:
-        letters=", ".join(x[0] for x in a["correct"])
-        book.append(P(f"{a['number']:02d}.  "+("Answers: " if a["multi"] else "Answer: ")+letters,"h3"))
-        for letter,option,feedback in a["correct"]:
-            book.append(P("<b>"+letter+". "+xml_escape(option)+"</b>","small"))
-            if feedback:book.append(P(xml_escape(feedback),"answer"))
-        book.append(Spacer(1,6))
-    # Keep brief source notes on the last answer-key sheet when space permits.
+    # References end the learner-printable section; the instructor key begins on a fresh page.
     book.append(bookmark(P("References and credits","h1"),"sources"))
     book.append(P("Adapted for print from the interactive DSM Foundations course in the Clinical Practice Library. The teaching material and fictional cases are designed to make diagnostic reasoning more understandable.","body"))
     for label,url in [
@@ -531,6 +531,17 @@ def build():
         ("ACAS (UK): reasonable adjustments at work","https://www.acas.org.uk/reasonable-adjustments")
     ]:
         book.append(P(xml_escape(label)+": "+xml_escape(url),"small"))
+    # Deliberately last: remove these trailing pages for a student-only printed book.
+    book.append(PageBreak())
+    book.append(bookmark(P("Separate instructor answer key","h1"),"key"))
+    book.append(P("These are teaching explanations, not automated clinical determinations. Multiple interpretations can remain plausible; focus on the evidence described in the stem, diagnostic restraint, safety and appropriate next steps.","body"))
+    for a in keys:
+        letters=", ".join(x[0] for x in a["correct"])
+        book.append(P(f"{a['number']:02d}.  "+("Answers: " if a["multi"] else "Answer: ")+letters,"h3"))
+        for letter,option,feedback in a["correct"]:
+            book.append(P("<b>"+letter+". "+xml_escape(option)+"</b>","small"))
+            if feedback:book.append(P(xml_escape(feedback),"answer"))
+        book.append(Spacer(1,6))
     doc=BookDoc(OUT)
     doc.build(book)
     counts=dict(font_mode=FONT_MODE,print_identity='Libre Baskerville / Source Serif 4 / Source Sans 3' if FONT_MODE=='editorial' else 'fallback fonts',lessons=len(secs),cases=count,concept_maps=len(figs),vocabulary=len(vocab),questions=len(keys),options=sum(x["options"] for x in keys),select_all=sum(x["multi"] for x in keys),single=sum(not x["multi"] for x in keys),chapters=chapters,pdf=str(OUT.relative_to(ROOT)))
