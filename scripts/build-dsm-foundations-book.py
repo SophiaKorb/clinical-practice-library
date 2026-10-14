@@ -94,8 +94,8 @@ style={
     "case":ParagraphStyle("BookCase",fontName="LB-Bold",fontSize=14.2,leading=19,textColor=NAVY,spaceAfter=10,spaceBefore=17,keepWithNext=1),
     "step":ParagraphStyle("BookStep",fontName="Lato-Bold",fontSize=11.2,leading=16.2,textColor=TEAL,spaceAfter=5,spaceBefore=10,keepWithNext=1),
     "caption":ParagraphStyle("BookCaption",fontName="Lato-Bold",fontSize=10.7,leading=15.5,textColor=TEAL,spaceAfter=7,keepWithNext=1),
-    "option":ParagraphStyle("BookOption",fontName="Lato",fontSize=11.0,leading=18.0,textColor=INK,spaceAfter=10,leftIndent=19,firstLineIndent=-19),
-    "answer":ParagraphStyle("BookAnswer",fontName="NS",fontSize=10.8,leading=18,textColor=INK,spaceAfter=8),
+    "option":ParagraphStyle("BookOption",fontName="Lato",fontSize=10.9,leading=17.1,textColor=INK,spaceAfter=6,leftIndent=19,firstLineIndent=-19),
+    "answer":ParagraphStyle("BookAnswer",fontName="NS",fontSize=10.5,leading=16.4,textColor=INK,spaceAfter=5),
     "contents":ParagraphStyle("BookContents",fontName="NS",fontSize=12.1,leading=20.5,textColor=INK,spaceAfter=6),
     "callout":ParagraphStyle("BookCallout",fontName="NS",fontSize=10.7,leading=16.5,textColor=INK),
     "center":ParagraphStyle("BookCenter",fontName="Lato",fontSize=9.8,leading=14,textColor=GREY,alignment=TA_CENTER),
@@ -200,13 +200,13 @@ class ConnectorArrow(Flowable):
         super().__init__()
         self.label=label
         self.width=WIDTH
-        self.height=59 if label else 29
+        self.height=38 if label else 17
         self.lines=[]
     def wrap(self,availWidth,availHeight):
         self.width=min(WIDTH,availWidth)
         if self.label:
             self.lines=simpleSplit(self.label,"Lato-Bold",11.7,self.width-52)
-            self.height=59+14.5*(len(self.lines)-1)
+            self.height=38+14.5*(len(self.lines)-1)
         return self.width,self.height
     def draw(self):
         c=self.canv
@@ -274,7 +274,7 @@ def add_concept_map(fig,story):
         special=fig.select_one("."+cls)
         if special:
             story.append(P(xml_escape(text(special)),"small"))
-    story.append(Spacer(1,11))
+    story.append(Spacer(1,7))
 
 def add_worked(case,story,index):
     label=case.find("strong")
@@ -386,7 +386,7 @@ def add_body_item(el,story):
 def add_chapter(sec,n,story,casecount,question_range):
     h=sec.find("h2",id=f"title-{n}")
     title=text(h)
-    story.append(PageBreak())
+    story.append(Spacer(1,22))
     story.append(bookmark(P(f"CHAPTER {n:02d}  /  "+xml_escape(title),"h1"),f"lesson-{n}"))
     first,last=question_range
     story.append(P(f"Practice questions {first}–{last} are grouped by lesson in the practice section.","tiny"))
@@ -417,10 +417,10 @@ def add_question(q,num,story,keys):
         if op.get("data-answer")=="yes":answers.append((letter,text(op),op.get("data-feedback","")))
     story.append(Spacer(1,8))
     # Writing area is genuinely provided for learners, not a browser print of hidden answers.
-    for i in range(2):
-        story.append(HRFlowable(width="100%",thickness=.4,color=BORDER,spaceBefore=6,spaceAfter=8))
+    for i in range(1):
+        story.append(HRFlowable(width="100%",thickness=.4,color=BORDER,spaceBefore=5,spaceAfter=7))
     keys.append(dict(number=num,stem=question,correct=answers,multi=multi,options=len(options)))
-    story.append(Spacer(1,12))
+    story.append(Spacer(1,7))
 
 def build():
     soup=BeautifulSoup(HTML.read_text(encoding="utf-8"),"html.parser")
