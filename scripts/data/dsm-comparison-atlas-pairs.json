@@ -1,0 +1,87 @@
+{
+  "edition": "October 2026",
+  "source": "Authored DSM Diagnosis Comparer Redesigned Clinical Review PDF, 13-page prior candidate; wording kept intact.",
+  "clinical_status": "Educational review candidate; qualified specialist approval pending",
+  "pairs": [
+    {
+      "a": "OCD",
+      "b": "OCPD",
+      "a_text": "Obsessions and/or compulsions, including mental rituals; time-consuming or distressing/impairing. Insight can vary.",
+      "b_text": "Pervasive preoccupation with order, perfectionism, and control at the expense of flexibility or efficiency.",
+      "overlap": "Repetition, attention to detail, and functional interference can occur in either condition.",
+      "question": "Ask about intrusive thoughts, urges, mental or overt rituals, insight, chronic rules, delegated tasks, and interpersonal effects. Neither condition excludes the other."
+    },
+    {
+      "a": "ADHD",
+      "b": "Generalized anxiety disorder",
+      "a_text": "Persistent developmental pattern of inattention and/or hyperactivity–impulsivity with clinically significant impact.",
+      "b_text": "Difficult-to-control worry about multiple domains with associated symptoms and clinically significant impact.",
+      "overlap": "Restlessness, distractibility, sleep-related concerns, and difficulty finishing tasks.",
+      "question": "Establish childhood history and symptom course; compare concentration under low-worry conditions and evaluate sleep, context, and co-occurrence."
+    },
+    {
+      "a": "Autism spectrum disorder",
+      "b": "Social anxiety disorder",
+      "a_text": "Developmental social-communication differences plus restricted/repetitive patterns, including sensory features in some people.",
+      "b_text": "Fear of negative evaluation in social or performance settings, typically associated with avoidance or distress.",
+      "overlap": "Effortful social interaction, withdrawal, and distress in some situations.",
+      "question": "Explore early communication patterns, sensory needs, masking, fear of scrutiny, and whether both conditions apply."
+    },
+    {
+      "a": "Major depressive disorder",
+      "b": "Bipolar II disorder",
+      "a_text": "Major depressive episodes without a history of mania or hypomania after appropriate lifetime assessment.",
+      "b_text": "At least one major depressive episode and at least one hypomanic episode, without mania.",
+      "overlap": "Major depressive episodes can appear clinically similar at a single visit.",
+      "question": "Examine the lifetime course of mood, increased energy/activity, decreased need for sleep, sustained changes, and collateral history when appropriate."
+    },
+    {
+      "a": "Bipolar I disorder",
+      "b": "Bipolar II disorder",
+      "a_text": "At least one manic episode; a depressive episode is not necessary for the diagnosis.",
+      "b_text": "At least one hypomanic and one major depressive episode, with no manic history.",
+      "overlap": "Elevated energy/activity, sleep changes, and depressive episodes may occur.",
+      "question": "Evaluate whether a full manic episode occurred, including severity, impairment, psychotic features, hospitalization, and substance/medical effects."
+    },
+    {
+      "a": "PTSD",
+      "b": "Generalized anxiety disorder",
+      "a_text": "Qualifying trauma exposure plus intrusion, avoidance, negative mood/cognition, and arousal/reactivity symptom clusters.",
+      "b_text": "Difficult-to-control worry across multiple domains; no qualifying trauma exposure is required.",
+      "overlap": "Sleep disturbance, concentration difficulty, vigilance, and anxiety.",
+      "question": "Clarify exposure and trauma-linked intrusion/avoidance versus the breadth and content of worry; evaluate co-occurrence."
+    },
+    {
+      "a": "Borderline personality disorder",
+      "b": "Bipolar II disorder",
+      "a_text": "A pervasive pattern involving instability in self-image, relationships, affect regulation, and related features.",
+      "b_text": "Distinct hypomanic and major depressive episodes with characteristic duration and energy/activity changes.",
+      "overlap": "Emotional distress, impulsivity, self-harm risk, and depression may be present.",
+      "question": "Assess longitudinal pattern, context, duration, baseline changes, sleep/energy, trauma history, and suicide safety without inferring diagnosis from one crisis."
+    },
+    {
+      "a": "Panic disorder",
+      "b": "Generalized anxiety disorder",
+      "a_text": "Recurrent unexpected panic attacks with persistent concern or maladaptive behavior change.",
+      "b_text": "Persistent, difficult-to-control worry across multiple domains.",
+      "overlap": "Somatic arousal, apprehension, concentration difficulties, and avoidance.",
+      "question": "Distinguish unexpected panic attacks and attack-related apprehension from pervasive worry; consider health/substance causes."
+    },
+    {
+      "a": "ADHD",
+      "b": "Autism spectrum disorder",
+      "a_text": "Developmental inattention and/or hyperactivity–impulsivity patterns.",
+      "b_text": "Developmental social-communication differences and restricted/repetitive behaviors.",
+      "overlap": "Executive-function challenges, social difficulties, and sometimes sensory differences.",
+      "question": "Obtain developmental examples and independent evidence for each defining symptom cluster; both diagnoses may apply."
+    },
+    {
+      "a": "Major depressive disorder",
+      "b": "Persistent depressive disorder",
+      "a_text": "Major depressive episodes with a defined cluster of symptoms and a change in baseline.",
+      "b_text": "Chronic depressed mood with associated symptoms, over a longer time course.",
+      "overlap": "Low mood, fatigue, concentration problems, and impaired functioning.",
+      "question": "Reconstruct the duration, baseline, symptom-free intervals, and superimposed episodes; check full age-specific criteria."
+    }
+  ]
+}
