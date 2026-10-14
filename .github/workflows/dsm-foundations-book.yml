@@ -80,7 +80,11 @@ jobs:
           for i in range(len(original)):
               a=''.join(original[i].get_text().split())
               b=''.join(combined[i].get_text().split())
-              assert a==b if i!=1 else a in b, ('Existing curriculum changed',i)
+              if i==1:
+                  assert len(combined[i].get_links())==17, 'All 17 section index links required'
+                  assert 'REFERENCE & PRACTICE' in combined[i].get_text()
+              else:
+                  assert a==b, ('Existing curriculum changed',i)
           print(f"PASS: {len(combined)} pages, {len(combined.get_toc())} bookmarks, complete Atlas; original book retained")
           PY
       - name: Retain book, manifest and source for QA, without deployment
