@@ -2,7 +2,7 @@
 """DSM Foundations: reproducible review-edition textbook from canonical online course.
 
 Generates a designed book (NOT a browser print of the site) with all lessons,
-33 four-stage cases, 11 adapted concept maps, 33 vocabulary entries, and the
+33 four-stage cases, 11 adapted concept maps, 36 vocabulary entries, and the
 full 80-question practice/answer key. Never deploys or replaces published files.
 """
 from __future__ import annotations
@@ -440,7 +440,7 @@ def build():
     figs=[sec.find("figure",class_="concept-stage") for sec in secs]
     assert len(questions)==80,f"Expected 80 questions, got {len(questions)}"
     assert count==33,f"Expected 33 cases, got {count}"
-    assert len(vocab)==33,f"Expected 33 glossary entries, got {len(vocab)}"
+    assert len(vocab)==36,f"Expected 33 glossary entries, got {len(vocab)}"
     assert len(figs)==11 and all(figs),"Expected 11 concept maps"
     assert sum(len(q.select("button[data-answer]")) for _,q in questions)==253
     assert sum(q.has_attr("data-multi") for _,q in questions)==8
@@ -454,7 +454,7 @@ def build():
     book.append(P("Sophia Korb Cohon, PhD","author"))
     book.append(HRFlowable(width="100%",thickness=3,color=TEAL,spaceBefore=11,spaceAfter=24))
     book.append(box([P("COMPLETE PRINT EDITION  /  OCTOBER 2026","caption"),
-                     P("11 lessons · 33 worked cases · 11 concept maps · 33 glossary concepts · 80 practice questions with a separate instructor key","body"),
+                     P("11 lessons · 33 worked cases · 11 concept maps · 36 glossary concepts · 80 practice questions with a separate instructor key","body"),
                      P("Adapted from the interactive DSM Foundations course as a readable, illustrated learning book.","small")],SEA,pad=16))
     book.append(Spacer(1,28))
     book.append(P("About this book","h2"))
@@ -466,7 +466,7 @@ def build():
     for n,title in enumerate(titlemap,1):
         book.append(P(f"{n:02d}  {xml_escape(title)}","contents"))
     book.append(Spacer(1,6))
-    book.append(P("Appendix B  /  Full vocabulary (33 concepts)","contents"))
+    book.append(P("Appendix B  /  Full vocabulary (36 concepts)","contents"))
     book.append(P("Appendix C  /  Reusable assessment and documentation worksheet","contents"))
     book.append(P("Practice  /  Questions 1–80 with response space","contents"))
     book.append(P("Instructor  /  Answer key 1–80 with explanations","contents"))
