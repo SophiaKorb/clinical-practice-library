@@ -90,7 +90,7 @@ th,td{padding:13px 15px;text-align:left;vertical-align:top;border-right:1px soli
 <g id="venn-two">
 <circle class="circle-a" cx="228" cy="180" r="150"/><circle class="circle-b" cx="372" cy="180" r="150"/>
 <text class="venn-label" id="venn-two-a" x="153" y="180"></text><text class="venn-label" id="venn-two-b" x="447" y="180"></text>
-<text class="venn-center" x="300" y="180"><tspan x="300" dy="-7">Possible</tspan><tspan x="300" dy="20">overlap</tspan></text></g>
+<text class="venn-center" id="venn-center-label" x="300" y="180"><tspan x="300" dy="-7">Possible</tspan><tspan x="300" dy="20">overlap</tspan></text></g>
 </svg>
 <div id="venn-legend" class="venn-legend" aria-label="Circle labels"></div>
 </div>
@@ -161,6 +161,9 @@ function renderVenn(ids,valid){
  if(ids.length===2){
   setSvgLabel("venn-two-a",ids[0]);setSvgLabel("venn-two-b",ids[1]);
   const curated=vennPairs.get(ids.slice().sort().join("|"));const plainCurated=languageMode==="plain"?plainVennPairs[ids.slice().sort().join("|")]:null;const found=languageMode==="plain"?(plainCurated&&curated?{...curated,...plainCurated}:null):curated;
+  const center=document.getElementById("venn-center-label");
+  const centerLines=found?(languageMode==="plain"?["May share","features"]:["Potential","overlap"]):(languageMode==="plain"?["Not yet","described"]:["Not yet","mapped"]);
+  Array.from(center.children).forEach((line,i)=>{line.textContent=centerLines[i];});
   const points=found?[found.a===ids[0]?found.aOnly:found.bOnly,found.a===ids[1]?found.aOnly:found.bOnly]:[byId[ids[0]].pattern,byId[ids[1]].pattern];
   regions.append(regionCard((languageMode==="plain"?plainVennTerms.characteristic:"More characteristic: ")+byId[ids[0]].name,languageMode==="plain"&&!plainCurated?plainDescriptions[ids[0]].pattern:points[0]));
   if(found){
