@@ -71,14 +71,14 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
 
 ## Lesson 2: What is the DSM?
 
-### 8. Does a DSM label tell you everything about a person?
+### 8. Two people with the same DSM diagnosis request different kinds of help. What should guide their support plans?
 
-- **A.** No. It describes a clinical pattern, not the person's whole life. **✓ Correct**
-  - Feedback: A diagnosis can aid clinical decisions without summarizing someone's relationships, values, or individual functioning.
-- **B.** Yes. Once accurate, it summarizes needs and typical responses across settings.
-  - Feedback: People with the same diagnosis can differ markedly in goals, presentation, and support needs.
-- **C.** It describes present symptoms completely but not a person's preferences.
-  - Feedback: Even the symptom picture may need more information and change over time; the label is not exhaustive.
+- **A.** The diagnosis's standard interventions, used consistently until either person's needs change.
+  - Feedback: Evidence-based options matter, but support also depends on each person's priorities and functioning.
+- **B.** The severity label, which specifies how much assistance each person will usually need.
+  - Feedback: A severity designation does not determine an individual's preferred supports or the barriers in a particular setting.
+- **C.** Their individual goals, daily functioning, contexts, and barriers, alongside clinical evidence. **✓ Correct**
+  - Feedback: Diagnostic information is one input; individualized formulation identifies the supports that actually help.
 
 ### 9. A parent keeps the family board games arranged in strict alphabetical order. Which statements are supported by this observation?
 
@@ -174,14 +174,14 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
 - **D.** Whether lacking a remembered trigger establishes a psychiatric cause.
   - Feedback: A trigger may not be known; its absence does not establish a specific cause.
 
-### 19. A symptom is…
+### 19. A student says, “I'm so anxious about this test.” What can be concluded from that statement alone?
 
-- **A.** A negative personal quality inferred from behavior rather than a reported difficulty.
-  - Feedback: Moral language cannot substitute for understanding an experience or observable problem.
-- **B.** A persistent difficulty that receives a diagnostic label as soon as it is reported.
-  - Feedback: One experience may have many causes and is not automatically a diagnosis.
-- **C.** An experience or observable difficulty that can have multiple causes. **✓ Correct**
-  - Feedback: Ask what actually occurred, when, for how long, and with what consequences. A symptom is evidence to consider, not a verdict.
+- **A.** The anxiety is clinically significant if the student used the term without prompting.
+  - Feedback: Self-description should be taken seriously, but one report does not establish duration, impairment, or diagnostic criteria.
+- **B.** They feel anxious now; onset, intensity, duration, and impact still need clarification. **✓ Correct**
+  - Feedback: A reported feeling is meaningful clinical information without establishing an anxiety disorder on its own.
+- **C.** The reaction is likely ordinary because examinations commonly create temporary stress.
+  - Feedback: A common trigger does not establish whether the distress is proportionate, persistent, or impairing.
 
 ### 20. A client cannot concentrate after sleeping only three hours. Which assessments could help clarify the cause?
 
@@ -295,14 +295,14 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
 - **C.** Treat avoidance as evidence of avoidant personality disorder and confirm with history.
   - Feedback: A diagnosis requires the relevant pervasive pattern and assessment of alternatives.
 
-### 32. Which statement about personality disorders is fair?
+### 32. Which statement about dissociation is best supported in an initial assessment?
 
-- **A.** One repeated behavior that others find disruptive during a relationship conflict.
-  - Feedback: Conflict and difficulty can matter but do not alone establish a pervasive personality disorder.
-- **B.** A longstanding pattern when several people independently call it a personality problem.
-  - Feedback: Collateral views can inform assessment, but do not by themselves establish criteria.
-- **C.** A clinical pattern can be treatable without being a moral verdict. **✓ Correct**
-  - Feedback: A personality disorder is a diagnostic category that requires assessment, not an accusation.
+- **A.** Any episode of absorption or feeling detached is sufficient to identify a dissociative disorder.
+  - Feedback: Dissociative experiences can occur without a disorder; persistence, impairment, context and alternative causes matter.
+- **B.** Dissociation should be attributed to trauma only after the client describes a single severe event.
+  - Feedback: Dissociative experiences have multiple possible contexts and causes; a specific single-event trauma history is not required.
+- **C.** Dissociative experiences vary in intensity; everyday absorption alone is not a diagnosis. **✓ Correct**
+  - Feedback: Absorption can be relatively common. Clinically significant dissociation requires careful assessment of phenomenology, impact, safety and differential causes.
 
 ### 33. A client describes mood shifts over hours during conflict. What is needed?
 
@@ -404,14 +404,14 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
 - **D.** The category associated with the most common disorder in that age group.
   - Feedback: Base rates can inform the differential, but cannot substitute for individual evidence.
 
-### 43. A person avoids social gatherings. Which set explicitly includes clinical and non-clinical explanations?
+### 43. After a bereavement, a client reports headaches and fatigue. Their community often expresses grief through physical symptoms. What should the assessor do?
 
-- **A.** Social fear, sensory demands, depressed mood, safety concerns, and preference. **✓ Correct**
-  - Feedback: Avoidance may reflect different mechanisms, including an informed preference rather than a disorder.
-- **B.** Social anxiety and avoidant personality patterns, with minimal contextual inquiry.
-  - Feedback: Both may belong in a differential, but this omits important non-disorder and contextual possibilities.
-- **C.** Depression and social anxiety, since both can reduce participation in groups.
-  - Feedback: These are plausible possibilities but too narrow without asking about the person's experience and context.
+- **A.** Prioritize a somatic symptom diagnosis if the client does not initially describe sadness.
+  - Feedback: Physical symptoms alone do not establish that diagnosis, and the absence of stated sadness does not make a medical assessment unnecessary.
+- **B.** Treat the symptoms primarily as a customary grief response unless they become disabling.
+  - Feedback: Cultural meaning is important but cannot replace assessment for medical or other relevant causes of headache and fatigue.
+- **C.** Explore the client's meaning and cultural context while assessing relevant medical causes. **✓ Correct**
+  - Feedback: A culturally responsive inquiry attends to the client's account, functioning and beliefs without prematurely medicalizing or dismissing symptoms.
 
 ### 44. Why does the age or developmental history matter?
 
@@ -505,14 +505,14 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
 - **C.** Advise a sedative pause to see if the withdrawal symptoms go away.
   - Feedback: Abrupt cessation of some sedatives is dangerous; prescriber-guided assessment is important.
 
-### 54. Which statement about opioid use disorder treatment is accurate?
+### 54. A client receiving prescribed methadone for opioid use disorder says a coworker told them they are “not really in recovery.” What response is most appropriate?
 
-- **A.** Use counseling instead of medications when the client has strong personal motivation.
-  - Feedback: Motivation can support counseling but does not replace the evidence for medication treatment in OUD.
-- **B.** Buprenorphine or methadone can be part of effective OUD care. **✓ Correct**
-  - Feedback: Evidence-based medication treatment can reduce harms; selection and additional supports are individualized.
-- **C.** Use naloxone for ongoing maintenance treatment and reserve medication for overdoses.
-  - Feedback: Naloxone is emergency overdose reversal, not ongoing OUD maintenance treatment.
+- **A.** Explain that medication is evidence-based treatment and invite the client to define recovery goals. **✓ Correct**
+  - Feedback: Methadone can be effective OUD treatment. Support the client's preferences and recovery goals without accepting stigmatizing claims about medication.
+- **B.** Explore tapering so treatment can eventually meet the coworker's definition of recovery.
+  - Feedback: A coworker's judgment is not a clinical reason to change effective treatment; tapering decisions require patient-centered qualified care.
+- **C.** Recommend keeping the medication secret so coworkers cannot question their recovery.
+  - Feedback: The client's privacy choices deserve respect, but secrecy alone does not address stigma or provide accurate treatment information.
 
 ## Lesson 8: Two case studies
 
@@ -639,16 +639,16 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
 - **C.** Review the history, current pattern, and competing explanations. **✓ Correct**
   - Feedback: Changes warrant reassessment, not automatic retention or rejection of an earlier diagnosis.
 
-### 68. An assessor has only a brief visit, inconsistent reports, and no developmental history. Which limitation most directly prevents a well-supported diagnostic conclusion?
+### 68. A trainee observes persistent worry but has not assessed sleep, medical contributors, or the full duration of symptoms. Which case note is most defensible?
 
-- **A.** Important information is missing or conflicting, so the available evidence cannot yet support a confident conclusion. **✓ Correct**
-  - Feedback: Missing corroborating history and limited observations restrict justified conclusions.
-- **B.** The criteria listed in the diagnostic manual need to be matched against the limited available interview.
-  - Feedback: Diagnostic criteria matter, but matching them against an incomplete or inconsistent history cannot establish what actually occurred.
-- **C.** Using precise symptom terminology can compensate for some gaps in collateral information.
-  - Feedback: Precise language improves documentation but cannot replace missing longitudinal and corroborating evidence.
-- **D.** The absence of a standardized measure, even when a full interview is otherwise available.
-  - Feedback: Measures can add evidence, but their absence is not universally decisive; the question is adequacy of the entire assessment.
+- **A.** Generalized anxiety disorder confirmed; additional medical screening can follow treatment planning.
+  - Feedback: The available information does not establish the required symptom course, criteria, or relevant alternative explanations.
+- **B.** Anxiety symptoms noted; diagnostic impression remains provisional pending course and differential assessment. **✓ Correct**
+  - Feedback: State what was observed and which data are missing rather than presenting a diagnosis as confirmed.
+- **C.** Unspecified anxiety concerns without a need for further history because the main symptom is clear.
+  - Feedback: A broad symptom description may be appropriate, but missing course and differential information still requires follow-up.
+- **D.** Diagnostic certainty can be established using the current anxiety checklist score alone.
+  - Feedback: A checklist score may guide further assessment but cannot substitute for the missing symptom course and medical or sleep differential.
 
 ## Lesson 10: Diagnosis, identity & self-knowledge
 
