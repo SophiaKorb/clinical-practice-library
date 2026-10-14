@@ -32,7 +32,7 @@ def main():
     }
     expected=dict(case_titles=33,case_step_bodies=132,concept_map_nodes=45,
                   concept_map_explanations=45,glossary_terms=33,glossary_definitions=33,
-                  quiz_stems=80,quiz_options=249,Maya_Eli_context=6)
+                  quiz_stems=80,quiz_options=253,Maya_Eli_context=6)
     findings={}
     for name,elements in groups.items():
         assert len(elements)==expected[name],(name,len(elements),expected[name])
