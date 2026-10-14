@@ -304,7 +304,7 @@ def add_additional_item(el,story):
     if "lesson-footer" in cls:
         return
     if "safety-note" in cls:
-        story.append(box([P(xml_escape(text(el)),"small")],SEA,pad=10))
+        story.append(box([P(xml_escape(text(el)),"callout")],SEA,pad=14))
         return
     if "sud-severity" in cls:
         story.append(P("Severity thresholds (number of applicable criteria)","h3"))
@@ -366,7 +366,7 @@ def add_body_item(el,story):
                     if head:story.append(P(markup(head),"h3"))
                     if body:story.append(plain_para(body,"small"))
         elif "example" in classes and "worked-example" not in classes:
-            story.append(box([P(xml_escape(text(el)),"small")],PALE,pad=10))
+            story.append(box([P(xml_escape(text(el)),"callout")],PALE,pad=14))
         elif "expand-group" in classes:
             story.append(P("Further explanation","h2"))
             for dt in el.select("details.expand"):
@@ -375,7 +375,7 @@ def add_body_item(el,story):
                 for p in dt.find_all("p",recursive=False):
                     story.append(plain_para(p,"small"))
         elif "key-takeaways" in classes:
-            story.append(P(xml_escape(text(el)),"small"))
+            story.append(box([P(xml_escape(text(el)),"callout")],SEA,pad=14))
         elif "quiz-case-context" in classes or "practice-context" in classes:
             story.append(P(xml_escape(text(el)),"small"))
         else:
