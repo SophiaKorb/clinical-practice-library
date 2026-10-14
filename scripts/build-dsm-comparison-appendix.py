@@ -50,89 +50,161 @@ def register_fonts():
     pdfmetrics.registerFontFamily("Text",normal="Text",bold="TextBold",italic="TextItalic")
 
 def draw_atlas(output:Path,offset:int,appendix:bool):
+    """Two-page, actual overlapping-circle comparison spreads for all ten pairs.
+
+    Each pair has a full-size Venn diagram, readable diagnostic definitions,
+    then evidence, shared features, investigation bullets and 3 writing columns.
+    Circle area is conceptual, not symptom prevalence or diagnostic probability.
+    """
     c=canvas.Canvas(str(output),pagesize=(W,H),pageCompression=1)
     c.setTitle("DSM Foundations — Appendix C Diagnostic Comparison Atlas" if appendix else "DSM Diagnostic Comparison Atlas — Standalone Review")
     c.setAuthor("Sophia Korb Cohon, PhD")
-    c.setSubject("Educational differential diagnosis; clinical review required")
-    def line(x1,y,x2,color=LINE,width=.75):
+    c.setSubject("Educational differential diagnosis; specialist clinical review still required")
+    def rule(x1,y,x2,color=LINE,width=.8):
         c.setStrokeColor(color);c.setLineWidth(width);c.line(x1,y,x2,y)
     def text(value,x,y,font="Text",size=11,color=INK):
-        c.setFillColor(color);c.setFont(font,size);c.drawString(x,y,value)
+        c.setFillColor(color);c.setFont(font,size);c.drawString(x,y,str(value))
     def label(value,x,y,size=9,color=WINE):
         text(value,x,y,"SansBold",size,color)
-    def para(value,x,y,width,font="Text",size=10.8,leading=16.5,maxheight=120,color=INK):
+    def paragraph(value,x,y,width,font="Text",size=10.8,leading=16.5,limit=150,color=INK):
         st=ParagraphStyle("flow",fontName=font,fontSize=size,leading=leading,textColor=color)
-        p=Paragraph(escape(value),st);_,height=p.wrap(width,maxheight)
-        if height>maxheight:raise RuntimeError(f"Too much content for {font}: {value[:45]}")
-        p.drawOn(c,x,y-height);return y-height
-    def title(value,y=668):
-        size=27
-        if pdfmetrics.stringWidth(value,"DisplayBold",size)<=515:
-            text(value,48,y,"DisplayBold",size);return y-23
-        lines=simpleSplit(value,"DisplayBold",24,510)
-        for i,part in enumerate(lines):
-            text(part,48,y-28*i,"DisplayBold",24)
-        return y-28*(len(lines)-1)-23
-    def header(kicker,num):
-        label("DSM FOUNDATIONS / APPENDIX C" if appendix else "DSM FOUNDATIONS",48,750,9.5)
-        c.setFont("Sans",9);c.setFillColor(MUTED)
+        p=Paragraph(escape(str(value)),st)
+        _,height=p.wrap(width,500)
+        if height>limit:raise RuntimeError(f"Text exceeds reserved space ({height}>{limit}): {str(value)[:60]}")
+        p.drawOn(c,x,y-height)
+        return y-height
+    def bullets(values,x,y,width,fontsize=9.6,leading=14.1,gap=4):
+        for value in values:
+            c.setFillColor(WINE);c.circle(x+4,y-7,2.0,stroke=0,fill=1)
+            bottom=paragraph(value,x+15,y,width-18,size=fontsize,leading=leading,limit=90)
+            y=bottom-gap
+        return y
+    def heading(value,y=674):
+        if pdfmetrics.stringWidth(value,"DisplayBold",25.5)<508:
+            text(value,48,y,"DisplayBold",25.5)
+            return y-25.5
+        pieces=simpleSplit(value,"DisplayBold",22.8,508)
+        for i,part in enumerate(pieces):
+            text(part,48,y-27*i,"DisplayBold",22.8)
+        return y-27*(len(pieces)-1)-26
+    def footer(kicker,num):
+        label("DSM FOUNDATIONS / APPENDIX C" if appendix else "DSM FOUNDATIONS",48,750,9.2)
+        c.setFont("Sans",8.5);c.setFillColor(MUTED)
         c.drawRightString(564,750,"DIAGNOSTIC COMPARISON ATLAS")
-        line(48,735,564,WINE,1.2);line(48,49,564)
-        text("CLINICAL PRACTICE LIBRARY / EDUCATIONAL EDITION",48,33,"Sans",8.1,MUTED)
+        rule(48,735,564,WINE,1.15)
+        rule(48,48,564)
+        text("CLINICAL PRACTICE LIBRARY / EDUCATIONAL EDITION",48,32,"Sans",8,MUTED)
         c.setFillColor(WINE);c.setFont("SansBold",9)
-        c.drawRightString(564,33,str(num+offset))
-        label(kicker,48,711,9.2)
-    def writing_line(x1,x2,y):
-        line(x1,y,x2,HexColor("#bdb6b1"),.53)
-    header("COMPANION REFERENCE / OCTOBER 2026" if appendix else "PRINT REVIEW / OCTOBER 2026",1)
-    if appendix:label("APPENDIX C",48,684,11)
-    text("Diagnostic",48,625,"DisplayBold",40)
-    text("Comparison Atlas",48,580,"DisplayBold",36)
-    line(48,560,141,WINE,2.5)
-    para("Two conditions. One clear clinical question.",48,525,490,"Display",19,26,60,WINE)
-    para("A reference for examining distinguishing patterns, shared features, and the evidence still needed.",48,455,510,"Text",12.6,22,90)
-    label("INSIDE THIS VOLUME",48,350,10);line(48,339,564)
-    for i,p in enumerate(PAIRS):
-        x=48 if i<5 else 316
-        y=312-42*(i%5)
-        label(f"{i+1:02d}",x,y,9)
-        parts=simpleSplit(p["a"]+" / "+p["b"],"Sans",8.6,210)
-        for j,part in enumerate(parts[:2]):text(part,x+30,y-11*j,"Sans",8.6)
-    para("For clinical education only. Verify complete DSM-5-TR criteria, longitudinal history, impairment, exclusions, safety and possible co-occurrence before diagnostic conclusions.",48,88,505,"Sans",8.7,13.5,45,MUTED)
-    c.showPage()
-    for i,p in enumerate(PAIRS,1):
-        header(f"COMPARISON {i:02d} OF 10",i+1)
-        end=title(p["a"]+" / "+p["b"])
-        coltop=min(end-25,596)
-        label("01 / "+p["a"].upper(),48,coltop,8.8)
-        label("02 / "+p["b"].upper(),318,coltop,8.8)
-        line(48,coltop-11,564)
-        c.setFillColor(CREAM)
-        c.rect(48,coltop-150,246,129,fill=1,stroke=0)
-        c.rect(318,coltop-150,246,129,fill=1,stroke=0)
-        para(p["a_text"],62,coltop-33,220,"Text",10.7,16.8,104)
-        para(p["b_text"],331,coltop-33,220,"Text",10.7,16.8,104)
-        y=coltop-182
-        label("WHERE PRESENTATIONS OVERLAP",48,y,8.9)
-        para(p["overlap"],48,y-16,511,"Text",10.8,16.7,63)
-        y=y-92
-        label("THE DISTINGUISHING QUESTION",48,y,8.9)
-        para(p["question"],48,y-16,515,"Text",10.7,16.7,95)
-        ws=y-125
-        line(48,ws+16,564)
-        label("CLINICAL REASONING / THREE-PART WORKSPACE",48,ws,8.7)
+        c.drawRightString(564,32,str(offset+num))
+        label(kicker,48,712,9.0)
+    def circle_text(lines,x,y,side=False):
+        for i,line in enumerate(lines):
+            width=pdfmetrics.stringWidth(line,"SansBold",10.6)
+            if width>108:raise RuntimeError("Venn label too long: "+line)
+            c.setFont("SansBold",10.6);c.setFillColor(INK)
+            c.drawCentredString(x,y-i*15.7,line)
+    def venn(p):
+        # Two genuine overlapping circles; the intersection is a shared zone.
+        # Meaning resides in the words and outline, not in any relative area.
+        c.saveState()
+        c.setFillColor(HexColor("#f3e7e8"))
+        c.setStrokeColor(WINE);c.setLineWidth(1.45)
+        c.circle(237,435,131,stroke=1,fill=1)
+        c.setFillColor(HexColor("#e7edf0"))
+        c.setStrokeColor(HexColor("#36596b"))
+        c.circle(375,435,131,stroke=1,fill=1)
+        c.restoreState()
+        label("DISTINCTIVE",137,498,8.3)
+        label("SHARED",286,498,8.3)
+        label("DISTINCTIVE",409,498,8.3)
+        circle_text(p["venn_unique_a"],170,448)
+        circle_text(p["venn_shared"],306,447)
+        circle_text(p["venn_unique_b"],444,448)
+        text("Schematic only; circle sizes do not indicate prevalence, likelihood or symptom counts.",
+             66,291,"Sans",8.3,MUTED)
+    def workspace(y):
+        rule(48,y+14,564)
+        label("CLINICAL REASONING / WRITING WORKSPACE",48,y,8.8)
         edges=(48,220,392,564)
         for x in edges[1:-1]:
-            c.setStrokeColor(LINE);c.setLineWidth(.7);c.line(x,ws-3,x,55)
-        prompts=(("01 / SUPPORTS","Evidence for each hypothesis"),("02 / AGAINST","Evidence that contradicts"),("03 / MISSING","What still needs checking"))
-        for k,(heading,prompt) in enumerate(prompts):
-            x1,x2=edges[k],edges[k+1]
-            label(heading,x1+6,ws-22,8.3)
-            text(prompt,x1+6,ws-38,"Sans",8.0,MUTED)
-            for j in range(4):writing_line(x1+6,x2-10,ws-60-j*21)
+            rule(x,y-4,56)
+        zones=(("01 / SUPPORTS","Evidence for each hypothesis"),
+               ("02 / AGAINST","Evidence that contradicts"),
+               ("03 / MISSING","What still needs checking"))
+        for i,(title,prompt) in enumerate(zones):
+            x1,x2=edges[i],edges[i+1]
+            label(title,x1+6,y-22,8.3)
+            text(prompt,x1+6,y-38,"Sans",8.0,MUTED)
+            for j in range(3):
+                rule(x1+6,y-60-j*23,x2-9,HexColor("#c6bfba"),.5)
+
+    # Front divider and reference index. Name is intentionally not repeated.
+    footer("COMPANION REFERENCE / OCTOBER 2026" if appendix else "PRINT REVIEW / OCTOBER 2026",1)
+    if appendix:label("APPENDIX C",48,687,10.5)
+    text("Diagnostic",48,629,"DisplayBold",39)
+    text("Comparison Atlas",48,583,"DisplayBold",34)
+    rule(48,560,149,WINE,2.5)
+    paragraph("Definitions, distinctive clinical features and meaningful overlap.",
+              48,540,512,"Display",16.7,22,54,WINE)
+    paragraph("Each pair has a Venn overview and a companion evidence sheet. The circles are conceptual, not a diagnostic score.",
+              48,481,512,"Text",11.8,20,60)
+    label("CONTENTS / STARTING PAGES",48,365,9.8)
+    rule(48,354,564)
+    for i,p in enumerate(PAIRS):
+        x=48 if i<5 else 314
+        y=329-42*(i%5)
+        label(f"{i+1:02d}",x,y,8.7)
+        parts=simpleSplit(p["a"]+" / "+p["b"],"Sans",8.2,193)
+        for j,part in enumerate(parts[:2]):
+            text(part,x+27,y-11*j,"Sans",8.2)
+        c.setFont("SansBold",8.2);c.setFillColor(WINE)
+        c.drawRightString(x+242,y,str(offset+2+2*i))
+    paragraph("Educational reference only; use current authorized DSM-5-TR criteria and qualified assessment. These diagrams are not diagnostic instruments.",
+              48,91,506,"Sans",8.5,13.2,41,MUTED)
+    c.showPage()
+
+    for number,p in enumerate(PAIRS,1):
+        # Page 1: diagnostic definitions and literal overlapping circles.
+        footer(f"COMPARISON {number:02d} OF 10 / OVERVIEW",2+2*(number-1))
+        titlebottom=heading(p["a"]+" / "+p["b"])
+        if titlebottom<585:raise RuntimeError("Heading intrudes into Venn graphic")
+        venn(p)
+        label("DIAGNOSTIC DEFINITION",48,270,9.0)
+        rule(48,259,564)
+        label("01 / "+p["a"].upper(),48,242,8.2)
+        label("02 / "+p["b"].upper(),318,242,8.2)
+        left=paragraph(p["a_text"],48,229,242,size=10.3,leading=15.2,limit=155)
+        right=paragraph(p["b_text"],318,229,242,size=10.3,leading=15.2,limit=155)
+        if min(left,right)<73:raise RuntimeError(f"Definition approaches footer: {number}")
         c.showPage()
-    header("DIFFERENTIAL ASSESSMENT / CHECKLIST",12)
-    title("Before choosing a diagnosis",671)
+
+        # Page 2: readable bullet-points, evidence caveats and writing space.
+        footer(f"COMPARISON {number:02d} OF 10 / CLINICAL DIFFERENTIAL",3+2*(number-1))
+        heading("What distinguishes these conditions?",678)
+        label("01 / "+p["a"].upper(),48,620,8.8)
+        label("02 / "+p["b"].upper(),318,620,8.8)
+        rule(48,610,564)
+        left=bullets(p["a_bullets"],48,590,239,9.5,13.7,4)
+        right=bullets(p["b_bullets"],318,590,243,9.5,13.7,4)
+        if min(left,right)<414:
+            raise RuntimeError(f"Distinguishing bullets need more height for pair {number}: {left},{right}")
+        rule(48,407,564)
+        label("MEANINGFUL OVERLAP",48,392,8.8)
+        y=bullets(p["shared_bullets"],48,379,511,9.55,13.7,3)
+        if y<319:raise RuntimeError(f"Overlap section overflows: {number}")
+        label("WHAT TO INVESTIGATE",48,313,8.8)
+        y=bullets(p["investigate_bullets"],48,300,511,9.45,13.7,2.5)
+        if y<204:raise RuntimeError(f"Investigation section overflows: {number}, {y}")
+        # Caveat remains outside and readable, separate from the diagram.
+        c.setFillColor(HexColor("#f8f1ed"))
+        c.roundRect(48,169,516,35,5,stroke=0,fill=1)
+        paragraph("CLINICAL CAUTION: "+p["caution"],58,195,496,
+                  font="Sans",size=8.8,leading=11.8,limit=30,color=INK)
+        workspace(150)
+        c.showPage()
+
+    footer("DIFFERENTIAL ASSESSMENT / CHECKLIST",22)
+    heading("Before choosing a diagnosis",669)
     checks=[
         ("SYMPTOMS","Document the actual experiences and observations, not only checklist words."),
         ("TIMING","Identify onset, duration, developmental course, episodes, and baseline."),
@@ -143,28 +215,33 @@ def draw_atlas(output:Path,offset:int,appendix:bool):
         ("SAFETY","Address urgent needs using appropriate assessment and referral protocols."),
         ("CRITERIA","Verify full DSM-5-TR criteria, specifiers, coding guidance, and current updates."),
     ]
-    for j,(heading,body) in enumerate(checks):
-        y=600-j*67
+    for i,(head,body) in enumerate(checks):
+        y=600-i*67
         c.setStrokeColor(WINE);c.setLineWidth(.9);c.rect(48,y-13,12,12,stroke=1,fill=0)
-        label(heading,76,y-2,9);para(body,76,y-10,476,"Text",10.4,15,44)
-        line(76,y-30,564)
+        label(head,76,y-2,9)
+        paragraph(body,76,y-10,476,size=10.4,leading=15,limit=44)
+        rule(76,y-30,564)
     c.showPage()
-    header("SOURCES AND LIMITS / REVIEW COPY",13)
-    title("Clinical sources & limits")
+    footer("SOURCES AND LIMITS / REVIEW COPY",23)
+    heading("Clinical sources and limits")
     sources=[
-        ("American Psychiatric Association","DSM-5-TR (2022) and current criteria/code updates — consult authorized text."),
-        ("NIMH","OCD: obsessions and/or compulsions; bipolar disorder: episodes and lifetime course."),
-        ("Merck Manual Professional","OCPD: pervasive perfectionism/order/control and impairment; distinguish from OCD."),
-        ("SAMHSA / professional guidelines","For substance use, safety, assessment, and management beyond this atlas."),
+        ("American Psychiatric Association","DSM-5-TR (2022); verify authorized criteria and current updates."),
+        ("NIMH / BIPOLAR DISORDER","www.nimh.nih.gov/health/publications/bipolar-disorder"),
+        ("MERCK MANUAL PROFESSIONAL / BIPOLAR","www.merckmanuals.com/professional/psychiatric-disorders/mood-disorders/bipolar-disorders"),
+        ("MERCK MANUAL PROFESSIONAL / OCPD","www.merckmanuals.com/professional/psychiatric-disorders/personality-disorders/obsessive-compulsive-personality-disorder-ocpd"),
     ]
-    for j,(heading,body) in enumerate(sources):
-        y=595-j*87
-        label(heading.upper(),48,y,9.7);para(body,48,y-16,514,"Text",11,17.5,65)
-        line(48,y-57,564)
-    label("BOUNDARIES OF THIS REFERENCE",48,225,9.7)
-    para("The summary panels simplify multidimensional diagnostic reasoning. They are not exact or exhaustive DSM criteria, do not assign likelihoods, and do not determine whether an individual meets a diagnosis. Editorial review does not equal independent clinical validation.",48,205,515,"Text",10.8,18,105)
-    para("Designed for duplex or single-sided US Letter printing. Grayscale-compatible rules and text labels distinguish the two conditions without relying on color alone.",48,112,515,"Sans",9.4,15,50,MUTED)
-    c.showPage();c.save()
+    for i,(head,body) in enumerate(sources):
+        y=599-i*83
+        label(head,48,y,8.7)
+        paragraph(body,48,y-15,513,size=10.0,leading=16,limit=63)
+        rule(48,y-56,564)
+    label("CLINICAL BOUNDARIES",48,223)
+    paragraph("These comparison sheets summarize selected differential questions rather than exhaustive diagnostic criteria. They are not screening instruments, severity scales, probabilities or independent validation. Use longitudinal history, medical/substance exclusions, safety assessment and the current authorized DSM-5-TR.",
+              48,206,514,size=10.4,leading=17,limit=101)
+    paragraph("Educational editorial review only. Specialist clinical and accessibility approval outstanding.",
+              48,104,514,font="Sans",size=9.3,leading=15,limit=39,color=MUTED)
+    c.showPage()
+    c.save()
 
 def set_numbered_contents(page, entries):
     """Typeset an accurate, fully clickable contents/index page from actual PDF destinations.
@@ -265,14 +342,17 @@ def combine():
     draw_atlas(SINGLE,0,False)
     draw_atlas(APPENDIX,n,True)
     append=fitz.open(APPENDIX)
-    assert len(append)==13
+    assert len(append)==23
     entries=original.get_toc()
     original.insert_pdf(append)
     entries.append([1,"Appendix C — Full Diagnostic Comparison Atlas",n+1])
     for idx,p in enumerate(PAIRS,1):
-        entries.append([2,f"{idx:02d}. {p['a']} / {p['b']}",n+1+idx])
-    entries.extend([[2,"Differential assessment checklist",n+12],
-                    [2,"Clinical sources and limits",n+13]])
+        intro=n+2+2*(idx-1)
+        entries.append([2,f"{idx:02d}. {p['a']} / {p['b']} — Venn overview",intro])
+        entries.append([3,"Definitions and shared / distinctive features",intro])
+        entries.append([3,"Clinical differential and three-part workspace",intro+1])
+    entries.extend([[2,"Differential assessment checklist",n+22],
+                    [2,"Clinical sources and limits",n+23]])
     original.set_toc(entries)
     indexed_rows=set_numbered_contents(original[1],entries)
     metadata={**original.metadata,"title":"DSM Foundations — Complete with Diagnostic Comparison Atlas","author":"Sophia Korb Cohon, PhD","subject":"Educational print-review edition with complete ten-pair appendix"}
@@ -280,18 +360,25 @@ def combine():
     original.save(OUT,garbage=4,deflate=True)
     original.close();append.close()
     check=fitz.open(OUT)
-    assert len(check)==n+13
+    assert len(check)==n+23
     assert all(round(x.rect.width)==612 and round(x.rect.height)==792 for x in check)
     assert all(s in check[n].get_text() for s in ["APPENDIX C","Comparison Atlas"])
     assert sum("Sophia Korb Cohon, PhD" in page.get_text() for page in check)==1
-    assert sum("CLINICAL REASONING / THREE-PART WORKSPACE" in check[n+i].get_text() for i in range(1,11))==10
-    for i in range(1,11):
-        content=check[n+i].get_text()
-        for marker in ["SUPPORTS","AGAINST","MISSING"]:
-            assert marker in content,(i,marker)
-        for part in ["a_text","b_text","overlap","question"]:
-            norm=lambda s:re.sub(r"\W+","",s).casefold()
-            assert norm(PAIRS[i-1][part]) in norm(content),(i,part)
+    assert sum("CLINICAL REASONING / WRITING WORKSPACE" in check[n+2+2*i].get_text() for i in range(10))==10
+    for i in range(10):
+        p=PAIRS[i]
+        overview=check[n+1+2*i].get_text()
+        clinical=check[n+2+2*i].get_text()
+        def norm(value):return re.sub(r"\W+","",value).casefold()
+        for field in ("a_text","b_text"):
+            assert norm(p[field]) in norm(overview),(i+1,field)
+        for label_line in p["venn_unique_a"]+p["venn_unique_b"]+p["venn_shared"]:
+            assert label_line in overview,("Missing Venn label",i+1,label_line)
+        for field in ("a_bullets","b_bullets","shared_bullets","investigate_bullets"):
+            for value in p[field]:
+                assert norm(value) in norm(clinical),("Lost clinical bullet",i+1,field,value)
+        for marker in ("SUPPORTS","AGAINST","MISSING","WHAT TO INVESTIGATE"):
+            assert marker in clinical,(i+1,marker)
     assert len(check.get_toc())==len(entries)
     # Every visible index number and every PDF link must target the matching bookmark.
     index_page=check[1]
@@ -307,10 +394,10 @@ def combine():
         for x0,y0,x1,y1,word,*_ in page.get_text("words"):
             if x0<33 or y0<13 or x1>580 or y1>779:
                 raise RuntimeError(f"Text outside page {pi+1}: {word}")
-    manifest={"pages":len(check),"foundations_pages":n,"appendix_pages":13,
-              "comparisons":10,"three_part_workspaces":10,
+    manifest={"pages":len(check),"foundations_pages":n,"appendix_pages":23,
+              "comparisons":10,"three_part_workspaces":10,"venn_diagrams":10,"pages_per_comparison":2,
               "appendix_start":n+1,"appendix_label":"Appendix C",
-              "original_bookmarks":len(entries)-13,"total_bookmarks":len(entries),
+              "original_bookmarks":len(original.get_toc())-32,"total_bookmarks":len(entries),
               "source":"scripts/data/dsm-comparison-atlas-pairs.json",
               "release":"Review only; clinical specialist and PDF/UA signoff outstanding"}
     (BUILD/"dsm-foundations-with-atlas-manifest.json").write_text(json.dumps(manifest,indent=2)+"\n")
