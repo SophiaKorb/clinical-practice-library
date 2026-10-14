@@ -466,8 +466,8 @@ def build():
     for n,title in enumerate(titlemap,1):
         book.append(P(f"{n:02d}  {xml_escape(title)}","contents"))
     book.append(Spacer(1,6))
-    book.append(P("Appendix A  /  Full vocabulary (33 concepts)","contents"))
-    book.append(P("Appendix B  /  Reusable assessment and documentation worksheet","contents"))
+    book.append(P("Appendix B  /  Full vocabulary (33 concepts)","contents"))
+    book.append(P("Appendix C  /  Reusable assessment and documentation worksheet","contents"))
     book.append(P("Practice  /  Questions 1–80 with response space","contents"))
     book.append(P("Instructor  /  Answer key 1–80 with explanations","contents"))
     book.append(P("Method: Explore the information → Apply the concept → Recall what would change your conclusion.","small"))
@@ -476,7 +476,7 @@ def build():
         title,count=add_chapter(sec,i,book,count)
         chapters.append(dict(number=i,title=title,cases=len(sec.select(".worked-example")),questions=len(sec.select(".check[data-quiz]"))))
     # Do not force an empty interstitial sheet when the final chapter exactly fills a page.
-    book.append(bookmark(P("Appendix A  /  Full vocabulary","h1"),"vocabulary"))
+    book.append(bookmark(P("Appendix B  /  Full vocabulary","h1"),"vocabulary"))
     for ent in vocab:
         dt=ent.find("dt")
         dd=ent.find("dd")
@@ -484,7 +484,7 @@ def build():
         book.append(P(xml_escape(text(dt)),"h3"))
         book.append(plain_para(dd,"body"))
     book.append(PageBreak())
-    book.append(bookmark(P("Appendix B  /  Working assessment worksheet","h1"),"worksheet"))
+    book.append(bookmark(P("Appendix C  /  Working assessment worksheet","h1"),"worksheet"))
     book.append(P("Use this reusable page to describe the reported concern and the evidence without treating one symptom, label, or successful task as a settled diagnosis.","body"))
     for section in [
         "1. Person's own description of the concern",
