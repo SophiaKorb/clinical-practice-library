@@ -1,87 +1,293 @@
 {
-  "edition": "October 2026",
+  "edition": "October 2026 — expanded Venn spread review",
   "source": "Authored DSM Diagnosis Comparer Redesigned Clinical Review PDF, 13-page prior candidate; wording kept intact.",
-  "clinical_status": "Educational review candidate; qualified specialist approval pending",
+  "clinical_status": "Educational editorial review; specialist DSM-5-TR criterion-by-criterion approval outstanding.",
   "pairs": [
     {
       "a": "OCD",
       "b": "OCPD",
-      "a_text": "Obsessions and/or compulsions, including mental rituals; time-consuming or distressing/impairing. Insight can vary.",
-      "b_text": "Pervasive preoccupation with order, perfectionism, and control at the expense of flexibility or efficiency.",
+      "a_text": "OCD involves obsessions and/or compulsions that are time-consuming or cause clinically significant distress or impairment. Compulsions may be overt or mental.",
+      "b_text": "OCPD is a pervasive pattern of preoccupation with orderliness, perfectionism, and control that compromises flexibility, efficiency, or interpersonal functioning.",
       "overlap": "Repetition, attention to detail, and functional interference can occur in either condition.",
-      "question": "Ask about intrusive thoughts, urges, mental or overt rituals, insight, chronic rules, delegated tasks, and interpersonal effects. Neither condition excludes the other."
+      "question": "Ask about intrusive thoughts, urges, mental or overt rituals, insight, chronic rules, delegated tasks, and interpersonal effects. Neither condition excludes the other.",
+      "a_bullets": [
+        "Intrusive thoughts, urges, images and/or repetitive acts; mental rituals count.",
+        "Symptoms may be unwanted, but insight can range from good to absent.",
+        "Look for symptom function, time cost and impairment."
+      ],
+      "b_bullets": [
+        "Rule-driven perfectionism and rigidity extend across contexts.",
+        "Overcontrol may impair delegation, task completion or relationships.",
+        "Typically a longstanding personality pattern, not isolated rituals."
+      ],
+      "shared_bullets": [
+        "Repetition, checking, details and functional interference can occur in both.",
+        "Co-occurrence is possible; these are different disorders."
+      ],
+      "investigate_bullets": [
+        "What motivates each repeated action: intrusive experience, fear, or fixed standards?",
+        "Ask about mental compulsions, onset, insight, time demands and interpersonal consequences.",
+        "Evaluate both diagnoses separately; do not infer either from tidiness."
+      ],
+      "caution": "Neither OCD nor OCPD can be diagnosed by neatness, perfectionism or a single habit."
     },
     {
       "a": "ADHD",
       "b": "Generalized anxiety disorder",
-      "a_text": "Persistent developmental pattern of inattention and/or hyperactivity–impulsivity with clinically significant impact.",
-      "b_text": "Difficult-to-control worry about multiple domains with associated symptoms and clinically significant impact.",
+      "a_text": "ADHD is a neurodevelopmental pattern of inattention and/or hyperactivity-impulsivity beginning in childhood, with symptoms in multiple settings and functional impact.",
+      "b_text": "GAD involves excessive, difficult-to-control worry across multiple life domains on most days for at least six months, with associated symptoms and impairment.",
       "overlap": "Restlessness, distractibility, sleep-related concerns, and difficulty finishing tasks.",
-      "question": "Establish childhood history and symptom course; compare concentration under low-worry conditions and evaluate sleep, context, and co-occurrence."
+      "question": "Establish childhood history and symptom course; compare concentration under low-worry conditions and evaluate sleep, context, and co-occurrence.",
+      "a_bullets": [
+        "Several symptoms must have been present before age 12.",
+        "Attention and regulation differences span more than periods of anxiety.",
+        "Examine functioning and supports across settings."
+      ],
+      "b_bullets": [
+        "Worry is pervasive, hard to control and involves several concerns.",
+        "Restlessness, fatigue, concentration difficulties and sleep disruption may occur.",
+        "Look for sustained anxiety, physiological symptoms and impairment."
+      ],
+      "shared_bullets": [
+        "Distractibility, restlessness and poor sleep may appear in both.",
+        "ADHD and GAD often co-occur; a snapshot may not clarify the cause."
+      ],
+      "investigate_bullets": [
+        "Trace childhood onset and functioning across school, home and work.",
+        "Compare concentration during low-anxiety periods with high-worry periods.",
+        "Clarify worry content, sleep, medications, substances and alternative causes."
+      ],
+      "caution": "A person can meet criteria for both; neither poor focus nor nervousness alone is diagnostic."
     },
     {
       "a": "Autism spectrum disorder",
       "b": "Social anxiety disorder",
-      "a_text": "Developmental social-communication differences plus restricted/repetitive patterns, including sensory features in some people.",
-      "b_text": "Fear of negative evaluation in social or performance settings, typically associated with avoidance or distress.",
+      "a_text": "Autism involves persistent developmental social-communication differences plus restricted or repetitive patterns of behavior, interests, or sensory experience.",
+      "b_text": "Social anxiety disorder involves marked fear of scrutiny or negative evaluation in social situations, with disproportionate distress, avoidance or impairment.",
       "overlap": "Effortful social interaction, withdrawal, and distress in some situations.",
-      "question": "Explore early communication patterns, sensory needs, masking, fear of scrutiny, and whether both conditions apply."
+      "question": "Explore early communication patterns, sensory needs, masking, fear of scrutiny, and whether both conditions apply.",
+      "a_bullets": [
+        "Developmental differences may be masked and recognized later.",
+        "Restricted or repetitive features are essential to evaluation.",
+        "Social communication, interests and sensory needs vary greatly."
+      ],
+      "b_bullets": [
+        "Fear of embarrassment, rejection or negative evaluation is central.",
+        "Anxiety may be tied to specific social or performance situations.",
+        "There is no requirement for restricted or repetitive developmental traits."
+      ],
+      "shared_bullets": [
+        "Social withdrawal, difficulty with interactions and fatigue can overlap.",
+        "Social anxiety may be present in an autistic person."
+      ],
+      "investigate_bullets": [
+        "Ask about developmental history, communication, interests and sensory needs.",
+        "Distinguish fear of judgment from communication or sensory overload.",
+        "Assess masking, supports, co-occurring anxiety and cultural context."
+      ],
+      "caution": "Avoid assuming social discomfort establishes autism or that autism rules out treatable anxiety."
     },
     {
       "a": "Major depressive disorder",
       "b": "Bipolar II disorder",
-      "a_text": "Major depressive episodes without a history of mania or hypomania after appropriate lifetime assessment.",
-      "b_text": "At least one major depressive episode and at least one hypomanic episode, without mania.",
+      "a_text": "Major depressive disorder involves at least one major depressive episode (at least two weeks) and no history of a qualifying manic or hypomanic episode.",
+      "b_text": "Bipolar II requires at least one major depressive episode (at least two weeks), at least one hypomanic episode (at least four consecutive days), and no manic episode.",
       "overlap": "Major depressive episodes can appear clinically similar at a single visit.",
-      "question": "Examine the lifetime course of mood, increased energy/activity, decreased need for sleep, sustained changes, and collateral history when appropriate."
+      "question": "Examine the lifetime course of mood, increased energy/activity, decreased need for sleep, sustained changes, and collateral history when appropriate.",
+      "a_bullets": [
+        "Depressed mood or loss of interest accompanies other qualifying depressive symptoms.",
+        "A single depressive visit cannot prove the absence of earlier elevated episodes.",
+        "Lifetime history may change a working diagnosis."
+      ],
+      "b_bullets": [
+        "Hypomania includes sustained changes in mood AND energy/activity.",
+        "Hypomanic changes must be observable and not mania-level severe.",
+        "Major depression is required and may dominate the clinical course."
+      ],
+      "shared_bullets": [
+        "Major depressive episodes can look the same at a single encounter.",
+        "Sleep, concentration and suicide risk require assessment in both."
+      ],
+      "investigate_bullets": [
+        "Construct a lifetime timeline of depression and elevated/irritable energy.",
+        "Ask about episodes lasting four days or longer, sleep need and observable changes.",
+        "Evaluate medication, substance and medical explanations; assess safety."
+      ],
+      "caution": "A depressive snapshot cannot distinguish major depressive disorder from bipolar II."
     },
     {
       "a": "Bipolar I disorder",
       "b": "Bipolar II disorder",
-      "a_text": "At least one manic episode; a depressive episode is not necessary for the diagnosis.",
-      "b_text": "At least one hypomanic and one major depressive episode, with no manic history.",
+      "a_text": "Bipolar I requires at least one manic episode: abnormal elevation or irritability plus increased energy/activity lasting at least seven days, or less if hospitalization is required. Depression is not required.",
+      "b_text": "Bipolar II requires at least one hypomanic episode lasting at least four consecutive days AND at least one major depressive episode lasting at least two weeks; there must be no history of mania.",
       "overlap": "Elevated energy/activity, sleep changes, and depressive episodes may occur.",
-      "question": "Evaluate whether a full manic episode occurred, including severity, impairment, psychotic features, hospitalization, and substance/medical effects."
+      "question": "Evaluate whether a full manic episode occurred, including severity, impairment, psychotic features, hospitalization, and substance/medical effects.",
+      "a_bullets": [
+        "Mania causes marked functional impairment, requires hospitalization, or includes psychosis.",
+        "Depressive episodes are common but not essential for the diagnosis.",
+        "Mania must not be better explained by a substance, medication or illness."
+      ],
+      "b_bullets": [
+        "Hypomania is a distinct observable change without marked impairment or psychosis.",
+        "A major depressive episode is required; it can be seriously disabling.",
+        "Any true manic episode excludes a bipolar II diagnosis."
+      ],
+      "shared_bullets": [
+        "Both feature episodic shifts in mood AND energy/activity.",
+        "Sleep-need changes, impulsivity and depressive episodes may overlap.",
+        "Bipolar II is not simply a less serious version of bipolar I."
+      ],
+      "investigate_bullets": [
+        "Date episodes: one week or hospitalization for mania; four days for hypomania.",
+        "Clarify psychosis, hospitalization, marked impairment and two-week depression.",
+        "Review longitudinal collateral, medications, substances and medical explanations."
+      ],
+      "caution": "Neither a short-lived 'high' nor hypomania without a major depressive episode establishes bipolar II."
     },
     {
       "a": "PTSD",
       "b": "Generalized anxiety disorder",
-      "a_text": "Qualifying trauma exposure plus intrusion, avoidance, negative mood/cognition, and arousal/reactivity symptom clusters.",
-      "b_text": "Difficult-to-control worry across multiple domains; no qualifying trauma exposure is required.",
+      "a_text": "PTSD follows a qualifying traumatic exposure and involves symptom clusters including intrusion, avoidance, negative mood/cognition and hyperarousal with duration and impairment.",
+      "b_text": "GAD is persistent, difficult-to-control worry across everyday domains over at least six months, with associated symptoms and impairment, without requiring traumatic exposure.",
       "overlap": "Sleep disturbance, concentration difficulty, vigilance, and anxiety.",
-      "question": "Clarify exposure and trauma-linked intrusion/avoidance versus the breadth and content of worry; evaluate co-occurrence."
+      "question": "Clarify exposure and trauma-linked intrusion/avoidance versus the breadth and content of worry; evaluate co-occurrence.",
+      "a_bullets": [
+        "Establish qualifying exposure before interpreting symptom clusters.",
+        "Intrusions, avoidance and trauma-linked reminders are diagnostically salient.",
+        "Evaluate changes in mood, cognition, arousal and functioning."
+      ],
+      "b_bullets": [
+        "Multiple ongoing topics of worry are characteristic.",
+        "Difficulty controlling worry with somatic/cognitive symptoms is central.",
+        "Specific trauma-related intrusion or avoidance is not necessary."
+      ],
+      "shared_bullets": [
+        "Sleep difficulty, vigilance, restlessness and concentration problems may occur.",
+        "Both conditions can coexist and require context-sensitive assessment."
+      ],
+      "investigate_bullets": [
+        "Map symptom onset against trauma exposure and reminders.",
+        "Ask about intrusion, avoidance and the focus and controllability of worry.",
+        "Consider other trauma-related conditions, medical and sleep causes."
+      ],
+      "caution": "Trauma history alone does not establish PTSD; worry alone does not establish GAD."
     },
     {
       "a": "Borderline personality disorder",
       "b": "Bipolar II disorder",
-      "a_text": "A pervasive pattern involving instability in self-image, relationships, affect regulation, and related features.",
-      "b_text": "Distinct hypomanic and major depressive episodes with characteristic duration and energy/activity changes.",
+      "a_text": "Borderline personality disorder involves an enduring pervasive pattern of instability in relationships, self-image, emotion regulation and impulsivity across contexts.",
+      "b_text": "Bipolar II involves distinct hypomanic episodes (at least four days) AND major depressive episodes (at least two weeks), without a manic episode.",
       "overlap": "Emotional distress, impulsivity, self-harm risk, and depression may be present.",
-      "question": "Assess longitudinal pattern, context, duration, baseline changes, sleep/energy, trauma history, and suicide safety without inferring diagnosis from one crisis."
+      "question": "Assess longitudinal pattern, context, duration, baseline changes, sleep/energy, trauma history, and suicide safety without inferring diagnosis from one crisis.",
+      "a_bullets": [
+        "Interpersonal sensitivity, identity instability and chronic patterns are relevant.",
+        "Emotional changes can be reactive to perceived abandonment or conflict.",
+        "Evaluate onset, context, patterns and safety without stereotyping."
+      ],
+      "b_bullets": [
+        "Episodes differ clearly from baseline and last days to weeks.",
+        "Hypomania includes observable changes in mood and energy/activity.",
+        "Major depressive episodes are required; interpersonal stress may still be relevant."
+      ],
+      "shared_bullets": [
+        "Mood shifts, impulsivity, depression and self-harm risk can appear in both.",
+        "The conditions can coexist and must be assessed independently."
+      ],
+      "investigate_bullets": [
+        "Compare the duration of mood changes and relationship to circumstances.",
+        "Establish sustained elevated-energy episodes, baseline and sleep need.",
+        "Assess trauma, longitudinal relationships, depressive episodes and safety."
+      ],
+      "caution": "An intense emotional crisis is not by itself a bipolar episode or a personality-disorder diagnosis."
     },
     {
       "a": "Panic disorder",
       "b": "Generalized anxiety disorder",
-      "a_text": "Recurrent unexpected panic attacks with persistent concern or maladaptive behavior change.",
-      "b_text": "Persistent, difficult-to-control worry across multiple domains.",
+      "a_text": "Panic disorder involves recurrent unexpected panic attacks followed by persistent concern about additional attacks or maladaptive changes in behavior.",
+      "b_text": "GAD involves excessive and difficult-to-control worry across multiple domains for at least six months, with associated symptoms and impairment.",
       "overlap": "Somatic arousal, apprehension, concentration difficulties, and avoidance.",
-      "question": "Distinguish unexpected panic attacks and attack-related apprehension from pervasive worry; consider health/substance causes."
+      "question": "Distinguish unexpected panic attacks and attack-related apprehension from pervasive worry; consider health/substance causes.",
+      "a_bullets": [
+        "Unexpected panic attacks are a defining feature.",
+        "Fear of future attacks or attack-related avoidance may persist.",
+        "Consider medical, medication and substance-related causes of episodes."
+      ],
+      "b_bullets": [
+        "Worry extends across several situations, not only future panic.",
+        "Physical tension, fatigue, restlessness and sleep changes can occur.",
+        "An unexpected panic attack is not required."
+      ],
+      "shared_bullets": [
+        "Palpitations, arousal, anticipatory anxiety and avoidance can overlap.",
+        "Some people meet criteria for both conditions."
+      ],
+      "investigate_bullets": [
+        "Determine whether panic attacks are unexpected, situational or secondary.",
+        "Identify what is feared between attacks: attacks themselves or broader problems?",
+        "Evaluate time course, medical conditions, stimulants and functioning."
+      ],
+      "caution": "One panic attack does not establish panic disorder; GAD can include panic attacks."
     },
     {
       "a": "ADHD",
       "b": "Autism spectrum disorder",
-      "a_text": "Developmental inattention and/or hyperactivity–impulsivity patterns.",
-      "b_text": "Developmental social-communication differences and restricted/repetitive behaviors.",
+      "a_text": "ADHD is a developmental pattern of inattention and/or hyperactivity-impulsivity with childhood onset, symptoms across contexts and significant impact.",
+      "b_text": "Autism involves persistent social-communication differences plus restricted or repetitive behaviors, interests or sensory experiences from development.",
       "overlap": "Executive-function challenges, social difficulties, and sometimes sensory differences.",
-      "question": "Obtain developmental examples and independent evidence for each defining symptom cluster; both diagnoses may apply."
+      "question": "Obtain developmental examples and independent evidence for each defining symptom cluster; both diagnoses may apply.",
+      "a_bullets": [
+        "Focus on attention, inhibition, organization and activity regulation.",
+        "Symptoms must occur in more than one setting.",
+        "Look for age-appropriate developmental evidence and impairment."
+      ],
+      "b_bullets": [
+        "Both social-communication patterns and restricted/repetitive features matter.",
+        "Routines, interests and sensory processing may be important.",
+        "Needs and presentation vary with masking and supports."
+      ],
+      "shared_bullets": [
+        "Executive-function difficulties, social challenges and sensory concerns may overlap.",
+        "ADHD and autism frequently coexist."
+      ],
+      "investigate_bullets": [
+        "Document independent evidence for each condition's defining criteria.",
+        "Collect early developmental history and examples across contexts.",
+        "Assess language, learning, anxiety, sleep, masking and accommodations."
+      ],
+      "caution": "Neither distractibility nor social awkwardness alone is sufficient for either diagnosis."
     },
     {
       "a": "Major depressive disorder",
       "b": "Persistent depressive disorder",
-      "a_text": "Major depressive episodes with a defined cluster of symptoms and a change in baseline.",
-      "b_text": "Chronic depressed mood with associated symptoms, over a longer time course.",
+      "a_text": "Major depressive disorder requires at least one major depressive episode: two weeks or longer with depressed mood or loss of interest plus additional symptoms and clinical impact.",
+      "b_text": "Persistent depressive disorder involves depressed mood for most of the day on more days than not over at least two years in adults (one year in youth), with associated symptoms.",
       "overlap": "Low mood, fatigue, concentration problems, and impaired functioning.",
-      "question": "Reconstruct the duration, baseline, symptom-free intervals, and superimposed episodes; check full age-specific criteria."
+      "question": "Reconstruct the duration, baseline, symptom-free intervals, and superimposed episodes; check full age-specific criteria.",
+      "a_bullets": [
+        "A qualifying major depressive episode is defined by a particular symptom cluster.",
+        "Episode onset, offset and baseline change are key.",
+        "Recurrent episodes may occur, separated by improvement."
+      ],
+      "b_bullets": [
+        "Chronicity is central; prolonged symptom-free intervals are restricted.",
+        "The chronic course may include full major depressive episodes.",
+        "Ask about onset, continuous symptoms and longstanding impairment."
+      ],
+      "shared_bullets": [
+        "Low mood, poor energy, concentration problems and functional impact overlap.",
+        "Major depressive episodes can occur during persistent depressive disorder."
+      ],
+      "investigate_bullets": [
+        "Reconstruct the longest uninterrupted depressed-mood period.",
+        "Assess two-week major depressive episodes within the longer history.",
+        "Review exclusions, manic/hypomanic history, medical causes and safety."
+      ],
+      "caution": "Persistent depressive disorder is about longitudinal duration; it is not automatically less severe."
     }
+  ],
+  "reference_sources": [
+    "NIMH, Bipolar Disorder: https://www.nimh.nih.gov/health/publications/bipolar-disorder",
+    "Merck Manual Professional, Bipolar Disorders: https://www.merckmanuals.com/professional/psychiatric-disorders/mood-disorders/bipolar-disorders",
+    "Merck Manual Professional, OCPD: https://www.merckmanuals.com/professional/psychiatric-disorders/personality-disorders/obsessive-compulsive-personality-disorder-ocpd"
   ]
 }
