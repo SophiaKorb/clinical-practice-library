@@ -6,11 +6,11 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
 
 ### 1. A librarian groups books by topic to help readers find them, then groups those same books by size to plan shelf space. What does this show?
 
-- **A.** A book must belong to only one group, regardless of why someone is sorting it.
+- **A.** The most useful grouping is the one that matches the books' main subject, even when the task changes.
   - Feedback: An item can belong to different groupings. Topic helps someone find a book; size helps someone plan where it fits.
 - **B.** The same items can be grouped differently for different purposes. **✓ Correct**
   - Feedback: Both groupings can be useful because each answers a different practical question about the same books.
-- **C.** Changing the grouping changes the books themselves.
+- **C.** The first grouping should determine which later categories are appropriate, even for a different task.
   - Feedback: The books stay the same. What changes is the feature used to group them and the question that grouping helps answer.
 
 ### 2. A teacher wants to sort possible causes of difficulty with worksheets into distinct areas for assessment. Which grouping covers multiple kinds of barriers?
@@ -95,7 +95,7 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
   - Feedback: DSM categories organize clinical patterns, not the full explanation for a person's behavior or choices.
 - **B.** Providing shared diagnostic descriptions and criteria. **✓ Correct**
   - Feedback: The DSM provides common diagnostic descriptions and criteria so qualified assessors and treatment teams can compare findings and communicate. Interviewing, understanding context, and planning care still require professional judgment; the manual cannot do those jobs itself.
-- **C.** Determining who was right during a family disagreement.
+- **C.** Using diagnostic criteria to determine which family member caused a recurring conflict.
   - Feedback: The DSM is not a tool for deciding who was right in a disagreement.
 
 ### 11. Two clients share a diagnosis. Which conclusions could both be true?
@@ -216,8 +216,8 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
 
 - **A.** They have a sleep and fatigue problem, but we still need to understand the cause. **✓ Correct**
   - Feedback: The report establishes the person's experience, not its cause. Consider sleep patterns, medical issues, medication effects, stress, mood, and the extent of the impact before concluding which condition, if any, explains the problem.
-- **B.** That the fatigue may reflect insufficient personal effort.
-  - Feedback: Fatigue and disturbed sleep deserve assessment, not a judgment about effort.
+- **B.** That persistent fatigue warrants a motivation assessment before investigating sleep patterns.
+  - Feedback: Fatigue and disturbed sleep have several possible causes; assessing motivation first would prematurely narrow the differential.
 - **C.** That depression should be assessed before any sleep or health explanation.
   - Feedback: Mood is relevant but sleep, medications, health, and context may also contribute.
 
@@ -446,9 +446,9 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
 
 - **A.** Use alone does not establish alcohol use disorder. **✓ Correct**
   - Feedback: Frequency and quantity matter for discussing health and safety, but diagnosis requires applicable criteria and a broader pattern. Ask what happens and how the person is affected.
-- **B.** Any repeated alcohol use means alcohol use disorder.
+- **B.** Repeated alcohol use with no reported consequences is enough to establish a mild use disorder.
   - Feedback: The DSM does not define all use as a disorder. Assess impaired control, consequences, risk, and other applicable criteria rather than treating a calendar as a diagnosis.
-- **C.** Safety does not matter unless they already have a diagnosis.
+- **C.** Without evidence of a substance use disorder, an immediate safety review can be deferred.
   - Feedback: A person can face immediate risk without meeting disorder criteria. A conversation about safety can be appropriate before, or without, a formal diagnosis.
 
 ### 48. Someone drinks heavily every day and has shaken during attempts to stop. What comes first?
@@ -643,10 +643,10 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
 
 - **A.** Important information is missing or conflicting, so the available evidence cannot yet support a confident conclusion. **✓ Correct**
   - Feedback: Missing corroborating history and limited observations restrict justified conclusions.
-- **B.** The number of criteria listed in the diagnostic manual being consulted.
-  - Feedback: Criteria matter, but manual length does not repair missing individual evidence.
-- **C.** The precision of the clinical vocabulary used to describe the interview.
-  - Feedback: Precise words can clarify but cannot make absent evidence appear.
+- **B.** The criteria listed in the diagnostic manual need to be matched against the limited available interview.
+  - Feedback: Diagnostic criteria matter, but matching them against an incomplete or inconsistent history cannot establish what actually occurred.
+- **C.** Using precise symptom terminology can compensate for some gaps in collateral information.
+  - Feedback: Precise language improves documentation but cannot replace missing longitudinal and corroborating evidence.
 - **D.** The absence of a standardized measure, even when a full interview is otherwise available.
   - Feedback: Measures can add evidence, but their absence is not universally decisive; the question is adequacy of the entire assessment.
 
@@ -688,14 +688,14 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
 - **C.** Ask what the term means to them and use respectful, clinically accurate language. **✓ Correct**
   - Feedback: Identity words should not be imposed. Ask how the person uses 'parts' and what experiences they are describing. Respectful terminology and careful dissociative assessment can coexist.
 
-### 73. A risk of diagnostic labels is that…
+### 73. Which problem may arise when a diagnostic label replaces a person's individual history in case formulation?
 
-- **A.** Labels usually cause more harm than benefit when used in psychotherapy.
+- **A.** Once a diagnosis is confirmed, the label can adequately explain differences in how people with that diagnosis function.
   - Feedback: Categories can aid coordination and research, though uncritical use can be harmful.
-- **B.** Diagnostic labels tend to replace the need for context once criteria are confirmed.
+- **B.** Once diagnostic criteria are confirmed, case formulation can prioritize the standard pattern over individual context.
   - Feedback: Even a supported diagnosis does not remove the need to assess the person's context and goals.
-- **C.** They may become stereotypes and hide individual context. **✓ Correct**
-  - Feedback: Labels can oversimplify when treated as explanations of an entire person.
+- **C.** The label can obscure individual context and reinforce assumptions about the person. **✓ Correct**
+  - Feedback: A label can help describe a clinical pattern yet conceal a person’s circumstances if applied as a stereotype.
 
 ## Lesson 11: Disability, functioning & access
 
@@ -753,11 +753,11 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
 - **C.** Grades across courses, with minimal attention to how the student achieved them.
   - Feedback: Grades may reflect substantial scaffolding or effort and do not establish access on their own.
 
-### 80. What is a useful functional follow-up?
+### 80. After observing successful task completion with written prompts, what should the assessor ask next?
 
-- **A.** “Can you complete the activity once if I show you how to do it?”
-  - Feedback: One supported success does not establish reliability, independence, or sustainable effort.
+- **A.** “What score do you receive if we repeat exactly the same task with the same prompts?”
+  - Feedback: Repeating a score with the same prompts may show consistency, but it does not explain which supports are necessary or what effort they require.
 - **B.** “What changes with support, and what effort does it require?” **✓ Correct**
   - Feedback: A functional interview compares participation, independence, consistency, and cost of effort.
-- **C.** “Would the diagnostic category predict how much help this task will require?”
+- **C.** “How does your diagnosis usually affect people doing this kind of task?”
   - Feedback: A label alone cannot specify the supports, settings, or effort involved in a task.
