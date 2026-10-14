@@ -36,12 +36,12 @@ for(let i=0;i<questions.length;i++){
   });
   lines.push('');
 }
-assert.equal(s,72);assert.equal(m,8);assert.equal(o,249);
+assert.equal(s,72);assert.equal(m,8);assert.equal(o,253);
 const output=lines.join('\n').trimEnd()+'\n';
 if(process.argv.includes('--write')){
   fs.writeFileSync(path,output,'utf8');
   console.log('Updated editorial question bank from current course source.');
 }else{
   assert.equal(fs.readFileSync(path,'utf8'),output,'Question-bank drift detected. Regenerate using --write.');
-  console.log('PASS: all 80 question stems, 249 options, correct keys, option feedback and lesson titles match the course.');
+  console.log('PASS: all 80 question stems, 253 options, correct keys, option feedback and lesson titles match the course.');
 }
