@@ -86,16 +86,16 @@ style={
     "author":ParagraphStyle("BookAuthor",fontName="NS-Bold",fontSize=17,leading=24,textColor=TEAL,spaceAfter=14),
     "h1":ParagraphStyle("BookH1",fontName="LB-Bold",fontSize=24,leading=31,textColor=NAVY,spaceAfter=13,spaceBefore=12,keepWithNext=1),
     "h2":ParagraphStyle("BookH2",fontName="LB-Bold",fontSize=15.2,leading=21,textColor=TEAL,spaceAfter=8,spaceBefore=15,keepWithNext=1),
-    "h3":ParagraphStyle("BookH3",fontName="LB-Bold",fontSize=11.8,leading=17.1,textColor=NAVY,spaceAfter=6,spaceBefore=11,keepWithNext=1),
-    "body":ParagraphStyle("BookBody",fontName="NS",fontSize=11.25,leading=18.2,textColor=INK,spaceAfter=11,allowWidows=0,allowOrphans=0),
-    "small":ParagraphStyle("BookSmall",fontName="NS",fontSize=10.65,leading=16.6,textColor=INK,spaceAfter=7,allowWidows=0,allowOrphans=0),
+    "h3":ParagraphStyle("BookH3",fontName="LB-Bold",fontSize=11.8,leading=17.1,textColor=NAVY,spaceAfter=9,spaceBefore=15,keepWithNext=1),
+    "body":ParagraphStyle("BookBody",fontName="NS",fontSize=11.4,leading=19.8,textColor=INK,spaceAfter=14,allowWidows=0,allowOrphans=0),
+    "small":ParagraphStyle("BookSmall",fontName="NS",fontSize=10.8,leading=18,textColor=INK,spaceAfter=10,allowWidows=0,allowOrphans=0),
     "tiny":ParagraphStyle("BookTiny",fontName="Lato",fontSize=9.6,leading=13.9,textColor=INK,spaceAfter=5),
     "mono":ParagraphStyle("BookMonotype",fontName="Lato",fontSize=10.1,leading=15,textColor=GREY,spaceAfter=8),
     "case":ParagraphStyle("BookCase",fontName="LB-Bold",fontSize=14.2,leading=19,textColor=NAVY,spaceAfter=10,spaceBefore=17,keepWithNext=1),
     "step":ParagraphStyle("BookStep",fontName="Lato-Bold",fontSize=11.2,leading=16.2,textColor=TEAL,spaceAfter=5,spaceBefore=10,keepWithNext=1),
     "caption":ParagraphStyle("BookCaption",fontName="Lato-Bold",fontSize=10.7,leading=15.5,textColor=TEAL,spaceAfter=7,keepWithNext=1),
-    "option":ParagraphStyle("BookOption",fontName="Lato",fontSize=10.85,leading=16.3,textColor=INK,spaceAfter=7,leftIndent=19,firstLineIndent=-19),
-    "answer":ParagraphStyle("BookAnswer",fontName="NS",fontSize=10.55,leading=16.3,textColor=INK,spaceAfter=8),
+    "option":ParagraphStyle("BookOption",fontName="Lato",fontSize=11.0,leading=18.0,textColor=INK,spaceAfter=10,leftIndent=19,firstLineIndent=-19),
+    "answer":ParagraphStyle("BookAnswer",fontName="NS",fontSize=10.8,leading=18,textColor=INK,spaceAfter=8),
     "contents":ParagraphStyle("BookContents",fontName="NS",fontSize=12.1,leading=20.5,textColor=INK,spaceAfter=6),
     "callout":ParagraphStyle("BookCallout",fontName="NS",fontSize=10.7,leading=16.5,textColor=INK),
     "center":ParagraphStyle("BookCenter",fontName="Lato",fontSize=9.8,leading=14,textColor=GREY,alignment=TA_CENTER),
@@ -289,7 +289,7 @@ def add_worked(case,story,index):
     takeaway=case.find("p",class_="worked-takeaway")
     if takeaway:
         story.append(box([plain_para(takeaway,"callout")],SEA,pad=8))
-    story.append(Spacer(1,10))
+    story.append(Spacer(1,14))
 
 def add_additional_item(el,story):
     """Preserve substantive nested sections, lists, safety notes and case grids.
