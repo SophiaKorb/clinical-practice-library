@@ -31,14 +31,14 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
 - **C.** Would “severely wilted” be a better category?
   - Feedback: Renaming the category “severely wilted” adds descriptive detail but not a cause. We would still need to examine the plant's circumstances.
 
-### 4. A person sorts travel photographs by the feelings each trip evokes, rather than by date. The arrangement helps them find the photographs they want. What does this demonstrate?
+### 4. A person insists that all breakfast items stay on one shelf, even when milk is left unrefrigerated. What does this reveal about an otherwise useful categorization rule?
 
-- **A.** Dates offer a more consistent method, so changing the system is the best next step.
-  - Feedback: Chronological filing could help someone searching by date, but that is a different purpose. The existing arrangement is meaningful and works for the person using it.
-- **B.** The grouping can be useful for this person without being the best system for every task. **✓ Correct**
-  - Feedback: The emotional grouping has personal meaning and meets the person's retrieval needs. A different index might help if new needs arise; subjectivity alone is not dysfunction.
-- **C.** Emotional groupings require outside agreement before they count as useful categories.
-  - Feedback: A privately meaningful grouping need not be independently verifiable. The relevant questions are how it functions and whether it creates problems.
+- **A.** The classification is necessarily clinically disordered because it is unconventional.
+  - Feedback: An unusual category by itself does not establish a psychiatric diagnosis.
+- **B.** A familiar grouping can become harmful when it cannot adapt to safety and practical needs. **✓ Correct**
+  - Feedback: Practical consequences matter: storing milk unrefrigerated is unsafe. Rigidity alone does not diagnose a psychiatric disorder.
+- **C.** The shelf grouping should be preserved when it reflects a strong personal preference.
+  - Feedback: A preference can be respected while still recognizing a concrete safety problem and the need to adapt.
 
 ### 5. A teacher labels a student 'noncompliant.' What should happen before using that label as an explanation?
 
@@ -149,14 +149,14 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
 
 ## Lesson 3: Symptom ≠ diagnosis
 
-### 16. Someone feels nervous before an exam. What do you know?
+### 16. A client reports that distress occurs only during crowded commutes, but not on quieter routes. Which inference is supported?
 
-- **A.** We know the person is nervous; context and impact would clarify its significance. **✓ Correct**
-  - Feedback: Exam-related anxiety is common and does not on its own establish a disorder.
-- **B.** The exam has triggered a psychiatric disorder if the nervousness is intense.
-  - Feedback: Intensity matters, but patterns, duration, associated features, and impact also matter.
-- **C.** The feeling is likely harmless if the exam ends within a few hours.
-  - Feedback: An ordinary setting does not guarantee mild symptoms; ask about distress, function, and safety as appropriate.
+- **A.** A setting-linked pattern warrants assessing sensory demands, perceived threat, timing, and functional impact. **✓ Correct**
+  - Feedback: Compare the circumstances and impact before attributing the distress to any one diagnosis.
+- **B.** The difference between routes demonstrates a disorder of social evaluation rather than sensory overload.
+  - Feedback: Route-specific distress does not establish social anxiety disorder without further evidence.
+- **C.** The absence of distress on quiet routes rules out clinically significant anxiety in all settings.
+  - Feedback: A situational pattern helps target inquiry but does not automatically establish or exclude a disorder.
 
 ### 17. A client says, “I keep losing my train of thought halfway through a sentence.” What is the clinical value of that phrase?
 
@@ -350,8 +350,8 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
 
 ### 37. A learner reports a difficulty only in certain situations. What can comparing settings reveal?
 
-- **A.** Whether physical features of the setting appear comfortable to the interviewer.
-  - Feedback: The interviewer's comfort is not the same as identifying symptom-related environmental demands.
+- **A.** Whether the same pattern would be expected across settings solely because it appears in one familiar context.
+  - Feedback: One situation cannot establish the same functioning elsewhere; specific environmental demands and supports need comparison.
 - **B.** Whether the pattern fits a diagnosis regardless of specific setting.
   - Feedback: Settings and supports matter: a pattern is not understood by a label alone.
 - **C.** The settings, demands, and supports associated with the difficulty. **✓ Correct**
