@@ -99,7 +99,7 @@ style={
     "contents":ParagraphStyle("BookContents",fontName="NS",fontSize=12.1,leading=20.5,textColor=INK,spaceAfter=6),
     "callout":ParagraphStyle("BookCallout",fontName="NS",fontSize=10.7,leading=16.5,textColor=INK),
     "center":ParagraphStyle("BookCenter",fontName="Lato",fontSize=9.8,leading=14,textColor=GREY,alignment=TA_CENTER),
-    "mapbody":ParagraphStyle("BookMapBody",fontName="NS",fontSize=11.7,leading=18.3,textColor=INK,spaceAfter=7),
+    "mapbody":ParagraphStyle("BookMapBody",fontName="NS",fontSize=11.4,leading=17.3,textColor=INK,spaceAfter=5),
     "maplink":ParagraphStyle("BookMapLink",fontName="Lato-Bold",fontSize=11.6,leading=16.8,textColor=INK,alignment=TA_CENTER,spaceAfter=8),
     "maptitle":ParagraphStyle("BookMapTitle",fontName="LB-Bold",fontSize=12.6,leading=18.4,textColor=NAVY,spaceAfter=6,keepWithNext=1),
 }
@@ -250,7 +250,7 @@ def add_concept_map(fig,story):
         title=markup(label) if label else xml_escape(text(node))
         body=[P(title,"maptitle")]
         if explanation:body.append(P(markup(explanation),"mapbody"))
-        story.append(box(body,PALE if branch else SEA,pad=11))
+        story.append(box(body,PALE if branch else SEA,pad=8))
 
     for block in structure.find_all(recursive=False):
         classes=block.get("class",[])
@@ -415,12 +415,12 @@ def add_question(q,num,story,keys):
         letter=chr(65+i)
         story.append(P(f"□  {letter}. "+markup(op),"option"))
         if op.get("data-answer")=="yes":answers.append((letter,text(op),op.get("data-feedback","")))
-    story.append(Spacer(1,8))
+    story.append(Spacer(1,3))
     # Writing area is genuinely provided for learners, not a browser print of hidden answers.
     for i in range(1):
         story.append(HRFlowable(width="100%",thickness=.4,color=BORDER,spaceBefore=5,spaceAfter=7))
     keys.append(dict(number=num,stem=question,correct=answers,multi=multi,options=len(options)))
-    story.append(Spacer(1,7))
+    story.append(Spacer(1,3))
 
 def build():
     soup=BeautifulSoup(HTML.read_text(encoding="utf-8"),"html.parser")
@@ -537,11 +537,9 @@ def build():
     book.append(P("These are teaching explanations, not automated clinical determinations. Multiple interpretations can remain plausible; focus on the evidence described in the stem, diagnostic restraint, safety and appropriate next steps.","body"))
     for a in keys:
         letters=", ".join(x[0] for x in a["correct"])
-        book.append(P(f"{a['number']:02d}.  "+("Answers: " if a["multi"] else "Answer: ")+letters,"h3"))
-        for letter,option,feedback in a["correct"]:
-            book.append(P("<b>"+letter+". "+xml_escape(option)+"</b>","small"))
-            if feedback:book.append(P(xml_escape(feedback),"answer"))
-        book.append(Spacer(1,6))
+        explanation=" ".join(xml_escape(feedback) for _,_,feedback in a["correct"] if feedback)
+        book.append(P(f"<b>{a['number']:02d}. {letters}</b>  —  "+explanation,"answer"))
+        book.append(Spacer(1,3))
     doc=BookDoc(OUT)
     doc.build(book)
     counts=dict(font_mode=FONT_MODE,print_identity='Libre Baskerville / Source Serif 4 / Source Sans 3' if FONT_MODE=='editorial' else 'fallback fonts',lessons=len(secs),cases=count,concept_maps=len(figs),vocabulary=len(vocab),questions=len(keys),options=sum(x["options"] for x in keys),select_all=sum(x["multi"] for x in keys),single=sum(not x["multi"] for x in keys),chapters=chapters,pdf=str(OUT.relative_to(ROOT)))
