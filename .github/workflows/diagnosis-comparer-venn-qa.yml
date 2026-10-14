@@ -1,15 +1,21 @@
 name: DSM comparer Venn browser QA
 on:
   push:
-    branches: [feature/dsm-diagnosis-comparer]
+    branches: [feature/dsm-diagnosis-comparer, feature/comparer-plain-language]
     paths:
       - 'resources/training/diagnosis-comparer.html'
+      - 'resources/training/diagnosis-comparer-review.js'
+      - 'resources/training/dsm-from-zero.html'
+      - 'tests/dsm-text-style-browser.cjs'
       - 'tests/diagnosis-comparer-content-integrity.cjs'
       - 'tests/diagnosis-comparer-venn.cjs'
       - '.github/workflows/diagnosis-comparer-venn-qa.yml'
   pull_request:
     paths:
       - 'resources/training/diagnosis-comparer.html'
+      - 'resources/training/diagnosis-comparer-review.js'
+      - 'resources/training/dsm-from-zero.html'
+      - 'tests/dsm-text-style-browser.cjs'
       - 'tests/diagnosis-comparer-venn.cjs'
       - 'tests/diagnosis-comparer-content-integrity.cjs'
       - '.github/workflows/diagnosis-comparer-venn-qa.yml'
@@ -32,14 +38,12 @@ jobs:
         run: node tests/diagnosis-comparer-content-integrity.cjs
       - name: Install Playwright and Chromium
         run: |
-          npm install --no-save --no-package-lock playwright@1.56.1
+          npm install --no-save --no-package-lock playwright@1.56.1 axe-core@4.14.0
           npx playwright install --with-deps chromium
-      - name: Serve the static site
-        run: |
-          python -m http.server 8765 --bind 127.0.0.1 >/tmp/cpl-dsm-venn-http.log 2>&1 &
-          sleep 2
       - name: Test differential diagram across viewports and print
         run: node tests/diagnosis-comparer-venn.cjs
+      - name: Test all course answers and automated WCAG checks in both text styles
+        run: node tests/dsm-text-style-browser.cjs
       - name: Upload Venn screenshots and print PDF
         if: always()
         uses: actions/upload-artifact@v4
