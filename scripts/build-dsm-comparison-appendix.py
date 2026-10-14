@@ -339,7 +339,7 @@ def combine():
     original=fitz.open(MAIN)
     assert len(PAIRS)==10
     n=len(original)
-    assert n>=80
+    assert n>=60  # The compact print flow intentionally reduces page count.
     old_outline=original.get_toc()
     original_bookmark_count=len(old_outline)
     # Number of pages before the glossary. Insert Appendix A immediately here.
