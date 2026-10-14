@@ -5,6 +5,8 @@ on:
     paths:
       - 'scripts/build-dsm-foundations-book.py'
       - 'scripts/prepare-dsm-print-fonts.py'
+      - 'scripts/build-dsm-comparison-appendix.py'
+      - 'scripts/data/dsm-comparison-atlas-pairs.json'
       - 'tests/dsm-print-book-parity.py'
       - 'resources/training/dsm-from-zero.html'
       - 'docs/qa/dsm-foundations-all-questions.md'
@@ -59,6 +61,28 @@ jobs:
           PY
       - name: Verify actual lesson, case, glossary, safety and question text parity
         run: python tests/dsm-print-book-parity.py
+      - name: Assemble complete Comparison Atlas as Appendix C with three writing columns
+        run: python scripts/build-dsm-comparison-appendix.py
+      - name: Verify combined book and all 10 three-part workspace sections
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import fitz,json
+          m=json.loads(Path('build/dsm-foundations-with-atlas-manifest.json').read_text())
+          original=fitz.open('build/dsm-foundations-complete-review-book.pdf')
+          combined=fitz.open('build/dsm-foundations-complete-with-comparison-atlas.pdf')
+          assert m['foundations_pages']==len(original)
+          assert len(combined)==len(original)+13
+          assert m['comparisons']==10 and m['three_part_workspaces']==10
+          assert combined[len(original)].get_text().count('APPENDIX C')>=2
+          assert all('CLINICAL REASONING / THREE-PART WORKSPACE' in combined[len(original)+i].get_text() for i in range(1,11))
+          assert sum('Sophia Korb Cohon, PhD' in p.get_text() for p in combined)==1
+          for i in range(len(original)):
+              a=''.join(original[i].get_text().split())
+              b=''.join(combined[i].get_text().split())
+              assert a==b if i!=1 else a in b, ('Existing curriculum changed',i)
+          print(f"PASS: {len(combined)} pages, {len(combined.get_toc())} bookmarks, complete Atlas; original book retained")
+          PY
       - name: Retain book, manifest and source for QA, without deployment
         uses: actions/upload-artifact@v4
         with:
@@ -68,4 +92,7 @@ jobs:
           path: |
             build/dsm-foundations-complete-review-book.pdf
             build/dsm-foundations-book-manifest.json
+            build/dsm-foundations-complete-with-comparison-atlas.pdf
+            build/dsm-comparison-atlas-standalone-review.pdf
+            build/dsm-foundations-with-atlas-manifest.json
             resources/training/dsm-from-zero.html
