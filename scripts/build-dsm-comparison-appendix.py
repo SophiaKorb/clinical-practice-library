@@ -136,8 +136,8 @@ def draw_atlas(output:Path,offset:int,appendix:bool):
             x1,x2=edges[i],edges[i+1]
             label(title,x1+6,y-22,8.3)
             text(prompt,x1+6,y-38,"Sans",8.0,MUTED)
-            for j in range(3):
-                rule(x1+6,y-60-j*23,x2-9,HexColor("#c6bfba"),.5)
+            for j in range(2):
+                rule(x1+6,y-60-j*24,x2-9,HexColor("#c6bfba"),.5)
 
     # Front divider and reference index. Name is intentionally not repeated.
     footer("COMPANION REFERENCE / OCTOBER 2026" if appendix else "PRINT REVIEW / OCTOBER 2026",1)
@@ -343,6 +343,7 @@ def combine():
     append=fitz.open(APPENDIX)
     assert len(append)==23
     entries=original.get_toc()
+    original_bookmark_count=len(entries)
     original.insert_pdf(append)
     entries.append([1,"Appendix C — Full Diagnostic Comparison Atlas",n+1])
     for idx,p in enumerate(PAIRS,1):
@@ -396,7 +397,7 @@ def combine():
     manifest={"pages":len(check),"foundations_pages":n,"appendix_pages":23,
               "comparisons":10,"three_part_workspaces":10,"venn_diagrams":10,"pages_per_comparison":2,
               "appendix_start":n+1,"appendix_label":"Appendix C",
-              "original_bookmarks":len(original.get_toc())-32,"total_bookmarks":len(entries),
+              "original_bookmarks":original_bookmark_count,"total_bookmarks":len(entries),
               "source":"scripts/data/dsm-comparison-atlas-pairs.json",
               "release":"Review only; clinical specialist and PDF/UA signoff outstanding"}
     (BUILD/"dsm-foundations-with-atlas-manifest.json").write_text(json.dumps(manifest,indent=2)+"\n")
