@@ -86,7 +86,9 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
   - Feedback: Compulsions may involve repetitive behavior or mental acts driven by obsessions or rigid rules. Explore purpose, time, distress, and interference; the observation alone proves nothing.
 - **B.** It suggests obsessive-compulsive disorder if the preference is especially consistent.
   - Feedback: Strong routines or preferences, without specific intrusive phenomena and impact, do not establish OCD.
-- **C.** It is a preference or behavior that cannot establish a diagnosis on its own. **✓ Correct**
+- **C.** If the arrangement helps the family find games, the routine alone establishes a clinically significant compulsive pattern.
+  - Feedback: A practical organizational habit, even when longstanding, does not establish a clinically impairing compulsion.
+- **D.** It is a preference or behavior that cannot establish a diagnosis on its own. **✓ Correct**
   - Feedback: Explore meaning, distress, and function before considering any diagnosis.
 
 ### 10. Which task is actually within the DSM’s purpose?
@@ -106,6 +108,8 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
   - Feedback: The same criteria can coexist with very different needs. Treatment is based on formulation and collaboration, not identical scripts.
 - **C.** Their key difficulties and strengths can be predicted from their shared diagnostic criteria.
   - Feedback: The same criteria do not determine identical functioning or clinical priorities.
+- **D.** They should receive the same level of support initially because they meet the same diagnostic threshold.
+  - Feedback: Meeting the same criteria cannot determine the amount or kind of support an individual requires.
 
 ### 12. A worker reads a DSM checklist online. Can they independently diagnose?
 
@@ -211,6 +215,8 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
   - Feedback: The student's own perspective may reveal sensory, relational, instructional, or other differences adults have not noticed.
 - **C.** The discrepancy means the student is pretending.
   - Feedback: Different performance in different settings is common and informative. It is not automatically evidence of pretending; sometimes the worksheet itself is the plot twist.
+- **D.** The student’s greater success in one classroom proves that the other classroom's teacher is the cause of the difficulty.
+  - Feedback: Different teaching practices may matter, but the observed contrast does not establish one person's causal responsibility.
 
 ### 23. Someone reports waking repeatedly and feeling tired all day. What does that tell us?
 
@@ -390,8 +396,8 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
   - Feedback: Alternative medical, substance-related, and contextual explanations belong in the differential.
 - **C.** Whether fast speech alone confirms a manic or hypomanic episode when others notice it.
   - Feedback: Fast speech does not independently establish a mood episode.
-- **D.** Whether reduced sleep means decreased need for sleep even when the client feels exhausted.
-  - Feedback: Sleep deprivation is not equivalent to a decreased need for sleep; assess the distinction.
+- **D.** Whether speech was rapid for one brief conversation, without establishing how long the broader changes lasted.
+  - Feedback: One episode of rapid speech does not establish a sustained episode; assess the duration and complete pattern of mood, energy, activity and sleep.
 
 ### 42. A symptom appears in multiple DSM chapters. What should guide the differential?
 
@@ -480,8 +486,8 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
 
 ### 51. What distinguishes intoxication from substance use disorder?
 
-- **A.** Intoxication is a substance-related state, and dependence may follow repeated exposure.
-  - Feedback: A current intoxicated state does not establish a substance use disorder or any particular ongoing pattern.
+- **A.** Acute intoxication by itself establishes substance use disorder whenever it impairs judgment.
+  - Feedback: An acute intoxicated state may create risk, but it is not by itself sufficient evidence for a substance use disorder.
 - **B.** Intoxication is an acute state; SUD concerns a broader pattern. **✓ Correct**
   - Feedback: A person may have either condition without the other, although both merit relevant safety assessment.
 - **C.** Illicit substances commonly cause intoxication; prescribed ones generally do not.
@@ -618,6 +624,8 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
   - Feedback: A tentative impression makes sense when missing information might materially change the conclusion. Focus the next assessment on what could distinguish the possibilities instead of treating an early hypothesis as final.
 - **C.** When the current presentation is mild, regardless of how much evidence has already been gathered.
   - Feedback: Severity and diagnostic certainty are separate questions; mild presentations can still meet criteria.
+- **D.** When a brief checklist score indicates a condition, even if the required duration and exclusion criteria have been assessed and clearly not met.
+  - Feedback: A screening score does not override unmet diagnostic criteria; do not keep an unsupported disorder as a tentative diagnosis simply because it appeared on a checklist.
 
 ### 66. Which part of a handoff is important beyond diagnosis?
 
@@ -722,7 +730,7 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
 - **A.** The full diagnostic record to establish that the worker's condition is sufficiently serious.
   - Feedback: Document the relevant limitation and how the requested accommodation addresses it.
 - **B.** The specific memory-related barrier and how written instructions address it. **✓ Correct**
-  - Feedback: Connect the functional barrier to the requested support. Follow the documentation requirements introduced at the start of the course.
+  - Feedback: Connect the specific functional barrier to the proposed support. Follow the applicable documentation requirements, including those discussed in Lessons 10–11 and your workplace or agency policies.
 - **C.** The diagnostic label as sufficient proof that any requested accommodation is required.
   - Feedback: A code does not settle which accommodation is appropriate or legally required.
 
