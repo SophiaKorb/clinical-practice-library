@@ -90,7 +90,7 @@ assert.match(css,/@media\(forced-colors:active\)/,'forced-colors mode');
 assert.ok(!html.includes('What is the biggest risk of confusing a category with an explanation?'));
 assert.match(html,/class="study-loop" aria-labelledby="study-loop-title"/,'study rhythm present');
 assert.match(html,/Explore\. Apply\. Recall\./,'three-step learning scaffold');
-assert.match(html,/A person sorts travel photographs by the feelings each trip evokes/,'review item stands alone');
+assert.match(html,/A person insists that all breakfast items stay on one shelf/,'review item stands alone');
 assert.match(html,/Anxiety symptoms noted; diagnostic impression remains provisional pending course and differential assessment/,'evidence-quality answer is precise');
 assert.ok(!html.includes('What does this example demonstrate about personally meaningful categories?'),'context-dependent quiz item removed');
 assert.match(css,/\.study-loop-steps\{display:grid/,'learning rhythm responsive layout');
