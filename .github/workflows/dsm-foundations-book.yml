@@ -40,7 +40,7 @@ jobs:
           assert all(round(p.rect.width)==612 and round(p.rect.height)==792 for p in d)
           assert manifest['font_mode']=='editorial', 'Editorial typeface was not embedded'
           assert manifest['lessons']==11 and manifest['cases']==33 and manifest['concept_maps']==11
-          assert manifest['vocabulary']==33 and manifest['questions']==80
+          assert manifest['vocabulary']==36 and manifest['questions']==80
           assert manifest['options']==253 and manifest['select_all']==8 and manifest['single']==72
           pages=[p.get_text() for p in d]
           full='\n'.join(pages)
