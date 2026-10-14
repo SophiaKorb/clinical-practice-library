@@ -94,7 +94,8 @@ style={
     "case":ParagraphStyle("BookCase",fontName="LB-Bold",fontSize=14.2,leading=19,textColor=NAVY,spaceAfter=10,spaceBefore=17,keepWithNext=1),
     "step":ParagraphStyle("BookStep",fontName="Lato-Bold",fontSize=11.2,leading=16.2,textColor=TEAL,spaceAfter=5,spaceBefore=10,keepWithNext=1),
     "caption":ParagraphStyle("BookCaption",fontName="Lato-Bold",fontSize=10.7,leading=15.5,textColor=TEAL,spaceAfter=7,keepWithNext=1),
-    "option":ParagraphStyle("BookOption",fontName="Lato",fontSize=10.9,leading=17.1,textColor=INK,spaceAfter=6,leftIndent=19,firstLineIndent=-19),
+    "option":ParagraphStyle("BookOption",fontName="Lato",fontSize=10.9,leading=17.1,textColor=INK,spaceAfter=3,leftIndent=19,firstLineIndent=-19),
+    "qstem":ParagraphStyle("QuestionStem",fontName="LB-Bold",fontSize=11.8,leading=17.1,textColor=NAVY,spaceAfter=5,spaceBefore=8,keepWithNext=1),
     "answer":ParagraphStyle("BookAnswer",fontName="NS",fontSize=10.5,leading=16.4,textColor=INK,spaceAfter=5),
     "contents":ParagraphStyle("BookContents",fontName="NS",fontSize=12.1,leading=20.5,textColor=INK,spaceAfter=6),
     "callout":ParagraphStyle("BookCallout",fontName="NS",fontSize=10.7,leading=16.5,textColor=INK),
@@ -408,7 +409,7 @@ def add_question(q,num,story,keys):
     question=text(stem)
     options=q.select("button[data-answer]")
     multi=q.has_attr("data-multi")
-    story.append(bookmark(P(f"{num:02d}. "+xml_escape(question),"h3"),f"q-{num}",1))
+    story.append(bookmark(P(f"{num:02d}. "+xml_escape(question),"qstem"),f"q-{num}",1))
     if multi:story.append(P("SELECT ALL THAT APPLY","mono"))
     answers=[]
     for i,op in enumerate(options):
@@ -418,7 +419,7 @@ def add_question(q,num,story,keys):
     story.append(Spacer(1,3))
     # Writing area is genuinely provided for learners, not a browser print of hidden answers.
     for i in range(1):
-        story.append(HRFlowable(width="100%",thickness=.4,color=BORDER,spaceBefore=5,spaceAfter=7))
+        story.append(HRFlowable(width="100%",thickness=.4,color=BORDER,spaceBefore=3,spaceAfter=4))
     keys.append(dict(number=num,stem=question,correct=answers,multi=multi,options=len(options)))
     story.append(Spacer(1,3))
 
@@ -508,8 +509,8 @@ def build():
         "8. Next action and how its impact will be evaluated",
     ]:
         book.append(P(xml_escape(section),"h3"))
-        for x in range(3):
-            book.append(HRFlowable(width="100%",thickness=.4,color=BORDER,spaceBefore=8,spaceAfter=11))
+        for x in range(2):
+            book.append(HRFlowable(width="100%",thickness=.4,color=BORDER,spaceBefore=8,spaceAfter=10))
     book.append(PageBreak())
     book.append(bookmark(P("Written and multiple-choice practice","h1"),"practice"))
     book.append(P("Choose the most supported answer for each question. For items marked <b>SELECT ALL THAT APPLY</b>, more than one option may be correct. Use the lines under each question to record your reasoning, evidence and any further assessment questions. The answer key is the final section: print up to, but not including, its first page for a student copy.","body"))
