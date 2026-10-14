@@ -386,7 +386,8 @@ def combine():
     index_links=index_page.get_links()
     assert len(indexed_rows)==17 and len(index_links)==17, (len(indexed_rows),len(index_links))
     for label,destination in indexed_rows:
-        assert label in index_text, ("Missing index label",label)
+        normspaces=lambda text:re.sub(r"\\s+"," ",text).strip()
+        assert normspaces(label) in normspaces(index_text), ("Missing index label",label)
         assert re.search(r"(?m)^"+str(destination)+r"$",index_text), ("Missing printed page",label,destination)
         assert any(link.get("page")==destination-1 for link in index_links), ("Broken page link",label,destination)
 
