@@ -131,20 +131,20 @@ function renderVenn(ids,valid){
  const regions=document.getElementById("venn-regions"),legend=document.getElementById("venn-legend"),pairwise=document.getElementById("venn-pairwise"),message=document.getElementById("venn-message");
  regions.replaceChildren();legend.replaceChildren();pairwise.replaceChildren();
  document.getElementById("venn-two").style.display="";
- document.getElementById("venn-svg").setAttribute("aria-label",ids.map(id=>byId[id].name).join(", ")+". Conceptual overlap, not a diagnostic similarity measure.");
+ document.getElementById("venn-svg").setAttribute("aria-label",ids.map(id=>byId[id].name).join(", ")+(languageMode==="plain"?". Two circles used to compare possible similarities. Circle size does not show how common the conditions are.":". Conceptual overlap, not a diagnostic similarity measure."));
  if(!valid){message.textContent="Choose distinct diagnoses to show a meaningful diagram.";return;}
  ids.forEach((id,i)=>{const span=document.createElement("span");span.className="legend-"+("abc"[i]);const swatch=document.createElement("i");swatch.setAttribute("aria-hidden","true");span.append(swatch,document.createTextNode(byId[id].name));legend.append(span);});
  if(ids.length===2){
   setSvgLabel("venn-two-a",ids[0]);setSvgLabel("venn-two-b",ids[1]);
-  const curated=vennPairs.get(ids.slice().sort().join("|"));const plainCurated=languageMode==="plain"?plainVennPairs[ids.slice().sort().join("|")]:null;const found=plainCurated&&curated?{...curated,...plainCurated}:curated;
+  const curated=vennPairs.get(ids.slice().sort().join("|"));const plainCurated=languageMode==="plain"?plainVennPairs[ids.slice().sort().join("|")]:null;const found=languageMode==="plain"?(plainCurated&&curated?{...curated,...plainCurated}:null):curated;
   const points=found?[found.a===ids[0]?found.aOnly:found.bOnly,found.a===ids[1]?found.aOnly:found.bOnly]:[vennFocus[ids[0]],vennFocus[ids[1]]];
   regions.append(regionCard((languageMode==="plain"?plainVennTerms.characteristic:"More characteristic: ")+byId[ids[0]].name,languageMode==="plain"&&!plainCurated?plainDescriptions[ids[0]].pattern:points[0]));
   if(found){
    regions.append(overlapCard(languageMode==="plain"?plainVennTerms.shared:"Features that may be shared",found.shared));
-   message.textContent="Curated comparison: shared features and differentiating questions are illustrated below.";
+   message.textContent=languageMode==="plain"?"These are possible similarities, not proof that someone has either condition.":"Curated comparison: shared features and differentiating questions are illustrated below.";
   }else{
    regions.append(regionCard(languageMode==="plain"?"Overlap not yet described":"Shared area — not mapped for this pair",languageMode==="plain"?plainVennTerms.missing:"This combination has no curated overlap summary. Examine the full clinical history rather than interpreting the drawn intersection as evidence of similarity.","venn-shared"));
-   message.textContent="No authored overlap summary for this combination. The intersecting circles are an invitation to compare, not a claim of similarity.";
+   message.textContent=languageMode==="plain"?"We have not yet written a plain-language comparison of the overlap for this pair. The circles do not mean the conditions are the same.":"No authored overlap summary for this combination. The intersecting circles are an invitation to compare, not a claim of similarity.";
   }
   regions.append(regionCard((languageMode==="plain"?plainVennTerms.characteristic:"More characteristic: ")+byId[ids[1]].name,languageMode==="plain"&&!plainCurated?plainDescriptions[ids[1]].pattern:points[1]));
   if(found){const article=document.createElement("article");article.append(element("strong",languageMode==="plain"?plainVennTerms.probe:"Ask next"),element("p",found.probe));pairwise.append(article);}
