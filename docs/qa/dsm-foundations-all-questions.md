@@ -431,14 +431,14 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
 - **C.** Classify checking as a compulsion whenever the person experiences worry.
   - Feedback: Repeated acts can have different functions; understand the specific behavior and context.
 
-### 46. What is an example of clinically useful restraint?
+### 46. An adult reports sleeping four hours nightly for several days while feeling unusually energetic. Which detail most directly helps distinguish decreased need for sleep from insomnia?
 
-- **A.** Recording several provisional diagnoses to ensure no possible explanation is missed.
-  - Feedback: A longer list does not compensate for missing evidence; use reasoned hypotheses.
-- **B.** Maintaining multiple plausible hypotheses until enough evidence is available. **✓ Correct**
-  - Feedback: Thoughtful uncertainty helps direct the next question. Keep explanations proportionate to the available evidence rather than manufacturing certainty.
-- **C.** Deferring all clinical questions until a supervisor names a diagnosis.
-  - Feedback: Consultation matters, but useful evidence can still be gathered within one's scope.
+- **A.** Whether the person goes to bed later than usual on work nights.
+  - Feedback: Bedtime alone does not establish whether the person feels rested, experiences a sustained mood and energy change, or has another explanation.
+- **B.** Whether they feel rested despite little sleep, with a sustained change in energy and activity. **✓ Correct**
+  - Feedback: Decreased need for sleep differs from wanting sleep but being unable to sleep. Assess episode duration, mood, energy, functioning, and medical or substance causes.
+- **C.** Whether the person uses a device before bedtime and has a regular morning routine.
+  - Feedback: Sleep hygiene may be relevant, but it does not by itself distinguish decreased need for sleep from insomnia or establish a mood episode.
 
 ## Lesson 7: Understanding substance use disorders
 
@@ -534,14 +534,14 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
 - **C.** Compare performance with shorter modeled directions and record what changes. **✓ Correct**
   - Feedback: A small instructional change can help test whether task demands are contributing.
 
-### 57. Maya feels worn out and sees friends less often. Which question investigates timing and multiple possible causes?
+### 57. Maya has stopped visiting friends, but says she misses them and wants to go. Her bus route recently closed. What is the most informative next step?
 
-- **A.** “Did you used to enjoy school or work more than you do now?”
-  - Feedback: This may be relevant history but does not sufficiently examine timing, health, mood, and function.
-- **B.** “Which diagnosis from an online checklist sounds most familiar to you?”
-  - Feedback: A self-description can start a discussion, not replace a comprehensive assessment.
-- **C.** “When did this begin, and what changed in sleep, health, mood, and daily life?” **✓ Correct**
-  - Feedback: A structured open question elicits features that may distinguish depression, sleep and health difficulties, and context.
+- **A.** Interpret the reduced social contact as loss of interest and prioritize depression screening.
+  - Feedback: Depressive symptoms may need assessment, but expressed interest and a transportation barrier make that interpretation premature.
+- **B.** Assess how frequently Maya contacts friends by phone before exploring travel access.
+  - Feedback: Contact frequency is useful context but does not test whether transportation is the main barrier to in-person visits.
+- **C.** Ask how travel access, energy, mood, and available supports affect her ability to visit. **✓ Correct**
+  - Feedback: The vignette supplies a concrete access barrier. Compare practical opportunity with motivation, symptoms, functioning, and desired participation.
 
 ### 58. Which case-note sentence reports time-linked behavior rather than substituting an interpretation?
 
@@ -579,14 +579,14 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
 - **C.** Prioritize depressive episode criteria before asking about the recent move.
   - Feedback: Depression may be relevant, but adjustment, loss, access, preferences, and timing also matter.
 
-### 62. What makes a case question useful for supervision?
+### 62. Eli completes a short modeled instruction but becomes distressed during a longer verbal sequence. Which comparison would best test whether processing demand, rather than unwillingness, contributes?
 
-- **A.** Naming alternative explanations and the specific evidence needed to distinguish them. **✓ Correct**
-  - Feedback: A useful supervision question specifies two or more plausible explanations and the evidence that could separate them. It invites reasoning, not applause.
-- **B.** Choosing a working diagnosis with confidence, even when the reasons are not explicit.
-  - Feedback: A useful supervision question makes uncertainty and needed evidence visible.
-- **C.** Naming the most concerning diagnosis so the supervisor will focus on it first.
-  - Feedback: Risk may need priority, but drama is not a substitute for a differential.
+- **A.** Keep the goal constant while varying instruction length and checking comprehension and support needs. **✓ Correct**
+  - Feedback: Holding the task goal steady while varying how instructions are delivered helps identify which demands or supports change performance.
+- **B.** Repeat the long verbal instructions more firmly and compare compliance across attempts.
+  - Feedback: A firmer prompt changes interpersonal pressure rather than isolating comprehension or processing demand.
+- **C.** Give Eli an easier unrelated task and compare how quickly distress stops.
+  - Feedback: An unrelated easier task alters several variables at once, so it cannot clarify the effect of instruction length.
 
 ## Lesson 9: How the DSM supports assessment and treatment
 
@@ -688,14 +688,14 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
 - **C.** Ask what the term means to them and use respectful, clinically accurate language. **✓ Correct**
   - Feedback: Identity words should not be imposed. Ask how the person uses 'parts' and what experiences they are describing. Respectful terminology and careful dissociative assessment can coexist.
 
-### 73. Which problem may arise when a diagnostic label replaces a person's individual history in case formulation?
+### 73. A person values an autism diagnosis as part of their identity but says a referral summary describes them only in terms of deficits. What revision best addresses their concern?
 
-- **A.** Once a diagnosis is confirmed, the label can adequately explain differences in how people with that diagnosis function.
-  - Feedback: Categories can aid coordination and research, though uncritical use can be harmful.
-- **B.** Once diagnostic criteria are confirmed, case formulation can prioritize the standard pattern over individual context.
-  - Feedback: Even a supported diagnosis does not remove the need to assess the person's context and goals.
-- **C.** The label can obscure individual context and reinforce assumptions about the person. **✓ Correct**
-  - Feedback: A label can help describe a clinical pattern yet conceal a person’s circumstances if applied as a stereotype.
+- **A.** Remove the diagnosis and focus the referral entirely on the person's stated strengths.
+  - Feedback: Removing clinically relevant information may undermine continuity of care and does not necessarily address the person's request for balanced wording.
+- **B.** Retain relevant clinical information while including their preferred language, strengths, goals, and support needs. **✓ Correct**
+  - Feedback: Respect self-description without treating diagnosis as the whole identity; useful referrals can describe both meaningful capabilities and specific clinical or access needs.
+- **C.** Keep the deficit-focused summary because standard diagnostic descriptions are needed for consistency.
+  - Feedback: Shared terms can support coordination, but they do not require a decontextualized account that omits the person's preferences and functioning.
 
 ## Lesson 11: Disability, functioning & access
 
@@ -753,11 +753,11 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
 - **C.** Grades across courses, with minimal attention to how the student achieved them.
   - Feedback: Grades may reflect substantial scaffolding or effort and do not establish access on their own.
 
-### 80. After observing successful task completion with written prompts, what should the assessor ask next?
+### 80. A worker completes a memory-heavy task with a checklist during one supervised shift. What additional evidence best shows whether the support is sufficient in everyday work?
 
-- **A.** “What score do you receive if we repeat exactly the same task with the same prompts?”
-  - Feedback: Repeating a score with the same prompts may show consistency, but it does not explain which supports are necessary or what effort they require.
-- **B.** “What changes with support, and what effort does it require?” **✓ Correct**
-  - Feedback: A functional interview compares participation, independence, consistency, and cost of effort.
-- **C.** “How does your diagnosis usually affect people doing this kind of task?”
-  - Feedback: A label alone cannot specify the supports, settings, or effort involved in a task.
+- **A.** A repeat of the same task with the checklist and supervisor present on another shift.
+  - Feedback: Replication may help establish consistency but cannot alone show whether the support works during independent, typical work demands.
+- **B.** Performance across typical shifts, required prompting, errors, effort, and remaining barriers. **✓ Correct**
+  - Feedback: Functional assessment considers reliability in usual conditions, degree of independence, supports needed, and cost of successful performance.
+- **C.** The worker's diagnostic category and whether checklists usually help others with it.
+  - Feedback: Group-level expectations do not establish individual functional access or the supports required in this person's work setting.
