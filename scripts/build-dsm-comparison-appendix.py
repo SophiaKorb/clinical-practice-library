@@ -239,7 +239,7 @@ def draw_atlas(output:Path,offset:int,appendix:bool):
     label("CLINICAL BOUNDARIES",48,223)
     paragraph("These comparison sheets summarize selected differential questions rather than exhaustive diagnostic criteria. They are not screening instruments, severity scales, probabilities or independent validation. Use longitudinal history, medical/substance exclusions, safety assessment and the current authorized DSM-5-TR.",
               48,206,514,size=10.4,leading=17,limit=101)
-    paragraph("Educational editorial review only. Specialist clinical and accessibility approval outstanding.",
+    paragraph("Educational reference only. Confirm full criteria and current professional guidance before clinical use.",
               48,104,514,font="Sans",size=9.3,leading=15,limit=39,color=MUTED)
     c.showPage()
     c.save()
