@@ -221,14 +221,14 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
 - **C.** That depression should be assessed before any sleep or health explanation.
   - Feedback: Mood is relevant but sleep, medications, health, and context may also contribute.
 
-### 24. Which response reflects good functional assessment?
+### 24. A caregiver reports that a child “hits other kids” at recess. Which follow-up would most improve the clinical usefulness of that description?
 
-- **A.** Count the number of symptoms present before asking whether the daily routine has changed.
-  - Feedback: Frequency and counts help, but do not replace asking about actual consequences for functioning.
-- **B.** Compare grades across semesters and use performance as the primary impairment index.
-  - Feedback: Grades are useful evidence but can conceal substantial effort, barriers, or added support.
-- **C.** Ask how daily activities and relationships have changed. **✓ Correct**
-  - Feedback: Function should be assessed in real settings rather than inferred from symptom counts.
+- **A.** Ask the caregiver what motive best explains the hitting and document that interpretation.
+  - Feedback: An adult's inference about motive can guide questions, but an observable account is needed before drawing conclusions.
+- **B.** Ask whether the behavior fits a familiar disruptive-behavior diagnosis and record the likely category.
+  - Feedback: A category cannot substitute for details about antecedents, frequency, context, safety and consequences.
+- **C.** Clarify what happened immediately before and after, where it occurred, with whom, and how often. **✓ Correct**
+  - Feedback: Specific antecedents, settings, actions, consequences and frequency make the behavior assessable without assuming intent.
 
 ## Lesson 4: Everyday words versus clinical terms
 
@@ -670,14 +670,14 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
 - **C.** To give clinicians a more consistent account than the client's own perspective.
   - Feedback: The client's report remains essential evidence, not something a code replaces.
 
-### 71. How can autism function as part of identity?
+### 71. A client asks, “If I receive a diagnosis, will it change how other people see me?” What is the most helpful initial response?
 
-- **A.** It can shape self-understanding and community for some autistic people. **✓ Correct**
-  - Feedback: Autistic identity can be central, peripheral, or something a person relates to differently. Their own language and goals take priority over an assumed narrative.
-- **B.** It is best treated as an identity category for all people with an autism diagnosis.
-  - Feedback: Identity and language preferences vary among autistic people.
-- **C.** It is primarily determined by the terminology used in clinical documentation.
-  - Feedback: A chart's wording does not dictate a person's understanding of autism or preferred identity language.
+- **A.** Reassure them that clinical records are confidential, so others' perceptions will not be affected.
+  - Feedback: Privacy practices vary by setting and jurisdiction, and stigma concerns deserve a direct discussion rather than a guarantee.
+- **B.** Explain that avoiding a formal diagnosis generally prevents stigma without limiting treatment access.
+  - Feedback: Avoiding evaluation can affect communication or access to appropriate services; risks and benefits should be explored together.
+- **C.** Discuss potential benefits and stigma, and clarify what may be shared, with whom, and under which rules. **✓ Correct**
+  - Feedback: A collaborative discussion addresses the person's concerns, possible service access and applicable privacy or disclosure practices.
 
 ### 72. Someone with DID prefers the term “parts.” What is a sensible response?
 
@@ -735,14 +735,14 @@ Editorial review copy generated from the current 11-lesson course. Includes 72 s
 - **C.** Success with support does not establish that the underlying limitation has resolved. **✓ Correct**
   - Feedback: An effective accommodation often makes participation possible; success with support does not retroactively prove the barrier imaginary.
 
-### 78. A person has serious memory trouble but completes a short appointment well. What follows?
+### 78. A person performs most daily activities independently but has several days each month with severe memory disruption. What should a functional assessment record?
 
-- **A.** The appointment alone does not establish daily functional capacity. **✓ Correct**
-  - Feedback: A short, structured appointment may be easier than navigating an unscripted day. Ask about memory in real settings, strategies, consistency, and support.
-- **B.** The structured appointment provides sufficient evidence to discount other reports.
-  - Feedback: One observation in controlled conditions cannot stand in for longitudinal or ecologically valid functioning evidence.
-- **C.** Any memory problem reported outside the appointment should be considered self-perception.
-  - Feedback: Reported difficulties require contextual assessment; they cannot be dismissed by a brief observation.
+- **A.** Typical and difficult-day functioning, frequency, triggers, supports, and effects on reliable participation. **✓ Correct**
+  - Feedback: Fluctuating limitations require documenting variability and its practical consequences, not just best or average performance.
+- **B.** The highest level of independence demonstrated, because it shows what the person is capable of doing.
+  - Feedback: A best-day example can be useful but does not show whether functioning is reliable or sustainable across days.
+- **C.** An average level of performance across the month without separating unusually difficult periods.
+  - Feedback: An average alone may conceal episodic limitations, safety needs and the accommodations required during difficult periods.
 
 ### 79. What matters when exploring school access?
 
