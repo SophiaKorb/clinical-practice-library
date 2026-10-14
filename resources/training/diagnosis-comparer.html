@@ -64,9 +64,9 @@ th,td{padding:13px 15px;text-align:left;vertical-align:top;border-right:1px soli
 <div class="choices"><div><label for="a">First diagnosis</label><select id="a"></select></div><div><label for="b">Second diagnosis</label><select id="b"></select></div></div><p id="status" class="small" role="status" aria-live="polite"></p>
 <details class="differential-presets"><summary>Common differentials <span class="preset-hint">— suggested diagnosis pairs</span></summary><div id="presets" class="pills" role="group" aria-label="Suggested pairs"></div></details></section>
 <section class="surface" id="venn-section" aria-labelledby="venn-title">
-<div class="venn-head"><h2 id="venn-title">Where do these diagnoses overlap?</h2><p class="small">Visual differential · updates with your selections</p></div>
-<p class="venn-intro">The circles represent <strong>features worth comparing</strong>, not the proportion of people with each condition. Shared symptoms are not the same as shared diagnoses, and the areas are <strong>not to scale</strong>.</p>
-<p class="small mobile-hint">On a phone, swipe the diagram sideways as needed. Every teaching point also appears in the text cards below.</p>
+<div class="venn-head"><h2 id="venn-title" data-clinical="Where do these diagnoses overlap?" data-plain="What do these conditions have in common?">Where do these diagnoses overlap?</h2><p class="small" data-clinical="Visual differential · updates with your selections" data-plain="Comparison picture · changes when you choose different diagnoses">Visual differential · updates with your selections</p></div>
+<p class="venn-intro" data-clinical="The circles represent features worth comparing, not the proportion of people with each condition. Shared symptoms are not the same as shared diagnoses, and the areas are not to scale." data-plain="This picture helps you compare two conditions. The overlapping part shows symptoms or experiences that may occur with both. It does not show how common those symptoms are or how often people have both diagnoses. Circle sizes do not represent numbers.">The circles represent <strong>features worth comparing</strong>, not the proportion of people with each condition. Shared symptoms are not the same as shared diagnoses, and the areas are <strong>not to scale</strong>.</p>
+<p class="small mobile-hint" data-clinical="On a phone, swipe the diagram sideways as needed. Every teaching point also appears in the text cards below." data-plain="Using a phone? Swipe left or right to see the whole picture. You can also read the same information in the boxes below.">On a phone, swipe the diagram sideways as needed. Every teaching point also appears in the text cards below.</p>
 <div class="venn-stage">
 <svg id="venn-svg" viewBox="0 0 600 365" role="img" aria-labelledby="venn-svg-title venn-svg-desc">
 <title id="venn-svg-title">Selected diagnosis overlap illustration</title><desc id="venn-svg-desc">Two overlapping circles and a separate text description below. Diagram is conceptual, not a measure of diagnostic similarity, symptom prevalence or comorbidity.</desc>
@@ -156,7 +156,7 @@ const pbox=document.getElementById("presets");
 inputs.forEach(el=>{for(const d of diagnoses)el.add(new Option(d.name,d.id));});
 inputs[0].value="ocd";inputs[1].value="ocpd";
 function element(tag,text,scope){const e=document.createElement(tag);e.textContent=text;if(scope)e.scope=scope;return e;}
-function render(){const ids=inputs.map(x=>x.value).filter(Boolean);const unique=new Set(ids).size===ids.length;
+function render(){document.querySelectorAll("[data-clinical][data-plain]").forEach(el=>el.textContent=el.dataset[languageMode]);const ids=inputs.map(x=>x.value).filter(Boolean);const unique=new Set(ids).size===ids.length;
 document.getElementById("status").textContent=unique?"Comparing "+ids.length+" distinct diagnoses.":"Duplicate selections: choose a different diagnosis for each column.";
 renderVenn(ids,unique);
 const h=document.getElementById("thead"),body=document.getElementById("tbody");h.replaceChildren();body.replaceChildren();document.getElementById("deep-dive").replaceChildren();if(!unique){document.getElementById("insight").replaceChildren(element("h3","Choose distinct diagnoses"),element("p","Each comparison column needs a different diagnosis. Select another option to continue."));return;}
