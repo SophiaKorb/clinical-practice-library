@@ -235,7 +235,7 @@ def add_concept_map(fig,story):
     if not fig:
         return
     heading=fig.find("strong",class_="stage-title")
-    story.append(P("CONCEPT MAP  /  "+markup(heading or "Clinical reasoning"),"caption"))
+    story.append(P(markup(heading or "Clinical reasoning"),"caption"))
     structure=fig.select_one(".relationship-map")
     if structure is None:
         story.append(P(xml_escape(text(fig)),"small"))
@@ -304,7 +304,7 @@ def add_additional_item(el,story):
     if "lesson-footer" in cls:
         return
     if "safety-note" in cls:
-        story.append(box([P("SAFETY NOTE","caption"),P(xml_escape(text(el)),"small")],SEA,pad=10))
+        story.append(box([P(xml_escape(text(el)),"small")],SEA,pad=10))
         return
     if "sud-severity" in cls:
         story.append(P("Severity thresholds (number of applicable criteria)","h3"))
@@ -325,7 +325,7 @@ def add_additional_item(el,story):
         summary=el.find("summary",recursive=False)
         if summary:story.append(P(xml_escape(print_summary(summary)),"h3"))
     if el.name=="div" and "example" in cls:
-        story.append(box([P("EXAMPLE","caption"),P(xml_escape(text(el)),"small")],PALE,pad=9))
+        story.append(box([P(xml_escape(text(el)),"small")],PALE,pad=9))
         return
     if el.name=="div" and "visual" in cls:
         for tile in el.find_all("div",class_="tile",recursive=False):
@@ -359,14 +359,14 @@ def add_body_item(el,story):
         if "visual" in classes:
             tiles=el.select(".tile")
             if tiles:
-                story.append(P("Three ways to examine the idea","h3"))
+                pass  # Tile headings supply the hierarchy
                 for t in tiles:
                     head=t.find("b")
                     body=t.find("p")
                     if head:story.append(P(markup(head),"h3"))
                     if body:story.append(plain_para(body,"small"))
         elif "example" in classes and "worked-example" not in classes:
-            story.append(box([P("EXAMPLE  /  "+xml_escape(text(el.find("strong"))),"caption"),P(xml_escape(text(el)),"small")],PALE,pad=10))
+            story.append(box([P(xml_escape(text(el)),"small")],PALE,pad=10))
         elif "expand-group" in classes:
             story.append(P("Further explanation","h2"))
             for dt in el.select("details.expand"):
@@ -389,8 +389,7 @@ def add_chapter(sec,n,story,casecount):
     story.append(PageBreak())
     story.append(bookmark(P(f"CHAPTER {n:02d}  /  "+xml_escape(title),"h1"),f"lesson-{n}"))
     head=sec.find("div",class_="lesson-head")
-    kicker=head.find("p") if head else None
-    if kicker:story.append(P(xml_escape(text(kicker).upper()),"mono"))
+    # Chapter number and title already provide orientation; omit the redundant kicker.
     for el in sec.find_all(recursive=False):
         if el.name=="details" and "extra-examples" in el.get("class",[]):
             story.append(P("WORKED CASES  /  Observation → Inquiry → Interpretation → Action","h2"))
@@ -440,7 +439,7 @@ def build():
     figs=[sec.find("figure",class_="concept-stage") for sec in secs]
     assert len(questions)==80,f"Expected 80 questions, got {len(questions)}"
     assert count==33,f"Expected 33 cases, got {count}"
-    assert len(vocab)==36,f"Expected 33 glossary entries, got {len(vocab)}"
+    assert len(vocab)==36,f"Expected 36 glossary entries, got {len(vocab)}"
     assert len(figs)==11 and all(figs),"Expected 11 concept maps"
     assert sum(len(q.select("button[data-answer]")) for _,q in questions)==253
     assert sum(q.has_attr("data-multi") for _,q in questions)==8
@@ -509,7 +508,7 @@ def build():
     for n,(chapter,q) in enumerate(questions,1):
         if chapter!=previous:
             previous=chapter
-            book.append(P(f"CHAPTER {chapter:02d} PRACTICE  /  "+xml_escape(titlemap[chapter-1]),"h2"))
+            book.append(P(f"Practice {chapter:02d}  /  "+xml_escape(titlemap[chapter-1]),"h2"))
         add_question(q,n,book,keys)
     book.append(PageBreak())
     book.append(bookmark(P("Separate instructor answer key","h1"),"key"))
