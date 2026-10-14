@@ -61,7 +61,7 @@ for(const item of html.matchAll(/<div class="example worked-example">([\s\S]*?)<
  ],'consistent four-step worked cases');
  assert.ok(item[1].includes('The takeaway:'),'each case has a takeaway');
 }
-assert.equal((html.match(/class="vocab-entry" data-vocab-entry/g)||[]).length,33);
+assert.equal((html.match(/class="vocab-entry" data-vocab-entry/g)||[]).length,36);
 const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
 assert.equal(ids.length,new Set(ids).size,'unique anchor ids');
 for(const href of html.matchAll(/href="#([^"]+)"/g))assert.ok(ids.includes(href[1]),'valid fragment '+href[1]);
@@ -97,4 +97,4 @@ assert.match(css,/\.study-loop-steps\{display:grid/,'learning rhythm responsive 
 assert.match(html,/id="finish"/);
 const hub=fs.readFileSync('resources/therapy/clinical-intern-learning-hub.html','utf8');
 assert.match(hub,/DSM Foundations: eleven lessons/);
-console.log('PASS DSM Foundations: dual accessible modes; 11 lessons; 80 questions (72 single, 8 select-all); 33 worked cases; 33 glossary entries; 11 diagrams; semantic and safety checks.');
+console.log('PASS DSM Foundations: dual accessible modes; 11 lessons; 80 questions (72 single, 8 select-all); 33 worked cases; 36 glossary entries; 11 diagrams; semantic and safety checks.');
