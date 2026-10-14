@@ -29,7 +29,19 @@
         "Ask about mental compulsions, onset, insight, time demands and interpersonal consequences.",
         "Evaluate both diagnoses separately; do not infer either from tidiness."
       ],
-      "caution": "Neither OCD nor OCPD can be diagnosed by neatness, perfectionism or a single habit."
+      "caution": "Neither OCD nor OCPD can be diagnosed by neatness, perfectionism or a single habit.",
+      "venn_unique_a": [
+        "Obsessions",
+        "and/or rituals"
+      ],
+      "venn_unique_b": [
+        "Rigid",
+        "perfectionism"
+      ],
+      "venn_shared": [
+        "Repetition",
+        "or checking"
+      ]
     },
     {
       "a": "ADHD",
@@ -57,7 +69,19 @@
         "Compare concentration during low-anxiety periods with high-worry periods.",
         "Clarify worry content, sleep, medications, substances and alternative causes."
       ],
-      "caution": "A person can meet criteria for both; neither poor focus nor nervousness alone is diagnostic."
+      "caution": "A person can meet criteria for both; neither poor focus nor nervousness alone is diagnostic.",
+      "venn_unique_a": [
+        "Childhood-onset",
+        "inattention"
+      ],
+      "venn_unique_b": [
+        "Pervasive",
+        "difficult worry"
+      ],
+      "venn_shared": [
+        "Poor focus,",
+        "restlessness"
+      ]
     },
     {
       "a": "Autism spectrum disorder",
@@ -85,7 +109,19 @@
         "Distinguish fear of judgment from communication or sensory overload.",
         "Assess masking, supports, co-occurring anxiety and cultural context."
       ],
-      "caution": "Avoid assuming social discomfort establishes autism or that autism rules out treatable anxiety."
+      "caution": "Avoid assuming social discomfort establishes autism or that autism rules out treatable anxiety.",
+      "venn_unique_a": [
+        "Developmental",
+        "social differences"
+      ],
+      "venn_unique_b": [
+        "Fear of",
+        "social judgment"
+      ],
+      "venn_shared": [
+        "Social strain",
+        "or withdrawal"
+      ]
     },
     {
       "a": "Major depressive disorder",
@@ -113,7 +149,19 @@
         "Ask about episodes lasting four days or longer, sleep need and observable changes.",
         "Evaluate medication, substance and medical explanations; assess safety."
       ],
-      "caution": "A depressive snapshot cannot distinguish major depressive disorder from bipolar II."
+      "caution": "A depressive snapshot cannot distinguish major depressive disorder from bipolar II.",
+      "venn_unique_a": [
+        "Depression; no",
+        "hypomania history"
+      ],
+      "venn_unique_b": [
+        "Depression AND",
+        "hypomania"
+      ],
+      "venn_shared": [
+        "Major depressive",
+        "episodes"
+      ]
     },
     {
       "a": "Bipolar I disorder",
@@ -142,7 +190,19 @@
         "Clarify psychosis, hospitalization, marked impairment and two-week depression.",
         "Review longitudinal collateral, medications, substances and medical explanations."
       ],
-      "caution": "Neither a short-lived 'high' nor hypomania without a major depressive episode establishes bipolar II."
+      "caution": "Neither a short-lived 'high' nor hypomania without a major depressive episode establishes bipolar II.",
+      "venn_unique_a": [
+        "Mania; ≥7 days",
+        "or hospitalized"
+      ],
+      "venn_unique_b": [
+        "Hypomania ≥4d",
+        "AND depression"
+      ],
+      "venn_shared": [
+        "Mood + energy",
+        "episode changes"
+      ]
     },
     {
       "a": "PTSD",
@@ -170,7 +230,19 @@
         "Ask about intrusion, avoidance and the focus and controllability of worry.",
         "Consider other trauma-related conditions, medical and sleep causes."
       ],
-      "caution": "Trauma history alone does not establish PTSD; worry alone does not establish GAD."
+      "caution": "Trauma history alone does not establish PTSD; worry alone does not establish GAD.",
+      "venn_unique_a": [
+        "Trauma-linked",
+        "intrusion/avoidance"
+      ],
+      "venn_unique_b": [
+        "Worry across",
+        "life domains"
+      ],
+      "venn_shared": [
+        "Arousal +",
+        "poor sleep"
+      ]
     },
     {
       "a": "Borderline personality disorder",
@@ -198,7 +270,19 @@
         "Establish sustained elevated-energy episodes, baseline and sleep need.",
         "Assess trauma, longitudinal relationships, depressive episodes and safety."
       ],
-      "caution": "An intense emotional crisis is not by itself a bipolar episode or a personality-disorder diagnosis."
+      "caution": "An intense emotional crisis is not by itself a bipolar episode or a personality-disorder diagnosis.",
+      "venn_unique_a": [
+        "Enduring identity/",
+        "relationship pattern"
+      ],
+      "venn_unique_b": [
+        "Distinct mood",
+        "episodes"
+      ],
+      "venn_shared": [
+        "Affect shifts",
+        "or impulsivity"
+      ]
     },
     {
       "a": "Panic disorder",
@@ -226,7 +310,19 @@
         "Identify what is feared between attacks: attacks themselves or broader problems?",
         "Evaluate time course, medical conditions, stimulants and functioning."
       ],
-      "caution": "One panic attack does not establish panic disorder; GAD can include panic attacks."
+      "caution": "One panic attack does not establish panic disorder; GAD can include panic attacks.",
+      "venn_unique_a": [
+        "Unexpected",
+        "panic attacks"
+      ],
+      "venn_unique_b": [
+        "Chronic worry",
+        "across domains"
+      ],
+      "venn_shared": [
+        "Anxiety and",
+        "physical arousal"
+      ]
     },
     {
       "a": "ADHD",
@@ -254,7 +350,19 @@
         "Collect early developmental history and examples across contexts.",
         "Assess language, learning, anxiety, sleep, masking and accommodations."
       ],
-      "caution": "Neither distractibility nor social awkwardness alone is sufficient for either diagnosis."
+      "caution": "Neither distractibility nor social awkwardness alone is sufficient for either diagnosis.",
+      "venn_unique_a": [
+        "Attention /",
+        "impulse regulation"
+      ],
+      "venn_unique_b": [
+        "Social + repetitive",
+        "developmental traits"
+      ],
+      "venn_shared": [
+        "Executive /",
+        "social difficulties"
+      ]
     },
     {
       "a": "Major depressive disorder",
@@ -282,7 +390,19 @@
         "Assess two-week major depressive episodes within the longer history.",
         "Review exclusions, manic/hypomanic history, medical causes and safety."
       ],
-      "caution": "Persistent depressive disorder is about longitudinal duration; it is not automatically less severe."
+      "caution": "Persistent depressive disorder is about longitudinal duration; it is not automatically less severe.",
+      "venn_unique_a": [
+        "Depressive",
+        "episode ≥2 weeks"
+      ],
+      "venn_unique_b": [
+        "Depressed mood",
+        "≥2 years (adults)"
+      ],
+      "venn_shared": [
+        "Low mood",
+        "and impairment"
+      ]
     }
   ],
   "reference_sources": [
