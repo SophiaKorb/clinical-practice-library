@@ -72,10 +72,10 @@ jobs:
           original=fitz.open('build/dsm-foundations-complete-review-book.pdf')
           combined=fitz.open('build/dsm-foundations-complete-with-comparison-atlas.pdf')
           assert m['foundations_pages']==len(original)
-          assert len(combined)==len(original)+13
-          assert m['comparisons']==10 and m['three_part_workspaces']==10
+          assert len(combined)==len(original)+23
+          assert m['comparisons']==10 and m['three_part_workspaces']==10 and m['venn_diagrams']==10
           assert combined[len(original)].get_text().count('APPENDIX C')>=2
-          assert all('CLINICAL REASONING / THREE-PART WORKSPACE' in combined[len(original)+i].get_text() for i in range(1,11))
+          assert all('CLINICAL REASONING / WRITING WORKSPACE' in combined[len(original)+2+2*i].get_text() for i in range(10))
           assert sum('Sophia Korb Cohon, PhD' in p.get_text() for p in combined)==1
           for i in range(len(original)):
               a=''.join(original[i].get_text().split())
