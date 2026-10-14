@@ -6,6 +6,7 @@ DSM Foundations. Creates draft review PDFs only; never publishes anything.
 """
 from __future__ import annotations
 from pathlib import Path
+from io import BytesIO
 import json
 import re
 from xml.sax.saxutils import escape
@@ -283,55 +284,53 @@ def set_numbered_contents(page, entries):
     # header, rule, footer, and printed page number remain untouched.
     page.add_redact_annot(fitz.Rect(48,46,565,704),fill=(1,1,1))
     page.apply_redactions(images=0,graphics=1,text=0)
-    display_path=FONTS/"LibreBaskerville-Regular.ttf"
-    serif_path=FONTS/"SourceSerif4-Regular.ttf"
-    sans_path=FONTS/"SourceSans3-Regular.ttf"
-    for alias,fontpath in [("IndexDisplay",display_path),
-                           ("IndexText",serif_path),("IndexSans",sans_path)]:
-        page.insert_font(fontname=alias,fontfile=str(fontpath))
-    display=fitz.Font(fontfile=str(display_path))
-    serif=fitz.Font(fontfile=str(serif_path))
-    sans=fitz.Font(fontfile=str(sans_path))
-    def write(x,y,value,font="IndexText",size=11,color=(.153,.145,.149)):
-        page.insert_text((x,y),value,fontname=font,fontsize=size,color=color,overlay=True)
-    def index_row(label,number,y):
-        label_size=11.4
-        label_width=serif.text_length(label,fontsize=label_size)
-        if label_width>443:
-            label_size=10.4
-            label_width=serif.text_length(label,fontsize=label_size)
-        if label_width>443:
-            raise RuntimeError("Contents entry is too long: "+label)
-        page_text=str(number)
-        page_width=sans.text_length(page_text,fontsize=10.8)
-        x_number=551-page_width
-        x_start=58+label_width+11
-        if x_start<x_number-17:
-            page.draw_line((x_start,y-3),(x_number-13,y-3),
-                           color=(.83,.80,.77),width=.65,dashes="[1.4 2.8] 0")
-        write(58,y,label,size=label_size)
-        write(x_number,y,page_text,"IndexSans",10.8,(.42,.16,.23))
-        page.insert_link({"kind":fitz.LINK_GOTO,
-                          "from":fitz.Rect(56,y-14,555,y+5),
-                          "page":number-1})
-    write(58,82,"Contents and use","IndexDisplay",23.3)
-    intro=[
-        "The lessons introduce diagnostic reasoning through 33 worked cases.",
-        "The complete practice set and instructor key follow the lessons.",
-        "Each entry below names the page where that section begins."
-    ]
-    for i,line in enumerate(intro):
-        write(58,112+i*16.2,line,"IndexText",10.75)
-    write(58,179,"LESSONS","IndexSans",9.15,(.42,.16,.23))
-    page.draw_line((58,184),(552,184),color=(.86,.82,.79),width=.7)
-    for i,(name,pageno) in enumerate(chapter_rows):
-        index_row(name,pageno,205+i*22)
-    write(58,459,"REFERENCE & PRACTICE","IndexSans",9.15,(.42,.16,.23))
-    page.draw_line((58,464),(552,464),color=(.86,.82,.79),width=.7)
-    for i,(name,pageno) in enumerate(section_rows):
-        index_row(name,pageno,486+i*25)
-    write(58,659,"Method: Explore the information, apply the concept, and","IndexText",9.5,(.35,.32,.32))
-    write(58,673,"revisit conclusions as further evidence emerges.","IndexText",9.5,(.35,.32,.32))
+    # ReportLab's embedded OFL fonts retain correct ToUnicode maps for
+    # searchable, numbered entries; PyMuPDF insert_text did not.
+    overlay_bytes=BytesIO()
+    sheet=canvas.Canvas(overlay_bytes,pagesize=(W,H),pageCompression=1)
+    def write(x,y,value,font="Text",size=11,color=INK):
+        sheet.setFont(font,size)
+        sheet.setFillColor(color)
+        sheet.drawString(x,H-y,str(value))
+    def index_row(value,number,y):
+        fontsize=11.1
+        while pdfmetrics.stringWidth(value,"Text",fontsize)>433 and fontsize>9.4:
+            fontsize-=0.2
+        if pdfmetrics.stringWidth(value,"Text",fontsize)>433:
+            raise RuntimeError("Index entry too wide: "+value)
+        numerals=str(number)
+        right=551-pdfmetrics.stringWidth(numerals,"Sans",10.7)
+        left=58+pdfmetrics.stringWidth(value,"Text",fontsize)+13
+        if left<right-10:
+            sheet.setStrokeColor(HexColor("#cfc5bf"))
+            sheet.setLineWidth(.7)
+            sheet.setDash(1.3,2.8)
+            sheet.line(left,H-y-3,right-8,H-y-3)
+            sheet.setDash()
+        write(58,y,value,size=fontsize)
+        write(right,y,numerals,"Sans",10.7,WINE)
+        page.insert_link({"kind":fitz.LINK_GOTO,"from":fitz.Rect(56,y-15,556,y+4),"page":number-1})
+    write(58,83,"Contents and use","DisplayBold",24)
+    for i,line in enumerate([
+        "Lessons cover diagnostic reasoning through 33 worked cases.",
+        "Practice questions appear once; the answer key uses question numbers.",
+        "Select any entry to go directly to its printed page."
+    ]):
+        write(58,111+i*16,line,"Text",10.5)
+    write(58,179,"LESSONS","SansBold",9.2,WINE)
+    sheet.setStrokeColor(LINE);sheet.line(58,H-184,552,H-184)
+    for i,(value,pageno) in enumerate(chapter_rows):
+        index_row(value,pageno,205+22*i)
+    write(58,459,"REFERENCE & PRACTICE","SansBold",9.2,WINE)
+    sheet.setStrokeColor(LINE);sheet.line(58,H-464,552,H-464)
+    for i,(value,pageno) in enumerate(section_rows):
+        index_row(value,pageno,486+25*i)
+    write(58,656,"Use the questions to identify what evidence is present,","Text",9.6)
+    write(58,672,"what is missing and what could change the conclusion.","Text",9.6)
+    sheet.save()
+    overlay=fitz.open(stream=overlay_bytes.getvalue(),filetype="pdf")
+    page.show_pdf_page(page.rect,overlay,0,overlay=True)
+    overlay.close()
     return all_rows
 
 def combine():
