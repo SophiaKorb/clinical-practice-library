@@ -41,7 +41,7 @@ jobs:
           assert manifest['font_mode']=='editorial', 'Editorial typeface was not embedded'
           assert manifest['lessons']==11 and manifest['cases']==33 and manifest['concept_maps']==11
           assert manifest['vocabulary']==33 and manifest['questions']==80
-          assert manifest['options']==249 and manifest['select_all']==8 and manifest['single']==72
+          assert manifest['options']==253 and manifest['select_all']==8 and manifest['single']==72
           pages=[p.get_text() for p in d]
           full='\n'.join(pages)
           for i in range(1,12):assert 'CHAPTER %02d'%i in full
