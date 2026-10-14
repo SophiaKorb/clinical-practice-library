@@ -346,7 +346,7 @@ def combine():
     glossary_hits=[page for depth,title,page in old_outline
                   if depth==1 and title.startswith("Appendix B / Full vocabulary")]
     worksheet_hits=[page for depth,title,page in old_outline
-                  if depth==1 and title.startswith("Appendix C / Working assessment worksheet")]
+                  if depth==1 and title.startswith("Appendix C / Assessment worksheet")]
     assert len(glossary_hits)==1 and len(worksheet_hits)==1
     split=glossary_hits[0]-1
     assert split>30 and worksheet_hits[0]>split+1
