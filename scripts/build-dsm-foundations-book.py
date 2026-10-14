@@ -442,7 +442,7 @@ def build():
     assert count==33,f"Expected 33 cases, got {count}"
     assert len(vocab)==33,f"Expected 33 glossary entries, got {len(vocab)}"
     assert len(figs)==11 and all(figs),"Expected 11 concept maps"
-    assert sum(len(q.select("button[data-answer]")) for _,q in questions)==249
+    assert sum(len(q.select("button[data-answer]")) for _,q in questions)==253
     assert sum(q.has_attr("data-multi") for _,q in questions)==8
     assert sum(len(q.select("button[data-answer='yes']"))>0 for _,q in questions)==80
     OUT.parent.mkdir(parents=True,exist_ok=True)
