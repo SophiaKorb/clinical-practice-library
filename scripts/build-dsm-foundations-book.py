@@ -467,7 +467,7 @@ def build():
         book.append(P(f"{n:02d}  {xml_escape(title)}","contents"))
     book.append(Spacer(1,6))
     book.append(P("Appendix B  /  Full vocabulary (36 concepts)","contents"))
-    book.append(P("Appendix C  /  Reusable assessment and documentation worksheet","contents"))
+    book.append(P("Appendix C  /  Assessment worksheet","contents"))
     book.append(P("Practice  /  Questions 1–80 with response space","contents"))
     book.append(P("Instructor  /  Answer key 1–80 with explanations","contents"))
     book.append(P("Method: Explore the information → Apply the concept → Recall what would change your conclusion.","small"))
@@ -486,7 +486,7 @@ def build():
         book.append(P(xml_escape(text(dt)),"h3"))
         book.append(plain_para(dd,"body"))
     book.append(PageBreak())
-    book.append(bookmark(P("Appendix C  /  Working assessment worksheet","h1"),"worksheet"))
+    book.append(bookmark(P("Appendix C  /  Assessment worksheet","h1"),"worksheet"))
     book.append(P("Use this reusable page to describe the reported concern and the evidence without treating one symptom, label, or successful task as a settled diagnosis.","body"))
     for section in [
         "1. Person's own description of the concern",
@@ -528,7 +528,8 @@ def build():
         ("American Psychiatric Association, DSM-5-TR","https://www.psychiatry.org/psychiatrists/practice/dsm"),
         ("NIMH: Bipolar disorder","https://www.nimh.nih.gov/health/publications/bipolar-disorder"),
         ("NIAAA: Alcohol Use Disorder","https://www.niaaa.nih.gov/health-professionals-communities/core-resource-on-alcohol/alcohol-use-disorder-risk-diagnosis-recovery"),
-        ("EEOC: disability-related inquiries and documentation","https://www.eeoc.gov/laws/guidance/enforcement-guidance-disability-related-inquiries-and-medical-examinations-employees")
+        ("EEOC (US): disability-related inquiries and documentation","https://www.eeoc.gov/laws/guidance/enforcement-guidance-disability-related-inquiries-and-medical-examinations-employees"),
+        ("ACAS (UK): reasonable adjustments at work","https://www.acas.org.uk/reasonable-adjustments")
     ]:
         book.append(P(xml_escape(label)+": "+xml_escape(url),"small"))
     doc=BookDoc(OUT)
