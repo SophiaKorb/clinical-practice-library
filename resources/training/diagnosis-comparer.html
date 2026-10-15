@@ -172,7 +172,7 @@ function renderVenn(ids,valid){
   if(found){const ul=document.createElement("ul");found.shared.forEach(feature=>ul.append(element("li",feature)));content.append(ul);content.append(element("p",languageMode==="plain"?"These are possible similarities, not proof of either diagnosis.":"These are possible shared features, not diagnostic criteria or a measure of similarity."));}
   else content.append(element("p",languageMode==="plain"?"This pair does not yet have an authored description of shared features. Compare the individual patterns and assessment questions below.":"No authored overlap summary exists for this pair. Review each diagnostic pattern and differential questions below; the drawn intersection does not establish shared criteria."));
   document.getElementById("venn-overlap-panel").hidden=true;trigger.setAttribute("aria-expanded","false");
-  const points=found?[found.a===ids[0]?found.aOnly:found.bOnly,found.a===ids[1]?found.aOnly:found.bOnly]:[byId[ids[0]].pattern,byId[ids[1]].pattern];
+  const points=found?[found.a===ids[0]?found.aOnly:found.bOnly,found.a===ids[1]?found.aOnly:found.bOnly]:(languageMode==="plain"?[plainDescriptions[ids[0]].pattern,plainDescriptions[ids[1]].pattern]:[byId[ids[0]].pattern,byId[ids[1]].pattern]);
   regions.append(regionCard((languageMode==="plain"?plainVennTerms.characteristic:"More characteristic: ")+byId[ids[0]].name,languageMode==="plain"&&!plainCurated?plainDescriptions[ids[0]].pattern:points[0]));
   if(found){
    regions.append(overlapCard(languageMode==="plain"?plainVennTerms.shared:"Features that may be shared",found.shared));
