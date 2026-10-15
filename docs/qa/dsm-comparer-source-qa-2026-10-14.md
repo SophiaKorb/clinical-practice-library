@@ -37,3 +37,11 @@ Run browser and repository tests in a checkout with available Node/Chromium, the
 - Local tool discovery found Node, Chromium, and Playwright installed. However, the linked GitHub repository cannot be cloned in the container because the network cannot resolve GitHub, while connector-only file access does not mount a usable checkout. Therefore the full repository test suite and browser/print runs against actual repository files remain **not run**.
 - A wording-based high-risk scan of correct Plain Language answers did not establish a new confirmed defect. **No clinical content was altered in this follow-up.** Clinical verification against authoritative criteria for every individual choice and Venn assertion remains an independent review requirement, not a completed sign-off.
 - No merge, deployment, or TinyFish use.
+
+## Follow-up — executable environment and Venn content sweep
+
+- Verified again that the branch still references the same DSM Foundations and comparer content blobs as the preceding checkpoint. No content changes were made.
+- Attempted `git ls-remote https://github.com/SophiaKorb/clinical-practice-library.git HEAD` in the container. It failed with `Could not resolve host: github.com`. `node` and `chromium` are installed, but without an executable checkout or an accessible source-file transfer, repository and true DOM/browser/print regression tests against these branch files were **not run**. Installation alone is not execution.
+- Read the course's answer-selection structures and swept all 31 named Venn records, including course/duration and exclusion summaries. This does **not** amount to DSM-5-TR source-by-source verification of all narrative claims, or a signed clinical verdict on 249 answer choices.
+- Outstanding: independently verify each keyed option and distractor against authoritative criteria, obtain repository checkout, run full project QA plus Playwright keyboard, responsive layout, language-switch, exact multi-select feedback and actual print/PDF output, and seek qualified clinical sign-off before merge/publication.
+- No deployment, merge, or TinyFish use. No code changes were justified by evidence in this pass.
