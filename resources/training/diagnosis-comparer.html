@@ -133,6 +133,14 @@ for(const p of vennData){const key=[p.a,p.b].sort().join("|");const plain=plainV
  plainPairInsights[key]={title:byId[p.a].name+" vs "+byId[p.b].name,description:plain.probe};
 }
 byId.aud.caveat="Drinking frequency or tolerance alone does not establish a use disorder. Assess alcohol withdrawal safety and each relevant criterion.";plainDescriptions.aud.caveat="Frequent drinking or needing more alcohol for the same effect alone does not establish a use disorder. Check the full pattern and whether stopping needs medical support.";
+// Validate curated intersections before exposing them in either text style.
+const reviewedPairKeys=new Set(plainOverlapReview.map(([a,b])=>[a,b].sort().join("|")));
+for(const pair of vennData){
+ const key=[pair.a,pair.b].sort().join("|");
+ if(!byId[pair.a]||!byId[pair.b]||pair.a===pair.b||!reviewedPairKeys.has(key)||!plainVennPairs[key]||!Array.isArray(pair.shared)||!pair.shared.length||!Array.isArray(plainVennPairs[key].shared)||!plainVennPairs[key].shared.length){
+  console.error("Incomplete Venn comparison:",key);
+ }
+}
 const vennPairs=new Map(vennData.map(item=>[[item.a,item.b].sort().join("|"),item]));
 const svgNS="http://www.w3.org/2000/svg";
 function setSvgLabel(id,name){
