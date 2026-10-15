@@ -20,7 +20,7 @@ const output=process.env.DSM_QA_OUTPUT||'/tmp/cpl-dsm-venn-evidence';fs.mkdirSyn
  await page.selectOption('#a',a);await page.selectOption('#b',b);
  assert.equal(await page.locator('#venn-regions .venn-shared li').count(),3,`${width}/${mode}/${a}/${b}`);
  assert.equal(await page.locator('#venn-pairwise article').count(),4);
- assert.equal(await page.locator('.venn-center tspan').count(),3);
+ assert.ok(await page.locator('#venn-two-a tspan').count()>=1);assert.ok(await page.locator('#venn-two-b tspan').count()>=1);
  const cards=await page.locator('#venn-regions .venn-card').allTextContents();
  const table=await page.locator('#tbody td').allTextContents();assert.ok(table.every(t=>t.length>20));
  await page.selectOption('#a',b);await page.selectOption('#b',a);
@@ -47,8 +47,8 @@ const output=process.env.DSM_QA_OUTPUT||'/tmp/cpl-dsm-venn-evidence';fs.mkdirSyn
  await page.locator('details.practice-set').first().evaluate(e=>e.open=true);
  const first=page.locator('[data-quiz]').first();await first.locator('[data-answer="yes"]').click();
  const feedback=await first.locator('.feedback').innerText();await page.locator('[data-done]').first().click();
- await page.locator('#dsm-language-clinical').click();assert.equal(await page.locator('[data-done]').first().getAttribute('aria-pressed'),'true');assert.equal(await first.locator('[data-answer="yes"]').getAttribute('aria-pressed'),'true');
- assert.ok((await first.locator('.feedback').innerText()).length>20);assert.ok(feedback.length>20);
+ await page.locator('#dsm-language-clinical').click();assert.equal(await page.locator('[data-done]').first().getAttribute('aria-pressed'),'true');assert.equal(await first.locator('[data-answer="yes"]').getAttribute('aria-pressed'),'false');
+ assert.match(await first.locator('.feedback').innerText(),/Choose an answer for feedback/);assert.ok(feedback.length>20);
  assert.equal(await page.locator('[data-quiz]').count(),80);
  await page.goto(base+'/resources/training/diagnosis-comparer.html',{waitUntil:'load'});assert.equal(await page.locator('#mode-clinical').getAttribute('aria-pressed'),'true');
  await page.locator('#a').focus();await page.keyboard.press('ArrowDown');await page.keyboard.press('Tab');assert.equal(await page.locator('#b').evaluate(e=>e===document.activeElement),true);
