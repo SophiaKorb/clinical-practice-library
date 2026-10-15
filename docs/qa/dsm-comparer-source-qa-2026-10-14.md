@@ -77,3 +77,10 @@ GitHub Actions results from commit `c8174e1` were inspected directly (the runner
 - GitHub Actions `DSM comparer Venn browser QA` run [38686276178](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/38686276178) completed **failure** in the browser viewport/print test. Job log identifies `locator('.venn-center').textContent(): Timeout 30000ms exceeded` at `tests/diagnosis-comparer-venn.cjs:35`. The current accessible implementation uses `#venn-message` for unsupported-pair status, not `.venn-center`. Updated that stale test assertion in commit `ef72438`; the browser workflow must be **rerun and pass** before marking technical QA green.
 - This failure was in an obsolete DOM selector in the test, not a confirmed defect in the rendered comparison content. No production HTML or clinical content was changed.
 - Preserved-content requirement remains 80 questions, 249 choices, and 31 Venn comparisons. Qualified-human clinical sign-off remains mandatory before publication.
+
+## CI after `b30f578` — final verification checkpoint
+
+- `CPL site QA` run [38686529807](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/38686529807): **passed**, job `116262532427`.
+- `DSM comparer Venn browser QA` run [38686529834](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/38686529834): **in progress at observation**, executing the differential diagram viewport/print check. Passing status is not yet established.
+- Branch source fetched after `b30f578`: **80 questions, 249 choices, 31 Venn pairs**. No production changes or additional verified defect in this checkpoint.
+- Technical gate remains open until browser QA completes successfully; qualified clinical review remains pending. No merge, deployment, or TinyFish.
