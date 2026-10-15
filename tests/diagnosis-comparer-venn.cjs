@@ -32,7 +32,7 @@ const output=process.env.DSM_QA_OUTPUT||'/tmp/cpl-dsm-venn-evidence';fs.mkdirSyn
  assert.equal(await page.inputValue('#a'),b);assert.equal(await page.inputValue('#b'),a);
  }
  await page.selectOption('#a','ocd');await page.selectOption('#b','schizo');
- assert.equal(await page.locator('#venn-regions .venn-shared li').count(),0);assert.match(await page.locator('.venn-center').textContent(),/Not written|Not authored/);
+ assert.equal(await page.locator('#venn-regions .venn-shared li').count(),0);assert.match(await page.locator('#venn-message').textContent(),/No authored overlap|not yet written|not yet described|not yet mapped/i);
  await page.selectOption('#b','ocd');assert.equal(await page.locator('#venn-regions article').count(),0);assert.equal(await page.locator('#venn-two').isVisible(),false);
  await page.selectOption('#a','cannabis');await page.selectOption('#b','schizo');
  assert.match(await page.locator('#venn-regions article').first().innerText(),/Cannabis use disorder/);assert.match(await page.locator('#venn-regions article').last().innerText(),/Schizophrenia/);
