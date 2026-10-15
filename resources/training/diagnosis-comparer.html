@@ -50,6 +50,7 @@ th,td{padding:13px 15px;text-align:left;vertical-align:top;border-right:1px soli
 @media(max-width:740px){.venn-grid,.venn-pair-details{grid-template-columns:1fr}.venn-stage svg{min-width:500px;max-height:none}}
 @media print{.venn-stage{-webkit-print-color-adjust:exact;print-color-adjust:exact}.venn-stage svg{max-height:250px}.venn-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.venn-card{break-inside:avoid}.venn-pair-details{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media print{#choose-section,.site-language{display:none!important}.venn-stage{overflow:visible}.venn-stage svg{min-width:0}.scroller{overflow:visible}.venn-pair-details article{break-inside:avoid}.venn-pair-details{grid-template-columns:repeat(2,minmax(0,1fr))}h2,h3{break-after:avoid}.scroller table{min-width:0!important}thead{display:table-header-group}}
+.venn-canvas{position:relative;min-width:500px}.venn-overlap-trigger{position:absolute;left:50%;top:49.3%;transform:translate(-50%,-50%);width:126px;min-height:66px;border:2px solid #315f61;border-radius:13px;background:#fffef5;color:#173b38;font:750 13px/1.25 system-ui,sans-serif;cursor:pointer;padding:7px 8px;box-shadow:0 2px 9px #173b3829;text-align:center}.venn-overlap-trigger span{display:block;font-size:16px;line-height:1.1}.venn-overlap-trigger:hover,.venn-overlap-trigger[aria-expanded=true]{background:#e9f4ed}.venn-overlap-trigger:focus-visible{outline:3px solid #1c63b1;outline-offset:3px}.venn-overlap-trigger[hidden],.venn-overlap-panel[hidden]{display:none}.venn-overlap-panel{margin:12px 0;padding:15px 19px;border:1px solid #abcbbd;border-radius:12px;background:#f2f8f4}.venn-overlap-panel h3{margin:0 0 8px}.venn-overlap-panel ul{margin:4px 0 10px;padding-left:22px}.venn-overlap-panel li{margin-bottom:5px}@media print{.venn-overlap-trigger{display:none!important}.venn-overlap-panel[hidden]{display:block!important}.venn-canvas{min-width:0}}
 </style><link rel="stylesheet" href="/resources/site-navigation.css"><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
@@ -85,15 +86,16 @@ th,td{padding:13px 15px;text-align:left;vertical-align:top;border-right:1px soli
 <p class="venn-intro" data-clinical="The circles represent features worth comparing, not the proportion of people with each condition. Shared symptoms are not the same as shared diagnoses, and the areas are not to scale." data-plain="This picture helps you compare two conditions. The overlapping part shows symptoms or experiences that may occur with both. It does not show how common those symptoms are or how often people have both diagnoses. Circle sizes do not represent numbers.">The circles represent <strong>features worth comparing</strong>, not the proportion of people with each condition. Shared symptoms are not the same as shared diagnoses, and the areas are <strong>not to scale</strong>.</p>
 <p class="small mobile-hint" data-clinical="On a phone, swipe the diagram sideways as needed. Every teaching point also appears in the text cards below." data-plain="Using a phone? Swipe left or right to see the whole picture. You can also read the same information in the boxes below.">On a phone, swipe the diagram sideways as needed. Every teaching point also appears in the text cards below.</p>
 <div class="venn-stage" tabindex="0" role="region" aria-label="Diagnosis overlap diagram; scroll horizontally on a narrow screen">
-<svg id="venn-svg" viewBox="0 0 600 365" role="img" aria-labelledby="venn-svg-title venn-svg-desc">
+<div class="venn-canvas"><svg id="venn-svg" viewBox="0 0 600 365" role="img" aria-labelledby="venn-svg-title venn-svg-desc">
 <title id="venn-svg-title">Selected diagnosis overlap illustration</title><desc id="venn-svg-desc">Two overlapping circles and a separate text description below. Diagram is conceptual, not a measure of diagnostic similarity, symptom prevalence or comorbidity.</desc>
 <g id="venn-two">
 <circle class="circle-a" cx="228" cy="180" r="150"/><circle class="circle-b" cx="372" cy="180" r="150"/>
 <text class="venn-label" id="venn-two-a" x="153" y="180"></text><text class="venn-label" id="venn-two-b" x="447" y="180"></text>
-<text class="venn-center" id="venn-center-label" x="300" y="180"><tspan x="300" dy="-7">Possible</tspan><tspan x="300" dy="20">overlap</tspan></text></g>
-</svg>
+</g>
+</svg><button id="venn-overlap-trigger" class="venn-overlap-trigger" type="button" aria-expanded="false" aria-controls="venn-overlap-panel">Possible<br>overlap <span aria-hidden="true">＋</span></button></div>
 <div id="venn-legend" class="venn-legend" aria-label="Circle labels"></div>
 </div>
+<div id="venn-overlap-panel" class="venn-overlap-panel" hidden><h3 id="venn-overlap-heading">Possible shared features</h3><div id="venn-overlap-content"></div></div>
 <p id="venn-qualifier" class="small"></p>
 <div id="venn-message" class="venn-status" role="status" aria-live="polite"></div>
 <div id="venn-regions" class="venn-grid" aria-label="Selected diagnoses: distinctive and overlapping features"></div>
@@ -156,14 +158,20 @@ function renderVenn(ids,valid){
  document.getElementById("venn-two").style.display="";
  document.getElementById("venn-svg-title").textContent=ids.map(id=>byId[id].name).join(" / ")+(languageMode==="plain"?" — possible similarities":" — conceptual comparison");
  document.getElementById("venn-svg").setAttribute("aria-label",ids.map(id=>byId[id].name).join(", ")+(languageMode==="plain"?". Two circles used to compare possible similarities. Circle size does not show how common the conditions are.":". Conceptual overlap, not a diagnostic similarity measure."));
- if(!valid){document.getElementById("venn-two").style.display="none";message.textContent=languageMode==="plain"?"Choose two different diagnoses to compare.":"Choose distinct diagnoses to show a meaningful diagram.";return;}
+ if(!valid){document.getElementById("venn-overlap-trigger").hidden=true;document.getElementById("venn-overlap-panel").hidden=true;document.getElementById("venn-overlap-trigger").setAttribute("aria-expanded","false");document.getElementById("venn-two").style.display="none";message.textContent=languageMode==="plain"?"Choose two different diagnoses to compare.":"Choose distinct diagnoses to show a meaningful diagram.";return;}
  ids.forEach((id,i)=>{const span=document.createElement("span");span.className="legend-"+("abc"[i]);const swatch=document.createElement("i");swatch.setAttribute("aria-hidden","true");span.append(swatch,document.createTextNode(byId[id].name));legend.append(span);});
  if(ids.length===2){
+  document.getElementById("venn-overlap-trigger").hidden=false;
   setSvgLabel("venn-two-a",ids[0]);setSvgLabel("venn-two-b",ids[1]);
   const curated=vennPairs.get(ids.slice().sort().join("|"));const plainCurated=languageMode==="plain"?plainVennPairs[ids.slice().sort().join("|")]:null;const found=languageMode==="plain"?(plainCurated&&curated?{...curated,...plainCurated}:null):curated;
-  const center=document.getElementById("venn-center-label");
-  const centerLines=found?(languageMode==="plain"?["May share","features"]:["Potential","overlap"]):(languageMode==="plain"?["Not yet","described"]:["Not yet","mapped"]);
-  Array.from(center.children).forEach((line,i)=>{line.textContent=centerLines[i];});
+  const trigger=document.getElementById("venn-overlap-trigger");
+  trigger.replaceChildren(document.createTextNode(found?(languageMode==="plain"?"May share features ":"Possible overlap "):(languageMode==="plain"?"Not yet described ":"Not yet mapped ")));
+  const plus=document.createElement("span");plus.setAttribute("aria-hidden","true");plus.textContent="＋";trigger.append(plus);
+  const content=document.getElementById("venn-overlap-content");content.replaceChildren();
+  document.getElementById("venn-overlap-heading").textContent=languageMode==="plain"?"What they may have in common":"Potential shared features";
+  if(found){const ul=document.createElement("ul");found.shared.forEach(feature=>ul.append(element("li",feature)));content.append(ul);content.append(element("p",languageMode==="plain"?"These are possible similarities, not proof of either diagnosis.":"These are possible shared features, not diagnostic criteria or a measure of similarity."));}
+  else content.append(element("p",languageMode==="plain"?"This pair does not yet have an authored description of shared features. Compare the individual patterns and assessment questions below.":"No authored overlap summary exists for this pair. Review each diagnostic pattern and differential questions below; the drawn intersection does not establish shared criteria."));
+  document.getElementById("venn-overlap-panel").hidden=true;trigger.setAttribute("aria-expanded","false");
   const points=found?[found.a===ids[0]?found.aOnly:found.bOnly,found.a===ids[1]?found.aOnly:found.bOnly]:[byId[ids[0]].pattern,byId[ids[1]].pattern];
   regions.append(regionCard((languageMode==="plain"?plainVennTerms.characteristic:"More characteristic: ")+byId[ids[0]].name,languageMode==="plain"&&!plainCurated?plainDescriptions[ids[0]].pattern:points[0]));
   if(found){
@@ -197,6 +205,7 @@ insight.replaceChildren(element("h3",selected?selected.title:plain?"Compare timi
 pbox.querySelectorAll("button").forEach(btn=>btn.setAttribute("aria-pressed",String(!!pair&&btn.dataset.key===pair.a+"|"+pair.b)));
 }
 for(const p of presetsData){const b=document.createElement("button");b.type="button";b.dataset.key=p.a+"|"+p.b;b.textContent=byId[p.a].name+" vs "+byId[p.b].name;b.addEventListener("click",()=>{inputs[0].value=p.a;inputs[1].value=p.b;render();document.getElementById("compare-title").scrollIntoView({block:"start",behavior:"smooth"});});pbox.append(b);}
+document.getElementById("venn-overlap-trigger").addEventListener("click",()=>{const panel=document.getElementById("venn-overlap-panel");const open=panel.hidden;panel.hidden=!open;document.getElementById("venn-overlap-trigger").setAttribute("aria-expanded",String(open));});
 for(const mode of ["clinical","plain"]){document.getElementById("mode-"+mode).addEventListener("click",()=>{languageMode=mode;try{localStorage.setItem("dsm-foundations-language",mode)}catch{}for(const m of ["clinical","plain"])document.getElementById("mode-"+m).setAttribute("aria-pressed",String(m===mode));render();});}
 for(const m of ["clinical","plain"])document.getElementById("mode-"+m).setAttribute("aria-pressed",String(m===languageMode));inputs.forEach(x=>x.addEventListener("change",render));document.getElementById("print").addEventListener("click",()=>window.print());render();
 </script></body></html>
