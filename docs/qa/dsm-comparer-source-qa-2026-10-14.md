@@ -70,3 +70,10 @@ GitHub Actions results from commit `c8174e1` were inspected directly (the runner
 3. Pay particular attention to mania versus hypomania and decreased need for sleep, OCD versus OCPD, PTSD exposure criteria, schizophrenia versus mood-related psychosis, substance use disorder severity and prescribed-medication exceptions, and eating-disorder thresholds.
 4. Review respectful, person-centered Plain Language wording and alignment with Clinical mode. Confirm no wording implies that a screening example establishes diagnosis or recommends unsafe self-management.
 5. Record reviewer credentials, item-specific decisions, corrections, and written sign-off. Do not merge or publish before both technical and clinical gates are satisfied.
+
+## Final CI follow-up — October 14/15, 2026
+
+- GitHub Actions `CPL site QA` run [38686276223](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/38686276223) completed **successfully**.
+- GitHub Actions `DSM comparer Venn browser QA` run [38686276178](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/38686276178) completed **failure** in the browser viewport/print test. Job log identifies `locator('.venn-center').textContent(): Timeout 30000ms exceeded` at `tests/diagnosis-comparer-venn.cjs:35`. The current accessible implementation uses `#venn-message` for unsupported-pair status, not `.venn-center`. Updated that stale test assertion in commit `ef72438`; the browser workflow must be **rerun and pass** before marking technical QA green.
+- This failure was in an obsolete DOM selector in the test, not a confirmed defect in the rendered comparison content. No production HTML or clinical content was changed.
+- Preserved-content requirement remains 80 questions, 249 choices, and 31 Venn comparisons. Qualified-human clinical sign-off remains mandatory before publication.
