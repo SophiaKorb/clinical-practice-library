@@ -56,3 +56,17 @@ GitHub Actions results from commit `c8174e1` were inspected directly (the runner
 - The CI run logs constitute **executed GitHub Actions evidence of failures**, not local execution. Do not mark site/diagram browser QA green until new workflow results actually pass.
 - Current clinical gate: 80 questions, 249 answer choices and 31 Venn comparison records remain preserved. Full independent item-level diagnostic accuracy review still requires a qualified clinician and reference verification. No clinical sign-off is claimed.
 - No merge, production deployment, or TinyFish use was performed.
+
+## CI retest checkpoint — October 14/15, 2026
+
+- Checked GitHub Actions for commit `fc14691`. `CPL site QA` run [38686276223](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/38686276223), job `static-and-behavior` (116261730564), completed with **success**. This is executed CI, not a locally run test.
+- `DSM comparer Venn browser QA` run [38686276178](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/38686276178), job `diagram-browser` (116261730699), was **in progress at this checkpoint**. No pass or failure claimed until the job completes.
+- Re-fetched the branch source and reconfirmed 80 quiz blocks, 249 answer choices, 31 Venn records. No content edits were warranted during this checkpoint.
+
+### Qualified clinical reviewer checklist (pending technical green)
+
+1. Inspect all 80 stems and each of the 249 answer choices; verify whether the keyed answer, each distractor, and each individual feedback explanation agree with current criteria and the literal question wording. Flag any equally defensible distractor.
+2. Inspect all 31 Venn pairs for accurate diagnostic boundaries, durations, exclusions, trauma and medical/substance alternatives, distinctions between shared and defining features, and risks of falsely implying diagnoses are mutually exclusive.
+3. Pay particular attention to mania versus hypomania and decreased need for sleep, OCD versus OCPD, PTSD exposure criteria, schizophrenia versus mood-related psychosis, substance use disorder severity and prescribed-medication exceptions, and eating-disorder thresholds.
+4. Review respectful, person-centered Plain Language wording and alignment with Clinical mode. Confirm no wording implies that a screening example establishes diagnosis or recommends unsafe self-management.
+5. Record reviewer credentials, item-specific decisions, corrections, and written sign-off. Do not merge or publish before both technical and clinical gates are satisfied.
