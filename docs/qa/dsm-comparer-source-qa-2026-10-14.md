@@ -45,3 +45,14 @@ Run browser and repository tests in a checkout with available Node/Chromium, the
 - Read the course's answer-selection structures and swept all 31 named Venn records, including course/duration and exclusion summaries. This does **not** amount to DSM-5-TR source-by-source verification of all narrative claims, or a signed clinical verdict on 249 answer choices.
 - Outstanding: independently verify each keyed option and distractor against authoritative criteria, obtain repository checkout, run full project QA plus Playwright keyboard, responsive layout, language-switch, exact multi-select feedback and actual print/PDF output, and seek qualified clinical sign-off before merge/publication.
 - No deployment, merge, or TinyFish use. No code changes were justified by evidence in this pass.
+
+## CI failure investigation and confirmed fixes — October 14/15, 2026
+
+GitHub Actions results from commit `c8174e1` were inspected directly (the runner did execute checks, although this local environment could not clone the repository):
+
+- `CPL site QA` run `38685947812`, job `116260691085`: `tests/dsm-foundations.cjs` stopped at question 1 with `3 or 4 choices`. Root cause in test regex: it required a closing `>` immediately after `data-feedback`, but multilingual attributes follow it. Corrected the test regex to allow subsequent attributes (commit `96fcb4f`). The source still contains 80 quiz blocks and 249 choices.
+- `DSM comparer Venn browser QA` run `38685947798`, job `116260690781`: table row count was 0 rather than 7. Source diagnosis found an undefined `renderIntersection(found)` invocation inside `renderVenn`, before table construction. The diagram's actual implementation uses an accessible HTML overlap button and panel; the call had no definition. Removed that invocation (commit `7afc318`), preserving 31 Venn records. Static JavaScript parsing passed, but **a passing browser retest remains unverified**.
+- Updated the browser regression assertions for actual SVG labels and the documented style-change answer reset (commit `17da5b0`). These test updates have not yet been confirmed by a successful CI run.
+- The CI run logs constitute **executed GitHub Actions evidence of failures**, not local execution. Do not mark site/diagram browser QA green until new workflow results actually pass.
+- Current clinical gate: 80 questions, 249 answer choices and 31 Venn comparison records remain preserved. Full independent item-level diagnostic accuracy review still requires a qualified clinician and reference verification. No clinical sign-off is claimed.
+- No merge, production deployment, or TinyFish use was performed.
