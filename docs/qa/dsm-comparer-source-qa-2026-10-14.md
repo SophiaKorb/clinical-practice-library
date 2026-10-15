@@ -84,3 +84,11 @@ GitHub Actions results from commit `c8174e1` were inspected directly (the runner
 - `DSM comparer Venn browser QA` run [38686529834](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/38686529834): **in progress at observation**, executing the differential diagram viewport/print check. Passing status is not yet established.
 - Branch source fetched after `b30f578`: **80 questions, 249 choices, 31 Venn pairs**. No production changes or additional verified defect in this checkpoint.
 - Technical gate remains open until browser QA completes successfully; qualified clinical review remains pending. No merge, deployment, or TinyFish.
+
+## Final technical QA result — clinical handoff authorized
+
+- GitHub Actions [CPL site QA run 38686529807](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/38686529807): completed **success** on the content/test baseline `b30f578`.
+- GitHub Actions [DSM comparer Venn browser QA run 38686529834](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/38686529834): completed **success**. Diagram viewports and print passed; course-answer and automated WCAG checks for both text styles passed. These are executed GitHub CI tests, not local tests.
+- The immediately preceding documentation-only commit `3d0c7c8` did not alter training HTML or test scripts. Verified protected content counts before handoff: 80 questions; 249 answer choices; 31 Venn pairs.
+- **Technical gate: PASS for the scoped automated CI workflows. Clinical gate: PENDING qualified-human review.** See the qualified-reviewer checklist above. Automated accessibility does not supersede manual assistive-technology review or clinical accuracy approval.
+- No merge, deployment, or TinyFish use. Do not make additional content changes without verified reasons; route to clinical review.
