@@ -73,3 +73,15 @@ a:focus-visible, button:focus-visible, summary:focus-visible{
 /* Long worksheet blanks and titles must wrap on phones. */
 .resource-page{overflow-wrap:anywhere}
 .resource-topbar{flex-wrap:wrap;gap:8px}
+
+/* Editorial layout for Start Here navigation/overview guides */
+.start-here-page{max-width:900px;margin-top:clamp(24px,5vw,48px)}
+.start-here-page h1{font-size:clamp(2.35rem,5vw,3.85rem);line-height:1.12;max-width:18ch;overflow-wrap:break-word}
+.start-here-page .resource-intro{font-size:clamp(1rem,1.7vw,1.16rem);line-height:1.7;max-width:68ch;margin:16px 0 28px}
+.start-here-page .resource-card{min-width:0;padding:clamp(18px,3vw,28px);margin:16px 0;border-radius:16px;box-shadow:0 8px 24px rgba(42,49,43,.04);overflow-wrap:anywhere}
+.start-here-page .resource-card h2{margin:1.15rem 0 .55rem;line-height:1.25;font-size:clamp(1.3rem,2.4vw,1.65rem)}
+.start-here-page .resource-card h2:first-child{margin-top:0}
+.start-here-page .resource-card li{padding:3px 0}
+.start-here-page .resource-route{min-width:0;overflow-wrap:anywhere}
+@media(max-width:600px){.start-here-page{width:calc(100% - 24px);margin-top:24px}.start-here-page .resource-card{padding:18px}.start-here-page h1{font-size:clamp(2.1rem,9vw,2.8rem)}}
+@media print{.start-here-page .resource-card{box-shadow:none;break-inside:avoid}}
