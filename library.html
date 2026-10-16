@@ -86,7 +86,7 @@
 <details class="shelf expandable-shelf featured" id="school">
       <summary><span class="shelf-main"><h3>School – IEP & 504 Resources</h3><p>School access, evaluation requests, meeting preparation, implementation support, and Barrier → Support guides.</p></span><span class="shelf-toggle" aria-hidden="true">+</span></summary>
       <div class="shelf-body">
-<details class="topic" id="state-iep-guides"><summary>IEP resources by state (Arizona featured)</summary><div class="topic-body plain-resource-list"><ul><li><a href="https://sites.ed.gov/idea/parents-families/">Federal IDEA</a></li><li><strong><a href="/resources/arizona/iep-504-parent-guide.html">Arizona — start here</a></strong></li><li><a href="/resources/california/iep-parent-guide.html">California</a></li><li><a href="/resources/colorado/iep-parent-guide.html">Colorado</a></li><li><a href="/resources/florida/iep-parent-guide.html">Florida</a></li><li><a href="/resources/new-york/iep-parent-guide.html">New York</a></li><li><a href="/resources/texas/iep-parent-guide.html">Texas</a></li><li><a href="/resources/oregon/iep-parent-guide.html">Oregon</a></li><li><a href="/resources/washington/iep-parent-guide.html">Washington</a></li><li><a href="/resources/utah/iep-parent-guide.html">Utah</a></li><li><a href="/resources/district-of-columbia/iep-rights-and-school-accountability.html">District of Columbia</a></li><li><a href="/resources/maine/iep-rights-and-school-accountability.html">Maine</a></li><li><a href="/resources/new-mexico/iep-rights-and-school-accountability.html">New Mexico</a></li><li><a href="/resources/vermont/iep-rights-and-school-accountability.html">Vermont</a></li></ul></div></details>
+<details class="topic" id="state-iep-guides"><summary>IEP resources by state (Arizona featured)</summary><div class="topic-body"><ul class="state-guide-links"><li><a href="https://sites.ed.gov/idea/parents-families/">Federal IDEA</a></li><li><strong><a href="/resources/arizona/iep-504-parent-guide.html">Arizona — start here</a></strong></li><li><a href="/resources/california/iep-parent-guide.html">California</a></li><li><a href="/resources/colorado/iep-parent-guide.html">Colorado</a></li><li><a href="/resources/florida/iep-parent-guide.html">Florida</a></li><li><a href="/resources/new-york/iep-parent-guide.html">New York</a></li><li><a href="/resources/texas/iep-parent-guide.html">Texas</a></li><li><a href="/resources/oregon/iep-parent-guide.html">Oregon</a></li><li><a href="/resources/washington/iep-parent-guide.html">Washington</a></li><li><a href="/resources/utah/iep-parent-guide.html">Utah</a></li><li><a href="/resources/district-of-columbia/iep-rights-and-school-accountability.html">District of Columbia</a></li><li><a href="/resources/maine/iep-rights-and-school-accountability.html">Maine</a></li><li><a href="/resources/new-mexico/iep-rights-and-school-accountability.html">New Mexico</a></li><li><a href="/resources/vermont/iep-rights-and-school-accountability.html">Vermont</a></li></ul></div></details>
         <details class="topic"><summary>Start Here – IEP & 504 Guides</summary><div class="topic-body plain-resource-list">
           <a href="/resources/school/from-school-barrier-to-support.html">From School Barrier to Support – Planning Guide</a>
           <a href="/resources/school/iep-504-meeting-preparation.html">IEP & 504 Meeting Preparation</a>
@@ -409,13 +409,34 @@
     <div class="section-heading"><p class="eyebrow">About</p><h2>About the library</h2></div>
     <p><a href="/resources/about-authorship-curation-sharing.html">Authorship, curation &amp; sharing →</a></p>
     <div class="about-grid">
-      <p>This is the web edition of the selected external clinical library. Original materials, official resources, open-access tools, and curated guides are organized together by topic. Original materials identify Sophia Cohon, PhD as creator; outside resources retain their original authorship and source.</p>
+      <p>This is the web edition of the selected external clinical library. Original materials, official resources, open-access tools, and curated guides are organized together by topic. Original materials identify Sophia Korb Cohon, PhD as creator; outside resources retain their original authorship and source.</p>
       <p>Original materials may be shared for clinical care, teaching, supervision, training, and other noncommercial professional or educational use. Commercial, licensed, source-uncertain, or restricted materials are not republished here. Where appropriate, the site links to a legitimate primary source instead.</p>
     </div>
     <p class="boundary">These resources support clinical thinking and patient/family education. They do not replace individualized assessment, emergency evaluation, treatment-model training, supervision, or applicable law and policy.</p>
   </section>
 </main>
 
-<footer><div><strong>Clinical Practice Library</strong><span>Selected Resources · Curated by Sophia Cohon, PhD</span></div></footer>
+<footer><div><strong>Clinical Practice Library</strong><span>Selected Resources · Curated by Sophia Korb Cohon, PhD</span></div></footer>
+<script>
+(function () {
+  function revealFragment() {
+    if (!location.hash) return;
+    var id;
+    try { id = decodeURIComponent(location.hash.slice(1)); } catch (_) { return; }
+    var target = document.getElementById(id);
+    if (!target) return;
+    var ancestor = target;
+    while (ancestor) {
+      if (ancestor.tagName === 'DETAILS') ancestor.open = true;
+      ancestor = ancestor.parentElement;
+    }
+    if (target.tagName === 'DETAILS') target.open = true;
+    requestAnimationFrame(function () { target.scrollIntoView({block:'start'}); });
+  }
+  window.addEventListener('hashchange', revealFragment);
+  window.addEventListener('pageshow', revealFragment);
+  document.addEventListener('DOMContentLoaded', revealFragment);
+})();
+</script>
 </body>
 </html>
