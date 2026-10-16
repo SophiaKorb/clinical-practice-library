@@ -67,3 +67,13 @@ a:focus-visible, button:focus-visible, summary:focus-visible{
 
 /* CPL uses a consistent light palette across navigation and native controls. */
 :root{color-scheme:light}
+
+/* State guides remain a subordinate school topic, readable at any width. */
+.state-guide-links{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.state-guide-links li{min-width:0}
+.state-guide-links a{display:block;overflow-wrap:anywhere;padding:10px 12px;border-radius:9px;background:#f2eee6;color:#284839;text-decoration:underline;text-underline-offset:2px}
+.state-guide-links li strong a{background:#e1ebdf;font-weight:800}
+.state-guide-links a:hover{background:#e6ede3}
+.state-guide-links a:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+@media(max-width:700px){.state-guide-links{grid-template-columns:1fr}}
+#state-iep-guides{scroll-margin-top:140px}
