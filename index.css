@@ -96,3 +96,26 @@ a:focus-visible, button:focus-visible, summary:focus-visible{
 .single-resource>a span:last-child{flex:none}
 @media(min-width:701px){.topic-body.resource-links,.plain-resource-list,.resource-links{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.topic-body.resource-links,.plain-resource-list,.resource-links{grid-template-columns:minmax(0,1fr)}.header-inner nav{min-width:0;flex-wrap:wrap}.header-inner nav a{min-width:0;overflow-wrap:anywhere}}
+
+/* CPL editorial polish, informed by DSM Foundations' reading-first typography. */
+:root{--max:1180px}
+.header-inner{gap:clamp(16px,3vw,36px)}
+.brand{min-width:0;letter-spacing:-.02em}
+.brand span:last-child{overflow-wrap:anywhere}
+.shelves-section{max-width:1100px;margin-inline:auto}
+.section-heading h2{font-size:clamp(2.15rem,4.4vw,3.55rem);letter-spacing:-.045em;line-height:1.12;text-wrap:balance}
+.shelf.expandable-shelf{border-radius:18px;box-shadow:0 4px 22px rgba(24,54,41,.035);transition:border-color .18s,box-shadow .18s}
+.shelf.expandable-shelf:hover{border-color:#b7c8bb}
+.shelf.expandable-shelf>summary{padding-block:clamp(18px,2.4vw,26px);gap:16px}
+.shelf.expandable-shelf>summary h3{font-size:clamp(1.35rem,2vw,1.68rem);letter-spacing:-.035em;line-height:1.21;text-wrap:balance}
+.shelf.expandable-shelf>summary p{font-size:.93rem;line-height:1.6;max-width:72ch}
+.shelf.expandable-shelf>.shelf-body{padding:clamp(15px,2.1vw,26px)}
+.topic{border-radius:11px;background:#fcfaf6}
+.topic>summary{font-size:.94rem;padding:15px 17px;line-height:1.38;overflow-wrap:anywhere}
+.topic-body{font-size:.9rem;line-height:1.55}
+.topic-body.resource-links a,.resource-links a,.plain-resource-list>a,.state-guide-links a{font-size:.89rem;line-height:1.45;padding:13px 15px;min-height:48px;border:1px solid #e5ebe5;background:#f4f7f3;text-decoration:none;border-radius:10px}
+.topic-body.resource-links a:hover,.resource-links a:hover,.plain-resource-list>a:hover,.state-guide-links a:hover{background:#e8f0e8;border-color:#b7c9b9;text-decoration:underline;text-underline-offset:3px}
+.topic-body.resource-links a:focus-visible,.resource-links a:focus-visible,.plain-resource-list>a:focus-visible{outline:3px solid #265d58;outline-offset:2px}
+.single-resource>a{font-size:.95rem;background:#f4f7f3;border-color:#dce7df;padding:15px 17px}
+@media(max-width:700px){.shelf.expandable-shelf>summary h3{font-size:1.3rem}.topic>summary{padding:14px 13px}.shelf.expandable-shelf>.shelf-body{padding:13px}.topic-body.resource-links a,.resource-links a,.plain-resource-list>a,.state-guide-links a{padding:13px}}
+@media(prefers-reduced-motion:reduce){.shelf.expandable-shelf{transition:none}}
