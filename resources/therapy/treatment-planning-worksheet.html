@@ -17,7 +17,7 @@
 <p class="resource-byline">Sophia Korb Cohon, PhD</p>
 <p>Use this worksheet to structure a collaborative conversation about needs, goals, interventions, and review. It is a planning aid—not a completed medical record or a substitute for clinical judgment.</p>
 <p class="note"><strong>Privacy:</strong> Use fictional or fully de-identified information on this public site. Do not enter names, dates of birth, record numbers, contact details, or protected health information. Downloaded and printed files may remain on your device.</p>
-<div class="actions"><button type="button" id="print">Print / Save PDF</button><button type="button" id="download">Download text worksheet</button><button type="button" id="clear">Clear fields</button></div>
+<div class="actions"><button type="button" id="print">Print / Save PDF</button><button type="button" id="download">Download text worksheet</button><button type="button" id="clear">Clear fields</button></div><p id="worksheet-status" role="status" aria-live="polite"></p>
 <section class="resource-card"><h2>1. Starting point</h2>
 <label for="priorities">What would the person like to be different in daily life?</label><textarea id="priorities" placeholder="Functional priorities and the person's own words (de-identified)"></textarea>
 <label for="strengths">Strengths, resources, preferences, and access needs</label><textarea id="strengths"></textarea>
@@ -45,11 +45,11 @@
 const ids=['priorities','strengths','formulation','goal','baseline','objective','intervention','adaptations','measure','barriers','coordination','review','frequency','stepdown','feedback'];
 const labels=ids.map(id=>[id,document.querySelector('label[for="'+id+'"]').textContent]);
 document.getElementById('print').addEventListener('click',()=>window.print());
-document.getElementById('clear').addEventListener('click',()=>{ids.forEach(id=>document.getElementById(id).value='');});
+document.getElementById('clear').addEventListener('click',()=>{ids.forEach(id=>document.getElementById(id).value='');document.getElementById('worksheet-status').textContent='All worksheet fields cleared.';});
 document.getElementById('download').addEventListener('click',()=>{
 const lines=['CPL — Collaborative Treatment Planning Worksheet','Educational worksheet; do not enter or store identifiable client information.','',...labels.flatMap(([id,label])=>[label,document.getElementById(id).value||'________________________________',''])];
 const blob=new Blob([lines.join('\n')],{type:'text/plain;charset=utf-8'});
-const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='cpl-treatment-planning-worksheet.txt';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='cpl-treatment-planning-worksheet.txt';document.body.appendChild(a);a.click();a.remove();document.getElementById('worksheet-status').textContent='Text worksheet download requested. Check your browser downloads.';setTimeout(()=>URL.revokeObjectURL(url),1000);
 });
 })();
 </script></body></html>
