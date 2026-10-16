@@ -1,0 +1,10 @@
+// CPL multistate navigation and terminology smoke checks.
+// Run from repository root: node tests/state-iep-guides.cjs
+const fs=require('node:fs');const assert=require('node:assert/strict');
+const states=['arizona/iep-504-parent-guide','california/iep-parent-guide','florida/iep-parent-guide','new-york/iep-parent-guide','texas/iep-parent-guide','maine/iep-rights-and-school-accountability','new-mexico/iep-rights-and-school-accountability','vermont/iep-rights-and-school-accountability','district-of-columbia/iep-rights-and-school-accountability'];
+for(const item of states){const path='resources/'+item+'.html';assert.ok(fs.existsSync(path),'Missing '+path);}
+const home=fs.readFileSync('index.html','utf8'),library=fs.readFileSync('library.html','utf8');
+for(const item of states){const target='/resources/'+item+'.html';assert.ok(home.includes(target),'Missing homepage link '+target);assert.ok(library.includes(target),'Missing library link '+target);}
+for(const path of ['resources/arizona/iep-504-parent-guide.html','legacy/resources/arizona/iep-504-parent-guide.html','resources/school/iep-504-meeting-preparation.html','legacy/resources/school/iep-504-meeting-preparation.html','resources/es/arizona-como-conseguir-iep-504.html','legacy/resources/es/arizona-como-conseguir-iep-504.html']){const body=fs.readFileSync(path,'utf8');assert.ok(!/recovery[ -]coach(es)?/i.test(body),'Outdated terminology: '+path);if(path.includes('/es/'))assert.ok(!/case manager/i.test(body),'Untranslated English role: '+path);}
+assert.ok(!home.includes('student-rights-accountability.html'),'Unrequested hub link in homepage');assert.ok(!library.includes('student-rights-accountability.html'),'Unrequested hub link in library');
+console.log('PASS: Nine jurisdictions linked; role terminology checks passed.');
