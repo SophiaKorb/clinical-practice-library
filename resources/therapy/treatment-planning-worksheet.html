@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Treatment Planning Worksheet | Clinical Practice Library</title>
+<meta name="description" content="Printable, fillable worksheet for collaborative outpatient treatment planning.">
+<link rel="stylesheet" href="/resources/resource.css">
+<style>
+.worksheet{max-width:850px;margin:auto}.worksheet label{display:block;font-weight:700;margin:1rem 0 .4rem}
+.worksheet textarea,.worksheet input{display:block;width:100%;box-sizing:border-box;border:1px solid #9da9a4;border-radius:8px;padding:.7rem;background:#fff;color:#182c24;font:inherit}
+.worksheet textarea{min-height:83px;resize:vertical}.worksheet .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.worksheet .actions{display:flex;flex-wrap:wrap;gap:12px;margin:1rem 0}.worksheet button{padding:.7rem 1rem;cursor:pointer;border:1px solid #315949;border-radius:8px;background:#315949;color:#fff;font-weight:700}
+.worksheet .note{padding:.8rem 1rem;background:#f4f4f1;border-left:4px solid #315949}
+@media(max-width:650px){.worksheet .two{grid-template-columns:1fr}}
+@media print{.resource-topbar,.worksheet .actions{display:none!important}.worksheet textarea,.worksheet input{border:0;border-bottom:1px solid #999;border-radius:0;min-height:55px}.worksheet .two{grid-template-columns:1fr 1fr}section{break-inside:avoid}body{font-size:10pt}@page{size:letter;margin:.6in}}
+</style></head><body>
+<header class="resource-topbar"><a href="/resources/therapy/treatment-plan-menu.html">← Treatment planning menu</a></header>
+<main class="resource-page worksheet"><p class="resource-kicker">Clinical Practice Library · Reusable tool</p><h1>Collaborative Treatment Planning Worksheet</h1>
+<p class="resource-byline">Sophia Korb Cohon, PhD</p>
+<p>Use this worksheet to structure a collaborative conversation about needs, goals, interventions, and review. It is a planning aid—not a completed medical record or a substitute for clinical judgment.</p>
+<p class="note"><strong>Privacy:</strong> Use fictional or fully de-identified information on this public site. Do not enter names, dates of birth, record numbers, contact details, or protected health information. Downloaded and printed files may remain on your device.</p>
+<div class="actions"><button type="button" id="print">Print / Save PDF</button><button type="button" id="download">Download text worksheet</button><button type="button" id="clear">Clear fields</button></div>
+<section class="resource-card"><h2>1. Starting point</h2>
+<label for="priorities">What would the person like to be different in daily life?</label><textarea id="priorities" placeholder="Functional priorities and the person's own words (de-identified)"></textarea>
+<label for="strengths">Strengths, resources, preferences, and access needs</label><textarea id="strengths"></textarea>
+<label for="formulation">Working clinical formulation and relevant context (not a diagnosis checklist)</label><textarea id="formulation"></textarea></section>
+<section class="resource-card"><h2>2. One clear treatment target</h2>
+<label for="goal">Collaboratively agreed functional goal</label><textarea id="goal" placeholder="What meaningful change would look like"></textarea>
+<label for="baseline">Starting point / baseline and how it was observed</label><textarea id="baseline"></textarea>
+<label for="objective">Measurable objective and timeframe</label><textarea id="objective" placeholder="Specific, observable and realistic"></textarea>
+<label for="intervention">Planned intervention, rationale, and who will provide it</label><textarea id="intervention"></textarea>
+<label for="adaptations">Adaptations: culture, developmental stage, disability access, preferences</label><textarea id="adaptations"></textarea></section>
+<section class="resource-card"><h2>3. Monitoring and coordination</h2>
+<label for="measure">How progress will be monitored (measure, frequency, and source)</label><textarea id="measure"></textarea>
+<label for="barriers">Likely barriers, adjustments, and supports</label><textarea id="barriers"></textarea>
+<label for="coordination">Coordination, referrals, and relevant safety considerations</label><textarea id="coordination"></textarea>
+<div class="two"><div><label for="review">Target review date</label><input type="date" id="review"></div><div><label for="frequency">Service frequency / planned duration</label><input id="frequency" type="text"></div></div>
+<label for="stepdown">Criteria for revision, step-down, or completion</label><textarea id="stepdown"></textarea></section>
+<section class="resource-card"><h2>4. Collaborative review</h2>
+<label for="feedback">How was the person's perspective included? What needs checking or revising?</label><textarea id="feedback"></textarea>
+<p>Before using any plan in clinical documentation, confirm diagnosis/formulation, treatment appropriateness, consent or assent, actual services, payer and practice requirements, and required signatures in an approved record system.</p></section>
+<p><a href="/resources/therapy/treatment-plan-menu.html">Return to the interactive treatment planning menu →</a></p>
+<p class="boundary">Educational planning worksheet. Not medical, emergency, legal or billing advice. Do not use this page to store client information.</p>
+</main>
+<script>
+(function(){
+const ids=['priorities','strengths','formulation','goal','baseline','objective','intervention','adaptations','measure','barriers','coordination','review','frequency','stepdown','feedback'];
+const labels=ids.map(id=>[id,document.querySelector('label[for="'+id+'"]').textContent]);
+document.getElementById('print').addEventListener('click',()=>window.print());
+document.getElementById('clear').addEventListener('click',()=>{ids.forEach(id=>document.getElementById(id).value='');});
+document.getElementById('download').addEventListener('click',()=>{
+const lines=['CPL — Collaborative Treatment Planning Worksheet','Educational worksheet; do not enter or store identifiable client information.','',...labels.flatMap(([id,label])=>[label,document.getElementById(id).value||'________________________________',''])];
+const blob=new Blob([lines.join('\n')],{type:'text/plain;charset=utf-8'});
+const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='cpl-treatment-planning-worksheet.txt';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+});
+})();
+</script></body></html>
