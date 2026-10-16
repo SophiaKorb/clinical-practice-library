@@ -7,7 +7,17 @@
 <title>Clinical Practice Library | Selected Resources</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/index.css">
-</head>
+<style id="cpl-disclosure-styles">
+.cpl-site-footer{margin-top:3rem;padding:1.25rem clamp(1rem,4vw,3rem);border-top:1px solid rgba(110,110,130,.22);font:inherit}
+.cpl-footer-inner{max-width:1200px;margin:auto;display:flex;align-items:start;justify-content:space-between;flex-wrap:wrap;gap:1rem;color:inherit;font-size:.78rem;opacity:.82}
+.cpl-disclosure{max-width:min(100%,460px)}
+.cpl-disclosure summary{cursor:pointer;text-decoration:underline;text-underline-offset:3px;list-style:revert}
+.cpl-disclosure summary:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+.cpl-disclosure-content{padding-top:.65rem;line-height:1.55}
+.cpl-disclosure-content p{margin:.25rem 0 .7rem}
+@media(max-width:640px){.cpl-footer-inner{display:block}.cpl-disclosure{margin-top:.8rem}}
+@media print{.cpl-site-footer{display:none}}
+</style></head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
@@ -431,7 +441,18 @@
   </section>
 </main>
 
-<footer><div><strong>Clinical Practice Library</strong><span>Selected Resources · Curated by Sophia Korb Cohon, PhD</span></div></footer>
+<footer class="cpl-site-footer">
+  <div class="cpl-footer-inner">
+    <span>© 2026 Clinical Practice Library · Created and curated by Sophia Korb Cohon, PhD</span>
+    <details class="cpl-disclosure">
+      <summary>Independence &amp; disclaimer</summary>
+      <div class="cpl-disclosure-content">
+        <p>Clinical Practice Library is an independently developed educational project created and maintained by Sophia Korb Cohon.</p>
+        <p>It is not affiliated with, sponsored by, or endorsed by the creator's employer. Resources are provided for education and professional learning and do not replace individualized assessment, professional clinical judgment, supervision, or applicable standards of care.</p>
+      </div>
+    </details>
+  </div>
+</footer>
 <script>
 (function () {
   function revealFragment() {
