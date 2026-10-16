@@ -10,4 +10,5 @@ assert.match(h,/target\.scrollIntoView/);
 assert.match(h,/class="state-guide-links"/);
 assert.match(css,/\.state-guide-links\{/);
 assert.match(css,/@media\(max-width:700px\)\{\.state-guide-links\{grid-template-columns:1fr/);
+for(const [page,stylesheet] of [['index.html','preview/cpl2.css'],['library.html','index.css']]){const html=fs.readFileSync(page,'utf8'),style=fs.readFileSync(stylesheet,'utf8');assert.ok(html.includes('class="skip-link" href="#main-content"'),page+' missing skip link');assert.ok(html.includes('<main id="main-content">'),page+' missing main destination');assert.match(style,/\.skip-link:focus/,stylesheet+' missing visible skip style');}
 console.log('PASS: Disclosed navigation targets and responsive state navigation contract.');
