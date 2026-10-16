@@ -22,6 +22,7 @@ jobs:
       - run: node scripts/check-school-guide-parity.js
       # The experimental DSM lab moved to its own project; the removed test no longer belongs here.
       - run: node tests/homepage-pathways.cjs
+      - run: node tests/library-navigation.cjs
       - run: node tests/thermometer-levels.cjs
       - run: node tests/state-iep-guides.cjs
       - run: node tests/iep-editorial-qa.cjs
