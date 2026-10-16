@@ -1,0 +1,6 @@
+// Search the entire version-controlled CPL content for language requiring authorship/privacy review.
+// Does not send content off GitHub Actions. Reports paths and matched term only, never sensitive context.
+const fs=require('node:fs'),path=require('node:path');const exts=/\.(html|md|txt|js|json|css|cjs)$/i;const skip=new Set(['.git','node_modules']);
+const patterns=[['recovery coach',/\brecovery[\s-]+coach(?:es)?\b/gi],['internal policy',/\binternal (?:agency )?(?:policy|procedure|protocol)\b/gi],['employer ownership',/\b(?:our|my) (?:agency|employer)\b/gi],['agency-specific',/\bagency[- ]specific\b/gi]];
+let inspected=0,flagged=[];function walk(dir){for(const de of fs.readdirSync(dir,{withFileTypes:true})){if(skip.has(de.name))continue;const p=path.join(dir,de.name);if(de.isDirectory()){walk(p);continue;}if(!exts.test(p)||p.endsWith('repository-language-audit.cjs'))continue;inspected++;let content=fs.readFileSync(p,'utf8');for(const [name,re] of patterns){const matches=content.match(re);if(matches)flagged.push({file:p,term:name,count:matches.length});}}}
+walk('.');for(const f of flagged)console.log('REVIEW',f.file,f.term,f.count);console.log('Scanned',inspected,'text files; flagged',flagged.length,'file/term groups.');if(flagged.some(x=>x.term==='recovery coach'))process.exitCode=1;
