@@ -24,3 +24,4 @@ jobs:
       - run: node tests/homepage-pathways.cjs
       - run: node tests/thermometer-levels.cjs
       - run: node tests/state-iep-guides.cjs
+      - run: node tests/repository-language-audit.cjs
