@@ -33,7 +33,7 @@ let single=0,multi=0;
 const positions=[0,0,0];
 quizSegments.forEach((chunk,i)=>{
  const main=chunk.slice(0,chunk.indexOf('</div>'));
- const options=[...main.matchAll(/<button type="button" data-answer="(yes|no)" data-feedback="([^"]+)">/g)];
+ const options=[...main.matchAll(/<button type="button" data-answer="(yes|no)" data-feedback="([^"]+)"[^>]*>/g)];
  const correct=options.filter(m=>m[1]==='yes');
  const isMulti=quizStart[i][0].includes('data-multi');
  assert.ok(options.length>=3&&options.length<=4,'3 or 4 choices at question '+(i+1));
