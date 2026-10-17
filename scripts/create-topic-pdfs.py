@@ -14,7 +14,9 @@ for t in data['TOPICS'][:a.waves*5]:
  out=R/'resources/downloads'/('topic-'+t['slug']+'.pdf');c=canvas.Canvas(str(out),pagesize=(612,792),invariant=1);c.setTitle(t['title']+' - support worksheet');c.setAuthor('Sophia Korb Cohon, PhD')
  y=write(c,36,756,t['title'],17,540,True);y=write(c,36,y-10,'Original support worksheet | '+t['age']+' | Reviewed 2026-10-10',9)
  y=write(c,36,y-8,'Use fictional or appropriately de-identified notes. Write, draw, dictate or point. Not a validated measure, diagnostic test or crisis service.',9)
- # Vertical relational diagram avoids cramped five-column text.
+ # These source concepts are not necessarily sequential; do not portray a pathway as established.
+ if t['slug']!='learning-instruction-access':
+  y=write(c,36,y-4,'Concepts below are not a required sequence or clinical pathway.',8,540,True)-5
  for i,(title,desc) in enumerate(t['diagram']):
   if t['slug']=='learning-instruction-access' and i==3:continue
   if t['slug']=='learning-instruction-access' and i==2:
