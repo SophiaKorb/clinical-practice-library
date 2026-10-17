@@ -21,9 +21,12 @@ for t in data['TOPICS'][:a.waves*5]:
   if t['slug']=='learning-instruction-access' and i==3:continue
   if t['slug']=='learning-instruction-access' and i==2:
    write(c,36,y-9,'PARALLEL TRACKS - instruction and access happen together',8,540,True);y-=20
-   for j,(name,description) in enumerate(t['diagram'][2:4]):
-    x=36+j*280;c.setFillColor(HexColor('#e8eaf4' if j==0 else '#f3e3dc'));c.roundRect(x,y-43,260,40,4,fill=1,stroke=0);write(c,x+9,y-16,name+': '+description,9,240,True)
-   y-=52;continue
+   pair=t['diagram'][2:4]
+   heights=[max(40,12+len(simpleSplit(plain(name+': '+description),'Helvetica-Bold',9,240))*12.15) for name,description in pair]
+   pair_height=max(heights)
+   for j,(name,description) in enumerate(pair):
+    x=36+j*280;c.setFillColor(HexColor('#e8eaf4' if j==0 else '#f3e3dc'));c.roundRect(x,y-pair_height-3,260,pair_height,4,fill=1,stroke=0);write(c,x+9,y-16,name+': '+description,9,240,True)
+   y-=pair_height+12;continue
   label=plain(title+': '+desc)
   lines=simpleSplit(label,'Helvetica-Bold',9,520)
   box_height=max(32,12+len(lines)*12.15)
