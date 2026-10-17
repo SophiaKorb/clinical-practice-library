@@ -45,7 +45,8 @@ for topic in topics:
                     issues.append(f"{slug}: missing footer text: {phrase}")
             for title, _ in topic["diagram"]:
                 # PDF text can wrap, so check only the diagram node title.
-                if title.lower() not in found_text:
+                rendered_title = title.replace('→', '->').replace('↔', '<->').replace('’', "'").replace('—', '-').replace('–', '-')
+                if rendered_title.lower() not in found_text:
                     issues.append(f"{slug}: diagram label not extractable: {title}")
             for block in blocks:
                 if block.get("type") != 0:
