@@ -1,0 +1,28 @@
+name: Review-only 25-topic PDF QA
+on:
+  push:
+    branches:
+      - qa/topic-pdf-nonsequence-label-20261016
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  pdf-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install reportlab pymupdf
+      - name: Generate and validate unpublished companions
+        run: python scripts/qa-topic-pdfs.py
+      - name: Upload candidates for restricted review only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: topic-pdf-review-candidates
+          path: resources/downloads/topic-*.pdf
+          retention-days: 1
+          if-no-files-found: ignore
