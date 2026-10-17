@@ -24,7 +24,12 @@ for t in data['TOPICS'][:a.waves*5]:
    for j,(name,description) in enumerate(t['diagram'][2:4]):
     x=36+j*280;c.setFillColor(HexColor('#e8eaf4' if j==0 else '#f3e3dc'));c.roundRect(x,y-43,260,40,4,fill=1,stroke=0);write(c,x+9,y-16,name+': '+description,9,240,True)
    y-=52;continue
-  c.setFillColor(HexColor(['#e4eee7','#f4ebd9','#e8eaf4','#f3e3dc','#e1eef0'][i]));c.roundRect(36,y-36,540,32,4,fill=1,stroke=0);write(c,45,y-17,title+': '+desc,9,520,True);y-=42
+  label=plain(title+': '+desc)
+  lines=simpleSplit(label,'Helvetica-Bold',9,520)
+  box_height=max(32,12+len(lines)*12.15)
+  c.setFillColor(HexColor(['#e4eee7','#f4ebd9','#e8eaf4','#f3e3dc','#e1eef0'][i]));c.roundRect(36,y-box_height-4,540,box_height,4,fill=1,stroke=0)
+  write(c,45,y-17,label,9,520,True)
+  y-=box_height+10
  y-=8
  for i,prompt in enumerate(t['fields']):
   y=write(c,36,y,prompt,10,540,True)
