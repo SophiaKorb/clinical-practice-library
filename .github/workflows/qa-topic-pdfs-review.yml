@@ -18,11 +18,3 @@ jobs:
       - run: python -m pip install reportlab pymupdf
       - name: Generate and validate unpublished companions
         run: python scripts/qa-topic-pdfs.py
-      - name: Upload candidates for restricted review only
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: topic-pdf-review-candidates
-          path: resources/downloads/topic-*.pdf
-          retention-days: 1
-          if-no-files-found: ignore
