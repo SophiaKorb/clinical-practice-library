@@ -70,6 +70,28 @@ th,td{padding:13px 15px;text-align:left;vertical-align:top;border-right:1px soli
  th,td{padding:6pt}#insight{padding:8pt;margin-bottom:8pt}.note{margin:8pt 0;padding:8pt}
  .print-context{display:block;font-size:9pt;margin:5pt 0;font-weight:700}footer{padding:4pt 0}
 }
+
+/* Print panels must not split their heading and explanatory list across pages. */
+@media print {
+ .venn-overlap-panel { break-inside:avoid; page-break-inside:avoid; }
+ .venn-overlap-panel li { break-inside:avoid; }
+}
+/* Print uses available page width for the visual and its explanation, instead of leaving a large gap beneath the diagram. */
+@media print {
+ #venn-section .venn-stage { width:53%; float:left; margin:0 2% 8pt 0; }
+ #venn-section .venn-overlap-panel { width:45%; float:right; margin:0 0 8pt; }
+ #venn-section #venn-qualifier { clear:both; }
+ #venn-section #venn-message { clear:both; }
+ #venn-section .venn-stage svg { max-height:none; width:100%; }
+}
+/* Keep the full comparison diagram in view on narrow screens; avoid forced sideways panning. */
+@media (max-width:740px){
+ .venn-canvas{min-width:0;width:100%}
+ .venn-stage{overflow-x:visible}
+ .venn-stage svg{min-width:0;width:100%;max-width:100%;height:auto;max-height:none}
+ .venn-overlap-trigger{width:clamp(82px,30%,126px);min-height:52px;padding:5px;font-size:clamp(10px,2.9vw,13px)}
+ .venn-overlap-trigger span{font-size:clamp(12px,3.5vw,16px)}
+}
 </style></head><body class="dsm-comparer">
 <a class="skip" href="#main"><span data-clinical="Skip to comparer" data-plain="Skip to comparison">Skip to comparer</span></a>
 <nav class="cpl-static-nav" aria-label="Clinical Practice Library sections"><a class="cpl-static-nav__brand" href="/" aria-label="Clinical Practice Library home">CPL</a><div class="cpl-static-nav__links"><a href="/">Home</a><a href="/resources/start-here.html">Start here</a><a href="/resources/clinical-resource-finder.html">Find resources</a><a href="/resources/clinical-topics/index.html">Clinical topics</a><a href="/resources/therapy/visual-reasoning-toolkit.html">Visual tools</a><a href="/resources/therapy/communication-supports-toolkit.html">Communication</a><a href="/resources/therapy/treatment-plan-menu.html">Treatment plans</a><a href="/resources/assessment/assessment-start-here.html">Assessment</a><a href="/resources/training/workforce-learning-center.html" aria-current="page">Learning</a><a href="/#espanol">Español</a></div><div class="cpl-static-nav__mobile"><a class="cpl-static-nav__quick cpl-static-nav__quick--0" href="/resources/start-here.html">Start</a><a class="cpl-static-nav__quick cpl-static-nav__quick--1" href="/resources/clinical-resource-finder.html">Find</a><details class="cpl-static-nav__more"><summary>More <span aria-hidden="true">⌄</span></summary><div class="cpl-static-nav__menu" aria-label="More sections"><a href="/resources/index.html">Complete directory</a><a href="/resources/clinical-topics/index.html">Clinical topics</a><a href="/resources/therapy/visual-reasoning-toolkit.html">Visual tools</a><a href="/resources/therapy/communication-supports-toolkit.html">Communication</a><a href="/resources/therapy/treatment-plan-menu.html">Treatment plans</a><a href="/resources/assessment/assessment-start-here.html">Assessment</a><a href="/resources/training/workforce-learning-center.html" aria-current="page">Learning</a><a href="/#espanol">Español</a><a href="/#diagnosis-guides">Diagnosis guides</a></div></details></div></nav>
@@ -84,8 +106,8 @@ th,td{padding:13px 15px;text-align:left;vertical-align:top;border-right:1px soli
 <section class="surface" id="venn-section" aria-labelledby="venn-title">
 <div class="venn-head"><h2 id="venn-title" data-clinical="Where do these diagnoses overlap?" data-plain="What do these conditions have in common?">Where do these diagnoses overlap?</h2><p class="small" data-clinical="Visual differential · updates with your selections" data-plain="Comparison picture · changes when you choose different diagnoses">Visual differential · updates with your selections</p></div>
 <p class="venn-intro" data-clinical="The circles represent features worth comparing, not the proportion of people with each condition. Shared symptoms are not the same as shared diagnoses, and the areas are not to scale." data-plain="This picture helps you compare two conditions. The overlapping part shows symptoms or experiences that may occur with both. It does not show how common those symptoms are or how often people have both diagnoses. Circle sizes do not represent numbers.">The circles represent <strong>features worth comparing</strong>, not the proportion of people with each condition. Shared symptoms are not the same as shared diagnoses, and the areas are <strong>not to scale</strong>.</p>
-<p class="small mobile-hint" data-clinical="On a phone, swipe the diagram sideways as needed. Every teaching point also appears in the text cards below." data-plain="Using a phone? Swipe left or right to see the whole picture. You can also read the same information in the boxes below.">On a phone, swipe the diagram sideways as needed. Every teaching point also appears in the text cards below.</p>
-<div class="venn-stage" tabindex="0" role="region" aria-label="Diagnosis overlap diagram; scroll horizontally on a narrow screen">
+<p class="small mobile-hint" data-clinical="On a phone, the full diagram fits the screen. Detailed teaching points appear in the cards below." data-plain="On a phone, the diagram fits the screen. Read the boxes below for details.">On a phone, the full diagram fits the screen. Detailed teaching points appear in the cards below.</p>
+<div class="venn-stage" tabindex="0" role="region" aria-label="Diagnosis overlap diagram">
 <div class="venn-canvas"><svg id="venn-svg" viewBox="0 0 600 365" role="img" aria-labelledby="venn-svg-title venn-svg-desc">
 <title id="venn-svg-title">Selected diagnosis overlap illustration</title><desc id="venn-svg-desc">Two overlapping circles and a separate text description below. Diagram is conceptual, not a measure of diagnostic similarity, symptom prevalence or comorbidity.</desc>
 <g id="venn-two">
@@ -212,7 +234,7 @@ const insight=document.getElementById("insight");const selected=pair&&plain?plai
 insight.replaceChildren(element("h3",selected?selected.title:plain?"Compare timing, context and daily life":"Compare course, context and impact"),element("p",selected?selected.description:plain?"This pair has no written overlap comparison yet. Use each diagnosis's summary to ask about timing, daily life and other explanations. Similar symptoms do not settle a diagnosis.":"No authored overlap comparison for this pair. Compare developmental history, episodes, triggers, baseline functioning and alternative explanations."));
 pbox.querySelectorAll("button").forEach(btn=>btn.setAttribute("aria-pressed",String(!!pair&&btn.dataset.key===pair.a+"|"+pair.b)));
 }
-for(const p of presetsData){const b=document.createElement("button");b.type="button";b.dataset.key=p.a+"|"+p.b;b.textContent=byId[p.a].name+" vs "+byId[p.b].name;b.addEventListener("click",()=>{inputs[0].value=p.a;inputs[1].value=p.b;render();document.getElementById("compare-title").scrollIntoView({block:"start",behavior:"smooth"});});pbox.append(b);}
+for(const p of presetsData){const b=document.createElement("button");b.type="button";b.dataset.key=p.a+"|"+p.b;b.textContent=byId[p.a].name+" vs "+byId[p.b].name;b.addEventListener("click",()=>{inputs[0].value=p.a;inputs[1].value=p.b;render();document.getElementById("venn-title").scrollIntoView({block:"start",behavior:"smooth"});});pbox.append(b);}
 document.getElementById("venn-overlap-trigger").addEventListener("click",()=>{const panel=document.getElementById("venn-overlap-panel");const open=panel.hidden;panel.hidden=!open;document.getElementById("venn-overlap-trigger").setAttribute("aria-expanded",String(open));});
 for(const mode of ["clinical","plain"]){document.getElementById("mode-"+mode).addEventListener("click",()=>{languageMode=mode;try{localStorage.setItem("dsm-foundations-language-plain-default",mode)}catch{}for(const m of ["clinical","plain"])document.getElementById("mode-"+m).setAttribute("aria-pressed",String(m===mode));render();});}
 for(const m of ["clinical","plain"])document.getElementById("mode-"+m).setAttribute("aria-pressed",String(m===languageMode));inputs.forEach(x=>x.addEventListener("change",render));document.getElementById("print").addEventListener("click",()=>window.print());render();
