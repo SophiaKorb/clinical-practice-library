@@ -4,7 +4,7 @@ const path=require('node:path'),fs=require('node:fs'),assert=require('node:asser
 (async()=>{const browser=await chromium.launch({headless:true});const url=pathToFileURL(path.resolve('resources/training/substance-use-disorder-tool.html')).href;const dir='sud-qa-evidence';fs.mkdirSync(dir,{recursive:true});
 for(const width of [320,390,768,1280]){
  const page=await browser.newPage({viewport:{width,height:850}});
- const errors=[];page.on('pageerror',e=>errors.push(e.message));await page.addInitScript(()=>{window.speechSynthesis={cancel(){},speak(u){window.__spoken=u.text}};window.SpeechSynthesisUtterance=function(t){this.text=t}});await page.goto(url);await page.waitForSelector('.item');
+ const errors=[];page.on('pageerror',e=>errors.push(e.message));await page.addInitScript(()=>{Object.defineProperty(window,'speechSynthesis',{configurable:true,value:{cancel(){},speak(u){window.__spoken=u.text}}});Object.defineProperty(window,'SpeechSynthesisUtterance',{configurable:true,value:function(t){this.text=t}})});await page.goto(url);await page.waitForSelector('.item');
  assert.equal(await page.locator('.item').count(),11);
  assert.equal(await page.locator('#plain').getAttribute('aria-pressed'),'true');
  await page.locator('#clinical').click();assert.equal(await page.locator('#clinical').getAttribute('aria-pressed'),'true');
