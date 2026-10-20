@@ -112,7 +112,6 @@ function findDrug(){
  if("speechSynthesis" in window){const speak=document.createElement("button");speak.type="button";speak.className="secondary";speak.style.marginLeft="8px";speak.textContent="Hear the class";speak.addEventListener("click",()=>{window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance("Drug class: "+found.class+". "+found.note);window.speechSynthesis.speak(u)});box.append(speak);}
 }
 document.getElementById("drug-search").addEventListener("click",findDrug);document.getElementById("drug-query").addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();findDrug();}});
-updateLanguage();
 
 const lessons={
 use:{title:"Using a substance does not establish a disorder",case:"Jordan drinks a glass of wine most evenings. No further history has been collected.",known:"We know the reported frequency. We do not know whether any diagnostic criteria are met.",ask:"Ask about control, consequences, functioning, time course and possible alternatives.",lesson:"Frequency or quantity alone is not one of the 11 criteria. Do not infer a diagnosis from use alone."},
@@ -142,6 +141,6 @@ function showPracticeFeedback(){const p=practiceCases[practiceIndex],chosen=prac
 document.getElementById("practice-reveal").addEventListener("click",()=>{const selected=document.querySelector('input[name="practice-answer"]:checked');if(!selected){const out=document.getElementById("practice-feedback");out.hidden=false;out.textContent="Choose an answer first, then reveal the reasoning.";return;}practiceChosen[practiceIndex]=selected.value;practiceExplored.add(practiceIndex);showPracticeFeedback();document.getElementById("practice-complete").textContent=practiceExplored.size+" of 11 explored";document.getElementById("practice-next").disabled=practiceIndex===10;});
 document.getElementById("practice-next").addEventListener("click",()=>{if(practiceIndex<10&&practiceExplored.has(practiceIndex)){practiceIndex++;drawPractice();document.getElementById("practice-heading").focus();}});
 document.getElementById("practice-prev").addEventListener("click",()=>{if(practiceIndex>0){practiceIndex--;drawPractice();}});
-drawPractice();
+drawPractice();updateLanguage();
 document.getElementById("reset").addEventListener("click",()=>{answers.fill("unknown");document.querySelectorAll(".opts input[value=unknown]").forEach(e=>e.checked=true);sup.value="no";render()});document.getElementById("print").addEventListener("click",()=>window.print());render();
 </script></body></html>
