@@ -76,6 +76,14 @@ th,td{padding:13px 15px;text-align:left;vertical-align:top;border-right:1px soli
  .venn-overlap-panel { break-inside:avoid; page-break-inside:avoid; }
  .venn-overlap-panel li { break-inside:avoid; }
 }
+/* Print uses available page width for the visual and its explanation, instead of leaving a large gap beneath the diagram. */
+@media print {
+ #venn-section .venn-stage { width:53%; float:left; margin:0 2% 8pt 0; }
+ #venn-section .venn-overlap-panel { width:45%; float:right; margin:0 0 8pt; }
+ #venn-section #venn-qualifier { clear:both; }
+ #venn-section #venn-message { clear:both; }
+ #venn-section .venn-stage svg { max-height:none; width:100%; }
+}
 /* Keep the full comparison diagram in view on narrow screens; avoid forced sideways panning. */
 @media (max-width:740px){
  .venn-canvas{min-width:0;width:100%}
