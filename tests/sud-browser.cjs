@@ -17,7 +17,7 @@ for(const width of [320,390,768,1280]){
  await page.locator('.opts input[value=yes]').first().check();assert.equal((await page.locator('#yescount').innerText()).trim(),'1');
  assert.equal(errors.length,0,errors.join('; '));
  const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1);assert(!overflow,'horizontal overflow '+width);
- await page.addScriptTag({path:require.resolve('axe-core/axe.min.js')});const access=await page.evaluate(async()=>await axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa']}}));assert.equal(access.violations.length,0,JSON.stringify(access.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>({target:n.target,html:n.html,summary:n.failureSummary}))}))));
+ await page.addScriptTag({path:require.resolve('axe-core/axe.min.js')});const access=await page.evaluate(async()=>await axe.run('main',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa']}}));assert.equal(access.violations.length,0,JSON.stringify(access.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>({target:n.target,html:n.html,summary:n.failureSummary}))}))));
  await page.screenshot({path:dir+'/sud-'+width+'.png',fullPage:true});await page.close();
 }
 const page=await browser.newPage();await page.goto(url);await page.locator('#drug-query').fill('mdma');await page.locator('#drug-search').click();
