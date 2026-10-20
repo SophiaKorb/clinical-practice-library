@@ -9,7 +9,13 @@ for(const width of [320,390,768,1280]){
  assert.equal(await page.locator('#practice-step').innerText(),'Criterion 1 of 11');
  await page.locator('input[name="practice-answer"][value="yes"]').check();
  await page.locator('#practice-reveal').click();
- assert.match(await page.locator('#practice-feedback').innerText(),/Teaching interpretation/);
+ assert.match(await page.locator('#practice-feedback').innerText(),/Best answer:/);
+ const plainFeedback=await page.locator('#practice-feedback').innerText();
+ await page.locator('#clinical').click();
+ const clinicalFeedback=await page.locator('#practice-feedback').innerText();
+ assert.notEqual(plainFeedback,clinicalFeedback);
+ assert.match(clinicalFeedback,/Clinical rationale:/);
+ await page.locator('#plain').click();
  await page.locator('#practice-next').click();
  assert.equal(await page.locator('#practice-step').innerText(),'Criterion 2 of 11');
  await page.locator('[data-example="cannabis"]').click();assert.match(await page.locator('#example-output').innerText(),/medical cannabis/i);
