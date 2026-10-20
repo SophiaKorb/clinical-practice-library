@@ -7,6 +7,12 @@ for(const width of [320,390,768,1280]){
  const errors=[];page.on('pageerror',e=>errors.push(e.message));await page.addInitScript(()=>{Object.defineProperty(window,'speechSynthesis',{configurable:true,value:{cancel(){},speak(u){window.__spoken=u.text}}});Object.defineProperty(window,'SpeechSynthesisUtterance',{configurable:true,value:function(t){this.text=t}})});await page.goto(url);await page.waitForSelector('.item');
  assert.equal(await page.locator('#criteria .item').count(),11);
  assert.equal(await page.locator('#practice-step').innerText(),'Criterion 1 of 11');
+ await page.locator('input[name="integrated-answer"][value="b"]').check();
+ await page.locator('#integrated-check').click();
+ assert.match(await page.locator('#integrated-feedback').innerText(),/three signs|criteria/i);
+ await page.locator('#integrated-reset').click();
+ assert.equal(await page.locator('#integrated-feedback').isVisible(),false);
+
  await page.locator('input[name="practice-answer"][value="yes"]').check();
  await page.locator('#practice-reveal').click();
  assert.match(await page.locator('#practice-feedback').innerText(),/Best answer:/);
