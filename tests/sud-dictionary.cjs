@@ -3,7 +3,7 @@ const html=fs.readFileSync('resources/training/substance-use-disorder-tool.html'
 const script=html.match(/<script>([\s\S]*?)<\/script>/)[1];
 new vm.Script(script);
 const dictionary=vm.runInNewContext(script.match(/const dictionary=\[([\s\S]*?)\];/)[0].replace('const dictionary=','') );
-const ambiguous=vm.runInNewContext('('+script.match(/const ambiguousLookup=(\{[^;]+\});/)[1]+')');
+const ambiguous=vm.runInNewContext('('+script.split('const ambiguousLookup=')[1].split(';')[0]+')');
 for(const [name,expected] of [['molly','other'],['mdma','other'],['ecstasy','other'],['xanax','sedative'],['adderall','stimulant'],['fentanyl','opioid'],['cannabis','cannabis'],['suboxone','opioid'],['restoril','sedative'],['zyn','tobacco']]){let found=dictionary.find(x=>x.names.includes(name));assert.equal(found?.value,expected,name);}
 for(const name of ['speed','blues','bars','spice','k2','acid','e','x','shrooms'])assert.ok(ambiguous[name],name);
 const all=dictionary.flatMap(x=>x.names);assert.equal(new Set(all).size,all.length,'duplicate names');
