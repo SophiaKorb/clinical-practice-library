@@ -71,6 +71,11 @@ th,td{padding:13px 15px;text-align:left;vertical-align:top;border-right:1px soli
  .print-context{display:block;font-size:9pt;margin:5pt 0;font-weight:700}footer{padding:4pt 0}
 }
 
+/* Print panels must not split their heading and explanatory list across pages. */
+@media print {
+ .venn-overlap-panel { break-inside:avoid; page-break-inside:avoid; }
+ .venn-overlap-panel li { break-inside:avoid; }
+}
 /* Keep the full comparison diagram in view on narrow screens; avoid forced sideways panning. */
 @media (max-width:740px){
  .venn-canvas{min-width:0;width:100%}
