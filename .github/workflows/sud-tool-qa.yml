@@ -19,3 +19,12 @@ jobs:
         with:
           node-version: '22'
       - run: node tests/sud-dictionary.cjs
+      - run: npm install --no-save playwright
+      - run: npx playwright install --with-deps chromium
+      - run: node tests/sud-browser.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: sud-qa-evidence
+          path: sud-qa-evidence/
+          if-no-files-found: ignore
