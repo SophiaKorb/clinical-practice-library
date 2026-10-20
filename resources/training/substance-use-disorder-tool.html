@@ -75,6 +75,7 @@ const dictionary=[
 {names:["ketamine","pcp","phencyclidine"],class:"Phencyclidine-related or other hallucinogen (drug-dependent)",value:"other",note:"Ketamine and PCP require drug-specific classification and criteria; do not use a generic 11-item score without checking them."},
 {names:["inhalants","paint thinner","glue fumes","nitrous oxide"],class:"Inhalant / other substance (substance-dependent)",value:"other",note:"Different inhalants require different clinical considerations; a generic withdrawal criterion may not apply."}
 ];
+const ambiguousLookup={"speed":"Often describes a stimulant; the specific drug is unknown.","blues":"May refer to a prescription pill or a counterfeit product.","bars":"May refer to a benzodiazepine or a counterfeit tablet.","spice":"Usually refers to synthetic cannabinoids, which differ from cannabis.","k2":"Usually refers to synthetic cannabinoids, which differ from cannabis.","acid":"Often refers to LSD; the exact substance cannot be inferred.","e":"May refer to MDMA, but the term is not a chemical identification.","x":"May refer to MDMA, but the term is ambiguous.","shrooms":"Often refers to psilocybin mushrooms; substance identification needs verification."};
 let language="plain";
 function updateLanguage(){document.getElementById("plain").setAttribute("aria-pressed",String(language==="plain"));document.getElementById("clinical").setAttribute("aria-pressed",String(language==="clinical"));document.querySelectorAll(".item").forEach((card,i)=>{card.querySelector("strong").textContent=(i+1)+". "+(language==="plain"?everyday[i][0]:entries[i][1]);card.querySelector("p").textContent=language==="plain"?everyday[i][1]:entries[i][2];});}
 for(const mode of ["plain","clinical"])document.getElementById(mode).addEventListener("click",()=>{language=mode;updateLanguage();});
@@ -82,6 +83,7 @@ function findDrug(){
  const query=document.getElementById("drug-query").value.trim().toLowerCase().replace(/\s+/g," ");const box=document.getElementById("drug-result");box.replaceChildren();box.hidden=false;
  const strong=document.createElement("strong"),p=document.createElement("p");
  if(!query){strong.textContent="Enter a drug name to look it up.";box.append(strong);return;}
+ if(Object.prototype.hasOwnProperty.call(ambiguousLookup,query)){strong.textContent="Ambiguous name — no reliable class assigned.";p.textContent=ambiguousLookup[query]+" Confirm the substance instead of making a diagnostic inference.";box.append(strong,p);return;}
  const found=dictionary.find(d=>d.names.includes(query));
  if(!found){strong.textContent="Not found in this example dictionary.";p.textContent="The name may be a brand, combination product, spelling variant, or unknown substance. Do not infer a DSM class; check a trusted medication or toxicology reference.";box.append(strong,p);return;}
  strong.textContent="Likely DSM teaching class: "+found.class;
