@@ -16,6 +16,14 @@ for(const width of [320,390,768,1280]){
  await page.locator('[data-example="mat"]').click();assert.match(await page.locator('#example-output').innerText(),/buprenorphine/i);
 
  assert.equal(await page.locator('#plain').getAttribute('aria-pressed'),'true');
+ assert.equal(await page.locator('#plain').innerText(),'Plain language');
+ const plainIntro=await page.locator('.lead').innerText();
+ await page.locator('#clinical').click();
+ const clinicalIntro=await page.locator('.lead').innerText();
+ assert.notEqual(plainIntro,clinicalIntro,'Intro must actually change language');
+ await page.locator('#plain').click();
+ assert.equal(await page.locator('.lead').innerText(),plainIntro);
+
  assert.equal(await page.locator('#cannabis-teaching').isVisible(),false);
  await page.locator('#substance').selectOption('cannabis');
  assert.equal(await page.locator('#cannabis-teaching').isVisible(),true);
