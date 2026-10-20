@@ -1,0 +1,21 @@
+name: Substance use educational tool QA
+on:
+  push:
+    branches:
+      - feature/sud-criteria-teaching-tool-20261019
+  pull_request:
+    paths:
+      - resources/training/substance-use-disorder-tool.html
+      - tests/sud-dictionary.cjs
+      - .github/workflows/sud-tool-qa.yml
+jobs:
+  source-check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/sud-dictionary.cjs
