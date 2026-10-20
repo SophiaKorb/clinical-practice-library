@@ -21,6 +21,13 @@ for(const width of [320,390,768,1280]){
  await page.locator('#clinical').click();
  const clinicalIntro=await page.locator('.lead').innerText();
  assert.notEqual(plainIntro,clinicalIntro,'Intro must actually change language');
+ const clinicalDefinition=await page.locator('#intro-definition').innerText();
+ const clinicalFramework=await page.locator('#intro-framework').innerText();
+ await page.locator('#plain').click();
+ assert.notEqual(await page.locator('#intro-definition').innerText(),clinicalDefinition);
+ assert.notEqual(await page.locator('#intro-framework').innerText(),clinicalFramework);
+ await page.locator('#clinical').click();
+
  await page.locator('#plain').click();
  assert.equal(await page.locator('.lead').innerText(),plainIntro);
 
