@@ -16,6 +16,14 @@ for(const width of [320,390,768,1280]){
  await page.locator('[data-example="mat"]').click();assert.match(await page.locator('#example-output').innerText(),/buprenorphine/i);
 
  assert.equal(await page.locator('#plain').getAttribute('aria-pressed'),'true');
+ assert.equal(await page.locator('#cannabis-teaching').isVisible(),false);
+ await page.locator('#substance').selectOption('cannabis');
+ assert.equal(await page.locator('#cannabis-teaching').isVisible(),true);
+ await page.locator('#substance').selectOption('alcohol');
+ assert.equal(await page.locator('#cannabis-teaching').isVisible(),false);
+ assert.equal(await page.evaluate(()=>document.querySelector('#language-panel').compareDocumentPosition(document.querySelector('#learning-path')) & Node.DOCUMENT_POSITION_FOLLOWING),4);
+ assert.equal(await page.evaluate(()=>document.querySelector('#mat-learning').compareDocumentPosition(document.querySelector('#criteria')) & Node.DOCUMENT_POSITION_PRECEDING),2);
+
  await page.locator('#clinical').click();assert.equal(await page.locator('#clinical').getAttribute('aria-pressed'),'true');
  await page.locator('#plain').click();assert.equal(await page.locator('#plain').getAttribute('aria-pressed'),'true');
  await page.locator('#drug-query').fill('molly');await page.locator('#drug-query').press('Enter');assert.match(await page.locator('#drug-result').innerText(),/MDMA/);
