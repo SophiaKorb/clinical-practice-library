@@ -7,7 +7,7 @@
 - Baseline `main`: `d9ccb18a6d26752641a6b0f473e78e78d8848279`.
 - New route/asset blob source: `fix/dsm-venn-mobile-fit-20261019` at `a2d2bc5fe93fbacac5d1d6697b4c0e2dc4c7e4bb`.
 - Isolated candidate: `qa/main-reconciled-routes-20261021`; first commit `666bc85240afc4eafa57116d8ab981750f99cd5b` adds six HTML routes + 12 direct assets; second commit `cd8c1516e32173795099b2c58a67af8d8c9e8e56` adds 18 first-degree destinations directly referenced by those pages. Both commits are **additive to main**. No main file, independence disclosure, pre-existing guide, worksheet, legacy resource, or alias modified.
-- Vercel automatic nonproduction preview: `dpl_6Ls92NgJoBpaBB9wMM9GTA48gHux`, `https://clinical-practice-library-colorful-hh0pzko93-cohon-family.vercel.app`, exact head SHA `cd8c1516e32173795099b2c58a67af8d8c9e8e56`, READY. No explicit deploy action or promotion performed.
+- Vercel automatic nonproduction preview: `dpl_6Ls92NgJoBpaBB9wMM9GTA48gHux`, `https://clinical-practice-library-colorful-hh0pzko93-cohon-family.vercel.app`, exact head SHA `cd8c1516e32173795099b2c58a67af8d8c9e8e56`, READY. No explicit deploy action or promotion performed. **After discovery that the Colorful project previously lacked preview protection, Vercel Authentication was enabled for PREVIEW deployments only and read back as enabled. This changes protection for all previews of that Vercel project (not just this branch); production protection, domains and aliases were not changed. Anonymous denial could not be independently observed via the unauthenticated web reader.**
 
 ## Served preview HTTP acceptance, exact preview host, October 21
 
