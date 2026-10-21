@@ -67,3 +67,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible{
 
 /* CPL uses a consistent light palette across navigation and native controls. */
 :root{color-scheme:light}
+
+/* Visible, keyboard-only skip navigation for the Colorful home. */
+.skip-link{position:absolute;left:1rem;top:0;z-index:9999;padding:.7rem 1rem;background:#fff;color:#173e30;border:3px solid #173e30;border-radius:.5rem;transform:translateY(-180%);text-decoration:underline;font-weight:700}
+.skip-link:focus,.skip-link:focus-visible{transform:translateY(1rem);outline:3px solid #173e30;outline-offset:3px}
