@@ -1,0 +1,32 @@
+name: CPL PR19 rendered smoke QA
+on:
+  pull_request:
+    paths:
+      - 'scripts/qa/pr19-rendered-smoke.cjs'
+      - '.github/workflows/pr19-rendered-smoke.yml'
+      - 'index.html'
+      - 'resources/**'
+jobs:
+  browser-keyboard-print:
+    if: github.head_ref == 'qa/main-reconciled-routes-20261021'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install isolated test browser
+        run: |
+          npm install --no-save --no-audit --no-fund playwright
+          npx playwright install --with-deps chromium
+      - name: Serve local candidate and run rendered checks
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/cpl-pr19-http.log 2>&1 &
+          for i in $(seq 1 20); do
+            if curl --fail --silent http://127.0.0.1:8765/ > /dev/null; then break; fi
+            sleep 1
+          done
+          node scripts/qa/pr19-rendered-smoke.cjs
