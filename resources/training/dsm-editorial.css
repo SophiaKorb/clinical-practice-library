@@ -1,0 +1,136 @@
+/* DSM editorial typography, October 2026. Shared by Foundations and the Comparer.
+   Fonts load from Google Fonts with robust local fallbacks. Keep semantic clinical
+   colors, diagram distinctions and the two experience modes legible. */
+:root {
+  --dsm-display: "Newsreader", "Iowan Old Style", "Baskerville", Georgia, serif;
+  --dsm-reading: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  --dsm-interface: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+  --dsm-oxblood: #6b283b;
+  --dsm-wine-deep: #572134;
+  --dsm-ivory: #faf7f1;
+  --dsm-ink: #272526;
+  --dsm-muted: #595151;
+  --dsm-border: #ded6cd;
+}
+/* Foundations: long-form reading takes precedence over visual ornament. */
+body[data-experience] {
+  --ink: var(--dsm-ink);
+  --muted: var(--dsm-muted);
+  --paper: var(--dsm-ivory);
+  --teal: var(--dsm-oxblood);
+  --line: var(--dsm-border);
+  --mint: #f5efeb;
+  --blue: #f1f2f4;
+  --sand: #fbf3e6;
+  background: var(--dsm-ivory);
+  font-family: var(--dsm-reading);
+  font-size: 17px;
+  line-height: 1.66;
+  font-synthesis: none;
+}
+body[data-experience] h1,
+body[data-experience] h2,
+body[data-experience] h3,
+body[data-experience] .hero-display strong,
+body[data-experience] .study-loop-heading h2 {
+  font-family: var(--dsm-display) !important;
+  font-optical-sizing: auto;
+  letter-spacing: -.018em;
+}
+body[data-experience] h1 { font-weight: 500; line-height: 1.08; }
+body[data-experience] h2 { font-weight: 550; line-height: 1.18; }
+body[data-experience] main { max-width: 1010px; }
+body[data-experience] .intro,
+body[data-experience] .simple,
+body[data-experience] .example p,
+body[data-experience] .case p,
+body[data-experience] .study-loop-steps p {
+  font-family: var(--dsm-reading);
+}
+body[data-experience] .intro { max-width: 61ch; line-height: 1.52; }
+body[data-experience] .lesson > p,
+body[data-experience] .lesson .plain,
+body[data-experience] .lesson .practice-context { max-width: 77ch; }
+body[data-experience] :is(button, select, input, textarea, label, nav, .top, .eyebrow, .button,
+  .hero-pills, .number, .tiny, .steps, .track .progress, .feedback, .lesson-footer,
+  .check h3, .case h3, .case-step-label, .doc-steps strong, .experience-bar,
+  .questions-review-toolbar, .vocab-entry dt, .vocab-search, .practice-indicator) {
+  font-family: var(--dsm-interface) !important;
+}
+body[data-experience] .eyebrow { color: var(--dsm-oxblood); letter-spacing: .115em; }
+body[data-experience] .lesson,
+body[data-experience] .track { border-color: var(--dsm-border); }
+body[data-experience] .lesson { box-shadow: 0 3px 16px #3c28210a; }
+body[data-experience] .term { background: #f3e9e7; }
+body[data-experience] :is(.button, .done[aria-pressed="true"]) { background: var(--dsm-oxblood); color: white; }
+body[data-experience] .button:hover { background: var(--dsm-wine-deep); }
+body[data-experience] .number { border-radius: 9px; background: var(--dsm-oxblood); }
+/* Clarity is the warm, literary light reading mode. Studio retains its darker
+   pedagogical presentation mode and its original semantic diagram colors. */
+body[data-experience="clarity"] { background: var(--dsm-ivory); color: var(--dsm-ink); }
+body[data-experience="clarity"] .hero { border-bottom: 1px solid var(--dsm-border); margin-bottom: 25px; }
+body[data-experience="clarity"] .lesson { background: #fffefa; }
+body[data-experience="clarity"] .experience-options button[aria-pressed="true"] { background: var(--dsm-oxblood); color: white; }
+body[data-experience="studio"] .hero h1 { font-family: var(--dsm-display) !important; font-weight: 500; letter-spacing: -.04em; }
+body[data-experience="studio"] .hero .eyebrow { color: #f0d3c5; }
+body[data-experience="studio"] .lesson,
+body[data-experience="studio"] .track { color: var(--dsm-ink); }
+/* Comparer: make dense controls and tables precise, keep editorial type for intro. */
+body.dsm-comparer {
+  --ink: var(--dsm-ink);
+  --muted: var(--dsm-muted);
+  --bg: var(--dsm-ivory);
+  --line: var(--dsm-border);
+  --deep: var(--dsm-wine-deep);
+  --soft: #f4ece8;
+  background: var(--dsm-ivory);
+  color: var(--dsm-ink);
+  font-family: var(--dsm-interface);
+  font-size: 16px;
+  line-height: 1.55;
+  font-synthesis: none;
+}
+body.dsm-comparer :is(h1,h2) { font-family: var(--dsm-display); font-optical-sizing:auto; font-weight: 520; letter-spacing: -.018em; }
+body.dsm-comparer h1 { line-height:1.08; }
+body.dsm-comparer .intro { font-family: var(--dsm-reading); font-size: 1.2rem; line-height: 1.5; max-width: 62ch; }
+body.dsm-comparer :is(button,select,input,.print,.pills button,.venn-label,.venn-center,.venn-card h3) {
+  font-family: var(--dsm-interface) !important;
+}
+body.dsm-comparer .eyebrow { color: var(--dsm-oxblood); }
+body.dsm-comparer a { color: var(--dsm-wine-deep); }
+body.dsm-comparer :is(.surface,.venn-card) { border-color: var(--dsm-border); }
+body.dsm-comparer .surface { box-shadow: 0 3px 15px #3c28210a; }
+body.dsm-comparer .pills button { background:#fbf5f2; border-color:#aa8b90; color:#522737; }
+body.dsm-comparer .pills button:is(:hover,[aria-pressed="true"]) { background:#f0deda; border-color:#773548; }
+body.dsm-comparer .choices select { border-color:#89767b; }
+body.dsm-comparer thead th { background:var(--dsm-oxblood); color:#fff; }
+body.dsm-comparer thead th:first-child { background:var(--dsm-wine-deep); }
+body.dsm-comparer tbody th { background:#f5efeb; color:var(--dsm-ink); }
+body.dsm-comparer tbody tr:nth-child(even) td { background:#fdfaf7; }
+body.dsm-comparer #insight { border-color:#e4d0c8; background:#f7efeb; }
+body.dsm-comparer .print { background:var(--dsm-oxblood); }
+body.dsm-comparer .print:hover { background:var(--dsm-wine-deep); }
+body.dsm-comparer :is(.venn-stage,.venn-pair-details article) { background:#fcfaf8; }
+/* Keep links and focus visible; do not encode clinical claims with palette alone. */
+body[data-experience] :is(a,button,summary,input,select,textarea):focus-visible,
+body.dsm-comparer :is(a,button,summary,input,select,textarea):focus-visible {
+  outline: 3px solid #23579b;
+  outline-offset: 3px;
+}
+@media (max-width: 680px) {
+  body[data-experience] { font-size: 16px; }
+  body[data-experience] h1, body.dsm-comparer h1 { overflow-wrap: break-word; }
+  body[data-experience] .lesson { padding: 19px; }
+  body.dsm-comparer .intro { font-size: 1.08rem; }
+}
+@media print {
+  body[data-experience], body.dsm-comparer { background: white !important; color: black !important; }
+  body[data-experience] h1, body.dsm-comparer h1 { color: #111 !important; }
+  body[data-experience] .lesson,body.dsm-comparer .surface { box-shadow:none !important; }
+  body.dsm-comparer thead th { background:#ece8e6 !important; color:#111 !important; }
+  body.dsm-comparer tbody th { background:#f3f1f0 !important; }
+}
+@media (forced-colors: active) {
+  body[data-experience] :is(.lesson,.track),body.dsm-comparer :is(.surface,.venn-card) { border:1px solid CanvasText; }
+  body.dsm-comparer thead th { border:1px solid CanvasText; }
+}

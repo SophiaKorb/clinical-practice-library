@@ -1,0 +1,160 @@
+/* Phase 8B depth pages: constrained typography, actual parallel/decision spatial relationships */
+main#content{max-width:1050px;margin:28px auto 80px;padding:0 18px}
+main#content h1{font-size:clamp(2rem,4.7vw,3.45rem);line-height:1.1;margin:10px 0 16px;max-width:20ch}
+main#content h2{font-size:clamp(1.45rem,3.1vw,2.05rem);margin:0 0 14px}
+main#content h3{font-size:1.13rem;line-height:1.32}
+main#content p,main#content li{line-height:1.62}
+main#content section{margin:34px 0;scroll-margin-top:24px}
+main#content .lead{font-size:1.1rem;color:#405c52;max-width:76ch}
+main#content .kicker{text-transform:uppercase;letter-spacing:.10em;font-size:.77rem;font-weight:800;color:#346d5c}
+main#content .small{font-size:.87rem;color:#4a6057}
+main#content a{overflow-wrap:anywhere}
+main#content .notice{border-left:6px solid #326c58;background:#eef4ee;padding:15px 18px;margin:22px 0;max-width:86ch;border-radius:6px}
+main#content .notice.danger{background:#f9e9e3;border-color:#a44d39}
+main#content .within-page{display:flex;flex-wrap:wrap;gap:7px;margin:20px 0}
+main#content .within-page a{padding:8px 10px;border:1px solid #aec7b7;border-radius:8px;background:white;font-size:.89rem;font-weight:700;min-height:44px;display:inline-flex;align-items:center}
+main#content .two-col,main#content .two-tracks,main#content .question-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+main#content .panel,main#content .question-cards article{border:1px solid #c1d1c6;border-radius:12px;padding:18px;background:white;min-width:0}
+main#content .panel h3,main#content .question-cards h3{margin-top:0}
+main#content .panel ul{padding-left:22px}
+main#content .action-link{display:inline-flex;align-items:center;min-height:44px;padding:8px 12px;border:2px solid #226250;border-radius:8px;background:#eaf2eb;font-weight:800;text-decoration:none}
+main#content .relationship-diagram{max-width:920px;margin:24px 0;padding:22px;background:#fff;border:1px solid #b5cabd;border-radius:16px}
+main#content .diagram-origin,main#content .diagram-converge{padding:14px;border:2px solid #6c9580;border-radius:9px;background:#dcebe2;text-align:center;max-width:580px;margin:0 auto;font-weight:750}
+main#content .branch-arrows{display:flex;justify-content:space-around;font-weight:bold;font-size:2rem;line-height:1;color:#275c4a}
+main#content .diagram-track{padding:18px;border:2px solid #748b80;border-radius:12px;background:#eef4f0;min-width:0}
+main#content .diagram-track h3{margin:0 0 8px}
+main#content .diagram-track p{margin:6px 0}
+main#content .diagram-track.urgent-track{background:#fbece8;border-color:#a9604b}
+main#content .diagram-track.formulation-track{background:#ecf0f8;border-color:#6276a3}
+main#content .branch-converge{text-align:center;font-weight:bold;font-size:1.75rem;line-height:1.1;color:#275c4a}
+main#content .diagram-converge span{display:block;font-size:.86rem;font-weight:500}
+main#content figcaption{font-size:.86rem;color:#44594f;line-height:1.5;margin-top:12px}
+main#content .table-wrap{overflow-x:auto;max-width:100%;border:1px solid #b7ccc0;border-radius:10px}
+main#content table{border-collapse:collapse;width:100%;font-size:.94rem;background:#fff;min-width:570px}
+main#content th,main#content td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid #dce6df}
+main#content thead{background:#e1ede6}
+main#content tbody th{width:23%;font-weight:750;color:#234c3c}
+main#content .step-list{border-left:4px solid #6c9580;padding-left:22px}
+main#content .step-list section{margin:12px 0 20px}
+main#content .step-list h3{margin:0 0 5px}
+main#content .step-list p{margin:0}
+main#content .case{border:1px solid #bfd0c5;border-left:6px solid #667bab;border-radius:9px;background:#fff;padding:20px}
+main#content .case details{padding:12px;margin:8px 0}
+main#content .case summary{min-height:44px;display:flex;align-items:center}
+main#content .numbered{padding-left:25px}
+main#content .numbered li{padding:8px 0}
+main#content .outcome-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+main#content .outcome-grid>div{padding:17px;border-radius:10px;border:2px solid #577f6c;background:#eef5ef;min-width:0}
+main#content .outcome-grid>div:nth-child(2){border-color:#697baf;background:#eef1fa}
+main#content .outcome-grid b,main#content .outcome-grid strong,main#content .outcome-grid span{display:block}
+main#content .outcome-grid .outcome-join{grid-column:1/-1;text-align:center;background:#fff;border-style:dashed}
+main#content .outcome-grid figcaption{grid-column:1/-1}
+main#content .domain-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:15px 0}
+main#content .domain-list span{border:1px solid #b7cebd;border-radius:7px;background:#f1f5f1;padding:11px;font-size:.9rem}
+main#content label{margin:20px 0 6px}
+main#content textarea{background:#fff;min-height:90px}
+main#content .route-list{counter-reset:route;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding:0}
+main#content .route-list li{list-style:none;border-top:5px solid #356d57;background:#e6efe8;padding:15px;min-height:105px}
+main#content .route-list strong,main#content .route-list span{display:block}
+main#content .route-list span{font-size:.9rem}
+main#content .sources{padding:16px 18px;border-top:3px solid #b3ccbb;background:#f4f7f2}
+main#content .depth-footer{border-top:1px solid #bbcec0;margin-top:45px;padding:20px 0;font-size:.85rem;color:#435c50}
+@media(max-width:680px){main#content{margin:20px auto;padding:0 14px}main#content .two-col,main#content .two-tracks,main#content .question-cards{grid-template-columns:1fr}main#content .route-list{grid-template-columns:1fr 1fr}main#content .relationship-diagram{padding:13px}main#content .domain-list{grid-template-columns:1fr 1fr}main#content .table-wrap{margin-inline:-4px}main#content .within-page{gap:5px}main#content .within-page a{padding:6px 8px}main#content h1{font-size:clamp(1.9rem,8vw,2.7rem)}}
+@media(max-width:390px){main#content .route-list,main#content .domain-list{grid-template-columns:1fr}main#content .outcome-grid{grid-template-columns:1fr}main#content .outcome-grid .outcome-join{grid-column:1}}
+@media print{.cpl-static-nav,.within-page,.no-print{display:none!important}main#content{width:100%;margin:0;padding:0}main#content .relationship-diagram,main#content .diagram-track,main#content .outcome-grid>div{background:white!important;color:#000!important}main#content .case,main#content .panel,main#content table,main#content .diagram-track{break-inside:avoid}main#content a{color:black}main#content .table-wrap{overflow:visible}main#content table{min-width:0;font-size:9pt}main#content textarea{height:3rem;border:1px solid #777}}
+
+/* Interpersonal cycle: recurrence is spatial, not falsely guaranteed causation. */
+main#content .cycle-map{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;padding:20px 16px 12px;border:2px dashed #608772;border-radius:18px;background:white;margin:20px 0}
+main#content .cycle-node{position:relative;background:#e6f0e8;border-top:5px solid #28664f;padding:14px;min-height:140px;border-radius:7px}
+main#content .cycle-node:nth-child(2){background:#eef0fa;border-color:#6878a3}
+main#content .cycle-node:nth-child(3){background:#f9ede4;border-color:#ad7344}
+main#content .cycle-node:nth-child(4){background:#f4e6ec;border-color:#a2607e}
+main#content .cycle-node:nth-child(5){background:#e9f0f2;border-color:#427e8a}
+main#content .cycle-node:not(:nth-child(5))::after{content:"→";position:absolute;right:-13px;top:40%;font-weight:900;color:#214a39}
+main#content .cycle-node strong,main#content .cycle-node span{display:block}
+main#content .cycle-node span{font-size:.88rem;line-height:1.42;margin-top:8px}
+main#content .cycle-map figcaption{grid-column:1/-1}
+@media(max-width:760px){main#content .cycle-map{grid-template-columns:1fr;gap:14px}main#content .cycle-node{min-height:0}main#content .cycle-node:not(:nth-child(5))::after{content:"↓";right:50%;top:auto;bottom:-18px}}
+@media print{main#content .cycle-map{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}main#content .cycle-node{min-height:0;background:white!important;break-inside:avoid}main#content .cycle-node::after{display:none!important}}
+
+/* Phase 8B: Three parallel health/care streams retain individual identity at mobile widths. */
+main#content .three-tracks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:16px 0}
+main#content .parallel-care{border:1px solid #b6c9bd;padding:18px;border-radius:16px;background:#fff;max-width:960px;margin:20px 0}
+main#content .three-tracks .diagram-track{min-width:0}
+main#content .parallel-care .diagram-converge{margin-bottom:8px}
+main#content .caregiver-map{display:grid;grid-template-columns:minmax(0,1fr) 24px minmax(0,1fr) 24px minmax(0,1fr);gap:8px;align-items:center;border:1px solid #bed0c4;padding:15px;border-radius:14px;background:white;margin:20px 0}
+main#content .caregiver-map__phase{min-width:0;align-self:stretch;background:#ebf1ed;border:2px solid #709080;padding:14px;border-radius:11px}
+main#content .caregiver-map__phase:nth-of-type(3){background:#eef0fa;border-color:#687caa}
+main#content .caregiver-map__phase:nth-of-type(5){background:#fcf1e4;border-color:#a58155}
+main#content .caregiver-map__icon{display:inline-flex;align-items:center;justify-content:center;width:29px;height:29px;border:2px solid currentColor;border-radius:50%;font-weight:800;margin-bottom:4px}
+main#content .caregiver-map__phase h3{font-size:1rem;letter-spacing:.06em;margin:2px 0}
+main#content .caregiver-map__phase p{font-weight:650;font-size:.94rem;margin:2px 0 12px}
+main#content .caregiver-map__tiles{display:grid;gap:6px}
+main#content .caregiver-map__tiles span{background:white;border-left:3px solid #628874;border-radius:4px;padding:8px 9px;font-size:.85rem;line-height:1.35}
+main#content .caregiver-map__arrow{font-size:1.3rem;font-weight:900;color:#245e50;text-align:center}
+@media(max-width:800px){
+  main#content .three-tracks{grid-template-columns:1fr}
+  main#content .three-tracks .diagram-track{border-left-width:7px}
+  main#content .caregiver-map{grid-template-columns:1fr;gap:7px}
+  main#content .caregiver-map__arrow{transform:rotate(90deg)}
+  main#content .caregiver-map__phase{padding:13px}
+  main#content .caregiver-map__tiles{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:450px){main#content .caregiver-map__tiles{grid-template-columns:1fr}}
+@media print{
+  main#content .caregiver-map{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+  main#content .caregiver-map__arrow{display:none}
+  main#content .caregiver-map__phase,main#content .three-tracks .diagram-track{background:white!important;break-inside:avoid}
+  main#content .three-tracks{grid-template-columns:repeat(3,minmax(0,1fr))}
+  main#content .caregiver-map__tiles span{border:1px solid #777}
+}
+
+/* Psychosis and bipolar: four observable lanes across an episode rather than a single-line cause. */
+main#content .episode-map{border:1px solid #b6ccbd;border-radius:14px;overflow-x:auto;background:#fff;max-width:100%;padding:14px;margin:18px 0}
+main#content .episode-axis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-left:154px}
+main#content .episode-axis strong{padding:11px 7px;text-align:center;background:#e2ebed;border-radius:5px;font-size:.82rem}
+main#content .episode-row{display:grid;grid-template-columns:150px repeat(3,minmax(0,1fr));gap:6px;margin:6px 0}
+main#content .episode-key{font-weight:750;line-height:1.32;padding:12px 9px;background:#e2efe4;border-radius:5px}
+main#content .episode-row:nth-of-type(3) .episode-key{background:#e9eafa}
+main#content .episode-row:nth-of-type(4) .episode-key{background:#f4e9dc}
+main#content .episode-row:nth-of-type(5) .episode-key{background:#e7edef}
+main#content .episode-row>div{padding:11px;border:1px solid #c5d6cc;border-radius:5px;font-size:.9rem;line-height:1.4}
+main#content .episode-map figcaption{margin-top:10px}
+@media(max-width:710px){
+ main#content .episode-axis{display:none}
+ main#content .episode-row{grid-template-columns:1fr}
+ main#content .episode-key{border-left:5px solid #286852}
+ main#content .episode-row>div{position:relative;padding-left:74px;min-height:44px}
+ main#content .episode-row>div::before{position:absolute;left:9px;top:11px;font-size:.76rem;letter-spacing:.02em;font-weight:800;color:#365a4d}
+ main#content .episode-row>div:nth-of-type(1)::before{content:"BEFORE"}
+ main#content .episode-row>div:nth-of-type(2)::before{content:"DURING"}
+ main#content .episode-row>div:nth-of-type(3)::before{content:"AFTER"}
+}
+@media print{
+ main#content .episode-axis{display:grid!important;margin-left:118px}
+ main#content .episode-row{grid-template-columns:114px repeat(3,minmax(0,1fr))!important}
+ main#content .episode-row>div{padding:8px!important}
+ main#content .episode-row>div::before{display:none}
+ main#content .episode-map{overflow:visible}
+ main#content .episode-row{break-inside:avoid}
+}
+
+/* Assess with three separated purposes, not three diagnostic score thresholds. */
+main#content .assessment-levels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:18px 0 22px}
+main#content .assessment-level{padding:15px;background:#edf4ef;border:1.5px solid #9eb9a6;border-radius:11px;min-width:0}
+main#content .assessment-level:nth-child(2){background:#eaf0fa;border-color:#859cbd}
+main#content .assessment-level:nth-child(3){background:#f6f0e6;border-color:#b3a17e}
+main#content .assessment-level__number{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border:2px solid #426d56;border-radius:50%;font-weight:850;margin-bottom:9px}
+main#content .assessment-level strong,main#content .assessment-level span:not(.assessment-level__number){display:block}
+main#content .assessment-level strong{font-size:.97rem;line-height:1.3}
+main#content .assessment-level span:not(.assessment-level__number){font-size:.84rem;line-height:1.42;margin-top:7px}
+main#content .specialist-resources{margin:20px 0;border:2px solid #466959;border-radius:12px;padding:0;background:#fff}
+main#content .specialist-resources>summary{display:flex;align-items:center;gap:12px;cursor:pointer;list-style:none;padding:14px;min-height:60px}
+main#content .specialist-resources>summary::-webkit-details-marker{display:none}
+main#content .specialist-resources__marker{display:inline-flex;align-items:center;justify-content:center;flex:0 0 30px;height:30px;border:2px solid;border-radius:50%;font-size:1.2rem;font-weight:800}
+main#content .specialist-resources[open] .specialist-resources__marker{transform:rotate(45deg)}
+main#content .specialist-resources summary strong,main#content .specialist-resources summary small{display:block}
+main#content .specialist-resources summary small{font-size:.85rem;color:#445d52;font-weight:400}
+main#content .specialist-resources__body{padding:0 18px 18px}
+@media(max-width:700px){main#content .assessment-levels{grid-template-columns:1fr;gap:10px}main#content .assessment-level{display:grid;grid-template-columns:35px minmax(0,1fr);align-items:start;gap:12px;padding:12px}main#content .assessment-level__number{margin:0}main#content .assessment-level span:not(.assessment-level__number){margin-top:4px}}
+@media print{main#content .assessment-levels{grid-template-columns:repeat(3,minmax(0,1fr))}main#content .assessment-level{display:block;background:white!important}main#content .specialist-resources__body{display:block!important}main#content .specialist-resources[open]>summary{padding:10px} }
