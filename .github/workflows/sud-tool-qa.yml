@@ -1,0 +1,30 @@
+name: Substance use educational tool QA
+on:
+  push:
+    branches:
+      - feature/sud-criteria-teaching-tool-20261019
+  pull_request:
+    paths:
+      - resources/training/substance-use-disorder-tool.html
+      - tests/sud-dictionary.cjs
+      - .github/workflows/sud-tool-qa.yml
+jobs:
+  source-check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/sud-dictionary.cjs
+      - run: npm install --no-save playwright axe-core
+      - run: npx playwright install --with-deps chromium
+      - run: node tests/sud-browser.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: sud-qa-evidence
+          path: sud-qa-evidence/
+          if-no-files-found: ignore
