@@ -10,6 +10,10 @@ for(const width of [320,390,768,1280]){
  await page.locator('input[name="integrated-answer"][value="b"]').check();
  await page.locator('#integrated-check').click();
  assert.match(await page.locator('#integrated-feedback').innerText(),/three signs|criteria/i);
+ const integratedPlain=await page.locator('#integrated-feedback').innerText();
+ await page.locator('#clinical').click();
+ assert.notEqual(await page.locator('#integrated-feedback').innerText(),integratedPlain,'Integrated feedback must refresh on mode change');
+ await page.locator('#plain').click();
  await page.locator('#integrated-reset').click();
  assert.equal(await page.locator('#integrated-feedback').isVisible(),false);
 
