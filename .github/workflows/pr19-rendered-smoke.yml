@@ -1,14 +1,15 @@
-name: CPL PR19 rendered smoke QA
+name: CPL rendered keyboard and print QA
 on:
   pull_request:
     paths:
-      - 'scripts/qa/pr19-rendered-smoke.cjs'
+      - 'scripts/qa/**'
       - '.github/workflows/pr19-rendered-smoke.yml'
       - 'index.html'
       - 'resources/**'
+      - 'legacy/**'
+      - 'tests/state-iep-guides.cjs'
 jobs:
   browser-keyboard-print:
-    if: github.head_ref == 'qa/main-reconciled-routes-20261021'
     runs-on: ubuntu-latest
     permissions:
       contents: read
