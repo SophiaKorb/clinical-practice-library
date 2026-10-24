@@ -4,7 +4,7 @@ const assert = require('node:assert/strict');
 const { chromium } = require('playwright');
 const base = 'http://127.0.0.1:8765';
 const skipRoutes = require('./skip-navigation-routes.cjs');
-const repairedPaths = new Set([...skipRoutes.jurisdictions, ...skipRoutes.legacy]);
+const repairedPaths = new Set([...skipRoutes.jurisdictions, ...skipRoutes.legacy, ...skipRoutes.additional]);
 const functionalPaths = new Set([...repairedPaths, skipRoutes.worksheet]);
 const paths = [...new Set([
   '/', '/library.html', '/resources/start-here.html',
@@ -19,7 +19,7 @@ const paths = [...new Set([
   '/resources/therapy/treatment-planning-worksheet.html',
   '/resources/california/iep-parent-guide.html',
   '/legacy/resources/handouts/grounding.html',
-  ...skipRoutes.jurisdictions, ...skipRoutes.legacy,
+  ...skipRoutes.jurisdictions, ...skipRoutes.legacy, ...skipRoutes.additional,
 ])];
 const widths = [320, 390, 768, 1280];
 (async () => {
@@ -93,7 +93,7 @@ const widths = [320, 390, 768, 1280];
         console.log('CHECK',width,path,'HTTP',response?.status(),'scroll/client',metrics.scroll+'/'+metrics.client,'firstTab',focus);
       }
       if (width === 390) {
-        for (const path of ['/', '/resources/clinical-topics/aphasia-communication-access/index.html', skipRoutes.worksheet, skipRoutes.jurisdictions[0], skipRoutes.jurisdictions[1], ...skipRoutes.legacy]) {
+        for (const path of ['/', '/resources/clinical-topics/aphasia-communication-access/index.html', skipRoutes.worksheet, skipRoutes.jurisdictions[0], skipRoutes.jurisdictions[1], ...skipRoutes.legacy, ...skipRoutes.additional]) {
           const response = await page.goto(base+path,{waitUntil:'domcontentloaded'});
           assert.equal(response.status(),200);
           await page.emulateMedia({media:'print'});

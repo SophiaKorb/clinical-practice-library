@@ -25,5 +25,6 @@ module.exports = {
     "/legacy/resources/handouts/grounding-quick-card.html",
     "/legacy/index.html"
   ],
+  "additional": ["/resources/es/california-homeschool.html"],
   "worksheet": "/resources/therapy/treatment-planning-worksheet.html"
 };
