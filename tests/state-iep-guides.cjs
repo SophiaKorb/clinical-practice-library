@@ -8,3 +8,8 @@ for(const item of states){const target='/resources/'+item+'.html';assert.ok(libr
 for(const path of ['resources/arizona/iep-504-parent-guide.html','legacy/resources/arizona/iep-504-parent-guide.html','resources/school/iep-504-meeting-preparation.html','legacy/resources/school/iep-504-meeting-preparation.html','resources/es/arizona-como-conseguir-iep-504.html','legacy/resources/es/arizona-como-conseguir-iep-504.html']){const body=fs.readFileSync(path,'utf8');assert.ok(!/recovery[ -]coach(es)?/i.test(body),'Outdated terminology: '+path);if(path.includes('/es/'))assert.ok(!/case manager/i.test(body),'Untranslated English role: '+path);}
 assert.ok(!home.includes('state-iep-heading'),'State directory should not dominate homepage');assert.ok(library.indexOf('id="state-iep-guides"')>library.indexOf('id="school"'),'State guides must be nested within school section');assert.ok(library.includes('Arizona — start here'),'Arizona should be prominent');assert.ok(!home.includes('student-rights-accountability.html'),'Unrequested hub link in homepage');assert.ok(!library.includes('student-rights-accountability.html'),'Unrequested hub link in library');
 console.log('PASS: Thirteen jurisdictions linked within school resources; role terminology checks passed.');
+for(const item of states){
+  const path='resources/'+item+'.html', body=fs.readFileSync(path,'utf8');
+  assert.match(body,/<body[^>]*>\s*<a class="cpl-skip" href="#main-content">Skip to main content<\/a>/,'First skip link: '+path);
+  assert.match(body,/<main id="main-content" tabindex="-1" class="resource-page">/,'Focus target: '+path);
+}

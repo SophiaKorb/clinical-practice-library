@@ -104,3 +104,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible{
 .resource-topbar a{line-height:1.35}
 @media(max-width:600px){.resource-page{width:calc(100% - 24px);margin-top:26px}.resource-page h1{font-size:clamp(2.15rem,9vw,3rem)}.resource-page .resource-card{padding:19px;border-radius:13px}.resource-topbar{flex-wrap:wrap}.resource-topbar button{min-height:42px}}
 @media print{.resource-page .resource-card{box-shadow:none;break-inside:auto}.resource-page .resource-card h2{break-after:avoid}}
+
+/* Bypass repeated navigation; reveal the first keyboard stop above sticky headers. */
+.cpl-skip{position:absolute;top:-120px;left:12px;z-index:1000;padding:12px 16px;border:2px solid currentColor;border-radius:8px;background:var(--white,#fffdf9);color:var(--ink,#173c32);font-weight:800}
+.cpl-skip:focus{position:fixed;top:12px;outline:3px solid currentColor;outline-offset:3px}
+#main-content{scroll-margin-top:6rem}
+@media print{.cpl-skip{display:none!important}}
