@@ -31,3 +31,11 @@ Six high-stakes or assessment resource pages (English and Spanish) used `resourc
 - Any new technical or factual defect must be demonstrated by a dated primary source and corrected only on this guarded review branch. No automatic clinical rewriting or inferred rights permissions.
 
 **CI:** initial execution pending; exact-head run outcomes must be recorded on the draft pull request before claiming a pass.
+
+## Expanded axe findings and repairs — November 12, 2026
+
+[Initial sampled Chromium run 43309869174](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/43309869174) **failed** on three serious axe-core findings: two `label-content-name-mismatch` errors on the visible “CPL” navigation-brand links (Start Here and self-harm clinical depth), and a `scrollable-region-focusable` error on the self-harm pathway’s horizontally scrollable formulation table. All six originally edited high-stakes/assessment pages and the sampled OCD/PTSD/treatment-plan pages had **zero reported axe violations**. The same run verified all **26 repeated-title groups / 54 files**: exactly **one byte-identical file pair** and **eight additional same-visible-main-text pairs with different file bytes**. These findings are *not* a license to merge or redirect Spanish pages.
+
+Corrected the two brand link accessible names to begin with visible “CPL”, and made the self-harm comparison table keyboard-focusable with a descriptive region name. Also repaired missing first-tab skip navigation on the OCD, PTSD, and treatment-plan guidance pages, using the existing shared resource CSS for the first two and isolated CSS for the third. Gave existing `#routes` and `#content` targets explicit focusability. Clinical wording, current source links, images and client worksheets were not changed.
+
+Full site QA on initial commit succeeded ([43309869081](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/43309869081)); existing rendered QA succeeded ([43309868991](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/43309868991)). **This updated source requires new exact-head reruns**.

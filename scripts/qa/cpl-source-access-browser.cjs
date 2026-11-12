@@ -9,12 +9,12 @@ const edited=[
 '/resources/handouts/safety-planning-preparation-sheet.html',
 '/resources/assessment/assessment-start-here.html',
 '/resources/es/handouts/hacer-crisis-suicida-mas-segura.html',
-'/resources/es/handouts/hacer-mas-segura-crisis-suicida.html'
-];
-const more=[
+'/resources/es/handouts/hacer-mas-segura-crisis-suicida.html',
 '/resources/therapy/anxiety-exposure-ocd-start-here.html',
 '/resources/therapy/trauma-ptsd-start-here.html',
-'/resources/therapy/treatment-plan-menu.html',
+'/resources/therapy/treatment-plan-menu.html'
+];
+const more=[
 '/resources/clinical-depth/self-harm-safety-continuity.html',
 '/resources/start-here.html'
 ];

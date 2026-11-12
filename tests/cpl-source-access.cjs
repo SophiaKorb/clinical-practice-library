@@ -12,7 +12,9 @@ for(const path of [
  'resources/handouts/safety-planning-preparation-sheet.html',
  'resources/assessment/assessment-start-here.html',
  'resources/es/handouts/hacer-crisis-suicida-mas-segura.html',
- 'resources/es/handouts/hacer-mas-segura-crisis-suicida.html'
+ 'resources/es/handouts/hacer-mas-segura-crisis-suicida.html',
+ 'resources/therapy/anxiety-exposure-ocd-start-here.html',
+ 'resources/therapy/trauma-ptsd-start-here.html'
 ]){
  const s=fs.readFileSync(path,'utf8');
  assert.match(s,/<body><a class="cpl-skip" href="#main-content">/,'First-tab skip missing '+path);
@@ -23,4 +25,15 @@ for(const path of [
 const styles=fs.readFileSync('resources/resource.css','utf8');
 assert.match(styles,/\.cpl-skip:focus\{/,'Visible focus style missing');
 assert.match(styles,/@media print\{\.cpl-skip\{display:none!important\}\}/,'Skip must be hidden on print');
-console.log('PASS 6 source-preserving skip repairs and 7-source provenance ledger approval boundaries');
+const plan=fs.readFileSync('resources/therapy/treatment-plan-menu.html','utf8');
+assert.match(plan,/<a class="cpl-skip" href="#main-content">/,'Treatment plan skip');
+assert.match(plan,/<main id="main-content" tabindex="-1">/,'Treatment plan focus');
+const planCss=fs.readFileSync('resources/therapy/treatment-plan-menu.css','utf8');
+assert.match(planCss,/\.cpl-skip:focus\{/);
+for(const p of ['resources/start-here.html','resources/clinical-depth/self-harm-safety-continuity.html']){
+ const page=fs.readFileSync(p,'utf8');assert.match(page,/aria-label="CPL — Clinical Practice Library home"/);
+}
+const safety=fs.readFileSync('resources/clinical-depth/self-harm-safety-continuity.html','utf8');
+assert.match(safety,/class="table-wrap" role="region" tabindex="0" aria-label="Clinical formulation questions and next-step comparison"/);
+assert.match(safety,/<main id="content" tabindex="-1">/);
+console.log('PASS 9 resource skip repairs, 2 corrected brand labels, keyboard scroll table and 7-source provenance ledger approval boundaries');
