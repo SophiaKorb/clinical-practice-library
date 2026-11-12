@@ -5,6 +5,8 @@ on:
       - 'resources/therapy/visual-access-12-tool-reference-review-2026-10-25.html'
       - 'scripts/qa/visual-reference-rendered.cjs'
       - 'tests/visual-reference-structure.cjs'
+      - 'docs/qa/2026-11-11-visual-accessibility-qa.md'
+      - 'docs/qa/CPL_Complete_12_Tool_Visual_Review_QA_2026-10-25.md'
       - '.github/workflows/visual-reference-rendered.yml'
 jobs:
   chromium-review:

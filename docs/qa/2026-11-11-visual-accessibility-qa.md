@@ -24,9 +24,15 @@
 
 **Run 43158590138 — site QA: SUCCESS** at initial commit `831f6d474262d2e94f490dbd177a63a1882b1ac0`. The new static structure regression passed.
 
-**Run 43158590166 — rendered QA: FAILED (harness defect)** at that same commit. Chromium verified the 320px keyboard/skip/choice checks and successfully generated a **two-page Visual Dictionary PDF** before the test mistakenly attempted to operate a toolbar control while print media (which correctly hides the toolbar) was still emulated. The test harness now returns to screen media between user actions. This is a test-only correction, not a content/artwork change. The **next exact-commit rerun is required** before claiming full rendered QA success.
+**Run 43158590166 — rendered QA: FAILED (harness defect)** at that same commit. Chromium verified the 320px keyboard/skip/choice checks and successfully generated a **two-page Visual Dictionary PDF** before the test mistakenly attempted to operate a toolbar control while print media (which correctly hides the toolbar) was still emulated. The test harness now returns to screen media between user actions. This is a test-only correction, not a content/artwork change. The corrected test subsequently passed at the exact commit detailed below.
 
-Historical 13-page/print quality claims remain separate from new independent evidence.
+**Corrected exact-head verification (commit `ccd15de83852a91431bd113963e0d260ea1a0e09`):**
+
+- [CPL site QA, run 43158853504](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/43158853504): **SUCCESS** (full static/content/navigation check suite, including new structural test).
+- [CPL visual reference Chromium review, run 43158853478](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/43158853478): **SUCCESS**. The job log reports four widths (320, 390, 768, 1280), 60 grouped assertions, first-tab skip navigation, main focus, keyboard Space/Enter choice activation, reset, 12-tool selector, overflow checks, print-only hide behavior, and PDFs of exactly **2 / 1 / 13** pages (Visual Dictionary / Words That Help / all).
+- The older [PR19 smoke workflow 43158853545](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/43158853545) remains intentionally **SKIPPED** due to its unrelated branch filter. It is not counted as a passed test.
+
+These are independent *automated Chromium print and interaction checks*, not independent screen-reader-user testing, tagged PDF/UA assurance, physical print proofs, or clinical symbol validation. Final PR-head status must be verified again after this documentation commit; the dedicated review workflow is configured to rerun.
 
 ## Remaining human gates
 
