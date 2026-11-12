@@ -1,0 +1,140 @@
+{
+  "asOf": "2026-11-12",
+  "baseline": "1e5fe0c5a29ef0f89825d93e62f72d8fed7a2b9c",
+  "scope": {
+    "allResourceFiles": 802,
+    "currentInventory": 508,
+    "historicalInventory": 268,
+    "unindexedHtml": 26,
+    "html": 741,
+    "pdf": 61,
+    "finderRecords": 502,
+    "catalogRecords": 156,
+    "catalogClaimedRecords": 155,
+    "catalogSourceUrlsPresent": 84
+  },
+  "priorityCounts": {
+    "P2_candidate": 570,
+    "P1_candidate": 154,
+    "P0_candidate": 25,
+    "P3_candidate": 53
+  },
+  "previousSampledPages": 14,
+  "targetedEvidenceResources": 13,
+  "targetedEvidenceEntries": 17,
+  "caution": "Automated category sorting and inventory membership are not clinical or legal approvals; source evidence never implies completed clinical review.",
+  "unindexed": [
+    {
+      "path": "/classic.html",
+      "priority": "P3_candidate"
+    },
+    {
+      "path": "/preview/cpl2.html",
+      "priority": "P3_candidate"
+    },
+    {
+      "path": "/preview/index.html",
+      "priority": "P3_candidate"
+    },
+    {
+      "path": "/preview/layout-check.html",
+      "priority": "P3_candidate"
+    },
+    {
+      "path": "/resources/california/iep-parent-guide.html",
+      "priority": "P1_candidate"
+    },
+    {
+      "path": "/resources/colorado/iep-parent-guide.html",
+      "priority": "P1_candidate"
+    },
+    {
+      "path": "/resources/district-of-columbia/iep-rights-and-school-accountability.html",
+      "priority": "P1_candidate"
+    },
+    {
+      "path": "/resources/florida/iep-parent-guide.html",
+      "priority": "P1_candidate"
+    },
+    {
+      "path": "/resources/maine/iep-rights-and-school-accountability.html",
+      "priority": "P1_candidate"
+    },
+    {
+      "path": "/resources/new-mexico/iep-rights-and-school-accountability.html",
+      "priority": "P1_candidate"
+    },
+    {
+      "path": "/resources/new-york/iep-parent-guide.html",
+      "priority": "P1_candidate"
+    },
+    {
+      "path": "/resources/oregon/iep-parent-guide.html",
+      "priority": "P1_candidate"
+    },
+    {
+      "path": "/resources/texas/iep-parent-guide.html",
+      "priority": "P1_candidate"
+    },
+    {
+      "path": "/resources/therapy/harm-reduction-clinical-case-management-hub.html",
+      "priority": "P2_candidate"
+    },
+    {
+      "path": "/resources/therapy/intern-case-manager-practice-toolkit.html",
+      "priority": "P2_candidate"
+    },
+    {
+      "path": "/resources/therapy/medical-necessity-explained-for-beginners.html",
+      "priority": "P2_candidate"
+    },
+    {
+      "path": "/resources/therapy/therapy-approaches-explained-for-beginners.html",
+      "priority": "P2_candidate"
+    },
+    {
+      "path": "/resources/therapy/therapy-approaches-quick-comparison.html",
+      "priority": "P2_candidate"
+    },
+    {
+      "path": "/resources/therapy/therapy-common-misconceptions.html",
+      "priority": "P2_candidate"
+    },
+    {
+      "path": "/resources/therapy/trauma-stewardship-self-care-vicarious-trauma.html",
+      "priority": "P1_candidate"
+    },
+    {
+      "path": "/resources/therapy/treatment-planning-worksheet.html",
+      "priority": "P2_candidate"
+    },
+    {
+      "path": "/resources/training/diagnosis-comparer.html",
+      "priority": "P3_candidate"
+    },
+    {
+      "path": "/resources/training/dsm-from-zero.html",
+      "priority": "P1_candidate"
+    },
+    {
+      "path": "/resources/utah/iep-parent-guide.html",
+      "priority": "P1_candidate"
+    },
+    {
+      "path": "/resources/vermont/iep-rights-and-school-accountability.html",
+      "priority": "P1_candidate"
+    },
+    {
+      "path": "/resources/washington/iep-parent-guide.html",
+      "priority": "P1_candidate"
+    }
+  ],
+  "sixCurrentNotFinder": [
+    "/index.html",
+    "/library.html",
+    "/resources/clinical-resource-finder.html",
+    "/resources/complete-resource-inventory.html",
+    "/resources/index.html",
+    "/tools/index.html"
+  ]
+}
