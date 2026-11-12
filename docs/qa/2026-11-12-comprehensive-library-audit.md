@@ -47,3 +47,11 @@ Existing draft PRs #21–27, `main`, and production remain unchanged. This branc
 **Important boundary:** Resource count completeness is now verified **at the file level**, not clinical and source validation for every file. The full audit still needs qualified review of high-risk clinical, Spanish/rights and all source-dated materials before any publication or merge. This is a technical *first pass*, not a whole-CPL clearance.
 
 **Documentation-only changes after this point require a new exact-head QA rerun**; final successful run links will be attached to draft PR #28.
+
+## Verified shared-template accessibility repair and reviewer-queue correction
+
+Fourteen assessment/source-reference pages (13 English, including 12 clinical-assessment pages and one other assessment reference, plus one Spanish guide) were individually inspected and lacked the skip-to-content control already supported by shared `resources/resource.css`. Their sticky-header template was identical. Added only a localized first-tab bypass and focusable `#main-content`; no clinical source text, images, scores, copyright or public navigation were modified. The already-correct assessment start-here page and differently structured developmental-language casebook remain untouched.
+
+New source and Chromium regression scripts assess **14 routes × 4 widths (56 browser combinations)**, visible first keyboard focus, target activation, mobile overflow, print hiding and axe-core at 390px. Existing library-wide, 11-route high-stakes, 20-route expanded accessibility and complete 802-file/PDF audits still run. **Exact-commit CI pending** for this new change.
+
+In the 25-item P0 human queue, corrected an editorial task-allocation defect: five English-source rows previously instructed reviewers to do Spanish translation review of English originals. Qualified English safety/clinical source and rights review are required on those files; translation is a separate gate for their actual Spanish counterparts. No items were approved.
