@@ -28,6 +28,10 @@ assert.equal(manifest.sameMainTextNonidenticalFilePairs,8);
    await page.keyboard.press('Enter');
    assert.equal(await page.evaluate(()=>document.activeElement?.id),'main');
    const metric=await page.evaluate(()=>({w:document.documentElement.clientWidth,s:document.documentElement.scrollWidth}));
+   if(metric.s>metric.w+1){
+     const offending=await page.evaluate(()=>[...document.querySelectorAll('body *')].filter(e=>{const r=e.getBoundingClientRect();return r.right>document.documentElement.clientWidth+1&&getComputedStyle(e).position!=='fixed';}).slice(0,14).map(e=>({tag:e.tagName,cls:String(e.className).slice(0,45),width:Math.round(e.getBoundingClientRect().width),right:Math.round(e.getBoundingClientRect().right),snippet:e.textContent.slice(0,65)})));
+     console.error('OVERFLOW_DIAGNOSTIC '+width+' '+JSON.stringify(offending));
+   }
    assert.ok(metric.s<=metric.w+1,'Horizontal overflow at '+width+': '+JSON.stringify(metric));
    await page.addScriptTag({content:axe.source});
    const audit=await page.evaluate(()=>window.axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa','best-practice']}}));

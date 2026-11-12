@@ -58,7 +58,7 @@ assert.equal(exact.length,1,'Exact duplicate count changed');
 assert.equal(similar.length,8,'Normalized same-main-text count changed');
 const styles=[
 ':root{color-scheme:light;--ink:#182d31;--sub:#40585d;--line:#bcced0;--surface:#f8faf9;--accent:#155765}',
-'*{box-sizing:border-box}html{scroll-behavior:auto}body{margin:0;background:#fff;color:var(--ink);font:16px/1.55 system-ui,Arial,sans-serif}',
+'*{box-sizing:border-box}html{scroll-behavior:auto}body{margin:0;background:#fff;color:var(--ink);font:16px/1.55 system-ui,Arial,sans-serif;overflow-wrap:anywhere}main,header,.group,.file,.decision{min-width:0}p,li,th,td,code{overflow-wrap:anywhere;word-break:normal}',
 'a{color:#064f78;text-decoration:underline;text-underline-offset:2px;overflow-wrap:anywhere}',
 ':focus-visible{outline:3px solid #105f80;outline-offset:4px}.skip{position:fixed;top:-160px;left:12px;z-index:15;padding:12px;background:white;border:2px solid #124656}.skip:focus{top:10px}',
 'header{background:#173841;color:#fff;padding:24px max(18px,calc((100% - 1200px)/2))}header p{max-width:80ch}header h1{margin:0;font-size:clamp(1.45rem,3vw,2.25rem)}',
