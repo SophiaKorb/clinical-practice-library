@@ -40,6 +40,7 @@ for i,page in enumerate(doc):
 print('PDF_TEXT_BOUNDS',len(doc),'letter pages; words per page:',[x['words'] for x in ink])
 print('PDF_GRAYSCALE',ink)
 print('CONTRAST_CANDIDATES',len(pale),pale[:50])
+if pale: errors.append(f'{len(pale)} text spans below 4.5:1 relative to white in the printable reference; inspect actual backgrounds')
 if errors:
     print('PDF_ERRORS',errors)
     sys.exit(1)
