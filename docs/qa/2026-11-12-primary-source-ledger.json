@@ -1,0 +1,98 @@
+{
+  "kind": "CPL-primary-source-check-not-clinical-approval",
+  "checkedOn": "2026-11-12",
+  "scope": "Source publication and document-level claim comparison, not whole clinical guide approval",
+  "records": [
+    {
+      "id": "overdose-cdc",
+      "cplFile": "resources/handouts/suspected-opioid-overdose.html",
+      "sourceUrl": "https://www.cdc.gov/stop-overdose/response/",
+      "sourceOwner": "US Centers for Disease Control and Prevention",
+      "sourceDate": "2024-04-02",
+      "sourceDateMeaning": "CDC page reviewed date",
+      "retrieval": "retrieved",
+      "finding": "CPL warning signs, naloxone, emergency call, side position and waiting for help broadly concordant with CDC page.",
+      "clinicalApproved": false,
+      "rightsCleared": false,
+      "open": "Rescue breaths, emergency escalation and jurisdictional legal phrasing still require qualified clinical review."
+    },
+    {
+      "id": "overdose-cdc-naloxone",
+      "cplFile": "resources/handouts/suspected-opioid-overdose.html",
+      "sourceUrl": "https://www.cdc.gov/stop-overdose/naloxone-faq/index.html",
+      "sourceOwner": "US Centers for Disease Control and Prevention",
+      "sourceDate": null,
+      "sourceDateMeaning": "No page review date verified in this check",
+      "retrieval": "retrieved",
+      "finding": "CDC confirms additional dosing may be needed and advises assessment of breathing after 2–3 minutes; CPL defers to product instructions without specifying an interval.",
+      "clinicalApproved": false,
+      "rightsCleared": false,
+      "open": "Device-specific instructions and medical review pending."
+    },
+    {
+      "id": "suicide-988",
+      "cplFile": "resources/handouts/making-a-suicide-crisis-safer.html",
+      "sourceUrl": "https://988lifeline.org/get-help/what-to-expect/",
+      "sourceOwner": "988 Suicide & Crisis Lifeline",
+      "sourceDate": null,
+      "sourceDateMeaning": "No page publication date verified in this check",
+      "retrieval": "retrieved",
+      "finding": "Official site describes call/text/chat crisis support and counselors assessing current safety; CPL names call/text 988 as a US resource.",
+      "clinicalApproved": false,
+      "rightsCleared": false,
+      "open": "Local emergency thresholds, source labeling, accessibility and safety planning protocol need specialist verification."
+    },
+    {
+      "id": "suicide-988-policy",
+      "cplFile": "resources/handouts/making-a-suicide-crisis-safer.html",
+      "sourceUrl": "https://988lifeline.org/professionals/best-practices/",
+      "sourceOwner": "988 Suicide & Crisis Lifeline",
+      "sourceDate": "2024",
+      "sourceDateMeaning": "2024 named Suicide Safety Policy, not current webpage publication date",
+      "retrieval": "retrieved",
+      "finding": "Provider resource identifies 2024 safety policy emphasizing collaborative safety assessment and least invasive emergency response; CPL summary is not a replacement for policy.",
+      "clinicalApproved": false,
+      "rightsCleared": false,
+      "open": "Policy applicability to audience and local emergency practice not reviewed."
+    },
+    {
+      "id": "ptsd-va-guideline",
+      "cplFile": "resources/therapy/trauma-ptsd-start-here.html",
+      "sourceUrl": "https://www.ptsd.va.gov/professional/treat/txessentials/cpg_ptsd_management.asp",
+      "sourceOwner": "U.S. Department of Veterans Affairs/Department of Defense",
+      "sourceDate": "2023",
+      "sourceDateMeaning": "Guideline edition year, not a statement of latest webpage review",
+      "retrieval": "retrieved",
+      "finding": "VA/DoD 2023 guideline supports trauma-focused psychotherapy; VA treatment overview identifies CPT, PE, EMDR as strongly recommended. CPL links to VA provider resources.",
+      "clinicalApproved": false,
+      "rightsCleared": false,
+      "open": "Full treatment selection, populations and 2026 edition status require clinician review."
+    },
+    {
+      "id": "ocd-iocdf",
+      "cplFile": "resources/therapy/anxiety-exposure-ocd-start-here.html",
+      "sourceUrl": "https://iocdf.org/about-ocd/ocd-treatment-guide/erp/",
+      "sourceOwner": "International OCD Foundation",
+      "sourceDate": null,
+      "sourceDateMeaning": "No source publication or update date verified",
+      "retrieval": "retrieved",
+      "finding": "Source identifies voluntary ERP as first-line psychological OCD treatment, including assessment of compulsions and avoidance. CPL guidance on non-coercive exposure is broadly consonant.",
+      "clinicalApproved": false,
+      "rightsCleared": false,
+      "open": "Formal model training and detailed case-specific ERP selection not checked."
+    },
+    {
+      "id": "samhsa-overdose-access",
+      "cplFile": "resources/handouts/suspected-opioid-overdose.html",
+      "sourceUrl": "https://www.samhsa.gov/substance-use/treatment/overdose-prevention",
+      "sourceOwner": "SAMHSA",
+      "sourceDate": null,
+      "sourceDateMeaning": "No date verified; retrieved endpoint denied automated browsing",
+      "retrieval": "access-restricted-403",
+      "finding": "Cannot confirm contents or link quality from this retrieval; do not mark broken or replaced.",
+      "clinicalApproved": false,
+      "rightsCleared": false,
+      "open": "Manual browser or source owner confirmation required."
+    }
+  ]
+}
