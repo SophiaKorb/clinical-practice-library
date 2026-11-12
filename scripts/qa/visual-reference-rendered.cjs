@@ -59,12 +59,17 @@ async function pdfWithPages(page,expected,label){
         await pdfWithPages(page,2,'Visual Dictionary');
         await page.evaluate(()=>window.dispatchEvent(new Event('afterprint')));
         assert.equal(await page.locator('.sheet.print-hidden').count(),0,'afterprint restores all');
+        // Print CSS correctly hides the toolbar; restore screen mode before UI actions.
+        await page.emulateMedia({media:'screen'});
         await page.locator('#jump').selectOption('12');
         await page.locator('#print-one').click();
+        await page.emulateMedia({media:'print'});
         await pdfWithPages(page,1,'Words That Help');
         await page.evaluate(()=>window.dispatchEvent(new Event('afterprint')));
+        await page.emulateMedia({media:'screen'});
         await page.locator('#print-all').click();
         assert.equal(await page.locator('.sheet.print-hidden').count(),0,'Print all restores all sheets');
+        await page.emulateMedia({media:'print'});
         await pdfWithPages(page,13,'All visual tools');
       }
       assert.deepEqual(errors,[],width+' browser errors');

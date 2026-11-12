@@ -46,12 +46,12 @@ Do not merge, deploy, change production navigation, production aliases, `main`, 
 
 ## Subsequent technical QA addendum — November 11, 2026 (separate review branch)
 
-**Branch:** \`review/cpl-visual-accessibility-20261111\` (forked from draft PR #21 at \`b6f1e67167c00a2b162bcdd08dbdb96c393e7776\`). This addendum is review-only and does not modify PR #21 or the published site.
+**Branch:** `review/cpl-visual-accessibility-20261111` (forked from draft PR #21 at `b6f1e67167c00a2b162bcdd08dbdb96c393e7776`). This addendum is review-only and does not modify PR #21 or the published site.
 
-Source inspection found 13 nested/repeated \`<main class="pagebody">\` landmarks and no first-tab skip link. It also found that the previous "Print current" implementation selected an individual *sheet* rather than a *tool*, omitting part of the two-page Visual Dictionary.
+Source inspection found 13 nested/repeated `<main class="pagebody">` landmarks and no first-tab skip link. It also found that the previous "Print current" implementation selected an individual *sheet* rather than a *tool*, omitting part of the two-page Visual Dictionary.
 
 Technical changes:
-- One page-wide \`<main id="main-content" tabindex="-1">\` with 13 internal \`.pagebody\` containers; visible skip-to-tools link before toolbar, hidden during printing.
+- One page-wide `<main id="main-content" tabindex="-1">` with 13 internal `.pagebody` containers; visible skip-to-tools link before toolbar, hidden during printing.
 - Twelve distinct keyboard-accessible tool selector options (the Visual Dictionary is labelled "2 pages"); selecting it scrolls to the first sheet.
 - "Print current" selects both Visual Dictionary pages; "Print all" selects every sheet; afterprint resets selection. Reduced-motion preferences are respected for tool jumps.
 - The 67 choice buttons and all existing SVG pictograms/images, labels, sheet order, and client/partner guidance are preserved.
@@ -59,4 +59,4 @@ Technical changes:
 
 **Verification:** CI results must be recorded against the exact final commit and reviewed pull request. A green job cannot clear manual screen-reader navigation, qualified clinician/SLP symbol comprehension, access method validation, physical monochrome printing, large-print/CVI, licensing/provenance, or publication authorization.
 
-**Deployment:** new branch is created directly at a commit with \`git.deploymentEnabled:false\` so that no unguarded review-branch push can trigger a Vercel auto-preview. This branch-local control must not be merged into production without separate authorization.
+**Deployment:** new branch is created directly at a commit with `git.deploymentEnabled:false` so that no unguarded review-branch push can trigger a Vercel auto-preview. This branch-local control must not be merged into production without separate authorization.
