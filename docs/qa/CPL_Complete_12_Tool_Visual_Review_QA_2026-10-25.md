@@ -42,3 +42,21 @@ Exactly **12 distinct tools**, in the user's approved reference order, across **
 
 ## Release restrictions
 Do not merge, deploy, change production navigation, production aliases, `main`, D1 or experimental branches. Do not replace original CPL tools without explicit user approval.
+
+
+## Subsequent technical QA addendum — November 11, 2026 (separate review branch)
+
+**Branch:** `review/cpl-visual-accessibility-20261111` (forked from draft PR #21 at `b6f1e67167c00a2b162bcdd08dbdb96c393e7776`). This addendum is review-only and does not modify PR #21 or the published site.
+
+Source inspection found 13 nested/repeated `<main class="pagebody">` landmarks and no first-tab skip link. It also found that the previous "Print current" implementation selected an individual *sheet* rather than a *tool*, omitting part of the two-page Visual Dictionary.
+
+Technical changes:
+- One page-wide `<main id="main-content" tabindex="-1">` with 13 internal `.pagebody` containers; visible skip-to-tools link before toolbar, hidden during printing.
+- Twelve distinct keyboard-accessible tool selector options (the Visual Dictionary is labelled "2 pages"); selecting it scrolls to the first sheet.
+- "Print current" selects both Visual Dictionary pages; "Print all" selects every sheet; afterprint resets selection. Reduced-motion preferences are respected for tool jumps.
+- The 67 choice buttons and all existing SVG pictograms/images, labels, sheet order, and client/partner guidance are preserved.
+- New static and local-rendered Chromium regression scripts check main/skip, keyboard interaction, viewport overflow, tool mapping, PDF page counts, print hiding and reset.
+
+**Verification:** The source-level + rendered technical review at commit `ccd15de83852a91431bd113963e0d260ea1a0e09` passed [site QA 43158853504](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/43158853504) and [Chromium QA 43158853478](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/43158853478). The runner logged keyboard/selection checks at four widths and PDF counts 2 / 1 / 13; see `docs/qa/2026-11-11-visual-accessibility-qa.md` for failure/retest history and limitations. Any further commits require their own exact-head verification. A green job cannot clear manual screen-reader navigation, qualified clinician/SLP symbol comprehension, access method validation, physical monochrome printing, large-print/CVI, licensing/provenance, or publication authorization.
+
+**Deployment:** new branch is created directly at a commit with `git.deploymentEnabled:false` so that no unguarded review-branch push can trigger a Vercel auto-preview. This branch-local control must not be merged into production without separate authorization.
