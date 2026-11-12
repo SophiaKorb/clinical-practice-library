@@ -4,6 +4,8 @@ on:
     paths:
       - 'resources/therapy/visual-access-12-tool-reference-review-2026-10-25.html'
       - 'scripts/qa/visual-reference-rendered.cjs'
+      - 'scripts/qa/visual-reference-deep-audit.cjs'
+      - 'scripts/qa/visual-reference-pdf-audit.py'
       - 'tests/visual-reference-structure.cjs'
       - 'docs/qa/2026-11-11-visual-accessibility-qa.md'
       - 'docs/qa/CPL_Complete_12_Tool_Visual_Review_QA_2026-10-25.md'
@@ -22,8 +24,10 @@ jobs:
           node-version: '22'
       - name: Install isolated Chromium runner
         run: |
-          npm install --no-save --no-audit --no-fund playwright
+          npm install --no-save --no-audit --no-fund playwright axe-core
           npx playwright install --with-deps chromium
+      - name: Install PDF text and bounding-box analyzer
+        run: python3 -m pip install pymupdf
       - name: Test source invariants
         run: node tests/visual-reference-structure.cjs
       - name: Serve local branch and test rendered keyboard and print behaviors
@@ -34,3 +38,5 @@ jobs:
             sleep 1
           done
           node scripts/qa/visual-reference-rendered.cjs
+          node scripts/qa/visual-reference-deep-audit.cjs
+          python3 scripts/qa/visual-reference-pdf-audit.py /tmp/cpl-visual-deep-qa.pdf

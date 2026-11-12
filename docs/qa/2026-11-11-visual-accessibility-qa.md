@@ -42,3 +42,7 @@ These are independent *automated Chromium print and interaction checks*, not ind
 - **Ready for Human Review:** source/rights/clinical approval and explicit publication authorization before any merge, replacement, deploy or public distribution.
 
 The existing 17 communication tools remain unchanged; this is not a clinical or accessibility certification.
+
+## Additional deep accessibility and PDF QA (November 12, 2026)
+
+A separate deeper automated review now executes axe-core WCAG 2.0/2.1 A/AA and best-practice checks at 320, 390, 768, and 1280px; checks keyboard toolbar order, named choice controls, source semantics, printed text clipping, and extracts PDF text and page bounds with PyMuPDF. It also rasterizes pages in grayscale to verify dark/light detail and reports potentially low-contrast text spans (comparison to white alone is a screening heuristic, not WCAG certification for nonwhite backgrounds). A PDF text layer is checked independently of rendering. Exact-head outcomes must be attached after execution. Specialist review remains separately gated.
