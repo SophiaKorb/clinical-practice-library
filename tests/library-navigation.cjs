@@ -23,3 +23,10 @@ assert.ok(colorful.includes('href="/legacy/"'),'Colorful home missing legacy arc
 assert.ok(colorful.includes('cpl-disclosure'),'Colorful home missing independence disclosure');
 const colorfulCss=fs.readFileSync('colorful-home.css','utf8');
 assert.match(colorfulCss,/\.skip-link:focus/,'Colorful home missing visible skip focus');
+
+// The public QA-status route has the same keyboard bypass as clinical content.
+const qaStatus=fs.readFileSync('resources/qa-status.html','utf8');
+assert.match(qaStatus,/<a class="cpl-skip" href="#main-content">Skip to main content<\/a>/);
+assert.match(qaStatus,/<main id="main-content" tabindex="-1">/);
+assert.match(qaStatus,/\.cpl-skip:focus\{/);
+assert.match(qaStatus,/@media print\{\.cpl-skip\{display:none!important\}\}/);

@@ -2,7 +2,7 @@
   "meta": {
     "title": "Clinical Practice Library",
     "generated": "2026-09-22",
-    "records": 155,
+    "records": 156,
     "researchCoreRecords": 95,
     "assessmentRecords": 31,
     "note": "Public metadata catalog only. No PHI, restricted test content, or copyrighted full-text PDFs are stored here.",
@@ -6013,7 +6013,8 @@
         "psychosis",
         "eating disorders"
       ],
-      "caveat": "Original example wording with official reference links; not an exhaustive DSM catalog, diagnosis tool, prescribing plan or AthenaOne-native template. Adapt to age, context, assessment, client preference and clinician competence."
+      "caveat": "Original example wording with official reference links; not an exhaustive DSM catalog, diagnosis tool, prescribing plan or AthenaOne-native template. Adapt to age, context, assessment, client preference and clinician competence.",
+      "publicMetadataOnly": true
     }
   ]
 }

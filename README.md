@@ -9,10 +9,12 @@ This repository contains a working static web interface plus structured metadata
 - 95 Clinical Research Core records
 - 31 assessment and screening-tool records
 - 8 Arizona Barrier Support school-toolkit records
-- 134 indexed records total
+- 21 Clinical Handout Library collection records
+- 1 Treatment Planning Tools record
+- 156 indexed catalog records total
 - the established library architecture for clinical, family, school, trainee, assessment, Arizona, California, and Spanish-language resources
 
-The site is designed to run directly from GitHub Pages without a build step.
+The site is static and can be served without a build step. Public GitHub visibility, website deployment, and clinical publication approval are separate matters. See [publication and privacy boundary](docs/PUBLICATION-MODEL.md) and [current QA checkpoint](docs/qa/2026-11-11-comprehensive-qa.md).
 
 ## What belongs here
 
@@ -66,4 +68,4 @@ For assessments, possession of a file is not the same thing as authorization to 
 
 ## Status
 
-Initial public catalog scaffold created September 22, 2026.
+Initial public catalog scaffold created September 22, 2026. Counts above were reconciled against `data/library.json` November 11, 2026. They describe the metadata catalog—not the separate clinical finder or HTML-page inventory. Draft PRs are not included.
