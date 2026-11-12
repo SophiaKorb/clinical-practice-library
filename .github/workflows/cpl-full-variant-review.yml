@@ -1,0 +1,58 @@
+name: CPL full reviewer packet and provenance QA
+on:
+  pull_request:
+    paths:
+      - 'docs/qa/2026-11-12-variant-review-index.md'
+      - 'docs/qa/2026-11-12-provenance-rights-extension.json'
+      - 'docs/qa/2026-11-12-full-variant-qa.md'
+      - 'scripts/qa/cpl-generate-variant-packet.cjs'
+      - 'scripts/qa/cpl-variant-packet-browser.cjs'
+      - 'tests/cpl-full-variant-review.cjs'
+      - '.github/workflows/cpl-full-variant-review.yml'
+jobs:
+  full-reviewer-packet:
+    if: startsWith(github.head_ref, 'review/cpl-full-variant-provenance-')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install isolated Chromium for offline packet QA
+        run: |
+          npm install --no-save --no-audit --no-fund playwright axe-core
+          npx playwright install --with-deps chromium
+      - name: Validate source-ledger and reviewer index boundaries
+        run: |
+          node tests/cpl-full-variant-review.cjs
+          node scripts/qa/cpl-title-variants.cjs
+      - name: Generate complete offline reviewer packet
+        env:
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: node scripts/qa/cpl-generate-variant-packet.cjs
+      - name: Accessibility, focus, mobile and print checks for the packet
+        run: node scripts/qa/cpl-variant-packet-browser.cjs
+      - name: Rerun previously verified library and sampled source accessibility QA
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/cpl-variant-http.log 2>&1 &
+          for i in $(seq 1 20); do
+            if curl --fail --silent http://127.0.0.1:8765/ >/dev/null; then break; fi
+            sleep 1
+          done
+          node scripts/qa/librarywide-browser.cjs
+          node scripts/qa/cpl-source-access-browser.cjs
+      - name: Upload review-only packet (not part of deployed website)
+        uses: actions/upload-artifact@v4
+        with:
+          name: cpl-26-group-review-packet-${{ github.run_id }}
+          path: |
+            review-artifacts/cpl-variant-review.html
+            review-artifacts/cpl-variant-manifest.json
+          if-no-files-found: error
+          retention-days: 30

@@ -1,0 +1,170 @@
+{
+  "title": "CPL supplemental primary-source and reuse-rights register",
+  "checkedOn": "2026-11-12",
+  "baselineCommit": "26f9eacc0708ab6a8b82ff179554f66609638ccf",
+  "publicationApproved": false,
+  "clinicalApproved": false,
+  "rightsApproved": false,
+  "records": [
+    {
+      "id": "CDC-SUICIDE-2026",
+      "category": "clinical source",
+      "owner": "US CDC",
+      "url": "https://www.cdc.gov/suicide/risk-factors/index.html",
+      "retrieved": "2026-11-12",
+      "sourceDate": "2026-05-26",
+      "sourceDateMeaning": "date visibly displayed on page",
+      "relatedCpl": [
+        "resources/handouts/making-a-suicide-crisis-safer.html",
+        "resources/clinical-depth/self-harm-safety-continuity.html"
+      ],
+      "finding": "CDC warns risk and protective factors are multifactorial; a factor is not a deterministic individual prediction.",
+      "limitations": "Does not validate a CPL clinical risk algorithm or specific 911 decision threshold.",
+      "rightsStatus": "See CDC rights policy; not reviewed for any incorporated artwork."
+    },
+    {
+      "id": "VA-PTSD-2023",
+      "category": "clinical source",
+      "owner": "US VA/DoD",
+      "url": "https://www.ptsd.va.gov/professional/treat/txessentials/cpg_ptsd_management.asp",
+      "retrieved": "2026-11-12",
+      "sourceDate": "2023",
+      "sourceDateMeaning": "guideline edition, not last webpage review",
+      "relatedCpl": [
+        "resources/therapy/trauma-ptsd-start-here.html",
+        "resources/assessment/trauma-ptsd-dissociation-safety.html"
+      ],
+      "finding": "VA/DoD 2023 CPG supports PE, CPT and EMDR as individual trauma-focused psychotherapy recommendations.",
+      "limitations": "Needs population-specific and comorbidity-specific clinician review; source does not authorize copying third-party manuals.",
+      "rightsStatus": "VA government-produced policy may be uncopyrighted; independently authored manuals require asset-level rights review."
+    },
+    {
+      "id": "IOCDF-ERP-TREATMENT",
+      "category": "clinical source",
+      "owner": "International OCD Foundation / Jon Abramowitz, PhD",
+      "url": "https://iocdf.org/about-ocd/ocd-treatment-guide/exposure-response-prevention/",
+      "retrieved": "2026-11-12",
+      "sourceDate": null,
+      "sourceDateMeaning": "no page last-updated date independently verified",
+      "relatedCpl": [
+        "resources/therapy/anxiety-exposure-ocd-start-here.html",
+        "resources/assessment/ocd-bipolar-psychosis-substance-use.html"
+      ],
+      "finding": "Official treatment page describes ERP as first-line OCD psychotherapy and explicit non-coercion/patient willingness.",
+      "limitations": "Not clearance for implementing complex ERP without training; no rights/reproduction permission established.",
+      "rightsStatus": "Third-party authored content; link only until permission scope determined."
+    },
+    {
+      "id": "STANLEY-BROWN-SPI-RIGHTS",
+      "category": "copyright/rights",
+      "owner": "Barbara Stanley and Gregory K. Brown",
+      "url": "https://suicidesafetyplan.com/wp-content/uploads/2024/12/Stanley-Brown-Safety-Plan-05-02-2024.pdf",
+      "retrieved": "2026-11-12",
+      "sourceDate": null,
+      "sourceDateMeaning": "PDF filename contains 05-02-2024; explicit copyright years 2008, 2021, not verified publishing date",
+      "relatedCpl": [
+        "resources/handouts/safety-planning-preparation-sheet.html",
+        "resources/es/handouts/hoja-preparacion-plan-seguridad.html",
+        "resources/es/handouts/preparacion-plan-seguridad.html"
+      ],
+      "finding": "Author's PDF permits individual use of the form; written permission is required for changes to their form or using their form in an electronic medical record.",
+      "limitations": "CPL sheets may be original separate tools; we have NOT established reproduction, adaptation, derivative status or infringement.",
+      "rightsStatus": "Hard review gate if the Stanley–Brown form itself is modified or embedded in an EMR; no reuse authorization inferred."
+    },
+    {
+      "id": "CDC-AGENCY-RIGHTS",
+      "category": "agency reuse policy",
+      "owner": "US CDC",
+      "url": "https://www.cdc.gov/other/agencymaterials.html",
+      "retrieved": "2026-11-12",
+      "sourceDate": null,
+      "sourceDateMeaning": "page last-updated date not visibly verified",
+      "relatedCpl": [
+        "resources/handouts/suspected-opioid-overdose.html",
+        "resources/handouts/making-a-suicide-crisis-safer.html"
+      ],
+      "finding": "CDC says most information is public domain but third-party/contractor content and images can be restricted; conditions include attribution, nonendorsement, and no substantive change to reused content.",
+      "limitations": "These are specific to reusing agency material, not a blanket license for CPL or for contractor illustrations.",
+      "rightsStatus": "Verify source-by-source attribution and actual reproduction before clearance; no CDC logos without express permission."
+    },
+    {
+      "id": "VA-AGENCY-RIGHTS",
+      "category": "agency reuse policy",
+      "owner": "US VA",
+      "url": "https://department.va.gov/copyright-policy/",
+      "retrieved": "2026-11-12",
+      "sourceDate": "2023-02-10",
+      "sourceDateMeaning": "VA page last updated",
+      "relatedCpl": [
+        "resources/therapy/trauma-ptsd-start-here.html",
+        "resources/assessment/trauma-ptsd-dissociation-safety.html"
+      ],
+      "finding": "Government-produced material on VA sites generally lacks US copyright protection, while US government can hold copyrights transferred to it.",
+      "limitations": "Guideline manuals, publisher articles, scales not authored by VA staff and logos can have other rights.",
+      "rightsStatus": "Do not treat all VA-hosted content as public domain."
+    },
+    {
+      "id": "VA-PCL5",
+      "category": "instrument-specific rights & use",
+      "owner": "VA National Center for PTSD",
+      "url": "https://www.ptsd.va.gov/professional/assessment/adult-sr/ptsd-checklist.asp",
+      "retrieved": "2026-11-12",
+      "sourceDate": "2026-10-01",
+      "sourceDateMeaning": "VA webpage footer last-updated date, not measure publication year",
+      "relatedCpl": [
+        "resources/assessment/trauma-ptsd-dissociation-safety.html",
+        "resources/assessment/free-official-measure-source-guide.html"
+      ],
+      "finding": "VA describes its staff-developed PCL-5 as in the public domain, intended for qualified professionals/researchers; Spanish version edited/confirmed but not validated in published research.",
+      "limitations": "Permission and psychometric context must be checked per exact version; availability does not approve clinical use in all populations.",
+      "rightsStatus": "PCL-5 itself described as public domain; record eligibility/translation caveats and distinguish other scales."
+    },
+    {
+      "id": "VA-PCPTSD5",
+      "category": "instrument-specific rights & use",
+      "owner": "VA National Center for PTSD",
+      "url": "https://www.ptsd.va.gov/professional/assessment/screens/pc-ptsd.asp",
+      "retrieved": "2026-11-12",
+      "sourceDate": "2026-09-16",
+      "sourceDateMeaning": "VA webpage footer last-updated date",
+      "relatedCpl": [
+        "resources/assessment/trauma-ptsd-dissociation-safety.html",
+        "resources/assessment/spanish-assessment-forms.html"
+      ],
+      "finding": "VA describes its PC-PTSD-5 as public domain for qualified professionals/researchers; Spanish translation is edited/confirmed but not validated in published research.",
+      "limitations": "Do not confuse screening with diagnosis or claim Spanish validation without study.",
+      "rightsStatus": "Specific VA-created instrument only; do not extrapolate to non-VA measures."
+    },
+    {
+      "id": "NCTSN-REUSE",
+      "category": "agency/resource reuse policy",
+      "owner": "National Child Traumatic Stress Network",
+      "url": "https://www.nctsn.org/about-us/about-this-website",
+      "retrieved": "2026-11-12",
+      "sourceDate": null,
+      "sourceDateMeaning": "site text did not establish policy update date",
+      "relatedCpl": [
+        "resources/therapy/trauma-ptsd-start-here.html",
+        "resources/assessment/pediatric-developmental-neurodevelopmental.html"
+      ],
+      "finding": "Some NCTSN resources copyrighted. Unmodified no-fee download/print/distribution allowed with original logos, footers and title pages; adaptations/licensing require contacting NCTSN.",
+      "limitations": "Program-wide rule cannot clear each resource or license reworded CPL handouts.",
+      "rightsStatus": "Adaptation rights unresolved; link to official originals unless exact source-specific terms are verified."
+    },
+    {
+      "id": "SAMHSA-FAQ-RIGHTS",
+      "category": "agency reuse policy",
+      "owner": "SAMHSA",
+      "url": "https://www.samhsa.gov/about/faqs",
+      "retrieved": "2026-11-12",
+      "sourceDate": "2024-11-04",
+      "sourceDateMeaning": "FAQ last updated date in indexed primary page; direct fetch may restrict access",
+      "relatedCpl": [
+        "resources/handouts/suspected-opioid-overdose.html"
+      ],
+      "finding": "Agency FAQ describes most site content as public domain but some protected; publication downloads may have specific non-fee restrictions.",
+      "limitations": "Direct retrieval access may vary. Not an asset-level license or evidence the linked overdose page is broken.",
+      "rightsStatus": "Check individual document and attribution before redistribution."
+    }
+  ]
+}
