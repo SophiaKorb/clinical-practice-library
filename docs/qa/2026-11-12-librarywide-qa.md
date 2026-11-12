@@ -25,3 +25,7 @@
 ## Human gates
 
 **Ready for Human Review:** clinical/safety source audits and dated primary-source checks; Spanish and jurisdiction accuracy; copyrighted instruments and artwork provenance; caregiver usability of separate drafts; publication, merge and deployment approval. Protect main, all prior drafts, and Vercel production.
+
+## First rendered CI findings (November 12, 2026)
+
+At commit `24d12cbdfb07e2c386e305c58fe820846c1fd506`, [site QA 43306865879](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/43306865879) and [legacy rendered QA 43306865818](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/43306865818) passed. The new [library-wide Chromium run 43306866197](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/43306866197) **FAILED** after finding nine low-contrast shelf-number labels on `resources/index.html` at 390px; inventory and finder pages had no reported axe-core violations and all three passed keyboard/print/overflow checks at 320/390/768/1280px. The present follow-up darkens only those decorative section-number glyphs to `#6d4b29`, preserving all labels, links and page architecture. **Rerun is required** before calling this corrected branch fully passing.
