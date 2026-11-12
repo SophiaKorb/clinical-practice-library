@@ -1,6 +1,6 @@
 # Library status
 
-Updated September 30, 2026.
+Current metadata/QA checkpoint: November 11, 2026. The redesign notes below reflect earlier work unless dated.
 
 ## Live catalog
 
@@ -8,7 +8,7 @@ Updated September 30, 2026.
 - assessment and screening-tool records
 - 8 Arizona Barrier Support school-toolkit records
 - Clinical Handout Library collection records
-- 155 indexed catalog records total
+- 156 indexed catalog records total (95 research, 31 assessment, 8 school, 21 clinical handout, 1 treatment planning)
 - clinical-question pathways
 - de-identified assessment verification gaps
 
@@ -26,9 +26,17 @@ Updated September 30, 2026.
 - California
 - ESPAÑOL
 
-## CPL 2.0 redesign status
+## Current mainline and draft status (November 11, 2026)
 
-Work continues on branch `cpl-2-colorful-helpful`. Production remains separate.
+- `main` head is `eee0cb60c0df87fe759de0b84a5b8fa9eeb8b277` after merged keyboard-navigation PR #20.
+- Colorful and Classic were consolidated in merged PR #19. The separate redesign branch is not the current release boundary.
+- Draft PR #21: 12-tool, 13-sheet visual reference; not a replacement for the 17 existing communication tools; specialist comprehension, accessible print and assistive-technology QA remain open.
+- Draft PR #22: four parent education pages; exact-head automated checks passed, but editorial/clinical and caregiver usability reviews remain open.
+- Neither draft is merged or authorized for publication. Current audit: `docs/qa/2026-11-11-comprehensive-qa.md`.
+
+## Historical CPL 2.0 redesign status
+
+These notes describe the pre-consolidation redesign and are retained for context.
 
 Completed in the current redesign pass:
 - Reusable clinical pathway, callout, and resource-link components.
@@ -45,7 +53,7 @@ Completed in the current redesign pass:
   - Capacity Before Compliance map
   - Uncertainty / transition map
 - Therapy Resource Shelves start page redesigned as a need-based clinician entry page with a visual clinical route, shelf map, and rights key.
-- Latest preview deployments for these commits are READY in Vercel.
+- Historical preview deployments were reported READY; this is not fresh deployment verification.
 
 ## Visual-tool standard
 
