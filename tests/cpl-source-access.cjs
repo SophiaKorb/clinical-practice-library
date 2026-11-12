@@ -18,7 +18,7 @@ for(const path of [
 ]){
  const s=fs.readFileSync(path,'utf8');
  assert.match(s,/<body><a class="cpl-skip" href="#main-content">/,'First-tab skip missing '+path);
- assert.match(s,/<main id="main-content" tabindex="-1" class="resource-page"/,'Focusable main missing '+path);
+ assert.match(s,/<main id="main-content" tabindex="-1" class="resource-page(?: [^"]+)?"/,'Focusable main missing '+path);
  assert.ok(s.includes('<h1>'),'Heading missing '+path);
  if(path.includes('/es/'))assert.match(s,/<html lang="es">/);
 }
