@@ -1,0 +1,68 @@
+{
+  "auditDate": "2026-11-12",
+  "basis": "Verified from current authoritative primary pages, narrowly compared to named CPL resources",
+  "releaseApproval": false,
+  "records": [
+    {
+      "id": "NICE-NG225-2022-2024",
+      "owner": "NICE (UK)",
+      "sourceUrl": "https://www.nice.org.uk/guidance/ng225/chapter/recommendations",
+      "sourceDate": "2022-09-07",
+      "dateMeaning": "NICE NG225 publication date; guideline last reviewed 2024-08-16",
+      "targetFiles": [
+        "resources/clinical-depth/self-harm-safety-continuity.html"
+      ],
+      "claimChecked": "Guideline recommends timely collaborative psychosocial assessment, concurrent medical assessment where feasible, individualized risk formulation, and not using risk scores to predict outcomes or decide discharge.",
+      "interpretation": "CPL's assessment/formulation emphasis is directionally concordant; this is not a complete review of the pathway.",
+      "unresolved": "UK guideline applicability in Arizona and institution-specific emergency pathways, professional competence and all exact CPL claims remain unverified.",
+      "clinicalApproved": false,
+      "rightsApproved": false
+    },
+    {
+      "id": "NIMH-ASQ-TOOLKIT",
+      "owner": "National Institute of Mental Health (US)",
+      "sourceUrl": "https://www.nimh.nih.gov/research/research-conducted-at-nimh/asq-toolkit-materials",
+      "sourceDate": null,
+      "dateMeaning": "No source page last-update date independently verified on 2026-11-12",
+      "targetFiles": [
+        "resources/assessment/free-official-measure-source-guide.html"
+      ],
+      "claimChecked": "NIMH ASQ is a brief free suicide screen with youth/adult and care-setting pathways; its toolkit targets medical patients aged 8+ and requires trained clinician brief suicide safety assessment after a positive screen.",
+      "interpretation": "CPL indexes the official ASQ toolkit and distinguishes screening from diagnosis; it does not itself certify ASQ implementation.",
+      "unresolved": "Confirm exact setting and age pathway, positive-screen workflow, clinical training, translations and local policy before use.",
+      "clinicalApproved": false,
+      "rightsApproved": false
+    },
+    {
+      "id": "VA-PTSD-TRANSLATIONS-2026",
+      "owner": "VA National Center for PTSD (US)",
+      "sourceUrl": "https://www.ptsd.va.gov/professional/assessment/measures_translations.asp",
+      "sourceDate": null,
+      "dateMeaning": "Official translations page fetched 2026-11-12; webpage update date not independently recorded",
+      "targetFiles": [
+        "resources/assessment/spanish-assessment-forms.html",
+        "resources/assessment/trauma-ptsd-dissociation-safety.html"
+      ],
+      "claimChecked": "VA provides downloadable staff-reviewed Spanish PCL-5, PC-PTSD-5 and LEC-5 translations and expressly states they have not been validated in published research; qualified professional use caveat remains.",
+      "interpretation": "Repaired source pointers and outdated 'by request' access language only; no scoring or interpretation content changed.",
+      "unresolved": "External access and precise measure versions may change; translation psychometrics, user comprehension and appropriateness still require clinical review.",
+      "clinicalApproved": false,
+      "rightsApproved": false
+    },
+    {
+      "id": "CDC-SUICIDE-PREVENTION-2026",
+      "owner": "US Centers for Disease Control and Prevention",
+      "sourceUrl": "https://www.cdc.gov/suicide/prevention/",
+      "sourceDate": "2026-05-26",
+      "dateMeaning": "Published/reviewed page date visibly shown by CDC",
+      "targetFiles": [
+        "resources/handouts/making-a-suicide-crisis-safer.html"
+      ],
+      "claimChecked": "CDC emphasizes modifiable risk, protective relationships, support, limiting access to lethal means and available crisis care; risk factors are not an individual prediction.",
+      "interpretation": "Narrow thematic concordance with CPL's noncontractual safety-planning discussion; no comprehensive suicide clinical guidance approval.",
+      "unresolved": "Crisis management, 988/911 decision thresholds, safety-plan licensing and jurisdictional protocols still require specialist and owner review.",
+      "clinicalApproved": false,
+      "rightsApproved": false
+    }
+  ]
+}
