@@ -31,4 +31,6 @@ assert.equal(report.files.length,802);
 assert.equal(report.summary.pdf.totalFiles,61);
 assert.ok(report.files.every(f=>f.clinicalApproval==='PENDING_HUMAN'&&f.rightsApproval==='PENDING_HUMAN'&&f.publicationApproval==='NOT_AUTHORIZED'));
 assert.equal(new Set(report.files.map(f=>f.source_path)).size,802);
+const substance=read('resources/clinical-depth/substance-use-cooccurring-care.html');
+assert.equal((substance.match(/class="table-wrap" role="region" tabindex="0" aria-label="Substance use [^"]+ table"/g)||[]).length,2,'Both scrollable tables must be keyboard-focusable');
 console.log('PASS 802-file, 156-metadata and source/link/clinical rights approval boundaries');

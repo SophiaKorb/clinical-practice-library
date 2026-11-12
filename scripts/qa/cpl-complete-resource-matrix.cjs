@@ -56,4 +56,10 @@ fs.mkdirSync(out,{recursive:true});
 fs.writeFileSync(path.join(out,'cpl-complete-resource-matrix.json'),JSON.stringify({summary,files},null,2)+'\n');
 fs.writeFileSync(path.join(out,'cpl-complete-resource-matrix.csv'),exported);
 fs.writeFileSync(path.join(out,'cpl-complete-resource-summary.json'),JSON.stringify(summary,null,2)+'\n');
+console.log('SOURCE_STRUCTURE_FLAGS '+JSON.stringify({
+ noH1:files.filter(f=>f.asset_format==='HTML'&&f.h1Count===0).map(f=>f.source_path),
+ noMain:files.filter(f=>f.asset_format==='HTML'&&f.mainLandmarkCount===0).map(f=>f.source_path),
+ currentMissingSkip:files.filter(f=>f.asset_format==='HTML'&&f.inventory_scope==='current'&&!f.skipNavigationPattern).map(f=>f.source_path).slice(0,40),
+ currentMissingSkipCount:files.filter(f=>f.asset_format==='HTML'&&f.inventory_scope==='current'&&!f.skipNavigationPattern).length
+}));
 console.log('CPL_COMPLETE_COVERAGE '+JSON.stringify(summary));
