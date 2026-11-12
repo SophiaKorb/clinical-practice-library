@@ -46,3 +46,9 @@ The existing 17 communication tools remain unchanged; this is not a clinical or 
 ## Additional deep accessibility and PDF QA (November 12, 2026)
 
 A separate deeper automated review now executes axe-core WCAG 2.0/2.1 A/AA and best-practice checks at 320, 390, 768, and 1280px; checks keyboard toolbar order, named choice controls, source semantics, printed text clipping, and extracts PDF text and page bounds with PyMuPDF. It also rasterizes pages in grayscale to verify dark/light detail and reports potentially low-contrast text spans (comparison to white alone is a screening heuristic, not WCAG certification for nonwhite backgrounds). A PDF text layer is checked independently of rendering. Exact-head outcomes must be attached after execution. Specialist review remains separately gated.
+
+## Deep-axe findings and corrections (November 12, 2026)
+
+The initial [deep-audit run 43302724811](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/43302724811) on commit `2abed308023c0ea50320bf571fa4ac7574942236` correctly **FAILED**: axe-core identified 9–10 color-contrast failures per width (320, 390, 768, 1280), two heading-order findings (H1 → H3), and the instruction paragraph outside a landmark. The same run reported no text crossing printable sheet edges. The full repository [site QA run 43302724829](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/43302724829) passed but did not include these deep tests.
+
+This review branch now darkens only low-contrast placeholder text in CSS, changes six stage heading tags H3 → H2 while preserving their typography and words, and moves the existing instruction paragraph into the page main landmark while maintaining visual order. No SVG, bitmap, selectable symbol, phrase, or clinical guidance changes were made. A follow-up axe-core + PDF text/grayscale run must determine whether these fixes are sufficient.

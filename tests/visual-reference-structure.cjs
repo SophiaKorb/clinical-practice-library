@@ -24,4 +24,9 @@ assert.match(html,/window\.addEventListener\('afterprint',clearPrintSelection\)/
 assert.match(html,/prefers-reduced-motion: reduce/);
 assert.match(html,/<style>[\s\S]*@page\{size:letter;margin:0\}/);
 assert.equal(matching(/<script>/g),1,'Keep standalone page with one script');
+assert.equal(matching(/<h3>/g),0,'Avoid skipping from H1 directly to H3 in stages');
+assert.equal(matching(/<h2>/g),26,'Expected 20 existing section headings and 6 stage headings');
+assert.match(html,/<main id="main-content" tabindex="-1"><p class="instructions">/,'Instructions must be inside main landmark');
+assert.match(html,/\.empty-icon\{[^}]*color:#405766/,'Empty icon text contrast');
+assert.match(html,/\.routine-map-slot span\{[^}]*color:#405766/,'Routine map cue contrast');
 console.log('PASS: 1 main, 12 distinct tool options, 13 sheets, 67 preserved choices, print/keyboard invariants.');
