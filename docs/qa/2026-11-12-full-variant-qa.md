@@ -61,3 +61,9 @@ At implementation commit `ce085a83bba8f8f27589c35a9eebc24a4df8a090`:
 - Owner: no merge, public release, hosting, permission or production deployment without separate explicit authorization. Review-only Vercel `git.deploymentEnabled:false` must not merge into production unchanged.
 
 **Engineering status:** reviewer evidence and bounded technical QA; **human/publication status:** held.
+
+## Expanded final-head regression contract
+
+The dedicated [review workflow](https://github.com/SophiaKorb/clinical-practice-library/blob/review/cpl-full-variant-provenance-20261112/.github/workflows/cpl-full-variant-review.yml) checks out the **exact PR head SHA**, runs the complete 26-group packet generation and axe/browser tests, **and reruns the existing three-route library-wide plus eleven-route source accessibility browser regressions** against that source, alongside the repository-wide site and separately triggered rendered checks. The permanent index test requires coverage of **every one of the 54 actual current duplicate-title URLs**, not merely 26 heading labels. Previous source branch QA may be skipped by branch filter and must not be counted as a pass on the new branch; this workflow provides the equivalent checks here.
+
+**Final run evidence:** pending on this documentation and workflow commit; the action links and artifact ID will be added to PR #27 after confirmed results. These remain automated tests, not human approval.

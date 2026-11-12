@@ -38,6 +38,15 @@ jobs:
         run: node scripts/qa/cpl-generate-variant-packet.cjs
       - name: Accessibility, focus, mobile and print checks for the packet
         run: node scripts/qa/cpl-variant-packet-browser.cjs
+      - name: Rerun previously verified library and sampled source accessibility QA
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/cpl-variant-http.log 2>&1 &
+          for i in $(seq 1 20); do
+            if curl --fail --silent http://127.0.0.1:8765/ >/dev/null; then break; fi
+            sleep 1
+          done
+          node scripts/qa/librarywide-browser.cjs
+          node scripts/qa/cpl-source-access-browser.cjs
       - name: Upload review-only packet (not part of deployed website)
         uses: actions/upload-artifact@v4
         with:
