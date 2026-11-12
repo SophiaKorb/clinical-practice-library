@@ -79,3 +79,7 @@ The dedicated [review workflow](https://github.com/SophiaKorb/clinical-practice-
 **Verification boundary:** Dated source and rights research is scoped to the ten new policy/instrument/source records and seven previously reviewed records. All source owner, licensed artwork, translation, training competence, clinical accuracy, actual screen-reader/physical print, and approval decisions remain open. This QA documentation update will be checked on a new exact head and its final artifact referenced in PR #27.
 
 **Repo state at the time of this checkpoint:** no Vercel deployment was found for the code commit SHA, and the inherited branch-local deployment disable setting was active. No PR was merged; no external use/reproduction license was issued.
+
+## Subsequent independent whole-CPL inventory audit
+
+A separate, deployment-suppressed draft PR #28, based on exact draft PR #27 head `1e5fe0c5a29ef0f89825d93e62f72d8fed7a2b9c`, adds a [resource-by-resource coverage register](2026-11-12-comprehensive-library-audit.md) for **802 repository files and 156 separate research metadata entries**. It preserves the original 26-group comparison and unapproved visual/parent PRs. A full [61-PDF source text audit](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/43320266465) found 97 PDF pages with selectable words, and a 34-route browser sample; **none of these results grants clinical/rights/publication approval**. See the independent report for source uncertainty and remaining gates.

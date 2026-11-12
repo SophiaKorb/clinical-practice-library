@@ -7,6 +7,8 @@ on:
       - 'docs/qa/2026-11-12-coverage-baseline.json'
       - 'docs/qa/2026-11-12-comprehensive-claim-evidence.json'
       - 'docs/qa/2026-11-12-comprehensive-library-audit.md'
+      - 'docs/qa/2026-11-12-p0-review-workqueue.md'
+      - 'docs/qa/2026-11-12-full-variant-qa.md'
       - 'resources/assessment/trauma-ptsd-dissociation-safety.html'
       - 'resources/assessment/spanish-assessment-forms.html'
       - 'scripts/qa/cpl-pdf-text-audit.py'
