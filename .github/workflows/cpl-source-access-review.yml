@@ -1,0 +1,42 @@
+name: CPL source, variant and accessibility review QA
+on:
+  pull_request:
+    paths:
+      - 'resources/handouts/**'
+      - 'resources/es/handouts/**'
+      - 'resources/assessment/assessment-start-here.html'
+      - 'docs/qa/2026-11-12-primary-source-ledger.json'
+      - 'docs/qa/2026-11-12-source-access-qa.md'
+      - 'scripts/qa/cpl-source-access-browser.cjs'
+      - 'scripts/qa/cpl-title-variants.cjs'
+      - 'tests/cpl-source-access.cjs'
+      - '.github/workflows/cpl-source-access-review.yml'
+jobs:
+  source-accessibility-review:
+    if: startsWith(github.head_ref, 'review/cpl-source-access-qa-')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install isolated Chromium for local QA only
+        run: |
+          npm install --no-save --no-audit --no-fund playwright axe-core
+          npx playwright install --with-deps chromium
+      - name: Run source and comparison tests
+        run: |
+          node tests/cpl-source-access.cjs
+          node scripts/qa/cpl-title-variants.cjs
+      - name: Run existing library-wide browser tests and additional sampled pages
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/cpl-source-http.log 2>&1 &
+          for i in $(seq 1 20); do
+            if curl --fail --silent http://127.0.0.1:8765/ >/dev/null; then break; fi
+            sleep 1
+          done
+          node scripts/qa/librarywide-browser.cjs
+          node scripts/qa/cpl-source-access-browser.cjs
