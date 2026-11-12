@@ -41,3 +41,17 @@ Corrected the two brand link accessible names to begin with visible “CPL”, a
 Full site QA on initial commit succeeded ([43309869081](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/43309869081)); existing rendered QA succeeded ([43309868991](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/43309868991)). **This updated source requires new exact-head reruns**.
 
 The subsequent [run 43310280924](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/43310280924) stopped in the *new source-only assertion*: it matched an exact `class="resource-page"`, but two valid existing guide pages also carry `start-here-page` in the class attribute. Updated the test to accept the additional existing class. **No clinical page content was changed to satisfy the test.** A new exact-head Chromium rerun is required.
+
+## Completed technical regression at the corrected source head
+
+**Verified code commit:** `63cbc47e57d3d8e8f15dfd4d3b03f27604a33c75`.
+
+- [Full site QA 43310449307](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/43310449307): **SUCCESS** — existing link/script/navigation and new source-contract checks.
+- [Existing rendered keyboard/print QA 43310449300](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/43310449300): **SUCCESS**.
+- [New source, variant and 11-page Chromium QA 43310449241](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/43310449241): **SUCCESS** — all 26 groups/54 source files inventoried, one byte-identical pair and eight further same-visible-main-text/nonidentical-file pairs; 11 sampled routes at four widths, **zero axe-core violations** at 390px, no recorded browser exceptions or horizontal overflow. Existing CPL finder/inventory browser regression also passed.
+
+This is automated accessibility sampling at 390px plus keyboard/layout checks at four widths, **not whole-site accessibility certification**. The six original high-stakes/assessment skip targets and three added therapy skip targets were tested. No source-based changes to suicide, overdose, ERP, or trauma clinical instruction text were made. Source concordance and rights remain narrow/pending as documented in the ledger.
+
+The review register includes failing initial axe results [43309869174](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/43309869174), and the subsequent static matcher failure [43310280924](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/43310280924), rather than erasing either. Their causes and corrections are documented above. This documentation-only update will receive a fresh exact-head CI run before closure.
+
+**Ready for Human Review, not cleared:** native screen reader and alternative-input, clinically trained safety/ERP/PTSD assessment, Spanish translation and cultural fit, duplicate-file ownership and canonical decisions, rights and provenance, printed material, local emergency protocols, merge/publication/deployment authorization.
