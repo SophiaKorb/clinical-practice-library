@@ -20,7 +20,13 @@
 - Added keyboard-first skip navigation and focus, reduced-motion styling, accent-aware search, direct-result priority.
 - Introduced `tests/librarywide-discovery.cjs` into site QA and separate review-only Chromium + axe-core coverage across 320/390/768/1280px, print visibility, search and facet/scope workflows.
 
-**Automated status:** pending exact-head site and Chromium checks when this register was created. A green site check is not proof of native screen-reader usability, clinical approval, source correctness, external-link freshness or physical print quality.
+**Automated evidence at review commit `714b459eb6a46c0122ef3fcfcd581abcdcf37b7f`:** 
+- [Site QA 43307507621](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/43307507621): **SUCCESS** — 741 pages and 12,691 internal references checked with zero local-link errors; 579 scripts/handlers checked with zero errors; 502 finder URLs covered by 776 unique inventory entries; metadata/provenance diagnostics executed without fabricating verification dates.
+- [Library-wide Chromium/axe QA 43307507829](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/43307507829): **SUCCESS** — skip/focus/overflow/print checks on 3 routes × 4 widths; finder search/reset and inventory Spanish-accent and legacy filtering; **zero axe-core violations reported** for the three sampled discovery pages at 390px.
+- [Existing rendered keyboard/print QA 43307507619](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/43307507619): **SUCCESS**.
+- The earlier [browser review 43306866197](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/43306866197) correctly **FAILED** on nine low-contrast shelf numbers. Scoped color correction was retested successfully; no other site content was changed for that defect.
+
+This record and the review-workflow path list are being updated in a documentation-only follow-up; **verify checks on the new exact head** before closing technical QA. A green check cannot establish native screen-reader usability, clinical approval, source correctness, all external-link freshness, physical print quality or authorization to publish.
 
 ## Human gates
 
@@ -46,3 +52,7 @@ At commit `24d12cbdfb07e2c386e305c58fe820846c1fd506`, [site QA 43306865879](http
 `scripts/qa/librarywide-provenance.cjs` repeats the metadata and duplicate-title count checks without network calls, preserving source uncertainty rather than inventing verification.
 
 **Human owner actions:** establish dated verification and rights fields for each official clinical source, check these against the specific intended population/jurisdiction, compare same-title Spanish and current resource variants, and complete clinical/SLP/translation/rights/publication review. No automatic content replacements were authorized.
+
+## Final engineering disposition
+
+All implementation changes remain under draft PR #25, based on main, with a branch-local Vercel Git auto-deployment disable setting introduced *before branch creation*. CI runs may be repeated against documentation-only commits; report their exact hashes in PR conversation. The merge-time guard removal, editorial content decisions, source-date verification and publication approval are independent **Ready for Human Review** gates. No PHI or real client data was used.

@@ -10,6 +10,7 @@ on:
       - 'tests/librarywide-discovery.cjs'
       - 'scripts/qa/librarywide-browser.cjs'
       - '.github/workflows/librarywide-review.yml'
+      - 'docs/qa/2026-11-12-librarywide-qa.md'
 jobs:
   browser-librarywide:
     if: startsWith(github.head_ref, 'review/cpl-librarywide-qa-')
