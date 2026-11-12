@@ -23,6 +23,8 @@ jobs:
       # The experimental DSM lab moved to its own project; the removed test no longer belongs here.
       - run: node tests/homepage-pathways.cjs
       - run: node tests/library-navigation.cjs
+      - run: node tests/librarywide-discovery.cjs
+      - run: node scripts/qa/librarywide-provenance.cjs
       - run: node tests/clinical-resources-qa.cjs
       - run: node tests/thermometer-levels.cjs
       - run: node tests/state-iep-guides.cjs

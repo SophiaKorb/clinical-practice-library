@@ -1,0 +1,39 @@
+name: CPL library-wide review browser QA
+on:
+  pull_request:
+    paths:
+      - 'resources/index.html'
+      - 'resources/index.css'
+      - 'resources/complete-resource-inventory.html'
+      - 'resources/clinical-resource-finder.html'
+      - 'resources/clinical-finder.js'
+      - 'tests/librarywide-discovery.cjs'
+      - 'scripts/qa/librarywide-browser.cjs'
+      - '.github/workflows/librarywide-review.yml'
+      - 'docs/qa/2026-11-12-librarywide-qa.md'
+jobs:
+  browser-librarywide:
+    if: startsWith(github.head_ref, 'review/cpl-librarywide-qa-')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install isolated test browser
+        run: |
+          npm install --no-save --no-audit --no-fund playwright axe-core
+          npx playwright install --with-deps chromium
+      - name: Check finder and inventory source invariants
+        run: node tests/librarywide-discovery.cjs
+      - name: Serve locally and run rendered navigation QA
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/cpl-librarywide-http.log 2>&1 &
+          for i in $(seq 1 20); do
+            if curl --fail --silent http://127.0.0.1:8765/ > /dev/null; then break; fi
+            sleep 1
+          done
+          node scripts/qa/librarywide-browser.cjs
