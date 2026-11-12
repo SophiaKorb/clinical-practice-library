@@ -17,6 +17,8 @@ on:
       - 'scripts/qa/cpl-extra-accessibility.cjs'
       - 'scripts/qa/cpl-dashboard-browser.cjs'
       - 'tests/cpl-complete-coverage.cjs'
+      - 'scripts/qa/cpl-source-link-register.cjs'
+      - 'tests/cpl-source-link-register.cjs'
       - 'tests/cpl-assessment-skip.cjs'
       - 'scripts/qa/cpl-assessment-focus-browser.cjs'
       - 'resources/assessment/**'
@@ -53,6 +55,8 @@ jobs:
         run: |
           node scripts/qa/cpl-complete-resource-matrix.cjs
           node tests/cpl-complete-coverage.cjs
+          node scripts/qa/cpl-source-link-register.cjs
+          node tests/cpl-source-link-register.cjs
           node tests/cpl-assessment-skip.cjs
           node scripts/qa/cpl-coverage-dashboard.cjs
       - name: Run existing and expanded browser accessibility tests on local source
@@ -75,6 +79,9 @@ jobs:
             review-artifacts/cpl-pdf-text-audit.json
             review-artifacts/cpl-complete-resource-matrix.json
             review-artifacts/cpl-complete-resource-matrix.csv
+            review-artifacts/cpl-external-source-links.json
+            review-artifacts/cpl-external-source-links.csv
+            review-artifacts/cpl-external-source-summary.json
             review-artifacts/cpl-complete-resource-summary.json
             review-artifacts/cpl-resource-coverage-dashboard.html
             review-artifacts/cpl-extra-accessibility.json
