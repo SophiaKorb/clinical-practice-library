@@ -1,0 +1,154 @@
+{
+  "reviewDate": "2026-11-13",
+  "baselineCommit": "43d45af194a91940b6a19342d204bee2275a24c0",
+  "purpose": "Narrow source concordance and rights-provenance evidence for CPL trauma-informed care; no individual treatment or publication approval",
+  "allSourceClaimsIndependentlyClinicallyValidated": false,
+  "overallClinicalApproved": false,
+  "overallRightsApproved": false,
+  "overallTranslationApproved": false,
+  "overallPublicationApproved": false,
+  "records": [
+    {
+      "id": "TIC-SAMHSA-2023",
+      "publisher": "SAMHSA",
+      "title": "Practical Guide for Implementing a Trauma-Informed Approach",
+      "sourceUrl": "https://library.samhsa.gov/sites/default/files/pep23-06-05-005.pdf",
+      "sourceDate": "2023",
+      "sourceDateMeaning": "Agency publication year (PEP23-06-05-005); not webpage revision date",
+      "retrievedOn": "2026-11-13",
+      "relatedFiles": [
+        "resources/trauma/start-here-families-children-trauma.html",
+        "resources/trauma/children-families-trauma-curated-clinical-guide.html",
+        "resources/therapy/trauma-stewardship-self-care-vicarious-trauma.html"
+      ],
+      "claimCompared": "SAMHSA defines four assumptions (realize, recognize, respond, resist retraumatization), six principles (safety, transparency, peer support, collaboration, empowerment/voice/choice, cultural/historical/gender issues), ten organization-level domains. Trauma-informed stance is not identical to trauma-specific treatment.",
+      "result": "directionally_concordant_not_complete",
+      "limits": "CPL's largely resource-level guidance does not demonstrate organization-wide implementation, staff/leadership policy adherence, client feedback, or outcomes. Source PDF text was reviewed, but web screenshot was access-restricted; no visual/PDF-structure assurance.",
+      "rights": "SAMHSA publication specifically says public domain, attribution appreciated, no fee distribution without written authorization; this does not clear third-party CPL content.",
+      "clinicalApproved": false,
+      "rightsApproved": false,
+      "publicationApproved": false
+    },
+    {
+      "id": "TIC-AAP-2021",
+      "publisher": "American Academy of Pediatrics",
+      "title": "Trauma-Informed Care clinical report",
+      "sourceUrl": "https://doi.org/10.1542/peds.2021-052580",
+      "sourceDate": "2021-08-01",
+      "sourceDateMeaning": "AAP report publication",
+      "retrievedOn": "2026-11-13",
+      "relatedFiles": [
+        "resources/trauma/start-here-families-children-trauma.html",
+        "resources/therapy/early-childhood-regulation-communication.html",
+        "resources/trauma/caregiver-family-youth-trauma-resources.html"
+      ],
+      "claimCompared": "Pediatric TIC emphasizes safe, relational care; caregiver-child relationship, development, resilience, cultural context, symptom assessment, referral and prevention of re-traumatization and secondary traumatic stress.",
+      "result": "thematically_concordant_not_complete",
+      "limits": "Report publisher full-text may require access; available published abstract/metadata reviewed; pediatric policies are not standalone trauma or child welfare treatment protocols.",
+      "rights": "AAP publication rights not established for reproducing report or figures; link only",
+      "clinicalApproved": false,
+      "rightsApproved": false,
+      "publicationApproved": false
+    },
+    {
+      "id": "TIC-AAP-DETECTION",
+      "publisher": "American Academy of Pediatrics",
+      "title": "How to Provide Trauma-Informed Care: Detection & Identification",
+      "sourceUrl": "https://www.aap.org/en/patient-care/national-center-for-relational-health-and-trauma-informed-care/tic-prevention-detection-treatment/detection-identification/",
+      "sourceDate": null,
+      "sourceDateMeaning": "No visible dated last-updated field verified; access/retrieval was 2026-11-13",
+      "retrievedOn": "2026-11-13",
+      "relatedFiles": [
+        "resources/trauma/trauma-school-neurodevelopment-crosswalk.html",
+        "resources/assessment/adhd-autism-trauma-differential-matrix.html",
+        "resources/assessment/trauma-ptsd-dissociation-safety.html"
+      ],
+      "claimCompared": "Assess functional/symptomatic impact and development, not cumulative ACE exposure count alone; contextualize screening and ensure referral capacity.",
+      "result": "narrow_concordance",
+      "limits": "CPL's general differential guidance does not constitute validated measure selection/diagnosis or proof of current referral availability.",
+      "rights": "External material is linked, not copied; rights require owner assessment for any republication",
+      "clinicalApproved": false,
+      "rightsApproved": false,
+      "publicationApproved": false
+    },
+    {
+      "id": "TIC-NCTSN-COMPLEX-ASSESSMENT",
+      "publisher": "National Child Traumatic Stress Network",
+      "title": "Screening and Assessment (complex trauma)",
+      "sourceUrl": "https://www.nctsn.org/what-is-child-trauma/trauma-types/complex-trauma/screening-and-assessment",
+      "sourceDate": null,
+      "sourceDateMeaning": "Page last-edited date not established; do not infer from search indexing timestamp",
+      "retrievedOn": "2026-11-13",
+      "relatedFiles": [
+        "resources/trauma/trauma-school-neurodevelopment-crosswalk.html",
+        "resources/assessment/adhd-autism-trauma-differential-matrix.html"
+      ],
+      "claimCompared": "Multidisciplinary developmental assessment, informant integration, trauma reminders and differential diagnosis; trauma exposure should not automatically replace evaluation for ADHD, neurodevelopmental or other causes.",
+      "result": "narrow_concordance",
+      "limits": "NCTSN content is a conceptual resource, not a case-specific diagnostic standard; verify permissions for any reused fact sheets.",
+      "rights": "NCTSN site has source-specific and adaptation restrictions; no blanket copying approval",
+      "clinicalApproved": false,
+      "rightsApproved": false,
+      "publicationApproved": false
+    },
+    {
+      "id": "TIC-NCTSN-CPP-2026",
+      "publisher": "National Child Traumatic Stress Network",
+      "title": "Child-Parent Psychotherapy intervention profile",
+      "sourceUrl": "https://nctsn.org/interventions/child-parent-psychotherapy",
+      "sourceDate": "2026",
+      "sourceDateMeaning": "Intervention page says Updated in 2026; no exact day verified; linked fact sheet has separate earlier edition",
+      "retrievedOn": "2026-11-13",
+      "relatedFiles": [
+        "resources/trauma/children-families-trauma-curated-clinical-guide.html"
+      ],
+      "claimCompared": "CPP for children approximately birth to age five and caregivers, focused on the caregiver-child relationship and trauma/developmental concerns; CPL quick match describes that age and role.",
+      "result": "narrow_concordance",
+      "limits": "Caregiver safety, setting, required training and variations require developer/manual check; not approval to practice CPP.",
+      "rights": "NCTSN fact sheets/artwork may be copyrighted; official links do not grant derivative rights",
+      "clinicalApproved": false,
+      "rightsApproved": false,
+      "publicationApproved": false
+    },
+    {
+      "id": "TIC-NCTSN-CFTSI-2026",
+      "publisher": "National Child Traumatic Stress Network",
+      "title": "Child and Family Traumatic Stress Intervention profile",
+      "sourceUrl": "https://www.nctsn.org/node/597",
+      "sourceDate": "2026",
+      "sourceDateMeaning": "Model page states Updated 2026; no exact day verified",
+      "retrievedOn": "2026-11-13",
+      "relatedFiles": [
+        "resources/trauma/children-families-trauma-curated-clinical-guide.html"
+      ],
+      "claimCompared": "CFTSI is a brief (5–8 session) early intervention with youth and caregivers after recent trauma or disclosure; CPL quick-match entry correctly refers to acute/recent disclosure.",
+      "result": "narrow_concordance",
+      "limits": "Cannot infer eligibility, required supervision, outcomes or training fidelity from short directory summary.",
+      "rights": "Third-party model/manual/implementation materials not cleared for copying",
+      "clinicalApproved": false,
+      "rightsApproved": false,
+      "publicationApproved": false
+    },
+    {
+      "id": "TIC-NICE-PTSD-NG116",
+      "publisher": "NICE (United Kingdom)",
+      "title": "Post-traumatic stress disorder: recognition, assessment and management (NG116)",
+      "sourceUrl": "https://www.nice.org.uk/guidance/ng116/chapter/recommendations",
+      "sourceDate": "2018-12-05",
+      "sourceDateMeaning": "NG116 guideline original publication; cited recommendations marked 2018; do not confuse with source retrieval",
+      "retrievedOn": "2026-11-13",
+      "relatedFiles": [
+        "resources/therapy/trauma-ptsd-start-here.html",
+        "resources/therapy/trauma-ptsd-practical-toolkit.html",
+        "resources/clinical-topics/trauma-cue-orientation/formulation.html"
+      ],
+      "claimCompared": "Trauma-focused CBT and other indicated PTSD treatments involve collaborative choice, qualified professionals and clinical attention to danger; general TIC cannot substitute for disorder-specific treatment.",
+      "result": "narrow_concordance",
+      "limits": "UK guideline and adult/child differential recommendations cannot substitute for local practice rules; guideline page direct fetch may restrict bots; exact current review date unresolved.",
+      "rights": "Link only, no copyright grant for clinical manuals",
+      "clinicalApproved": false,
+      "rightsApproved": false,
+      "publicationApproved": false
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+name: CPL trauma-informed source and accessibility QA
+on:
+  pull_request:
+    paths:
+      - 'resources/trauma/**'
+      - 'resources/therapy/trauma-ptsd-practical-toolkit.html'
+      - 'resources/handouts/grounding.html'
+      - 'resources/handouts/my-grounding-menu.html'
+      - 'docs/qa/2026-11-13-trauma-informed-*'
+      - 'docs/qa/2026-11-12-comprehensive-library-audit.md'
+      - 'scripts/qa/cpl-trauma-*'
+      - 'tests/cpl-trauma-*'
+      - '.github/workflows/cpl-trauma-informed-review.yml'
+jobs:
+  trauma-reviewed-source:
+    if: startsWith(github.head_ref, 'review/cpl-trauma-informed-qa-')
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install isolated Chromium and PDF text preflight
+        run: |
+          python -m pip install --disable-pip-version-check pymupdf
+          npm install --no-save --no-audit --no-fund playwright axe-core
+          npx playwright install --with-deps chromium
+      - name: Re-run entire 802-resource and 61-PDF technical matrix
+        env:
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          python scripts/qa/cpl-pdf-text-audit.py
+          node scripts/qa/cpl-complete-resource-matrix.cjs
+          node tests/cpl-complete-coverage.cjs
+          node scripts/qa/cpl-source-link-register.cjs
+          node tests/cpl-source-link-register.cjs
+          node tests/cpl-assessment-skip.cjs
+          node scripts/qa/cpl-trauma-informed-audit.cjs
+          node tests/cpl-trauma-informed-audit.cjs
+          node scripts/qa/cpl-coverage-dashboard.cjs
+      - name: Local Chromium accessibility, navigation and print regression
+        run: |
+          python -m http.server 8765 --bind 127.0.0.1 > /tmp/cpl-trauma-http.log 2>&1 &
+          for i in $(seq 1 20); do
+            if curl --fail --silent http://127.0.0.1:8765/ >/dev/null; then break; fi
+            sleep 1
+          done
+          node scripts/qa/librarywide-browser.cjs
+          node scripts/qa/cpl-source-access-browser.cjs
+          node scripts/qa/cpl-extra-accessibility.cjs
+          node scripts/qa/cpl-assessment-focus-browser.cjs
+          node scripts/qa/cpl-dashboard-browser.cjs
+          node scripts/qa/cpl-trauma-browser.cjs
+      - name: Upload private reviewer evidence, never website or build output
+        uses: actions/upload-artifact@v4
+        with:
+          name: cpl-trauma-informed-review-${{ github.run_id }}
+          path: |
+            review-artifacts/cpl-trauma-informed-matrix.csv
+            review-artifacts/cpl-trauma-informed-matrix.json
+            review-artifacts/cpl-trauma-informed-summary.json
+            review-artifacts/cpl-trauma-browser-review.json
+            review-artifacts/cpl-pdf-text-audit.json
+            review-artifacts/cpl-complete-resource-summary.json
+            review-artifacts/cpl-external-source-summary.json
+          if-no-files-found: error
+          retention-days: 30
