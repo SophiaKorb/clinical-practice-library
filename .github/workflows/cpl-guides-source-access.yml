@@ -1,0 +1,79 @@
+name: CPL school guides source and keyboard QA
+on:
+  pull_request:
+    paths:
+      - 'guides/*.html'
+      - 'guides/guide.css'
+      - 'scripts/qa/cpl-guides-browser.cjs'
+      - 'tests/cpl-guide-bypass.cjs'
+      - 'tests/cpl-guide-source-claims.cjs'
+      - 'docs/qa/2026-11-13-school-guide-primary-claims.json'
+      - 'docs/qa/2026-11-13-school-guides-review.md'
+      - 'docs/qa/2026-11-12-comprehensive-library-audit.md'
+      - '.github/workflows/cpl-guides-source-access.yml'
+jobs:
+  school-guides-review:
+    if: startsWith(github.head_ref, 'review/cpl-guides-access-source-')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install isolated Chromium and read-only PDF tooling
+        run: |
+          python -m pip install --disable-pip-version-check pymupdf
+          npm install --no-save --no-audit --no-fund playwright axe-core
+          npx playwright install --with-deps chromium
+      - name: Verify nine school-guide keyboard bypasses and human legal gates
+        run: |
+          node tests/cpl-guide-bypass.cjs
+          node tests/cpl-guide-source-claims.cjs
+      - name: Preserve complete 802-resource and 61-PDF coverage checks
+        env:
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          python scripts/qa/cpl-pdf-text-audit.py
+          node scripts/qa/cpl-complete-resource-matrix.cjs
+          node tests/cpl-complete-coverage.cjs
+          node scripts/qa/cpl-source-link-register.cjs
+          node tests/cpl-source-link-register.cjs
+          node tests/cpl-assessment-skip.cjs
+          node scripts/qa/cpl-coverage-dashboard.cjs
+      - name: Browser QA existing and nine repaired guide routes
+        run: |
+          python -m http.server 8765 --bind 127.0.0.1 > /tmp/cpl-school-http.log 2>&1 &
+          for i in $(seq 1 20); do
+            if curl --silent --fail http://127.0.0.1:8765/ >/dev/null; then break; fi
+            sleep 1
+          done
+          node scripts/qa/librarywide-browser.cjs
+          node scripts/qa/cpl-source-access-browser.cjs
+          node scripts/qa/cpl-extra-accessibility.cjs
+          node scripts/qa/cpl-assessment-focus-browser.cjs
+          node scripts/qa/cpl-guides-browser.cjs
+          node scripts/qa/cpl-dashboard-browser.cjs
+      - name: Upload review-only evidence, not public site
+        uses: actions/upload-artifact@v4
+        with:
+          name: cpl-guides-school-source-qa-${{ github.run_id }}
+          path: |
+            review-artifacts/cpl-guides-accessibility-review.json
+            review-artifacts/cpl-pdf-text-audit.json
+            review-artifacts/cpl-complete-resource-matrix.json
+            review-artifacts/cpl-complete-resource-matrix.csv
+            review-artifacts/cpl-external-source-summary.json
+            review-artifacts/cpl-external-source-links.json
+            review-artifacts/cpl-extra-accessibility.json
+            review-artifacts/cpl-assessment-skip-review.json
+          if-no-files-found: error
+          retention-days: 30
