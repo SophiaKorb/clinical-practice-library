@@ -1,0 +1,78 @@
+{
+  "reviewDate": "2026-11-13",
+  "baseline": "43d45af194a91940b6a19342d204bee2275a24c0",
+  "scope": "Narrow primary-source and legal claim comparison of school guides; not legal advice, comprehensive source approval or publication clearance",
+  "clinicalApproved": false,
+  "legalReviewed": false,
+  "rightsApproved": false,
+  "releaseApproved": false,
+  "checks": [
+    {
+      "id": "AZ-IDEA-15D-60D",
+      "sourceOwner": "Arizona Department of Education, Exceptional Student Services",
+      "sourceUrl": "https://www.azed.gov/specialeducation/timelines",
+      "sourcePageDate": null,
+      "dateMeaning": "Official FAQ had no confirmed authored or last-review date; checked on 2026-11-13",
+      "localFile": "guides/arizona-school-support-process.html",
+      "claim": "Parent's written IDEA evaluation request: school begins review of existing data or supplies prior written notice of refusal within 15 school days; 60 calendar days runs from receipt of informed written parent consent. Written up-to-30-day extension possible if child's best interest and parent/school agree.",
+      "finding": "The named English CPL guide distinguishes written-request response from informed-consent 60-day clock and notes conditions for extension.",
+      "status": "NARROW_CLAIM_CONCORDANT",
+      "scopeLimit": "No full review of eligibility, procedural safeguards, school-district implementation, 504 claims, or case-specific advice.",
+      "humanApproval": false
+    },
+    {
+      "id": "FED-IDEA-300301",
+      "sourceOwner": "US Department of Education, Individuals with Disabilities Education Act regulations",
+      "sourceUrl": "https://sites.ed.gov/idea/regs/b/d/300.301",
+      "sourcePageDate": "2006-08-14 / 2007-10-30",
+      "dateMeaning": "Federal Register amendment citations displayed; not the page's update date",
+      "localFile": "guides/arizona-school-support-process.html",
+      "claim": "A parent or public agency may initiate initial evaluation request; 60-day federal default from parental consent unless state timeframe applies.",
+      "finding": "Supports separation between request and parental-consent clock. State-specific rules control actual Arizona deadlines; the federal page alone cannot establish the Arizona 15-school-day step.",
+      "status": "NARROW_CLAIM_CONCORDANT",
+      "scopeLimit": "Exceptions and parent transfer provisions not fully audited.",
+      "humanApproval": false
+    },
+    {
+      "id": "AZ-SPANISH-CONSENT-START",
+      "sourceOwner": "Arizona Department of Education, Exceptional Student Services",
+      "sourceUrl": "https://www.azed.gov/specialeducation/timelines",
+      "sourcePageDate": null,
+      "dateMeaning": "Current official FAQ checked 2026-11-13; update date not established",
+      "localFile": "resources/es/arizona-como-conseguir-iep-504.html",
+      "quotedLocalText": "La fecha de inicio puede depender de si el padre o la escuela inició la evaluación.",
+      "finding": "Potentially misleading: the 60-calendar-day clock begins at the school's receipt of informed written parental consent, regardless of who initiated the request. A parent's written request separately triggers the Arizona 15-school-day response requirement.",
+      "status": "POTENTIAL_FACTUAL_AMBIGUITY_NEEDS_BILINGUAL_LEGAL_REVIEW",
+      "candidateReplacementForHumanApproval": "En Arizona, si la familia solicita por escrito una evaluación bajo IDEA, la escuela debe comenzar la revisión de los datos existentes o emitir una notificación previa por escrito de rechazo dentro de un plazo razonable que no exceda 15 días escolares. Si se realiza la evaluación, el plazo de 60 días calendario comienza cuando la escuela recibe el consentimiento informado por escrito del padre, la madre o el tutor legal. Se aplican excepciones y posibles prórrogas conforme a las normas vigentes.",
+      "scopeLimit": "Proposed Spanish replacement is not itself approved or inserted; confirm grammar, guardian terminology, policy exceptions, local applicability and readability with bilingual qualified reviewer.",
+      "humanApproval": false,
+      "sourceContentChanged": false
+    },
+    {
+      "id": "OCR-504-DIAGNOSIS",
+      "sourceOwner": "US Department of Education, Office for Civil Rights",
+      "sourceUrl": "https://www.ed.gov/laws-and-policy/civil-rights-laws/disability-discrimination/frequently-asked-questions-section-504-free-appropriate-public-education-fape",
+      "sourcePageDate": null,
+      "dateMeaning": "FAQ webpage publication or update date was not independently confirmed; checked 2026-11-13",
+      "localFile": "guides/arizona-school-support-process.html",
+      "claim": "A medical diagnosis alone does not automatically entitle a student to 504 services; impairment must substantially limit learning or another major life activity; individualized evaluation is required.",
+      "finding": "English guide's warning about diagnosis alone is consistent in this narrow respect. IDEA and Section 504 processes remain legally distinct.",
+      "status": "NARROW_CLAIM_CONCORDANT",
+      "scopeLimit": "No complete 504 eligibility or rights audit; no school-specific legal determination.",
+      "humanApproval": false
+    },
+    {
+      "id": "OCR-504-MTSS-GRADES",
+      "sourceOwner": "US Department of Education, Office for Civil Rights",
+      "sourceUrl": "https://www.ed.gov/laws-and-policy/civil-rights-laws/disability-discrimination/frequently-asked-questions-disability-discrimination",
+      "sourcePageDate": null,
+      "dateMeaning": "Current official FAQ checked 2026-11-13; page publication or update date not independently verified",
+      "localFile": "guides/arizona-school-support-process.html",
+      "claim": "Good grades alone do not eliminate 504 evaluation obligations, and RTI/MTSS services do not justify delaying or denying evaluation when disability is known or reasonably suspected and needs may exist.",
+      "finding": "The guide cautions that grades are not the only evidence of educational impact; narrower thematic concordance only.",
+      "status": "NARROW_CLAIM_CONCORDANT",
+      "scopeLimit": "Do not infer IDEA timelines apply to all Section 504 requests.",
+      "humanApproval": false
+    }
+  ]
+}
