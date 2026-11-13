@@ -89,3 +89,7 @@ The [school-rights primary-source ledger](2026-11-13-school-guide-primary-claims
 The earlier file-level census of 802 resources (508 current / 268 historical / 26 unindexed), 741 HTML / 61 PDFs, and 1,091 external link occurrences remains unchanged. The prior **234 current HTML pages lacking recognized skip patterns** should drop by nine if the source parser recognizes the new links; do not infer all remaining pages fail native assistive technology. Clinical, translation, rights, actual screen-reader and publication decisions all remain **Ready for Human Review**.
 
 **Exact-head CI:** pending when written; outcomes will be recorded on the draft PR. All other PRs and production held.
+
+## School guide follow-up defect findings (PR #29)
+
+[School guide audit run 43386730986](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/43386730986) found 9 serious low-contrast small-text labels, 5 serious unfocusable worksheet-table scroll regions and narrow-screen overflow on Arizona's school-process page at two viewports. Shared CSS ink contrast/overflow and 6 worksheet focus targets were corrected on a review branch; no text/policy changed. Preserve axe moderate landmark-naming observations for native-AT review and re-run the full exact-head suite. [Detailed scoped report](2026-11-13-school-guides-review.md).

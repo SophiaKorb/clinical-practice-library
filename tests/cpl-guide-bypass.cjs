@@ -24,4 +24,13 @@ for(const route of routes){
 const css=fs.readFileSync('guides/guide.css','utf8');
 assert.match(css,/\.cpl-skip:focus-visible,\.cpl-skip:focus\{/,'Focusable skip styling absent');
 assert.match(css,/@media print\{\.cpl-skip\{display:none!important\}\}/,'Skip hidden in print');
-console.log('PASS nine school guides: first-tab bypass, focusable main, heading and print style');
+const tableRoutes=[
+ 'guides/arizona-school-support-process.html',
+ 'guides/depression.html','guides/dyscalculia.html','guides/dysgraphia.html','guides/dyslexia.html','guides/odd-persistent-conflict-behavior.html'];
+for(const route of tableRoutes){
+ const s=fs.readFileSync(route,'utf8');
+ assert.equal((s.match(/class="generic-table-wrap" role="region" tabindex="0" aria-label="School support wording worksheet table"/g)||[]).length,1,'Missing keyboard-scrollable worksheet '+route);
+}
+assert.match(css,/--muted:#435c4e/,'Readable small-text shared ink must be retained');
+assert.match(css,/\.page-shell > \.guide\{min-width:0;max-width:100%\}/,'Responsive shrink guard must remain');
+console.log('PASS nine school guides: first-tab bypass, six keyboard tables, safer contrast, focusable main and print style');
