@@ -36,4 +36,10 @@ for(const p of changed){
 const css=read('resources/resource.css');
 assert.match(css,/\.cpl-skip:focus\{/);
 assert.match(css,/@media print\{\.cpl-skip\{display:none!important\}\}/);
-console.log('PASS 802-file trauma-informed triage, seven uncleared source records, and eight verified first-tab source contracts');
+const diss=read('resources/clinical-depth/complex-dissociation-functional-care.html');
+assert.match(diss,/<main id="content" tabindex="-1">/);
+assert.match(diss,/<div class="table-wrap" role="region" tabindex="0" aria-label="Dissociation differential diagnosis comparison table">/);
+assert.match(diss,/<div class="table-wrap" role="region" tabindex="0" aria-label="Dissociation treatment and reassessment comparison table">/);
+assert.match(diss,/<figure class="outcome-grid" aria-label="Subjective continuity and day-to-day functioning are separate outcomes">/);
+assert.doesNotMatch(diss,/<figure class="outcome-grid" role="group"/);
+console.log('PASS 802-file trauma-informed triage, eight skip repairs and complex-dissociation scroll/figure accessibility semantics');

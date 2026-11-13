@@ -52,6 +52,19 @@ const routes=[...edited,...others];
       assert.equal(await page.evaluate(()=>document.activeElement?.id),'main-content','Skip target not focused '+route+' @'+width);
       skipResult='VISIBLE_AND_FOCUSABLE';
     }
+    if(route==='/resources/clinical-depth/complex-dissociation-functional-care.html'){
+      const elements=page.locator('#differentiate > .table-wrap, #treatment > .table-wrap');
+      assert.equal(await elements.count(),2);
+      for(let i=0;i<2;i++){
+        const item=elements.nth(i);
+        assert.equal(await item.getAttribute('tabindex'),'0');
+        assert.equal(await item.getAttribute('role'),'region');
+        assert.ok((await item.getAttribute('aria-label')||'').includes('comparison table'));
+        await item.focus();
+        assert.equal(await item.evaluate(el=>document.activeElement===el),true,'Scrollable table region must accept keyboard focus');
+      }
+      assert.equal(await page.locator('figure.outcome-grid').getAttribute('role'),null,'Figure should keep native semantics');
+    }
     if(width===390){
       await page.addScriptTag({content:axe.source});
       const report=await page.evaluate(()=>axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','best-practice']}}));
