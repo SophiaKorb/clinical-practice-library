@@ -95,3 +95,9 @@ body[data-family="true"] .toc a{font-size:.875rem}
 
 /* CPL uses a consistent light palette across navigation and native controls. */
 :root{color-scheme:light}
+
+/* First Tab: bypass the sticky toolbar and optional page table of contents. */
+.cpl-skip{position:fixed;top:-150px;left:12px;z-index:100;padding:12px 16px;border:2px solid #244b3b;border-radius:8px;background:#fffdf9;color:#1f2a24;font-weight:800;text-decoration:underline}
+.cpl-skip:focus-visible,.cpl-skip:focus{top:12px;outline:3px solid #244b3b;outline-offset:3px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{.cpl-skip{display:none!important}}
