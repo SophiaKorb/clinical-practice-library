@@ -30,3 +30,7 @@ This is source-pattern and browser accessibility QA, **not** native screen reade
 **Ready for Human Review**: bilingual Arizona special-education/legal accuracy, current source provenance, school-district procedural application, child/parent reading level, screen-reader/keyboard on real devices, printed materials, rights and site owner authorization to merge/publish/deploy. No PHI and no review of a real student's records. Draft PRs #21–28, `main` and the original clinical resources remain untouched. No production or public website changes.
 
 **Exact-head CI status:** pending at document creation; do not treat prior PR #28's passing workflows as approval of this new branch.
+
+## Initial CI correction
+
+[Initial workflow run 43386542182](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/43386542182) stopped on an erroneous **source-ledger unit-test expectation**, not on guide content or navigation: a test looked for the substring `HUMAN_REVIEW` in an explicitly named `POTENTIAL_FACTUAL_AMBIGUITY_NEEDS_BILINGUAL_LEGAL_REVIEW` status. The test was corrected to check the exact existing unresolved-status value; Spanish guidance remains unchanged, and **bilingual legal review is still required**. Full browser QA from this branch must be rerun on a new SHA before marking technical completion.
