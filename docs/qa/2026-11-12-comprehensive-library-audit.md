@@ -93,3 +93,7 @@ The earlier file-level census of 802 resources (508 current / 268 historical / 2
 ## School guide follow-up defect findings (PR #29)
 
 [School guide audit run 43386730986](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/43386730986) found 9 serious low-contrast small-text labels, 5 serious unfocusable worksheet-table scroll regions and narrow-screen overflow on Arizona's school-process page at two viewports. Shared CSS ink contrast/overflow and 6 worksheet focus targets were corrected on a review branch; no text/policy changed. Preserve axe moderate landmark-naming observations for native-AT review and re-run the full exact-head suite. [Detailed scoped report](2026-11-13-school-guides-review.md).
+
+## School-guide retrospective — contrast, overflow and landmark QA
+
+[Code run 43387666917](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/43387666917) passed nine school guides × four widths and existing full library regressions, with **zero serious axe findings and no mobile overflow**. Its remaining moderate `landmark-unique` warnings were addressed in a separate semantic-only repair by marking instructional callouts as notes and labeling contents sidebars; final exact-head tests are still required. [Detailed failure/fix QA register](2026-11-13-school-guides-review.md). No clinical or educational text modified.

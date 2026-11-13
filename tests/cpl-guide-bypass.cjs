@@ -33,4 +33,14 @@ for(const route of tableRoutes){
 }
 assert.match(css,/--muted:#435c4e/,'Readable small-text shared ink must be retained');
 assert.match(css,/\.page-shell > \.guide\{min-width:0;max-width:100%\}/,'Responsive shrink guard must remain');
-console.log('PASS nine school guides: first-tab bypass, six keyboard tables, safer contrast, focusable main and print style');
+for(const route of routes){
+ const html=fs.readFileSync(route,'utf8');
+ const asides=[...html.matchAll(/<aside\\b([^>]*)>/g)].map(m=>m[1]);
+ assert.ok(asides.length>0,'Expected guide notes or sidebar '+route);
+ for(const a of asides){
+  if(a.includes('class="toc"'))assert.ok(a.includes('aria-label="Guide contents"'),'Unnamed contents landmark '+route);
+  else if(a.includes('class="callout'))assert.ok(a.includes('role="note"'),'Unlabelled complementary callout '+route);
+  else assert.fail('Unexpected unnamed aside '+a+' in '+route);
+ }
+}
+console.log('PASS nine school guides: skip targets, six keyboard tables, readable contrast, named toc and note semantics');
