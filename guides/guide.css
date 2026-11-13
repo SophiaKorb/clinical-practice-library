@@ -1,6 +1,6 @@
 
 :root{
-  --paper:#f6f1e8;--white:#fffdf9;--ink:#1f2a24;--muted:#68736c;--green:#244b3b;--green-2:#35634f;
+  --paper:#f6f1e8;--white:#fffdf9;--ink:#1f2a24;--muted:#435c4e;--green:#244b3b;--green-2:#35634f;
   --green-soft:#e6eee8;--line:#d8d2c8;--gold:#9d7444;--gold-soft:#f2e7d5;--max:940px
 }
 *{box-sizing:border-box}html{scroll-behavior:smooth}
@@ -101,3 +101,8 @@ body[data-family="true"] .toc a{font-size:.875rem}
 .cpl-skip:focus-visible,.cpl-skip:focus{top:12px;outline:3px solid #244b3b;outline-offset:3px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 @media print{.cpl-skip{display:none!important}}
+
+/* Verified 390px contrast and 320px school-process table overflow repairs. */
+.page-shell > .guide{min-width:0;max-width:100%}
+.generic-table-wrap{max-width:100%}
+.generic-table th,.generic-table td{overflow-wrap:anywhere;word-break:break-word}
