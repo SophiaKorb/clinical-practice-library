@@ -42,7 +42,7 @@ const missingLanguage=files.filter(x=>x.asset_format==='HTML'&&x.htmlLang==='MIS
 const noH1=files.filter(x=>x.asset_format==='HTML'&&x.h1Count===0).length;
 const noMain=files.filter(x=>x.asset_format==='HTML'&&x.mainLandmarkCount===0).length;
 const noSkipPattern=files.filter(x=>x.asset_format==='HTML'&&!x.skipNavigationPattern).length;
-const summary={sha:process.env.HEAD_SHA||'local',auditDate:'2026-11-12',files:files.length,scope:byScope,
+const summary={sha:process.env.HEAD_SHA||'local',auditDate:new Date().toISOString().slice(0,10),files:files.length,scope:byScope,
  formats:{html:files.filter(x=>x.asset_format==='HTML').length,pdf:pdf.summary.totalFiles},
  separateCatalogMetadataRecords:156,previouslySampledAutomatedAccessibility:files.filter(x=>x.automated_axe_sample!=='NOT_SAMPLED').length,
  targetedSourceEvidenceFiles:files.filter(x=>x.targeted_source_evidence_ids).length,sourceLinksEnumerated:sourceLinks,

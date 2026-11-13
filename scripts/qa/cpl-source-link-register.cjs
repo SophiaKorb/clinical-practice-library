@@ -57,7 +57,7 @@ assert.equal(resources.length,741,'Every HTML resource needs an external-source 
 const byHost={};for(const l of links)byHost[l.host]=(byHost[l.host]||0)+1;
 const zero=resources.filter(r=>r.externalLinksDetected===0);
 const p01zero=zero.filter(x=>x.scope==='current'&&/P0_|P1_/.test(x.priority));
-const summary={generatedAt:'2026-11-12',sourceSha:process.env.HEAD_SHA||null,htmlResources:741,
+const summary={generatedAt:new Date().toISOString().slice(0,10),sourceSha:process.env.HEAD_SHA||null,htmlResources:741,
  linkedSourcesExtracted:links.length,uniqueSourceUrls:new Set(links.map(x=>normalizeUrl(x.url))).size,
  distinctExternalHosts:Object.keys(byHost).length,resourcesWithNoExternalAnchors:zero.length,
  currentP0P1WithNoExternalAnchors:p01zero.length,
