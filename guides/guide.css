@@ -106,3 +106,9 @@ body[data-family="true"] .toc a{font-size:.875rem}
 .page-shell > .guide{min-width:0;max-width:100%}
 .generic-table-wrap{max-width:100%}
 .generic-table th,.generic-table td{overflow-wrap:anywhere;word-break:break-word}
+
+/* On narrow non-family school guides, stacked callouts prevent the sticky, unbreakable label column from forcing page-wide overflow. */
+@media(max-width:860px){
+  body:not([data-family="true"]) .callout{grid-template-columns:minmax(0,1fr);gap:6px}
+  body:not([data-family="true"]) .callout strong{white-space:normal;overflow-wrap:anywhere}
+}

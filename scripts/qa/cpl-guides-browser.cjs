@@ -25,7 +25,11 @@ const routes=["guides/adhd.html","guides/anxiety.html","guides/arizona-school-su
     await page.keyboard.press('Enter');
     assert.equal(await page.evaluate(()=>document.activeElement?.id),'main-content','Skip target not focused '+route+' '+width);
     const metrics=await page.evaluate(()=>({width:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth,mains:document.querySelectorAll('main').length,h1s:document.querySelectorAll('h1').length}));
-    if(metrics.scroll>metrics.width+1)faults.push({route,width,kind:'overflow',difference:metrics.scroll-metrics.width});
+    if(metrics.scroll>metrics.width+1){
+      const elems=await page.evaluate(()=>[...document.querySelectorAll('body *')].filter(el=>{const b=el.getBoundingClientRect();return b.right>document.documentElement.clientWidth+1&&getComputedStyle(el).position!=='fixed';}).slice(0,12).map(el=>({node:el.tagName,className:String(el.className).slice(0,90),right:Math.round(el.getBoundingClientRect().right),width:Math.round(el.getBoundingClientRect().width),text:el.textContent.slice(0,60)})));
+      console.log('GUIDE_OVERFLOW_ELEMENTS '+route+' '+width+' '+JSON.stringify(elems));
+      faults.push({route,width,kind:'overflow',difference:metrics.scroll-metrics.width,elems});
+    }
     if(metrics.mains!==1||metrics.h1s!==1)faults.push({route,width,kind:'landmarks',metrics});
     if(pageErrors.length)faults.push({route,width,kind:'pageerror',errors:pageErrors.slice()});
     if(width===390){
