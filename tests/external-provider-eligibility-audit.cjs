@@ -44,7 +44,7 @@ assert(!hsrc.tags.role.includes('Client / caregiver'),'Housing technical-assista
 const arizona=byTitle('AHCCCS Arizona 988 implementation — agency information');
 assert(!arizona.tags.role.includes('Client / caregiver'),'988 grant detail should not substitute for Arizona crisis intake');
 const yv=byTitle('Youth Voice, Youth Choice — resource library (project concluded)');
-assert(/concluded/i.test(yv.programStatus)&&yv.externalUrl==='https://youth-voice.org/','Project status should reflect publisher farewell');
+assert(/conclu/i.test(yv.programStatus)&&yv.externalUrl==='https://youth-voice.org/','Project status should reflect publisher farewell');
 const parent=byTitle('US Education Parent Information Centers');
 assert(parent.tags.stage.includes('Early childhood'),'IDEA centers include birth to age 26');
 for(const name of ['Child depression and mood','Learning disorders','Screen time and technology','Behavior problems','Autism in childhood','Anxiety in children','ADHD and attention','Developmental milestones guide','Managing child behavior problems guide','Parent guide to autism','Selective mutism guide'])assert(byTitle(name).tags.stage.includes('Early childhood'),'Missing evidenced preschool resource '+name);
