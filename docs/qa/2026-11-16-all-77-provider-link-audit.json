@@ -9,8 +9,8 @@
     "interactive-shell-not-fully-assessed": "Original interactive site returned only a minimal HTML shell; parent agency confirmed the address; functionality not verified."
   },
   "counts": {
-    "direct-provider-page-readable": 67,
-    "official-indexed-direct-access-restricted": 9,
+    "direct-provider-page-readable": 68,
+    "official-indexed-direct-access-restricted": 8,
     "interactive-shell-not-fully-assessed": 1
   },
   "records": [
@@ -268,6 +268,7 @@
       "source_page_date": null,
       "status": "direct-provider-page-readable",
       "audience_stages": [
+        "Early childhood",
         "School age / adolescence"
       ],
       "roles": [
@@ -286,6 +287,7 @@
       "source_page_date": null,
       "status": "direct-provider-page-readable",
       "audience_stages": [
+        "Early childhood",
         "School age / adolescence"
       ],
       "roles": [
@@ -317,13 +319,14 @@
     },
     {
       "id": "ext-02-04",
-      "title": "Teens and young adults",
+      "title": "Tweens, teens and young adults",
       "source_url": "https://childmind.org/topics/teens-young-adults/",
       "verification_date": "2026-11-16",
       "source_page_date": null,
       "status": "direct-provider-page-readable",
       "audience_stages": [
-        "School age / adolescence"
+        "School age / adolescence",
+        "Adult"
       ],
       "roles": [
         "Client / caregiver",
@@ -331,7 +334,7 @@
         "Clinician",
         "Staff / case manager"
       ],
-      "notes": "Publisher title is Tweens, Teens, & Young Adults. Previous minimumAge 13 was overrestrictive; no intake threshold."
+      "notes": "Publisher topic explicitly covers tweens approximately 9–12 as well as teens and young adults; no 13+ educational resource eligibility rule; adult stage added for young-adult users."
     },
     {
       "id": "ext-02-05",
@@ -398,6 +401,7 @@
       "source_page_date": null,
       "status": "direct-provider-page-readable",
       "audience_stages": [
+        "Early childhood",
         "School age / adolescence"
       ],
       "roles": [
@@ -851,10 +855,10 @@
     {
       "id": "ext-03-07",
       "title": "CDC ADHD education resources",
-      "source_url": "https://www.cdc.gov/adhd/communication-resources/index.html",
+      "source_url": "https://www.cdc.gov/adhd/php/communication-resources/index.html",
       "verification_date": "2026-11-16",
-      "source_page_date": "2026-06-02",
-      "status": "official-indexed-direct-access-restricted",
+      "source_page_date": "2026-10-21",
+      "status": "direct-provider-page-readable",
       "audience_stages": [
         "Early childhood",
         "School age / adolescence"
@@ -865,7 +869,7 @@
         "Clinician",
         "Staff / case manager"
       ],
-      "notes": "CDC indexed official page last reviewed July 30, 2026; direct extraction yielded no readable content."
+      "notes": "Original /adhd/communication-resources path yielded no readable body; new official CDC /adhd/php/communication-resources page was directly inspected and shows updated/reviewed October 21, 2026."
     },
     {
       "id": "ext-03-08",
@@ -1002,7 +1006,7 @@
     },
     {
       "id": "ext-04-01",
-      "title": "ACL National Resource Centers",
+      "title": "ACL National Resource Centers — professional and agency guidance",
       "source_url": "https://acl.gov/programs/strengthening-aging-and-disability-networks/national-resource-centers",
       "verification_date": "2026-11-16",
       "source_page_date": null,
@@ -1013,7 +1017,8 @@
       "roles": [
         "Staff / case manager",
         "School team",
-        "Clinician"
+        "Clinician",
+        "Graduate trainee"
       ],
       "notes": null
     },
@@ -1034,11 +1039,11 @@
         "School team",
         "Clinician"
       ],
-      "notes": "Official CYVYC farewell: five-year funded project concluded, but public alternatives-to-guardianship resource library and youth stories remain online; treat as an archive, not active direct program intake. https://youth-voice.org/farewell-from-the-cyvyc-project-team-goodbye-for-now-but-the-movement-continues/"
+      "notes": "Publisher's farewell documents project end but active online resource library persists, so no claim that its website is abandoned or actively enrolling."
     },
     {
       "id": "ext-04-03",
-      "title": "Disability Information and Access Line",
+      "title": "Disability Information and Access Locator (DIAL)",
       "source_url": "https://dial.acl.gov/home",
       "verification_date": "2026-11-16",
       "source_page_date": null,
@@ -1052,7 +1057,7 @@
         "School team",
         "Clinician"
       ],
-      "notes": null
+      "notes": "Publisher's DIAL homepage calls this service the Disability Information and Access Locator (last modified August 13, 2026)."
     },
     {
       "id": "ext-04-04",
@@ -1067,14 +1072,13 @@
       "roles": [
         "Client / caregiver",
         "Staff / case manager",
-        "School team",
         "Clinician"
       ],
-      "notes": "ACL states older-adult/family navigation; adult-only indexing."
+      "notes": "ACL Eldercare Locator is designed for older adults and caregivers; adult population and caregiver/case-manager/clinician roles, no school-team generic referral."
     },
     {
       "id": "ext-04-05",
-      "title": "Housing and Services Resource Center",
+      "title": "Housing and Services Resource Center — partner guidance",
       "source_url": "https://acl.gov/HousingAndServices",
       "verification_date": "2026-11-16",
       "source_page_date": null,
@@ -1084,14 +1088,14 @@
       ],
       "roles": [
         "Staff / case manager",
-        "School team",
-        "Clinician"
+        "Clinician",
+        "Graduate trainee"
       ],
       "notes": null
     },
     {
       "id": "ext-04-06",
-      "title": "Independent Living Research Utilization",
+      "title": "ILRU — independent-living professional resources",
       "source_url": "https://www.ilru.org/",
       "verification_date": "2026-11-16",
       "source_page_date": null,
@@ -1102,7 +1106,8 @@
       "roles": [
         "Staff / case manager",
         "School team",
-        "Clinician"
+        "Clinician",
+        "Graduate trainee"
       ],
       "notes": null
     },
@@ -1309,8 +1314,8 @@
       "source_page_date": null,
       "status": "direct-provider-page-readable",
       "audience_stages": [
-        "School age / adolescence",
-        "Adult"
+        "Early childhood",
+        "School age / adolescence"
       ],
       "roles": [
         "Client / caregiver",
@@ -1327,8 +1332,7 @@
       "source_page_date": null,
       "status": "direct-provider-page-readable",
       "audience_stages": [
-        "School age / adolescence",
-        "Adult"
+        "Across ages / adapt to person"
       ],
       "roles": [
         "Client / caregiver",
@@ -1346,8 +1350,7 @@
       "source_page_date": null,
       "status": "direct-provider-page-readable",
       "audience_stages": [
-        "School age / adolescence",
-        "Adult"
+        "Across ages / adapt to person"
       ],
       "roles": [
         "Client / caregiver",
@@ -1359,7 +1362,7 @@
     },
     {
       "id": "ext-06-03",
-      "title": "AHCCCS Arizona 988 network",
+      "title": "AHCCCS Arizona 988 implementation — agency information",
       "source_url": "https://www.azahcccs.gov/BehavioralHealth/988.html",
       "verification_date": "2026-11-16",
       "source_page_date": null,
@@ -1369,12 +1372,11 @@
         "Adult"
       ],
       "roles": [
-        "Client / caregiver",
-        "School team",
-        "Staff / case manager",
-        "Clinician"
+        "Clinician",
+        "Graduate trainee",
+        "Staff / case manager"
       ],
-      "notes": null
+      "notes": "AHCCCS 988 grants/cooperative-agreement capacity information is for professionals; separate AHCCCS Crisis Hotlines listing serves direct crisis access."
     },
     {
       "id": "ext-06-04",
@@ -1409,12 +1411,12 @@
         "Adult"
       ],
       "roles": [
-        "Client / caregiver",
         "School team",
         "Staff / case manager",
-        "Clinician"
+        "Clinician",
+        "Graduate trainee"
       ],
-      "notes": "Official 84.328C federal grant record, not an individual local provider listing. Federal IDEA parent-center programs target birth through age 26; adult transition-age search index added."
+      "notes": "U.S. Department of Education federal grant program describes IDEA family resources birth–26; technical/program overview, not enrollment or direct-care intake."
     },
     {
       "id": "ext-06-06",
@@ -1429,12 +1431,12 @@
         "Adult"
       ],
       "roles": [
-        "Client / caregiver",
         "School team",
         "Staff / case manager",
-        "Clinician"
+        "Clinician",
+        "Graduate trainee"
       ],
-      "notes": "Official 84.328M federal grant record, not an individual local provider listing. Federal IDEA parent-center programs target birth through age 26; adult transition-age search index added."
+      "notes": "U.S. Department of Education federal grant program describes IDEA family resources birth–26; technical/program overview, not enrollment or direct-care intake."
     }
   ]
 }
