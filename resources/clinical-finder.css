@@ -4,3 +4,10 @@ h1{font-size:clamp(2rem,5vw,3.2rem)}.pathway{display:grid;grid-template-columns:
 .child-resource-badge{display:inline-flex;align-items:center;gap:.3rem;margin:.25rem 0 .15rem .55rem;padding:.18rem .55rem;border:1px solid #42664e;border-radius:1rem;background:#e8f2e9;color:#234731;font:700 .75rem/1.5 system-ui,sans-serif;white-space:nowrap;vertical-align:middle}.child-filter-control{display:flex;align-items:center;gap:.6rem;margin:.8rem 0 1rem;padding:.65rem .85rem;border:1px solid #9db6a0;border-radius:.65rem;background:#f1f7f1;max-width:fit-content}.child-filter-control input{width:1.2rem;height:1.2rem;accent-color:#245e50}.child-filter-control label{font-weight:650;margin:0}.child-filter-explainer{font-size:.84rem;line-height:1.45;max-width:68ch}@media print{.child-resource-badge{background:white;color:black;border:1px solid black}.child-filter-control{display:none}}
 
 .child-resource-badge--teens{background:#f5e9d5;color:#674513;border-color:#a57937}.child-resource-badge--adults{background:#e8e7f1;color:#3f3b6c;border-color:#777099}.child-filter-control select{padding:.35rem .5rem;min-height:40px;background:#fff;color:#23372e}.child-filter-control{flex-wrap:wrap}
+
+/* Results are navigation, not a display of internal indexing metadata. */
+.finder-card{padding:16px 19px;display:flex;align-items:center;min-height:72px}
+.finder-card h3{margin:0;font-size:1.06rem;line-height:1.4;font-weight:650}
+.finder-card h3 a{text-decoration-thickness:1px;text-underline-offset:3px}
+.finder-card h3 a:hover{text-decoration-thickness:2px}
+@media print{.finder-card{min-height:0;padding:10px 12px}}

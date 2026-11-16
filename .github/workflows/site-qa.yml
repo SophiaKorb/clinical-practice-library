@@ -26,6 +26,9 @@ jobs:
       - run: node tests/navigation-destinations.cjs
       - run: node tests/child-population-filter.cjs
       - run: node tests/online-lgbtq-resources.cjs
+      - run: node tests/finder-card-readability.cjs
+      - run: node tests/affirming-practice-content.cjs
+      - run: node tests/combined-cpl-finder-qa.cjs
       - run: node tests/clinical-resources-qa.cjs
       - run: node tests/thermometer-levels.cjs
       - run: node tests/state-iep-guides.cjs
