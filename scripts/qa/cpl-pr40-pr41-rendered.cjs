@@ -2,6 +2,10 @@
 'use strict';
 const assert=require('node:assert/strict');
 const {chromium}=require('playwright');
+const fs=require('node:fs');
+const path=require('node:path');
+const artifacts=path.resolve('qa-artifacts/pr43');
+fs.mkdirSync(artifacts,{recursive:true});
 const origin='http://127.0.0.1:8765';
 const pages=[
  '/resources/community/online-lgbtq-resources.html',
@@ -13,6 +17,7 @@ const widths=[320,390,640,1280]; // 320px is the WCAG 400% reflow-equivalent CSS
 (async()=>{
  const browser=await chromium.launch({headless:true,args:['--no-sandbox']});
  const failures=[];let checks=0;
+ const axeFindings=[];
  const mark=(ok,message)=>{checks++;if(!ok)failures.push(message);};
  try{
   for(const width of widths){
@@ -23,6 +28,15 @@ const widths=[320,390,640,1280]; // 320px is the WCAG 400% reflow-equivalent CSS
     errors.length=0;
     const resp=await page.goto(origin+p,{waitUntil:'load',timeout:30000});
     mark(resp?.status()===200,p+' '+width+' HTTP '+resp?.status());
+    const stem=p.split('/').pop().replace(/\.html$/,'');
+    if([320,390,1280].includes(width))await page.screenshot({path:path.join(artifacts,stem+'-'+width+'px.png'),fullPage:true});
+    if(width===390){
+     await page.addScriptTag({path:require.resolve('axe-core/axe.min.js')});
+     const axeResult=await page.evaluate(async()=>await window.axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa']}}));
+     const violations=axeResult.violations.map(x=>({id:x.id,impact:x.impact,nodes:x.nodes.map(n=>n.target).slice(0,5),help:x.help}));
+     axeFindings.push({page:p,violations,incomplete:axeResult.incomplete.length,passes:axeResult.passes.length});
+     mark(violations.length===0,p+' WCAG axe violations: '+JSON.stringify(violations));
+    }
     const x=await page.evaluate(()=>({
      scroll:document.documentElement.scrollWidth,client:document.documentElement.clientWidth,
      h1:document.querySelectorAll('main h1').length,main:!!document.getElementById('content'),
@@ -49,6 +63,7 @@ const widths=[320,390,640,1280]; // 320px is the WCAG 400% reflow-equivalent CSS
       const printSkip=await page.locator('a.skip').evaluate(el=>getComputedStyle(el).display);
       mark(printSkip==='none',p+' printed skip-link visible');
       const pdf=await page.pdf({format:'Letter',printBackground:true});
+      fs.writeFileSync(path.join(artifacts,stem+'-print-Letter.pdf'),pdf);
       mark(pdf.length>1500&&pdf.subarray(0,4).toString()==='%PDF',p+' printed PDF invalid');
       await page.emulateMedia({media:'screen'});
     }
@@ -60,6 +75,12 @@ const widths=[320,390,640,1280]; // 320px is the WCAG 400% reflow-equivalent CSS
   const response=await page.goto(origin+'/resources/clinical-resource-finder.html?q=LGBTQ',{waitUntil:'load',timeout:30000});
   mark(response?.status()===200,'Finder response '+response?.status());
   await page.waitForSelector('.finder-card h3 a');
+  await page.screenshot({path:path.join(artifacts,'finder-LGBTQ-mobile.png'),fullPage:true});
+  await page.addScriptTag({path:require.resolve('axe-core/axe.min.js')});
+  const finderAxe=await page.evaluate(async()=>await window.axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa']}}));
+  const finderViolations=finderAxe.violations.map(x=>({id:x.id,impact:x.impact,nodes:x.nodes.map(n=>n.target).slice(0,5),help:x.help}));
+  axeFindings.push({page:'/resources/clinical-resource-finder.html',violations:finderViolations,incomplete:finderAxe.incomplete.length,passes:finderAxe.passes.length});
+  mark(finderViolations.length===0,'Finder WCAG axe violations: '+JSON.stringify(finderViolations));
   const displayed=await page.locator('.finder-card').count();
   mark(displayed===24,'Finder initially shows '+displayed+' not 24');
   mark(await page.locator('.finder-card .tag-list,.finder-card small,.finder-card details').count()===0,'Result cards expose internal tags or accordions');
@@ -84,7 +105,7 @@ const widths=[320,390,640,1280]; // 320px is the WCAG 400% reflow-equivalent CSS
    mark(/^[1-9]\d* matching resources/.test(teen),name+' should be offered for teens: '+teen);
   }
   await context.close();
- }finally{await browser.close()}
+ }finally{await browser.close();fs.writeFileSync(path.join(artifacts,'axe-results.json'),JSON.stringify(axeFindings,null,2));}
  console.log('COMBINED QA:',checks,'checks;',failures.length,'failures');
  for(const error of failures)console.error('FAIL:',error);
  if(failures.length)process.exitCode=1;
