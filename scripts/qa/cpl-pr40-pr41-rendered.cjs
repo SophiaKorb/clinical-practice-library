@@ -62,6 +62,8 @@ const widths=[320,390,640,1280]; // 320px is the WCAG 400% reflow-equivalent CSS
       await page.emulateMedia({media:'print'});
       const printSkip=await page.locator('a.skip').evaluate(el=>getComputedStyle(el).display);
       mark(printSkip==='none',p+' printed skip-link visible');
+      const outline=await page.locator('main').evaluate(el=>getComputedStyle(el).outlineStyle);
+      mark(outline==='none',p+' print has unwanted keyboard-focus page outline: '+outline);
       const pdf=await page.pdf({format:'Letter',printBackground:true});
       fs.writeFileSync(path.join(artifacts,stem+'-print-Letter.pdf'),pdf);
       mark(pdf.length>1500&&pdf.subarray(0,4).toString()==='%PDF',p+' printed PDF invalid');
