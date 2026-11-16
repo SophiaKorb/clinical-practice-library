@@ -51,5 +51,5 @@ assert(!byId('ext-04-04').tags.role.includes('School team'),'Eldercare is not a 
 assert(!byId('ext-06-03').tags.role.includes('Client / caregiver'),'AHCCCS 988 capacity grant is not a direct hotline');
 assert(byId('ext-06-03').title.includes('implementation'),'AHCCCS 988 page needs truthful agency-program title');
 assert(byId('ext-05-09').tags.stage.includes('Early childhood'),'NCTSN child welfare material includes young children');
-assert(!byId('ext-05-04').minimumAge,'SAMHSA's 18–25 priority audience is not an enforceable admission age limit');
+assert(!byId('ext-05-04').minimumAge,"SAMHSA's 18–25 priority audience is not an enforceable admission age limit");
 console.log('PASS: 77 exact provider records audited, 609 catalog entries retained, metadata and provider-title corrections synchronized; no unsupported 13+ gate.');
