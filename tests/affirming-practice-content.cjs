@@ -4,6 +4,8 @@ const root=path.resolve(__dirname,'..');
 const read=p=>fs.readFileSync(path.join(root,p),'utf8');
 const hub=read('resources/community/online-lgbtq-resources.html');
 assert(hub.includes('@page{size:letter;margin:0.65in 0.70in}'),'Online resource hub must retain printable Letter margins');
+assert(!hub.includes('<p class="foot">'),'Bottom duplicate disclaimer must not return on online hub');
+assert(hub.includes('<p class="notice">'),'Safety guidance at top must remain');
 const data=JSON.parse(read('resources/clinical-finder-data.js').replace(/^globalThis\.CPLFinderData\s*=\s*/,'').replace(/;\s*$/,''));
 const slugs=['affirming-clinical-conversation','caregiver-support-lgbtq-youth','youth-school-community-access'];
 assert.equal(new Set(data.resources.map(r=>r.url)).size,data.resources.length,'No finder URL collisions');
