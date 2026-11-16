@@ -834,7 +834,7 @@
       "title": "CDC Essentials for Parenting",
       "source_url": "https://www.cdc.gov/parents/essentials/index.html",
       "verification_date": "2026-11-16",
-      "source_page_date": null,
+      "source_page_date": "2026-11-02",
       "status": "direct-provider-page-readable",
       "audience_stages": [
         "Early childhood",
@@ -846,7 +846,7 @@
         "Clinician",
         "Staff / case manager"
       ],
-      "notes": null
+      "notes": "CDC Essentials for Parenting reviewed 2026-11-02: materials include ages 2–4 and ages 11–17, not an infant-specific curriculum."
     },
     {
       "id": "ext-03-07",
@@ -1019,7 +1019,7 @@
     },
     {
       "id": "ext-04-02",
-      "title": "Youth Voice, Youth Choice — alternatives to guardianship",
+      "title": "Youth Voice, Youth Choice — resource library (project concluded)",
       "source_url": "https://youth-voice.org/",
       "verification_date": "2026-11-16",
       "source_page_date": null,
@@ -1034,7 +1034,7 @@
         "School team",
         "Clinician"
       ],
-      "notes": "Publisher specifically supports youth with disabilities and alternatives to guardianship; educational resource, not a general all-ages service."
+      "notes": "Official CYVYC farewell: five-year funded project concluded, but public alternatives-to-guardianship resource library and youth stories remain online; treat as an archive, not active direct program intake. https://youth-voice.org/farewell-from-the-cyvyc-project-team-goodbye-for-now-but-the-movement-continues/"
     },
     {
       "id": "ext-04-03",
@@ -1385,7 +1385,8 @@
       "status": "official-indexed-direct-access-restricted",
       "audience_stages": [
         "Early childhood",
-        "School age / adolescence"
+        "School age / adolescence",
+        "Adult"
       ],
       "roles": [
         "Client / caregiver",
@@ -1393,7 +1394,7 @@
         "Staff / case manager",
         "Clinician"
       ],
-      "notes": "Parent-center program information; not a local family intake page. IDEA family support spans birth through age 26."
+      "notes": "Parent-center program information; not a local family intake page. IDEA family support spans birth through age 26. Federal IDEA parent-center programs target birth through age 26; adult transition-age search index added."
     },
     {
       "id": "ext-06-05",
@@ -1404,7 +1405,8 @@
       "status": "official-indexed-direct-access-restricted",
       "audience_stages": [
         "Early childhood",
-        "School age / adolescence"
+        "School age / adolescence",
+        "Adult"
       ],
       "roles": [
         "Client / caregiver",
@@ -1412,7 +1414,7 @@
         "Staff / case manager",
         "Clinician"
       ],
-      "notes": "Official 84.328C federal grant record, not an individual local provider listing."
+      "notes": "Official 84.328C federal grant record, not an individual local provider listing. Federal IDEA parent-center programs target birth through age 26; adult transition-age search index added."
     },
     {
       "id": "ext-06-06",
@@ -1423,7 +1425,8 @@
       "status": "official-indexed-direct-access-restricted",
       "audience_stages": [
         "Early childhood",
-        "School age / adolescence"
+        "School age / adolescence",
+        "Adult"
       ],
       "roles": [
         "Client / caregiver",
@@ -1431,7 +1434,7 @@
         "Staff / case manager",
         "Clinician"
       ],
-      "notes": "Official 84.328M federal grant record, not an individual local provider listing."
+      "notes": "Official 84.328M federal grant record, not an individual local provider listing. Federal IDEA parent-center programs target birth through age 26; adult transition-age search index added."
     }
   ]
 }
