@@ -1,0 +1,1442 @@
+{
+  "audit_version": "1.0",
+  "verified_on": "2026-11-16",
+  "production_baseline_commit": "af79333d1317c1d4dbce0798aafe14df49644c34",
+  "scope": "77 exact external URLs checked through the publisher address, with official indexed provider corroboration for restricted or JavaScript-driven destinations.",
+  "status_definitions": {
+    "direct-provider-page-readable": "Original provider URL returned human-readable page text in November 16 public web retrieval; this does not certify future reachability.",
+    "official-indexed-direct-access-restricted": "Direct URL yielded HTTP 403 or no readable body; exact URL and relevant content corroborated from an official publisher-indexed page. Not labeled broken.",
+    "interactive-shell-not-fully-assessed": "Original interactive site returned only a minimal HTML shell; parent agency confirmed the address; functionality not verified."
+  },
+  "counts": {
+    "direct-provider-page-readable": 68,
+    "official-indexed-direct-access-restricted": 8,
+    "interactive-shell-not-fully-assessed": 1
+  },
+  "records": [
+    {
+      "id": "ext-01-01",
+      "title": "Anxiety disorders",
+      "source_url": "https://www.nimh.nih.gov/health/publications/anxiety-disorders-listing",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "School age / adolescence",
+        "Adult"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "Clinician",
+        "Graduate trainee",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-01-02",
+      "title": "ADHD across ages",
+      "source_url": "https://www.nimh.nih.gov/health/publications/adhd-listing",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "School age / adolescence",
+        "Adult"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "Clinician",
+        "Graduate trainee",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-01-03",
+      "title": "Autism spectrum",
+      "source_url": "https://www.nimh.nih.gov/health/publications/autism-listing",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "School age / adolescence",
+        "Adult"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "Clinician",
+        "Graduate trainee",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-01-04",
+      "title": "Borderline personality disorder",
+      "source_url": "https://www.nimh.nih.gov/health/publications/borderline-personality-disorder-listing",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Adult"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "Clinician",
+        "Graduate trainee",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-01-05",
+      "title": "Children and adolescents",
+      "source_url": "https://www.nimh.nih.gov/health/publications/children-and-adolescents-listing",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "School age / adolescence",
+        "Adult"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "Clinician",
+        "Graduate trainee",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-01-06",
+      "title": "Depression",
+      "source_url": "https://www.nimh.nih.gov/health/publications/depression-listing",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "School age / adolescence",
+        "Adult"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "Clinician",
+        "Graduate trainee",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-01-07",
+      "title": "Eating disorders",
+      "source_url": "https://www.nimh.nih.gov/health/publications/eating-disorders-listing",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "School age / adolescence",
+        "Adult"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "Clinician",
+        "Graduate trainee",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-01-08",
+      "title": "Obsessive-compulsive disorder",
+      "source_url": "https://www.nimh.nih.gov/health/publications/ocd-listing",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "School age / adolescence",
+        "Adult"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "Clinician",
+        "Graduate trainee",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-01-09",
+      "title": "Post-traumatic stress disorder",
+      "source_url": "https://www.nimh.nih.gov/health/publications/ptsd-listing",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "School age / adolescence",
+        "Adult"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "Clinician",
+        "Graduate trainee",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-01-10",
+      "title": "Early psychosis",
+      "source_url": "https://www.nimh.nih.gov/health/publications/raise-listing",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "School age / adolescence",
+        "Adult"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "Clinician",
+        "Graduate trainee",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-01-11",
+      "title": "Suicide prevention",
+      "source_url": "https://www.nimh.nih.gov/health/publications/suicide-prevention-listing",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "School age / adolescence",
+        "Adult"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "Clinician",
+        "Graduate trainee",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-01-12",
+      "title": "Mental health treatments",
+      "source_url": "https://www.nimh.nih.gov/health/publications/treatments-listing",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "School age / adolescence",
+        "Adult"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "Clinician",
+        "Graduate trainee",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-01-13",
+      "title": "Bilingual fact sheets and brochures",
+      "source_url": "https://www.nimh.nih.gov/health/publications",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "School age / adolescence",
+        "Adult"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "Clinician",
+        "Graduate trainee",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-02-01",
+      "title": "Child depression and mood",
+      "source_url": "https://childmind.org/topics/depression-mood-disorders/",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Early childhood",
+        "School age / adolescence"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-02-02",
+      "title": "Learning disorders",
+      "source_url": "https://childmind.org/topics/learning-disorders/",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Early childhood",
+        "School age / adolescence"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-02-03",
+      "title": "Screen time and technology",
+      "source_url": "https://childmind.org/topics/screen-time-technology/",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Early childhood",
+        "School age / adolescence"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-02-04",
+      "title": "Tweens, teens and young adults",
+      "source_url": "https://childmind.org/topics/teens-young-adults/",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "School age / adolescence",
+        "Adult"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": "Publisher topic explicitly covers tweens approximately 9–12 as well as teens and young adults; no 13+ educational resource eligibility rule; adult stage added for young-adult users."
+    },
+    {
+      "id": "ext-02-05",
+      "title": "Behavior problems",
+      "source_url": "https://childmind.org/topics/behavior-problems/",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Early childhood",
+        "School age / adolescence"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": "Publisher covers preschool tantrums through teens; added early childhood finder relevance."
+    },
+    {
+      "id": "ext-02-06",
+      "title": "Autism in childhood",
+      "source_url": "https://childmind.org/topics/autism/",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Early childhood",
+        "School age / adolescence"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-02-07",
+      "title": "Anxiety in children",
+      "source_url": "https://childmind.org/topics/anxiety/",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Early childhood",
+        "School age / adolescence"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-02-08",
+      "title": "ADHD and attention",
+      "source_url": "https://childmind.org/topics/adhd-attention-problems/",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Early childhood",
+        "School age / adolescence"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-02-09",
+      "title": "Getting connected to care",
+      "source_url": "https://childmind.org/topics/connect-to-care/",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "School age / adolescence"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-02-10",
+      "title": "Child mental health resource finder",
+      "source_url": "https://childmind.org/resource-finder/",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "School age / adolescence"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-02-11",
+      "title": "Symptom checker — education, not diagnosis",
+      "source_url": "https://childmind.org/symptomchecker/",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "School age / adolescence"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-02-12",
+      "title": "Executive functioning",
+      "source_url": "https://childmind.org/topics/executive-functions/",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "School age / adolescence"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-02-13",
+      "title": "OCD and related disorders",
+      "source_url": "https://childmind.org/topics/ocd-related-disorders/",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "School age / adolescence"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-02-14",
+      "title": "Childhood trauma and grief",
+      "source_url": "https://childmind.org/topics/trauma-grief/",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "School age / adolescence"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-02-15",
+      "title": "Guide to getting good care",
+      "source_url": "https://childmind.org/guide/parents-guide-to-getting-good-care/",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "School age / adolescence"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-02-16",
+      "title": "Developmental milestones guide",
+      "source_url": "https://childmind.org/guide/parents-guide-to-developmental-milestones/",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Early childhood",
+        "School age / adolescence"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": "Publisher describes childhood milestones, including early development; added early childhood indexing."
+    },
+    {
+      "id": "ext-02-17",
+      "title": "Managing child behavior problems guide",
+      "source_url": "https://childmind.org/guide/parents-guide-to-problem-behavior/",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Early childhood",
+        "School age / adolescence"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-02-18",
+      "title": "Parent guide to ADHD",
+      "source_url": "https://childmind.org/guide/parents-guide-to-adhd/",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "School age / adolescence"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-02-19",
+      "title": "Selective mutism guide",
+      "source_url": "https://childmind.org/guide/parents-guide-how-to-help-a-child-with-selective-mutism/",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Early childhood",
+        "School age / adolescence"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-02-20",
+      "title": "Anxiety quick guide",
+      "source_url": "https://childmind.org/guide/anxiety-in-children-quick-guide/",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "School age / adolescence"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-02-21",
+      "title": "Parent guide to autism",
+      "source_url": "https://childmind.org/guide/parents-guide-to-autism/",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Early childhood",
+        "School age / adolescence"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-02-22",
+      "title": "Multilingual trauma education",
+      "source_url": "https://childmind.org/guide/multilingual-trauma-resources/",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "School age / adolescence"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-02-23",
+      "title": "Understanding intense anger",
+      "source_url": "https://childmind.org/article/angry-kids-dealing-with-explosive-behavior/",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Early childhood",
+        "School age / adolescence"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-02-24",
+      "title": "Supporting child self-regulation",
+      "source_url": "https://childmind.org/article/can-help-kids-self-regulation/",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Early childhood",
+        "School age / adolescence"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-02-25",
+      "title": "Family video library",
+      "source_url": "https://childmind.org/resources/videos/",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "School age / adolescence"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-02-26",
+      "title": "Thriving Kids podcast",
+      "source_url": "https://childmind.org/resources/podcast/",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "School age / adolescence"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-03-01",
+      "title": "CDC child development resources",
+      "source_url": "https://www.cdc.gov/child-development/resources/index.html",
+      "verification_date": "2026-11-16",
+      "source_page_date": "2026-01-29",
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Early childhood",
+        "School age / adolescence"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-03-02",
+      "title": "Positive parenting: infants 0–1",
+      "source_url": "https://www.cdc.gov/child-development/positive-parenting-tips/infants.html",
+      "verification_date": "2026-11-16",
+      "source_page_date": "2026-02-20",
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Early childhood"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-03-03",
+      "title": "Positive parenting: toddlers 1–2",
+      "source_url": "https://www.cdc.gov/child-development/positive-parenting-tips/toddlers-1-2-years.html",
+      "verification_date": "2026-11-16",
+      "source_page_date": "2026-02-20",
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Early childhood"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-03-04",
+      "title": "Positive parenting: toddlers 2–3",
+      "source_url": "https://www.cdc.gov/child-development/positive-parenting-tips/toddlers-2-3-years.html",
+      "verification_date": "2026-11-16",
+      "source_page_date": "2026-01-29",
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Early childhood"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-03-05",
+      "title": "Positive parenting: preschoolers 3–5",
+      "source_url": "https://www.cdc.gov/child-development/positive-parenting-tips/preschooler-3-5-years.html",
+      "verification_date": "2026-11-16",
+      "source_page_date": "2026-02-20",
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Early childhood"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-03-06",
+      "title": "CDC Essentials for Parenting",
+      "source_url": "https://www.cdc.gov/parents/essentials/index.html",
+      "verification_date": "2026-11-16",
+      "source_page_date": "2026-11-02",
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Early childhood",
+        "School age / adolescence"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": "CDC Essentials for Parenting reviewed 2026-11-02: materials include ages 2–4 and ages 11–17, not an infant-specific curriculum."
+    },
+    {
+      "id": "ext-03-07",
+      "title": "CDC ADHD education resources",
+      "source_url": "https://www.cdc.gov/adhd/php/communication-resources/index.html",
+      "verification_date": "2026-11-16",
+      "source_page_date": "2026-10-21",
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Early childhood",
+        "School age / adolescence"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": "Original /adhd/communication-resources path yielded no readable body; new official CDC /adhd/php/communication-resources page was directly inspected and shows updated/reviewed October 21, 2026."
+    },
+    {
+      "id": "ext-03-08",
+      "title": "CDC autism materials",
+      "source_url": "https://www.cdc.gov/autism/communication-resources/index.html",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Early childhood",
+        "School age / adolescence"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-03-09",
+      "title": "CDC fetal alcohol spectrum resources",
+      "source_url": "https://www.cdc.gov/fasd/resources/index.html",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Early childhood",
+        "School age / adolescence"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-03-10",
+      "title": "CDC hearing loss in childhood",
+      "source_url": "https://www.cdc.gov/hearing-loss-children/communication-resources/index.html",
+      "verification_date": "2026-11-16",
+      "source_page_date": "2025-05-08",
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Early childhood",
+        "School age / adolescence"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-03-11",
+      "title": "CDC Tourette and tic materials",
+      "source_url": "https://www.cdc.gov/tourette-syndrome/communication-resources/index.html",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Early childhood",
+        "School age / adolescence"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-03-12",
+      "title": "Understood: Through My Eyes simulations",
+      "source_url": "https://www.understood.org/en/through-my-eyes",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Early childhood",
+        "School age / adolescence"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-03-13",
+      "title": "Understood: pediatric/family materials",
+      "source_url": "https://www.understood.org/en/topics/pediatricians",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Early childhood",
+        "School age / adolescence"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-03-14",
+      "title": "Understood neurodivergence resources",
+      "source_url": "https://www.understood.org/",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Early childhood",
+        "School age / adolescence"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-04-01",
+      "title": "ACL National Resource Centers — professional and agency guidance",
+      "source_url": "https://acl.gov/programs/strengthening-aging-and-disability-networks/national-resource-centers",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Across ages / adapt to person"
+      ],
+      "roles": [
+        "Staff / case manager",
+        "School team",
+        "Clinician",
+        "Graduate trainee"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-04-02",
+      "title": "Youth Voice, Youth Choice — resource library (project concluded)",
+      "source_url": "https://youth-voice.org/",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "School age / adolescence",
+        "Adult"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "Staff / case manager",
+        "School team",
+        "Clinician"
+      ],
+      "notes": "Publisher's farewell documents project end but active online resource library persists, so no claim that its website is abandoned or actively enrolling."
+    },
+    {
+      "id": "ext-04-03",
+      "title": "Disability Information and Access Locator (DIAL)",
+      "source_url": "https://dial.acl.gov/home",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Across ages / adapt to person"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "Staff / case manager",
+        "School team",
+        "Clinician"
+      ],
+      "notes": "Publisher's DIAL homepage calls this service the Disability Information and Access Locator (last modified August 13, 2026)."
+    },
+    {
+      "id": "ext-04-04",
+      "title": "Eldercare Locator — older adults and families",
+      "source_url": "https://eldercare.acl.gov/home",
+      "verification_date": "2026-11-16",
+      "source_page_date": "2026-03-02",
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Adult"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "Staff / case manager",
+        "Clinician"
+      ],
+      "notes": "ACL Eldercare Locator is designed for older adults and caregivers; adult population and caregiver/case-manager/clinician roles, no school-team generic referral."
+    },
+    {
+      "id": "ext-04-05",
+      "title": "Housing and Services Resource Center — partner guidance",
+      "source_url": "https://acl.gov/HousingAndServices",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Across ages / adapt to person"
+      ],
+      "roles": [
+        "Staff / case manager",
+        "Clinician",
+        "Graduate trainee"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-04-06",
+      "title": "ILRU — independent-living professional resources",
+      "source_url": "https://www.ilru.org/",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Across ages / adapt to person"
+      ],
+      "roles": [
+        "Staff / case manager",
+        "School team",
+        "Clinician",
+        "Graduate trainee"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-04-07",
+      "title": "Aging and Disability Resource Centers",
+      "source_url": "https://acl.gov/programs/aging-and-disability-networks/aging-and-disability-resource-centers",
+      "verification_date": "2026-11-16",
+      "source_page_date": "2026-03-18",
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Across ages / adapt to person"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "Staff / case manager",
+        "School team",
+        "Clinician"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-04-08",
+      "title": "ACL Aging and Disability Networks",
+      "source_url": "https://acl.gov/programs/strengthening-aging-and-disability-networks",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Across ages / adapt to person"
+      ],
+      "roles": [
+        "Staff / case manager",
+        "School team",
+        "Clinician"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-04-09",
+      "title": "ASHA augmentative and alternative communication",
+      "source_url": "https://www.asha.org/practice-portal/professional-issues/augmentative-and-alternative-communication",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Across ages / adapt to person"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "Staff / case manager",
+        "School team",
+        "Clinician"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-05-01",
+      "title": "SAMHSA Find Help & Support",
+      "source_url": "https://www.samhsa.gov/find-help",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "official-indexed-direct-access-restricted",
+      "audience_stages": [
+        "School age / adolescence",
+        "Adult"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-05-02",
+      "title": "SAMHSA treatment locator directory",
+      "source_url": "https://www.samhsa.gov/find-help/locators",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "official-indexed-direct-access-restricted",
+      "audience_stages": [
+        "School age / adolescence",
+        "Adult"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-05-03",
+      "title": "SAMHSA National Helpline",
+      "source_url": "https://www.samhsa.gov/find-help/helplines/national-helpline",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "official-indexed-direct-access-restricted",
+      "audience_stages": [
+        "School age / adolescence",
+        "Adult"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": "SAMHSA primary-source index confirms 24/7 English/Spanish information and referral helpline, not emergency dispatch or psychotherapy."
+    },
+    {
+      "id": "ext-05-04",
+      "title": "RecoverMe: recovery resources for young adults",
+      "source_url": "https://www.samhsa.gov/substance-use/recovery/recoverme/need-help",
+      "verification_date": "2026-11-16",
+      "source_page_date": "2024-12-11",
+      "status": "official-indexed-direct-access-restricted",
+      "audience_stages": [
+        "Adult"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": "SAMHSA RecoverMe campaign primarily addresses young adults ages 18–25, distinct from age requirements of any provider."
+    },
+    {
+      "id": "ext-05-05",
+      "title": "FindTreatment.gov",
+      "source_url": "https://findtreatment.gov/",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "interactive-shell-not-fully-assessed",
+      "audience_stages": [
+        "School age / adolescence",
+        "Adult"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": "FindTreatment.gov is an interactive search service; direct text renderer only showed a minimal HTML shell; SAMHSA confirms it as locator."
+    },
+    {
+      "id": "ext-05-06",
+      "title": "FindSupport.gov",
+      "source_url": "https://findsupport.gov/",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "official-indexed-direct-access-restricted",
+      "audience_stages": [
+        "School age / adolescence",
+        "Adult"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-05-07",
+      "title": "988 Suicide and Crisis Lifeline",
+      "source_url": "https://988lifeline.org/",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "School age / adolescence",
+        "Adult"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-05-08",
+      "title": "VA PTSD AboutFace professional resources",
+      "source_url": "https://www.ptsd.va.gov/apps/aboutface/resources-for-professionals/",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Adult"
+      ],
+      "roles": [
+        "Clinician",
+        "Graduate trainee",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-05-09",
+      "title": "NCTSN child welfare trauma-informed resources",
+      "source_url": "https://nctsn.org/trauma-informed-care/creating-trauma-informed-systems/child-welfare",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Early childhood",
+        "School age / adolescence"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "Clinician",
+        "Staff / case manager"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-06-01",
+      "title": "AHCCCS Arizona crisis hotlines",
+      "source_url": "https://www.azahcccs.gov/behavioralhealth/crisis.html",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Across ages / adapt to person"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Staff / case manager",
+        "Clinician"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-06-02",
+      "title": "AHCCCS Arizona crisis system",
+      "source_url": "https://www.azahcccs.gov/BehavioralHealth/ArizonaCrisisSystem.html",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "Across ages / adapt to person"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Staff / case manager",
+        "Clinician"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ext-06-03",
+      "title": "AHCCCS Arizona 988 implementation — agency information",
+      "source_url": "https://www.azahcccs.gov/BehavioralHealth/988.html",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "direct-provider-page-readable",
+      "audience_stages": [
+        "School age / adolescence",
+        "Adult"
+      ],
+      "roles": [
+        "Clinician",
+        "Graduate trainee",
+        "Staff / case manager"
+      ],
+      "notes": "AHCCCS 988 grants/cooperative-agreement capacity information is for professionals; separate AHCCCS Crisis Hotlines listing serves direct crisis access."
+    },
+    {
+      "id": "ext-06-04",
+      "title": "IDEA Parent Information Centers — program overview",
+      "source_url": "https://www.ed.gov/grants-and-programs/grants-special-populations/grants-special-education-and-individuals-disabilities/special-education-parent-information-centers",
+      "verification_date": "2026-11-16",
+      "source_page_date": "2026-02-13",
+      "status": "official-indexed-direct-access-restricted",
+      "audience_stages": [
+        "Early childhood",
+        "School age / adolescence",
+        "Adult"
+      ],
+      "roles": [
+        "Client / caregiver",
+        "School team",
+        "Staff / case manager",
+        "Clinician"
+      ],
+      "notes": "Parent-center program information; not a local family intake page. IDEA family support spans birth through age 26. Federal IDEA parent-center programs target birth through age 26; adult transition-age search index added."
+    },
+    {
+      "id": "ext-06-05",
+      "title": "Community Parent Resource Centers — federal grant information",
+      "source_url": "https://www.ed.gov/grants-and-programs/grants-special-populations/grants-special-education-and-individuals-disabilities/special-education-parent-information-centers/community-parent-resource",
+      "verification_date": "2026-11-16",
+      "source_page_date": "2026-06-08",
+      "status": "official-indexed-direct-access-restricted",
+      "audience_stages": [
+        "Early childhood",
+        "School age / adolescence",
+        "Adult"
+      ],
+      "roles": [
+        "School team",
+        "Staff / case manager",
+        "Clinician",
+        "Graduate trainee"
+      ],
+      "notes": "U.S. Department of Education federal grant program describes IDEA family resources birth–26; technical/program overview, not enrollment or direct-care intake."
+    },
+    {
+      "id": "ext-06-06",
+      "title": "Parent Training & Information Centers — federal grant information",
+      "source_url": "https://www.ed.gov/grants-and-programs/grants-special-populations/grants-special-education-and-individuals-disabilities/special-education-parent-information-centers/special-education-parent",
+      "verification_date": "2026-11-16",
+      "source_page_date": null,
+      "status": "official-indexed-direct-access-restricted",
+      "audience_stages": [
+        "Early childhood",
+        "School age / adolescence",
+        "Adult"
+      ],
+      "roles": [
+        "School team",
+        "Staff / case manager",
+        "Clinician",
+        "Graduate trainee"
+      ],
+      "notes": "U.S. Department of Education federal grant program describes IDEA family resources birth–26; technical/program overview, not enrollment or direct-care intake."
+    }
+  ]
+}
