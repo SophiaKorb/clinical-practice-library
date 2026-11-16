@@ -25,6 +25,7 @@ jobs:
       - run: node tests/library-navigation.cjs
       - run: node tests/navigation-destinations.cjs
       - run: node tests/child-population-filter.cjs
+      - run: node tests/birth-to-five-resources.cjs
       - run: node tests/online-lgbtq-resources.cjs
       - run: node tests/clinical-resources-qa.cjs
       - run: node tests/thermometer-levels.cjs
