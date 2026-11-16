@@ -13,6 +13,8 @@ const ageBadgeLabels={children:'◉ Child-facing',teens:'◇ Teen-facing',adults
 const ageFor=r=>ageByURL.get(r.url)||'';
 const matchesAge=(r,age)=>{
  if(!age)return true;
+ // Keep programs with an explicit 13+ lower bound out of under-13 results.
+ if(age==='children' && Number.isInteger(r.minimumAge) && r.minimumAge>=13)return false;
  const stages=r.tags.stage||[];
  const explicitlyFacing=ageFor(r);
  if(stages.includes('Across ages / adapt to person'))return true;
