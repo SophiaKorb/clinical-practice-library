@@ -1,0 +1,35 @@
+'use strict';
+const assert=require('node:assert/strict');
+const fs=require('node:fs');const path=require('node:path');
+const root=path.resolve(__dirname,'..');
+const page=fs.readFileSync(path.join(root,'resources/community/expanded-external-resources.html'),'utf8');
+const raw=fs.readFileSync(path.join(root,'resources/clinical-finder-data.js'),'utf8');
+const data=JSON.parse(raw.replace(/^globalThis\.CPLFinderData\s*=\s*/,'').replace(/;\s*$/,''));
+const base='/resources/community/expanded-external-resources.html#';
+const rows=data.resources.filter(r=>r.url.startsWith(base));
+assert.equal(rows.length,77,'All 77 unique external publisher pages must be independently indexed');
+assert.equal(data.resources.length,609,'Must retain original 532 + new 77 records');
+const urls=new Set(),anchors=new Set(),groups=new Map(),domains=new Set();
+const allowed=['nimh.nih.gov','childmind.org','cdc.gov','understood.org','acl.gov','youth-voice.org','ilru.org','asha.org','samhsa.gov','findtreatment.gov','findsupport.gov','988lifeline.org','ptsd.va.gov','nctsn.org','azahcccs.gov','ed.gov'];
+for(const r of rows){
+ assert(r.externalUrl&&r.externalUrl.startsWith('https://'),'Missing HTTPS publisher page '+r.title);
+ const u=new URL(r.externalUrl);
+ assert(allowed.some(x=>u.hostname===x||u.hostname.endsWith('.'+x)),'Publisher domain outside vetted source list: '+u.hostname);
+ assert(!urls.has(r.externalUrl),'Duplicate original publisher target '+r.externalUrl);urls.add(r.externalUrl);
+ domains.add(u.hostname);
+ const id=r.url.split('#')[1];assert(page.includes('id="'+id+'"'),'Missing resource anchor '+id);anchors.add(id);
+ assert(page.includes('href="'+r.externalUrl.replace(/&/g,'&amp;')+'"'),'Original publisher URL is not linked on page: '+r.externalUrl);
+ assert(r.tags.role?.length>=2&&r.tags.stage?.length&&r.tags.task?.length,'Incomplete multiple indexing '+r.title);
+ assert(!r.title.includes(' — Mental health publications'),'Internal catalog labels should not be displayed');
+ assert(r.searchTerms.some(x=>x.includes(r.externalUrl)),'Missing source link search term '+r.title);
+ for(const[k,values]of Object.entries(r.tags))for(const v of values)assert(data.facets[k]?.includes(v),'Invalid '+k+'/'+v);
+}
+assert.equal(anchors.size,77);
+assert.equal(urls.size,77);
+for(const heading of ['Mental health publications','Child, teen and caregiver guidance','Development and parenting','Disability and independent living','Treatment, recovery and crisis navigation','Arizona and education navigation'])assert(page.includes('<h2>'+heading+'</h2>'),'Missing section: '+heading);
+assert(page.includes('class="skip" href="#content"'),'Missing keyboard skip');
+assert(page.includes('<main id="content" tabindex="-1">'),'Missing focusable landmark');
+assert(!page.includes('Current Colorful resource'),'No internal catalog noise');
+const finder=fs.readFileSync(path.join(root,'resources/clinical-resource-finder.html'),'utf8');
+assert(finder.includes('href="'+base.split('#')[0]+'"'),'Finder fails to link the collection');
+console.log('PASS 77 unique HTTPS publisher resources / 77 anchors / 609 indexed entries / '+domains.size+' publisher domains; validated category, roles, ages and tasks.');

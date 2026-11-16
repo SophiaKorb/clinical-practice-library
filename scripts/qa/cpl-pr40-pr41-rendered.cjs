@@ -9,6 +9,7 @@ fs.mkdirSync(artifacts,{recursive:true});
 const origin='http://127.0.0.1:8765';
 const pages=[
  '/resources/community/online-lgbtq-resources.html',
+ '/resources/community/expanded-external-resources.html',
  '/resources/community/affirming-clinical-conversation.html',
  '/resources/community/caregiver-support-lgbtq-youth.html',
  '/resources/community/youth-school-community-access.html'
