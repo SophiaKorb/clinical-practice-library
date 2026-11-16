@@ -23,6 +23,9 @@ for(const [fragment,min] of [['eon',13],['trevor-space',13],['youth-guide',14]])
  assert(!matchesAge(r,'children'),'Under-13 filter erroneously shows '+fragment);
  assert(matchesAge(r,'teens'),'Teen discovery lost '+fragment);
 }
+const scarleteen=record('/resources/community/online-lgbtq-resources.html#scarleteen');
+assert(!scarleteen.minimumAge,'Do not age-gate Scarleteen public education using the separate 13+ direct-service policy');
+assert(online.includes('Separate direct help (chat, text and message boards) is for ages 13 and up; public reading materials have no stated minimum age.'),'Scarleteen service-specific age disclosure missing');
 assert(online.includes('href="https://translifeline.org/hotline/"'),'Canonical primary-provider hotline missing');
 assert(!online.includes('href="https://apply.translifeline.org/hotline/"'),'Outdated alternate hotline destination');
 assert(loc.includes('older passport instructions that conflict with current')&&loc.includes('https://travel.state.gov/en/passports/apply/unique-needs/sex-markers.html'),'STARS legal caveat must link to issuing agency');
