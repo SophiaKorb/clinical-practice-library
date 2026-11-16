@@ -51,6 +51,15 @@ const requiredTopicTags = {
   "/resources/handouts/making-sleep-more-likely.html": "Sleep conditions",
   "/resources/therapy/sleep-pain-health-psychology-start-here.html": "Sleep conditions",
   "/resources/therapy/sleep-pain-health-psychology-practical-toolkit.html": "Sleep conditions",
+  "/resources/es/school/clinical/discalculia.html": "Learning disorders",
+  "/resources/es/school/plain/discalculia.html": "Learning disorders",
+  "/resources/es/school/homeschool/discalculia.html": "Learning disorders",
+  "/resources/es/school/clinical/disgrafia.html": "Learning disorders",
+  "/resources/es/school/plain/disgrafia.html": "Learning disorders",
+  "/resources/es/school/homeschool/disgrafia.html": "Learning disorders",
+  "/resources/es/school/clinical/dislexia.html": "Learning disorders",
+  "/resources/es/school/plain/dislexia.html": "Learning disorders",
+  "/resources/es/school/homeschool/dislexia.html": "Learning disorders",
 };
 
 const byURL = new Map(data.resources.map((resource) => [resource.url, resource]));
