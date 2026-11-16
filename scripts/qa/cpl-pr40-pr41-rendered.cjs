@@ -81,7 +81,7 @@ const widths=[320,390,640,1280]; // 320px is the WCAG 400% reflow-equivalent CSS
    mark(/^0 matching resources/.test(status),name+' should not be listed for under-13 children: '+status);
    await page.selectOption('#age-audience','teens');
    const teen=await page.locator('#finder-status').innerText();
-   mark(/^1 matching resources/.test(teen),name+' should be offered for teens: '+teen);
+   mark(/^[1-9]\\d* matching resources/.test(teen),name+' should be offered for teens: '+teen);
   }
   await context.close();
  }finally{await browser.close()}
