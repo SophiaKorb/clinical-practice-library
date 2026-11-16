@@ -25,7 +25,7 @@ for(const [fragment,min] of [['eon',13],['trevor-space',13],['youth-guide',14]])
 }
 assert(online.includes('href="https://translifeline.org/hotline/"'),'Canonical primary-provider hotline missing');
 assert(!online.includes('href="https://apply.translifeline.org/hotline/"'),'Outdated alternate hotline destination');
-assert(loc.includes('older passport instructions that conflict with current U.S. State Department policy'),'Relevant STARS safety/legal review annotation missing');
+assert(loc.includes('older passport instructions that conflict with current')&&loc.includes('https://travel.state.gov/en/passports/apply/unique-needs/sex-markers.html'),'STARS legal caveat must link to issuing agency');
 assert(finder.includes('<span class="cpl-finder-caret" aria-hidden="true"></span>'),'Decorative caret should be CSS only');
 assert(!finder.includes('aria-hidden="true">⌄'),'Ambiguous text caret should not return');
 assert(css.includes('.cpl-static-nav__more summary .cpl-finder-caret'),'CSS caret affordance missing');
