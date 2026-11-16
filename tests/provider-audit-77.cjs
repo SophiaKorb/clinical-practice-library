@@ -13,7 +13,7 @@ assert.equal(entries.length,77);
 assert.equal(audit.records.length,77);
 assert.equal(audit.verified_on,'2026-11-16');
 assert.equal(audit.production_baseline_commit,'af79333d1317c1d4dbce0798aafe14df49644c34');
-assert.deepEqual(audit.counts,{'direct-provider-page-readable':67,'official-indexed-direct-access-restricted':9,'interactive-shell-not-fully-assessed':1});
+assert.deepEqual(audit.counts,{'direct-provider-page-readable':68,'official-indexed-direct-access-restricted':8,'interactive-shell-not-fully-assessed':1});
 const ids=new Set();const originals=new Set();
 const byId=id=>entries.find(x=>x.url===base+id);
 for(const a of audit.records){
@@ -40,6 +40,16 @@ for(const id of['ext-06-04','ext-06-05','ext-06-06']){
 }
 assert(!byId('ext-05-08').tags.role.includes('Client / caregiver'),'Veteran clinician guide should be labeled professional');
 for(const id of['ext-04-01','ext-04-05','ext-04-06','ext-04-08'])assert(!byId(id).tags.role.includes('Client / caregiver'),'Professional technical-assistance directory mislabeled direct patient resource: '+id);
-assert.equal(audit.records.filter(x=>x.status==='official-indexed-direct-access-restricted').length,9);
+assert.equal(audit.records.filter(x=>x.status==='official-indexed-direct-access-restricted').length,8);
 assert.equal(audit.records.filter(x=>x.status==='interactive-shell-not-fully-assessed').length,1);
+assert.equal(byId('ext-03-07').externalUrl,'https://www.cdc.gov/adhd/php/communication-resources/index.html','CDC ADHD route must use verified directly readable publisher page');
+assert.equal(audit.records.find(x=>x.id==='ext-03-07').source_page_date,'2026-10-21','Use dated CDC clinical review metadata');
+assert(byId('ext-02-04').tags.stage.includes('Adult'),'Child Mind tweens-to-young-adults topic must also appear for young adults');
+for(const id of ['ext-02-01','ext-02-02','ext-02-08'])assert(byId(id).tags.stage.includes('Early childhood'),'Preschool guidance omitted '+id);
+assert.equal(byId('ext-04-03').title,'Disability Information and Access Locator (DIAL)','Use exact official service name');
+assert(!byId('ext-04-04').tags.role.includes('School team'),'Eldercare is not a school-age service');
+assert(!byId('ext-06-03').tags.role.includes('Client / caregiver'),'AHCCCS 988 capacity grant is not a direct hotline');
+assert(byId('ext-06-03').title.includes('implementation'),'AHCCCS 988 page needs truthful agency-program title');
+assert(byId('ext-05-09').tags.stage.includes('Early childhood'),'NCTSN child welfare material includes young children');
+assert(!byId('ext-05-04').minimumAge,'SAMHSA's 18–25 priority audience is not an enforceable admission age limit');
 console.log('PASS: 77 exact provider records audited, 609 catalog entries retained, metadata and provider-title corrections synchronized; no unsupported 13+ gate.');
