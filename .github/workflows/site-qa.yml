@@ -30,6 +30,7 @@ jobs:
       - run: node tests/affirming-practice-content.cjs
       - run: node tests/combined-cpl-finder-qa.cjs
       - run: node tests/expanded-external-resources.cjs
+      - run: node tests/provider-audit-77.cjs
       - run: node tests/clinical-resources-qa.cjs
       - run: node tests/thermometer-levels.cjs
       - run: node tests/state-iep-guides.cjs
