@@ -8,12 +8,19 @@ All 77 URLs were submitted directly to the public web retrieval system, and each
 
 | Access evidence | Count | Interpretation |
 | --- | ---: | --- |
-| Provider's exact page produced readable content | **67** | Publisher URL and title/purpose could be examined; future reachability not guaranteed |
-| Direct URL inaccessible/unreadable; corroborated through official indexed page | **9** | Includes SAMHSA, U.S. Department of Education, CDC ADHD and FindSupport.gov; not confirmed broken |
+| Provider's exact page produced readable content | **68** | Publisher URL and title/purpose could be examined; future reachability not guaranteed |
+| Direct URL inaccessible/unreadable; corroborated through official indexed page | **8** | Includes SAMHSA, U.S. Department of Education and FindSupport.gov; not confirmed broken |
 | Interactive locator returned only a page shell | **1** | FindTreatment.gov is linked by SAMHSA and not treated as broken; search interaction not directly certified |
 | **Total** | **77** | Every entry has an explicit source-verification status |
 
 Primary publisher evidence includes [NIMH health publications](https://www.nimh.nih.gov/health/publications), [Child Mind Institute topic guides](https://childmind.org/resource-finder/), [CDC child development resources (updated January 29, 2026)](https://www.cdc.gov/child-development/resources/index.html), [CDC Essentials for Parenting (reviewed November 2, 2026)](https://www.cdc.gov/parents/essentials/index.html), [ACL National Resource Centers](https://acl.gov/programs/strengthening-aging-and-disability-networks/national-resource-centers), [Eldercare Locator (modified March 2, 2026)](https://eldercare.acl.gov/home), [SAMHSA's official Find Help index](https://www.samhsa.gov/find-help), [SAMHSA's official RecoverMe program description](https://www.samhsa.gov/substance-use/recovery/recoverme/about), [AHCCCS crisis hotline information](https://www.azahcccs.gov/behavioralhealth/crisis.html), and [Department of Education Parent Information Centers (reviewed February 13, 2026)](https://www.ed.gov/grants-and-programs/grants-special-populations/grants-special-education-and-individuals-disabilities/special-education-parent-information-centers). These citations establish each publisher's scope, not jurisdiction-specific clinical approval.
+
+## Additional primary-source reconciliation — same review branch, no production change
+
+- **Verified CDC replacement:** The old CDC ADHD communications page exposed no readable text. The directly inspected [CDC Free Materials on ADHD](https://www.cdc.gov/adhd/php/communication-resources/index.html) now replaces it; CDC explicitly lists **updated and expert-reviewed October 21, 2026**. The source-audit totals are therefore 68 directly readable, 8 access-restricted but independently indexed, and 1 JS-only treatment locator.
+- **Accurate ages and roles:** The Child Mind Institute topic is actually *Tweens, Teens, & Young Adults*, so it is also indexed for young adults. Additional preschool-appropriate parent/child topics are indexed Early childhood; Eldercare is not school-targeted; VA and federally funded provider/agency resources retain professional-focused role tagging. Age mentions describe content coverage and primary campaign audiences, not proof of program admissions eligibility.
+- **Specific agency navigation:** DIAL's current official title is *Disability Information and Access Locator* (modified August 13, 2026); the AHCCCS 988 cooperative-agreement page is labeled agency implementation information rather than a patient crisis line. The separate state crisis listing remains intact. The Youth Voice, Youth Choice project ended but its website's resource library continues.
+- **Cross-checked provenance:** Reconciled every field in the machine-readable 77-record source ledger with the exact repository index and 77 published anchor cards. Preserved all 609 finder records, the single homepage caret disclosure and the original unhosted approved guide PDF masters.
 
 ## Corrected errors in the isolated branch
 
@@ -29,7 +36,7 @@ Primary publisher evidence includes [NIMH health publications](https://www.nimh.
 
 ## Not considered verified
 
-- A 403 response is **not** proof of a dead public page. Nine entries were corroborated by official publisher indexing; preserve their source URLs pending live human checking.
+- A 403 response is **not** proof of a dead public page. Eight entries were corroborated by official publisher indexing; preserve their source URLs pending live human checking.
 - FindTreatment.gov loads an interactive application; one-line text extraction cannot establish functioning search controls.
 - Online educational resources have *audience relevance*, not necessarily enforceable age eligibility rules. Do not treat group age tags as individual service admission criteria.
 - Individual referral costs, treatment capacity, phone-answering times, benefit eligibility, active grants, policies, and legal requirements were not confirmed for every individual provider. Official program pages may become stale.
