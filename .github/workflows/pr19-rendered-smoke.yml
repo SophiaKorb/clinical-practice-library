@@ -31,3 +31,4 @@ jobs:
             sleep 1
           done
           node scripts/qa/pr19-rendered-smoke.cjs
+          node scripts/qa/cpl-pr40-pr41-rendered.cjs
