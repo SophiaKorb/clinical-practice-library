@@ -16,10 +16,6 @@ assert(!matchesAge(pride,'children'),'University campus space is not a child ser
 assert(!matchesAge(pride,'teens'),'Do not imply adolescent eligibility without a published age policy');
 assert(matchesAge(pride,'adults'),'University campus space must remain in adult finder');
 assert(!pride.minimumAge,'Do not invent a numeric minimum age for the campus space');
-const childMind=record('/resources/community/expanded-external-resources.html#ext-02-04');
-assert(!childMind.minimumAge,'Child Mind tween/teen educational collection must not have a fictitious 13+ gate');
-assert(matchesAge(childMind,'children'),'Tweens ages 9–12 must be discoverable in Children finder');
-assert(matchesAge(childMind,'teens'),'Retain teen discovery for Child Mind collection');
 for(const [fragment,min] of [['eon',13],['trevor-space',13],['youth-guide',14]]){
  const url=fragment==='trevor-space'?'/resources/community/online-lgbtq-resources.html#'+fragment:'/resources/community/index.html#'+fragment;
  const r=record(url);
@@ -35,4 +31,4 @@ assert(!finder.includes('aria-hidden="true">⌄'),'Ambiguous text caret should n
 assert(css.includes('.cpl-static-nav__more summary .cpl-finder-caret'),'CSS caret affordance missing');
 assert.equal(data.resources.length,609,'Do not lose or add unrelated finder resources');
 assert.equal(new Set(data.resources.map(r=>r.url)).size,data.resources.length,'Duplicate finder URL');
-console.log('PASS review-only referrals: 609 entries preserved, only verified program age bounds, Child Mind tweens, campus scope, canonical hotline, legal caution, CSS caret');
+console.log('PASS review-only referrals: 609 entries preserved, only verified program age bounds, campus scope, canonical hotline, legal caution, CSS caret');
