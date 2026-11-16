@@ -62,4 +62,27 @@ for (const topic of ['adhd','autism','anxiety','depression','dyslexia','dyscalcu
 for (const topic of ['tdah','autismo','ansiedad','depresion','dislexia','discalculia','disgrafia','conflicto-persistente-tnd','derivacion']) {
  assert(links(spanish).includes('/resources/es/school/homeschool/'+topic+'.html'), 'Spanish homeschool link missing: '+topic);
 }
-console.log('Navigation destination QA passed: '+paths.length+' entry pages, '+checked+' internal links, 4 trauma collections, 12 therapy shelves, 7 assessment routes, English/Spanish homeschool guides.');
+// Existing topic landing pages already use links; hold them to the same contract.
+const topicRoot = path.join(root, 'resources/clinical-topics');
+let topicCount = 0;
+for (const dir of fs.readdirSync(topicRoot, { withFileTypes:true }).filter(d => d.isDirectory())) {
+  const index = 'resources/clinical-topics/'+dir.name+'/index.html';
+  if (!fs.existsSync(path.join(root, index))) continue;
+  const html = page(index);
+  const topicLinks = links(html);
+  for (const part of ['formulation','case','support-map','client-workbook','care-partner','progress-review']) {
+    const destination = '/resources/clinical-topics/'+dir.name+'/'+part+'.html';
+    assert(topicLinks.includes(destination), index + ' does not navigate to '+part);
+    assert(targetExists(destination), 'Topic resource missing: '+destination);
+  }
+  ++topicCount;
+}
+assert(topicCount >= 25, 'Expected the canonical topic landing collection');
+for (const p of ['index.html','library.html','resources/index.html','resources/start-here.html','resources/clinical-topics/index.html','resources/clinical-depth/index.html']) {
+  const html = page(p);
+  for (const href of links(html).filter(x => x.startsWith('/') && !x.startsWith('//'))) {
+    assert(targetExists(href), p+' has broken navigation: '+href);
+    ++checked;
+  }
+}
+console.log('Navigation destination QA passed: '+paths.length+' entry pages plus '+topicCount+' clinical topic landings, '+checked+' internal links, 4 trauma collections, 12 therapy shelves, 7 assessment routes, English/Spanish homeschool guides.');
