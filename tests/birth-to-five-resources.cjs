@@ -87,4 +87,4 @@ assert(matchesAge(localRecord,'children'),'Tucson directory must appear in Child
 assert.equal(ageFor(localRecord),'','Provider directory must not claim to be a child-facing handout');
 
 assert(!get('index.html').includes('href="/resources/therapy/treatment-plan-menu.html"'),'Unapproved treatment planning menu must stay unpromoted');
-console.log('Birth–5 QA passed: 5 indexed guides, '+external+' verified-domain source links, '+internal+' local navigation links, audience filters, full inventory and homepage discovery.');
+console.log('Birth–5 QA passed: '+slugs.length+' indexed pages, '+external+' allowlisted official/publisher links, '+internal+' local navigation links, audience filters, full inventory and homepage discovery.');
