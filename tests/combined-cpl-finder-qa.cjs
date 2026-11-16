@@ -7,8 +7,8 @@ const read=p=>fs.readFileSync(path.join(root,p),'utf8');
 const raw=read('resources/clinical-finder-data.js');
 const data=JSON.parse(raw.replace(/^globalThis\.CPLFinderData\s*=\s*/,'').replace(/;\s*$/,''));
 const finder=require('../resources/clinical-finder.js');
-assert.equal(data.resources.length,532,'Combined release must have exactly 532 resource entries');
-assert.equal(new Set(data.resources.map(r=>r.url)).size,532,'No duplicate resource URLs');
+assert.equal(data.resources.length,609,'Expanded release must have exactly 609 resource entries');
+assert.equal(new Set(data.resources.map(r=>r.url)).size,data.resources.length,'No duplicate resource URLs');
 let linksChecked=0,anchorsChecked=0,facetsChecked=0;
 for(const r of data.resources){
  assert(r.url.startsWith('/'),'Resource URL must be local: '+r.url);
