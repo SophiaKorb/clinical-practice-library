@@ -5,7 +5,7 @@ const get=p=>fs.readFileSync(path.join(root,p),'utf8');
 const slugs=['index','development-and-screening','communication-and-regulation','relationships-and-trauma','early-intervention-and-preschool','tucson-pima-local-resources'];
 const pages=slugs.map(slug=>({slug,path:'resources/birth-to-five/'+slug+'.html',html:get('resources/birth-to-five/'+slug+'.html')}));
 const links=html=>[...html.matchAll(/<a\b[^>]*href="([^"]+)"/g)].map(m=>m[1]);
-const allowedHosts=['cdc.gov','asha.org','zerotothree.org','developingchild.harvard.edu','ectacenter.org','nctsn.org','pcit.org','healthychildren.org','sites.ed.gov','des.az.gov','tusd1.org','amphi.com','maranausd.org','firstthingsfirst.org','unitedwaytucson.org','casadelosninos.org','childfamilyresources.org','parentaid.org','childparentcenters.org','makewayforbooks.org'];
+const allowedHosts=['cdc.gov','asha.org','zerotothree.org','developingchild.harvard.edu','ectacenter.org','nctsn.org','pcit.org','healthychildren.org','sites.ed.gov','des.az.gov','azed.gov','tusd1.org','amphi.com','maranausd.org','firstthingsfirst.org','unitedwaytucson.org','casadelosninos.org','childfamilyresources.org','parentaid.org','childparentcenters.org','makewayforbooks.org'];
 let external=0,internal=0;
 for(const p of pages){
  assert.match(p.html,/<h1>/,'Missing first-level heading: '+p.path);
