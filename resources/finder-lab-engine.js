@@ -93,7 +93,14 @@ function populationFor(r){
  if(stages.includes('School age / adolescence')){set.add('children');set.add('teens');note='Broad school-age/adolescent discovery tag; confirm fit and eligibility';}
  if(stages.includes('Adult'))set.add('adults');
  // Do not silently turn "Across ages" into all age groups: adult-service false positives resulted.
- if(stages.includes('Across ages / adapt to person'))note='Across ages / adaptation needed; not age-validated';
+ if(stages.includes('Across ages / adapt to person')){
+   note='Across ages / adaptation needed; not age-validated';
+   // General CPL teaching tools can be found under child/teen/adult practice,
+   // but publisher/provider directories are not presumed eligible across ages.
+   if(!r.externalUrl&&!/\/community\/|eldercare|older adult|aging services/.test((u+' '+t).toLowerCase())){
+     set.add('children');set.add('teens');set.add('adults');
+   }
+ }
  if(!stages.length){
    if(/birth.to.five|toddler|preschool|young.child/.test(u+' '+t))set.add('birth5');
    else if(/\badult\b/.test(t))set.add('adults');
@@ -134,7 +141,30 @@ function meta(r){
    provenance:'Derived only from catalog, title and path; not validated suitability',
    isExternal:!!r.externalUrl,format:(r.url||'').endsWith('.pdf')?'PDF':'Web page'};
 }
-function index(records){return records.map(meta);}
+function index(records){
+ var list=records.map(meta),families=new Map();
+ for(var item of list)if(item.family.startsWith('clinical-topic:')){
+   if(!families.has(item.family))families.set(item.family,[]);
+   families.get(item.family).push(item);
+ }
+ // Derive collection-level metadata only from its own existing linked members.
+ // Missing metadata on unrelated individual pages remains explicitly unknown.
+ for(var members of families.values()){
+  var staged=members.filter(x=>x.population.length>0&&!x.acrossAges);
+  var populations=new Set(staged.flatMap(x=>x.population));
+  for(var item of members){
+   if(!item.population.length&&!item.acrossAges&&populations.size){
+    item.population=[...populations];
+    item.populationNote='Discovery stage inferred from tagged companion pages; not validated suitability';
+   }
+   if(item.type==='collection'&&!item.audience.length){
+    item.audience=[...new Set(members.flatMap(x=>x.audience))];
+    item.audienceAggregated=true;
+   }
+  }
+ }
+ return list;
+}
 function textFields(item){
  var r=item.original,tags=r.tags||{};
  var canonical=s=>norm(s).split(' ').map(word).join(' ');
