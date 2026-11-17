@@ -53,6 +53,7 @@ fs.mkdirSync(dir,{recursive:true});
      const pdf=await page.pdf({format:'Letter',printBackground:false});
      assert(pdf.length>4000,'Print worksheet PDF unexpectedly tiny');
      fs.writeFileSync(path.join(dir,'adhd-collection-worksheets-print.pdf'),pdf);
+     await page.emulateMedia({media:'screen'});
     }
    }
    const cmPages=['youth-morning','youth-schoolwork','youth-transitions','youth-cft','youth-repair','youth-stepup','youth-adhd-support','index','appointments','paperwork','time','tasks','home','medication','money','work','communication','relationships','crisis','shared-plan','session-packet','practice-guide','session-choice-map'];
@@ -84,6 +85,7 @@ fs.mkdirSync(dir,{recursive:true});
      const pdf=await page.pdf({format:'Letter',printBackground:false});
      assert(pdf.length>4000,'Case-manager worksheet PDF unexpectedly tiny');
      fs.writeFileSync(path.join(dir,'adhd-case-management-browser-print.pdf'),pdf);
+     await page.emulateMedia({media:'screen'});
     }
    }
    await page.goto(base+'/resources/diagnoses/index.html?topic=ADHD',{waitUntil:'networkidle'});
