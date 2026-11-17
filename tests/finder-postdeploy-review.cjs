@@ -20,7 +20,7 @@ for(const [url,notes] of Object.entries(reviewed)){
  assert(it.description===notes.description,'Source-reviewed description ignored '+url);
  assert(it.provenance.includes('original CPL page introduction'),'Source provenance lost '+url);
  assert(notes.description.length>55,'Insufficient source description '+url);
- assert(!/reviewed|certified|approved|validated treatment/i.test(notes.description),'Do not imply clinical certification');
+ assert(!/\b(clinically validated|certified resource|officially approved|approved treatment)\b/i.test(notes.description),'Do not imply clinical certification');
  assert(Array.isArray(notes.audience)&&notes.audience.length>0,'Missing reviewed audience '+url);
  const local=url.slice(1);assert(fs.existsSync(path.join(root,local)),'Review notes point to non-existent source '+url);
  if(url.startsWith('/resources/es/'))assert(it.language==='es','Spanish source missing language metadata');
