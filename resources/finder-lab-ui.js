@@ -38,13 +38,14 @@ function cardFor(group){
  var title=el('h3'),a=el('a',null,item.title);a.href=item.url;title.appendChild(a);article.appendChild(title);
  var chips=el('div','chips');appendLabel(chips,item.typeLabel);
  if(item.format==='PDF')appendLabel(chips,'PDF','chip--neutral');
+ if(item.language==='es')appendLabel(chips,'Español','chip--neutral');
  if(item.isExternal)appendLabel(chips,'Publisher reference','chip--neutral');
  if(item.population.length===1)appendLabel(chips,humanPop[item.population[0]]||item.population[0],'chip--neutral');
  if(item.acrossAges)appendLabel(chips,'Adapt for the person','chip--neutral');
  article.appendChild(chips);
  article.appendChild(el('p',null,item.description));
  var roles=item.audience.map(r=>humanRole[r]).filter(Boolean);
- if(roles.length)article.appendChild(el('p','match-explain','Indexed for: '+roles.join(' · ')));
+ if(roles.length)article.appendChild(el('p','match-explain',(item.audienceAggregated?'Collection includes formats for: ':'Indexed for: ')+roles.join(' · ')));
  if(item.audienceUndifferentiated)article.appendChild(el('p','match-explain','Audience not fully distinguished in the original catalog.'));
  if(item.populationNote && state.population)article.appendChild(el('p','match-explain',item.populationNote));
  if(state.q)article.appendChild(el('p','match-explain','Matched by: '+group.best.reason+'.'));
