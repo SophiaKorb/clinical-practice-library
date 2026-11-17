@@ -1,6 +1,6 @@
 
 :root{
-  --paper:#f6f1e8;--white:#fffdf9;--ink:#1f2a24;--muted:#68736c;--green:#244b3b;--green-2:#35634f;
+  --paper:#f6f1e8;--white:#fffdf9;--ink:#1f2a24;--muted:#465a4e;--green:#244b3b;--green-2:#35634f;
   --green-soft:#e6eee8;--line:#d8d2c8;--gold:#9d7444;--gold-soft:#f2e7d5;--max:940px
 }
 *{box-sizing:border-box}html{scroll-behavior:smooth}
@@ -95,3 +95,9 @@ body[data-family="true"] .toc a{font-size:.875rem}
 
 /* CPL uses a consistent light palette across navigation and native controls. */
 :root{color-scheme:light}
+
+
+/* A guide is one resource, not the full subject. Keep the complete index findable. */
+.diagnosis-route{margin:0 0 21px;background:#e8f0e7;border:1px solid #b4caba;border-left:4px solid #477f67;border-radius:0 10px 10px 0;padding:13px 17px;line-height:1.45}
+.diagnosis-route a{display:inline-flex;align-items:center;min-height:44px;font-weight:760;color:#205b46;text-underline-offset:3px}
+@media print{.diagnosis-route{border-color:#888;background:white}}
