@@ -129,7 +129,8 @@ function queryIntent(raw){
  var q=norm(raw);
  var es=q.match(/\b(spanish|espanol)\b/)||/[áéíóúñ¿¡]/i.test(raw)
   ||/\b(como|hijo|hija|hijos|hijas|ansiedad|preparacion|barreras|apoyos|adolescente|injusticia|injusto|escuela|emociones|observacion|burlan|pelean|dientes|necesito|quiero|estoy|nino|nina)\b/.test(q)
-  ||/\b(mi|mis)\b/.test(q)&&/\b(no|se|yo|que|para|con|siento|tengo|hijo|hija)\b/.test(q);
+  ||/\b(mi|mis)\b/.test(q)&&/\b(no|se|yo|que|para|con|siento|tengo|hijo|hija)\b/.test(q)
+  ||/\b(se me|me olvida|cuando intento|empezar tareas)\b/.test(q);
  var esFiller=new Set('mi mis yo el la los las un una unos unas de del en para por que se lo con al y o estoy soy tiene tengo quiero necesito si puedo puede ayuda ayudar como cuando necesito necesitan todo todos uno esto ella ellas ellos hace hago estoy tambien'.split(' '));
  var topic=q.split(' ').filter((x,i,arr)=>{
    var generic=['worksheet','worksheets','handout','handouts','printable','pdf','spanish','espanol','client','person','need','needs','wants','want','looking','trying','find','understand','understanding','struggling','struggle','with','therapist','clinician','clinicians','teacher','teachers','please'];
