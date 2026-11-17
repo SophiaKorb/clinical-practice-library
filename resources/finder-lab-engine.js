@@ -8,6 +8,17 @@
 'use strict';
 var STOP=new Set('a an and are at be can do for from help how i in is it me my of on or our the their to with what when where who will worried about need looking find please resources resource someone some working work'.split(' '));
 var CONCEPTS=[
+ {test:/\b(biting|bitten|bites classmates|hits classmates|kicking peers|throwing things)\b/,terms:['child aggression','managing child behavior problems','when a young child has more feeling'],label:'observable child behavior and support'},
+ {test:/\b(picking on|bullied|bullying|being teased|excluded by peers)\b/,terms:['friendship peer safety','peer relationships bullying','youth school community access'],label:'peer safety and social conflict'},
+ {test:/\b(won t enter school|wont enter school|refuses to go to school|scared to go to school|school avoidance)\b/,terms:['school clinical anxiety','anxiety in children','school access'],label:'anxiety and access around school attendance'},
+ {test:/\b(school evaluation|special education evaluation|request an evaluation|child find)\b/,terms:['iep 504 parent guide','school access iep 504','early intervention preschool','school access official reference'],label:'evaluation and school support access'},
+ {test:/\b(nonverbal|non speaking|doesn t speak|cannot speak|aac)\b/,terms:['communication supports toolkit','show me what you need','communication play regulation','aphasia communication access'],label:'communication access and choice',priority:30},
+ {test:/\b(dissociative parts|dissociating|dissociation)\b/,terms:['dissociation functional','complex dissociation','grounding'],label:'dissociation and day-to-day function'},
+ {test:/\b(no sleep|not sleeping|sleep loss)\b.*\b(activation|mania|mood)\b|\b(mood activation|mania)\b.*\b(no sleep|not sleeping|sleep loss)\b/,terms:['sleep loss activation','bipolar episode','psychosis bipolar'],label:'sleep changes and possible activation'},
+ {test:/\b(school accommodations|accommodations at school|school.*cannot provide accommodations|school supports)\b/,terms:['iep 504','school access','learning instruction access'],label:'school accommodations and access'},
+ {test:/\b(separation anxiety|anxious young child|young child.*anxiety)\b/,terms:['anxiety in children','anxiety school clinical','when a young child has more feeling'],label:'developmental anxiety and caregiver support'},
+ {test:/\b(angry at everyone|irritable child|child.*angry|always angry)\b/,terms:['fairness and flexibility','supporting child self regulation','when a young child has more feeling','child aggression'],label:'emotional regulation and context'},
+ {test:/\b(self harm|self injury|cutting self|safety worksheet)\b/,terms:['safety planning preparation sheet','self harm safety continuity','making a suicide crisis safer'],label:'self-harm and safety support'},
  {test:/\b(tantrum|tantrums|outburst|outbursts|explosive behavior|hitting during upset)\b/,terms:['child aggression','managing child behavior problems','when a young child has more feeling','supporting child self regulation'],label:'child behavior and regulation'},
  {test:/\b(school refusal|school avoidance|won.t go to school|school anxiety)\b/,terms:['school clinical anxiety','anxiety in children','school access','school support process','anxiety homeschool'],label:'school attendance, anxiety and access'},
  {test:/\b(child anxiety|anxious child|anxiety in children)\b/,terms:['anxiety in children','anxiety school clinical','anxiety homeschool','anxiety quick guide'],label:'child anxiety and school supports'},
@@ -16,7 +27,7 @@ var CONCEPTS=[
  {test:/\b(parent behavior problems|parenting behavior problems|behavior problems at home)\b/,terms:['managing child behavior problems','child aggression','clear supported proactive parenting'],label:'parenting and child behavior'},
  {test:/\b(dissociation.*grounding|grounding.*dissociation|dissociating and grounding)\b/,terms:['grounding','dissociation','orientation time gaps'],label:'dissociation and grounding'},
  {test:/\b(daycare|day care|childcare|child care|preschool access)\b/,terms:['early intervention preschool','preschool access','positive parenting preschoolers','birth to five'],label:'early childhood and preschool access'},
- {test:/\b(task launch|cannot start|can.t start|getting started|start tasks|executive initiation)\b/,terms:['task launch','task starts','executive functioning','starting organizing tasks'],label:'starting tasks and executive functioning'},
+ {test:/\b(task launch|cannot start|can.t start|can t get started|can t start|getting started|start tasks|executive initiation)\b/,terms:['task launch','task starts','executive functioning','starting organizing tasks'],label:'starting tasks and executive functioning'},
  {test:/\b(parents worried about meltdowns|parent worried about meltdowns)\b/,terms:['child aggression','when a young child has more feeling','managing child behavior','clear supported proactive parenting','communication play regulation'],label:'caregiver support for regulation'},
  {test:/\b(meltdown|meltdowns|overwhelmed child|sensory overload)\b/,terms:['child aggression','supporting child self regulation','sensory overload','communication play regulation','understanding behavior in autistic children'],label:'overload and regulation'},
  {test:/\b(play therapy|therapeutic play|dyadic therapy)\b/,terms:['child treatment selection','communication play regulation','caregiver session support'],label:'play, developmental and dyadic approaches'},
@@ -72,6 +83,21 @@ function norm(value){
 }
 function word(value){var v=norm(value);if(v==='children')return 'child';if(v==='teens')return 'teen';if(v==='families')return 'family';if(v.endsWith('ies')&&v.length>5)return v.slice(0,-3)+'y';if(v.endsWith('s')&&v.length>4&&!v.endsWith('ss')&&!v.endsWith('us'))return v.slice(0,-1);return v;}
 function tokens(s){return [...new Set(norm(s).split(' ').map(word).filter(x=>x.length>1&&!STOP.has(x)))];}
+function queryIntent(raw){
+ var q=norm(raw),topic=q.split(' ').filter((x,i,arr)=>{
+   var generic=['worksheet','worksheets','handout','handouts','printable','pdf','spanish','espanol','client','person','need','needs','struggling','struggle','with','therapist'];
+   if(generic.includes(x))return false;
+   if(arr.length>=4&&['parent','parents','caregiver','caregivers','teen','teens','student'].includes(x))return false;
+   return true;
+ }).join(' ');
+ return {
+  topic:topic,
+  language:/\b(spanish|espanol)\b/.test(q)||/[áéíóúñ¿¡]/i.test(raw)||/\b(como|hijo|hija|ansiedad|preparacion|barreras|apoyos)\b/.test(q)?'es':'en',
+  population:/\b(teen|teens|adolescent)\b/.test(q)?'teens':/\b(five year old|four year old|three year old|toddler|preschool|infant)\b/.test(q)?'birth5':/\b(child|children|kid|student)\b/.test(q)?'children':'',
+  audience:/\b(parent|parents|caregiver|caregivers|family|families)\b/.test(q)?'caregiver':'',
+  worksheet:/\b(worksheet|handout|printable|pdf)\b/.test(q)
+ };
+}
 function hasWord(h,t){return (' '+h+' ').includes(' '+t+' ');}
 function safeArray(a){return Array.isArray(a)?a:[];}
 function starts(u,p){return String(u||'').startsWith(p);}
@@ -217,7 +243,7 @@ function relatedScore(item,concepts){
   for(var i=0;i<concept.terms.length;i++){
    var phrase=norm(concept.terms[i]);
    if(subject.includes(phrase)){
-    var value=Math.max(30,125-i*12);
+    var value=Math.max(30,125-i*12)+(concept.priority||0);
     if(value>best)best=value;
    }
   }
@@ -245,8 +271,8 @@ function groupResults(hits,all){
  return [...byFamily.values()].sort((a,b)=>b.best.score-a.best.score||a.best.item.title.localeCompare(b.best.item.title));
 }
 function search(items,state){
- var q=norm(state&&state.q),qTokens=tokens(q),concepts=conceptsFor(q),filtered=items.filter(it=>matchesFilters(it,state||{}));
- var scored=filtered.map(item=>({item:item,direct:directScore(item,q),related:relatedScore(item,concepts)}));
+ var q=norm(state&&state.q),intent=queryIntent(state&&state.q||''),topic=intent.topic||q,qTokens=tokens(topic),concepts=conceptsFor(q),filtered=items.filter(it=>matchesFilters(it,state||{}));
+ var scored=filtered.map(item=>({item:item,direct:directScore(item,topic),related:relatedScore(item,concepts)}));
  var strong=scored.filter(h=>qTokens.length>0&&h.direct.score>0&&(qTokens.length===1||h.direct.coverage>=0.99));
  var minDirect=strong.length>=4;
  var hits=[];
@@ -264,10 +290,12 @@ function search(items,state){
    // Explicit title/path relevance dominates; historical global priority only breaks near-ties.
    if(q==='iep'&&minDirect&&h.direct.reason!=='Title match')score=0;
    if(score>=(qTokens.length>1?30:1)){
-     var isSpanish=/\/es\//.test(h.item.url)||/^(como|mi hijo|preparacion|ansiedad)/.test(norm(h.item.title));
-     var spanishQuery=/[áéíóúñ¿¡]/i.test(state.q||'')||/\b(como|ayuda|hijo|hija|ansiedad|preparacion|barreras|apoyos)\b/.test(q);
-     var languageFit=isSpanish==spanishQuery?3:(isSpanish?-250:-60);
-     hits.push({item:h.item,score:score+languageFit+Math.min(1,(h.item.original.priority||0)/1000),reason:reason});
+     var isSpanish=h.item.language==='es';
+     var languageFit=intent.language==='es'?(isSpanish?250:-100):(isSpanish?-250:3);
+     var audienceFit=intent.audience&&h.item.audience.includes(intent.audience)?12:0;
+     var populationFit=intent.population&&h.item.population.includes(intent.population)?12:0;
+     var worksheetFit=intent.worksheet&&(h.item.type==='worksheet'||h.item.type==='education')?12:0;
+     hits.push({item:h.item,score:score+languageFit+audienceFit+populationFit+worksheetFit+Math.min(1,(h.item.original.priority||0)/1000),reason:reason});
    }
  }
  hits.sort((a,b)=>b.score-a.score||a.item.title.localeCompare(b.item.title));
