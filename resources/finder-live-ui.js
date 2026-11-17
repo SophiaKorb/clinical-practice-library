@@ -6,8 +6,8 @@ var engine=globalThis.CPLFinderLab,data=globalThis.CPLFinderData;
 if(!engine||!data){return;}
 var by=id=>document.getElementById(id);
 var catalog=engine.index(data.resources),limit=10;
-var keys=['population','need','audience'],advKeys=['diagnosis','symptom','function','intervention','stage','task','step','community','place','community-topic'];
-var state={q:'',population:'',need:'',audience:'',advanced:{}};
+var keys=['scope','population','need','audience'],advKeys=['diagnosis','symptom','function','intervention','stage','task','step','community','place','community-topic'];
+var state={q:'',scope:'',population:'',need:'',audience:'',advanced:{}};
 var humanRole={clinician:'Clinician',trainee:'Trainee',case_manager:'Case manager',school_team:'School team',client:'Client',caregiver:'Caregiver'};
 var humanPop={birth5:'Birth–5',children:'School-age/teen indexed',teens:'School-age/teen indexed',adults:'Adult'};
 var el=(tag,cls,txt)=>{
@@ -15,7 +15,7 @@ var el=(tag,cls,txt)=>{
 };
 function appendLabel(container,txt,style){var span=el('span','chip'+(style?' '+style:''),txt);container.appendChild(span);}
 function paramsState(){
- var p=new URLSearchParams(location.search),out={q:(p.get('q')||'').slice(0,160),population:'',need:'',audience:'',advanced:{},legacyRole:''};
+ var p=new URLSearchParams(location.search),out={q:(p.get('q')||'').slice(0,160),scope:'',population:'',need:'',audience:'',advanced:{},legacyRole:''};
  for(var key of keys){
   var input=by('lab-'+key),value=p.get(key)||'';
   out[key]=input&&[...input.options].some(o=>o.value===value)?value:'';
@@ -50,7 +50,7 @@ function syncInputs(){
  by('lab-q').value=state.q;
  for(var key of keys)by('lab-'+key).value=state[key];
  for(var a of advKeys)by('lab-'+a).value=state.advanced[a]||'';
- if(Object.values(state.advanced).some(Boolean))by('lab-advanced').open=true;
+ if(Object.entries(state.advanced).some(([k,v])=>v&&!['community','community-topic'].includes(k)))by('lab-advanced').open=true;
 }
 function cardFor(group){
  var item=group.best.item,article=el('article','result-card');
@@ -59,6 +59,7 @@ function cardFor(group){
  if(item.format==='PDF')appendLabel(chips,'PDF','chip--neutral');
  if(item.language==='es')appendLabel(chips,'Español','chip--neutral');
  if(item.isExternal)appendLabel(chips,'Publisher reference','chip--neutral');
+ if(item.original.communityCollection)appendLabel(chips,item.original.communityCollection==='transition-age'?'TAY community':'Family community guide','chip--neutral');
  if(item.population.length===1)appendLabel(chips,humanPop[item.population[0]]||item.population[0],'chip--neutral');
  if(item.acrossAges)appendLabel(chips,'Adapt for the person','chip--neutral');
  article.appendChild(chips);
@@ -101,7 +102,7 @@ function render(changeURL){
  if(changeURL){var p=getParams();history.replaceState(null,'',location.pathname+(p.size?'?'+p.toString():'')+location.hash);}
 }
 function update(){limit=10;render(true);}
-function reset(){state={q:'',population:'',need:'',audience:'',advanced:{},legacyRole:''};syncInputs();update();}
+function reset(){state={q:'',scope:'',population:'',need:'',audience:'',advanced:{},legacyRole:''};syncInputs();update();}
 for(var key of advKeys){
  var sel=by('lab-'+key);
  for(var value of data.facets[key]||[]){var opt=el('option',null,value);opt.value=value;sel.appendChild(opt);}
@@ -112,7 +113,7 @@ by('lab-form').addEventListener('submit',function(e){e.preventDefault();state.q=
 by('lab-q').addEventListener('input',function(){state.q=this.value.slice(0,160);update();});
 for(var key of keys)by('lab-'+key).addEventListener('change',function(k){return function(){state[k]=by('lab-'+k).value;if(k==='audience')state.legacyRole='';update();};}(key));
 by('lab-clear').addEventListener('click',reset);
-by('lab-recover').addEventListener('click',function(){state.population='';state.need='';state.audience='';state.advanced={};state.legacyRole='';syncInputs();update();by('lab-q').focus();});
+by('lab-recover').addEventListener('click',function(){state.scope='';state.population='';state.need='';state.audience='';state.advanced={};state.legacyRole='';syncInputs();update();by('lab-q').focus();});
 by('lab-more').addEventListener('click',function(){limit+=10;render(false);});
 document.querySelectorAll('[data-example]').forEach(button=>button.addEventListener('click',function(){state.q=button.getAttribute('data-example');syncInputs();update();by('lab-q').focus();}));
 addEventListener('popstate',function(){state=paramsState();syncInputs();limit=10;render(false);});
