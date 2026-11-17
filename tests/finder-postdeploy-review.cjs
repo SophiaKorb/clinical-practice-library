@@ -56,6 +56,11 @@ assert(!peer.groups.some(g=>g.best.item.language==='es'),'English bullying query
 const span=engine.search(idx,{q:'Spanish child autism family guide',population:'children',audience:'caregiver'});
 assert.equal(span.groups[0]?.best.item.url,'/resources/es/handouts/autismo-guia-rapida-familias.html',
   'Explicit Spanish intent must prioritize Spanish family source');
+const spanishIEP=engine.search(idx,{q:'family needs Spanish IEP guide'});
+assert(spanishIEP.groups.slice(0,5).some(g=>g.best.item.url==='/resources/es/arizona-como-conseguir-iep-504.html'),
+ 'Spanish IEP search must not be hijacked by Spanish autism/family synonym');
+assert(!spanishIEP.groups.slice(0,5).some(g=>/autismo-guia-rapida/.test(g.best.item.url)),
+ 'Spanish IEP search returned an unrelated autism handout');
 const young=byUrl.get('/resources/handouts/when-a-young-child-has-more-feeling-than-language.html');
 assert.deepEqual(young.population,['birth5'],'Preschool caregiver page incorrectly indexed for teens');
 const early=byUrl.get('/resources/therapy/early-childhood-regulation-communication.html');
