@@ -213,7 +213,15 @@ function index(records){
 function textFields(item){
  var r=item.original,tags=r.tags||{};
  var canonical=s=>norm(s).split(' ').map(word).join(' ');
- var title=canonical(r.title),url=canonical((r.url||'').split('#')[0]),terms=canonical(safeArray(r.searchTerms).join(' ')),
+ var title=canonical(r.title),url=canonical((r.url||'').split('#')[0]),
+   // TAY is a navigation synonym for the *existing* transition-age guide group,
+   // not a claim about an individual program's age range or eligibility.
+   // Allow a small, exact-word service vocabulary from original TAY descriptions.
+   // Unlike generic description indexing, this keeps unsupported topic inference out.
+   serviceWords='housing shelter food employment foster parenting pregnancy pregnant disability crisis'.split(' '),
+   serviceDescription=norm(r.description||''),
+   sourceServices=r.communityCollection==='transition-age'?serviceWords.filter(function(w){return hasWord(serviceDescription,w);}).join(' '):'',
+   terms=canonical(safeArray(r.searchTerms).join(' ')+(r.communityCollection==='transition-age'?' TAY transition age '+sourceServices:'')),
    metadata=canonical(Object.values(tags).flat().join(' '));
  return {title:title,url:url,terms:terms,tags:metadata};
 }
