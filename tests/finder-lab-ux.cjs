@@ -21,7 +21,7 @@ for(const item of indexed){
  assert(lab.typeOptions().some(x=>x.value===item.type)||item.type==='other','Invalid type '+item.url);
  assert(Array.isArray(item.audience));
  assert(Array.isArray(item.population));
- assert(!item.provenance.includes('validated suitability'),'No clinical endorsement should be inferred');
+ assert(item.provenance.includes('not validated suitability'),'No clinical endorsement should be inferred');
 }
 assert(indexed.some(i=>i.audienceUndifferentiated),'Missing honest ambiguous-audience flag');
 assert(indexed.some(i=>!i.population.length&&!i.acrossAges),'Missing honest unclassified population');
