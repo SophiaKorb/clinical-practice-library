@@ -8,6 +8,16 @@
 'use strict';
 var STOP=new Set('a an and are at be can do for from help how i in is it me my of on or our the their to with what when where who will worried about need looking find please resources resource someone some working work'.split(' '));
 var CONCEPTS=[
+ {test:/\b(spanish|espanol)\b.*\b(autism|autistic)\b|\b(autism|autistic)\b.*\b(spanish|espanol)\b/,
+   terms:['autismo guia rapida familias','conducta ninos autistas'],label:'Spanish autism and family education',priority:150},
+ {test:/\b(school attendance anxiety|anxiety.*school attendance|school anxiety intervention)\b/,
+   terms:['anxiety barrier to support clinical','anxiety homeschool barrier','anxiety in children'],label:'school anxiety and attendance',priority:55},
+ {test:/\b(disagree|disagrees|co.parent.*disagree|parents arguing|parenting disagreement)\b/,
+   terms:['parenting across disagreement','criar en medio del desacuerdo'],label:'coparenting and boundaries',priority:55},
+ {test:/\b(preschool|daycare|five year old|toddler)\b.*\b(aggression|hitting|biting|behavior)\b|\b(aggression|hitting|biting)\b.*\b(preschool|daycare|five year old|toddler)\b/,
+   terms:['when a young child has more feeling','communication play regulation','early childhood regulation communication'],
+   label:'early-childhood dysregulation and communication',priority:75},
+
  {test:/\b(sensory overload|sensory overwhelm|overloaded by noise)\b/,terms:['sensory overload recovery plan','supporting child self regulation','communication play regulation'],label:'sensory overload and recovery',priority:45},
  {test:/\b(refuses homework|homework refusal|struggles with homework|won t do homework|can t start homework)\b/,terms:['task launch map','executive functioning','learning instruction access','adhd barrier'],label:'homework access and task initiation'},
  {test:/\b(biting|bitten|bites classmates|hits classmates|kicking peers|throwing things)\b/,terms:['child aggression','managing child behavior problems','when a young child has more feeling'],label:'observable child behavior and support'},
@@ -77,19 +87,25 @@ var AUDIENCE_EVIDENCE={
  '/resources/es/arizona-como-conseguir-iep-504.html':['caregiver','case_manager','school_team'],
  '/resources/es/school/iep-504-preparacion-reunion.html':['caregiver','school_team']
 };
+// Verified-page overlay is a discovery aid only: no underlying resource content is altered.
+var SOURCE_REVIEW=(typeof module==='object'&&module.exports&&typeof require==='function')
+  ?require('./finder-source-review.js'):(typeof globalThis!=='undefined'&&globalThis.CPLFinderSourceReview||{});
 var NEEDS=['clinical','worksheet','caregiver','assessment','school','referral','training','education','collection'];
 var AUDIENCES=['client','caregiver','clinician','case_manager','school_team','trainee'];
 var POPULATIONS=['birth5','children','teens','adults'];
 function norm(value){
  return String(value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[–—\/_-]/g,' ').replace(/[^a-z0-9ñ ]+/g,' ').replace(/\s+/g,' ').trim();
 }
-function word(value){var v=norm(value);if(v==='children')return 'child';if(v==='teens')return 'teen';if(v==='families')return 'family';if(v.endsWith('ies')&&v.length>5)return v.slice(0,-3)+'y';if(v.endsWith('s')&&v.length>4&&!v.endsWith('ss')&&!v.endsWith('us'))return v.slice(0,-1);return v;}
+function word(value){var v=norm(value);if(v==='developmental')return 'development';if(v==='disagrees'||v==='disagree')return 'disagreement';if(v==='children')return 'child';if(v==='teens')return 'teen';if(v==='families')return 'family';if(v.endsWith('ies')&&v.length>5)return v.slice(0,-3)+'y';if(v.endsWith('s')&&v.length>4&&!v.endsWith('ss')&&!v.endsWith('us'))return v.slice(0,-1);return v;}
 function tokens(s){return [...new Set(norm(s).split(' ').map(word).filter(x=>x.length>1&&!STOP.has(x)))];}
 function queryIntent(raw){
  var q=norm(raw),topic=q.split(' ').filter((x,i,arr)=>{
-   var generic=['worksheet','worksheets','handout','handouts','printable','pdf','spanish','espanol','client','person','need','needs','struggling','struggle','with','therapist'];
+   var generic=['worksheet','worksheets','handout','handouts','printable','pdf','spanish','espanol','client','person','need','needs','wants','want','looking','trying','find','understand','understanding','struggling','struggle','with','therapist','clinician','clinicians','teacher','teachers','please'];
    if(generic.includes(x))return false;
    if(arr.length>=4&&['parent','parents','caregiver','caregivers','teen','teens','student'].includes(x))return false;
+   if(arr.length>=3&&x==='age'&&/^\d+$/.test(arr[i+1]||''))return false;
+   if(arr.length>=3&&/^\d+$/.test(x)&&arr[i-1]==='age')return false;
+   if(arr.length>=4&&x==='other'&&arr.includes('parenting'))return false;
    return true;
  }).join(' ');
  return {
@@ -163,6 +179,7 @@ function familyFor(r){
 }
 function describe(r,type){
  if(DESCRIPTIONS[r.url])return DESCRIPTIONS[r.url];
+ if(/^\/resources\/es\//.test(r.url||''))return 'Recurso en español; revise el documento original para comprobar su propósito y destinatarios.';
  var title=r.title.replace(/^Topic /,'').replace(/ — (Care-partner guide|Client workbook|Clinician formulation guide|Interactive case practice|Progress review tool|Visual support map)$/,'');
  if(/\/clinical-topics\//.test(r.url||'')){
    if(type==='collection')return 'Open the topic collection for formulation, workbook, care-partner, visual and progress-review resources.';
@@ -178,12 +195,23 @@ function describe(r,type){
  return 'Explore '+title.toLowerCase()+'; review the original resource for purpose and fit.';
 }
 function meta(r){
- var type=typeFor(r),audience=audienceFor(r),population=populationFor(r),base=familyFor(r);
- return {url:r.url,title:r.title,original:r,type:type,typeLabel:TYPES[type],audience:audience.values,
-   audienceUndifferentiated:audience.undifferentiated,population:population.values,acrossAges:population.across,
-   populationNote:population.note,description:describe(r,type),family:base,
-   provenance:'Derived only from catalog, title and path; not validated suitability',
-   isExternal:!!r.externalUrl,language:/^\/resources\/es\//.test(r.url||'')?'es':'en',format:(r.url||'').endsWith('.pdf')?'PDF':'Web page'};
+ var reviewed=SOURCE_REVIEW[r.url]||null,type=reviewed&&reviewed.type||typeFor(r),
+   audience=audienceFor(r),population=populationFor(r),base=familyFor(r);
+ if(reviewed){
+   if(reviewed.audience)audience.values=[...reviewed.audience];
+   if(reviewed.population){
+     population.values=[...reviewed.population];
+     population.note='Population discovery supported by source introduction; verify actual fit';
+   }
+ }
+ return {url:r.url,title:r.title,original:r,type:type,typeLabel:TYPES[type],
+   audience:audience.values,audienceUndifferentiated:reviewed?false:audience.undifferentiated,
+   population:population.values,acrossAges:reviewed&&reviewed.population?false:population.across,
+   populationNote:population.note,description:reviewed&&reviewed.description||describe(r,type),
+   family:base,reviewedSource:!!reviewed,reviewTerms:reviewed&&reviewed.terms||[],
+   provenance:reviewed?'Reviewed against original CPL page introduction; not validated suitability':'Derived only from catalog, title and path; not validated suitability',
+   isExternal:!!r.externalUrl,language:/^\/resources\/es\//.test(r.url||'')?'es':'en',
+   format:(r.url||'').endsWith('.pdf')?'PDF':'Web page'};
 }
 function index(records){
  var list=records.map(meta),families=new Map();
@@ -212,9 +240,10 @@ function index(records){
 function textFields(item){
  var r=item.original,tags=r.tags||{};
  var canonical=s=>norm(s).split(' ').map(word).join(' ');
- var title=canonical(r.title),url=canonical((r.url||'').split('#')[0]),terms=canonical(safeArray(r.searchTerms).join(' ')),
-   metadata=canonical(Object.values(tags).flat().join(' '));
- return {title:title,url:url,terms:terms,tags:metadata};
+ return {title:canonical(r.title),url:canonical((r.url||'').split('#')[0]),
+  terms:canonical(safeArray(r.searchTerms).join(' ')),
+  review:canonical(safeArray(item.reviewTerms).join(' ')),
+  tags:canonical(Object.values(tags).flat().join(' '))};
 }
 function directScore(item,q){
  var qt=tokens(q);if(!qt.length)return {score:0,reason:'Browse all',matched:[]};
@@ -226,6 +255,7 @@ function directScore(item,q){
    var t=qt[i],value=0;
    if(hasWord(f.title,t)){value=78;titleHits++;}
    else if(hasWord(f.url,t))value=49;
+   else if(hasWord(f.review,t))value=30;
    else if(hasWord(f.terms,t))value=24;
    else if(hasWord(f.tags,t))value=9;
    if(value){hits++;score+=value;matched.push(t);}
@@ -235,7 +265,13 @@ function directScore(item,q){
  if(!hits)score=0;
  return {score:score,reason:titleHits?'Title match':hits===qt.length?'Topic match':'Partial match',matched:matched,coverage:fraction};
 }
-function conceptsFor(q){var n=norm(q);return CONCEPTS.filter(x=>x.test.test(n));}
+function conceptsFor(q){
+ var n=norm(q),matches=CONCEPTS.filter(x=>x.test.test(n));
+ // Specific functional concerns beat generic diagnosis terms. This prevents
+ // bullying/communication questions from turning into broad autism directories.
+ var broad=new Set(['autistic children and support','overload and regulation','IEP and school supports']);
+ return matches.some(x=>!broad.has(x.label))?matches.filter(x=>!broad.has(x.label)):matches;
+}
 function relatedScore(item,concepts){
  if(!concepts.length)return 0;
  // Related-language search uses specific TITLE/PATH phrases only.
@@ -259,7 +295,15 @@ function matchesFilters(item,state){
  if(state.legacyRole && !safeArray(item.original.tags&&item.original.tags.role).includes(state.legacyRole))return false;
  var advanced=state.advanced||{};
  for(var k of ['diagnosis','symptom','function','intervention','stage','task','step']){
-   if(advanced[k]&&!safeArray(item.original.tags&&item.original.tags[k]).includes(advanced[k]))return false;
+   if(!advanced[k])continue;
+   if(k==='stage'&&item.reviewedSource&&SOURCE_REVIEW[item.url]&&SOURCE_REVIEW[item.url].population){
+     // Do not reintroduce a contradicted broad inherited age tag through advanced filtering.
+     var ages={ 'Early childhood':['birth5'],
+       'School age / adolescence':['children','teens'],Adult:['adults'] };
+     var target=ages[advanced[k]];
+     if(target&&!target.some(a=>item.population.includes(a)))return false;
+     if(advanced[k]==='Across ages / adapt to person'&&!item.acrossAges)return false;
+   }else if(!safeArray(item.original.tags&&item.original.tags[k]).includes(advanced[k]))return false;
  }
  return true;
 }
@@ -287,23 +331,37 @@ function search(items,state){
      if(h.related>0 && score<10+h.related){score=10+h.related;reason='Related concept: '+concepts.map(c=>c.label).join('; ');}
    }else if(h.related>0 && (!minDirect || qTokens.length>1)){
      score=10+h.related;reason='Related concept: '+concepts.map(c=>c.label).join('; ');
-   }else if(qTokens.length>2 && h.direct.coverage>=0.67 && !minDirect){
+   }else if(qTokens.length>2 && h.direct.coverage>=0.66 && !minDirect){
      score=h.direct.score*0.65;reason='Partial match';
    }
    // Explicit title/path relevance dominates; historical global priority only breaks near-ties.
    if(q==='iep'&&minDirect&&h.direct.reason!=='Title match')score=0;
    if(score>=(qTokens.length>1?30:1)){
      var isSpanish=h.item.language==='es';
+     if(isSpanish&&intent.language==='en'&&h.direct.reason!=='Title match')continue;
      var languageFit=intent.language==='es'?(isSpanish?250:-100):(isSpanish?-250:3);
      var audienceFit=intent.audience&&h.item.audience.includes(intent.audience)?12:0;
      var populationFit=intent.population&&h.item.population.includes(intent.population)?12:0;
      var worksheetFit=intent.worksheet&&score>=75&&(h.item.type==='worksheet'||h.item.type==='education')?420:0;
-     hits.push({item:h.item,score:score+languageFit+audienceFit+populationFit+worksheetFit+Math.min(1,(h.item.original.priority||0)/1000),reason:reason});
+     var finalScore=score+languageFit+audienceFit+populationFit+worksheetFit+Math.min(1,(h.item.original.priority||0)/1000);
+     if(finalScore>=1)hits.push({item:h.item,score:finalScore,reason:reason});
    }
  }
  hits.sort((a,b)=>b.score-a.score||a.item.title.localeCompare(b.item.title));
  // For no direct match, no false impression that a synonym is an exact result.
- return {groups:groupResults(hits,items),matches:hits.length,resources:filtered.length,query:q,
+ // When the user selects an age and the catalog has no age evidence, do not
+ // mislabel the resource as age-appropriate or make it disappear without a trace.
+ // Keep these as a visibly separate, NOT-AGE-VALIDATED set.
+ var unclassifiedGroups=[];
+ if(state&&state.population&&qTokens.length){
+   var withoutStage=items.filter(it=>it.population.length===0&&!it.acrossAges);
+   if(withoutStage.length){
+     var fallbackState=Object.assign({},state,{population:''});
+     unclassifiedGroups=search(withoutStage,fallbackState).groups.slice(0,5);
+   }
+ }
+ return {groups:groupResults(hits,filtered),matches:hits.length,resources:filtered.length,query:q,
+   unclassifiedGroups:unclassifiedGroups,
    concepts:concepts.map(c=>c.label),hasDirect:strong.length>0,
    reason:qTokens.length&&!hits.length?'No indexed title or supported related concept matched.':null};
 }
