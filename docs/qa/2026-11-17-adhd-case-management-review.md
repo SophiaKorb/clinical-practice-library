@@ -48,3 +48,16 @@ Under `resources/diagnoses/adult-adhd-collection/case-management/`:
 
 ## Verification status
 Latest exact-head GitHub CI status must be appended after complete runs; do not mark as passing from earlier commits.
+
+## Final current-main CI reconciliation and exact test checkpoint
+
+While this review branch was under development, separate main-branch PR #59 published 198 new individually indexed community-guide records. The official current main finder became **813** records at exact Git blob `a17555746c8a76f41cb2d2b234e4586ee46e5465`. This branch's historical finder remains at the exact earlier **615** record blob `93105c462d65d0b7766cc84564264ed345379fb7`. Neither file was overwritten by this work. Pull-request workflows use a synthetic test merge with current main, so the new ADHD overlay has **31 additions** and produces **844 runtime records** when combined with current official 813, or **646** on the historical 615 source. The ADHD facet is **50 entries** in either case (19 baseline + 31 supplemental), while other thirteen facets stay unchanged. All parity scripts now verify this explicitly, rather than falsely expecting the historical 615 at a newer merge base.
+
+**Exact verified code/test HEAD: `b93567405eba1c380b2343d3eb6c1251ad504fb1`.**
+- [CPL site QA 44155548378 — SUCCESS](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/44155548378) on current-main synthetic merge. Source checks, 31 supplementary ADHD records, youth/adult stage separation, preserved main finder and all original site tests passed.
+- [CPL rendered keyboard/print QA 44155548343 — SUCCESS](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/44155548343) on current-main synthetic merge. The four-width ADHD page, 23-case-manager-page flow, choice-map interaction, generated print samples, focus/overflow checks, focused skip-link print fix, and all-14 diagnosis index parity with 31 ADHD additions passed.
+- [GitHub browser screenshots, axe output and print-sample artifact 14362100114](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/44155548343/artifacts/14362100114). This is a machine-generated review artifact, not a tagged PDF/UA or substitute for real-paper verification.
+
+Earlier failures were investigated and corrected, including overflowing underscore lines, mobile headings, table reflow, printed focused skip links, browser print/media reset and historic finder parity expectations. Those intermediate failures remain visible in Actions history; they are not evidence of passing final tests.
+
+**Outstanding human approval gates are unchanged:** independent clinical/case-management and safeguarding review, youth consent/CFT processes, current program eligibility and billing/scope, rights/redistribution, native assistive technologies, true 200%/400% browser zoom, physical Letter print, accessible tagged PDF and owner release authorization. No PHI, merge, deployment, publication or permission change.
