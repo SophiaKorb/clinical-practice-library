@@ -53,9 +53,38 @@ fs.mkdirSync(dir,{recursive:true});
      fs.writeFileSync(path.join(dir,'adhd-collection-worksheets-print.pdf'),pdf);
     }
    }
+   const cmPages=['index','appointments','paperwork','time','tasks','home','medication','money','work','communication','relationships','crisis','shared-plan','session-packet','practice-guide','session-choice-map'];
+   for(const slug of cmPages){
+    const url=base+'/resources/diagnoses/adult-adhd-collection/case-management/'+slug+'.html';
+    const loaded=await page.goto(url,{waitUntil:'networkidle'});
+    assert.equal(loaded.status(),200,'Missing case-manager resource '+slug);
+    assert.equal(await page.locator('h1').count(),1,'Case manager page heading '+slug);
+    const over=await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);
+    assert(over<=2,'Case manager resource horizontal overflow '+slug+' '+width+': '+over);
+    await page.locator('a.skip').focus();
+    assert.equal(await page.evaluate(()=>document.activeElement.classList.contains('skip')),true,'Case manager keyboard skip '+slug);
+    if(slug==='session-choice-map'){
+     await page.selectOption('#need','appointments');
+     assert.equal(await page.locator('#chosen').isVisible(),true,'No visual map after selection');
+     assert.equal(await page.locator('#go').getAttribute('href'),'./appointments.html','Wrong case manager activity link');
+     await page.selectOption('#need','');
+     assert.equal(await page.locator('#chosen').isHidden(),true,'Reset selection does not clear map');
+    }
+    if(['index','appointments','paperwork','session-packet','practice-guide','session-choice-map'].includes(slug)){
+     await page.addScriptTag({path:require.resolve('axe-core')});
+     const a=await page.evaluate(async()=>window.axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa']}}));
+     assert.equal(a.violations.filter(v=>['critical','serious'].includes(v.impact)).length,0,'Case manager serious accessibility issue '+slug+' '+width+': '+JSON.stringify(a.violations.map(v=>v.id)));
+    }
+    if(width===390&&['index','appointments','session-choice-map'].includes(slug))await page.screenshot({path:path.join(dir,'adhd-case-management-'+slug+'-390.png'),fullPage:true});
+    if(width===1280&&slug==='session-packet'){
+     const pdf=await page.pdf({format:'Letter',printBackground:false});
+     assert(pdf.length>4000,'Case-manager worksheet PDF unexpectedly tiny');
+     fs.writeFileSync(path.join(dir,'adhd-case-management-browser-print.pdf'),pdf);
+    }
+   }
    await page.goto(base+'/resources/diagnoses/index.html?topic=ADHD',{waitUntil:'networkidle'});
    await page.waitForSelector('#direct-groups .resource-list li');
-   assert.equal(await page.locator('#direct-groups .resource-list li').count(),27,'Dynamic diagnosis hub must include 19 original and 8 supplemental ADHD resources');
+   assert.equal(await page.locator('#direct-groups .resource-list li').count(),43,'Dynamic diagnosis hub must include 19 original and 24 supplemental ADHD resources');
    assert.match(await page.locator('#topic-name').innerText(),/ADHD/);
    assert(await page.locator('#direct-groups a[href="/resources/diagnoses/adult-adhd-collection/assessment.html"]').count()>0,'Supplemental ADHD clinical assessment must appear in dynamic index');
    assert.equal(await page.locator('#adhd-focus').isVisible(),true,'Prominent adult comprehensive guide missing');
@@ -99,7 +128,7 @@ fs.mkdirSync(dir,{recursive:true});
     await page.emulateMedia({forcedColors:'active'});
     await page.screenshot({path:path.join(dir,'adult-adhd-forced-colors.png'),fullPage:true});
    }
-   results.push({width,adultOverflow:tooWide,hubOverflow:overflow,adhdIndexed:27,autismIndexed:29,axeSerious:0,originalGuidesLinked:true});
+   results.push({width,adultOverflow:tooWide,hubOverflow:overflow,adhdIndexed:43,autismIndexed:29,axeSerious:0,originalGuidesLinked:true});
    await ctx.close();
   }
   console.log('DIAGNOSIS_HUB_RENDERED_PASS '+JSON.stringify(results));
