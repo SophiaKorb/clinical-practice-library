@@ -62,6 +62,8 @@ const tayQuery=engine.search(items,{q:'TAY',scope:'community'});
 const tayURLs=new Set(tayQuery.groups.flatMap(g=>[g.best.item.url,...g.otherMatches.map(m=>m.item.url)]));
 for(const entry of data.resources.filter(r=>r.communityCollection==='transition-age'))assert(tayURLs.has(entry.url),'TAY abbreviation misses guide listing '+entry.url);
 assert(engine.search(items,{q:'TAY housing',scope:'community'}).groups.some(g=>g.best.item.url===iam.url||g.otherMatches.some(x=>x.item.url===iam.url)),'TAY housing must discover I AM YOU 360');
+assert(engine.search(items,{q:'TAY housing',scope:'community'}).groups.some(g=>g.best.item.url.endsWith('#youth-listing-19')||g.otherMatches.some(x=>x.item.url.endsWith('#youth-listing-19'))),'TAY housing must discover TPCH youth housing directory');
+assert(!engine.search(items,{q:'TAY housing',scope:'community'}).groups.some(g=>g.best.item.url.endsWith('#youth-listing-23')),'Teen crisis hotline must not be mislabeled as a housing result');
 assert(engine.search(items,{q:'transition age',scope:'community'}).groups.some(g=>g.best.item.url===iam.url||g.otherMatches.some(x=>x.item.url===iam.url)),'Transition age alias must discover I AM YOU 360');
 assert.deepEqual(engine.index(data.resources).find(x=>x.url===iam.url).original.searchTerms,iam.searchTerms,'Search alias must not mutate provider metadata');
 
