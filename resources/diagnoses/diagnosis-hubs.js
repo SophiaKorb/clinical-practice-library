@@ -102,6 +102,7 @@ function renderSelected(){
  var shown=document.getElementById('topic-page'),overview=document.getElementById('topic-overview');
  if(!selected){shown.hidden=true;overview.hidden=false;return;}
  shown.hidden=false;overview.hidden=true;
+ document.getElementById('adhd-focus').hidden=(selected!=='ADHD');
  document.title=selected+' — Full resource index | Clinical Practice Library';
  document.getElementById('topic-name').textContent=selected;
  document.getElementById('topic-lede').textContent=subtitle[selected]||'Clinical topic resources';
