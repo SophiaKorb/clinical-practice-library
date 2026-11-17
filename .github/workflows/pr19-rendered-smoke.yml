@@ -40,6 +40,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: cpl-pr43-human-review-artifacts
-          path: qa-artifacts/pr43/
+          path: |
+            qa-artifacts/pr43/
+            qa-artifacts/diagnosis-hubs/
           if-no-files-found: warn
           retention-days: 14
