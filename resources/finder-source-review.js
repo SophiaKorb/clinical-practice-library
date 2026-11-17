@@ -411,6 +411,38 @@
       "sensory regulation"
     ]
   },
+  "/resources/clinical-topics/social-anxiety-attention/index.html": {
+    "description": "Adult clinical collection on fear of negative evaluation, self-focused attention, avoidance and safety strategies; distinguish accessibility supports from avoidance.",
+    "population": [
+      "adults"
+    ],
+    "audience": [
+      "clinician",
+      "trainee",
+      "client",
+      "caregiver",
+      "case_manager"
+    ],
+    "type": "collection",
+    "terms": [
+      "social anxiety exposure",
+      "social anxiety CBT",
+      "social performance anxiety"
+    ]
+  },
+  "/resources/therapy/anxiety-exposure-ocd-start-here.html": {
+    "description": "Clinical guide to fear, avoidance, compulsive certainty-seeking, exposure planning and appropriate alternatives; formulation comes before hierarchies.",
+    "audience": [
+      "clinician",
+      "trainee"
+    ],
+    "type": "clinical",
+    "terms": [
+      "anxiety CBT exposure",
+      "social anxiety exposure",
+      "exposure treatment"
+    ]
+  },
   "/resources/handouts/grounding.html": {
     "description": "Orient to the present through optional sensory, movement or attention activities during panic, dissociation and overload.",
     "audience": [
