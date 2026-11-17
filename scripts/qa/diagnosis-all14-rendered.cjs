@@ -34,9 +34,10 @@ fs.mkdirSync(dir,{recursive:true});
      details.push({width,topic,count:expected.length,overflow});
    }
    await page.goto(base+'/resources/diagnoses/index.html',{waitUntil:'networkidle'});
-   await page.locator('#topic-select').focus();
-   await page.keyboard.press('End');await page.keyboard.press('Home');
+   await page.waitForSelector('#topic-grid article');
    assert.equal(await page.locator('#topic-grid article').count(),14);
+   await page.locator('#topic-select').focus();
+   assert.equal(await page.evaluate(()=>document.activeElement.id),'topic-select','Diagnosis category select is not keyboard focusable');
    await page.goto(base+'/#diagnosis-guides',{waitUntil:'networkidle'});
    assert.equal(await page.locator('.diagnosis-card').count(),8);
    assert.equal(await page.locator('a[href="/resources/diagnoses/index.html"]').count()>0,true,'Complete index not linked from homepage');
