@@ -107,3 +107,13 @@ The new static and behavioral tests do **not** certify clinical quality, officia
 - [CPL site QA run 44153512269](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/44153512269): **SUCCESS**.
 - [CPL rendered keyboard and print QA run 44153512284](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/44153512284): **SUCCESS**. Captured artifact [14359643023](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/44153512284/artifacts/14359643023). Browser printing and focused skip-control regression passed on this exact source.
 - Native assistive technologies, actual 200%/400% browser zoom, manual physical-print QA, clinical/release approvals remain separate and open. No merge or deployment.
+
+## Later main-release reconciliation (new 813-entry published source)
+
+After the original 615-record checkpoint, a separate main-branch release added 198 individually indexed community-guide records, resulting in a published **813-record** finder at exact blob `a17555746c8a76f41cb2d2b234e4586ee46e5465`. This was not a change made by PR #58. The old 615-record source remains intact in this historical review branch, but GitHub's pull-request test merge uses current main. Regression guards now explicitly recognize **only** either official exact blob: historical 615 `93105c462d65d0b7766cc84564264ed345379fb7` or current 813 `a17555746c8a76f41cb2d2b234e4586ee46e5465`; arbitrary data drift is still rejected. No resource entry was overwritten or removed.
+
+At exact test/code head `9a54a5c63d68192c3e05cddb8017fc492fd541a4`, both post-reconciliation pull-request workflows completed **SUCCESS** against the current main-branch test merge:
+- [Site QA run 44155623026](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/44155623026)
+- [Rendered keyboard/print QA run 44155623078](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/44155623078)
+
+Historical source, existing new entries and current main source are distinct. This is a passing **machine review candidate**, not approval for clinical use, rights, native screen readers, physical print, PDF tagging, merge or deployment. PR #57 remains separate and must independently reconcile with current main before any combined release.
