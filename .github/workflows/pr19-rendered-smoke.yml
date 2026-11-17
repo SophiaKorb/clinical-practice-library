@@ -32,6 +32,7 @@ jobs:
           done
           node scripts/qa/pr19-rendered-smoke.cjs
           node scripts/qa/cpl-pr40-pr41-rendered.cjs
+          node scripts/qa/finder-lab-rendered.cjs
       - name: Retain CPL review screenshots and printable samples
         if: always()
         uses: actions/upload-artifact@v4
