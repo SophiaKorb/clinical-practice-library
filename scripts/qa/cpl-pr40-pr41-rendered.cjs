@@ -88,7 +88,7 @@ const widths=[320,390,640,1280]; // 320px is the WCAG 400% reflow-equivalent CSS
   mark(displayed===24,'Finder initially shows '+displayed+' not 24');
   mark(await page.locator('.finder-card .tag-list,.finder-card small,.finder-card details').count()===0,'Result cards expose internal tags or accordions');
   const firstStatus=await page.locator('#finder-status').innerText();
-  mark(/^30 matching resources; showing 24\./.test(firstStatus),'LGBTQ search status '+firstStatus);
+  mark(/^31 matching resources; showing 24\./.test(firstStatus),'LGBTQ search status (30 inherited + IAMYOU360) '+firstStatus);
   for(const age of ['children','teens','adults']){
    for(const role of ['Client / caregiver','School team','Staff / case manager','Graduate trainee','Clinician']){
     await page.locator('#finder-reset').click();
