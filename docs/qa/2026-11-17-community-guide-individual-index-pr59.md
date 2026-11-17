@@ -27,3 +27,11 @@
 - **Accessible use:** automated axe and responsive screenshots are not a substitute for native screen-reader and keyboard assistive technology review, true whole-page zoom, or physical grayscale print.
 - **Rights:** original PDF permissions remain separate from index metadata and source-linked fragments.
 - **Owner release:** explicit merge/deploy authorization required. Do not publish based on machine-only QA.
+
+## Unified discovery follow-up — November 17
+- Added visible resource-collection control (all / community / remaining CPL) and a visible family/TAY-guide filter, with the same unified finder and existing query state.
+- Added service-mentioned filter for housing, employment, foster care, parenting/pregnancy, food, transportation and disability supports. This is **lexical matching against the original item title/description/curated terms only**; no new provider eligibility inference, referral endorsement, or program availability claim.
+- Added explicit community browsing links, TAY and organization search examples, and community-guide result chips. Retained the original 812 records and 197 direct community anchors. Prior 615 items are unchanged.
+- Updated individual-index test with unified collection exclusivity, source-scoped service mentions, TAY-only guide selection and visibility assertions. The tests need execution on the exact new head.
+- **I AM YOU 360 gap:** the dedicated `resources/community/iamyou360.html` path does not exist on this review branch; the full finder catalog contains no `iamyou360` record. Do not state IAM is indexed on PR #59. Reconcile against current main and dated official provider evidence in a separate reviewed change, avoiding overwritten newer main content.
+- **QA pending:** GitHub connector inspection found no pull-request workflow runs associated with the intermediate new commit; exact-head static/unit, rendered keyboard, axe, mobile widths, native AT, whole-page zoom and grayscale print verification are **not yet demonstrated**. The modification is review-only and must not merge or deploy.
