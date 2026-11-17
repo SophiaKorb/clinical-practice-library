@@ -72,5 +72,24 @@ assert(items.filter(r=>engine.matchesFilters(r,{advanced:{community:'family'}}))
 const finderHTML=read('resources/clinical-resource-finder.html');
 for(const name of ['lab-community','lab-place','lab-community-topic'])assert(finderHTML.includes('id="'+name+'"'),'Community filter missing from live finder: '+name);
 
+// Release-path regression: unified, visible community discovery retains current main's 813 records and IAM.
+const html=read('resources/clinical-resource-finder.html');
+for(const id of ['lab-scope','lab-community','lab-community-topic']){
+ assert.equal((html.match(new RegExp('id="'+id+'"','g'))||[]).length,1,'Duplicate or missing visible selector: '+id);
+ assert(html.indexOf('id="'+id+'"')<html.indexOf('id="lab-advanced"'),'Community selector hidden in advanced: '+id);
+}
+assert(html.includes('I AM YOU 360')&&html.includes('transition-age youth (TAY)'),'Direct TAY and IAM navigation missing');
+const community=items.filter(x=>engine.matchesFilters(x,{scope:'community'}));
+const notCommunity=items.filter(x=>engine.matchesFilters(x,{scope:'noncommunity'}));
+assert.equal(community.length+notCommunity.length,items.length,'Collection scope overlap or omission');
+assert(community.some(x=>x.url===iam.url),'I AM YOU 360 excluded by community scope');
+assert(!notCommunity.some(x=>x.url===iam.url),'I AM YOU 360 leaked into noncommunity scope');
+assert(community.some(x=>x.url.endsWith('#listing-2')),'Original family listing excluded from community scope');
+assert(community.some(x=>x.url.endsWith('#youth-listing-2')),'Original TAY listing excluded from community scope');
+assert.equal(community.filter(x=>engine.matchesFilters(x,{advanced:{community:'transition-age'}})).length,28,'TAY + community selection must retain IAM');
+assert(engine.search(items,{q:'I AM YOU 360',scope:'community'}).groups.some(x=>x.best.item.url===iam.url),'IAM query not present in unified community search');
+assert(engine.search(items,{q:'foster care',scope:'community',advanced:{'community-topic':'Foster-care transitions'}}).groups.some(x=>x.best.item.url===iam.url||x.otherMatches.some(y=>y.item.url===iam.url)),'IAM foster-care search journey missing');
+assert(engine.search(items,{q:'Parent Aid',scope:'community'}).groups.some(x=>x.best.item.url.endsWith('#listing-2')),'Family guide search journey broken');
+
 assert(new Set(data.resources.map(r=>r.url)).size===data.resources.length,'Duplicate canonical resource URL');
 console.log('COMMUNITY_GUIDES_INDIVIDUAL_INDEX_PASS '+JSON.stringify({family:family.length,youth:youth.length,total:data.resources.length,anchors:197}));
