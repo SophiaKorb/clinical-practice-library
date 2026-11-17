@@ -76,6 +76,7 @@ fs.mkdirSync(dir,{recursive:true});
       const pdf=await page.pdf({format:'Letter',printBackground:false});
       assert(pdf.length>3000,'Case management print PDF unexpectedly small');
       fs.writeFileSync(path.join(dir,'comprehensive-case-manager-print.pdf'),pdf);
+     await page.emulateMedia({media:'screen'});
      }
     }
    }
