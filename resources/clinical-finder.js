@@ -18,6 +18,7 @@ const matchesAge=(r,age)=>{
  const stages=r.tags.stage||[];
  const explicitlyFacing=ageFor(r);
  if(stages.includes('Across ages / adapt to person'))return true;
+ if(age==='birth5')return (Number.isInteger(r.minimumAge) ? r.minimumAge<=5 : true) && (stages.includes('Early childhood')||stages.includes('Across ages / adapt to person'));
  if(age==='children')return explicitlyFacing==='children'||stages.includes('Early childhood')||stages.includes('School age / adolescence');
  if(age==='teens')return explicitlyFacing==='teens'||stages.includes('School age / adolescence');
  if(age==='adults')return explicitlyFacing==='adults'||stages.includes('Adult');
