@@ -50,7 +50,7 @@ for(const slug of caseFiles){
  assert(additions.some(r=>r.url==='/'+p),'Missing case management finder record '+slug);
 }
 const caseMap=read('resources/diagnoses/adult-adhd-collection/case-management/session-choice-map.html');
-assert(!/localStorage|sessionStorage|fetch\\(|XMLHttpRequest|sendBeacon/.test(caseMap),'Case manager map must not transmit or persist responses');
+assert(!/localStorage|sessionStorage|fetch\(|XMLHttpRequest|sendBeacon/.test(caseMap),'Case manager map must not transmit or persist responses');
 assert(read('resources/diagnoses/adult-adhd-collection/index.html').includes('/resources/diagnoses/adult-adhd-collection/case-management/index.html'),'Adult ADHD hub missing case manager toolkit');
 const map=read('resources/diagnoses/adult-adhd-collection/interactive-barrier-map.html');
 assert(!/localStorage|sessionStorage|fetch\(|XMLHttpRequest|sendBeacon/.test(map),'Interactive map must not transmit or persist entries');
