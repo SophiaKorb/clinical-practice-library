@@ -100,3 +100,10 @@ At exact **case-management source and test head `7e6074590cff3a289d777cdd5173ae9
 - Manually inspected the artifact's 390px case-management index, ADHD support sheet and eating-disorder coordination sheet. Typography, card order, three-stage reasoning map, blank print lines and link hierarchy were readable without visible clipping. The visible skip link in screenshots is from intentional keyboard focus during QA.
 
 The new static and behavioral tests do **not** certify clinical quality, official eligibility, real physical printing, native screen-reader results, actual 200%/400% zoom or PDF/UA. Owner merge and deployment gates remain closed. Documentation-only updates after this exact source checkpoint are not themselves new clinical/source QA.
+
+## Final print-focus regression — exact source checkpoint
+
+- **Exact code source:** `33fc87cf1332d2f859ae3a8914ef4d1b8c13d408`. This adds print-only hiding of the focused keyboard skip link and validates it within the browser printing test, with screen media restored afterward.
+- [CPL site QA run 44153512269](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/44153512269): **SUCCESS**.
+- [CPL rendered keyboard and print QA run 44153512284](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/44153512284): **SUCCESS**. Captured artifact [14359643023](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/44153512284/artifacts/14359643023). Browser printing and focused skip-control regression passed on this exact source.
+- Native assistive technologies, actual 200%/400% browser zoom, manual physical-print QA, clinical/release approvals remain separate and open. No merge or deployment.
