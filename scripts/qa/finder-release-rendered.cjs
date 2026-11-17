@@ -115,6 +115,20 @@ fs.mkdirSync(dir,{recursive:true});
     const shown=await page.locator('.entry:visible').count();
     assert(shown>=1&&shown<guide.count,'Online guide client-side search failed: '+guide.slug);
     assert((await page.locator('#guide-status').innerText()).includes('of '+guide.count),'Guide status not announced');
+    const sectionLinkCount=await page.locator('.contents li').count();
+    const visibleSectionLinks=await page.locator('.contents li:visible').count();
+    assert(visibleSectionLinks>0&&visibleSectionLinks<sectionLinkCount,'Search navigation still links to hidden sections: '+guide.slug);
+    await page.emulateMedia({media:'print'});
+    const printedEntries=await page.locator('.entry').evaluateAll(nodes=>nodes.filter(node=>
+      getComputedStyle(node).display!=='none'&&getComputedStyle(node.closest('.section')).display!=='none'
+    ).length);
+    assert.equal(printedEntries,guide.count,'Printing a filtered view omitted guide listings: '+guide.slug);
+    await page.emulateMedia({media:'screen'});
+    assert.equal(await page.locator('.entry:visible').count(),shown,'Screen filter lost after print: '+guide.slug);
+    await page.locator('#guide-query').fill('unlikelynonexistentguidequeryxyz');
+    assert.equal(await page.locator('.entry:visible').count(),0,'No-match query still shows entries: '+guide.slug);
+    assert((await page.locator('#guide-status').innerText()).includes('No matches'),'No-match guidance is missing: '+guide.slug);
+
     await page.locator('#guide-clear').click();
     assert.equal(await page.locator('.entry:visible').count(),guide.count,'Guide reset did not restore full source set');
     if(width===390){
