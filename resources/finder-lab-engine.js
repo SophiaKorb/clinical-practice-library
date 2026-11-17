@@ -260,6 +260,7 @@ function matchesFilters(item,state){
  if(state.legacyRole && !safeArray(item.original.tags&&item.original.tags.role).includes(state.legacyRole))return false;
  var advanced=state.advanced||{};
  if(advanced.community && item.original.communityCollection!==advanced.community)return false;
+ if(advanced['community-topic'] && item.original.communityTopic!==advanced['community-topic'])return false;
  if(advanced.place && !safeArray(item.original.communityPlaces).includes(advanced.place))return false;
  for(var k of ['diagnosis','symptom','function','intervention','stage','task','step']){
    if(advanced[k]&&!safeArray(item.original.tags&&item.original.tags[k]).includes(advanced[k]))return false;
