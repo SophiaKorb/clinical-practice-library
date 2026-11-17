@@ -71,3 +71,11 @@ footer{border-top:1px solid #dce6dd;padding:19px 28px;color:#5c7064;font-size:.8
 @media(max-width:360px){.brand span{display:none}.result-card{padding:16px}.filter-grid{gap:12px}main{padding:21px 13px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 @media print{*{box-shadow:none!important}body{color:black;background:white}a{color:black}.site-head,.examples,.search-action,.form-actions,.advanced,.quick-filters,.scope,.more,footer,.skip{display:none!important}#lab-search{border:0;padding:0;margin:0 0 14px}.search-box{display:block}.search-box input{border:0;padding:0;height:auto;font-size:1rem}.results{display:block}.result-card{page-break-inside:avoid;break-inside:avoid;border-color:#888;margin:12px 0;padding:12px}.family{display:none}}
+
+/* Production canonical finder navigation, preserving shared lab design. */
+.finder-live-links{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.finder-live-links a{font-size:.9rem;font-weight:650;white-space:nowrap}
+.quick-links{margin-top:12px!important;font-size:.95rem!important}
+@media(max-width:750px){.finder-live-links{gap:10px}.finder-live-links a{font-size:.75rem}.finder-live-links a:nth-child(2){display:none}}
+@media(max-width:360px){.finder-live-links a{font-size:.7rem}}
+@media print{.finder-live-links,.quick-links{display:none!important}}
