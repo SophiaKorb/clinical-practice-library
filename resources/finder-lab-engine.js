@@ -289,7 +289,15 @@ function matchesFilters(item,state){
  if(state.legacyRole && !safeArray(item.original.tags&&item.original.tags.role).includes(state.legacyRole))return false;
  var advanced=state.advanced||{};
  for(var k of ['diagnosis','symptom','function','intervention','stage','task','step']){
-   if(advanced[k]&&!safeArray(item.original.tags&&item.original.tags[k]).includes(advanced[k]))return false;
+   if(!advanced[k])continue;
+   if(k==='stage'&&item.reviewedSource&&SOURCE_REVIEW[item.url]&&SOURCE_REVIEW[item.url].population){
+     // Do not reintroduce a contradicted broad inherited age tag through advanced filtering.
+     var ages={ 'Early childhood':['birth5'],
+       'School age / adolescence':['children','teens'],Adult:['adults'] };
+     var target=ages[advanced[k]];
+     if(target&&!target.some(a=>item.population.includes(a)))return false;
+     if(advanced[k]==='Across ages / adapt to person'&&!item.acrossAges)return false;
+   }else if(!safeArray(item.original.tags&&item.original.tags[k]).includes(advanced[k]))return false;
  }
  return true;
 }
