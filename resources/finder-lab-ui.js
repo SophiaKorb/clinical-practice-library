@@ -1,0 +1,97 @@
+/* Review-only finder interface. No tracking, remote search, diagnosis, or PHI processing. */
+(function(){
+'use strict';
+if(typeof document==='undefined')return;
+var engine=globalThis.CPLFinderLab,data=globalThis.CPLFinderData;
+if(!engine||!data){return;}
+var by=id=>document.getElementById(id);
+var catalog=engine.index(data.resources),limit=10;
+var keys=['population','need','audience'],advKeys=['diagnosis','function','task','step'];
+var state={q:'',population:'',need:'',audience:'',advanced:{}};
+var humanRole={clinician:'Clinician',trainee:'Trainee',case_manager:'Case manager',school_team:'School team',client:'Client',caregiver:'Caregiver'};
+var humanPop={birth5:'Birth–5',children:'School-age/teen indexed',teens:'School-age/teen indexed',adults:'Adult'};
+var el=(tag,cls,txt)=>{
+ var x=document.createElement(tag);if(cls)x.className=cls;if(txt!==undefined)x.textContent=txt;return x;
+};
+function appendLabel(container,txt,style){var span=el('span','chip'+(style?' '+style:''),txt);container.appendChild(span);}
+function paramsState(){
+ var p=new URLSearchParams(location.search),out={q:(p.get('q')||'').slice(0,160),population:'',need:'',audience:'',advanced:{}};
+ for(var key of keys){var input=by('lab-'+key);var value=p.get(key)||'';out[key]=input&&[...input.options].some(o=>o.value===value)?value:'';}
+ for(var a of advKeys){var select=by('lab-'+a),v=p.get(a)||'';out.advanced[a]=select&&[...select.options].some(o=>o.value===v)?v:'';}
+ return out;
+}
+function getParams(){
+ var params=new URLSearchParams();
+ if(state.q)params.set('q',state.q);
+ for(var key of keys)if(state[key])params.set(key,state[key]);
+ for(var a of advKeys)if(state.advanced[a])params.set(a,state.advanced[a]);
+ return params;
+}
+function syncInputs(){
+ by('lab-q').value=state.q;
+ for(var key of keys)by('lab-'+key).value=state[key];
+ for(var a of advKeys)by('lab-'+a).value=state.advanced[a]||'';
+ if(Object.values(state.advanced).some(Boolean))by('lab-advanced').open=true;
+}
+function cardFor(group){
+ var item=group.best.item,article=el('article','result-card');
+ var title=el('h3'),a=el('a',null,item.title);a.href=item.url;title.appendChild(a);article.appendChild(title);
+ var chips=el('div','chips');appendLabel(chips,item.typeLabel);
+ if(item.format==='PDF')appendLabel(chips,'PDF','chip--neutral');
+ if(item.language==='es')appendLabel(chips,'Español','chip--neutral');
+ if(item.isExternal)appendLabel(chips,'Publisher reference','chip--neutral');
+ if(item.population.length===1)appendLabel(chips,humanPop[item.population[0]]||item.population[0],'chip--neutral');
+ if(item.acrossAges)appendLabel(chips,'Adapt for the person','chip--neutral');
+ article.appendChild(chips);
+ article.appendChild(el('p',null,item.description));
+ var roles=item.audience.map(r=>humanRole[r]).filter(Boolean);
+ if(roles.length)article.appendChild(el('p','match-explain',(item.audienceAggregated?'Collection includes formats for: ':'Indexed for: ')+roles.join(' · ')));
+ if(item.audienceUndifferentiated)article.appendChild(el('p','match-explain','Audience not fully distinguished in the original catalog.'));
+ if(item.populationNote && state.population)article.appendChild(el('p','match-explain',item.populationNote));
+ if(state.q)article.appendChild(el('p','match-explain','Matched by: '+group.best.reason+'.'));
+ if(group.allFamily.length>1){
+  var d=el('details','family'),s=el('summary',null,'View '+(group.allFamily.length-1)+' more formats in this collection');
+  d.appendChild(s);
+  var list=el('ul');
+  for(var member of group.allFamily){
+   if(member.url===item.url)continue;
+   var li=el('li'),link=el('a',null,member.title.replace(/^.*? — /,''));
+   link.href=member.url;li.appendChild(link);list.appendChild(li);
+  }
+  d.appendChild(list);
+  d.appendChild(el('p','caveat','These additional formats may not match your selected audience or filters.'));
+  article.appendChild(d);
+ }
+ return article;
+}
+function render(changeURL){
+ var result=engine.search(catalog,state),results=by('lab-results');
+ results.replaceChildren();
+ var visible=result.groups.slice(0,limit);
+ for(var group of visible)results.appendChild(cardFor(group));
+ by('lab-empty').hidden=result.groups.length>0;
+ by('lab-more').hidden=result.groups.length<=limit;
+ by('lab-status').textContent=result.groups.length+' groups · '+result.matches+' matching resources'+(result.groups.length>limit?' · showing '+visible.length+' groups':'');
+ if(state.q&&!result.hasDirect && result.groups.length)by('lab-status').textContent+=' · related terms';
+ var num=keys.filter(k=>!!state[k]).length+advKeys.filter(k=>!!state.advanced[k]).length;
+ by('active-filters').textContent=num?num+' active filter'+(num===1?'':'s'):'';
+ if(changeURL){var p=getParams();history.replaceState(null,'',location.pathname+(p.size?'?'+p.toString():'')+location.hash);}
+}
+function update(){limit=10;render(true);}
+function reset(){state={q:'',population:'',need:'',audience:'',advanced:{}};syncInputs();update();}
+for(var key of advKeys){
+ var sel=by('lab-'+key);
+ for(var value of data.facets[key]||[]){var opt=el('option',null,value);opt.value=value;sel.appendChild(opt);}
+ sel.addEventListener('change',function(k){return function(){state.advanced[k]=by('lab-'+k).value;update();};}(key));
+}
+state=paramsState();syncInputs();
+by('lab-form').addEventListener('submit',function(e){e.preventDefault();state.q=by('lab-q').value.slice(0,160);update();});
+by('lab-q').addEventListener('input',function(){state.q=this.value.slice(0,160);update();});
+for(var key of keys)by('lab-'+key).addEventListener('change',function(k){return function(){state[k]=by('lab-'+k).value;update();};}(key));
+by('lab-clear').addEventListener('click',reset);
+by('lab-recover').addEventListener('click',function(){state.population='';state.need='';state.audience='';state.advanced={};syncInputs();update();by('lab-q').focus();});
+by('lab-more').addEventListener('click',function(){limit+=10;render(false);});
+document.querySelectorAll('[data-example]').forEach(button=>button.addEventListener('click',function(){state.q=button.getAttribute('data-example');syncInputs();update();by('lab-q').focus();}));
+addEventListener('popstate',function(){state=paramsState();syncInputs();limit=10;render(false);});
+render(false);
+})();
