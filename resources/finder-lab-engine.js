@@ -100,7 +100,7 @@ function word(value){var v=norm(value);if(v==='developmental')return 'developmen
 function tokens(s){return [...new Set(norm(s).split(' ').map(word).filter(x=>x.length>1&&!STOP.has(x)))];}
 function queryIntent(raw){
  var q=norm(raw),topic=q.split(' ').filter((x,i,arr)=>{
-   var generic=['worksheet','worksheets','handout','handouts','printable','pdf','spanish','espanol','client','person','need','needs','wants','want','looking','trying','find','understand','understanding','struggling','struggle','with','therapist','please'];
+   var generic=['worksheet','worksheets','handout','handouts','printable','pdf','spanish','espanol','client','person','need','needs','wants','want','looking','trying','find','understand','understanding','struggling','struggle','with','therapist','clinician','clinicians','teacher','teachers','please'];
    if(generic.includes(x))return false;
    if(arr.length>=4&&['parent','parents','caregiver','caregivers','teen','teens','student'].includes(x))return false;
    if(arr.length>=3&&x==='age'&&/^\d+$/.test(arr[i+1]||''))return false;
@@ -333,7 +333,19 @@ function search(items,state){
  }
  hits.sort((a,b)=>b.score-a.score||a.item.title.localeCompare(b.item.title));
  // For no direct match, no false impression that a synonym is an exact result.
+ // When the user selects an age and the catalog has no age evidence, do not
+ // mislabel the resource as age-appropriate or make it disappear without a trace.
+ // Keep these as a visibly separate, NOT-AGE-VALIDATED set.
+ var unclassifiedGroups=[];
+ if(state&&state.population&&qTokens.length){
+   var withoutStage=items.filter(it=>it.population.length===0&&!it.acrossAges);
+   if(withoutStage.length){
+     var fallbackState=Object.assign({},state,{population:''});
+     unclassifiedGroups=search(withoutStage,fallbackState).groups.slice(0,5);
+   }
+ }
  return {groups:groupResults(hits,filtered),matches:hits.length,resources:filtered.length,query:q,
+   unclassifiedGroups:unclassifiedGroups,
    concepts:concepts.map(c=>c.label),hasDirect:strong.length>0,
    reason:qTokens.length&&!hits.length?'No indexed title or supported related concept matched.':null};
 }
