@@ -34,6 +34,7 @@ jobs:
       - run: node tests/finder-release-qa.cjs
       - run: node tests/finder-postdeploy-review.cjs
       - run: node tests/finder-source-audit.cjs
+      - run: node tests/finder-spanish-journeys.cjs
       - run: node tests/expanded-external-resources.cjs
       - run: node tests/clinical-resources-qa.cjs
       - run: node tests/thermometer-levels.cjs
