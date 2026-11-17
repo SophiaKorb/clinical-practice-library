@@ -77,6 +77,8 @@ fs.mkdirSync(dir,{recursive:true});
     }
     if(width===390&&['index','appointments','session-choice-map'].includes(slug))await page.screenshot({path:path.join(dir,'adhd-case-management-'+slug+'-390.png'),fullPage:true});
     if(width===1280&&slug==='session-packet'){
+     await page.emulateMedia({media:'print'});
+     assert(await page.locator('a.skip').isHidden(),'Focused skip link must not print in case-manager packet');
      const pdf=await page.pdf({format:'Letter',printBackground:false});
      assert(pdf.length>4000,'Case-manager worksheet PDF unexpectedly tiny');
      fs.writeFileSync(path.join(dir,'adhd-case-management-browser-print.pdf'),pdf);
