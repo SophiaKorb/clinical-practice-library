@@ -9,7 +9,7 @@ const family=data.resources.filter(r=>/^\/resources\/community\/family-community
 const youth=data.resources.filter(r=>/^\/resources\/community\/youth-community-guide-text\.html#youth-listing-\d+$/.test(r.url));
 assert.equal(family.length,170,'Family numbered listings are incomplete');
 assert.equal(youth.length,27,'Youth program headings are incomplete');
-assert.equal(data.resources.length,812,'Unexpected community catalog growth or data loss');
+assert.equal(data.resources.length,813,'Unexpected community catalog growth or data loss');
 const pages=[read('resources/community/family-community-guide-text.html'),read('resources/community/youth-community-guide-text.html')];
 for(const [i,rows] of [[0,family],[1,youth]]){
  for(const r of rows){
@@ -48,7 +48,15 @@ assert(/9649/.test(pimaCenter.referralCaution)&&/9640/.test(pimaCenter.referralC
 const project=youth.find(x=>x.url.endsWith('#youth-listing-2'));
 assert(/October 23, 2026/.test(project.referralCaution),'Expired intake date must not be treated as verified open');
 assert(!/Review edition.+Page/.test(youth.find(x=>x.url.endsWith('#youth-listing-8')).description),'Page artifact leaked into display description');
+const iam=data.resources.find(r=>r.url==='/resources/community/iamyou360.html');
+assert(iam,'IAMYOU360 missing from community index');
+assert(iam.communityTopics.includes('Foster-care transitions')&&iam.communityTopics.includes('Parenting youth support'),'IAMYOU360 cross-topic pathways absent');
+assert(iam.referralCaution.includes('unverified'),'Program-specific housing caution not indexed');
+assert(read('resources/community/iamyou360.html').includes('Hygiene Empowerment Program'),'IAMYOU360 detailed source page absent');
 const items=engine.index(data.resources);
+for(const topic of ['Housing, food & practical needs','Foster-care transitions','Peer connection & belonging','Parenting youth support']){
+ assert(engine.matchesFilters(items.find(x=>x.url===iam.url),{advanced:{'community-topic':topic}}),'IAMYOU360 not findable for '+topic);
+}
 assert.equal(items.filter(x=>engine.matchesFilters(x,{advanced:{'community-topic':'Employment & work preparation'}})).length,6,'Topic filter must match employment-only youth listings');
 for(const [q,needle] of [['Parent Aid','#listing-2'],['Project FOCUS','#youth-listing-2'],['Autism Society','#listing-67']]){
  const hits=engine.search(items,{q}).groups;
