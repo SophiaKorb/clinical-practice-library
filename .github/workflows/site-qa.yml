@@ -32,6 +32,7 @@ jobs:
       - run: node tests/birth-to-five-resources.cjs
       - run: node tests/finder-lab-ux.cjs
       - run: node tests/finder-release-qa.cjs
+      - run: node tests/adult-adhd-collection-qa.cjs
       - run: node tests/diagnosis-resource-hubs.cjs
       - run: node tests/diagnosis-release-reconciliation.cjs
       - run: node tests/expanded-external-resources.cjs
