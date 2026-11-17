@@ -41,3 +41,18 @@ footer{padding:20px 24px;text-align:center;border-top:1px solid #d6e0d7;font-siz
 @media(max-width:480px){.wrap{padding:24px 17px 45px}.top-inner{padding:14px 17px}.topic-grid{grid-template-columns:1fr}.topic-selector{padding:16px}.brand span{font-size:.75rem}.top nav{gap:11px}.top nav a{font-size:.79rem}.resource-list li{padding:13px}}
 @media print{body{background:white;color:black}.top,.topic-selector,.path-links,footer{display:none!important}.wrap{padding:0;width:100%}.resource-list{display:block}.resource-list li{break-inside:avoid;margin:8px 0;padding:8px;border:1px solid #bbb}.highlight{border-color:#444}.resource-meta,.resource-description{color:#333}a{color:black}.section{break-inside:avoid-page}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* One parent toolkit, its companion formats nested instead of separate resource cards. */
+.resource-list>li.resource-bundle{grid-column:1/-1;display:grid;grid-template-columns:minmax(220px,.85fr) minmax(0,1.5fr);gap:1.5rem;padding:1.35rem 1.5rem;border-color:#adc4b4;border-radius:14px;box-shadow:0 3px 12px rgba(21,63,45,.04)}
+.resource-bundle .bundle-primary,.resource-bundle .bundle-companions{min-width:0}
+.resource-bundle .bundle-eyebrow{margin:0 0 .45rem;font-size:.73rem;letter-spacing:.08em;text-transform:uppercase;font-weight:790;color:#476957}
+.resource-bundle h4{font-size:clamp(1.15rem,2vw,1.4rem);margin:0 0 .5rem;line-height:1.3}
+.resource-bundle .bundle-primary h4 a{font-weight:790}
+.resource-bundle .resource-description{margin:0;font-size:.92rem}
+.resource-bundle .bundle-companions{border-left:1px solid #d3e0d5;padding-left:1.4rem}
+.resource-bundle .bundle-label{margin:0 0 .75rem;font-size:.85rem;font-weight:760;color:#375647}
+.resource-bundle .bundle-links{display:flex;flex-wrap:wrap;gap:.55rem}
+.resource-bundle .bundle-links a{display:inline-block;background:#f4f8f5;border:1px solid #c4d7cb;border-radius:8px;padding:.55rem .72rem;text-decoration:none;font-size:.87rem;line-height:1.35;font-weight:660}
+.resource-bundle .bundle-links a:hover{text-decoration:underline;background:#e8f2e9}
+@media(max-width:720px){.resource-list>li.resource-bundle{grid-template-columns:1fr;gap:1rem;padding:1.1rem}.resource-bundle .bundle-companions{border-left:0;border-top:1px solid #d3e0d5;padding:1rem 0 0}}
+@media print{.resource-list>li.resource-bundle{display:block;border:1px solid #777;box-shadow:none}.resource-bundle .bundle-companions{border:0;border-top:1px solid #888;padding:12px 0 0;margin-top:12px}.resource-bundle .bundle-links a{background:#fff;color:#111;border:1px solid #999}}
