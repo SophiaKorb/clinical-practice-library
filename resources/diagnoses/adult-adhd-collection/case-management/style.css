@@ -2,3 +2,8 @@
 /* Writing space is the actual border; repeated underscore glyphs are decorative and overflow on narrow screens. */
 .line span[aria-hidden="true"]{display:none}
 .line{overflow-wrap:anywhere}
+
+/* Keep semantic comparison tables usable without horizontal scrolling at 320–390px. */
+.cm-table{table-layout:fixed;max-width:100%}
+.cm-table th,.cm-table td{overflow-wrap:anywhere;min-width:0}
+@media(max-width:650px){.cm-table th,.cm-table td{padding:.5rem;font-size:.94rem}}
