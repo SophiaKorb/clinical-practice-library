@@ -47,7 +47,7 @@ for(const slug of caseFiles){
  assert(html.includes('<main')&&html.includes('name="viewport"')&&html.includes('</html>'),'Case manager HTML scaffold '+slug);
  assert(html.includes('class="skip"'),'Case manager keyboard skip '+slug);
  assert(html.includes('case-management/')||slug!=='index','Case management link '+slug);
- const ids=[...html.matchAll(/\\bid="([^"]+)"/g)].map(x=>x[1]);
+ const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(x=>x[1]);
  assert.equal(new Set(ids).size,ids.length,'Case manager unique IDs '+slug);
  for(const m of html.matchAll(/href="#([^"]+)"/g))assert(ids.includes(m[1]),'Missing local anchor '+slug+' '+m[1]);
  assert(additions.some(r=>r.url==='/'+p),'Missing case management finder record '+slug);
