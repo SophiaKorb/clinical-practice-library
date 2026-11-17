@@ -50,7 +50,7 @@ function syncInputs(){
  by('lab-q').value=state.q;
  for(var key of keys)by('lab-'+key).value=state[key];
  for(var a of advKeys)by('lab-'+a).value=state.advanced[a]||'';
- if(Object.values(state.advanced).some(Boolean))by('lab-advanced').open=true;
+ if(Object.entries(state.advanced).some(([key,value])=>key!=='community'&&!!value))by('lab-advanced').open=true;
 }
 function cardFor(group){
  var item=group.best.item,article=el('article','result-card');
@@ -98,7 +98,7 @@ function render(changeURL){
  if(changeURL){var p=getParams();history.replaceState(null,'',location.pathname+(p.size?'?'+p.toString():'')+location.hash);}
 }
 function update(){limit=10;render(true);}
-function reset(){state={q:'',population:'',need:'',audience:'',advanced:{},legacyRole:''};syncInputs();update();}
+function reset(){state={q:'',scope:'',service:'',population:'',need:'',audience:'',advanced:{},legacyRole:''};syncInputs();update();}
 for(var key of advKeys){
  var sel=by('lab-'+key);
  for(var value of data.facets[key]||[]){var opt=el('option',null,value);opt.value=value;sel.appendChild(opt);}
@@ -109,7 +109,7 @@ by('lab-form').addEventListener('submit',function(e){e.preventDefault();state.q=
 by('lab-q').addEventListener('input',function(){state.q=this.value.slice(0,160);update();});
 for(var key of keys)by('lab-'+key).addEventListener('change',function(k){return function(){state[k]=by('lab-'+k).value;if(k==='audience')state.legacyRole='';update();};}(key));
 by('lab-clear').addEventListener('click',reset);
-by('lab-recover').addEventListener('click',function(){state.population='';state.need='';state.audience='';state.advanced={};state.legacyRole='';syncInputs();update();by('lab-q').focus();});
+by('lab-recover').addEventListener('click',function(){state.scope='';state.service='';state.population='';state.need='';state.audience='';state.advanced={};state.legacyRole='';syncInputs();update();by('lab-q').focus();});
 by('lab-more').addEventListener('click',function(){limit+=10;render(false);});
 document.querySelectorAll('[data-example]').forEach(button=>button.addEventListener('click',function(){state.q=button.getAttribute('data-example');syncInputs();update();by('lab-q').focus();}));
 addEventListener('popstate',function(){state=paramsState();syncInputs();limit=10;render(false);});
