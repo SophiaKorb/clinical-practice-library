@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="Find practical clinical, family, school, assessment, and community resources using ordinary-language questions.">
-<title>Find clinical resources | Clinical Practice Library</title>
+<title>Find clinical and community resources | Clinical Practice Library</title>
 <link rel="stylesheet" href="/resources/finder-lab.css">
 <script defer src="/resources/clinical-finder-data.js"></script>
 <script defer src="/resources/finder-lab-engine.js"></script>
@@ -19,25 +19,30 @@
 <main id="content">
   <div class="intro">
     <p class="eyebrow">A simpler way to find what you need</p>
-    <h1>What would you like help finding?</h1>
-    <p>Describe a situation, topic, or resource in ordinary language. Search matches titles, clinical topics, and selected related terms without guessing diagnoses.</p>
-    <p class="quick-links">Looking for very young children? <a href="/resources/birth-to-five/index.html">Browse Birth–5 resources and Tucson/Pima pathways</a>. <a href="/resources/community/expanded-external-resources.html">Browse all 77 curated publisher resources</a>, or <a href="/resources/clinical-resource-finder-classic.html">use the original detailed finder</a>.</p>
+    <h1>Find clinical and community resources</h1>
+    <p>Search clinical guidance, practical tools, and community-guide listings together. Describe a need or choose a collection below; community listings are navigation aids, not proof of service eligibility.</p>
+    <p class="quick-links"><a href="/resources/community/">Browse community resources</a> · <a href="/resources/community/youth-community-guide-text.html">Browse youth and transition-age listings</a>. Looking for very young children? <a href="/resources/birth-to-five/index.html">Browse Birth–5 resources and Tucson/Pima pathways</a>. <a href="/resources/community/expanded-external-resources.html">Browse all 77 curated publisher resources</a>, or <a href="/resources/clinical-resource-finder-classic.html">use the original detailed finder</a>.</p>
   </div>
   <section id="lab-search" aria-labelledby="search-title">
     <h2 id="search-title" class="visually-hidden">Search library resources</h2>
     <form id="lab-form" role="search" novalidate>
-      <label for="lab-q" class="main-label">Clinical question or topic</label>
-      <div class="search-box"><input id="lab-q" name="q" type="search" autocomplete="off" maxlength="160" placeholder="e.g., child struggling with transitions" aria-describedby="search-hint"><button type="submit" class="search-action">Find resources</button></div>
+      <label for="lab-q" class="main-label">What are you looking for?</label>
+      <div class="search-box"><input id="lab-q" name="q" type="search" autocomplete="off" maxlength="160" placeholder="e.g., foster care or housing for young adults" aria-describedby="search-hint"><button type="submit" class="search-action">Find resources</button></div>
       <p id="search-hint" class="hint">Do not enter client names or identifying information. Search stays in this browser, but terms appear in the shareable URL.</p>
       <div class="examples" aria-label="Example searches"><span>Try:</span>
         <button type="button" data-example="school refusal">School refusal</button>
         <button type="button" data-example="tantrums">Tantrums</button>
         <button type="button" data-example="IEP">IEP</button>
+        <button type="button" data-example="Project FOCUS">TAY support</button>
+        <button type="button" data-example="Parent Aid">Community organization</button>
         <button type="button" data-example="dissociation grounding">Dissociation + grounding</button>
       </div>
       <fieldset class="quick-filters">
         <legend>Narrow your results <span>(optional)</span></legend>
         <div class="filter-grid">
+          <div><label for="lab-scope">Resource collection</label><select id="lab-scope" name="scope"><option value="">All clinical + community</option><option value="community">Community resources</option><option value="noncommunity">Clinical and other CPL resources</option></select></div>
+          <div><label for="lab-community">Community guide</label><select id="lab-community"><option value="">Both community guides</option><option value="family">Family &amp; parenting listings</option><option value="transition-age">TAY / youth transition listings</option></select></div>
+          <div><label for="lab-service">Service mentioned in listing</label><select id="lab-service" name="service"><option value="">Any service</option><option value="housing">Housing / shelter</option><option value="employment">Employment / work</option><option value="foster">Foster care</option><option value="parenting">Parenting / pregnancy</option><option value="food">Food</option><option value="transportation">Transportation</option><option value="disability">Disability supports</option></select></div>
           <div><label for="lab-population">Who is this for?</label>
           <select name="population" id="lab-population">
             <option value="">All populations</option>
@@ -79,10 +84,10 @@
           <div><label for="lab-stage">Original developmental stage</label><select id="lab-stage" data-advanced="stage"><option value="">All stages</option></select></div>
           <div><label for="lab-task">Clinical task</label><select id="lab-task" data-advanced="task"><option value="">All tasks</option></select></div>
           <div><label for="lab-step">Pathway step</label><select id="lab-step" data-advanced="step"><option value="">All steps</option></select></div>
-          <div><label for="lab-community">Community guide</label><select id="lab-community"><option value="">All resources</option><option value="family">Family &amp; parenting listings</option><option value="transition-age">Youth &amp; transition-age listings</option></select></div>
+          
           <div><label for="lab-place">Location named in listing</label><select id="lab-place"><option value="">Any location</option><option>Tucson</option><option>Marana</option><option>Catalina</option><option>Oro Valley</option><option>Oracle</option><option>San Manuel</option><option>Mammoth</option><option>Kearny</option><option>Winkelman</option><option>Pima County</option><option>Pinal County</option><option>Copper Corridor</option></select></div>
         </div>
-        <p class="hint">These filters use the original discovery tags. Missing tags do not mean a resource is clinically irrelevant.</p>
+        <p class="hint">Community-guide and place filters reflect only indexed guide records. Service mentions match words in the original listing title, description or indexed terms; they do not certify program scope, availability or eligibility.</p>
       </details>
       <div class="form-actions"><button id="lab-clear" type="button" class="subtle">Clear search and filters</button><span class="note" id="active-filters"></span></div>
     </form>
@@ -90,7 +95,7 @@
   <section class="results-wrap" aria-labelledby="results-title">
     <div class="results-head"><div><p class="eyebrow">Resource matches</p><h2 id="results-title">Search results</h2></div><p id="lab-status" role="status" aria-live="polite" aria-atomic="true"></p></div>
     <div id="lab-results" class="results"></div>
-    <div id="lab-empty" class="empty" hidden><h3>No confident matches yet</h3><p>Try fewer words, remove a filter, or search a broader clinical topic. A missing result is not a finding about clinical relevance.</p><button type="button" id="lab-recover">Remove filters</button></div>
+    <div id="lab-empty" class="empty" hidden><h3>No confident matches yet</h3><p>Try fewer words, remove a filter, or browse the community guides directly. A missing result is not a finding about clinical relevance.</p><button type="button" id="lab-recover">Remove filters</button></div>
     <button id="lab-more" type="button" class="more" hidden>Show more matches</button>
   </section>
   <aside class="scope"><h2>About these results</h2><p>Results use the current CPL catalog. Population tags indicate possible relevance, not verified developmental suitability. Direct-use audiences and eligibility are not inferred where metadata is ambiguous. Check the resource, provider source, scope, and clinical fit before use.</p><p><a href="/resources/clinical-resource-finder-classic.html">Open the classic detailed finder</a> · <a href="/resources/complete-resource-inventory.html">Browse the complete inventory</a></p></aside>
