@@ -253,7 +253,14 @@ function relatedScore(item,concepts){
  }
  return best;
 }
+function isCommunityResource(item){
+ var r=item.original||{},u=item.url||'';
+ return !!r.communityCollection||!!r.communityTopic||safeArray(r.communityTopics).length>0||
+    starts(u,'/resources/community/')||item.type==='referral';
+}
 function matchesFilters(item,state){
+ if(state.scope==='community'&&!isCommunityResource(item))return false;
+ if(state.scope==='noncommunity'&&isCommunityResource(item))return false;
  if(state.population && !item.population.includes(state.population))return false;
  if(state.need && item.type!==state.need)return false;
  if(state.audience && !item.audience.includes(state.audience))return false;
