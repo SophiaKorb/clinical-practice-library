@@ -46,6 +46,16 @@ for(const [url,excerpt] of [
  assert(read(url.slice(1)).toLowerCase().includes(excerpt.toLowerCase()),
   'Source introduction no longer supports metadata: '+url+' / '+excerpt);
 }
+// A specific functional concern must not expand to unrelated generic diagnosis directories.
+const peer=engine.search(idx,{q:'autistic child being bullied in school',population:'children',audience:'caregiver'});
+assert.equal(peer.groups[0]?.best.item.url,'/resources/handouts/friendship-peer-safety-family-guide.html',
+  'Peer-safety family guide must lead peer bullying journey');
+assert(!peer.groups.some(g=>/developmental-disability-autism-behavioral-health/.test(g.best.item.url)),
+  'Bullying query returned unrelated DDD/Regional Center eligibility guides');
+assert(!peer.groups.some(g=>g.best.item.language==='es'),'English bullying query pulled unrelated Spanish-only resources');
+const span=engine.search(idx,{q:'Spanish child autism family guide',population:'children',audience:'caregiver'});
+assert.equal(span.groups[0]?.best.item.url,'/resources/es/handouts/autismo-guia-rapida-familias.html',
+  'Explicit Spanish intent must prioritize Spanish family source');
 const young=byUrl.get('/resources/handouts/when-a-young-child-has-more-feeling-than-language.html');
 assert.deepEqual(young.population,['birth5'],'Preschool caregiver page incorrectly indexed for teens');
 const early=byUrl.get('/resources/therapy/early-childhood-regulation-communication.html');
