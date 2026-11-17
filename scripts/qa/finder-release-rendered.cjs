@@ -85,6 +85,37 @@ fs.mkdirSync(dir,{recursive:true});
    await page.goto(base+'/resources/clinical-resource-finder-classic.html?q=IEP',{waitUntil:'networkidle'});
    await page.waitForSelector('.finder-card');
    assert(await page.locator('.finder-card').count()>0,'Preserved classic finder not functional');
+   // Source-preserving online guide editions: complete, navigable, and functional.
+   for(const guide of [
+    {slug:'family-guide',count:170,query:'Parent Aid',target:'listing-2'},
+    {slug:'transition-age-guide',count:28,query:'housing',target:'iam-you-360'}
+   ]){
+    const webGuide=base+'/resources/community/'+guide.slug+'.html';
+    const online=await page.goto(webGuide,{waitUntil:'networkidle'});
+    assert.equal(online.status(),200,'Online community guide route is unavailable: '+guide.slug);
+    assert.equal(await page.locator('.entry').count(),guide.count,'Online community guide incomplete: '+guide.slug);
+    assert(await page.locator('#'+guide.target).count()>0,'Direct entry anchor missing from online guide');
+    assert(await page.locator('.contents a').count()>0,'Accessible section navigation missing');
+    const guideOverflow=await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth+1);
+    assert(!guideOverflow,'Online community guide overflows at '+width+': '+guide.slug);
+    await page.locator('#guide-query').fill(guide.query);
+    const shown=await page.locator('.entry:visible').count();
+    assert(shown>=1&&shown<guide.count,'Online guide client-side search failed: '+guide.slug);
+    assert((await page.locator('#guide-status').innerText()).includes('of '+guide.count),'Guide status not announced');
+    await page.locator('#guide-clear').click();
+    assert.equal(await page.locator('.entry:visible').count(),guide.count,'Guide reset did not restore full source set');
+    if(width===390){
+      await page.addScriptTag({path:require.resolve('axe-core')});
+      const audit=await page.evaluate(async()=>await window.axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa']}}));
+      assert.equal(audit.violations.length,0,'Online guide axe violations: '+guide.slug+' '+JSON.stringify(audit.violations.map(v=>v.id)));
+    }
+    if(width===1280){
+      await page.screenshot({path:path.join(dir,'community-'+guide.slug+'-1280.png'),fullPage:true});
+      const webPdf=await page.pdf({format:'Letter',printBackground:false});
+      assert(webPdf.length>20000,'Guide print/PDF output unexpectedly empty: '+guide.slug);
+      fs.writeFileSync(path.join(dir,'community-'+guide.slug+'-print.pdf'),webPdf);
+    }
+   }
    await page.goto(base+'/resources/clinical-resource-finder.html',{waitUntil:'networkidle'});
    await page.locator('#lab-q').focus();
    assert.equal(await page.evaluate(()=>document.activeElement.id),'lab-q','Search input focus missing');
