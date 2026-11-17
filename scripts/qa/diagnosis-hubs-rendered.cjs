@@ -48,6 +48,8 @@ fs.mkdirSync(dir,{recursive:true});
     assert.equal(accessibility.violations.filter(v=>['critical','serious'].includes(v.impact)).length,0,'Collection serious axe violation '+slug+' '+width+': '+JSON.stringify(accessibility.violations.map(v=>v.id)));
     if(width===390||width===1280)await page.screenshot({path:path.join(dir,'adhd-collection-'+slug+'-'+width+'.png'),fullPage:true});
     if(width===1280&&slug==='printable-worksheets'){
+     await page.emulateMedia({media:'print'});
+     assert(await page.locator('a.skip').isHidden(),'Focused skip link must not print in adult ADHD worksheets');
      const pdf=await page.pdf({format:'Letter',printBackground:false});
      assert(pdf.length>4000,'Print worksheet PDF unexpectedly tiny');
      fs.writeFileSync(path.join(dir,'adhd-collection-worksheets-print.pdf'),pdf);
