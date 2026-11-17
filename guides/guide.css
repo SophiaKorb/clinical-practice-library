@@ -1,6 +1,6 @@
 
 :root{
-  --paper:#f6f1e8;--white:#fffdf9;--ink:#1f2a24;--muted:#68736c;--green:#244b3b;--green-2:#35634f;
+  --paper:#f6f1e8;--white:#fffdf9;--ink:#1f2a24;--muted:#465a4e;--green:#244b3b;--green-2:#35634f;
   --green-soft:#e6eee8;--line:#d8d2c8;--gold:#9d7444;--gold-soft:#f2e7d5;--max:940px
 }
 *{box-sizing:border-box}html{scroll-behavior:smooth}
