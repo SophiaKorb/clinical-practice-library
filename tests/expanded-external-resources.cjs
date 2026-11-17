@@ -8,7 +8,7 @@ const data=JSON.parse(raw.replace(/^globalThis\.CPLFinderData\s*=\s*/,'').replac
 const base='/resources/community/expanded-external-resources.html#';
 const rows=data.resources.filter(r=>r.url.startsWith(base));
 assert.equal(rows.length,77,'All 77 unique external publisher pages must be independently indexed');
-assert.equal(data.resources.length,615,'Must retain published 609 + six Birth–5 records');
+assert.equal(data.resources.length,812,'Must retain original 615 plus 197 community guide listings');
 const urls=new Set(),anchors=new Set(),groups=new Map(),domains=new Set();
 const allowed=['nimh.nih.gov','childmind.org','cdc.gov','understood.org','acl.gov','youth-voice.org','ilru.org','asha.org','samhsa.gov','findtreatment.gov','findsupport.gov','988lifeline.org','ptsd.va.gov','nctsn.org','azahcccs.gov','ed.gov'];
 for(const r of rows){
@@ -32,4 +32,4 @@ assert(page.includes('<main id="content" tabindex="-1">'),'Missing focusable lan
 assert(!page.includes('Current Colorful resource'),'No internal catalog noise');
 const finder=fs.readFileSync(path.join(root,'resources/clinical-resource-finder.html'),'utf8');
 assert(finder.includes('href="'+base.split('#')[0]+'"'),'Finder fails to link the collection');
-console.log('PASS 77 unique HTTPS publisher resources / 77 anchors / 615 indexed entries / '+domains.size+' publisher domains; validated category, roles, ages and tasks.');
+console.log('PASS 77 unique HTTPS publisher resources / 77 anchors / 812 indexed entries / '+domains.size+' publisher domains; validated category, roles, ages and tasks.');
