@@ -14,14 +14,15 @@ Under `resources/diagnoses/adult-adhd-collection/case-management/`:
 - `session-packet.html`: three large-print paper forms—barrier, one action, review.
 - `session-choice-map.html`: twelve category-driven, three-step person-led visual selector; no text entry or storage.
 - `youth-adhd-support.html`: youth voice, school access, CFT preparation, family collaboration, transition-age planning and youth-authored print page.
+- Six additional youth-authored visual sequences with blank printable sheets: `youth-morning`, `youth-schoolwork`, `youth-transitions`, `youth-cft`, `youth-repair`, `youth-stepup`. Each starts with youth choice; school or caregiver communication is subject to consent/authorization and actual policy.
 - `style.css`: scoped print, desktop, mobile, high readability.
 - Existing adult ADHD collection index links to the case-management toolkit.
 
 ## Index and compatibility
 - The protected `resources/clinical-finder-data.js` remains the canonical **615-record** published source, frozen blob SHA `93105c462d65d0b7766cc84564264ed345379fb7`.
-- The existing `finder-overlay.js` adds 25 records at runtime: the 8 prior adult expansion records plus 16 case-management resources and one youth guide. Expected runtime count on live finder and dynamic diagnosis index is **640**, without affecting the classic finder or canonical file.
+- The existing `finder-overlay.js` adds 25 records at runtime: the 8 prior adult expansion records plus 16 case-management resources and one youth guide plus six youth activity sheets. Expected runtime count on live finder and dynamic diagnosis index is **640**, without affecting the classic finder or canonical file.
 - The added records include case-management roles and adult or school-age stage tags. These are discovery categories, not indications or program eligibility.
-- Regression tests and rendered diagnosis index assertions updated to the 640 / 44 ADHD resource counts (19 previously tagged + 25 supplementary).
+- Regression tests and rendered diagnosis index assertions updated to the 646 / 50 ADHD resource counts (19 previously tagged + 25 supplementary).
 
 ## Primary sources checked
 1. NICE NG87, https://www.nice.org.uk/guidance/ng87/chapter/recommendations — ADHD information, shared treatment planning, care coordination and environmental supports. Do not transpose UK legal rules.
@@ -34,8 +35,8 @@ Under `resources/diagnoses/adult-adhd-collection/case-management/`:
 8. AHCCCS Transition-Age Youth, https://www.azahcccs.gov/AHCCCS/HealthcareAdvocacy/TransitionAgeYouth.html — youth-directed transition planning.
 
 ## Source-level QA coverage
-- `tests/adult-adhd-collection-qa.cjs` checks the original 615 source, overlay idempotence, exact 25 added records, generated local paths, IDs, fragment links, adult module and youth inclusion, role/stage indexing, no request/storage path in interactive map, and inbound linking.
-- `scripts/qa/diagnosis-hubs-rendered.cjs` checks all 17 case-management pages at 1280, 640, 390, 320 CSS px for response, heading, scroll overflow and keyboard skip. It interacts with the choice map, runs axe on six selected pages at each width, prints sample PDF, checks the dynamic ADHD index count and confirms non-ADHD counts unchanged.
+- `tests/adult-adhd-collection-qa.cjs` checks the original 615 source, overlay idempotence, exact 31 added records, generated local paths, IDs, fragment links, adult module and youth inclusion, role/stage indexing, no request/storage path in interactive map, and inbound linking.
+- `scripts/qa/diagnosis-hubs-rendered.cjs` checks all 23 case-management pages at 1280, 640, 390, 320 CSS px for response, heading, scroll overflow and keyboard skip. It interacts with the choice map, runs axe on six selected pages at each width, prints sample PDF, checks the dynamic ADHD index count and confirms non-ADHD counts unchanged.
 - These are source and automated checks; not native screen reader, actual 200%/400% zoom, physical print, PDF tagging, rights clearance or clinical supervision.
 
 ## Publication and clinical gates
