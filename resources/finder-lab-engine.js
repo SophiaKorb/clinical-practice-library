@@ -90,6 +90,8 @@ var AUDIENCE_EVIDENCE={
 // Verified-page overlay is a discovery aid only: no underlying resource content is altered.
 var SOURCE_REVIEW=(typeof module==='object'&&module.exports&&typeof require==='function')
   ?require('./finder-source-review.js'):(typeof globalThis!=='undefined'&&globalThis.CPLFinderSourceReview||{});
+var SPANISH_EQUIVALENTS=(typeof module==='object'&&module.exports&&typeof require==='function')
+  ?require('./finder-spanish-equivalents.js'):(typeof globalThis!=='undefined'&&globalThis.CPLFinderSpanishEquivalents||{});
 var NEEDS=['clinical','worksheet','caregiver','assessment','school','referral','training','education','collection'];
 var AUDIENCES=['client','caregiver','clinician','case_manager','school_team','trainee'];
 var POPULATIONS=['birth5','children','teens','adults'];
@@ -196,7 +198,8 @@ function describe(r,type){
 }
 function meta(r){
  var reviewed=SOURCE_REVIEW[r.url]||null,type=reviewed&&reviewed.type||typeFor(r),
-   audience=audienceFor(r),population=populationFor(r),base=familyFor(r);
+   audience=audienceFor(r),population=populationFor(r),duplicate=SPANISH_EQUIVALENTS[r.url]||null,
+   base=duplicate?duplicate.family:familyFor(r);
  if(reviewed){
    if(reviewed.audience)audience.values=[...reviewed.audience];
    if(reviewed.population){
@@ -208,7 +211,9 @@ function meta(r){
    audience:audience.values,audienceUndifferentiated:reviewed?false:audience.undifferentiated,
    population:population.values,acrossAges:reviewed&&reviewed.population?false:population.across,
    populationNote:population.note,description:reviewed&&reviewed.description||describe(r,type),
-   family:base,reviewedSource:!!reviewed,reviewTerms:reviewed&&reviewed.terms||[],
+   family:base,verifiedSpanishEquivalent:!!duplicate,duplicateStatus:duplicate&&duplicate.status||'',
+   preferredSpanishUrl:duplicate&&duplicate.canonical||'',reviewedSource:!!reviewed,
+   reviewTerms:reviewed&&reviewed.terms||[],
    provenance:reviewed?'Reviewed against original CPL page introduction; not validated suitability':'Derived only from catalog, title and path; not validated suitability',
    isExternal:!!r.externalUrl,language:/^\/resources\/es\//.test(r.url||'')?'es':'en',
    format:(r.url||'').endsWith('.pdf')?'PDF':'Web page'};
@@ -343,7 +348,8 @@ function search(items,state){
      var audienceFit=intent.audience&&h.item.audience.includes(intent.audience)?12:0;
      var populationFit=intent.population&&h.item.population.includes(intent.population)?12:0;
      var worksheetFit=intent.worksheet&&score>=75&&(h.item.type==='worksheet'||h.item.type==='education')?420:0;
-     var finalScore=score+languageFit+audienceFit+populationFit+worksheetFit+Math.min(1,(h.item.original.priority||0)/1000);
+     var versionFit=h.item.duplicateStatus==='preferred'?6:h.item.duplicateStatus==='older-linked'?-6:0;
+     var finalScore=score+languageFit+audienceFit+populationFit+worksheetFit+versionFit+Math.min(1,(h.item.original.priority||0)/1000);
      if(finalScore>=1)hits.push({item:h.item,score:finalScore,reason:reason});
    }
  }
