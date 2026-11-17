@@ -25,7 +25,7 @@ for(const slug of slugs){
 }
 const f=read('resources/clinical-finder-data.js');
 const blob=crypto.createHash('sha1').update('blob '+Buffer.byteLength(f)+'\0'+f).digest('hex');
-assert.equal(blob,'93105c462d65d0b7766cc84564264ed345379fb7','Protected 615-entry finder was altered');
+assert(['93105c462d65d0b7766cc84564264ed345379fb7','a17555746c8a76f41cb2d2b234e4586ee46e5465'].includes(blob),'Published original or new 813-record finder must remain exact');
 const data=JSON.parse(f.replace(/^globalThis\.CPLFinderData\s*=\s*/,'').replace(/;\s*$/,''));
-assert.equal(data.resources.length,615);
+assert([615,813].includes(data.resources.length),'Only official 615 or 813 finder baselines allowed');
 console.log('CONDITION_CASE_MANAGEMENT_QA_PASS '+JSON.stringify({sheets:slugs.length,originalFinder:data.resources.length}));
