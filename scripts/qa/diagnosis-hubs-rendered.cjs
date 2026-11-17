@@ -50,12 +50,12 @@ fs.mkdirSync(dir,{recursive:true});
    await page.addScriptTag({path:require.resolve('axe-core')});
    const axe=await page.evaluate(async()=>window.axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa']}}));
    fs.writeFileSync(path.join(dir,'axe-guide-'+width+'.json'),JSON.stringify({violations:axe.violations,incomplete:axe.incomplete},null,2));
-   assert.equal(axe.violations.filter(x=>x.impact==='critical'||x.impact==='serious').length,0,'Serious axe failure '+width);
+   assert.equal(axe.violations.filter(x=>x.impact==='critical'||x.impact==='serious').length,0,'Serious original guide axe failure '+width+': '+JSON.stringify(axe.violations.map(v=>({id:v.id,impact:v.impact,nodes:v.nodes.slice(0,3).map(n=>n.html)}))));
    await page.goto(base+'/resources/diagnoses/adult-adhd.html',{waitUntil:'networkidle'});
    await page.addScriptTag({path:require.resolve('axe-core')});
    const adultAxe=await page.evaluate(async()=>window.axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa']}}));
    fs.writeFileSync(path.join(dir,'axe-adult-'+width+'.json'),JSON.stringify({violations:adultAxe.violations,incomplete:adultAxe.incomplete},null,2));
-   assert.equal(adultAxe.violations.filter(x=>x.impact==='critical'||x.impact==='serious').length,0,'Serious adult guide accessibility failure '+width);
+   assert.equal(adultAxe.violations.filter(x=>x.impact==='critical'||x.impact==='serious').length,0,'Serious adult guide accessibility failure '+width+': '+JSON.stringify(adultAxe.violations.map(v=>({id:v.id,impact:v.impact,nodes:v.nodes.slice(0,3).map(n=>n.html)}))));
    if(width===1280){
     const pdf=await page.pdf({format:'Letter',printBackground:false});
     assert(pdf.length>10000,'Printable guide unexpectedly tiny');
