@@ -33,6 +33,7 @@ jobs:
       - run: node tests/finder-lab-ux.cjs
       - run: node tests/finder-release-qa.cjs
       - run: node tests/diagnosis-resource-hubs.cjs
+      - run: node tests/diagnosis-release-reconciliation.cjs
       - run: node tests/expanded-external-resources.cjs
       - run: node tests/clinical-resources-qa.cjs
       - run: node tests/thermometer-levels.cjs
