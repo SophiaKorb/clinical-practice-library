@@ -47,13 +47,13 @@ h2{font-size:clamp(1.36rem,2vw,1.7rem);letter-spacing:-.02em;line-height:1.22;ma
 #lab-status{color:#5a7065;font-size:.86rem;margin:0 0 3px}
 .results{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .result-card{border:1px solid #d1ded4;border-radius:13px;background:white;min-width:0;padding:21px 22px;display:flex;flex-direction:column;gap:10px}
-.result-card h3{font-size:1.08rem;line-height:1.32;margin:0;color:#193e34;overflow-wrap:anywhere}
+.result-card h3{font-size:1.14rem;line-height:1.35;margin:0;color:#193e34;overflow-wrap:anywhere}
 .result-card h3 a{color:inherit}
-.result-card p{margin:0;color:#465e52;font-size:.93rem;line-height:1.6}
+.result-card p{margin:0;color:#465e52;font-size:1rem;line-height:1.58}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
-.chip{border-radius:7px;padding:3px 9px;background:#edf5ef;color:#325c46;font-size:.73rem;font-weight:740}
+.chip{border-radius:7px;padding:3px 9px;background:#edf5ef;color:#325c46;font-size:.8rem;font-weight:740}
 .chip--neutral{background:#f1f0e9;color:#4a5b52}
-.match-explain{font-size:.77rem!important;color:#66796e!important}
+.match-explain{font-size:.84rem!important;color:#66796e!important}
 .family{margin-top:auto;border-top:1px solid #e7ede8;padding-top:11px}
 .family summary{cursor:pointer;color:#245b4d;font-weight:660;font-size:.85rem}
 .family ul{padding-left:20px;margin:10px 0 0;font-size:.86rem;line-height:1.65}
