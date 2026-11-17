@@ -213,7 +213,10 @@ function index(records){
 function textFields(item){
  var r=item.original,tags=r.tags||{};
  var canonical=s=>norm(s).split(' ').map(word).join(' ');
- var title=canonical(r.title),url=canonical((r.url||'').split('#')[0]),terms=canonical(safeArray(r.searchTerms).join(' ')),
+ var title=canonical(r.title),url=canonical((r.url||'').split('#')[0]),
+   // TAY is a navigation synonym for the *existing* transition-age guide group,
+   // not a claim about an individual program's age range or eligibility.
+   terms=canonical(safeArray(r.searchTerms).join(' ')+(r.communityCollection==='transition-age'?' TAY transition age':'')),
    metadata=canonical(Object.values(tags).flat().join(' '));
  return {title:title,url:url,terms:terms,tags:metadata};
 }
