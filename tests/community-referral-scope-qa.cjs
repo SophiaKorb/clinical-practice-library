@@ -1,0 +1,37 @@
+'use strict';
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const root=path.resolve(__dirname,'..');
+const read=p=>fs.readFileSync(path.join(root,p),'utf8');
+const data=JSON.parse(read('resources/clinical-finder-data.js').replace(/^globalThis\.CPLFinderData\s*=\s*/,'').replace(/;\s*$/,''));
+const {matchesAge}=require('../resources/clinical-finder.js');
+const loc=read('resources/community/index.html');
+const online=read('resources/community/online-lgbtq-resources.html');
+const finder=read('resources/clinical-resource-finder.html');
+const css=read('resources/clinical-finder.css');
+const record=url=>{const r=data.resources.find(x=>x.url===url);assert(r,'Missing '+url);return r};
+const pride=record('/resources/community/index.html#pride');
+assert(!matchesAge(pride,'children'),'University campus space is not a child service');
+assert(!matchesAge(pride,'teens'),'Do not imply adolescent eligibility without a published age policy');
+assert(matchesAge(pride,'adults'),'University campus space must remain in adult finder');
+assert(!pride.minimumAge,'Do not invent a numeric minimum age for the campus space');
+for(const [fragment,min] of [['eon',13],['trevor-space',13],['youth-guide',14]]){
+ const url=fragment==='trevor-space'?'/resources/community/online-lgbtq-resources.html#'+fragment:'/resources/community/index.html#'+fragment;
+ const r=record(url);
+ assert.equal(r.minimumAge,min,'Provider-grounded age evidence altered for '+fragment);
+ assert(!matchesAge(r,'children'),'Under-13 filter erroneously shows '+fragment);
+ assert(matchesAge(r,'teens'),'Teen discovery lost '+fragment);
+}
+const scarleteen=record('/resources/community/online-lgbtq-resources.html#scarleteen');
+assert(!scarleteen.minimumAge,'Do not age-gate Scarleteen public education using the separate 13+ direct-service policy');
+assert(online.includes('Separate direct help (chat, text and message boards) is for ages 13 and up; public reading materials have no stated minimum age.'),'Scarleteen service-specific age disclosure missing');
+assert(online.includes('href="https://translifeline.org/hotline/"'),'Canonical primary-provider hotline missing');
+assert(!online.includes('href="https://apply.translifeline.org/hotline/"'),'Outdated alternate hotline destination');
+assert(loc.includes('older passport instructions that conflict with current')&&loc.includes('https://travel.state.gov/en/passports/apply/unique-needs/sex-markers.html'),'STARS legal caveat must link to issuing agency');
+assert(finder.includes('<span class="cpl-finder-caret" aria-hidden="true"></span>'),'Decorative caret should be CSS only');
+assert(!finder.includes('aria-hidden="true">⌄'),'Ambiguous text caret should not return');
+assert(css.includes('.cpl-static-nav__more summary .cpl-finder-caret'),'CSS caret affordance missing');
+assert.equal(data.resources.length,609,'Do not lose or add unrelated finder resources');
+assert.equal(new Set(data.resources.map(r=>r.url)).size,data.resources.length,'Duplicate finder URL');
+console.log('PASS review-only referrals: 609 entries preserved, only verified program age bounds, campus scope, canonical hotline, legal caution, CSS caret');
