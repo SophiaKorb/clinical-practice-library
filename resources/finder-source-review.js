@@ -1,4 +1,4 @@
-/* CPL finder source-reviewed discovery descriptions. Includes historic PR #53 review and exact-source checks in draft audit. Not clinical validation. */
+/* CPL finder source-reviewed discovery descriptions. This is not certification of clinical suitability or current provider eligibility. */
 (function(root,data){'use strict';if(typeof module==='object'&&module.exports)module.exports=data;root.CPLFinderSourceReview=data;})(typeof globalThis!=='undefined'?globalThis:this,{
   "/resources/trauma/start-here-families-children-trauma.html": {
     "description": "Choose among child and family trauma treatment-model guides, caregiver resources, child-welfare materials, and school-related trauma supports.",
@@ -1155,6 +1155,406 @@
       "after school reset worksheet",
       "decompression",
       "recovery after school"
+    ]
+  },
+  "/resources/es/handouts/hacer-transiciones-mas-faciles.html": {
+    "description": "Guía para cambiar de actividad o rutina con avisos útiles, apoyos visuales y un siguiente paso concreto.",
+    "audience": [
+      "client",
+      "caregiver"
+    ],
+    "type": "education",
+    "terms": [
+      "transiciones",
+      "change activity Spanish",
+      "apoyos para cambiar"
+    ]
+  },
+  "/resources/es/handouts/hacer-transiciones-faciles.html": {
+    "description": "Versión anterior conservada de la guía sobre cambios de actividad; la página enlaza a la versión vigente.",
+    "audience": [
+      "client",
+      "caregiver"
+    ],
+    "type": "education",
+    "terms": [
+      "transiciones versión anterior",
+      "change activity Spanish"
+    ]
+  },
+  "/resources/es/handouts/planes-empezar-terminar.html": {
+    "description": "Guía para adultos sobre iniciar, secuenciar y terminar planes cuando la memoria de trabajo o el tiempo dificultan avanzar.",
+    "audience": [
+      "client"
+    ],
+    "population": [
+      "adults"
+    ],
+    "type": "education",
+    "terms": [
+      "adult task planning Spanish",
+      "iniciar planes",
+      "funciones ejecutivas"
+    ]
+  },
+  "/resources/es/handouts/planes-faciles-empezar-terminar.html": {
+    "description": "Versión anterior conservada de la guía de funciones ejecutivas para adultos; enlaza a la versión vigente.",
+    "audience": [
+      "client"
+    ],
+    "population": [
+      "adults"
+    ],
+    "type": "education",
+    "terms": [
+      "version anterior planes",
+      "adult executive function Spanish"
+    ]
+  },
+  "/resources/es/handouts/planes-mas-faciles-empezar-terminar.html": {
+    "description": "Versión anterior conservada de la guía de funciones ejecutivas para adultos; enlaza a la versión vigente.",
+    "audience": [
+      "client"
+    ],
+    "population": [
+      "adults"
+    ],
+    "type": "education",
+    "terms": [
+      "version anterior planes",
+      "adult executive function Spanish"
+    ]
+  },
+  "/resources/es/handouts/transiciones-son-un-puente.html": {
+    "description": "Guía para padres y personas de apoyo: identificar el punto difícil de una transición y facilitar que la persona cambie de tarea.",
+    "audience": [
+      "caregiver"
+    ],
+    "type": "caregiver",
+    "terms": [
+      "transiciones puente",
+      "transition caregiver Spanish",
+      "apoyos cambios"
+    ]
+  },
+  "/resources/es/handouts/transiciones-puente.html": {
+    "description": "Versión anterior conservada de la guía para cuidadores sobre transiciones; enlaza a la versión vigente.",
+    "audience": [
+      "caregiver"
+    ],
+    "type": "caregiver",
+    "terms": [
+      "transiciones versión anterior",
+      "caregiver transition Spanish"
+    ]
+  },
+  "/resources/es/handouts/mi-mapa-transicion.html": {
+    "description": "Hoja visual de transición para elegir qué terminar, qué viene después y qué apoyo facilita el primer movimiento.",
+    "audience": [
+      "client"
+    ],
+    "type": "worksheet",
+    "terms": [
+      "transition map Spanish",
+      "mapa transición",
+      "cambiar actividad"
+    ]
+  },
+  "/resources/es/handouts/mapa-transicion.html": {
+    "description": "Versión anterior conservada de una hoja visual de transición; enlaza al mapa vigente.",
+    "audience": [
+      "client"
+    ],
+    "type": "worksheet",
+    "terms": [
+      "transition map older",
+      "mapa transición"
+    ]
+  },
+  "/resources/es/handouts/plan-cuidado-personal.html": {
+    "description": "Hoja para planificar una rutina de autocuidado con pasos, recordatorios y apoyos adaptados a las barreras.",
+    "audience": [
+      "client"
+    ],
+    "type": "worksheet",
+    "terms": [
+      "personal care plan Spanish",
+      "rutina higiene",
+      "cuidado personal"
+    ]
+  },
+  "/resources/es/handouts/mi-plan-cuidado-personal.html": {
+    "description": "Versión anterior conservada del plan de cuidado personal; enlaza a la hoja actual.",
+    "audience": [
+      "client"
+    ],
+    "type": "worksheet",
+    "terms": [
+      "personal care plan older",
+      "cuidado personal versión anterior"
+    ]
+  },
+  "/resources/es/handouts/tareas-hogar-faciles.html": {
+    "description": "Versión anterior conservada de la guía familiar sobre tareas domésticas; enlaza a la versión actual.",
+    "audience": [
+      "caregiver"
+    ],
+    "population": [
+      "children",
+      "teens"
+    ],
+    "type": "caregiver",
+    "terms": [
+      "chores Spanish older",
+      "tareas hogar"
+    ]
+  },
+  "/resources/es/handouts/hoja-preparacion-plan-seguridad.html": {
+    "description": "Hoja web con enlace a PDF rellenable para preparar con un profesional señales de crisis y apoyos de seguridad.",
+    "audience": [
+      "client"
+    ],
+    "type": "worksheet",
+    "terms": [
+      "plan seguridad rellenable",
+      "safety plan preparation worksheet Spanish"
+    ]
+  },
+  "/resources/es/handouts/preparacion-plan-seguridad.html": {
+    "description": "Hoja de trabajo sobre señales de crisis, estrategias y contactos para llevar a una planificación de seguridad clínica.",
+    "audience": [
+      "client"
+    ],
+    "type": "worksheet",
+    "terms": [
+      "safety plan preparation Spanish",
+      "preparación plan de seguridad"
+    ]
+  },
+  "/resources/es/handouts/conexion-social-educacion-casa.html": {
+    "description": "Guía familiar sobre amistades y experiencias sociales repetidas para jóvenes autistas o neurodivergentes que estudian en casa.",
+    "audience": [
+      "caregiver"
+    ],
+    "population": [
+      "children",
+      "teens"
+    ],
+    "type": "caregiver",
+    "terms": [
+      "social connection homeschooling Spanish",
+      "amistades educación en casa"
+    ]
+  },
+  "/resources/es/handouts/conexion-social-homeschool.html": {
+    "description": "Guía familiar sobre amistades y experiencias sociales repetidas para jóvenes autistas o neurodivergentes que estudian en casa.",
+    "audience": [
+      "caregiver"
+    ],
+    "population": [
+      "children",
+      "teens"
+    ],
+    "type": "caregiver",
+    "terms": [
+      "social connection homeschooling Spanish",
+      "amistades educación en casa"
+    ]
+  },
+  "/resources/es/handouts/justicia-flexibilidad.html": {
+    "description": "Guía para adolescentes: reconocer injusticias, valores y opciones de respuesta sin confundir flexibilidad con aceptar daño.",
+    "audience": [
+      "client"
+    ],
+    "population": [
+      "teens"
+    ],
+    "type": "education",
+    "terms": [
+      "fairness and flexibility Spanish",
+      "justicia flexibilidad",
+      "adolescente"
+    ]
+  },
+  "/resources/es/handouts/mi-mapa-duelo.html": {
+    "description": "Hoja personal para explorar recuerdos, cambios cotidianos y apoyos durante el duelo sin imponer un significado.",
+    "audience": [
+      "client"
+    ],
+    "type": "worksheet",
+    "terms": [
+      "grief map Spanish",
+      "mi mapa duelo",
+      "pérdida"
+    ]
+  },
+  "/resources/es/handouts/dbt-claro-util-paciente.html": {
+    "description": "Paquete en español de hojas DBT con pasos breves para entender emociones intensas y elegir respuestas manejables.",
+    "audience": [
+      "client"
+    ],
+    "type": "worksheet",
+    "terms": [
+      "DBT Spanish worksheets",
+      "regulación emocional",
+      "habilidades DBT"
+    ]
+  },
+  "/resources/es/school/clinical/ansiedad.html": {
+    "description": "Herramienta clínica de acceso escolar: elegir barreras de ansiedad y apoyos específicos con el estudiante y el equipo.",
+    "audience": [
+      "clinician",
+      "trainee",
+      "school_team",
+      "case_manager",
+      "caregiver"
+    ],
+    "population": [
+      "children",
+      "teens"
+    ],
+    "type": "school",
+    "terms": [
+      "anxiety school accommodations Spanish",
+      "ansiedad barrera apoyo"
+    ]
+  },
+  "/resources/es/school/clinical/tdah.html": {
+    "description": "Herramienta de barrera a apoyo escolar para TDAH dirigida a familias, profesionales y equipos escolares.",
+    "audience": [
+      "clinician",
+      "trainee",
+      "school_team",
+      "case_manager",
+      "caregiver"
+    ],
+    "population": [
+      "children",
+      "teens"
+    ],
+    "type": "school",
+    "terms": [
+      "ADHD school accommodations Spanish",
+      "TDAH barrera apoyo"
+    ]
+  },
+  "/resources/es/school/clinical/autismo.html": {
+    "description": "Selector de apoyos escolares de autismo a partir de barreras observables, no solo del diagnóstico.",
+    "audience": [
+      "clinician",
+      "trainee",
+      "school_team",
+      "case_manager",
+      "caregiver"
+    ],
+    "population": [
+      "children",
+      "teens"
+    ],
+    "type": "school",
+    "terms": [
+      "autism school accommodations Spanish",
+      "autismo barreras apoyo"
+    ]
+  },
+  "/resources/es/school/plain/ansiedad.html": {
+    "description": "Guía escolar en lenguaje claro: identificar barreras observables de ansiedad y acordar responsables, lugares y seguimiento.",
+    "audience": [
+      "school_team"
+    ],
+    "population": [
+      "children",
+      "teens"
+    ],
+    "type": "school",
+    "terms": [
+      "school anxiety plain language Spanish",
+      "ansiedad guía escolar"
+    ]
+  },
+  "/resources/es/school/plain/tdah.html": {
+    "description": "Guía escolar en lenguaje claro de TDAH: observar la barrera, seleccionar apoyos y planificar cómo comprobarlos.",
+    "audience": [
+      "school_team"
+    ],
+    "population": [
+      "children",
+      "teens"
+    ],
+    "type": "school",
+    "terms": [
+      "school ADHD plain language Spanish",
+      "TDAH apoyos 504"
+    ]
+  },
+  "/resources/es/school/homeschool/ansiedad.html": {
+    "description": "Guía para educación en casa: ajustar tareas y entorno según barreras de ansiedad sin perder de vista evaluación y apoyos.",
+    "audience": [
+      "caregiver",
+      "school_team"
+    ],
+    "population": [
+      "children",
+      "teens"
+    ],
+    "type": "caregiver",
+    "terms": [
+      "homeschool anxiety Spanish",
+      "ansiedad educación en casa"
+    ]
+  },
+  "/resources/es/school/homeschool/autismo.html": {
+    "description": "Guía para educación en casa con autismo: comunicación, sobrecarga sensorial, cambios y acceso al aprendizaje.",
+    "audience": [
+      "caregiver",
+      "school_team"
+    ],
+    "population": [
+      "children",
+      "teens"
+    ],
+    "type": "caregiver",
+    "terms": [
+      "homeschool autism Spanish",
+      "autismo educación en casa"
+    ]
+  },
+  "/resources/es/school/homeschool/derivacion.html": {
+    "description": "Guía para familias que educan en casa: describir barreras funcionales y decidir cuándo pedir evaluación o derivación.",
+    "audience": [
+      "caregiver",
+      "school_team",
+      "case_manager"
+    ],
+    "population": [
+      "children",
+      "teens"
+    ],
+    "type": "school",
+    "terms": [
+      "homeschool referral Spanish",
+      "evaluación educación casa",
+      "derivación escolar"
+    ]
+  },
+  "/resources/es/california-discapacidad-autismo-salud-conductual.html": {
+    "description": "Guía de California sobre Centros Regionales, Early Start, elegibilidad provisional y apoyos de salud conductual; comprobar requisitos actuales.",
+    "audience": [
+      "caregiver",
+      "clinician",
+      "case_manager"
+    ],
+    "population": [
+      "birth5",
+      "children",
+      "teens",
+      "adults"
+    ],
+    "type": "referral",
+    "terms": [
+      "California regional center Spanish",
+      "centros regionales",
+      "discapacidad desarrollo"
     ]
   }
 });
