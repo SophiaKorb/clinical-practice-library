@@ -124,6 +124,8 @@ fs.mkdirSync(dir,{recursive:true});
       getComputedStyle(node).display!=='none'&&getComputedStyle(node.closest('.section')).display!=='none'
     ).length);
     assert.equal(printedEntries,guide.count,'Printing a filtered view omitted guide listings: '+guide.slug);
+    assert.equal(await page.locator('.search-panel').evaluate(el=>getComputedStyle(el).display),'none','Print CSS did not hide the search panel: '+guide.slug);
+    assert.equal(await page.locator('.contents').evaluate(el=>getComputedStyle(el).display),'none','Print CSS did not hide navigation: '+guide.slug);
     await page.emulateMedia({media:'screen'});
     assert.equal(await page.locator('.entry:visible').count(),shown,'Screen filter lost after print: '+guide.slug);
     await page.locator('#guide-query').fill('unlikelynonexistentguidequeryxyz');
@@ -132,6 +134,8 @@ fs.mkdirSync(dir,{recursive:true});
 
     await page.locator('#guide-clear').click();
     assert.equal(await page.locator('.entry:visible').count(),guide.count,'Guide reset did not restore full source set');
+    // Clear the explicit screen-media emulation: page.pdf() must use actual print CSS.
+    await page.emulateMedia({media:null});
     if(width===390){
       await page.addScriptTag({path:require.resolve('axe-core')});
       const audit=await page.evaluate(async()=>await window.axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa']}}));
