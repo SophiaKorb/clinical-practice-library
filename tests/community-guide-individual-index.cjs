@@ -1,0 +1,31 @@
+'use strict';
+// Individually indexed community-guide entries remain source-linked, additive, and directly searchable.
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const root=path.resolve(__dirname,'..');
+const read=p=>fs.readFileSync(path.join(root,p),'utf8');
+const data=JSON.parse(read('resources/clinical-finder-data.js').replace(/^globalThis\.CPLFinderData\s*=\s*/,'').replace(/;\s*$/,''));
+const engine=require('../resources/finder-lab-engine.js');
+const family=data.resources.filter(r=>/^\/resources\/community\/family-community-guide-text\.html#listing-\d+$/.test(r.url));
+const youth=data.resources.filter(r=>/^\/resources\/community\/youth-community-guide-text\.html#youth-listing-\d+$/.test(r.url));
+assert.equal(family.length,170,'Family numbered listings are incomplete');
+assert.equal(youth.length,27,'Youth program headings are incomplete');
+assert.equal(data.resources.length,812,'Unexpected community catalog growth or data loss');
+const pages=[read('resources/community/family-community-guide-text.html'),read('resources/community/youth-community-guide-text.html')];
+for(const [i,rows] of [[0,family],[1,youth]]){
+ for(const r of rows){
+  const anchor=r.url.split('#')[1];
+  assert(pages[i].includes('id="'+anchor+'"'),'Broken direct listing anchor '+r.url);
+  assert(r.searchTerms.includes(r.title.split(' — ')[0]),'Missing individual title search term '+r.url);
+  assert(r.description||i===1,'Missing family source description '+r.url);
+  assert.deepEqual(r.tags.diagnosis,[],'Community navigators must not acquire unsupported diagnoses');
+  assert(r.metadataBasis.includes('eligibility'),'Missing eligibility qualification');
+ }
+}
+for(let n=1;n<=170;n++)assert(family.some(r=>r.url.endsWith('#listing-'+n)),'Missing family number '+n);
+const items=engine.index(data.resources);
+for(const [q,needle] of [['Parent Aid','#listing-2'],['Project FOCUS','#youth-listing-2'],['Autism Society','#listing-67']]){
+ const hits=engine.search(items,{q}).groups;
+ assert(hits.some(g=>g.best.item.url.endsWith(needle)||g.otherMatches.some(x=>x.item.url.endsWith(needle))),'Individual search failed: '+q);
+}
+assert(new Set(data.resources.map(r=>r.url)).size===data.resources.length,'Duplicate canonical resource URL');
+console.log('COMMUNITY_GUIDES_INDIVIDUAL_INDEX_PASS '+JSON.stringify({family:family.length,youth:youth.length,total:data.resources.length,anchors:197}));
