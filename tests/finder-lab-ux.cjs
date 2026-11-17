@@ -25,6 +25,13 @@ for(const item of indexed){
 }
 assert(indexed.some(i=>i.audienceUndifferentiated),'Missing honest ambiguous-audience flag');
 assert(indexed.some(i=>!i.population.length&&!i.acrossAges),'Missing honest unclassified population');
+const iepParent=indexed.find(i=>i.url==='/resources/arizona/iep-504-parent-guide.html');
+assert(iepParent.audience.includes('case_manager')&&iepParent.audience.includes('caregiver'),'Source-verified IEP case-management audience missing');
+assert(indexed.find(i=>i.url==='/resources/arizona/iep-504-clinician-guide.html').audience.includes('clinician'),'IEP clinician audience correction missing');
+assert(indexed.find(i=>i.url==='/resources/es/arizona-como-conseguir-iep-504.html').language==='es','Spanish source label missing');
+assert(indexed.find(i=>i.url==='/resources/clinical-topics/adult-adhd-task-starts/index.html').population.includes('adults'),'Parent collection must inherit tagged companion stages');
+assert(indexed.find(i=>i.url==='/resources/therapy/visual-reasoning-toolkit.html').population.includes('children'),'Adaptable original clinical tool should remain discoverable for children');
+assert(!lab.search(indexed,{q:'IEP'}).groups.some(g=>g.best.item.url==='/resources/birth-to-five/early-intervention-and-preschool.html'),'Incidental IEP tag should not outrank direct IEP records');
 const birth5=indexed.filter(i=>i.population.includes('birth5'));
 assert(birth5.length>20 && birth5.length<52,'Birth–5 should be bounded by supported stage evidence');
 assert(!birth5.some(i=>/eldercare/i.test(i.title)),'Older-adult service wrongly under Birth–5');
@@ -94,6 +101,7 @@ for(const [label,key] of [['baseline','baselineRank'],['prototype','prototypeRan
 assert(summaries.prototype.targetTop5>summaries.baseline.targetTop5,'Prototype must improve tested target recall');
 assert(summaries.prototype.reciprocalRank>summaries.baseline.reciprocalRank,'Prototype must improve tested target ranking');
 assert(lab.search(indexed,{q:'IEP'}).matches<40,'IEP query flooded by unrelated results');
+assert.equal(lab.search(indexed,{q:'nonexistentxyz'}).matches,0,'Unknown query must not fabricate results');
 assert(lab.search(indexed,{q:'school refusal'}).matches<30,'School-refusal related terms over-broad');
 assert(lab.search(indexed,{q:'tantrums'}).matches<30,'Behavior synonym search over-broad');
 const ocd=lab.search(indexed,{q:'OCD mental rituals'});
