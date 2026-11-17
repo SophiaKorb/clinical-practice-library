@@ -62,7 +62,7 @@ function safeArray(a){return Array.isArray(a)?a:[];}
 function starts(u,p){return String(u||'').startsWith(p);}
 function typeFor(r){
  var u=r.url||'',t=norm(r.title),p=u.toLowerCase();
- if(/\/clinical-topics\/[^/]+\/index\.html/.test(p))return 'collection';
+ if(/\/clinical-topics\/[^/]+\/index\.html/.test(p)||p==='/resources/birth-to-five/index.html')return 'collection';
  if(/\/clinical-topics\/[^/]+\/(client-workbook|support-map|progress-review)\.html/.test(p)||/\/downloads\/|fillab|worksheet|workbook|quick.card|support.map/.test(p+' '+t))return 'worksheet';
  if(/\/clinical-topics\/[^/]+\/care-partner\.html/.test(p)||/\/handouts\/.*(parent|caregiver|family)/.test(p)||/\b(parent guide|family guide|care partner guide|parenting)\b/.test(t))return 'caregiver';
  if(/\/school\/|iep|504|homeschool|school access/.test(p+' '+t))return 'school';
@@ -80,7 +80,8 @@ function audienceFor(r){
  if(role.includes('School team'))out.add('school_team');
  if(role.includes('Staff / case manager'))out.add('case_manager');
  if(role.includes('Client / caregiver')){
-   if(/client.workbook|client.facing|patient.facing|\/handouts\/my-|\/downloads\/my-/.test(u+' '+t))out.add('client');
+   if(starts(u,'/resources/birth-to-five/'))out.add('caregiver');
+   else if(/client.workbook|client.facing|patient.facing|\/handouts\/my-|\/downloads\/my-/.test(u+' '+t))out.add('client');
    else if(/care.partner|caregiver|parent|family.guide|parenting|homeschool/.test(u+' '+t))out.add('caregiver');
    else notes.push('Client/caregiver audience is combined in the original index; direct user not verified');
  }
