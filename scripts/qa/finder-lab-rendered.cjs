@@ -68,7 +68,7 @@ fs.mkdirSync(out,{recursive:true});
     fs.writeFileSync(path.join(out,'lab-iep-browser-print.pdf'),pdf);
    }
    const original=await context.newPage();
-   await original.goto(base+'/resources/clinical-resource-finder.html?q=IEP',{waitUntil:'networkidle'});
+   await original.goto(base+'/resources/clinical-resource-finder-classic.html?q=IEP',{waitUntil:'networkidle'});
    await original.waitForSelector('.finder-card');
    const originalTop=await original.locator('.finder-card h3').first().innerText();
    await original.screenshot({path:path.join(out,'production-finder-iep-'+width+'.png'),fullPage:true});
