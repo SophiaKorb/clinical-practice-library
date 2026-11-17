@@ -59,7 +59,7 @@ function cardFor(group){
    link.href=member.url;li.appendChild(link);list.appendChild(li);
   }
   d.appendChild(list);
-  d.appendChild(el('p','caveat','These additional formats may not match your selected audience or filters.'));
+  d.appendChild(el('p','caveat','Only formats matching your current filters appear here. Open the collection for other formats.'));
   article.appendChild(d);
  }
  return article;
@@ -69,6 +69,13 @@ function render(changeURL){
  results.replaceChildren();
  var visible=result.groups.slice(0,limit);
  for(var group of visible)results.appendChild(cardFor(group));
+ var other=by('lab-unclassified'),others=by('lab-unclassified-results');
+ if(other&&others){
+   others.replaceChildren();
+   var near=result.unclassifiedGroups||[];
+   other.hidden=near.length===0;
+   for(var candidate of near)others.appendChild(cardFor(candidate));
+ }
  by('lab-empty').hidden=result.groups.length>0;
  by('lab-more').hidden=result.groups.length<=limit;
  by('lab-status').textContent=result.groups.length+' groups · '+result.matches+' matching resources'+(result.groups.length>limit?' · showing '+visible.length+' groups':'');
