@@ -4,6 +4,16 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const {chromium}=require('playwright');
 const raw=fs.readFileSync(path.join(process.cwd(),'resources/clinical-finder-data.js'),'utf8');
 const catalog=JSON.parse(raw.replace(/^globalThis\.CPLFinderData\s*=\s*/,'').replace(/;\s*$/,''));
+const {runInNewContext}=require('node:vm');
+const runtimeCatalog=JSON.parse(JSON.stringify(catalog));
+runInNewContext(fs.readFileSync(path.join(process.cwd(),'resources/diagnoses/adult-adhd-collection/finder-overlay.js'),'utf8'),{CPLFinderData:runtimeCatalog});
+assert([615,813].includes(catalog.resources.length),'Expect historical 615 or current 813 official finder source');
+assert.equal(runtimeCatalog.resources.length,catalog.resources.length+31,'Exactly 31 new review ADHD entries added to current official source');
+for(const topic of catalog.facets.diagnosis){
+ const initial=catalog.resources.filter(x=>(x.tags?.diagnosis||[]).includes(topic));
+ const loaded=runtimeCatalog.resources.filter(x=>(x.tags?.diagnosis||[]).includes(topic));
+ assert.equal(loaded.length,initial.length+(topic==='ADHD'?31:0),'Non-ADHD diagnosis metadata changed: '+topic);
+}
 const base=process.env.CPL_QA_ORIGIN||'http://127.0.0.1:8765';
 const dir=path.join(process.cwd(),'qa-artifacts/diagnosis-hubs');
 fs.mkdirSync(dir,{recursive:true});
@@ -20,7 +30,7 @@ fs.mkdirSync(dir,{recursive:true});
      const r=await page.goto(u,{waitUntil:'networkidle'});
      assert.equal(r.status(),200,'Diagnosis index route missing '+topic);
      await page.waitForSelector('#topic-page:not([hidden])');
-     const expected=catalog.resources.filter(item=>(item.tags?.diagnosis||[]).includes(topic)).map(x=>x.url);
+     const expected=runtimeCatalog.resources.filter(item=>(item.tags?.diagnosis||[]).includes(topic)).map(x=>x.url);
      const links=await page.locator('#direct-groups .resource-list a').evaluateAll(nodes=>nodes.map(n=>n.getAttribute('href')));
      assert.deepEqual(new Set(links),new Set(expected),'Missing or extra index entry for '+topic+' at '+width);
      assert.equal(links.length,expected.length,'Duplicate index entry for '+topic+' at '+width);
