@@ -8,18 +8,18 @@
 'use strict';
 var STOP=new Set('a an and are at be can do for from help how i in is it me my of on or our the their to with what when where who will worried about need looking find please resources resource someone some working work'.split(' '));
 var CONCEPTS=[
- {test:/\b(tantrum|tantrums|outburst|outbursts|explosive behavior|hitting during upset)\b/,terms:['child aggression','when a young child has more feeling than language','regulation','child behavior'],label:'child behavior and regulation'},
- {test:/\b(school refusal|school avoidance|won.t go to school|school anxiety)\b/,terms:['school/clinical/anxiety','school support','school access','school/iep-504','anxiety'],label:'school attendance, anxiety and access'},
- {test:/\b(dissociation.*grounding|grounding.*dissociation|dissociating and grounding)\b/,terms:['dissociation','grounding','orientation'],label:'dissociation and grounding'},
- {test:/\b(daycare|day care|childcare|child care|preschool access)\b/,terms:['birth-to-five','preschool','early intervention'],label:'early childhood and preschool access'},
- {test:/\b(task launch|cannot start|can.t start|getting started|start tasks|executive initiation)\b/,terms:['task launch','task starts','executive function','starting tasks'],label:'starting tasks and executive functioning'},
- {test:/\b(meltdown|meltdowns|overwhelmed child|sensory overload)\b/,terms:['regulation','overload','child aggression','when a young child has more feeling','autism'],label:'overload and regulation'},
- {test:/\b(parents worried about meltdowns|parent worried about meltdowns)\b/,terms:['child aggression','caregiver','regulation','parenting'],label:'caregiver support for regulation'},
- {test:/\b(play therapy|therapeutic play|dyadic therapy)\b/,terms:['child treatment selection','play','caregiver session'],label:'play, developmental and dyadic approaches'},
+ {test:/\b(tantrum|tantrums|outburst|outbursts|explosive behavior|hitting during upset)\b/,terms:['child aggression','managing child behavior problems','when a young child has more feeling','supporting child self regulation'],label:'child behavior and regulation'},
+ {test:/\b(school refusal|school avoidance|won.t go to school|school anxiety)\b/,terms:['school clinical anxiety','anxiety in children','school access','school support process','anxiety homeschool'],label:'school attendance, anxiety and access'},
+ {test:/\b(dissociation.*grounding|grounding.*dissociation|dissociating and grounding)\b/,terms:['grounding','dissociation','orientation time gaps'],label:'dissociation and grounding'},
+ {test:/\b(daycare|day care|childcare|child care|preschool access)\b/,terms:['early intervention preschool','preschool access','positive parenting preschoolers','birth to five'],label:'early childhood and preschool access'},
+ {test:/\b(task launch|cannot start|can.t start|getting started|start tasks|executive initiation)\b/,terms:['task launch','task starts','executive functioning','starting organizing tasks'],label:'starting tasks and executive functioning'},
+ {test:/\b(parents worried about meltdowns|parent worried about meltdowns)\b/,terms:['child aggression','when a young child has more feeling','managing child behavior','clear supported proactive parenting','communication play regulation'],label:'caregiver support for regulation'},
+ {test:/\b(meltdown|meltdowns|overwhelmed child|sensory overload)\b/,terms:['child aggression','supporting child self regulation','sensory overload','communication play regulation','understanding behavior in autistic children'],label:'overload and regulation'},
+ {test:/\b(play therapy|therapeutic play|dyadic therapy)\b/,terms:['child treatment selection','communication play regulation','caregiver session support'],label:'play, developmental and dyadic approaches'},
  {test:/\b(iep|504 plan|special education meeting)\b/,terms:['iep','504','school access'],label:'IEP and school supports'},
- {test:/\b(autistic child|child with autism)\b/,terms:['autistic children','autism','child behavior'],label:'autistic children and support'},
- {test:/\b(suicide safety plan|suicidal crisis|suicide crisis)\b/,terms:['suicide','safety planning','self-harm'],label:'suicide safety and planning'},
- {test:/\b(communication board|aac|nonverbal communication)\b/,terms:['communication supports','communication','visual'],label:'supported communication'}
+ {test:/\b(autistic child|child with autism)\b/,terms:['understanding behavior in autistic children','autism in childhood','autism family','autism barrier','autism'],label:'autistic children and support'},
+ {test:/\b(suicide safety plan|suicidal crisis|suicide crisis)\b/,terms:['safety planning','making a suicide crisis safer','self harm safety','suicide prevention'],label:'suicide safety and planning'},
+ {test:/\b(communication board|aac|nonverbal communication)\b/,terms:['communication supports toolkit','communication','visual support'],label:'supported communication'}
 ];
 var DESCRIPTIONS={
  '/resources/birth-to-five/index.html':'Browse development, communication, regulation, early mental health and local support pathways for birth through five.',
@@ -157,15 +157,19 @@ function directScore(item,q){
 function conceptsFor(q){var n=norm(q);return CONCEPTS.filter(x=>x.test.test(n));}
 function relatedScore(item,concepts){
  if(!concepts.length)return 0;
- var t=textFields(item),subject=t.title+' '+t.url,score=0;
- for(var c of concepts)for(var term of c.terms){
-  var termNorm=norm(term),v=0;
-  if(subject.includes(termNorm))v=75;
-  else if(t.terms.includes(termNorm))v=32;
-  else if(t.tags.includes(termNorm))v=13;
-  score=Math.max(score,v);
+ // Related-language search uses specific TITLE/PATH phrases only.
+ // Do not admit every record containing one common tag (e.g. "school" or "anxiety").
+ var subject=norm(item.title+' '+item.url),best=0;
+ for(var concept of concepts){
+  for(var i=0;i<concept.terms.length;i++){
+   var phrase=norm(concept.terms[i]);
+   if(subject.includes(phrase)){
+    var value=Math.max(30,125-i*12);
+    if(value>best)best=value;
+   }
+  }
  }
- return score;
+ return best;
 }
 function matchesFilters(item,state){
  if(state.population && !item.population.includes(state.population))return false;
@@ -199,8 +203,8 @@ function search(items,state){
    else if(h.direct.score>0 && (qTokens.length===1||h.direct.coverage>=0.99)){
      score=h.direct.score;reason=h.direct.reason;
    }else if(h.related>0 && (!minDirect || qTokens.length>1)){
-     score=25+h.related;reason='Related concept: '+concepts.map(c=>c.label).join('; ');
-   }else if(qTokens.length>1 && h.direct.coverage>=0.5 && !minDirect){
+     score=10+h.related;reason='Related concept: '+concepts.map(c=>c.label).join('; ');
+   }else if(qTokens.length>2 && h.direct.coverage>=0.67 && !minDirect){
      score=h.direct.score*0.65;reason='Partial match';
    }
    // Explicit title/path relevance dominates; historical global priority only breaks near-ties.
