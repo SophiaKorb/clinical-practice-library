@@ -88,6 +88,35 @@ const rows=scenarios.map(([query,expected])=>({
  prototypeCount:lab.search(indexed,{q:query}).matches
 }));
 for(const row of rows)assert(row.prototypeRank>0&&row.prototypeRank<=5,'Missing expected within top 5: '+JSON.stringify(row));
+// A separate harder phrasing set developed after the initial 36 concise fixtures.
+// These are adverse regression examples, NOT an independent blind evaluation.
+const conversational=[
+ ['my five year old keeps biting classmates','clinical-topics/child-aggression-caregiver-coaching/index.html'],
+ ['teen feels like everyone is picking on her','handouts/friendship-peer-safety-family-guide.html'],
+ ['student won\'t enter school','school/clinical/anxiety.html'],
+ ['how do I help a child with sensory overload','handouts/sensory-overload-and-recovery-plan.html'],
+ ['client can\'t get started on tasks','handouts/task-launch-map.html'],
+ ['child refuses homework','handouts/task-launch-map.html'],
+ ['parent needs school evaluation','arizona/iep-504-parent-guide.html'],
+ ['family needs Spanish IEP guide','es/arizona-como-conseguir-iep-504.html'],
+ ['nonverbal autistic child needs ways to choose','therapy/communication-supports-toolkit.html'],
+ ['I need a grounding worksheet','handouts/grounding.html'],
+ ['struggling with hygiene','handouts/when-hygiene-tasks-are-hard.html'],
+ ['caregiver coaching for aggression','clinical-topics/child-aggression-caregiver-coaching/index.html'],
+ ['dissociative parts need stability','clinical-depth/complex-dissociation-functional-care.html'],
+ ['mood activation no sleep','clinical-topics/sleep-loss-activation/index.html'],
+ ['school cannot provide accommodations','arizona/iep-504-parent-guide.html'],
+ ['young child with separation anxiety','#ext-02-07'],
+ ['child angry at everyone','#ext-02-24'],
+ ['teen self harm worksheet','handouts/safety-planning-preparation-sheet.html']
+];
+const hardRows=conversational.map(([query,expected])=>({
+ query,expected,baselineRank:baselineRank(query,expected),prototypeRank:labRank(query,expected),
+ prototypeCount:lab.search(indexed,{q:query}).matches
+}));
+for(const row of hardRows)assert(row.prototypeRank>0&&row.prototypeRank<=5,'Adverse phrasing must return expected resource within top 5: '+JSON.stringify(row));
+assert.equal(labRank('teen self harm worksheet','handouts/safety-planning-preparation-sheet.html'),1,'Explicit handout request must prioritize the actual handout over clinical assessment');
+
 const summaries={};
 for(const [label,key] of [['baseline','baselineRank'],['prototype','prototypeRank']]){
  const ranks=rows.map(r=>r[key]);
@@ -118,4 +147,9 @@ assert(clientSplit.audience.includes('client')&&!clientSplit.audience.includes('
 assert(read('resources/finder-lab.html').includes('noindex,nofollow'),'Review prototype must not be indexed by search engines');
 assert(!read('index.html').includes('/resources/finder-lab.html'),'Review prototype must not be promoted to production home');
 assert(!read('resources/clinical-resource-finder.html').includes('/resources/finder-lab.html'),'Original finder route must remain unchanged');
-console.log(JSON.stringify({status:'PASS',basis:'Exact current-main 615-record catalog; ranked target URLs, not observed user outcomes',totalResources:indexed.length,queries:rows.length,birth5Resources:birth5.length,resourceTypes:Object.fromEntries([...new Set(indexed.map(x=>x.type))].sort().map(k=>[k,indexed.filter(x=>x.type===k).length])),audienceUnknown:indexed.filter(x=>!x.audience.length).length,undifferentiatedPublicAudience:indexed.filter(x=>x.audienceUndifferentiated).length,populationUnknown:indexed.filter(x=>!x.population.length&&!x.acrossAges).length,summaries,details:rows},null,2));
+const hardMetrics={};
+for(const [name,key] of [['baseline','baselineRank'],['prototype','prototypeRank']]){
+ const ranks=hardRows.map(r=>r[key]);
+ hardMetrics[name]={targetTop1:ranks.filter(r=>r===1).length,targetTop5:ranks.filter(r=>r>0&&r<=5).length,targetMissing:ranks.filter(r=>r===0).length,reciprocalRank:Number((ranks.reduce((sum,r)=>sum+(r?1/r:0),0)/ranks.length).toFixed(3))};
+}
+console.log(JSON.stringify({status:'PASS',basis:'Exact current-main 615-record catalog; ranked targets, not observed outcomes or independent holdout',totalResources:indexed.length,queries:rows.length,conversationalQueries:hardRows.length,conversationalMetrics:hardMetrics,conversationalDetails:hardRows,birth5Resources:birth5.length,resourceTypes:Object.fromEntries([...new Set(indexed.map(x=>x.type))].sort().map(k=>[k,indexed.filter(x=>x.type===k).length])),audienceUnknown:indexed.filter(x=>!x.audience.length).length,undifferentiatedPublicAudience:indexed.filter(x=>x.audienceUndifferentiated).length,populationUnknown:indexed.filter(x=>!x.population.length&&!x.acrossAges).length,summaries,details:rows},null,2));
