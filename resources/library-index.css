@@ -65,3 +65,10 @@
 @media screen and (min-width:701px){
   .hero>.clinical-pathway-links,.hero>.index-nav{display:none!important}
 }
+
+
+/* Main subject entry first; original guides remain available separately. */
+.diagnosis-hub-link{background:#e8f3e9;color:#215c48!important;padding:7px 12px;border:1px solid #a9cbb5;border-radius:9px;min-height:44px!important;font-weight:770!important}
+.diagnosis-hub-link:hover{background:#d8ecdc}.diagnosis-links a:focus-visible{outline:3px solid #195fc1;outline-offset:3px}
+@media(max-width:480px){.diagnosis-hub-link{width:100%;justify-content:center}.diagnosis-links{gap:4px 12px}}
+@media print{.diagnosis-hub-link{background:none;border:1px solid #777;color:black!important}}
