@@ -50,6 +50,18 @@ const base=process.env.CPL_QA_ORIGIN||'http://127.0.0.1:8765';
   await page.selectOption('#lab-audience','caregiver');
   const p=page.locator('a[href="/resources/es/school/clinical/tdah.html"]');
   assert(await p.count()>0,'Spanish clinical school guide not discoverable for explicit family audience');
+  // Narrative Spanish query survives UI input and age/role filters.
+  await page.fill('#lab-q','mi adolescente siente que todo es injusto');
+  await page.selectOption('#lab-population','teens');
+  await page.selectOption('#lab-audience','client');
+  const fairness=page.locator('#lab-results a[href="/resources/es/handouts/justicia-flexibilidad.html"]');
+  assert(await fairness.count()>0,'Spanish adolescent narrative query must surface original source');
+  await page.screenshot({path:path.join(dir,'spanish-natural-language-'+width+'.png'),fullPage:true});
+  await page.fill('#lab-q','se me olvida todo cuando intento empezar tareas');
+  await page.selectOption('#lab-population','adults');
+  assert(await page.locator('#lab-results a[href="/resources/es/handouts/planes-empezar-terminar.html"]').count()>0,
+    'Spanish executive-function narrative query disappeared under adult client filters');
+  assert((await page.locator('#lab-q').inputValue()).includes('se me olvida'),'Search entry was not preserved');
   const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);
   assert(overflow<=2,'Overflow at '+width+': '+overflow);
   await page.addScriptTag({path:require.resolve('axe-core')});
