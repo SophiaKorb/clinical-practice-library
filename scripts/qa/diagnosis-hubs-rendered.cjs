@@ -52,6 +52,31 @@ fs.mkdirSync(dir,{recursive:true});
      }
     }
    }
+   if(width===390||width===1280){
+    const cmSlugs=['index','adhd','autism','anxiety-ocd','depression','trauma-dissociation','learning-disorders','psychosis-bipolar','substance-use','persistent-conflict','eating-disorders','tic-repetitive-behavior','intellectual-disability','sleep-conditions','grief-bereavement'];
+    for(const slug of cmSlugs){
+     const route='/resources/diagnoses/comprehensive/case-management/'+slug+'.html';
+     const opened=await page.goto(base+route,{waitUntil:'domcontentloaded'});
+     assert.equal(opened.status(),200,'Missing case-management page '+slug);
+     assert.equal(await page.locator('h1').count(),1,'Case-management heading '+slug);
+     const over=await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);
+     assert(over<=2,'Case-management overflow '+slug+' '+width+' '+over);
+     await page.locator('a.skip').focus();
+     assert(await page.evaluate(()=>document.activeElement.classList.contains('skip')),'Case-management skip link '+slug);
+     if(['index','adhd','autism','eating-disorders','psychosis-bipolar'].includes(slug)){
+      await page.addScriptTag({path:require.resolve('axe-core')});
+      const ax=await page.evaluate(async()=>window.axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa']}}));
+      assert.equal(ax.violations.filter(v=>['serious','critical'].includes(v.impact)).length,0,'Serious case manager axe issue '+slug+' '+width+': '+ax.violations.map(v=>v.id).join(','));
+     }
+     if(width===390&&['index','adhd','eating-disorders'].includes(slug))
+      await page.screenshot({path:path.join(dir,'comprehensive-case-management-'+slug+'-390.png'),fullPage:true});
+     if(width===1280&&slug==='adhd'){
+      const pdf=await page.pdf({format:'Letter',printBackground:false});
+      assert(pdf.length>3000,'Case management print PDF unexpectedly small');
+      fs.writeFileSync(path.join(dir,'comprehensive-case-manager-print.pdf'),pdf);
+     }
+    }
+   }
    await page.goto(base+'/resources/diagnoses/index.html?topic=ADHD',{waitUntil:'networkidle'});
    await page.waitForSelector('#direct-groups .resource-list li');
    assert.equal(await page.locator('#direct-groups .resource-list li').count(),19,'Dynamic diagnosis hub missing ADHD resources');
