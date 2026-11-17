@@ -109,7 +109,12 @@ for(var key of advKeys){
  sel.addEventListener('change',function(k){return function(){state.advanced[k]=by('lab-'+k).value;update();};}(key));
 }
 state=paramsState();syncInputs();
-by('lab-form').addEventListener('submit',function(e){e.preventDefault();state.q=by('lab-q').value.slice(0,160);update();});
+by('lab-form').addEventListener('submit',function(e){
+ e.preventDefault();state.q=by('lab-q').value.slice(0,160);update();
+ // Move keyboard/screen-reader focus to results after an intentional search.
+ // The visible jump link provides the same destination after filter changes.
+ var target=by('results-title');target.focus({preventScroll:true});target.scrollIntoView({block:'start'});
+});
 by('lab-q').addEventListener('input',function(){state.q=this.value.slice(0,160);update();});
 for(var key of keys)by('lab-'+key).addEventListener('change',function(k){return function(){state[k]=by('lab-'+k).value;if(k==='audience')state.legacyRole='';update();};}(key));
 by('lab-clear').addEventListener('click',reset);

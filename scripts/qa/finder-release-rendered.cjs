@@ -90,6 +90,14 @@ fs.mkdirSync(dir,{recursive:true});
    assert.equal(await page.evaluate(()=>document.activeElement.id),'lab-q','Search input focus missing');
    await page.keyboard.press('Tab');
    assert.equal(await page.evaluate(()=>document.activeElement.className),'search-action','Keyboard submit unreachable');
+   assert(await page.locator('#lab-result-shortcut').isVisible(),'Result-jump link not visible');
+   await page.locator('#lab-q').fill('IEP');
+   await page.locator('.search-action').click();
+   assert.equal(await page.evaluate(()=>document.activeElement.id),'results-title','Submitting search must focus results');
+   assert(await page.locator('#results-title').evaluate(el=>{const r=el.getBoundingClientRect();return r.top>=0&&r.top<window.innerHeight;}),'Submitted results heading not in viewport');
+   await page.locator('#lab-result-shortcut').click();
+   assert.equal(new URL(page.url()).hash,'#results-title','Result-jump link must target result heading');
+
    await page.addScriptTag({path:require.resolve('axe-core')});
    const axe=await page.evaluate(async()=>await window.axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa']}}));
    fs.writeFileSync(path.join(dir,'canonical-axe-'+width+'.json'),JSON.stringify({violations:axe.violations,incomplete:axe.incomplete},null,2));

@@ -25,6 +25,7 @@ h1{font-size:clamp(2rem,4.3vw,3.1rem);letter-spacing:-.036em;line-height:1.13;ma
 .search-action,.more,#lab-recover{min-height:48px;border:0;border-radius:10px;padding:10px 19px;background:#205d4c;color:white;font-weight:750;white-space:nowrap}
 .search-action:hover,.more:hover,#lab-recover:hover{background:#174a3b}
 .hint{font-size:.84rem;line-height:1.5;color:#60736a;margin:.5rem 0 1.15rem}
+.result-shortcut{font-size:.9rem;margin:-.4rem 0 1rem}.result-shortcut a{font-weight:680;text-underline-offset:3px}#results-title{scroll-margin-top:20px}#results-title:focus-visible{outline:3px solid #a2783a;outline-offset:6px}
 .examples{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:7px 0 23px}
 .examples span{color:#5c6f65;font-size:.88rem;font-weight:650;margin-right:4px}
 .examples button{border:1px solid #b8cec3;background:#f5f9f6;border-radius:30px;color:#21473e;font-size:.81rem;padding:6px 12px}

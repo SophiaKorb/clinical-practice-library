@@ -30,6 +30,7 @@
       <label for="lab-q" class="main-label">What are you looking for?</label>
       <div class="search-box"><input id="lab-q" name="q" type="search" autocomplete="off" maxlength="160" placeholder="e.g., housing for transition-age youth" aria-describedby="search-hint"><button type="submit" class="search-action">Find resources</button></div>
       <p id="search-hint" class="hint">Do not enter client names or identifying information. Search stays in this browser, but terms appear in the shareable URL.</p>
+      <p class="result-shortcut"><a id="lab-result-shortcut" href="#results-title">Skip filters and view results</a></p>
       <div class="examples" aria-label="Example searches"><span>Try:</span>
         <button type="button" data-example="school refusal">School refusal</button>
         <button type="button" data-example="tantrums">Tantrums</button>
@@ -93,7 +94,7 @@
     </form>
   </section>
   <section class="results-wrap" aria-labelledby="results-title">
-    <div class="results-head"><div><p class="eyebrow">Resource matches</p><h2 id="results-title">Search results</h2></div><p id="lab-status" role="status" aria-live="polite" aria-atomic="true"></p></div>
+    <div class="results-head"><div><p class="eyebrow">Resource matches</p><h2 id="results-title" tabindex="-1">Search results</h2></div><p id="lab-status" role="status" aria-live="polite" aria-atomic="true"></p></div>
     <div id="lab-results" class="results"></div>
     <div id="lab-empty" class="empty" hidden><h3>No confident matches yet</h3><p>Try fewer words, remove filters, or browse the community program guides directly. A missing result is not a finding about clinical relevance.</p><button type="button" id="lab-recover">Remove filters</button></div>
     <button id="lab-more" type="button" class="more" hidden>Show more matches</button>
