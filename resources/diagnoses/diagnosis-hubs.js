@@ -23,8 +23,11 @@ var subtitle={
  'Sleep conditions':'Sleep health, differential questions and functional supports',
  'Grief / bereavement':'Meaning, connection, loss and everyday functioning'
 };
+var comprehensiveGuideRoutes={"ADHD":"/resources/diagnoses/adult-adhd.html","Autism":"/resources/diagnoses/comprehensive/autism.html","Anxiety / OCD":"/resources/diagnoses/comprehensive/anxiety-ocd.html","Depression":"/resources/diagnoses/comprehensive/depression.html","Trauma / dissociation":"/resources/diagnoses/comprehensive/trauma-dissociation.html","Learning disorders":"/resources/diagnoses/comprehensive/learning-disorders.html","Psychosis / bipolar":"/resources/diagnoses/comprehensive/psychosis-bipolar.html","Substance use":"/resources/diagnoses/comprehensive/substance-use.html","Persistent conflict":"/resources/diagnoses/comprehensive/persistent-conflict.html","Eating disorders":"/resources/diagnoses/comprehensive/eating-disorders.html","Tic / repetitive behavior conditions":"/resources/diagnoses/comprehensive/tic-repetitive-behavior.html","Intellectual disability":"/resources/diagnoses/comprehensive/intellectual-disability.html","Sleep conditions":"/resources/diagnoses/comprehensive/sleep-conditions.html","Grief / bereavement":"/resources/diagnoses/comprehensive/grief-bereavement.html"};
+var caseManagerGuideRoutes={"ADHD":"/resources/diagnoses/comprehensive/case-management/adhd.html","Autism":"/resources/diagnoses/comprehensive/case-management/autism.html","Anxiety / OCD":"/resources/diagnoses/comprehensive/case-management/anxiety-ocd.html","Depression":"/resources/diagnoses/comprehensive/case-management/depression.html","Trauma / dissociation":"/resources/diagnoses/comprehensive/case-management/trauma-dissociation.html","Learning disorders":"/resources/diagnoses/comprehensive/case-management/learning-disorders.html","Psychosis / bipolar":"/resources/diagnoses/comprehensive/case-management/psychosis-bipolar.html","Substance use":"/resources/diagnoses/comprehensive/case-management/substance-use.html","Persistent conflict":"/resources/diagnoses/comprehensive/case-management/persistent-conflict.html","Eating disorders":"/resources/diagnoses/comprehensive/case-management/eating-disorders.html","Tic / repetitive behavior conditions":"/resources/diagnoses/comprehensive/case-management/tic-repetitive-behavior.html","Intellectual disability":"/resources/diagnoses/comprehensive/case-management/intellectual-disability.html","Sleep conditions":"/resources/diagnoses/comprehensive/case-management/sleep-conditions.html","Grief / bereavement":"/resources/diagnoses/comprehensive/case-management/grief-bereavement.html"};
 var extra={
  'ADHD':[
+  ['/resources/diagnoses/adult-adhd-collection/index.html','Adult ADHD: complete clinical and practical collection','Assessment, structured CBT, daily functioning, interactive map and print-ready tools'],
   ['/resources/diagnoses/adult-adhd.html','Adult ADHD: comprehensive clinical and practical guide','Assessment, treatment, daily living, relationships, accommodations and every relevant CPL tool'],
   ['/resources/therapy/neurodevelopmental-executive-function-start-here.html','Psychotherapy access and neurodevelopmental adaptations','Cross-diagnostic: adapt therapy demands, communication and sensory access'],
   ['/resources/therapy/neurodevelopmental-executive-function-practical-toolkit.html','Executive-function practical toolkit','Cross-diagnostic: barrier mapping and supported participation'],
@@ -105,6 +108,7 @@ function renderSelected(){
  document.getElementById('adhd-focus').hidden=(selected!=='ADHD');
  document.title=selected+' — Full resource index | Clinical Practice Library';
  document.getElementById('topic-name').textContent=selected;
+ var depthLink=document.getElementById('topic-depth-link');if(depthLink){depthLink.href=comprehensiveGuideRoutes[selected]||'/resources/diagnoses/comprehensive/index.html';depthLink.textContent='Open '+selected+' clinical-depth guide and printable worksheet';}
  document.getElementById('topic-lede').textContent=subtitle[selected]||'Clinical topic resources';
  var direct=data.resources.filter(r=>(r.tags&&r.tags.diagnosis||[]).includes(selected));
  document.getElementById('topic-stat').textContent=direct.length+' directly indexed resources';
@@ -121,6 +125,7 @@ function renderSelected(){
  }
  var supplemental=document.getElementById('related-section'),list=document.getElementById('related-list');
  var directUrls=new Set(direct.map(r=>r.url)),extras=(extra[selected]||[]).filter(x=>!directUrls.has(x[0]));
+ if(caseManagerGuideRoutes[selected])extras.unshift([caseManagerGuideRoutes[selected],'Practical case-management support sheet','Client-centered access and service coordination; not an indexed treatment endorsement']);
  if(extras.length){
   for(var [url,title,reason] of extras){
    var li=elem('li');li.appendChild(link(url,title));li.appendChild(elem('span',null,reason));list.appendChild(li);
