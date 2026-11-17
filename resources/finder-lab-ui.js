@@ -40,6 +40,7 @@ function cardFor(group){
  if(item.format==='PDF')appendLabel(chips,'PDF','chip--neutral');
  if(item.language==='es')appendLabel(chips,'Español','chip--neutral');
  if(item.isExternal)appendLabel(chips,'Publisher reference','chip--neutral');
+ if(item.verifiedSpanishEquivalent)appendLabel(chips,item.duplicateStatus==='older-linked'?'Prior version':item.duplicateStatus==='preferred'?'Current linked version':'Alternate address','chip--neutral');
  if(item.population.length===1)appendLabel(chips,humanPop[item.population[0]]||item.population[0],'chip--neutral');
  if(item.acrossAges)appendLabel(chips,'Adapt for the person','chip--neutral');
  article.appendChild(chips);
@@ -55,16 +56,18 @@ function cardFor(group){
  if(state.q&&group.best.reason.startsWith('Related concept:'))
    appendLabel(chips,'Related topic','chip--neutral');
  if(group.allFamily.length>1){
-  var d=el('details','family'),s=el('summary',null,'View '+(group.allFamily.length-1)+' more formats in this collection');
+  var translatedFamily=group.key.startsWith('verified-spanish:');
+  var d=el('details','family'),s=el('summary',null,translatedFamily?'View '+(group.allFamily.length-1)+' other Spanish address'+(group.allFamily.length===2?'':'es'):'View '+(group.allFamily.length-1)+' more formats in this collection');
   d.appendChild(s);
   var list=el('ul');
   for(var member of group.allFamily){
    if(member.url===item.url)continue;
-   var li=el('li'),link=el('a',null,member.title.replace(/^.*? — /,''));
+   var textLabel=translatedFamily?(member.duplicateStatus==='older-linked'?'Prior retained Spanish version':member.duplicateStatus==='same-text'?'Same main text at another address':'Current linked Spanish version'):member.title.replace(/^.*? — /,'');
+   var li=el('li'),link=el('a',null,textLabel);
    link.href=member.url;li.appendChild(link);list.appendChild(li);
   }
   d.appendChild(list);
-  d.appendChild(el('p','caveat','Only formats matching your current filters appear here. Open the collection for other formats.'));
+  d.appendChild(el('p','caveat',translatedFamily?'These source-checked links remain available. Identical main text or a clearly marked retained version; differing same-title resources are not combined.':'Only formats matching your current filters appear here. Open the collection for other formats.'));
   article.appendChild(d);
  }
  return article;
