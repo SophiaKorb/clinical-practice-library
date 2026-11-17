@@ -33,10 +33,10 @@ for(const key of ['diagnosis','symptom','function','intervention','stage','task'
 for(const phrase of ["p.get('age')","p.get('child')","p.get('role')","state.legacyRole","getParams()"])assert(ui.includes(phrase),'Back-compat query behavior missing '+phrase);
 const raw=read('resources/clinical-finder-data.js');
 const data=JSON.parse(raw.replace(/^globalThis\.CPLFinderData\s*=\s*/,'').replace(/;\s*$/,''));
-assert.equal(data.resources.length,812);
+assert.equal(data.resources.length,813);
 assert.equal(data.resources.filter(x=>x.externalUrl).length,77);
 const items=engine.index(data.resources);
-assert.equal(items.length,812);
+assert.equal(items.length,813);
 const get=url=>items.find(x=>x.url===url);
 const early=get('/resources/birth-to-five/index.html'),local=get('/resources/birth-to-five/tucson-pima-local-resources.html');
 assert(early&&local);
