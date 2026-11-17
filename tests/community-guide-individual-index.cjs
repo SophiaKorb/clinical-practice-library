@@ -46,5 +46,22 @@ assert(items.filter(r=>engine.matchesFilters(r,{advanced:{community:'family'}}))
 const finderHTML=read('resources/clinical-resource-finder.html');
 for(const name of ['lab-community','lab-place'])assert(finderHTML.includes('id="'+name+'"'),'Community filter missing from live finder: '+name);
 
+// Unified discovery: collection filters are exclusive, TAY is a guide category not an inferred age license.
+const inCommunity=items.filter(r=>engine.matchesFilters(r,{scope:'community'}));
+assert.equal(inCommunity.filter(r=>r.original.communityCollection==='transition-age').length,27);
+assert(inCommunity.length>=197);
+assert(items.filter(r=>engine.matchesFilters(r,{scope:'noncommunity'})).every(r=>!r.original.communityCollection));
+for(const service of ['housing','employment','foster','parenting','food','transportation','disability']){
+ const results=items.filter(r=>engine.matchesFilters(r,{scope:'community',service}));
+ assert(results.every(r=>r.original.communityCollection),'Service facet leaked clinical records: '+service);
+}
+assert(items.filter(r=>engine.matchesFilters(r,{scope:'community',service:'housing',advanced:{community:'transition-age'}})).length>0,'TAY housing mentions not discoverable');
+assert(items.filter(r=>engine.matchesFilters(r,{scope:'community',service:'foster',advanced:{community:'transition-age'}})).length>0,'TAY foster-care mentions not discoverable');
+assert(items.filter(r=>engine.matchesFilters(r,{scope:'community',advanced:{community:'transition-age'}})).length===27,'TAY filter must not infer extra age eligibility');
+for(const id of ['lab-scope','lab-service','lab-community'])assert(finderHTML.includes('id="'+id+'"'),'Missing visible community discovery control '+id);
+assert(finderHTML.indexOf('id="lab-community"')<finderHTML.indexOf('id="lab-advanced"'),'TAY community filter is hidden in advanced controls');
+assert(finderHTML.includes('Browse youth and transition-age listings'),'Missing no-search community navigation');
+assert(!data.resources.some(r=>/iamyou360/i.test(r.url)),'I AM YOU 360 needs source verification before new catalog indexing');
+
 assert(new Set(data.resources.map(r=>r.url)).size===data.resources.length,'Duplicate canonical resource URL');
 console.log('COMMUNITY_GUIDES_INDIVIDUAL_INDEX_PASS '+JSON.stringify({family:family.length,youth:youth.length,total:data.resources.length,anchors:197}));
