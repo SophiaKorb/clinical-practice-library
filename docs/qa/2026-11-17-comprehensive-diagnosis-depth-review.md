@@ -90,3 +90,13 @@ At **exact passing content/CSS head `c0c6f7bdff15fca16f49d0c63b225a9ceb798c3b`**
 - Added `tests/condition-case-management.cjs` to the site QA workflow, checking fourteen destinations, print/skip/HTML scaffolds, links, role boundaries and exact canonical finder preservation. Extended `scripts/qa/diagnosis-hubs-rendered.cjs` to visit fifteen case-management pages at 390/1280 CSS pixels with keyboard, reflow, selected automated axe checks and a browser print sample.
 - **Do not misstate the earlier passing checkpoint** `c0c6f7bd` as validating these new materials. Final exact-head CI and clinical/source review must be verified separately before claiming a passing candidate.
 - Human gates: condition-specific service eligibility, safeguards, consent, clinical scope, physical printing, native screen readers, 200%/400% browser zoom, rights and release authorization remain open. No PHI, merge, deployment, publication or access change.
+
+## Exact-source case-management QA — confirmed November 17, 2026
+
+At exact **case-management source and test head `7e6074590cff3a289d777cdd5173ae9c1c3dea84`**, the separate automated workflows both finished successfully:
+
+- [CPL site QA run 44152162698](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/44152162698) — SUCCESS. Original 615-resource finder stayed unmodified; site links, scripts, diagnosis hub, and fourteen new condition-specific case manager worksheet assertions passed.
+- [CPL rendered keyboard/print run 44152162625](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/44152162625) — SUCCESS. The case-management pages were visited at 390/1280 CSSpx with responsive overflow checks and keyboard skip-focus checks; selected pages received automated serious/critical axe checks; browser print sample produced. [Artifact with screenshots and browser-print evidence](https://github.com/SophiaKorb/clinical-practice-library/actions/runs/44152162625/artifacts/14360265743).
+- Manually inspected the artifact's 390px case-management index, ADHD support sheet and eating-disorder coordination sheet. Typography, card order, three-stage reasoning map, blank print lines and link hierarchy were readable without visible clipping. The visible skip link in screenshots is from intentional keyboard focus during QA.
+
+The new static and behavioral tests do **not** certify clinical quality, official eligibility, real physical printing, native screen-reader results, actual 200%/400% zoom or PDF/UA. Owner merge and deployment gates remain closed. Documentation-only updates after this exact source checkpoint are not themselves new clinical/source QA.
