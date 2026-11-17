@@ -25,6 +25,7 @@ var subtitle={
 };
 var extra={
  'ADHD':[
+  ['/resources/diagnoses/adult-adhd-collection/index.html','Adult ADHD: complete clinical and practical collection','Assessment, structured CBT, daily functioning, interactive map and print-ready tools'],
   ['/resources/diagnoses/adult-adhd.html','Adult ADHD: comprehensive clinical and practical guide','Assessment, treatment, daily living, relationships, accommodations and every relevant CPL tool'],
   ['/resources/therapy/neurodevelopmental-executive-function-start-here.html','Psychotherapy access and neurodevelopmental adaptations','Cross-diagnostic: adapt therapy demands, communication and sensory access'],
   ['/resources/therapy/neurodevelopmental-executive-function-practical-toolkit.html','Executive-function practical toolkit','Cross-diagnostic: barrier mapping and supported participation'],
