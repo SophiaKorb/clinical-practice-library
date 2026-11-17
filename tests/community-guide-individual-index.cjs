@@ -22,6 +22,13 @@ for(const [i,rows] of [[0,family],[1,youth]]){
  }
 }
 for(let n=1;n<=170;n++)assert(family.some(r=>r.url.endsWith('#listing-'+n)),'Missing family number '+n);
+const adultClub=data.resources.find(r=>r.url.endsWith('#youth-listing-17'));
+assert.deepEqual(adultClub.tags.stage,['Adult'],'Adult peer group must not appear in child/teen results');
+assert.equal(adultClub.minimumAge,18,'Adult group has documented age minimum');
+const teenCrisis=data.resources.find(r=>r.url.endsWith('#youth-listing-23'));
+assert.deepEqual(teenCrisis.tags.stage,['School age / adolescence'],'Teen-specific crisis service misclassified');
+const projectFocus=data.resources.find(r=>r.url.endsWith('#youth-listing-2'));
+assert.equal(projectFocus.minimumAge,18,'Project FOCUS youth program has documented 18–21 scope');
 const items=engine.index(data.resources);
 for(const [q,needle] of [['Parent Aid','#listing-2'],['Project FOCUS','#youth-listing-2'],['Autism Society','#listing-67']]){
  const hits=engine.search(items,{q}).groups;
