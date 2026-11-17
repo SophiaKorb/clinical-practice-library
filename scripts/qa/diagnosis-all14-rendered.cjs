@@ -7,8 +7,8 @@ const catalog=JSON.parse(raw.replace(/^globalThis\.CPLFinderData\s*=\s*/,'').rep
 const {runInNewContext}=require('node:vm');
 const runtimeCatalog=JSON.parse(JSON.stringify(catalog));
 runInNewContext(fs.readFileSync(path.join(process.cwd(),'resources/diagnoses/adult-adhd-collection/finder-overlay.js'),'utf8'),{CPLFinderData:runtimeCatalog});
-assert.equal(catalog.resources.length,615,'Frozen original finder count');
-assert.equal(runtimeCatalog.resources.length,646,'Original finder plus 31 reviewed ADHD supplemental entries');
+assert([615,813].includes(catalog.resources.length),'Expect historical 615 or current 813 official finder source');
+assert.equal(runtimeCatalog.resources.length,catalog.resources.length+31,'Exactly 31 new review ADHD entries added to current official source');
 for(const topic of catalog.facets.diagnosis){
  const initial=catalog.resources.filter(x=>(x.tags?.diagnosis||[]).includes(topic));
  const loaded=runtimeCatalog.resources.filter(x=>(x.tags?.diagnosis||[]).includes(topic));
