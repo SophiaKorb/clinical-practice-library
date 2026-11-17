@@ -23,6 +23,35 @@ fs.mkdirSync(dir,{recursive:true});
    const tooWide=await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);
    assert(tooWide<=2,'Adult guide horizontal overflow '+width+' '+tooWide);
    await page.screenshot({path:path.join(dir,'adult-adhd-'+width+'.png'),fullPage:true});
+   // Comprehensive diagnosis-depth pages — new review-only content, isolated from protected catalog.
+   const comprehensivePages=['index','autism','anxiety-ocd','depression','trauma-dissociation',
+      'learning-disorders','psychosis-bipolar','substance-use','persistent-conflict',
+      'eating-disorders','tic-repetitive-behavior','intellectual-disability',
+      'sleep-conditions','grief-bereavement','dyslexia','dyscalculia','dysgraphia'];
+   if(width===390||width===1280){
+    for(const slug of comprehensivePages){
+     const route='/resources/diagnoses/comprehensive/'+slug+'.html';
+     const opened=await page.goto(base+route,{waitUntil:'domcontentloaded'});
+     assert.equal(opened.status(),200,'Missing comprehensive guide '+slug);
+     assert.equal(await page.locator('h1').count(),1,'Missing or duplicate primary heading '+slug);
+     assert(await page.locator('a.skip').count()===1,'Keyboard skip link missing '+slug);
+     await page.locator('a.skip').focus();
+     assert(await page.evaluate(()=>document.activeElement.classList.contains('skip')),'Skip link cannot receive focus '+slug);
+     const over=await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);
+     assert(over<=2,'Horizontal reflow failure '+slug+' '+width+' overflow '+over);
+     await page.addScriptTag({path:require.resolve('axe-core')});
+     const ax=await page.evaluate(async()=>window.axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa']}}));
+     fs.writeFileSync(path.join(dir,'comprehensive-axe-'+slug+'-'+width+'.json'),JSON.stringify({violations:ax.violations,incomplete:ax.incomplete},null,2));
+     assert.equal(ax.violations.filter(v=>['serious','critical'].includes(v.impact)).length,0,
+       'Serious comprehensive guide accessibility violation '+slug+' '+width+': '+JSON.stringify(ax.violations.map(v=>v.id)));
+     await page.screenshot({path:path.join(dir,'comprehensive-'+slug+'-'+width+'.png'),fullPage:true});
+     if(width===1280&&slug==='learning-disorders'){
+      const pdf=await page.pdf({format:'Letter',printBackground:false});
+      assert(pdf.length>3000,'Printed learning guide unexpectedly small');
+      fs.writeFileSync(path.join(dir,'comprehensive-learning-print.pdf'),pdf);
+     }
+    }
+   }
    await page.goto(base+'/resources/diagnoses/index.html?topic=ADHD',{waitUntil:'networkidle'});
    await page.waitForSelector('#direct-groups .resource-list li');
    assert.equal(await page.locator('#direct-groups .resource-list li').count(),19,'Dynamic diagnosis hub missing ADHD resources');
