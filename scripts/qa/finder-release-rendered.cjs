@@ -48,7 +48,7 @@ fs.mkdirSync(dir,{recursive:true});
    assert.equal(await page.inputValue('#lab-symptom'),'Communication difficulty','Legacy symptom not honored');
    assert.equal(await page.inputValue('#lab-stage'),'School age / adolescence','Legacy stage not honored');
    await page.goto(base+'/resources/clinical-resource-finder.html?q=Eon&age=children',{waitUntil:'networkidle'});
-   assert.equal(await page.locator('.result-card').count(),0,'Teen-only Eon service returned for children');
+   assert.equal(await page.locator('.result-card').count(),0,'Teen-only Eon service returned for children: '+JSON.stringify(await page.locator('.result-card h3').allInnerTexts()));
    await page.selectOption('#lab-population','teens');
    assert(await page.locator('.result-card').count()>0,'Teen eligibility route missing for Eon');
    await page.goto(base+'/resources/clinical-resource-finder.html?q=tantrums',{waitUntil:'networkidle'});
