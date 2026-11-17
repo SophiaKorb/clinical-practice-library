@@ -44,7 +44,9 @@ assert(adultCollection.includes('/resources/diagnoses/index.html?topic=ADHD'),
  'Focused Adult ADHD collection must link to full ADHD resource index');
 assert(home.includes('Adult ADHD: comprehensive guide'),'Homepage missing primary Adult ADHD option');
 assert(home.includes('All ADHD resources (full index)'),'Homepage ADHD diagnosis index not prominent');
-assert((home.match(/class="diagnosis-hub-link"/g)||[]).length===8,'Every diagnosis card needs a complete index route');
+const diagnosisCards=[...home.matchAll(/<article class="diagnosis-card">([\s\S]*?)<\/article>/g)].map(x=>x[1]);
+assert(diagnosisCards.length===8&&diagnosisCards.every(card=>card.includes('class="diagnosis-hub-link"')),
+ 'Every diagnosis card needs its own complete index route');
 assert((home.match(/class="diagnosis-card"/g)||[]).length===8,'Existing eight diagnosis cards must remain');
 const guides=[
  ['adhd','adhd','ADHD'],['autism','autism','Autism'],['anxiety','anxiety','Anxiety / OCD'],
