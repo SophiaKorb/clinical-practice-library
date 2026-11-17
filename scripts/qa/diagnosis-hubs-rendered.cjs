@@ -63,7 +63,10 @@ fs.mkdirSync(dir,{recursive:true});
     assert.equal(loaded.status(),200,'Missing case-manager resource '+slug);
     assert.equal(await page.locator('h1').count(),1,'Case manager page heading '+slug);
     const over=await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);
-    assert(over<=2,'Case manager resource horizontal overflow '+slug+' '+width+': '+over);
+    if(over>2){
+     const offenders=await page.evaluate(()=>[...document.querySelectorAll('main *, header *, footer *')].filter(el=>{const r=el.getBoundingClientRect();return r.right>innerWidth+2||r.left < -2}).slice(0,8).map(el=>({tag:el.tagName,text:(el.textContent||'').slice(0,65),right:Math.round(el.getBoundingClientRect().right)})));
+     throw new Error('Case manager resource horizontal overflow '+slug+' '+width+': '+over+'; offenders '+JSON.stringify(offenders));
+    }
     await page.locator('a.skip').focus();
     assert.equal(await page.evaluate(()=>document.activeElement.classList.contains('skip')),true,'Case manager keyboard skip '+slug);
     if(slug==='session-choice-map'){
