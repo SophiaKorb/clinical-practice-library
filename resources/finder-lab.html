@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Nonproduction search usability laboratory for the Clinical Practice Library.">
+<title>Clinical Practice Library | Finder UX laboratory</title>
+<link rel="stylesheet" href="/resources/finder-lab.css">
+<script defer src="/resources/clinical-finder-data.js"></script>
+<script defer src="/resources/finder-lab-engine.js"></script>
+<script defer src="/resources/finder-lab-ui.js"></script>
+</head>
+<body>
+<a class="skip" href="#lab-search">Skip to resource search</a>
+<header class="site-head">
+  <div class="head-inner"><a class="brand" href="/">CPL <span>Clinical Practice Library</span></a>
+  <span class="status-label">Nonproduction UX study</span></div>
+</header>
+<main id="content">
+  <div class="intro">
+    <p class="eyebrow">A simpler way to find what you need</p>
+    <h1>What would you like help finding?</h1>
+    <p>Describe a situation, topic, or resource in ordinary language. Search matches titles, clinical topics, and selected related terms without guessing diagnoses.</p>
+  </div>
+  <section id="lab-search" aria-labelledby="search-title">
+    <h2 id="search-title" class="visually-hidden">Search library resources</h2>
+    <form id="lab-form" role="search" novalidate>
+      <label for="lab-q" class="main-label">Clinical question or topic</label>
+      <div class="search-box"><input id="lab-q" name="q" type="search" autocomplete="off" maxlength="160" placeholder="e.g., child struggling with transitions" aria-describedby="search-hint"><button type="submit" class="search-action">Find resources</button></div>
+      <p id="search-hint" class="hint">Do not enter client names or identifying information. Search stays in this browser, but terms appear in the shareable URL.</p>
+      <div class="examples" aria-label="Example searches"><span>Try:</span>
+        <button type="button" data-example="school refusal">School refusal</button>
+        <button type="button" data-example="tantrums">Tantrums</button>
+        <button type="button" data-example="IEP">IEP</button>
+        <button type="button" data-example="dissociation grounding">Dissociation + grounding</button>
+      </div>
+      <fieldset class="quick-filters">
+        <legend>Narrow your results <span>(optional)</span></legend>
+        <div class="filter-grid">
+          <div><label for="lab-population">Who is this for?</label>
+          <select name="population" id="lab-population">
+            <option value="">All populations</option>
+            <option value="birth5">Birth–5</option><option value="children">School-age children</option>
+            <option value="teens">Teens</option><option value="adults">Adults</option>
+          </select></div>
+          <div><label for="lab-need">What kind of resource?</label>
+          <select name="need" id="lab-need">
+            <option value="">Any kind</option>
+            <option value="clinical">Clinical guidance</option>
+            <option value="worksheet">Worksheet or visual</option>
+            <option value="caregiver">Caregiver education</option>
+            <option value="assessment">Assessment</option>
+            <option value="school">School support</option>
+            <option value="referral">Referral or directory</option>
+            <option value="training">Practice and training</option>
+            <option value="education">Education</option>
+            <option value="collection">Topic collection</option>
+          </select></div>
+          <div><label for="lab-audience">Who will use it?</label>
+          <select name="audience" id="lab-audience">
+            <option value="">All audiences</option>
+            <option value="client">Client</option>
+            <option value="caregiver">Caregiver</option>
+            <option value="clinician">Clinician</option>
+            <option value="case_manager">Case manager</option>
+            <option value="school_team">School team</option>
+            <option value="trainee">Trainee</option>
+          </select></div>
+        </div>
+      </fieldset>
+      <details id="lab-advanced" class="advanced">
+        <summary>Advanced clinical filters</summary>
+        <div class="advanced-grid">
+          <div><label for="lab-diagnosis">Diagnosis / topic</label><select id="lab-diagnosis" data-advanced="diagnosis"><option value="">All topics</option></select></div>
+          <div><label for="lab-function">Functional difficulty</label><select id="lab-function" data-advanced="function"><option value="">All functions</option></select></div>
+          <div><label for="lab-task">Clinical task</label><select id="lab-task" data-advanced="task"><option value="">All tasks</option></select></div>
+          <div><label for="lab-step">Pathway step</label><select id="lab-step" data-advanced="step"><option value="">All steps</option></select></div>
+        </div>
+        <p class="hint">These filters use the original discovery tags. Missing tags do not mean a resource is clinically irrelevant.</p>
+      </details>
+      <div class="form-actions"><button id="lab-clear" type="button" class="subtle">Clear search and filters</button><span class="note" id="active-filters"></span></div>
+    </form>
+  </section>
+  <section class="results-wrap" aria-labelledby="results-title">
+    <div class="results-head"><div><p class="eyebrow">Resource matches</p><h2 id="results-title">Search results</h2></div><p id="lab-status" role="status" aria-live="polite" aria-atomic="true"></p></div>
+    <div id="lab-results" class="results"></div>
+    <div id="lab-empty" class="empty" hidden><h3>No confident matches yet</h3><p>Try fewer words, remove a filter, or search a broader clinical topic. A missing result is not a finding about clinical relevance.</p><button type="button" id="lab-recover">Remove filters</button></div>
+    <button id="lab-more" type="button" class="more" hidden>Show more matches</button>
+  </section>
+  <aside class="scope"><h2>About these results</h2><p>This is an isolated usability prototype using the existing CPL catalog. Population tags indicate possible relevance, not verified developmental suitability. Direct-use audiences and eligibility are not inferred where metadata is ambiguous. Check the resource, provider source, scope, and clinical fit before use.</p><p><a href="/resources/clinical-resource-finder.html">Open the current production finder</a> · <a href="/resources/complete-resource-inventory.html">Browse the complete inventory</a></p></aside>
+</main>
+<footer>Clinical Practice Library · Sophia Korb Cohon, PhD · Review candidate only · No production navigation altered</footer>
+<noscript><p class="no-script">JavaScript is required for this search prototype. <a href="/resources/complete-resource-inventory.html">Browse all resources</a>.</p></noscript>
+</body></html>
