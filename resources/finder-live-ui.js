@@ -6,7 +6,7 @@ var engine=globalThis.CPLFinderLab,data=globalThis.CPLFinderData;
 if(!engine||!data){return;}
 var by=id=>document.getElementById(id);
 var catalog=engine.index(data.resources),limit=10;
-var keys=['population','need','audience'],advKeys=['diagnosis','symptom','function','intervention','stage','task','step'];
+var keys=['population','need','audience'],advKeys=['diagnosis','symptom','function','intervention','stage','task','step','community','place'];
 var state={q:'',population:'',need:'',audience:'',advanced:{}};
 var humanRole={clinician:'Clinician',trainee:'Trainee',case_manager:'Case manager',school_team:'School team',client:'Client',caregiver:'Caregiver'};
 var humanPop={birth5:'Birth–5',children:'School-age/teen indexed',teens:'School-age/teen indexed',adults:'Adult'};
