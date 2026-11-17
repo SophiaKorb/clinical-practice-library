@@ -25,8 +25,9 @@ fs.mkdirSync(dir,{recursive:true});
    await page.screenshot({path:path.join(dir,'adult-adhd-'+width+'.png'),fullPage:true});
    await page.goto(base+'/resources/diagnoses/index.html?topic=ADHD',{waitUntil:'networkidle'});
    await page.waitForSelector('#direct-groups .resource-list li');
-   assert.equal(await page.locator('#direct-groups .resource-list li').count(),19,'Dynamic diagnosis hub missing ADHD resources');
+   assert.equal(await page.locator('#direct-groups .resource-list li').count(),27,'Dynamic diagnosis hub must include 19 original and 8 supplemental ADHD resources');
    assert.match(await page.locator('#topic-name').innerText(),/ADHD/);
+   assert(await page.locator('#direct-groups a[href="/resources/diagnoses/adult-adhd-collection/assessment.html"]').count()>0,'Supplemental ADHD clinical assessment must appear in dynamic index');
    assert.equal(await page.locator('#adhd-focus').isVisible(),true,'Prominent adult comprehensive guide missing');
    let overflow=await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);
    assert(overflow<=2,'Diagnosis index overflow '+width+' '+overflow);
@@ -68,7 +69,7 @@ fs.mkdirSync(dir,{recursive:true});
     await page.emulateMedia({forcedColors:'active'});
     await page.screenshot({path:path.join(dir,'adult-adhd-forced-colors.png'),fullPage:true});
    }
-   results.push({width,adultOverflow:tooWide,hubOverflow:overflow,adhdIndexed:19,autismIndexed:29,axeSerious:0,originalGuidesLinked:true});
+   results.push({width,adultOverflow:tooWide,hubOverflow:overflow,adhdIndexed:27,autismIndexed:29,axeSerious:0,originalGuidesLinked:true});
    await ctx.close();
   }
   console.log('DIAGNOSIS_HUB_RENDERED_PASS '+JSON.stringify(results));
