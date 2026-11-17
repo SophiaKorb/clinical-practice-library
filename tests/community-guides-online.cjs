@@ -10,6 +10,11 @@ const familyHtml=read('resources/community/family-guide.html'),tayHtml=read('res
 for(const [html,entries,type] of [[familyHtml,family,'family'],[tayHtml,tay,'tay']]){
   const cards=[...html.matchAll(/<article class="entry" id="([^"]+)"/g)].map(m=>m[1]);
   assert.equal(cards.length,entries.length,'Missing online cards for '+type);
+  const summaries=[...html.matchAll(/<p class="entry-desc">([^<]*)<\/p>/g)].map(m=>m[1].trim());
+  assert.equal(summaries.length,entries.length,'Missing online entry descriptions for '+type);
+  assert(summaries.every(t=>/[.!?…]$/.test(t)),'Online guide contains abruptly cut-off catalog excerpts: '+type);
+  assert(!summaries.some(t=>/Services \/ good to k$|family resourc$|routines, lim$/i.test(t)),'Truncated description artifact remains: '+type);
+
   assert.equal(new Set(cards).size,cards.length,'Duplicate card anchors for '+type);
   for(const item of entries){
     const hash=item.url.split('#')[1];
