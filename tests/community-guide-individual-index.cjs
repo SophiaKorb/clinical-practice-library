@@ -15,7 +15,7 @@ for(const [i,rows] of [[0,family],[1,youth]]){
  for(const r of rows){
   const anchor=r.url.split('#')[1];
   assert(pages[i].includes('id="'+anchor+'"'),'Broken direct listing anchor '+r.url);
-  assert(r.searchTerms.includes(r.title.split(' — ')[0]),'Missing individual title search term '+r.url);
+  assert(r.searchTerms.includes(r.title.replace(/ — Southern Arizona family guide #\\d+$/,'').replace(/ — transition-age guide$/,'')),'Missing individual title search term '+r.url);
   assert(r.description||i===1,'Missing family source description '+r.url);
   assert.deepEqual(r.tags.diagnosis,[],'Community navigators must not acquire unsupported diagnoses');
   assert(r.metadataBasis.includes('eligibility'),'Missing eligibility qualification');
