@@ -82,7 +82,12 @@ const widths=[320,390,640,1280]; // 320px is the WCAG 400% reflow-equivalent CSS
   await page.addScriptTag({path:require.resolve('axe-core/axe.min.js')});
   const finderAxe=await page.evaluate(async()=>await window.axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa']}}));
   const finderViolations=finderAxe.violations.map(x=>({id:x.id,impact:x.impact,nodes:x.nodes.map(n=>n.target).slice(0,5),help:x.help}));
-  axeFindings.push({page:'/resources/clinical-resource-finder.html',violations:finderViolations,incomplete:finderAxe.incomplete.length,passes:finderAxe.passes.length});
+  const finderIncomplete=finderAxe.incomplete.map(rule=>({id:rule.id,impact:rule.impact,help:rule.help,nodes:rule.nodes.map(node=>({target:node.target,html:node.html.slice(0,350),checks:node.any.concat(node.all,node.none).map(check=>({id:check.id,message:check.message,data:check.data})).slice(0,4)})).slice(0,12)}));
+  axeFindings.push({page:'/resources/clinical-resource-finder.html',violations:finderViolations,incomplete:finderIncomplete,passes:finderAxe.passes.length});
+  console.log('FINDER_AXE_INCOMPLETE_DETAIL',JSON.stringify(finderIncomplete));
+  mark(finderIncomplete.length===0,'Finder has unresolved axe inconclusive nodes: '+JSON.stringify(finderIncomplete));
+  const caret=await page.locator('.cpl-finder-caret').evaluate(el=>({ariaHidden:el.getAttribute('aria-hidden'),glyph:el.textContent,visible:getComputedStyle(el).display,border:getComputedStyle(el).borderRightWidth}));
+  mark(caret.ariaHidden==='true'&&caret.glyph===''&&caret.border!=='0px','Decorative caret must be visual-only and visible: '+JSON.stringify(caret));
   mark(finderViolations.length===0,'Finder WCAG axe violations: '+JSON.stringify(finderViolations));
   const displayed=await page.locator('.finder-card').count();
   mark(displayed===24,'Finder initially shows '+displayed+' not 24');

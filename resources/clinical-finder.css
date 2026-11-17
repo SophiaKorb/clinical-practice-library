@@ -11,3 +11,7 @@ h1{font-size:clamp(2rem,5vw,3.2rem)}.pathway{display:grid;grid-template-columns:
 .finder-card h3 a{text-decoration-thickness:1px;text-underline-offset:3px}
 .finder-card h3 a:hover{text-decoration-thickness:2px}
 @media print{.finder-card{min-height:0;padding:10px 12px}}
+
+/* Visual only: native details/summary remains keyboard- and screen-reader accessible. */
+.cpl-static-nav__more summary .cpl-finder-caret{display:inline-block;width:.47rem;height:.47rem;border:solid currentColor;border-width:0 2px 2px 0;transform:rotate(45deg);vertical-align:.13em;margin-left:.25rem}
+.cpl-static-nav__more[open] summary .cpl-finder-caret{transform:rotate(225deg);vertical-align:-.08em}

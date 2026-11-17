@@ -26,6 +26,9 @@ jobs:
       - run: node tests/navigation-destinations.cjs
       - run: node tests/child-population-filter.cjs
       - run: node tests/online-lgbtq-resources.cjs
+      - run: node tests/community-referral-scope-qa.cjs
+      - run: node tests/provider-audit-77.cjs
+      - run: node tests/external-provider-eligibility-audit.cjs
       - run: node tests/finder-card-readability.cjs
       - run: node tests/affirming-practice-content.cjs
       - run: node tests/combined-cpl-finder-qa.cjs
