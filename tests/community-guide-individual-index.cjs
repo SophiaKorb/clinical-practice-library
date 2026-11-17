@@ -67,7 +67,7 @@ const grounded=items.filter(r=>engine.matchesFilters(r,{advanced:{community:'fam
 assert(grounded.length>0,'Source-evidenced Marana family listings not accessible via filters');
 assert(grounded.every(r=>r.original.communityCollection==='family'&&r.original.communityPlaces.includes('Marana')),'Geographic filter admitted unverified location');
 const youthOnly=items.filter(r=>engine.matchesFilters(r,{advanced:{community:'transition-age'}}));
-assert.equal(youthOnly.length,27,'Youth guide filter must retain exactly its indexed entries');
+assert.equal(youthOnly.length,28,'Transition-age filter must retain 27 original headings plus IAMYOU360');
 assert(items.filter(r=>engine.matchesFilters(r,{advanced:{community:'family'}})).length===170,'Family guide filter must retain numbered entries');
 const finderHTML=read('resources/clinical-resource-finder.html');
 for(const name of ['lab-community','lab-place','lab-community-topic'])assert(finderHTML.includes('id="'+name+'"'),'Community filter missing from live finder: '+name);
