@@ -13,8 +13,8 @@ const idx=engine.index(d.resources),byUrl=new Map(idx.map(it=>[it.url,it]));
 assert.equal(idx.length,615,'Original published inventory must remain intact');
 assert.equal(new Set(idx.map(x=>x.url)).size,615,'URLs must remain unique');
 assert.equal(d.resources.filter(x=>x.externalUrl).length,77);
-assert.equal(Object.keys(reviewed).length,31,'Source review scope changed; re-audit source claims');
-assert.equal(idx.filter(x=>x.reviewedSource).length,31);
+assert.equal(Object.keys(reviewed).length,108,'Source review scope changed; re-audit source claims');
+assert.equal(idx.filter(x=>x.reviewedSource).length,108);
 for(const [url,notes] of Object.entries(reviewed)){
  const it=byUrl.get(url);assert(it,'Missing source-review entry '+url);
  assert(it.description===notes.description,'Source-reviewed description ignored '+url);
