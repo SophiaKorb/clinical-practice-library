@@ -3,6 +3,7 @@
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const path=require('node:path');
+const crypto=require('node:crypto');
 const {chromium}=require('playwright');
 const base=process.env.CPL_QA_ORIGIN||'http://127.0.0.1:8765';
 const dir=path.join(process.cwd(),'qa-artifacts/pr43/finder-release');
@@ -93,6 +94,18 @@ fs.mkdirSync(dir,{recursive:true});
     const webGuide=base+'/resources/community/'+guide.slug+'.html';
     const online=await page.goto(webGuide,{waitUntil:'networkidle'});
     assert.equal(online.status(),200,'Online community guide route is unavailable: '+guide.slug);
+    const approvedPdf=guide.slug==='family-guide'
+     ?{path:'/resources/community/original-pdfs/Tucson_Regional_Family_Resource_Guide_QA_Revised_2026.pdf',bytes:779066,sha:'eae42c74b0870d0e4faf389e44b56b4e0104866f08389c42f279b43dd0a6f713'}
+     :{path:'/resources/community/original-pdfs/Southern_Arizona_Youth_Transition_Resources_2026.pdf',bytes:218122,sha:'c051a12c8a5a8f7385260c64a5a53623a54e9480d0ee5f53518b1aeb04537091'};
+    assert(await page.locator('a[href="'+approvedPdf.path+'"]').count()>0,'Approved PDF missing from guide: '+guide.slug);
+    if(width===1280){
+      const pdfDownload=await page.request.get(base+approvedPdf.path);
+      assert.equal(pdfDownload.status(),200,'Approved PDF unavailable over public-shaped route: '+approvedPdf.path);
+      const pdfBytes=await pdfDownload.body();
+      assert.equal(pdfBytes.length,approvedPdf.bytes,'PDF bytes truncated over HTTP: '+guide.slug);
+      assert.equal(crypto.createHash('sha256').update(pdfBytes).digest('hex'),approvedPdf.sha,'PDF HTTP bytes differ from original: '+guide.slug);
+      assert(/pdf/i.test(pdfDownload.headers()['content-type']||''),'PDF MIME type incorrect: '+guide.slug);
+    }
     assert.equal(await page.locator('.entry').count(),guide.count,'Online community guide incomplete: '+guide.slug);
     assert(await page.locator('#'+guide.target).count()>0,'Direct entry anchor missing from online guide');
     assert(await page.locator('.contents a').count()>0,'Accessible section navigation missing');

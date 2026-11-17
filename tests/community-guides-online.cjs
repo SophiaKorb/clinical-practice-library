@@ -35,6 +35,39 @@ for(const p of ['resources/community/index.html','index.html','resources/start-h
  const s=read(p);
  for(const name of ['family-guide.html','transition-age-guide.html'])assert(s.includes(name),'No visible route to '+name+' in '+p);
 }
+// User-approved final print+digital PDFs are published byte-identically to canonical Drive sources.
+// They supersede the older archived 38-page/9-page PDF snapshots, not the source-text companions.
+const crypto=require('node:crypto');
+const pdfs=[
+  {
+    "path": "resources/community/original-pdfs/Tucson_Regional_Family_Resource_Guide_QA_Revised_2026.pdf",
+    "size": 779066,
+    "sha": "eae42c74b0870d0e4faf389e44b56b4e0104866f08389c42f279b43dd0a6f713",
+    "pages": 52
+  },
+  {
+    "path": "resources/community/original-pdfs/Southern_Arizona_Youth_Transition_Resources_2026.pdf",
+    "size": 218122,
+    "sha": "c051a12c8a5a8f7385260c64a5a53623a54e9480d0ee5f53518b1aeb04537091",
+    "pages": 13
+  }
+];
+const hub=read('resources/community/index.html');
+const finder=read('resources/clinical-resource-finder.html');
+for(const pdf of pdfs){
+ const bytes=fs.readFileSync(path.join(root,pdf.path));
+ assert.equal(bytes.length,pdf.size,'Approved PDF length changed: '+pdf.path);
+ assert.equal(bytes.subarray(0,5).toString(),'%PDF-','Not a real PDF: '+pdf.path);
+ assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'),pdf.sha,'PDF source bytes differ from approved final edition: '+pdf.path);
+ const route='/'+pdf.path;
+ assert(hub.includes('href="'+route+'"'),'Missing download on community hub: '+route);
+ assert(finder.includes('href="'+route+'"'),'Missing download from unified finder: '+route);
+ const reader=pdf.pages===52?familyHtml:tayHtml;
+ assert(reader.includes('href="'+route+'"'),'Missing source PDF download from online guide: '+route);
+ assert(reader.includes(String(pdf.pages)+'-page'),'Wrong final edition page count: '+route);
+}
+assert(hub.includes('52 pages')&&hub.includes('13 pages'),'Community hub still describes superseded PDF page counts');
+
 const ui=read('resources/finder-live-ui.js');
 assert(ui.includes("'Read in online guide'"),'Finder individual result does not offer online reader');
 for(const src of ['resources/community/family-community-guide-text.html','resources/community/youth-community-guide-text.html'])assert(fs.existsSync(path.join(root,src)),'Original source text removed');
