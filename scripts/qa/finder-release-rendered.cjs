@@ -118,6 +118,7 @@ fs.mkdirSync(dir,{recursive:true});
     const sectionLinkCount=await page.locator('.contents li').count();
     const visibleSectionLinks=await page.locator('.contents li:visible').count();
     assert(visibleSectionLinks>0&&visibleSectionLinks<sectionLinkCount,'Search navigation still links to hidden sections: '+guide.slug);
+    if(width<1280)await page.screenshot({path:path.join(dir,'community-'+guide.slug+'-filtered-'+width+'.png'),fullPage:false});
     await page.emulateMedia({media:'print'});
     const printedEntries=await page.locator('.entry').evaluateAll(nodes=>nodes.filter(node=>
       getComputedStyle(node).display!=='none'&&getComputedStyle(node.closest('.section')).display!=='none'
