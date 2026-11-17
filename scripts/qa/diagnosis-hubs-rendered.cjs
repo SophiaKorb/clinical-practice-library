@@ -20,6 +20,8 @@ fs.mkdirSync(dir,{recursive:true});
    assert.equal(await page.locator('#direct-adhd .resource-list a').count(),19,'No original tagged resource link may be lost');
    assert.equal(await page.locator('#direct-adhd .companion-bundle a').count(),8,'Focused toolkit needs one main and seven companion links');
    assert.equal(await page.locator('#direct-adhd .companion-bundle').count(),1,'Focused toolkit must be one grouped card');
+   const widths=await page.evaluate(()=>{const list=document.querySelector('#direct-adhd .resource-list--bundle');const card=list.querySelector('.companion-bundle');return {list:list.getBoundingClientRect().width,card:card.getBoundingClientRect().width};});
+   assert(widths.card>=widths.list-3,'Main toolkit card must span its available resource-list width at '+width+': '+JSON.stringify(widths));
    assert.equal(await page.locator('#related-supports .handout-grid li').count(),12,'Cross-diagnostic support count changed');
    const jump=page.locator('a[href="#assessment"]').first();await jump.focus();
    assert.equal(await page.evaluate(()=>document.activeElement.getAttribute('href')),'#assessment');
