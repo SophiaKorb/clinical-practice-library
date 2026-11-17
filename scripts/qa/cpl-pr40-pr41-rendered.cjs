@@ -75,14 +75,14 @@ const widths=[320,390,640,1280]; // 320px is the WCAG 400% reflow-equivalent CSS
   }
   const context=await browser.newContext({viewport:{width:390,height:900}});
   const page=await context.newPage();
-  const response=await page.goto(origin+'/resources/clinical-resource-finder.html?q=LGBTQ',{waitUntil:'load',timeout:30000});
+  const response=await page.goto(origin+'/resources/clinical-resource-finder-classic.html?q=LGBTQ',{waitUntil:'load',timeout:30000});
   mark(response?.status()===200,'Finder response '+response?.status());
   await page.waitForSelector('.finder-card h3 a');
   await page.screenshot({path:path.join(artifacts,'finder-LGBTQ-mobile.png'),fullPage:true});
   await page.addScriptTag({path:require.resolve('axe-core/axe.min.js')});
   const finderAxe=await page.evaluate(async()=>await window.axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa']}}));
   const finderViolations=finderAxe.violations.map(x=>({id:x.id,impact:x.impact,nodes:x.nodes.map(n=>n.target).slice(0,5),help:x.help}));
-  axeFindings.push({page:'/resources/clinical-resource-finder.html',violations:finderViolations,incomplete:finderAxe.incomplete.length,passes:finderAxe.passes.length});
+  axeFindings.push({page:'/resources/clinical-resource-finder-classic.html',violations:finderViolations,incomplete:finderAxe.incomplete.length,passes:finderAxe.passes.length});
   mark(finderViolations.length===0,'Finder WCAG axe violations: '+JSON.stringify(finderViolations));
   const displayed=await page.locator('.finder-card').count();
   mark(displayed===24,'Finder initially shows '+displayed+' not 24');
@@ -100,7 +100,7 @@ const widths=[320,390,640,1280]; // 320px is the WCAG 400% reflow-equivalent CSS
    }
   }
   for(const name of ['Eon','TrevorSpace']){
-   await page.goto(origin+'/resources/clinical-resource-finder.html?q='+encodeURIComponent(name)+'&age=children',{waitUntil:'load'});
+   await page.goto(origin+'/resources/clinical-resource-finder-classic.html?q='+encodeURIComponent(name)+'&age=children',{waitUntil:'load'});
    const status=await page.locator('#finder-status').innerText();
    mark(/^0 matching resources/.test(status),name+' should not be listed for under-13 children: '+status);
    await page.selectOption('#age-audience','teens');
