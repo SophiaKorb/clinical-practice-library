@@ -10,9 +10,9 @@ const original=JSON.parse(raw.replace(/^globalThis\.CPLFinderData\s*=\s*/,'').re
 const old=require('../resources/clinical-finder.js');
 const lab=require('../resources/finder-lab-engine.js');
 const indexed=lab.index(original.resources);
-assert.equal(original.resources.length,623);
-assert.equal(indexed.length,623);
-assert.equal(new Set(indexed.map(r=>r.url)).size,623);
+assert.equal(original.resources.length,615);
+assert.equal(indexed.length,615);
+assert.equal(new Set(indexed.map(r=>r.url)).size,615);
 assert.equal(original.resources.filter(r=>r.externalUrl).length,77);
 for(const item of indexed){
  assert.equal(typeof item.description,'string');
@@ -152,4 +152,4 @@ for(const [name,key] of [['baseline','baselineRank'],['prototype','prototypeRank
  const ranks=hardRows.map(r=>r[key]);
  hardMetrics[name]={targetTop1:ranks.filter(r=>r===1).length,targetTop5:ranks.filter(r=>r>0&&r<=5).length,targetMissing:ranks.filter(r=>r===0).length,reciprocalRank:Number((ranks.reduce((sum,r)=>sum+(r?1/r:0),0)/ranks.length).toFixed(3))};
 }
-console.log(JSON.stringify({status:'PASS',basis:'Expanded 623-record catalog (615 original plus 8 Adult ADHD); ranked targets, not observed outcomes or independent holdout',totalResources:indexed.length,queries:rows.length,conversationalQueries:hardRows.length,conversationalMetrics:hardMetrics,conversationalDetails:hardRows,birth5Resources:birth5.length,resourceTypes:Object.fromEntries([...new Set(indexed.map(x=>x.type))].sort().map(k=>[k,indexed.filter(x=>x.type===k).length])),audienceUnknown:indexed.filter(x=>!x.audience.length).length,undifferentiatedPublicAudience:indexed.filter(x=>x.audienceUndifferentiated).length,populationUnknown:indexed.filter(x=>!x.population.length&&!x.acrossAges).length,summaries,details:rows},null,2));
+console.log(JSON.stringify({status:'PASS',basis:'Exact current-main 615-record catalog; ranked targets, not observed outcomes or independent holdout',totalResources:indexed.length,queries:rows.length,conversationalQueries:hardRows.length,conversationalMetrics:hardMetrics,conversationalDetails:hardRows,birth5Resources:birth5.length,resourceTypes:Object.fromEntries([...new Set(indexed.map(x=>x.type))].sort().map(k=>[k,indexed.filter(x=>x.type===k).length])),audienceUnknown:indexed.filter(x=>!x.audience.length).length,undifferentiatedPublicAudience:indexed.filter(x=>x.audienceUndifferentiated).length,populationUnknown:indexed.filter(x=>!x.population.length&&!x.acrossAges).length,summaries,details:rows},null,2));
