@@ -22,6 +22,8 @@ for(const [i,rows] of [[0,family],[1,youth]]){
  }
 }
 for(let n=1;n<=170;n++)assert(family.some(r=>r.url.endsWith('#listing-'+n)),'Missing family number '+n);
+const infantEntry=data.resources.find(r=>r.url.endsWith('#listing-64'));
+assert.deepEqual(infantEntry.tags.stage,['Early childhood'],'AzEIP birth-to-three listing should not surface as teen-appropriate');
 const adultClub=data.resources.find(r=>r.url.endsWith('#youth-listing-17'));
 assert.deepEqual(adultClub.tags.stage,['Adult'],'Adult peer group must not appear in child/teen results');
 assert.equal(adultClub.minimumAge,18,'Adult group has documented age minimum');
