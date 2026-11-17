@@ -23,6 +23,36 @@ fs.mkdirSync(dir,{recursive:true});
    const tooWide=await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);
    assert(tooWide<=2,'Adult guide horizontal overflow '+width+' '+tooWide);
    await page.screenshot({path:path.join(dir,'adult-adhd-'+width+'.png'),fullPage:true});
+   // Adult ADHD supplementary collection: actual pages, screen-width reflow, keyboard and map interaction.
+   const collectionPages=['index','assessment','psychotherapy','everyday-life','treatment-planning','printable-worksheets','interactive-barrier-map'];
+   for(const slug of collectionPages){
+    const url=base+'/resources/diagnoses/adult-adhd-collection/'+slug+'.html';
+    const loaded=await page.goto(url,{waitUntil:'networkidle'});
+    assert.equal(loaded.status(),200,'Missing ADHD collection page '+slug);
+    assert(await page.locator('h1').count()===1,'Missing heading '+slug);
+    const over=await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);
+    assert(over<=2,'Collection horizontal overflow '+slug+' '+width+': '+over);
+    await page.locator('a.skip').focus();
+    assert.equal(await page.evaluate(()=>document.activeElement.classList.contains('skip')),true,'Unfocusable skip link '+slug);
+    if(slug==='interactive-barrier-map'){
+     await page.locator('#target').fill('Bring materials to an appointment');
+     await page.locator('#barrier').selectOption('Remembering');
+     await page.locator('#support').fill('Place materials near the door');
+     await page.locator('#view').click();
+     assert.equal(await page.locator('#v-support').innerText(),'Place materials near the door');
+     await page.locator('#clear').click();
+     assert.equal(await page.locator('#result').isHidden(),true,'Reset does not clear visual');
+    }
+    await page.addScriptTag({path:require.resolve('axe-core')});
+    const accessibility=await page.evaluate(async()=>window.axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa']}}));
+    assert.equal(accessibility.violations.filter(v=>['critical','serious'].includes(v.impact)).length,0,'Collection serious axe violation '+slug+' '+width+': '+JSON.stringify(accessibility.violations.map(v=>v.id)));
+    if(width===390||width===1280)await page.screenshot({path:path.join(dir,'adhd-collection-'+slug+'-'+width+'.png'),fullPage:true});
+    if(width===1280&&slug==='printable-worksheets'){
+     const pdf=await page.pdf({format:'Letter',printBackground:false});
+     assert(pdf.length>4000,'Print worksheet PDF unexpectedly tiny');
+     fs.writeFileSync(path.join(dir,'adhd-collection-worksheets-print.pdf'),pdf);
+    }
+   }
    await page.goto(base+'/resources/diagnoses/index.html?topic=ADHD',{waitUntil:'networkidle'});
    await page.waitForSelector('#direct-groups .resource-list li');
    assert.equal(await page.locator('#direct-groups .resource-list li').count(),27,'Dynamic diagnosis hub must include 19 original and 8 supplemental ADHD resources');
