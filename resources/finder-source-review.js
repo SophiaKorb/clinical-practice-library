@@ -1,4 +1,4 @@
-/* CPL source-reviewed discovery metadata, based on actual HTML resource introductions on production main SHA 7dd9ec3b. */
+/* CPL finder source-reviewed discovery descriptions. Includes historic PR #53 review and exact-source checks in draft audit. Not clinical validation. */
 (function(root,data){'use strict';if(typeof module==='object'&&module.exports)module.exports=data;root.CPLFinderSourceReview=data;})(typeof globalThis!=='undefined'?globalThis:this,{
   "/resources/trauma/start-here-families-children-trauma.html": {
     "description": "Choose among child and family trauma treatment-model guides, caregiver resources, child-welfare materials, and school-related trauma supports.",
@@ -453,6 +453,441 @@
       "grounding dissociation",
       "orientation panic",
       "dissociation during session"
+    ]
+  },
+  "/resources/es/handouts/apoyar-atencion-aprendizaje-casa.html": {
+    "description": "Estrategias para apoyar la atención, el inicio de tareas, la memoria de trabajo y el aprendizaje en casa.",
+    "audience": [
+      "caregiver"
+    ],
+    "population": [
+      "children",
+      "teens"
+    ],
+    "type": "caregiver",
+    "terms": [
+      "apoyo aprendizaje casa",
+      "tareas memoria trabajo",
+      "home learning support"
+    ]
+  },
+  "/resources/es/handouts/atencion-aprendizaje-casa.html": {
+    "description": "Estrategias para apoyar la atención, el inicio de tareas, la memoria de trabajo y el aprendizaje en casa.",
+    "audience": [
+      "caregiver"
+    ],
+    "population": [
+      "children",
+      "teens"
+    ],
+    "type": "caregiver",
+    "terms": [
+      "apoyo aprendizaje casa",
+      "tareas memoria trabajo",
+      "home learning support"
+    ]
+  },
+  "/resources/es/handouts/ayudar-hermanos-conflicto.html": {
+    "description": "Guía familiar para conflictos comunes entre hermanos: seguridad, límites, reparación y señales de coerción.",
+    "audience": [
+      "caregiver"
+    ],
+    "population": [
+      "children",
+      "teens"
+    ],
+    "type": "caregiver",
+    "terms": [
+      "sibling conflict Spanish",
+      "conflicto hermanos",
+      "seguridad y reparación"
+    ]
+  },
+  "/resources/es/handouts/guia-observacion-abc.html": {
+    "description": "Registro ABC para familias y profesionales: observar antecedente, conducta y consecuencia sin atribuir intenciones.",
+    "audience": [
+      "caregiver",
+      "clinician"
+    ],
+    "type": "education",
+    "terms": [
+      "ABC observación",
+      "observacion conducta",
+      "antecedente conducta consecuencia"
+    ]
+  },
+  "/resources/es/handouts/nino-pequeno-mas-sentimiento-que-lenguaje.html": {
+    "description": "Guía para cuidadores de niños pequeños: corregulación, comunicación, necesidades sensoriales y expectativas realistas.",
+    "audience": [
+      "caregiver"
+    ],
+    "population": [
+      "birth5"
+    ],
+    "type": "caregiver",
+    "terms": [
+      "toddler big feelings Spanish",
+      "corregulacion",
+      "regulación niños pequeños"
+    ]
+  },
+  "/resources/es/handouts/despues-escuela-aterrizar.html": {
+    "description": "Guía para padres sobre recuperación tras la escuela: reducir demandas, dar tiempo y reconectar antes de resolver problemas.",
+    "audience": [
+      "caregiver"
+    ],
+    "population": [
+      "children",
+      "teens"
+    ],
+    "type": "caregiver",
+    "terms": [
+      "after school reset Spanish",
+      "colapso después escuela",
+      "recuperación escolar"
+    ]
+  },
+  "/resources/es/handouts/cuando-la-duda-quiere-garantia.html": {
+    "description": "Educación sobre TOC: comprobaciones, búsqueda de tranquilidad, compulsiones y práctica de la incertidumbre.",
+    "audience": [
+      "client",
+      "caregiver"
+    ],
+    "type": "education",
+    "terms": [
+      "TOC incertidumbre",
+      "OCD reassurance Spanish",
+      "compulsiones"
+    ]
+  },
+  "/resources/es/handouts/hacer-mas-segura-crisis-suicida.html": {
+    "description": "Lectura sobre planificación colaborativa de seguridad ante crisis suicidas, señales de alerta y apoyo profesional.",
+    "audience": [
+      "client",
+      "caregiver"
+    ],
+    "type": "education",
+    "terms": [
+      "crisis suicida",
+      "plan de seguridad",
+      "suicide safety Spanish"
+    ]
+  },
+  "/resources/es/handouts/hacer-crisis-suicida-mas-segura.html": {
+    "description": "Lectura sobre planificación colaborativa de seguridad ante crisis suicidas, señales de alerta y apoyo profesional.",
+    "audience": [
+      "client",
+      "caregiver"
+    ],
+    "type": "education",
+    "terms": [
+      "crisis suicida",
+      "plan de seguridad",
+      "suicide safety Spanish"
+    ]
+  },
+  "/resources/es/handouts/tarjeta-contactos-crisis.html": {
+    "description": "Tarjeta visual recortable para anotar señales de alerta, contactos, un lugar seguro y dónde está el plan completo.",
+    "audience": [
+      "client"
+    ],
+    "type": "worksheet",
+    "terms": [
+      "contactos de crisis",
+      "crisis contact card Spanish",
+      "plan seguridad"
+    ]
+  },
+  "/resources/es/handouts/sobrecarga-sensorial-recuperacion.html": {
+    "description": "Guía para pacientes y familias sobre reconocer carga sensorial, ajustar el entorno y permitir recuperación.",
+    "audience": [
+      "client",
+      "caregiver"
+    ],
+    "type": "education",
+    "terms": [
+      "sobrecarga sensorial",
+      "sensory overload Spanish",
+      "recuperación sensorial"
+    ]
+  },
+  "/resources/es/handouts/reducir-danos-consumo.html": {
+    "description": "Guía de reducción de daños: identificar riesgos por mezclas, opioides y sobredosis sin imponer metas de tratamiento.",
+    "audience": [
+      "client",
+      "caregiver"
+    ],
+    "type": "education",
+    "terms": [
+      "reducción de daños",
+      "harm reduction Spanish",
+      "sustancias riesgos"
+    ]
+  },
+  "/resources/es/handouts/reducir-danos-consumo-sustancias.html": {
+    "description": "Guía de reducción de daños: identificar riesgos por mezclas, opioides y sobredosis sin imponer metas de tratamiento.",
+    "audience": [
+      "client",
+      "caregiver"
+    ],
+    "type": "education",
+    "terms": [
+      "reducción de daños",
+      "harm reduction Spanish",
+      "sustancias riesgos"
+    ]
+  },
+  "/resources/es/handouts/reducir-danos-sustancias.html": {
+    "description": "Guía de reducción de daños: identificar riesgos por mezclas, opioides y sobredosis sin imponer metas de tratamiento.",
+    "audience": [
+      "client",
+      "caregiver"
+    ],
+    "type": "education",
+    "terms": [
+      "reducción de daños",
+      "harm reduction Spanish",
+      "sustancias riesgos"
+    ]
+  },
+  "/resources/es/handouts/higiene-tareas-dificiles.html": {
+    "description": "Guía de cuidado personal sin vergüenza: barreras sensoriales, dolor, inicio de tareas y apoyo a la secuencia.",
+    "audience": [
+      "client",
+      "caregiver"
+    ],
+    "type": "education",
+    "terms": [
+      "higiene",
+      "cuidado personal",
+      "sensory hygiene Spanish"
+    ]
+  },
+  "/resources/es/handouts/mi-plan-reducir-riesgos.html": {
+    "description": "Hoja para elegir pasos personales que reduzcan riesgos asociados al consumo de sustancias.",
+    "audience": [
+      "client"
+    ],
+    "type": "worksheet",
+    "terms": [
+      "plan reducir riesgos",
+      "harm reduction worksheet Spanish"
+    ]
+  },
+  "/resources/es/handouts/hijo-enfocado-casa.html": {
+    "description": "Orientación para padres sobre comenzar tareas, mantener la atención y terminar con apoyos de función ejecutiva.",
+    "audience": [
+      "caregiver"
+    ],
+    "population": [
+      "children",
+      "teens"
+    ],
+    "type": "caregiver",
+    "terms": [
+      "atención niño en casa",
+      "focus at home Spanish"
+    ]
+  },
+  "/resources/es/handouts/en-lugar-de-gritar.html": {
+    "description": "Plan para cuidadores: regularse antes de gritar, dar instrucciones claras y reparar conflictos.",
+    "audience": [
+      "caregiver"
+    ],
+    "population": [
+      "children",
+      "teens"
+    ],
+    "type": "caregiver",
+    "terms": [
+      "parent yelling Spanish",
+      "gritar",
+      "reparación"
+    ]
+  },
+  "/resources/es/handouts/hacer-dormir-mas-probable.html": {
+    "description": "Guía de sueño para pacientes y familias: horario de despertar, luz matutina y rutina gradual para acostarse.",
+    "audience": [
+      "client",
+      "caregiver"
+    ],
+    "type": "education",
+    "terms": [
+      "sleep guide Spanish",
+      "dormir",
+      "rutina de sueño"
+    ]
+  },
+  "/resources/es/handouts/pasos-pequenos-depresion.html": {
+    "description": "Activación conductual para adolescentes y adultos: elegir acciones pequeñas y observar su relación con ánimo y energía.",
+    "audience": [
+      "client"
+    ],
+    "population": [
+      "teens",
+      "adults"
+    ],
+    "type": "education",
+    "terms": [
+      "depresión",
+      "behavioral activation Spanish",
+      "pasos pequeños"
+    ]
+  },
+  "/resources/es/handouts/hacer-espacio-duelo.html": {
+    "description": "Guía para vivir con una pérdida sin plazos fijos ni una secuencia emocional obligatoria.",
+    "audience": [
+      "client",
+      "caregiver"
+    ],
+    "type": "education",
+    "terms": [
+      "duelo",
+      "grief Spanish",
+      "pérdida"
+    ]
+  },
+  "/resources/es/handouts/conflicto-reparacion-limites.html": {
+    "description": "Guía para hablar de conflictos, seguridad, límites y reparación sin forzar conversaciones cuando hay miedo o coerción.",
+    "audience": [
+      "client",
+      "caregiver"
+    ],
+    "type": "education",
+    "terms": [
+      "límites",
+      "conflicto",
+      "relationship repair Spanish"
+    ]
+  },
+  "/resources/es/handouts/nota-antes-de-ponerle-nombre.html": {
+    "description": "Herramienta de regulación para notar cuerpo, energía, impulsos y contexto sin exigir una palabra emocional perfecta.",
+    "audience": [
+      "client"
+    ],
+    "type": "worksheet",
+    "terms": [
+      "emociones señales",
+      "emotion cues Spanish",
+      "regulación"
+    ]
+  },
+  "/resources/es/handouts/tarjeta-rapida-anclaje.html": {
+    "description": "Tarjeta visual recortable de anclaje al presente con orientación, sentidos, movimiento y contacto seguro.",
+    "audience": [
+      "client"
+    ],
+    "type": "worksheet",
+    "terms": [
+      "grounding card Spanish",
+      "tarjeta anclaje",
+      "orientación"
+    ]
+  },
+  "/resources/es/handouts/reinicio-conflicto-hermanos.html": {
+    "description": "Hoja de reflexión y reparación para conflictos cotidianos entre hermanos; no sustituye la valoración de amenazas o abuso.",
+    "audience": [
+      "client"
+    ],
+    "population": [
+      "children",
+      "teens"
+    ],
+    "type": "worksheet",
+    "terms": [
+      "sibling reset Spanish",
+      "conflicto hermanos",
+      "reparación"
+    ]
+  },
+  "/resources/es/handouts/reinicio-despues-escuela.html": {
+    "description": "Hoja para que un niño elija apoyos, señales y descansos al llegar a casa después de la escuela.",
+    "audience": [
+      "client",
+      "caregiver"
+    ],
+    "population": [
+      "children",
+      "teens"
+    ],
+    "type": "worksheet",
+    "terms": [
+      "after school reset plan Spanish",
+      "después escuela",
+      "autorregulación"
+    ]
+  },
+  "/resources/es/handouts/prepararse-practicar-regularse.html": {
+    "description": "Guía familiar para preparar rutinas, practicar habilidades y apoyar la regulación sin exigir quietud ni obediencia aparente.",
+    "audience": [
+      "caregiver"
+    ],
+    "population": [
+      "children",
+      "teens"
+    ],
+    "type": "caregiver",
+    "terms": [
+      "rutinas niños",
+      "regulación child Spanish",
+      "co-regulation"
+    ]
+  },
+  "/resources/es/handouts/muestrame-lo-que-necesitas.html": {
+    "description": "Tablero de comunicación para niños pequeños: señalar ayuda, descanso, más tiempo, dolor u otras necesidades.",
+    "audience": [
+      "client",
+      "caregiver"
+    ],
+    "population": [
+      "birth5",
+      "children"
+    ],
+    "type": "worksheet",
+    "terms": [
+      "AAC Spanish",
+      "muéstrame necesidades",
+      "comunicación niños"
+    ]
+  },
+  "/resources/es/handouts/mi-menu-anclaje.html": {
+    "description": "Hoja personalizable para elegir estrategias de anclaje al presente que se ajusten a la persona.",
+    "audience": [
+      "client"
+    ],
+    "type": "worksheet",
+    "terms": [
+      "grounding menu Spanish",
+      "anclaje al presente",
+      "menu"
+    ]
+  },
+  "/resources/es/handouts/hechos-suposiciones-preguntas.html": {
+    "description": "Hoja de toma de perspectiva que separa hechos observables, interpretaciones, hipótesis y preguntas.",
+    "audience": [
+      "client"
+    ],
+    "type": "worksheet",
+    "terms": [
+      "perspective taking Spanish",
+      "hechos y suposiciones",
+      "perspectiva"
+    ]
+  },
+  "/resources/es/handouts/tareas-hogar-mas-faciles.html": {
+    "description": "Guía para cuidadores para enseñar tareas del hogar mediante pasos concretos, ayudas visuales y barreras funcionales.",
+    "audience": [
+      "caregiver"
+    ],
+    "population": [
+      "children",
+      "teens"
+    ],
+    "type": "caregiver",
+    "terms": [
+      "chores Spanish",
+      "tareas hogar",
+      "habilidades domésticas"
     ]
   }
 });
