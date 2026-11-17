@@ -31,6 +31,11 @@ fs.mkdirSync(dir,{recursive:true});
    let overflow=await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);
    assert(overflow<=2,'Diagnosis index overflow '+width+' '+overflow);
    await page.screenshot({path:path.join(dir,'adhd-index-'+width+'.png'),fullPage:true});
+   await page.addScriptTag({path:require.resolve('axe-core')});
+   const hubAxe=await page.evaluate(async()=>window.axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa']}}));
+   fs.writeFileSync(path.join(dir,'axe-index-'+width+'.json'),JSON.stringify({violations:hubAxe.violations,incomplete:hubAxe.incomplete},null,2));
+   assert.equal(hubAxe.violations.filter(x=>x.impact==='critical'||x.impact==='serious').length,0,
+    'Serious topic-index axe issue '+width+': '+JSON.stringify(hubAxe.violations.map(v=>({id:v.id,impact:v.impact,nodes:v.nodes.slice(0,2).map(n=>n.html)}))));
    await page.goto(base+'/resources/diagnoses/index.html?topic=Autism',{waitUntil:'networkidle'});
    await page.waitForSelector('#direct-groups .resource-list li');
    assert.equal(await page.locator('#direct-groups .resource-list li').count(),29,'Autism diagnosis hub missing tagged resources');
