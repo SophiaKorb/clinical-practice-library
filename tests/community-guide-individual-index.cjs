@@ -58,6 +58,13 @@ for(const topic of ['Housing, food & practical needs','Foster-care transitions',
  assert(engine.matchesFilters(items.find(x=>x.url===iam.url),{advanced:{'community-topic':topic}}),'IAMYOU360 not findable for '+topic);
 }
 assert.equal(items.filter(x=>engine.matchesFilters(x,{advanced:{'community-topic':'Employment & work preparation'}})).length,6,'Topic filter must match employment-only youth listings');
+const tayQuery=engine.search(items,{q:'TAY',scope:'community'});
+const tayURLs=new Set(tayQuery.groups.flatMap(g=>[g.best.item.url,...g.otherMatches.map(m=>m.item.url)]));
+for(const entry of data.resources.filter(r=>r.communityCollection==='transition-age'))assert(tayURLs.has(entry.url),'TAY abbreviation misses guide listing '+entry.url);
+assert(engine.search(items,{q:'TAY housing',scope:'community'}).groups.some(g=>g.best.item.url===iam.url||g.otherMatches.some(x=>x.item.url===iam.url)),'TAY housing must discover I AM YOU 360');
+assert(engine.search(items,{q:'transition age',scope:'community'}).groups.some(g=>g.best.item.url===iam.url||g.otherMatches.some(x=>x.item.url===iam.url)),'Transition age alias must discover I AM YOU 360');
+assert.deepEqual(engine.index(data.resources).find(x=>x.url===iam.url).original.searchTerms,iam.searchTerms,'Search alias must not mutate provider metadata');
+
 for(const [q,needle] of [['Parent Aid','#listing-2'],['Project FOCUS','#youth-listing-2'],['Autism Society','#listing-67']]){
  const hits=engine.search(items,{q}).groups;
  assert(hits.some(g=>g.best.item.url.endsWith(needle)||g.otherMatches.some(x=>x.item.url.endsWith(needle))),'Individual search failed: '+q);
