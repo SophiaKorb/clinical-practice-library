@@ -31,7 +31,25 @@ const teenCrisis=data.resources.find(r=>r.url.endsWith('#youth-listing-23'));
 assert.deepEqual(teenCrisis.tags.stage,['School age / adolescence'],'Teen-specific crisis service misclassified');
 const projectFocus=data.resources.find(r=>r.url.endsWith('#youth-listing-2'));
 assert.equal(projectFocus.minimumAge,18,'Project FOCUS youth program has documented 18–21 scope');
+const topics=new Map();
+for(const r of youth){
+ assert(r.communityTopic && typeof r.communityTopic==='string','Every transition listing needs source-grounded topic '+r.url);
+ topics.set(r.communityTopic,(topics.get(r.communityTopic)||0)+1);
+}
+assert.equal(topics.size,9,'Youth community guide must retain nine supported topic groups');
+for(const n of [2,9,10,13,15,23,24,25]){
+ const r=youth.find(x=>x.url.endsWith('#youth-listing-'+n));
+ assert(r.providerEvidenceUrl?.startsWith('https://'),'Reviewed provider evidence missing '+n);
+ assert(r.providerEvidenceReviewed==='2026-11-17','Source review date missing '+n);
+ assert(r.referralCaution?.length>30,'Unresolved eligibility/operational caution missing '+n);
+}
+const pimaCenter=youth.find(x=>x.url.endsWith('#youth-listing-9'));
+assert(/9649/.test(pimaCenter.referralCaution)&&/9640/.test(pimaCenter.referralCaution),'Conflicting official Pima contact numbers not preserved');
+const project=youth.find(x=>x.url.endsWith('#youth-listing-2'));
+assert(/October 23, 2026/.test(project.referralCaution),'Expired intake date must not be treated as verified open');
+assert(!/Review edition.+Page/.test(youth.find(x=>x.url.endsWith('#youth-listing-8')).description),'Page artifact leaked into display description');
 const items=engine.index(data.resources);
+assert.equal(items.filter(x=>engine.matchesFilters(x,{advanced:{'community-topic':'Employment & work preparation'}})).length,6,'Topic filter must match employment-only youth listings');
 for(const [q,needle] of [['Parent Aid','#listing-2'],['Project FOCUS','#youth-listing-2'],['Autism Society','#listing-67']]){
  const hits=engine.search(items,{q}).groups;
  assert(hits.some(g=>g.best.item.url.endsWith(needle)||g.otherMatches.some(x=>x.item.url.endsWith(needle))),'Individual search failed: '+q);
@@ -44,7 +62,7 @@ const youthOnly=items.filter(r=>engine.matchesFilters(r,{advanced:{community:'tr
 assert.equal(youthOnly.length,27,'Youth guide filter must retain exactly its indexed entries');
 assert(items.filter(r=>engine.matchesFilters(r,{advanced:{community:'family'}})).length===170,'Family guide filter must retain numbered entries');
 const finderHTML=read('resources/clinical-resource-finder.html');
-for(const name of ['lab-community','lab-place'])assert(finderHTML.includes('id="'+name+'"'),'Community filter missing from live finder: '+name);
+for(const name of ['lab-community','lab-place','lab-community-topic'])assert(finderHTML.includes('id="'+name+'"'),'Community filter missing from live finder: '+name);
 
 assert(new Set(data.resources.map(r=>r.url)).size===data.resources.length,'Duplicate canonical resource URL');
 console.log('COMMUNITY_GUIDES_INDIVIDUAL_INDEX_PASS '+JSON.stringify({family:family.length,youth:youth.length,total:data.resources.length,anchors:197}));
