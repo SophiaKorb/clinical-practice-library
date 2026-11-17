@@ -256,8 +256,9 @@ function matchesFilters(item,state){
  if(state.population && !item.population.includes(state.population))return false;
  if(state.need && item.type!==state.need)return false;
  if(state.audience && !item.audience.includes(state.audience))return false;
+ if(state.legacyRole && !safeArray(item.original.tags&&item.original.tags.role).includes(state.legacyRole))return false;
  var advanced=state.advanced||{};
- for(var k of ['diagnosis','function','intervention','task','step']){
+ for(var k of ['diagnosis','symptom','function','intervention','stage','task','step']){
    if(advanced[k]&&!safeArray(item.original.tags&&item.original.tags[k]).includes(advanced[k]))return false;
  }
  return true;
