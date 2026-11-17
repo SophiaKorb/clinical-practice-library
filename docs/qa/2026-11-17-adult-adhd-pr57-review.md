@@ -14,7 +14,7 @@ Review branch `review/adult-adhd-depth-20261117`. No merge, deployment, PHI, cre
 - `adult-adhd-support-experiment.txt` — plain-text downloadable worksheet.
 - `style.css` — readable responsive and print styling.
 - Existing ADHD hub, clinical-depth companion, task-start toolkit and diagnosis-hub navigation link to collection.
-- Eight new adult-specific records appended to `clinical-finder-data.js`, preserving 615 original records. New expected total is 623; do not conflate indexed format records with 623 distinct interventions.
+- Eight new adult-specific records integrated into the canonical single JSON assignment of `clinical-finder-data.js`, preserving 615 original records. New expected total is 623; do not conflate indexed format records with 623 distinct interventions.
 
 ## Source evidence, verified 2026-11-17
 1. NICE NG87, https://www.nice.org.uk/guidance/ng87/chapter/recommendations — specialist diagnosis, consideration of structured supportive psychological intervention focused on ADHD, medication and monitoring (UK context).
@@ -40,3 +40,6 @@ Sources inform clinical statements; no CPL worksheet is claimed to be validated 
 - Live external links and actual hosted path responses must be checked after a permitted preview deployment; no production claim is made.
 - Clinical information remains educational and must not be construed as an individualized protocol or prescriber decision.
 - **All owner merge/deploy/publication gates remain closed.**
+
+## CI regression discovered and corrected
+The first finder-index implementation appended executable JavaScript after the canonical JSON assignment. Existing `tests/online-lgbtq-resources.cjs` parses the assignment as JSON and therefore failed at commit `996feb5e`. The dataset was reconstructed as one canonical `globalThis.CPLFinderData = <JSON>;` assignment at commit `efbf9983` with exactly 623 distinct URL records. This addresses the **identified parse failure only**. CI must be rerun and its final status verified; other regressions remain possible.
