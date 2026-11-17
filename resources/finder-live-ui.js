@@ -64,10 +64,15 @@ function cardFor(group){
  article.appendChild(chips);
  article.appendChild(el('p',null,item.description));
  var roles=item.audience.map(r=>humanRole[r]).filter(Boolean);
- if(roles.length)article.appendChild(el('p','match-explain',(item.audienceAggregated?'Collection includes formats for: ':'Indexed for: ')+roles.join(' · ')));
- if(item.audienceUndifferentiated)article.appendChild(el('p','match-explain','Audience not fully distinguished in the original catalog.'));
- if(item.populationNote && state.population)article.appendChild(el('p','match-explain',item.populationNote));
- if(state.q)article.appendChild(el('p','match-explain','Matched by: '+group.best.reason+'.'));
+ // Avoid restating the selected audience and lengthy methodological caveats on
+ // every card. The scope explanation below results carries those caveats once.
+ if(item.audienceAggregated)article.appendChild(el('p','match-explain','Collection formats: '+roles.join(' · ')));
+ else if(!state.audience&&roles.length)article.appendChild(el('p','match-explain','For: '+roles.join(' · ')));
+ if(item.audienceUndifferentiated)article.appendChild(el('p','match-explain','Direct audience not yet differentiated.'));
+ if(item.populationNote&&state.population&&!item.reviewedSource&&/Inferred from title|Broad school-age/.test(item.populationNote))
+   article.appendChild(el('p','match-explain','Broad or inferred age range; verify fit.'));
+ if(state.q&&group.best.reason.startsWith('Related concept:'))
+   appendLabel(chips,'Related topic','chip--neutral');
  if(group.allFamily.length>1){
   var d=el('details','family'),s=el('summary',null,'View '+(group.allFamily.length-1)+' more formats in this collection');
   d.appendChild(s);
