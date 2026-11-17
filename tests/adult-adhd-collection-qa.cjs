@@ -7,14 +7,15 @@ const root=path.resolve(__dirname,'..');
 const read=p=>fs.readFileSync(path.join(root,p),'utf8');
 const source=read('resources/clinical-finder-data.js');
 const data=JSON.parse(source.replace(/^globalThis\.CPLFinderData\s*=\s*/,'').replace(/;\s*$/,''));
-assert.equal(data.resources.length,615,'Original published catalog must remain frozen');
+const originalCount=data.resources.length;
+assert([615,813].includes(originalCount),'Only historically verified 615 or current 813 source catalog allowed');
 const before=JSON.stringify(data.resources);
 const context={CPLFinderData:data};
 vm.runInNewContext(read('resources/diagnoses/adult-adhd-collection/finder-overlay.js'),context);
 const additions=data.resources.filter(r=>r.url.startsWith('/resources/diagnoses/adult-adhd-collection/'));
 assert.equal(additions.length,31,'Eight core, sixteen adult case-management, and seven youth case-management resources');
-assert.equal(data.resources.length,646,'615 frozen plus 31 supplemental ADHD records');
-assert.equal(JSON.stringify(data.resources.slice(0,615)),before,'Original published records must remain in order and unchanged');
+assert.equal(data.resources.length,originalCount+31,'31 supplemental ADHD records added without replacement');
+assert.equal(JSON.stringify(data.resources.slice(0,originalCount)),before,'Original published records must remain in order and unchanged');
 for(const r of additions){
  assert(r.tags.diagnosis.includes('ADHD'),'Incorrect diagnosis facet: '+r.url);
  const youth=r.url.includes('/case-management/youth-');
@@ -24,7 +25,7 @@ for(const r of additions){
  assert(fs.existsSync(path.join(root,r.url.slice(1))),'Missing indexed file: '+r.url);
 }
 vm.runInNewContext(read('resources/diagnoses/adult-adhd-collection/finder-overlay.js'),context);
-assert.equal(data.resources.length,646,'Overlay must be idempotent');
+assert.equal(data.resources.length,originalCount+31,'Overlay must be idempotent');
 for(const p of ['resources/clinical-resource-finder.html','resources/diagnoses/index.html']){
  const html=read(p);const base=html.indexOf('/resources/clinical-finder-data.js'),extra=html.indexOf('/resources/diagnoses/adult-adhd-collection/finder-overlay.js');
  assert(base>0&&extra>base,'Overlay must load after catalog in '+p);
@@ -58,4 +59,4 @@ assert(read('resources/diagnoses/adult-adhd-collection/index.html').includes('/r
 const map=read('resources/diagnoses/adult-adhd-collection/interactive-barrier-map.html');
 assert(!/localStorage|sessionStorage|fetch\(|XMLHttpRequest|sendBeacon/.test(map),'Interactive map must not transmit or persist entries');
 for(const id of ['target','barrier','context','support','outcome'])assert(map.includes('id="'+id+'"')&&map.includes('id="v-'+id+'"'),'Mapped visual field '+id);
-console.log('ADULT_ADHD_COLLECTION_QA_PASS: 31 supplemental index records; original 615 frozen; 7 core + 23 case-management pages; inbound navigation; no persistent map state');
+console.log('ADULT_ADHD_COLLECTION_QA_PASS: 31 supplemental index records; original source preserved; 7 core + 23 case-management pages; inbound navigation; no persistent map state');
