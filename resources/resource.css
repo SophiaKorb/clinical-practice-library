@@ -110,3 +110,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible{
 .cpl-skip:focus{position:fixed;top:12px;outline:3px solid currentColor;outline-offset:3px}
 #main-content{scroll-margin-top:6rem}
 @media print{.cpl-skip{display:none!important}}
+
+
+/* Diagnosis guide -> all resources navigation, distinct from clinical content. */
+.diagnosis-route{border-left:4px solid #538772;background:#edf4ee;border-radius:0 10px 10px 0;padding:11px 15px;margin:12px 0 22px;max-width:85ch}
+.diagnosis-route a{display:inline-flex;min-height:44px;align-items:center;color:#235849;font-weight:750;text-underline-offset:3px}
+@media print{.diagnosis-route{background:white;border:1px solid #888}}
