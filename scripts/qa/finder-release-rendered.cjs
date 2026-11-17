@@ -68,6 +68,12 @@ fs.mkdirSync(dir,{recursive:true});
    assert(await page.locator('#lab-community').isVisible(),'TAY selector must be visible without expanding details');
    assert(await page.locator('#lab-community-topic').isVisible(),'Community need selector must be visible without expanding details');
    assert(await page.locator('#lab-scope').isVisible(),'Community collection selector must be visible');
+   await page.goto(base+'/resources/clinical-resource-finder.html?q=TAY&scope=community',{waitUntil:'networkidle'});
+   assert((await page.locator('#lab-status').innerText()).includes('matching resources'),'TAY abbreviation search should find programs');
+   assert((await page.locator('.result-card h3 a').allInnerTexts()).some(title=>/transition-age/i.test(title)),'TAY abbreviation needs program results, not only a landing page');
+   await page.goto(base+'/resources/clinical-resource-finder.html?q=TAY%20housing&scope=community',{waitUntil:'networkidle'});
+   assert(await page.locator('.result-card h3 a[href="/resources/community/iamyou360.html"]').count()>0,'TAY housing search must surface I AM YOU 360');
+
    await page.goto(base+'/resources/clinical-resource-finder.html?q=I%20AM%20YOU%20360&scope=community&community=transition-age',{waitUntil:'networkidle'});
    assert.equal(await page.inputValue('#lab-scope'),'community','Community scope query param not restored');
    assert(await page.locator('.result-card h3 a[href="/resources/community/iamyou360.html"]').count()>0,'IAMYOU360 missing from unified community results');
