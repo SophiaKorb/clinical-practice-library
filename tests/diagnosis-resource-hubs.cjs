@@ -36,8 +36,8 @@ for(const phrase of ['childhood','differential','medication','prescriber','CBT',
 }
 const primaries=['www.cdc.gov/adhd/about/adhd-in-adults.html','www.nimh.nih.gov/health/publications/attention-deficit-hyperactivity-disorder-what-you-need-to-know','www.nice.org.uk/guidance/ng87/chapter/recommendations','adhdguideline.aadpa.com.au/','askjan.org/disabilities/Attention-Deficit-Hyperactivity-Disorder-AD-HD.cfm'];
 for(const url of primaries)assert(adult.includes(url),'Missing source referral '+url);
-assert(adult.includes('not a comprehensive adult ADHD treatment manual')===false,
- 'Guide itself must not be characterized as only a task-starts manual');
+assert(adult.includes('Use the focused Adult ADHD task-starts collection'),
+ 'Comprehensive guide must distinguish the narrower task-start toolkit');
 assert(adultCollection.includes('/resources/diagnoses/adult-adhd.html'),
  'Focused Adult ADHD collection must link to the whole adult subject');
 assert(adultCollection.includes('/resources/diagnoses/index.html?topic=ADHD'),
