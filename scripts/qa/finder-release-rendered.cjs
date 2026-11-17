@@ -51,6 +51,17 @@ fs.mkdirSync(dir,{recursive:true});
    assert.equal(await page.locator('.result-card').count(),0,'Teen-only Eon service returned for children: '+JSON.stringify(await page.locator('.result-card h3').allInnerTexts()));
    await page.selectOption('#lab-population','teens');
    assert(await page.locator('.result-card').count()>0,'Teen eligibility route missing for Eon');
+   await page.goto(base+'/resources/clinical-resource-finder.html?community=family&place=Marana',{waitUntil:'networkidle'});
+   assert.equal(await page.inputValue('#lab-community'),'family','Community collection URL filter not restored');
+   assert.equal(await page.inputValue('#lab-place'),'Marana','Grounded location URL filter not restored');
+   const localityLinks=await page.locator('.result-card h3 a').evaluateAll(links=>links.map(a=>a.getAttribute('href')));
+   assert(localityLinks.length>0&&localityLinks.every(url=>url.startsWith('/resources/community/family-community-guide-text.html#listing-')),'Unverified source admitted to Marana family filter: '+JSON.stringify(localityLinks));
+   await page.selectOption('#lab-place','Catalina');
+   assert((await page.locator('#lab-status').innerText()).includes('matching resources'),'Changing location filter should refresh live results');
+   await page.goto(base+'/resources/clinical-resource-finder.html?community=transition-age',{waitUntil:'networkidle'});
+   assert.equal(await page.inputValue('#lab-community'),'transition-age','Transition-age guide URL filter not restored');
+   assert(await page.locator('.result-card h3 a').count()>0,'Youth source-specific filter returned no listings');
+   
    await page.goto(base+'/resources/clinical-resource-finder.html?q=tantrums',{waitUntil:'networkidle'});
    assert(/Child aggression/.test(await page.locator('.result-card h3 a').first().innerText()),'Conversational search failed');
    await page.goto(base+'/resources/clinical-resource-finder-classic.html?q=IEP',{waitUntil:'networkidle'});
