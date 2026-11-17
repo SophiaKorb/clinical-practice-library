@@ -296,7 +296,7 @@ function search(items,state){
      var languageFit=intent.language==='es'?(isSpanish?250:-100):(isSpanish?-250:3);
      var audienceFit=intent.audience&&h.item.audience.includes(intent.audience)?12:0;
      var populationFit=intent.population&&h.item.population.includes(intent.population)?12:0;
-     var worksheetFit=intent.worksheet&&(h.item.type==='worksheet'||h.item.type==='education')?40:0;
+     var worksheetFit=intent.worksheet&&score>=75&&(h.item.type==='worksheet'||h.item.type==='education')?420:0;
      hits.push({item:h.item,score:score+languageFit+audienceFit+populationFit+worksheetFit+Math.min(1,(h.item.original.priority||0)/1000),reason:reason});
    }
  }
