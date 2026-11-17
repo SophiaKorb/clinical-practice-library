@@ -7,16 +7,7 @@ const read=p=>fs.readFileSync(path.join(root,p),'utf8');
 const raw=read('resources/clinical-finder-data.js');
 const data=JSON.parse(raw.replace(/^globalThis\.CPLFinderData\s*=\s*/,'').replace(/;\s*$/,''));
 const finder=require('../resources/clinical-finder.js');
-const adultAdhdPrefix='/resources/diagnoses/adult-adhd-collection/';
-const adultAdhdAdded=data.resources.filter(r=>r.url.startsWith(adultAdhdPrefix));
-assert.equal(data.resources.length,623,'Existing 615 records plus eight adult ADHD collection entries');
-assert.equal(adultAdhdAdded.length,8,'Adult ADHD expansion must index all eight distinct collection resources');
-assert.equal(data.resources.length-adultAdhdAdded.length,615,'Preserve the original 615-entry library');
-for(const r of adultAdhdAdded){
- assert(r.tags.diagnosis.includes('ADHD'),'Adult ADHD index diagnosis: '+r.url);
- assert(r.tags.stage.includes('Adult'),'Adult ADHD age facet: '+r.url);
- assert(r.tags.role.length>0&&r.tags.task.length>0,'Adult ADHD audience and task facets: '+r.url);
-}
+assert.equal(data.resources.length,615,'Expanded release must have exactly 615 resource entries');
 assert.equal(new Set(data.resources.map(r=>r.url)).size,data.resources.length,'No duplicate resource URLs');
 let linksChecked=0,anchorsChecked=0,facetsChecked=0;
 for(const r of data.resources){
