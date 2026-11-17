@@ -32,7 +32,13 @@ var DESCRIPTIONS={
  '/resources/birth-to-five/relationships-and-trauma.html':'Explore relationships, trauma and early mental health in the birth–five years.',
  '/resources/birth-to-five/early-intervention-and-preschool.html':'Find early-intervention and preschool access starting points.',
  '/resources/birth-to-five/tucson-pima-local-resources.html':'Browse a local Tucson/Pima directory of early-childhood pathways; verify eligibility and contacts with each provider.',
- '/resources/arizona/iep-504-parent-guide.html':'A parent-oriented introduction to Arizona IEP and Section 504 school-support processes.',
+ '/resources/arizona/iep-504-parent-guide.html':'A step-by-step guide for case managers and families: request evaluation, prepare records, and follow up on IEP/504 decisions.',
+ '/resources/arizona/iep-504-my-child-has-a-diagnosis.html':'Explains why a medical diagnosis does not automatically establish IEP or 504 eligibility, and how educational impact matters.',
+ '/resources/school/school-access-official-reference.html':'Federal IDEA and Section 504 reference points for describing barriers, discussing access and asking school-support questions.',
+ '/resources/california/school-access.html':'California school-access overview covering evaluation requests, school timelines and family participation; general information, not legal advice.',
+ '/resources/school/iep-504-meeting-preparation.html':'A meeting-preparation guide for families and support people: document barriers, gather records and bring the student’s perspective.',
+ '/resources/es/arizona-como-conseguir-iep-504.html':'Guía paso a paso para familias y gestores de casos sobre solicitudes escritas, evaluaciones y planes IEP/504 en Arizona.',
+ '/resources/es/school/iep-504-preparacion-reunion.html':'Preparación para una reunión IEP/504: ejemplos concretos, registros, preguntas y participación del estudiante.',
  '/resources/arizona/iep-504-clinician-guide.html':'A clinician-oriented guide to school accommodations with federal and Arizona context.',
  '/resources/school/iep-504-meeting-preparation.html':'Prepare questions, goals and documents for an IEP or 504 meeting.',
  '/resources/therapy/visual-reasoning-toolkit.html':'Use visual structures to support shared understanding and participation.',
@@ -48,6 +54,15 @@ var DESCRIPTIONS={
 var TYPES={
  collection:'Topic collection',clinical:'Clinical guidance',worksheet:'Worksheet or visual',caregiver:'Caregiver education',
  assessment:'Assessment',school:'School support',referral:'Referral or directory',training:'Practice and training',education:'Education',other:'Other'
+};
+// Narrow audience corrections read from the actual guide introductions, not guessed from path alone.
+var AUDIENCE_EVIDENCE={
+ '/resources/arizona/iep-504-parent-guide.html':['case_manager','caregiver','school_team'],
+ '/resources/arizona/iep-504-my-child-has-a-diagnosis.html':['caregiver','school_team'],
+ '/resources/arizona/iep-504-clinician-guide.html':['clinician','school_team'],
+ '/resources/school/iep-504-meeting-preparation.html':['caregiver','case_manager','school_team'],
+ '/resources/es/arizona-como-conseguir-iep-504.html':['caregiver','case_manager','school_team'],
+ '/resources/es/school/iep-504-preparacion-reunion.html':['caregiver','school_team']
 };
 var NEEDS=['clinical','worksheet','caregiver','assessment','school','referral','training','education','collection'];
 var AUDIENCES=['client','caregiver','clinician','case_manager','school_team','trainee'];
@@ -85,6 +100,7 @@ function audienceFor(r){
    else if(/care.partner|caregiver|parent|family.guide|parenting|homeschool/.test(u+' '+t))out.add('caregiver');
    else notes.push('Client/caregiver audience is combined in the original index; direct user not verified');
  }
+ for(var confirmed of AUDIENCE_EVIDENCE[u]||[])out.add(confirmed);
  return {values:[...out],undifferentiated:notes.length>0,notes:notes};
 }
 function populationFor(r){
@@ -139,7 +155,7 @@ function meta(r){
    audienceUndifferentiated:audience.undifferentiated,population:population.values,acrossAges:population.across,
    populationNote:population.note,description:describe(r,type),family:base,
    provenance:'Derived only from catalog, title and path; not validated suitability',
-   isExternal:!!r.externalUrl,format:(r.url||'').endsWith('.pdf')?'PDF':'Web page'};
+   isExternal:!!r.externalUrl,language:/^\/resources\/es\//.test(r.url||'')?'es':'en',format:(r.url||'').endsWith('.pdf')?'PDF':'Web page'};
 }
 function index(records){
  var list=records.map(meta),families=new Map();
@@ -246,6 +262,7 @@ function search(items,state){
      score=h.direct.score*0.65;reason='Partial match';
    }
    // Explicit title/path relevance dominates; historical global priority only breaks near-ties.
+   if(q==='iep'&&minDirect&&h.direct.reason!=='Title match')score=0;
    if(score>=(qTokens.length>1?30:1)){
      var isSpanish=/\/es\//.test(h.item.url)||/^(como|mi hijo|preparacion|ansiedad)/.test(norm(h.item.title));
      var spanishQuery=/[áéíóúñ¿¡]/i.test(state.q||'')||/\b(como|ayuda|hijo|hija|ansiedad|preparacion|barreras|apoyos)\b/.test(q);
