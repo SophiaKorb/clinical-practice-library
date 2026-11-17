@@ -6,8 +6,8 @@ var engine=globalThis.CPLFinderLab,data=globalThis.CPLFinderData;
 if(!engine||!data){return;}
 var by=id=>document.getElementById(id);
 var catalog=engine.index(data.resources),limit=10;
-var keys=['population','need','audience'],advKeys=['diagnosis','symptom','function','intervention','stage','task','step','community','place'];
-var state={q:'',population:'',need:'',audience:'',advanced:{}};
+var keys=['scope','service','population','need','audience'],advKeys=['diagnosis','symptom','function','intervention','stage','task','step','community','place'];
+var state={q:'',scope:'',service:'',population:'',need:'',audience:'',advanced:{}};
 var humanRole={clinician:'Clinician',trainee:'Trainee',case_manager:'Case manager',school_team:'School team',client:'Client',caregiver:'Caregiver'};
 var humanPop={birth5:'Birth–5',children:'School-age/teen indexed',teens:'School-age/teen indexed',adults:'Adult'};
 var el=(tag,cls,txt)=>{
@@ -15,7 +15,7 @@ var el=(tag,cls,txt)=>{
 };
 function appendLabel(container,txt,style){var span=el('span','chip'+(style?' '+style:''),txt);container.appendChild(span);}
 function paramsState(){
- var p=new URLSearchParams(location.search),out={q:(p.get('q')||'').slice(0,160),population:'',need:'',audience:'',advanced:{},legacyRole:''};
+ var p=new URLSearchParams(location.search),out={q:(p.get('q')||'').slice(0,160),scope:'',service:'',population:'',need:'',audience:'',advanced:{},legacyRole:''};
  for(var key of keys){
   var input=by('lab-'+key),value=p.get(key)||'';
   out[key]=input&&[...input.options].some(o=>o.value===value)?value:'';
@@ -59,6 +59,7 @@ function cardFor(group){
  if(item.format==='PDF')appendLabel(chips,'PDF','chip--neutral');
  if(item.language==='es')appendLabel(chips,'Español','chip--neutral');
  if(item.isExternal)appendLabel(chips,'Publisher reference','chip--neutral');
+ if(item.original.communityCollection)appendLabel(chips,item.original.communityCollection==='transition-age'?'TAY community guide':'Family community guide','chip--neutral');
  if(item.population.length===1)appendLabel(chips,humanPop[item.population[0]]||item.population[0],'chip--neutral');
  if(item.acrossAges)appendLabel(chips,'Adapt for the person','chip--neutral');
  article.appendChild(chips);
