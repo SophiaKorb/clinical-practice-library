@@ -60,6 +60,15 @@ function cardFor(group){
  if(item.language==='es')appendLabel(chips,'Español','chip--neutral');
  if(item.isExternal)appendLabel(chips,'Publisher reference','chip--neutral');
  if(item.original.communityCollection)appendLabel(chips,item.original.communityCollection==='transition-age'?'TAY community':'Family community guide','chip--neutral');
+ if(item.original.communityCollection){
+  var guidePath=item.original.communityCollection==='transition-age'?
+    '/resources/community/transition-age-guide.html':'/resources/community/family-guide.html';
+  var sourceAnchor=(item.url||'').split('#')[1];
+  if(item.url==='/resources/community/iamyou360.html')guidePath='/resources/community/transition-age-guide.html';
+  var quick=el('a','web-guide-link','Read in online guide');
+  quick.href=guidePath+(sourceAnchor?'#'+sourceAnchor:'#iam-you-360');
+  article.appendChild(quick);
+ }
  if(item.population.length===1)appendLabel(chips,humanPop[item.population[0]]||item.population[0],'chip--neutral');
  if(item.acrossAges)appendLabel(chips,'Adapt for the person','chip--neutral');
  article.appendChild(chips);
