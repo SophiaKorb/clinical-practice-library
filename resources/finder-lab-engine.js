@@ -8,6 +8,31 @@
 'use strict';
 var STOP=new Set('a an and are at be can do for from help how i in is it me my of on or our the their to with what when where who will worried about need looking find please resources resource someone some working work'.split(' '));
 var CONCEPTS=[
+
+ // Specific Spanish plain-language questions, linked ONLY to inspected CPL titles.
+ {test:/\b(adolescente.*(injusto|injusticia|no es justo)|injusticia.*adolescente)\b/,
+  terms:['justicia y flexibilidad'],label:'adolescent fairness and choice',priority:95},
+ {test:/\b(hijos|hijo|hija|hermanos)\b.*\b(pelean|pelea|miedo|golpean|intimidan)\b/,
+  terms:['ayudar a los hermanos a manejar el conflicto','reinicio despues de un conflicto entre hermanos'],label:'sibling safety and conflict',priority:90},
+ {test:/\b(hijo|hija|nino|nina)\b.*\b(descontrola|colapsa|desborda)\b.*\b(escuela|colegio)\b/,
+  terms:['despues de la escuela','mi plan para reiniciarme despues de la escuela'],label:'after-school recovery',priority:95},
+ {test:/\b(hijo|hija|nino|nina)\b.*\b(no habla|no puede hablar|hable sin hablar|sin palabras)\b/,
+  terms:['muestrame lo que necesitas','show me what you need','communication supports toolkit'],label:'young child communication and choice',priority:95},
+ {test:/\b(observacion.*(comportamiento|conducta)|conducta.*observacion)\b/,
+  terms:['guia de observacion abc','abc observation guide'],label:'ABC observation without guessing motives',priority:90},
+ {test:/\b(evaluacion.*(escuela|dislexia)|dislexia.*evaluacion|pedir.*evaluacion.*escuela)\b/,
+  terms:['como conseguir un iep','dislexia barreras y apoyos'],label:'school evaluation and IEP access',priority:85},
+ {test:/\b(tucson|pima)\b.*\b(nino|nina|dos anos|dos anos de edad)\b.*\b(no habla|hablar|desarrollo)\b/,
+  terms:['tucson pima','birth 5 development screening'],label:'Tucson early-childhood referral route',priority:110},
+ {test:/\b(emociones.*(palabras|cambian)|no encuentro palabras|no se que siento)\b/,
+  terms:['nota lo que pasa antes de ponerle nombre','senales emocionales'],label:'emotion awareness without perfect words',priority:90},
+ {test:/\b(burlan|acoso escolar|se burlan|me molestan en la escuela)\b/,
+  terms:['amistad y seguridad entre pares','friendship peer safety'],label:'peer bullying and safety',priority:90},
+ {test:/\b(lavarse.*dientes|higiene.*dolor|dolor.*higiene|banarse.*dolor)\b/,
+  terms:['cuando las tareas de higiene son dificiles'],label:'personal care pain and access',priority:85},
+ {test:/\b(olvida.*empezar|cuesta empezar|me cuesta iniciar|no puedo empezar)\b/,
+  terms:['hacer que los planes sean mas faciles de empezar y terminar','mapa para poner una tarea en marcha'],label:'starting and remembering tasks',priority:85},
+
  {test:/\b(spanish|espanol)\b.*\b(autism|autistic)\b|\b(autism|autistic)\b.*\b(spanish|espanol)\b/,
    terms:['autismo guia rapida familias','conducta ninos autistas'],label:'Spanish autism and family education',priority:150},
  {test:/\b(school attendance anxiety|anxiety.*school attendance|school anxiety intervention)\b/,
@@ -101,9 +126,15 @@ function norm(value){
 function word(value){var v=norm(value);if(v==='developmental')return 'development';if(v==='disagrees'||v==='disagree')return 'disagreement';if(v==='children')return 'child';if(v==='teens')return 'teen';if(v==='families')return 'family';if(v.endsWith('ies')&&v.length>5)return v.slice(0,-3)+'y';if(v.endsWith('s')&&v.length>4&&!v.endsWith('ss')&&!v.endsWith('us'))return v.slice(0,-1);return v;}
 function tokens(s){return [...new Set(norm(s).split(' ').map(word).filter(x=>x.length>1&&!STOP.has(x)))];}
 function queryIntent(raw){
- var q=norm(raw),topic=q.split(' ').filter((x,i,arr)=>{
+ var q=norm(raw);
+ var es=q.match(/\b(spanish|espanol)\b/)||/[áéíóúñ¿¡]/i.test(raw)
+  ||/\b(como|hijo|hija|hijos|hijas|ansiedad|preparacion|barreras|apoyos|adolescente|injusticia|injusto|escuela|emociones|observacion|burlan|pelean|dientes|necesito|quiero|estoy|nino|nina)\b/.test(q)
+  ||/\b(mi|mis)\b/.test(q)&&/\b(no|se|yo|que|para|con|siento|tengo|hijo|hija)\b/.test(q);
+ var esFiller=new Set('mi mis yo el la los las un una unos unas de del en para por que se lo con al y o estoy soy tiene tengo quiero necesito si puedo puede ayuda ayudar como cuando necesito necesitan todo todos uno esto ella ellas ellos hace hago estoy tambien'.split(' '));
+ var topic=q.split(' ').filter((x,i,arr)=>{
    var generic=['worksheet','worksheets','handout','handouts','printable','pdf','spanish','espanol','client','person','need','needs','wants','want','looking','trying','find','understand','understanding','struggling','struggle','with','therapist','clinician','clinicians','teacher','teachers','please'];
    if(generic.includes(x))return false;
+   if(es&&esFiller.has(x))return false;
    if(arr.length>=4&&['parent','parents','caregiver','caregivers','teen','teens','student'].includes(x))return false;
    if(arr.length>=3&&x==='age'&&/^\d+$/.test(arr[i+1]||''))return false;
    if(arr.length>=3&&/^\d+$/.test(x)&&arr[i-1]==='age')return false;
@@ -112,10 +143,10 @@ function queryIntent(raw){
  }).join(' ');
  return {
   topic:topic,
-  language:/\b(spanish|espanol)\b/.test(q)||/[áéíóúñ¿¡]/i.test(raw)||/\b(como|hijo|hija|ansiedad|preparacion|barreras|apoyos)\b/.test(q)?'es':'en',
-  population:/\b(teen|teens|adolescent)\b/.test(q)?'teens':/\b(five year old|four year old|three year old|toddler|preschool|infant)\b/.test(q)?'birth5':/\b(child|children|kid|student)\b/.test(q)?'children':'',
-  audience:/\b(parent|parents|caregiver|caregivers|family|families)\b/.test(q)?'caregiver':'',
-  worksheet:/\b(worksheet|handout|printable|pdf)\b/.test(q)
+  language:es?'es':'en',
+  population:/\b(teen|teens|adolescent|adolescente)\b/.test(q)?'teens':/\b(five year old|four year old|three year old|toddler|preschool|infant|dos anos|tres anos|cuatro anos|nino pequeno|nina pequena|preescolar|bebe)\b/.test(q)?'birth5':/\b(child|children|kid|student|nino|nina|hijo|hija)\b/.test(q)?'children':'',
+  audience:/\b(parent|parents|caregiver|caregivers|family|families|padres|madre|mama|papa|mis hijos|mi hijo|mi hija)\b/.test(q)?'caregiver':'',
+  worksheet:/\b(worksheet|handout|printable|pdf|hoja de trabajo|hoja rellenable)\b/.test(q)
  };
 }
 function hasWord(h,t){return (' '+h+' ').includes(' '+t+' ');}
