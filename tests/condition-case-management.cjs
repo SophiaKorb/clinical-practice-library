@@ -7,11 +7,13 @@ const base='resources/diagnoses/comprehensive/case-management/';
 const slugs=['adhd','autism','anxiety-ocd','depression','trauma-dissociation','learning-disorders','psychosis-bipolar','substance-use','persistent-conflict','eating-disorders','tic-repetitive-behavior','intellectual-disability','sleep-conditions','grief-bereavement'];
 const index=read(base+'index.html');
 const collection=read('resources/diagnoses/comprehensive/index.html');
+const hubScript=read('resources/diagnoses/diagnosis-hubs.js');
 assert(collection.includes('/resources/diagnoses/comprehensive/case-management/index.html'),'Main clinical depth index must link case management');
 assert(index.includes('id="main"')&&index.includes('name="viewport"'),'Missing case manager index scaffold');
 for(const slug of slugs){
  const rel=base+slug+'.html',html=read(rel);
  assert(index.includes('href="'+slug+'.html"'),'Missing condition navigation '+slug);
+ assert(hubScript.includes('/resources/diagnoses/comprehensive/case-management/'+slug+'.html'),'Diagnosis index missing CM route '+slug);
  assert(html.includes('name="viewport"')&&html.includes('<main')&&html.includes('</html>'),'Missing HTML scaffold '+slug);
  assert(html.includes('class="skip"')&&html.includes('id="main"'),'Missing keyboard skip '+slug);
  assert(html.includes('class="worksheet"')&&html.includes('window.print()'),'Missing printable client worksheet '+slug);
