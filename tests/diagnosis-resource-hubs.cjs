@@ -5,8 +5,8 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
 const root=path.resolve(__dirname,'..');
 const read=p=>fs.readFileSync(path.join(root,p),'utf8');
 const parse=JSON.parse(read('resources/clinical-finder-data.js').replace(/^globalThis\.CPLFinderData\s*=\s*/,'').replace(/;\s*$/,''));
-assert.equal(parse.resources.length,615);
-assert.equal(new Set(parse.resources.map(x=>x.url)).size,615);
+assert.equal(parse.resources.length,812);
+assert.equal(new Set(parse.resources.map(x=>x.url)).size,812);
 assert.equal(parse.resources.filter(x=>x.externalUrl).length,77);
 const diagnosis=parse.facets.diagnosis;
 assert.equal(diagnosis.length,14);
