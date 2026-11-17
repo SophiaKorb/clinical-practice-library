@@ -1,0 +1,32 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const root=path.resolve(__dirname,'..');
+const read=f=>fs.readFileSync(path.join(root,f),'utf8');
+const clinical=read('resources/community/affirming-clinical-conversation.html');
+const youth=read('resources/community/youth-school-community-access.html');
+const online=read('resources/community/online-lgbtq-resources.html');
+const data=JSON.parse(read('resources/clinical-finder-data.js').replace(/^globalThis\\.CPLFinderData\\s*=\\s*/,'').replace(/;\\s*$/,''));
+assert.equal(data.resources.length,609,'All prior indexed resources retained');
+assert.equal(new Set(data.resources.map(r=>r.url)).size,609,'No duplicate indexed URLs');
+const ext=data.resources.filter(r=>r.url.startsWith('/resources/community/expanded-external-resources.html#'));
+assert.equal(ext.length,77,'Original publisher catalog retained');
+assert(clinical.includes('appointments, calls, messages, records and shared portals'),'Context-specific privacy language absent');
+assert(clinical.includes('while meeting documentation requirements'),'Privacy language must preserve required documentation');
+assert(clinical.includes("determine what authorization, if any, the law requires"),'Authorization vs discretionary consent distinction lost');
+assert(clinical.includes("parents' or guardians' rights where applicable"),'Legal representative access caveat absent');
+assert(clinical.includes('mandated reporting and immediate-safety exceptions'),'Reporting exception language lost');
+assert(clinical.includes('https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/personal-representatives/index.html'),'Primary legal source absent');
+assert(youth.includes("the young person's involvement and any required authorization"),'Youth handoff must distinguish meaningful participation from legal authority');
+assert(youth.includes("preferences separately from any legally required consent or authorization"),'Handoff must separate youth preference from effective legal consent');
+const talk=data.resources.find(r=>r.url==='/resources/community/online-lgbtq-resources.html#lgbt-talkline');
+assert(talk&&talk.minimumAge===undefined&&talk.maximumAge===undefined,'Conflicting provider pages cannot establish numerical age eligibility');
+assert(online.includes("main directory describes the Youth Talkline as for ages 25 and younger"),'Provider age disagreement not identified');
+assert(online.includes('dedicated page says callers of any age'),'Provider page contradiction absent');
+assert(online.includes('youth group chatrooms are a separate service for ages 19 and younger'),'Telephone and chat services should not be conflated');
+assert(talk.searchTerms.some(x=>x.includes('separate program for ages 19 and younger')),'Hidden finder metadata still conflates service programs');
+for(const p of ['resources/community/affirming-clinical-conversation.html','resources/community/youth-school-community-access.html']){
+ const s=read(p);
+ assert(s.includes('@page{size:letter;margin:0.65in 0.70in}'),'Print page margins lost in '+p);
+ assert((s.match(/<section class="panel"/g)||[]).length===4,'Practical sections changed in '+p);
+}
+console.log('PASS review-only privacy: context-specific record/portal safeguards, legal authorization vs youth agency, separated LGBT phone/chat age claims, 609 resources and 77 publishers retained');

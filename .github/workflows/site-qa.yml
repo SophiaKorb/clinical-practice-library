@@ -27,6 +27,7 @@ jobs:
       - run: node tests/child-population-filter.cjs
       - run: node tests/online-lgbtq-resources.cjs
       - run: node tests/community-referral-scope-qa.cjs
+      - run: node tests/pr48-clinical-privacy-referral-regression.cjs
       - run: node tests/provider-audit-77.cjs
       - run: node tests/external-provider-eligibility-audit.cjs
       - run: node tests/finder-card-readability.cjs
