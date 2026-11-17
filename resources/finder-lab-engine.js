@@ -265,7 +265,13 @@ function directScore(item,q){
  if(!hits)score=0;
  return {score:score,reason:titleHits?'Title match':hits===qt.length?'Topic match':'Partial match',matched:matched,coverage:fraction};
 }
-function conceptsFor(q){var n=norm(q);return CONCEPTS.filter(x=>x.test.test(n));}
+function conceptsFor(q){
+ var n=norm(q),matches=CONCEPTS.filter(x=>x.test.test(n));
+ // Specific functional concerns beat generic diagnosis terms. This prevents
+ // bullying/communication questions from turning into broad autism directories.
+ var broad=new Set(['autistic children and support','overload and regulation','IEP and school supports']);
+ return matches.some(x=>!broad.has(x.label))?matches.filter(x=>!broad.has(x.label)):matches;
+}
 function relatedScore(item,concepts){
  if(!concepts.length)return 0;
  // Related-language search uses specific TITLE/PATH phrases only.
@@ -332,11 +338,13 @@ function search(items,state){
    if(q==='iep'&&minDirect&&h.direct.reason!=='Title match')score=0;
    if(score>=(qTokens.length>1?30:1)){
      var isSpanish=h.item.language==='es';
+     if(isSpanish&&intent.language==='en'&&h.direct.reason!=='Title match')continue;
      var languageFit=intent.language==='es'?(isSpanish?250:-100):(isSpanish?-250:3);
      var audienceFit=intent.audience&&h.item.audience.includes(intent.audience)?12:0;
      var populationFit=intent.population&&h.item.population.includes(intent.population)?12:0;
      var worksheetFit=intent.worksheet&&score>=75&&(h.item.type==='worksheet'||h.item.type==='education')?420:0;
-     hits.push({item:h.item,score:score+languageFit+audienceFit+populationFit+worksheetFit+Math.min(1,(h.item.original.priority||0)/1000),reason:reason});
+     var finalScore=score+languageFit+audienceFit+populationFit+worksheetFit+Math.min(1,(h.item.original.priority||0)/1000);
+     if(finalScore>=1)hits.push({item:h.item,score:finalScore,reason:reason});
    }
  }
  hits.sort((a,b)=>b.score-a.score||a.item.title.localeCompare(b.item.title));
