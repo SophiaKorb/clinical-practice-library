@@ -162,6 +162,7 @@ function familyFor(r){
  return match?'clinical-topic:'+match[1]:pdf?'clinical-topic:'+pdf[1]:r.url;
 }
 function describe(r,type){
+ if(/^\/resources\/community\/(family|youth)-community-guide-text\.html#/.test(r.url||'') && r.description) return r.description;
  if(DESCRIPTIONS[r.url])return DESCRIPTIONS[r.url];
  var title=r.title.replace(/^Topic /,'').replace(/ — (Care-partner guide|Client workbook|Clinician formulation guide|Interactive case practice|Progress review tool|Visual support map)$/,'');
  if(/\/clinical-topics\//.test(r.url||'')){
