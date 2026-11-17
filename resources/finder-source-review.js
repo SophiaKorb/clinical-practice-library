@@ -889,5 +889,272 @@
       "tareas hogar",
       "habilidades domésticas"
     ]
+  },
+  "/resources/handouts/supporting-attention-and-learning-at-home.html": {
+    "description": "Strategies for making home learning easier to start, organize and finish when attention, working memory or task initiation is difficult.",
+    "audience": [
+      "caregiver"
+    ],
+    "population": [
+      "children",
+      "teens"
+    ],
+    "type": "caregiver",
+    "terms": [
+      "homework support",
+      "executive function home learning",
+      "working memory child"
+    ]
+  },
+  "/resources/handouts/helping-siblings-through-conflict.html": {
+    "description": "Family guide to ordinary sibling conflict: protect safety, respect boundaries and repair without normalizing intimidation.",
+    "audience": [
+      "caregiver"
+    ],
+    "population": [
+      "children",
+      "teens"
+    ],
+    "type": "caregiver",
+    "terms": [
+      "sibling conflict support",
+      "sibling safety",
+      "family sibling repair"
+    ]
+  },
+  "/resources/handouts/emotion-signals.html": {
+    "description": "Teen/adult worksheet for exploring emotions through body sensations, energy, urges, thoughts and context rather than perfect labels.",
+    "audience": [
+      "client"
+    ],
+    "population": [
+      "teens",
+      "adults"
+    ],
+    "type": "worksheet",
+    "terms": [
+      "emotion signals teen adult",
+      "feelings awareness",
+      "body emotions map"
+    ]
+  },
+  "/resources/handouts/instead-of-yelling.html": {
+    "description": "Caregiver guide to reducing yelling through adult regulation, clear observable directions and repair after conflict.",
+    "audience": [
+      "caregiver"
+    ],
+    "population": [
+      "children",
+      "teens"
+    ],
+    "type": "caregiver",
+    "terms": [
+      "parent yelling",
+      "adult regulation",
+      "parent repair"
+    ]
+  },
+  "/resources/handouts/notice-before-you-name-it.html": {
+    "description": "Emotional-awareness guide for noticing body changes, energy, urges and attention before naming a feeling.",
+    "audience": [
+      "client"
+    ],
+    "type": "education",
+    "terms": [
+      "emotions body signals",
+      "feelings without words",
+      "emotion awareness"
+    ]
+  },
+  "/resources/handouts/making-room-for-grief.html": {
+    "description": "Guide to living with loss through changing grief reactions without imposing stages, deadlines or constant sadness.",
+    "audience": [
+      "client",
+      "caregiver"
+    ],
+    "type": "education",
+    "terms": [
+      "grief education",
+      "loss support",
+      "grief waves"
+    ]
+  },
+  "/resources/handouts/making-sleep-more-likely.html": {
+    "description": "Client/family sleep guide to morning anchors, daylight, sleep pressure, and a workable wind-down routine.",
+    "audience": [
+      "client",
+      "caregiver"
+    ],
+    "type": "education",
+    "terms": [
+      "sleep habits",
+      "sleep routine",
+      "insomnia daily rhythms"
+    ]
+  },
+  "/resources/handouts/making-transitions-easier.html": {
+    "description": "Support plan for changes in activity, place or routine using clear next steps, visual cues and practical accommodations.",
+    "audience": [
+      "client",
+      "caregiver"
+    ],
+    "type": "education",
+    "terms": [
+      "transitions between activities",
+      "change routine",
+      "visual transition support"
+    ]
+  },
+  "/resources/handouts/helping-your-child-stay-on-task-at-home.html": {
+    "description": "Parent guidance for identifying attention and initiation barriers, then helping children begin, focus and finish tasks.",
+    "audience": [
+      "caregiver"
+    ],
+    "population": [
+      "children",
+      "teens"
+    ],
+    "type": "caregiver",
+    "terms": [
+      "child attention home",
+      "ADHD chores focus",
+      "executive function support"
+    ]
+  },
+  "/resources/handouts/helping-chores-go-more-smoothly.html": {
+    "description": "Family guide for teaching household chores through clear steps, appropriate support and attention to functional barriers.",
+    "audience": [
+      "caregiver"
+    ],
+    "population": [
+      "children",
+      "teens"
+    ],
+    "type": "caregiver",
+    "terms": [
+      "children chores",
+      "household skills",
+      "chores visual plan"
+    ]
+  },
+  "/resources/handouts/making-plans-easier-to-start-and-finish.html": {
+    "description": "Adult executive-function guide for starting, sequencing, remembering, tracking time and completing plans without shame.",
+    "audience": [
+      "client"
+    ],
+    "population": [
+      "adults"
+    ],
+    "type": "education",
+    "terms": [
+      "adult task initiation",
+      "executive function plans",
+      "finishing tasks"
+    ]
+  },
+  "/resources/handouts/perspective-taking-without-guessing.html": {
+    "description": "Guide to understanding differing perspectives by separating observed facts, hypotheses and questions from mind-reading.",
+    "audience": [
+      "client"
+    ],
+    "type": "education",
+    "terms": [
+      "perspective taking",
+      "social understanding",
+      "different viewpoints"
+    ]
+  },
+  "/resources/handouts/show-me-what-you-need.html": {
+    "description": "Simple communication choice board for young children and low-language moments, supporting pointing, AAC, speech or gestures.",
+    "audience": [
+      "client",
+      "caregiver"
+    ],
+    "population": [
+      "birth5",
+      "children"
+    ],
+    "type": "worksheet",
+    "terms": [
+      "AAC board",
+      "child needs communication",
+      "non speaking child choices"
+    ]
+  },
+  "/resources/handouts/suspected-opioid-overdose.html": {
+    "description": "Visual emergency response card: recognize possible opioid overdose, call 911, use naloxone when available and follow dispatcher guidance.",
+    "audience": [
+      "client",
+      "caregiver",
+      "clinician"
+    ],
+    "type": "worksheet",
+    "terms": [
+      "naloxone rescue",
+      "opioid overdose signs",
+      "overdose response card"
+    ]
+  },
+  "/resources/handouts/reducing-harm-when-substance-use-is-part-of-the-picture.html": {
+    "description": "Adult-oriented harm-reduction guide covering overdose risks, sedative combinations and person-chosen treatment goals.",
+    "audience": [
+      "client",
+      "caregiver"
+    ],
+    "population": [
+      "adults"
+    ],
+    "type": "education",
+    "terms": [
+      "substance use harm reduction",
+      "safer use",
+      "overdose risk"
+    ]
+  },
+  "/resources/handouts/clear-supported-proactive-parenting-responses.html": {
+    "description": "Caregiver framework for choosing clear, supported or proactive responses matched to a child's actual needs and situation.",
+    "audience": [
+      "caregiver"
+    ],
+    "population": [
+      "children",
+      "teens"
+    ],
+    "type": "caregiver",
+    "terms": [
+      "parenting responses",
+      "behavioral supports",
+      "parent coaching"
+    ]
+  },
+  "/resources/handouts/when-doubt-wants-a-guarantee.html": {
+    "description": "OCD education on reassurance loops, checking, mental rituals and practicing uncertainty with appropriate support.",
+    "audience": [
+      "client",
+      "caregiver"
+    ],
+    "type": "education",
+    "terms": [
+      "OCD reassurance",
+      "uncertainty practice",
+      "checking compulsions"
+    ]
+  },
+  "/resources/handouts/my-after-school-reset-plan.html": {
+    "description": "Child-facing worksheet to choose recovery supports, communication options and a low-demand transition after school.",
+    "audience": [
+      "client",
+      "caregiver"
+    ],
+    "population": [
+      "children",
+      "teens"
+    ],
+    "type": "worksheet",
+    "terms": [
+      "after school reset worksheet",
+      "decompression",
+      "recovery after school"
+    ]
   }
 });
