@@ -77,6 +77,9 @@ var AUDIENCE_EVIDENCE={
  '/resources/es/arizona-como-conseguir-iep-504.html':['caregiver','case_manager','school_team'],
  '/resources/es/school/iep-504-preparacion-reunion.html':['caregiver','school_team']
 };
+// Verified-page overlay is a discovery aid only: no underlying resource content is altered.
+var SOURCE_REVIEW=(typeof module==='object'&&module.exports&&typeof require==='function')
+  ?require('./finder-source-review.js'):(typeof globalThis!=='undefined'&&globalThis.CPLFinderSourceReview||{});
 var NEEDS=['clinical','worksheet','caregiver','assessment','school','referral','training','education','collection'];
 var AUDIENCES=['client','caregiver','clinician','case_manager','school_team','trainee'];
 var POPULATIONS=['birth5','children','teens','adults'];
@@ -178,12 +181,23 @@ function describe(r,type){
  return 'Explore '+title.toLowerCase()+'; review the original resource for purpose and fit.';
 }
 function meta(r){
- var type=typeFor(r),audience=audienceFor(r),population=populationFor(r),base=familyFor(r);
- return {url:r.url,title:r.title,original:r,type:type,typeLabel:TYPES[type],audience:audience.values,
-   audienceUndifferentiated:audience.undifferentiated,population:population.values,acrossAges:population.across,
-   populationNote:population.note,description:describe(r,type),family:base,
-   provenance:'Derived only from catalog, title and path; not validated suitability',
-   isExternal:!!r.externalUrl,language:/^\/resources\/es\//.test(r.url||'')?'es':'en',format:(r.url||'').endsWith('.pdf')?'PDF':'Web page'};
+ var reviewed=SOURCE_REVIEW[r.url]||null,type=reviewed&&reviewed.type||typeFor(r),
+   audience=audienceFor(r),population=populationFor(r),base=familyFor(r);
+ if(reviewed){
+   if(reviewed.audience)audience.values=[...reviewed.audience];
+   if(reviewed.population){
+     population.values=[...reviewed.population];
+     population.note='Population discovery supported by source introduction; verify actual fit';
+   }
+ }
+ return {url:r.url,title:r.title,original:r,type:type,typeLabel:TYPES[type],
+   audience:audience.values,audienceUndifferentiated:reviewed?false:audience.undifferentiated,
+   population:population.values,acrossAges:reviewed&&reviewed.population?false:population.across,
+   populationNote:population.note,description:reviewed&&reviewed.description||describe(r,type),
+   family:base,reviewedSource:!!reviewed,reviewTerms:reviewed&&reviewed.terms||[],
+   provenance:reviewed?'Reviewed against original CPL page introduction; not validated suitability':'Derived only from catalog, title and path; not validated suitability',
+   isExternal:!!r.externalUrl,language:/^\/resources\/es\//.test(r.url||'')?'es':'en',
+   format:(r.url||'').endsWith('.pdf')?'PDF':'Web page'};
 }
 function index(records){
  var list=records.map(meta),families=new Map();
@@ -212,9 +226,10 @@ function index(records){
 function textFields(item){
  var r=item.original,tags=r.tags||{};
  var canonical=s=>norm(s).split(' ').map(word).join(' ');
- var title=canonical(r.title),url=canonical((r.url||'').split('#')[0]),terms=canonical(safeArray(r.searchTerms).join(' ')),
-   metadata=canonical(Object.values(tags).flat().join(' '));
- return {title:title,url:url,terms:terms,tags:metadata};
+ return {title:canonical(r.title),url:canonical((r.url||'').split('#')[0]),
+  terms:canonical(safeArray(r.searchTerms).join(' ')),
+  review:canonical(safeArray(item.reviewTerms).join(' ')),
+  tags:canonical(Object.values(tags).flat().join(' '))};
 }
 function directScore(item,q){
  var qt=tokens(q);if(!qt.length)return {score:0,reason:'Browse all',matched:[]};
@@ -226,6 +241,7 @@ function directScore(item,q){
    var t=qt[i],value=0;
    if(hasWord(f.title,t)){value=78;titleHits++;}
    else if(hasWord(f.url,t))value=49;
+   else if(hasWord(f.review,t))value=30;
    else if(hasWord(f.terms,t))value=24;
    else if(hasWord(f.tags,t))value=9;
    if(value){hits++;score+=value;matched.push(t);}
@@ -303,7 +319,7 @@ function search(items,state){
  }
  hits.sort((a,b)=>b.score-a.score||a.item.title.localeCompare(b.item.title));
  // For no direct match, no false impression that a synonym is an exact result.
- return {groups:groupResults(hits,items),matches:hits.length,resources:filtered.length,query:q,
+ return {groups:groupResults(hits,filtered),matches:hits.length,resources:filtered.length,query:q,
    concepts:concepts.map(c=>c.label),hasDirect:strong.length>0,
    reason:qTokens.length&&!hits.length?'No indexed title or supported related concept matched.':null};
 }
