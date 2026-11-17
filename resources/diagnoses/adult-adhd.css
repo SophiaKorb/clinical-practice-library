@@ -15,3 +15,20 @@
 @media(max-width:680px){.matrix-row,.matrix-row.header{grid-template-columns:1fr;gap:4px}.matrix-row.header{display:none}.matrix-row{padding:14px 15px}.matrix-row>div:first-child{font-size:1rem}.matrix-row>div:nth-child(2):before{content:"What it can look like: ";font-size:.77rem;font-weight:800;color:#556c61}.matrix-row>div:nth-child(3):before{content:"A support to explore: ";font-size:.77rem;font-weight:800;color:#556c61}.article .handout-grid{grid-template-columns:1fr}}
 @media(max-width:420px){.start-grid,.steps{grid-template-columns:1fr}.start-card{padding:15px}.adult-hero h1{font-size:2rem}}
 @media print{.start-grid{display:block}.start-card{break-inside:avoid;margin:10px 0}.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.article>section{break-inside:auto}.matrix-row{break-inside:avoid}.handout-grid{display:block!important}.handout-grid>li{break-inside:avoid;margin:8px 0}.section-jumps{display:none}a{color:#000}}
+
+/* A multi-format toolkit is one resource, not eight independent cards. */
+.collection-group .resource-list--bundle{display:block}
+.collection-group .resource-list--bundle>.companion-bundle{display:grid;grid-template-columns:minmax(220px,.85fr) minmax(0,1.5fr);gap:1.5rem;padding:1.35rem 1.5rem;border-color:#adc4b4;border-radius:14px;background:#fff;box-shadow:0 3px 12px rgba(21,63,45,.04)}
+.bundle-primary,.bundle-companions{min-width:0}
+.bundle-eyebrow{font-size:.73rem;font-weight:790;letter-spacing:.08em;text-transform:uppercase;color:#476957;margin:0 0 .45rem}
+.bundle-primary h4{margin:0 0 .5rem;font-size:clamp(1.15rem,2vw,1.4rem);line-height:1.3}
+.bundle-primary h4 a{font-weight:780}
+.bundle-primary>p:last-child{margin:0;font-size:.92rem;line-height:1.58;color:#476154}
+.bundle-companions{border-left:1px solid #d3e0d5;padding-left:1.4rem}
+.bundle-label{margin:0 0 .75rem;color:#375647;font-size:.85rem;font-weight:760}
+.bundle-links{display:flex;flex-wrap:wrap;gap:.55rem}
+.bundle-links a{display:inline-block;border:1px solid #c4d7cb;border-radius:8px;background:#f4f8f5;padding:.55rem .72rem;text-decoration:none;font-size:.87rem;font-weight:660;line-height:1.35}
+.bundle-links a:hover{text-decoration:underline;background:#e8f2e9}
+.bundle-links a:focus-visible{outline-offset:3px}
+@media(max-width:720px){.collection-group .resource-list--bundle>.companion-bundle{grid-template-columns:1fr;gap:1rem;padding:1.1rem}.bundle-companions{border-left:0;border-top:1px solid #d3e0d5;padding:1rem 0 0}}
+@media print{.collection-group .resource-list--bundle>.companion-bundle{display:block;border:1px solid #777;box-shadow:none}.bundle-companions{border:0;border-top:1px solid #888;padding:12px 0 0;margin-top:12px}.bundle-links a{background:#fff;border:1px solid #999;color:#111}}
