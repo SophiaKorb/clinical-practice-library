@@ -10,3 +10,7 @@
 
 /* Focused skip controls are for screen/keyboard navigation, never paper. */
 @media print{.skip,.skip:focus{display:none!important}}
+
+/* Long headings (notably 'accommodations') must reflow at 320px without clipping or horizontal scrolling. */
+main h1,main h2,main h3{overflow-wrap:anywhere;hyphens:auto}
+main>*,.sheet,.notice{min-width:0;max-width:100%}
