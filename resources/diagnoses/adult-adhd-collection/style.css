@@ -7,3 +7,5 @@
 .table-scroll:focus-visible{outline:3px solid #184c84;outline-offset:4px}
 @media(max-width:650px){.visual>*:not(:last-child)::after{content:"↓";left:calc(50% - .35rem);top:calc(100% - .2rem);background:#f8faf7;padding:0 .2rem}.visual>*{margin:.75rem 0}}
 @media print{.visual>*{border:1px solid #777;background:white}.visual>*:not(:last-child)::after{color:#111;background:white}}
+
+@media print{.skip,.skip:focus{display:none!important}}
