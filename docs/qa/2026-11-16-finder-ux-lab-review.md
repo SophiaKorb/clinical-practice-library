@@ -14,7 +14,7 @@
 - No analytics, AI diagnosis, external search API or patient-data processing has been introduced. Search terms are reflected in browser URLs; users are warned not to type identifiers.
 
 ## Quantitative search-journey comparison
-36 *editorially curated fictional clinical queries* are paired with one existing expected URL each. Rank compares the unchanged baseline finder and candidate search engine using the **same exact 615-entry data**, with grouped family representative titles counted as top-level results. Measures are *not* real clinician task success, recall over a complete relevance corpus, independent evaluator ratings, or clinical certification.
+36 *editorially curated fictional concise clinical queries* are paired with one existing expected URL each. Rank compares the unchanged baseline finder and candidate search engine using the **same exact 615-entry data**, with grouped family representative titles counted as top-level results. Measures are *not* real clinician task success, recall over a complete relevance corpus, independent evaluator ratings, or clinical certification.
 
 | Measure | Published baseline | Isolated prototype |
 | --- | ---: | ---: |
@@ -32,6 +32,20 @@ Selected repeatable cases:
 - **Birth–5:** stage-filter coverage uses specifically grounded early-childhood metadata; original broad external/older-adult entries are not silently treated as eligible for preschoolers.
 
 The current source still has **unsupported/incomplete metadata**; at the last metadata checkpoint the adapter reported 163 entries with no confidently differentiated audience and 181 with no specific population and no across-ages designation. This is an honest remaining curation workload, not evidence that the resources are clinically inappropriate. A dozen direct-child/teen/adult badges in the production finder are not the same as the broader role and developmental discovery tags.
+
+## Extended conversational phrasing regression (18 additional cases)
+Following an initial regression round, 18 longer searches exposed real deficiencies in the prototype, including sentence-length searches for school attendance, biting, hygiene, task initiation, peer safety, and communication access. Narrow, explicit concept-to-resource mappings and intent extraction were added; this **development-informed** set is a second regression suite, not an independent or blinded benchmark.
+
+| Metric, 18 longer phrases | Current finder | Review prototype |
+| --- | ---: | ---: |
+| Designated target ranked first | 0/18 | 15/18 |
+| Designated target in top five | 0/18 | 18/18 |
+| Designated target missing | 18/18 | 0/18 |
+| Mean reciprocal rank | 0.000 | 0.907 |
+
+Examples: “my five year old keeps biting classmates” → child aggression/caregiver-coaching collection; “student won't enter school” → school-anxiety support guide; “family needs Spanish IEP guide” → Spanish Arizona IEP guidance; “nonverbal autistic child needs ways to choose” → Communication Supports Toolkit; “teen self harm worksheet” → Safety Planning Preparation Sheet (format intent prioritized without suppressing clinical safety guidance as a secondary result).
+
+**Guardrails:** These are search prompts about fictional concerns, not patient data; no automatic clinical classification, definitive resource fit or treatment recommendation. Intent words like “child” or “caregiver” are soft relevance cues only; don't silently filter out professional school and family materials. Actual suitability and third-party eligibility require source-specific review. The new search engine remains deterministically local, not an AI diagnosis or clinical triage tool.
 
 ## QA, screenshots and bounds
 - \`tests/finder-lab-ux.cjs\` checks 36 clinical journeys, expected top-five locations, regression metrics, exactly 615 retained URLs, 77 original external provider links, family grouping, explicit minimum-age exclusion, metadata provenance/ambiguity, known Birth–5 resources, cross-audience coverage and no accidental homepage promotion.
