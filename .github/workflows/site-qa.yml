@@ -31,6 +31,7 @@ jobs:
       - run: node tests/combined-cpl-finder-qa.cjs
       - run: node tests/birth-to-five-resources.cjs
       - run: node tests/finder-lab-ux.cjs
+      - run: node tests/finder-release-qa.cjs
       - run: node tests/expanded-external-resources.cjs
       - run: node tests/clinical-resources-qa.cjs
       - run: node tests/thermometer-levels.cjs
