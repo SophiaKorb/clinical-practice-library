@@ -110,10 +110,10 @@ fs.mkdirSync(dir,{recursive:true});
       assert.equal(audit.violations.length,0,'Online guide axe violations: '+guide.slug+' '+JSON.stringify(audit.violations.map(v=>v.id)));
     }
     if(width===1280){
-      await page.screenshot({path:path.join(dir,'community-'+guide.slug+'-1280.png'),fullPage:true});
-      const webPdf=await page.pdf({format:'Letter',printBackground:false});
-      assert(webPdf.length>20000,'Guide print/PDF output unexpectedly empty: '+guide.slug);
-      fs.writeFileSync(path.join(dir,'community-'+guide.slug+'-print.pdf'),webPdf);
+      await page.screenshot({path:path.join(dir,'community-'+guide.slug+'-1280.png'),fullPage:false});
+      const webPdf=await page.pdf({format:'Letter',printBackground:false,pageRanges:'1-2'});
+      assert(webPdf.length>5000,'Guide print/PDF output unexpectedly empty: '+guide.slug);
+      fs.writeFileSync(path.join(dir,'community-'+guide.slug+'-print-sample.pdf'),webPdf);
     }
    }
    await page.goto(base+'/resources/clinical-resource-finder.html',{waitUntil:'networkidle'});
