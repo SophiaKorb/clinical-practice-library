@@ -34,6 +34,9 @@ jobs:
           node scripts/qa/cpl-pr40-pr41-rendered.cjs
           node scripts/qa/finder-lab-rendered.cjs
           node scripts/qa/finder-release-rendered.cjs
+          node scripts/qa/finder-postdeploy-rendered.cjs
+          node scripts/qa/finder-source-rendered.cjs
+          node scripts/qa/finder-postdeploy-live.cjs
       - name: Retain CPL review screenshots and printable samples
         if: always()
         uses: actions/upload-artifact@v4

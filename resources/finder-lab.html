@@ -8,6 +8,8 @@
 <title>Clinical Practice Library | Finder UX laboratory</title>
 <link rel="stylesheet" href="/resources/finder-lab.css">
 <script defer src="/resources/clinical-finder-data.js"></script>
+<script defer src="/resources/finder-source-review.js"></script>
+<script defer src="/resources/finder-spanish-equivalents.js"></script>
 <script defer src="/resources/finder-lab-engine.js"></script>
 <script defer src="/resources/finder-lab-ui.js"></script>
 </head>
@@ -85,6 +87,11 @@
   <section class="results-wrap" aria-labelledby="results-title">
     <div class="results-head"><div><p class="eyebrow">Resource matches</p><h2 id="results-title">Search results</h2></div><p id="lab-status" role="status" aria-live="polite" aria-atomic="true"></p></div>
     <div id="lab-results" class="results"></div>
+    <section id="lab-unclassified" class="unclassified" aria-labelledby="unclassified-title" hidden>
+      <h3 id="unclassified-title">Other resources with unverified age coverage</h3>
+      <p>These results may relate to your question, but the CPL index has no confirmed age classification for them. They are not part of the age-filtered matches. Review the source and clinical fit before use.</p>
+      <div id="lab-unclassified-results" class="results"></div>
+    </section>
     <div id="lab-empty" class="empty" hidden><h3>No confident matches yet</h3><p>Try fewer words, remove a filter, or search a broader clinical topic. A missing result is not a finding about clinical relevance.</p><button type="button" id="lab-recover">Remove filters</button></div>
     <button id="lab-more" type="button" class="more" hidden>Show more matches</button>
   </section>
