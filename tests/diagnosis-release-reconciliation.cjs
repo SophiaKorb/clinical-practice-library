@@ -11,7 +11,7 @@ const home=read('index.html');
 const topics=read('resources/clinical-topics/index.html');
 const originalFinder=read('resources/clinical-resource-finder.html');
 const pubLinks=catalog.resources.filter(x=>x.externalUrl);
-assert.equal(catalog.resources.length,615,'Unapproved source catalog drift');
+assert.equal(catalog.resources.length,813,'Must retain the 615-item production baseline plus 197 source-linked community listings');
 assert.equal(pubLinks.length,77,'Unapproved external publisher inventory drift');
 assert.equal(catalog.facets.diagnosis.length,14,'Expected all 14 diagnosed topics');
 for(const [name,html] of [['diagnosis index',index],['adult guide',adult]]){

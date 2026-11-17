@@ -6,7 +6,7 @@ var engine=globalThis.CPLFinderLab,data=globalThis.CPLFinderData;
 if(!engine||!data){return;}
 var by=id=>document.getElementById(id);
 var catalog=engine.index(data.resources),limit=10;
-var keys=['population','need','audience'],advKeys=['diagnosis','symptom','function','intervention','stage','task','step'];
+var keys=['population','need','audience'],advKeys=['diagnosis','symptom','function','intervention','stage','task','step','community','place','community-topic'];
 var state={q:'',population:'',need:'',audience:'',advanced:{}};
 var humanRole={clinician:'Clinician',trainee:'Trainee',case_manager:'Case manager',school_team:'School team',client:'Client',caregiver:'Caregiver'};
 var humanPop={birth5:'Birth–5',children:'School-age/teen indexed',teens:'School-age/teen indexed',adults:'Adult'};
@@ -63,6 +63,10 @@ function cardFor(group){
  if(item.acrossAges)appendLabel(chips,'Adapt for the person','chip--neutral');
  article.appendChild(chips);
  article.appendChild(el('p',null,item.description));
+ if(item.original.providerEvidenceUrl){
+  var evidence=el('p','match-explain'),source=el('a',null,'Official provider details');source.href=item.original.providerEvidenceUrl;source.target='_blank';source.rel='noopener noreferrer';evidence.appendChild(source);article.appendChild(evidence);
+ }
+ if(item.original.referralCaution)article.appendChild(el('p','caveat',item.original.referralCaution));
  var roles=item.audience.map(r=>humanRole[r]).filter(Boolean);
  if(roles.length)article.appendChild(el('p','match-explain',(item.audienceAggregated?'Collection includes formats for: ':'Indexed for: ')+roles.join(' · ')));
  if(item.audienceUndifferentiated)article.appendChild(el('p','match-explain','Audience not fully distinguished in the original catalog.'));

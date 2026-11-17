@@ -7,7 +7,7 @@ const read=p=>fs.readFileSync(path.join(root,p),'utf8');
 const raw=read('resources/clinical-finder-data.js');
 const data=JSON.parse(raw.replace(/^globalThis\.CPLFinderData\s*=\s*/,'').replace(/;\s*$/,''));
 const finder=require('../resources/clinical-finder.js');
-assert.equal(data.resources.length,615,'Expanded release must have exactly 615 resource entries');
+assert.equal(data.resources.length,813,'Expanded catalog must contain 615 original plus 197 distinct community listings');
 assert.equal(new Set(data.resources.map(r=>r.url)).size,data.resources.length,'No duplicate resource URLs');
 let linksChecked=0,anchorsChecked=0,facetsChecked=0;
 for(const r of data.resources){
