@@ -8,6 +8,16 @@
 'use strict';
 var STOP=new Set('a an and are at be can do for from help how i in is it me my of on or our the their to with what when where who will worried about need looking find please resources resource someone some working work'.split(' '));
 var CONCEPTS=[
+ {test:/\b(spanish|espanol)\b.*\b(autism|autistic|family)\b|\b(autism|autistic|family)\b.*\b(spanish|espanol)\b/,
+   terms:['autismo guia rapida familias','conducta ninos autistas'],label:'Spanish autism and family education',priority:150},
+ {test:/\b(school attendance anxiety|anxiety.*school attendance|school anxiety intervention)\b/,
+   terms:['anxiety barrier to support clinical','anxiety homeschool barrier','anxiety in children'],label:'school anxiety and attendance',priority:55},
+ {test:/\b(disagree|disagrees|co.parent.*disagree|parents arguing|parenting disagreement)\b/,
+   terms:['parenting across disagreement','criar en medio del desacuerdo'],label:'coparenting and boundaries',priority:55},
+ {test:/\b(preschool|daycare|five year old|toddler)\b.*\b(aggression|hitting|biting|behavior)\b|\b(aggression|hitting|biting)\b.*\b(preschool|daycare|five year old|toddler)\b/,
+   terms:['when a young child has more feeling','communication play regulation','early childhood regulation communication'],
+   label:'early-childhood dysregulation and communication',priority:75},
+
  {test:/\b(sensory overload|sensory overwhelm|overloaded by noise)\b/,terms:['sensory overload recovery plan','supporting child self regulation','communication play regulation'],label:'sensory overload and recovery',priority:45},
  {test:/\b(refuses homework|homework refusal|struggles with homework|won t do homework|can t start homework)\b/,terms:['task launch map','executive functioning','learning instruction access','adhd barrier'],label:'homework access and task initiation'},
  {test:/\b(biting|bitten|bites classmates|hits classmates|kicking peers|throwing things)\b/,terms:['child aggression','managing child behavior problems','when a young child has more feeling'],label:'observable child behavior and support'},
@@ -86,13 +96,16 @@ var POPULATIONS=['birth5','children','teens','adults'];
 function norm(value){
  return String(value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[–—\/_-]/g,' ').replace(/[^a-z0-9ñ ]+/g,' ').replace(/\s+/g,' ').trim();
 }
-function word(value){var v=norm(value);if(v==='children')return 'child';if(v==='teens')return 'teen';if(v==='families')return 'family';if(v.endsWith('ies')&&v.length>5)return v.slice(0,-3)+'y';if(v.endsWith('s')&&v.length>4&&!v.endsWith('ss')&&!v.endsWith('us'))return v.slice(0,-1);return v;}
+function word(value){var v=norm(value);if(v==='developmental')return 'development';if(v==='disagrees'||v==='disagree')return 'disagreement';if(v==='children')return 'child';if(v==='teens')return 'teen';if(v==='families')return 'family';if(v.endsWith('ies')&&v.length>5)return v.slice(0,-3)+'y';if(v.endsWith('s')&&v.length>4&&!v.endsWith('ss')&&!v.endsWith('us'))return v.slice(0,-1);return v;}
 function tokens(s){return [...new Set(norm(s).split(' ').map(word).filter(x=>x.length>1&&!STOP.has(x)))];}
 function queryIntent(raw){
  var q=norm(raw),topic=q.split(' ').filter((x,i,arr)=>{
-   var generic=['worksheet','worksheets','handout','handouts','printable','pdf','spanish','espanol','client','person','need','needs','struggling','struggle','with','therapist'];
+   var generic=['worksheet','worksheets','handout','handouts','printable','pdf','spanish','espanol','client','person','need','needs','wants','want','looking','trying','find','understand','understanding','struggling','struggle','with','therapist','please'];
    if(generic.includes(x))return false;
    if(arr.length>=4&&['parent','parents','caregiver','caregivers','teen','teens','student'].includes(x))return false;
+   if(arr.length>=3&&x==='age'&&/^\d+$/.test(arr[i+1]||''))return false;
+   if(arr.length>=3&&/^\d+$/.test(x)&&arr[i-1]==='age')return false;
+   if(arr.length>=4&&x==='other'&&arr.includes('parenting'))return false;
    return true;
  }).join(' ');
  return {
@@ -166,6 +179,7 @@ function familyFor(r){
 }
 function describe(r,type){
  if(DESCRIPTIONS[r.url])return DESCRIPTIONS[r.url];
+ if(/^\/resources\/es\//.test(r.url||''))return 'Recurso en español; revise el documento original para comprobar su propósito y destinatarios.';
  var title=r.title.replace(/^Topic /,'').replace(/ — (Care-partner guide|Client workbook|Clinician formulation guide|Interactive case practice|Progress review tool|Visual support map)$/,'');
  if(/\/clinical-topics\//.test(r.url||'')){
    if(type==='collection')return 'Open the topic collection for formulation, workbook, care-partner, visual and progress-review resources.';
@@ -303,7 +317,7 @@ function search(items,state){
      if(h.related>0 && score<10+h.related){score=10+h.related;reason='Related concept: '+concepts.map(c=>c.label).join('; ');}
    }else if(h.related>0 && (!minDirect || qTokens.length>1)){
      score=10+h.related;reason='Related concept: '+concepts.map(c=>c.label).join('; ');
-   }else if(qTokens.length>2 && h.direct.coverage>=0.67 && !minDirect){
+   }else if(qTokens.length>2 && h.direct.coverage>=0.66 && !minDirect){
      score=h.direct.score*0.65;reason='Partial match';
    }
    // Explicit title/path relevance dominates; historical global priority only breaks near-ties.
