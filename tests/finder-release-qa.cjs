@@ -10,7 +10,10 @@ const blobSha=s=>crypto.createHash('sha1').update('blob '+Buffer.byteLength(s)+'
 const originalFinder=read('resources/clinical-resource-finder-classic.html');
 assert.equal(blobSha(originalFinder),'22667416bd741b709eb1ee47905aa60ba066bfb6','Original finder HTML must be byte-exact');
 assert.equal(blobSha(read('resources/clinical-finder.js')),'9e99f42d783625953e0e46cba9a4aa8cb16329c5','Original matcher must remain unchanged');
-assert.equal(blobSha(read('resources/clinical-finder-data.js')),'93105c462d65d0b7766cc84564264ed345379fb7','Published 615 records must remain unchanged');
+// Published 615 records must remain byte-identical as a prefix; append-only community index is separately verified.
+const sourceCatalog=JSON.parse(read('resources/clinical-finder-data.js').replace(/^globalThis\.CPLFinderData\s*=\s*/,'').replace(/;\s*$/,''));
+const publishedPrefix='globalThis.CPLFinderData = '+JSON.stringify({...sourceCatalog,resources:sourceCatalog.resources.slice(0,615)})+';\n';
+assert.equal(blobSha(publishedPrefix),'93105c462d65d0b7766cc84564264ed345379fb7','Original 615 resource records changed');
 const html=read('resources/clinical-resource-finder.html');
 const ui=read('resources/finder-live-ui.js');
 const engine=require('../resources/finder-lab-engine.js');
@@ -30,10 +33,10 @@ for(const key of ['diagnosis','symptom','function','intervention','stage','task'
 for(const phrase of ["p.get('age')","p.get('child')","p.get('role')","state.legacyRole","getParams()"])assert(ui.includes(phrase),'Back-compat query behavior missing '+phrase);
 const raw=read('resources/clinical-finder-data.js');
 const data=JSON.parse(raw.replace(/^globalThis\.CPLFinderData\s*=\s*/,'').replace(/;\s*$/,''));
-assert.equal(data.resources.length,615);
+assert.equal(data.resources.length,812);
 assert.equal(data.resources.filter(x=>x.externalUrl).length,77);
 const items=engine.index(data.resources);
-assert.equal(items.length,615);
+assert.equal(items.length,812);
 const get=url=>items.find(x=>x.url===url);
 const early=get('/resources/birth-to-five/index.html'),local=get('/resources/birth-to-five/tucson-pima-local-resources.html');
 assert(early&&local);
