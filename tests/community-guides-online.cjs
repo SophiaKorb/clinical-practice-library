@@ -26,6 +26,8 @@ for(const [html,entries,type] of [[familyHtml,family,'family'],[tayHtml,tay,'tay
   assert(html.includes('id="guide-query"')&&html.includes('id="guide-status"')&&html.includes('role="status"'),'Client-only guide filtering and announcements missing');
   assert(html.includes('@media print')&&html.includes('@media(max-width:520px)'),'Print/small-screen layout missing');
   assert(html.includes('id="guide-print"')&&html.includes("window.print()"),'Online guide lacks print/save PDF action');
+  assert(html.includes('.section[hidden]{display:block!important}')&&html.includes('.entry[hidden]{display:inline-block!important}'),'Filtered listing must not disappear from full-guide print');
+  assert(html.includes('link.parentElement.hidden=')&&html.includes('No matches. Try a different search'),'Filtered navigation and no-match instruction missing');
   assert(!/<iframe|<form[^>]*action=|fetch\(/i.test(html),'Unexpected external processing or embedded content');
 }
 for(let n=1;n<=170;n++)assert(familyHtml.includes('id="listing-'+n+'"'),'Missing numbered family entry '+n);
