@@ -18,7 +18,7 @@
 
 /* A multi-format toolkit is one resource, not eight independent cards. */
 .collection-group .resource-list--bundle{display:block}
-.collection-group .resource-list--bundle>.companion-bundle{display:grid;grid-template-columns:minmax(220px,.85fr) minmax(0,1.5fr);gap:1.5rem;padding:1.35rem 1.5rem;border-color:#adc4b4;border-radius:14px;background:#fff;box-shadow:0 3px 12px rgba(21,63,45,.04)}
+.collection-group .resource-list--bundle>.companion-bundle{max-width:none;width:100%;display:grid;grid-template-columns:minmax(220px,.85fr) minmax(0,1.5fr);gap:1.5rem;padding:1.35rem 1.5rem;border-color:#adc4b4;border-radius:14px;background:#fff;box-shadow:0 3px 12px rgba(21,63,45,.04)}
 .bundle-primary,.bundle-companions{min-width:0}
 .bundle-eyebrow{font-size:.73rem;font-weight:790;letter-spacing:.08em;text-transform:uppercase;color:#476957;margin:0 0 .45rem}
 .bundle-primary h4{margin:0 0 .5rem;font-size:clamp(1.15rem,2vw,1.4rem);line-height:1.3}
