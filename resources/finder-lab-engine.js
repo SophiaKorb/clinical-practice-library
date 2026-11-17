@@ -11,6 +11,9 @@ var CONCEPTS=[
  {test:/\b(tantrum|tantrums|outburst|outbursts|explosive behavior|hitting during upset)\b/,terms:['child aggression','managing child behavior problems','when a young child has more feeling','supporting child self regulation'],label:'child behavior and regulation'},
  {test:/\b(school refusal|school avoidance|won.t go to school|school anxiety)\b/,terms:['school clinical anxiety','anxiety in children','school access','school support process','anxiety homeschool'],label:'school attendance, anxiety and access'},
  {test:/\b(child anxiety|anxious child|anxiety in children)\b/,terms:['anxiety in children','anxiety school clinical','anxiety homeschool','anxiety quick guide'],label:'child anxiety and school supports'},
+ {test:/\b(child communication|child not talking|child speech|communication with children)\b/,terms:['communication play regulation','when a young child has more feeling','communication supports toolkit'],label:'child communication and access'},
+ {test:/\b(bipolar sleep|sleep bipolar|sleep and mania)\b/,terms:['sleep loss activation','bipolar episode','psychosis bipolar longitudinal'],label:'sleep changes and bipolar differential'},
+ {test:/\b(parent behavior problems|parenting behavior problems|behavior problems at home)\b/,terms:['managing child behavior problems','child aggression','clear supported proactive parenting'],label:'parenting and child behavior'},
  {test:/\b(dissociation.*grounding|grounding.*dissociation|dissociating and grounding)\b/,terms:['grounding','dissociation','orientation time gaps'],label:'dissociation and grounding'},
  {test:/\b(daycare|day care|childcare|child care|preschool access)\b/,terms:['early intervention preschool','preschool access','positive parenting preschoolers','birth to five'],label:'early childhood and preschool access'},
  {test:/\b(task launch|cannot start|can.t start|getting started|start tasks|executive initiation)\b/,terms:['task launch','task starts','executive functioning','starting organizing tasks'],label:'starting tasks and executive functioning'},
@@ -133,8 +136,9 @@ function meta(r){
 function index(records){return records.map(meta);}
 function textFields(item){
  var r=item.original,tags=r.tags||{};
- var title=norm(r.title),url=norm((r.url||'').split('#')[0]),terms=norm(safeArray(r.searchTerms).join(' ')),
-   metadata=norm(Object.values(tags).flat().join(' '));
+ var canonical=s=>norm(s).split(' ').map(word).join(' ');
+ var title=canonical(r.title),url=canonical((r.url||'').split('#')[0]),terms=canonical(safeArray(r.searchTerms).join(' ')),
+   metadata=canonical(Object.values(tags).flat().join(' '));
  return {title:title,url:url,terms:terms,tags:metadata};
 }
 function directScore(item,q){
@@ -211,10 +215,10 @@ function search(items,state){
      score=h.direct.score*0.65;reason='Partial match';
    }
    // Explicit title/path relevance dominates; historical global priority only breaks near-ties.
-   if(score>0){
+   if(score>=(qTokens.length>1?30:1)){
      var isSpanish=/\/es\//.test(h.item.url)||/^(como|mi hijo|preparacion|ansiedad)/.test(norm(h.item.title));
      var spanishQuery=/[áéíóúñ¿¡]/i.test(state.q||'')||/\b(como|ayuda|hijo|hija|ansiedad|preparacion|barreras|apoyos)\b/.test(q);
-     var languageFit=isSpanish==spanishQuery?3:0;
+     var languageFit=isSpanish==spanishQuery?3:(isSpanish?-250:-60);
      hits.push({item:h.item,score:score+languageFit+Math.min(1,(h.item.original.priority||0)/1000),reason:reason});
    }
  }
