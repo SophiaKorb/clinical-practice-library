@@ -8,6 +8,8 @@
 'use strict';
 var STOP=new Set('a an and are at be can do for from help how i in is it me my of on or our the their to with what when where who will worried about need looking find please resources resource someone some working work'.split(' '));
 var CONCEPTS=[
+ {test:/\b(sensory overload|sensory overwhelm|overloaded by noise)\b/,terms:['sensory overload recovery plan','supporting child self regulation','communication play regulation'],label:'sensory overload and recovery',priority:45},
+ {test:/\b(refuses homework|homework refusal|struggles with homework|won t do homework|can t start homework)\b/,terms:['task launch map','executive functioning','learning instruction access','adhd barrier'],label:'homework access and task initiation'},
  {test:/\b(biting|bitten|bites classmates|hits classmates|kicking peers|throwing things)\b/,terms:['child aggression','managing child behavior problems','when a young child has more feeling'],label:'observable child behavior and support'},
  {test:/\b(picking on|bullied|bullying|being teased|excluded by peers)\b/,terms:['friendship peer safety','peer relationships bullying','youth school community access'],label:'peer safety and social conflict'},
  {test:/\b(won t enter school|wont enter school|refuses to go to school|scared to go to school|school avoidance)\b/,terms:['school clinical anxiety','anxiety in children','school access'],label:'anxiety and access around school attendance'},
@@ -25,7 +27,7 @@ var CONCEPTS=[
  {test:/\b(child communication|child not talking|child speech|communication with children)\b/,terms:['communication play regulation','when a young child has more feeling','communication supports toolkit'],label:'child communication and access'},
  {test:/\b(bipolar sleep|sleep bipolar|sleep and mania)\b/,terms:['sleep loss activation','bipolar episode','psychosis bipolar longitudinal'],label:'sleep changes and bipolar differential'},
  {test:/\b(parent behavior problems|parenting behavior problems|behavior problems at home)\b/,terms:['managing child behavior problems','child aggression','clear supported proactive parenting'],label:'parenting and child behavior'},
- {test:/\b(dissociation.*grounding|grounding.*dissociation|dissociating and grounding)\b/,terms:['grounding','dissociation','orientation time gaps'],label:'dissociation and grounding'},
+ {test:/\b(dissociation.*grounding|grounding.*dissociation|dissociating and grounding)\b/,terms:['grounding','dissociation','orientation time gaps'],label:'dissociation and grounding',priority:25},
  {test:/\b(daycare|day care|childcare|child care|preschool access)\b/,terms:['early intervention preschool','preschool access','positive parenting preschoolers','birth to five'],label:'early childhood and preschool access'},
  {test:/\b(task launch|cannot start|can.t start|can t get started|can t start|getting started|start tasks|executive initiation)\b/,terms:['task launch','task starts','executive functioning','starting organizing tasks'],label:'starting tasks and executive functioning'},
  {test:/\b(parents worried about meltdowns|parent worried about meltdowns)\b/,terms:['child aggression','when a young child has more feeling','managing child behavior','clear supported proactive parenting','communication play regulation'],label:'caregiver support for regulation'},
@@ -294,7 +296,7 @@ function search(items,state){
      var languageFit=intent.language==='es'?(isSpanish?250:-100):(isSpanish?-250:3);
      var audienceFit=intent.audience&&h.item.audience.includes(intent.audience)?12:0;
      var populationFit=intent.population&&h.item.population.includes(intent.population)?12:0;
-     var worksheetFit=intent.worksheet&&(h.item.type==='worksheet'||h.item.type==='education')?12:0;
+     var worksheetFit=intent.worksheet&&(h.item.type==='worksheet'||h.item.type==='education')?40:0;
      hits.push({item:h.item,score:score+languageFit+audienceFit+populationFit+worksheetFit+Math.min(1,(h.item.original.priority||0)/1000),reason:reason});
    }
  }
