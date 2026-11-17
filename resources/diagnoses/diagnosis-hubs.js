@@ -23,6 +23,7 @@ var subtitle={
  'Sleep conditions':'Sleep health, differential questions and functional supports',
  'Grief / bereavement':'Meaning, connection, loss and everyday functioning'
 };
+var comprehensiveGuideRoutes={"ADHD":"/resources/diagnoses/adult-adhd.html","Autism":"/resources/diagnoses/comprehensive/autism.html","Anxiety / OCD":"/resources/diagnoses/comprehensive/anxiety-ocd.html","Depression":"/resources/diagnoses/comprehensive/depression.html","Trauma / dissociation":"/resources/diagnoses/comprehensive/trauma-dissociation.html","Learning disorders":"/resources/diagnoses/comprehensive/learning-disorders.html","Psychosis / bipolar":"/resources/diagnoses/comprehensive/psychosis-bipolar.html","Substance use":"/resources/diagnoses/comprehensive/substance-use.html","Persistent conflict":"/resources/diagnoses/comprehensive/persistent-conflict.html","Eating disorders":"/resources/diagnoses/comprehensive/eating-disorders.html","Tic / repetitive behavior conditions":"/resources/diagnoses/comprehensive/tic-repetitive-behavior.html","Intellectual disability":"/resources/diagnoses/comprehensive/intellectual-disability.html","Sleep conditions":"/resources/diagnoses/comprehensive/sleep-conditions.html","Grief / bereavement":"/resources/diagnoses/comprehensive/grief-bereavement.html"};
 var extra={
  'ADHD':[
   ['/resources/diagnoses/adult-adhd.html','Adult ADHD: comprehensive clinical and practical guide','Assessment, treatment, daily living, relationships, accommodations and every relevant CPL tool'],
@@ -105,6 +106,7 @@ function renderSelected(){
  document.getElementById('adhd-focus').hidden=(selected!=='ADHD');
  document.title=selected+' — Full resource index | Clinical Practice Library';
  document.getElementById('topic-name').textContent=selected;
+ var depthLink=document.getElementById('topic-depth-link');if(depthLink){depthLink.href=comprehensiveGuideRoutes[selected]||'/resources/diagnoses/comprehensive/index.html';depthLink.textContent='Open '+selected+' clinical-depth guide and printable worksheet';}
  document.getElementById('topic-lede').textContent=subtitle[selected]||'Clinical topic resources';
  var direct=data.resources.filter(r=>(r.tags&&r.tags.diagnosis||[]).includes(selected));
  document.getElementById('topic-stat').textContent=direct.length+' directly indexed resources';
