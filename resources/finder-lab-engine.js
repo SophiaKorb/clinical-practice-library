@@ -253,7 +253,18 @@ function relatedScore(item,concepts){
  }
  return best;
 }
+function mentionsCommunityService(item,service){
+ // Search only the original listing text and curated terms, never infer actual intake eligibility.
+ if(!item.original.communityCollection)return false;
+ var words={housing:['housing','shelter','homeless'],employment:['employment','job','workforce','vocational'],foster:['foster'],parenting:['parenting','pregnant','pregnancy'],food:['food','meal','nutrition'],transportation:['transportation','transit','rides'],disability:['disability','disabled','autism','developmental']};
+ var options=words[service]||[];
+ var source=norm([item.original.title,item.original.description,safeArray(item.original.searchTerms).join(' ')].join(' '));
+ return options.some(function(word){return hasWord(source,word);});
+}
 function matchesFilters(item,state){
+ if(state.scope==='community'&&!item.original.communityCollection)return false;
+ if(state.scope==='noncommunity'&&item.original.communityCollection)return false;
+ if(state.service&&!mentionsCommunityService(item,state.service))return false;
  if(state.population && !item.population.includes(state.population))return false;
  if(state.need && item.type!==state.need)return false;
  if(state.audience && !item.audience.includes(state.audience))return false;
