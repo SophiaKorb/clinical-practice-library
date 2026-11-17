@@ -10,9 +10,9 @@ const original=JSON.parse(raw.replace(/^globalThis\.CPLFinderData\s*=\s*/,'').re
 const old=require('../resources/clinical-finder.js');
 const lab=require('../resources/finder-lab-engine.js');
 const indexed=lab.index(original.resources);
-assert.equal(original.resources.length,812);
-assert.equal(indexed.length,812);
-assert.equal(new Set(indexed.map(r=>r.url)).size,812);
+assert.equal(original.resources.length,813);
+assert.equal(indexed.length,813);
+assert.equal(new Set(indexed.map(r=>r.url)).size,813);
 assert.equal(original.resources.filter(r=>r.externalUrl).length,77);
 for(const item of indexed){
  assert.equal(typeof item.description,'string');
