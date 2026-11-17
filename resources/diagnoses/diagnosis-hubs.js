@@ -128,7 +128,7 @@ function renderAdhdTopicBundle(records){
  li.appendChild(intro);
  var sub=elem('div','bundle-companions'),label=elem('p','bundle-label','Choose a companion format');
  sub.appendChild(label);
- var links=elem('div','bundle-links');links.setAttribute('aria-label','Adult ADHD task-starts companion formats');
+ var links=elem('nav','bundle-links');links.setAttribute('aria-label','Adult ADHD task-starts companion formats');
  var formats=[
  ['care-partner.html','Care-partner guide'],['client-workbook.html','Client workbook'],
  ['formulation.html','Clinician formulation'],['case.html','Interactive case practice'],
