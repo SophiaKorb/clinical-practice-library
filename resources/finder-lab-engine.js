@@ -8,7 +8,7 @@
 'use strict';
 var STOP=new Set('a an and are at be can do for from help how i in is it me my of on or our the their to with what when where who will worried about need looking find please resources resource someone some working work'.split(' '));
 var CONCEPTS=[
- {test:/\b(spanish|espanol)\b.*\b(autism|autistic|family)\b|\b(autism|autistic|family)\b.*\b(spanish|espanol)\b/,
+ {test:/\b(spanish|espanol)\b.*\b(autism|autistic)\b|\b(autism|autistic)\b.*\b(spanish|espanol)\b/,
    terms:['autismo guia rapida familias','conducta ninos autistas'],label:'Spanish autism and family education',priority:150},
  {test:/\b(school attendance anxiety|anxiety.*school attendance|school anxiety intervention)\b/,
    terms:['anxiety barrier to support clinical','anxiety homeschool barrier','anxiety in children'],label:'school anxiety and attendance',priority:55},
