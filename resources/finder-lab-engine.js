@@ -10,6 +10,7 @@ var STOP=new Set('a an and are at be can do for from help how i in is it me my o
 var CONCEPTS=[
  {test:/\b(tantrum|tantrums|outburst|outbursts|explosive behavior|hitting during upset)\b/,terms:['child aggression','managing child behavior problems','when a young child has more feeling','supporting child self regulation'],label:'child behavior and regulation'},
  {test:/\b(school refusal|school avoidance|won.t go to school|school anxiety)\b/,terms:['school clinical anxiety','anxiety in children','school access','school support process','anxiety homeschool'],label:'school attendance, anxiety and access'},
+ {test:/\b(child anxiety|anxious child|anxiety in children)\b/,terms:['anxiety in children','anxiety school clinical','anxiety homeschool','anxiety quick guide'],label:'child anxiety and school supports'},
  {test:/\b(dissociation.*grounding|grounding.*dissociation|dissociating and grounding)\b/,terms:['grounding','dissociation','orientation time gaps'],label:'dissociation and grounding'},
  {test:/\b(daycare|day care|childcare|child care|preschool access)\b/,terms:['early intervention preschool','preschool access','positive parenting preschoolers','birth to five'],label:'early childhood and preschool access'},
  {test:/\b(task launch|cannot start|can.t start|getting started|start tasks|executive initiation)\b/,terms:['task launch','task starts','executive functioning','starting organizing tasks'],label:'starting tasks and executive functioning'},
@@ -102,7 +103,8 @@ function populationFor(r){
 }
 function familyFor(r){
  var match=(r.url||'').match(/^\/resources\/clinical-topics\/([^/]+)\//);
- return match?'clinical-topic:'+match[1]:r.url;
+ var pdf=(r.url||'').match(/^\/resources\/downloads\/topic-(.+)\.pdf$/);
+ return match?'clinical-topic:'+match[1]:pdf?'clinical-topic:'+pdf[1]:r.url;
 }
 function describe(r,type){
  if(DESCRIPTIONS[r.url])return DESCRIPTIONS[r.url];
@@ -202,13 +204,19 @@ function search(items,state){
    if(!qTokens.length){score=Math.min(10,(h.item.original.priority||0)/10);reason='Browse all';}
    else if(h.direct.score>0 && (qTokens.length===1||h.direct.coverage>=0.99)){
      score=h.direct.score;reason=h.direct.reason;
+     if(h.related>0 && score<10+h.related){score=10+h.related;reason='Related concept: '+concepts.map(c=>c.label).join('; ');}
    }else if(h.related>0 && (!minDirect || qTokens.length>1)){
      score=10+h.related;reason='Related concept: '+concepts.map(c=>c.label).join('; ');
    }else if(qTokens.length>2 && h.direct.coverage>=0.67 && !minDirect){
      score=h.direct.score*0.65;reason='Partial match';
    }
    // Explicit title/path relevance dominates; historical global priority only breaks near-ties.
-   if(score>0)hits.push({item:h.item,score:score+Math.min(1,(h.item.original.priority||0)/1000),reason:reason});
+   if(score>0){
+     var isSpanish=/\/es\//.test(h.item.url)||/^(como|mi hijo|preparacion|ansiedad)/.test(norm(h.item.title));
+     var spanishQuery=/[áéíóúñ¿¡]/i.test(state.q||'')||/\b(como|ayuda|hijo|hija|ansiedad|preparacion|barreras|apoyos)\b/.test(q);
+     var languageFit=isSpanish==spanishQuery?3:0;
+     hits.push({item:h.item,score:score+languageFit+Math.min(1,(h.item.original.priority||0)/1000),reason:reason});
+   }
  }
  hits.sort((a,b)=>b.score-a.score||a.item.title.localeCompare(b.item.title));
  // For no direct match, no false impression that a synonym is an exact result.
