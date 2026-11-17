@@ -16,7 +16,10 @@ assert.equal(additions.length,31,'Eight core, sixteen adult case-management, and
 assert.equal(data.resources.length,646,'615 frozen plus 31 supplemental ADHD records');
 assert.equal(JSON.stringify(data.resources.slice(0,615)),before,'Original published records must remain in order and unchanged');
 for(const r of additions){
- assert(r.tags.diagnosis.includes('ADHD')&&r.tags.stage.includes('Adult'),'Incorrect ADHD/age facet: '+r.url);
+ assert(r.tags.diagnosis.includes('ADHD'),'Incorrect diagnosis facet: '+r.url);
+ const youth=r.url.includes('/case-management/youth-');
+ assert(r.tags.stage.includes(youth?'School age / adolescence':'Adult'),'Incorrect age facet: '+r.url);
+ if(youth)assert(!r.tags.stage.includes('Adult'),'Youth-only resource must not appear as an adult-facing page: '+r.url);
  assert(r.tags.role.length&&r.tags.task.length,'Missing audience/task: '+r.url);
  assert(fs.existsSync(path.join(root,r.url.slice(1))),'Missing indexed file: '+r.url);
 }
