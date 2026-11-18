@@ -121,10 +121,21 @@ const widths = [320, 390, 768, 1280];
             choices: document.querySelectorAll('.tracks button[data-track]').length,
             assignmentLink: [...document.querySelectorAll('a[href]')].some(a =>
               a.getAttribute('href')==='/resources/therapy/clinical-intern-learning-hub.html#assignments'),
-            trainingLabel: !![...document.querySelectorAll('h2')].find(h=>h.textContent.includes('Choose a skill to practice'))
+            trainingLabel: !![...document.querySelectorAll('h2')].find(h=>h.textContent.includes('Choose a skill to practice')),
+            actionLabels:[...document.querySelectorAll('.tracks button[data-track]')].map(b=>b.firstChild?.textContent.trim()),
+            instructions:!!document.querySelector('#track-practice')?.textContent.trim()
           }));
-          if (learning.choices!==4 || !learning.assignmentLink || !learning.trainingLabel)
+          const expectedLabels=['Describe observable behavior','Rehearse a supportive conversation','Compare clinical explanations','Plan and review one support'];
+          if (learning.choices!==4 || !learning.assignmentLink || !learning.trainingLabel ||
+              !learning.instructions || JSON.stringify(learning.actionLabels)!==JSON.stringify(expectedLabels))
             failures.push('Workforce learning-to-assignments journey at '+width+'px: '+JSON.stringify(learning));
+          await page.locator('button[data-track="explore"]').click();
+          const trackState=await page.evaluate(()=>({
+            selected:document.querySelector('button[data-track="explore"]')?.getAttribute('aria-pressed'),
+            practice:document.querySelector('#track-practice')?.textContent
+          }));
+          if(trackState.selected!=='true'||!trackState.practice?.includes('two plausible explanations'))
+            failures.push('Interactive clinical explanation practice not updated at '+width+'px: '+JSON.stringify(trackState));
         }
         if (path === '/resources/training/workforce-learning-center.html') {
           const toAssignments=page.locator('a[href="/resources/therapy/clinical-intern-learning-hub.html#assignments"]').first();
