@@ -26,6 +26,13 @@ for(const [html,entries,type] of [[familyHtml,family,'family'],[tayHtml,tay,'tay
   assert(html.includes('id="guide-query"')&&html.includes('id="guide-status"')&&html.includes('role="status"'),'Client-only guide filtering and announcements missing');
   assert(html.includes('@media print')&&html.includes('@media(max-width:520px)'),'Print/small-screen layout missing');
   assert(html.includes('id="guide-print"')&&html.includes("window.print()"),'Online guide lacks print/save PDF action');
+  assert(html.includes('Print all web listings')&&html.includes('shorter web summaries')&&html.includes('bookmarks and document tags'),'The web print action must not be confused with the approved source PDF');
+  assert(html.includes('.section[hidden]{display:block!important}')&&html.includes('.entry[hidden]{display:block!important}'),'Filtered listing must not disappear from full-guide print');
+  assert(html.includes('.section{break-before:auto;margin-bottom:18px}')&&html.includes('.section-head{break-inside:avoid;break-after:avoid}'),'Print layout must not force a blank partial cover page and must keep headings with their section');
+  assert(html.includes('.entries{display:block;columns:initial}.entry{display:block;width:100%;margin:0 0 10px}'),'Print listing content must allow pagination without unbreakable two-column blocks');
+  assert(html.includes('link.parentElement.hidden=')&&html.includes('No matches. Try a different search'),'Filtered navigation and no-match instruction missing');
+  assert(html.includes('localCount===0')&&html.includes('LGBTQ+ supplemental resources shown'),'Local supplementary listings not included in guide filtering and status');
+  assert(html.includes('.lgbtq-extra[hidden]{display:block!important}')&&html.includes('.lgbtq-listing[hidden]{display:list-item!important}'),'Local supplementary listings excluded from full-guide printing');
   assert(!/<iframe|<form[^>]*action=|fetch\(/i.test(html),'Unexpected external processing or embedded content');
 }
 for(let n=1;n<=170;n++)assert(familyHtml.includes('id="listing-'+n+'"'),'Missing numbered family entry '+n);
