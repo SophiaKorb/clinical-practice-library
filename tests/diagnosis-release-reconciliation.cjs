@@ -23,8 +23,8 @@ assert(topics.includes('All diagnosis and clinical-topic resource indexes'),'Cli
 assert(home.includes('href="/resources/diagnoses/adult-adhd.html"'),'Substantial ADHD guide disconnected');
 assert(index.includes('not automatically specific to this diagnosis'),'Related materials incorrectly described as ADHD-only on other diagnosis pages');
 assert(!index.includes('not automatically ADHD-specific'),'Wrong diagnosis scope text leaked into general index');
-assert(index.includes('all resources with the selected diagnosis tag')||index.includes('all materials with the selected diagnosis tag'),
- 'Must clearly limit complete index to catalog-tagged resources');
+assert(index.includes('Being listed does not mean a resource is clinically suitable for everyone'),
+ 'Reader-facing index must retain a meaningful clinical-suitability caution without internal catalog mechanics');
 assert(originalFinder.includes('id="lab-q"'),'Legacy live finder is unexpectedly replaced');
 for(const [topic,count] of [['ADHD',19],['Autism',29],['Anxiety / OCD',41],['Depression',17],['Trauma / dissociation',43],
  ['Learning disorders',26],['Psychosis / bipolar',23],['Substance use',10],['Persistent conflict',21],['Eating disorders',17],
