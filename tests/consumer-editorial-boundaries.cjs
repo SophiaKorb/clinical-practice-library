@@ -26,6 +26,8 @@ const redFlags=[
  /\bdraft PR #\d+\b/i,
  /\bDraft for qualified clinical review\b/i,
  /\bthis review branch\b/i,
+ /\bqualified (?:clinical )?review pending\b/i,
+ /\baccessibility review pending\b/i,
  /\b(?:clinical, privacy, accessibility, publication and rights gates remain open|publication approvals remain open|professional educational, clinical, rights, and accessibility review pending)\b/i,
  /\b(?:remain subject to clinical, rights, accessibility and publication review|publication and rights gates remain open)\b/i,
  /\bBrowser PDF output has not been tagged for PDF\/UA\b/i,
@@ -70,7 +72,7 @@ assert(qaPage.includes('<h1>About these resources</h1>')&&!qaPage.includes('Octo
 const guideNames=['anxiety-ocd','autism','depression','dyscalculia','dysgraphia','dyslexia','eating-disorders','grief-bereavement','intellectual-disability','learning-disorders','persistent-conflict','psychosis-bipolar','sleep-conditions','substance-use','tic-repetitive-behavior','trauma-dissociation'];
 for(const slug of guideNames){
  const guide=fs.readFileSync(path.join(root,'resources/diagnoses/comprehensive',slug+'.html'),'utf8');
- assert(!/gates remain open|publication approvals remain open|publication review|review pending|PDF\/UA/i.test(strip(guide)),'Internal approval or PDF/UA jargon in public guide '+slug);
+ assert(!/gates remain open|publication approvals remain open|publication review|review pending|qualified (?:clinical )?review|PDF\/UA/i.test(strip(guide)),'Internal approval or PDF/UA jargon in public guide '+slug);
  assert(/2026/.test(guide),'Source review date lost in '+slug);
 }
 for(const slug of ['learning-disorders','persistent-conflict','psychosis-bipolar','substance-use']){
