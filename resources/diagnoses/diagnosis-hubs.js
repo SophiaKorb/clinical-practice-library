@@ -174,7 +174,7 @@ function renderSelected(){
  }
  var supplemental=document.getElementById('related-section'),list=document.getElementById('related-list');
  var directUrls=new Set(direct.map(r=>r.url)),extras=(extra[selected]||[]).filter(x=>!directUrls.has(x[0]));
- if(caseManagerGuideRoutes[selected])extras.unshift([caseManagerGuideRoutes[selected],'Practical case-management support sheet','Practical service navigation and support planning; use according to the person's needs']);
+ if(caseManagerGuideRoutes[selected])extras.unshift([caseManagerGuideRoutes[selected],'Practical case-management support sheet','Practical service navigation and support planning, chosen with the individual']);
  if(extras.length){
   for(var [url,title,reason] of extras){
    var li=elem('li');li.appendChild(link(url,title));li.appendChild(elem('span',null,reason));list.appendChild(li);
