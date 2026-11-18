@@ -39,6 +39,7 @@ jobs:
       - run: node tests/diagnosis-release-reconciliation.cjs
       - run: node tests/expanded-external-resources.cjs
       - run: node tests/community-guide-individual-index.cjs
+      - run: node tests/community-guides-online.cjs
       - run: node tests/clinical-resources-qa.cjs
       - run: node tests/thermometer-levels.cjs
       - run: node tests/state-iep-guides.cjs

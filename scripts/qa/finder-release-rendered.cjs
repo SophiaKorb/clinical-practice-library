@@ -3,6 +3,7 @@
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const path=require('node:path');
+const crypto=require('node:crypto');
 const {chromium}=require('playwright');
 const base=process.env.CPL_QA_ORIGIN||'http://127.0.0.1:8765';
 const dir=path.join(process.cwd(),'qa-artifacts/pr43/finder-release');
@@ -85,6 +86,49 @@ fs.mkdirSync(dir,{recursive:true});
    await page.goto(base+'/resources/clinical-resource-finder-classic.html?q=IEP',{waitUntil:'networkidle'});
    await page.waitForSelector('.finder-card');
    assert(await page.locator('.finder-card').count()>0,'Preserved classic finder not functional');
+   // Source-preserving online guide editions: complete, navigable, and functional.
+   for(const guide of [
+    {slug:'family-guide',count:170,query:'Parent Aid',target:'listing-2'},
+    {slug:'transition-age-guide',count:28,query:'housing',target:'iam-you-360'}
+   ]){
+    const webGuide=base+'/resources/community/'+guide.slug+'.html';
+    const online=await page.goto(webGuide,{waitUntil:'networkidle'});
+    assert.equal(online.status(),200,'Online community guide route is unavailable: '+guide.slug);
+    const approvedPdf=guide.slug==='family-guide'
+     ?{path:'/resources/community/original-pdfs/Tucson_Regional_Family_Resource_Guide_QA_Revised_2026.pdf',bytes:779066,sha:'eae42c74b0870d0e4faf389e44b56b4e0104866f08389c42f279b43dd0a6f713'}
+     :{path:'/resources/community/original-pdfs/Southern_Arizona_Youth_Transition_Resources_2026.pdf',bytes:218122,sha:'c051a12c8a5a8f7385260c64a5a53623a54e9480d0ee5f53518b1aeb04537091'};
+    assert(await page.locator('a[href="'+approvedPdf.path+'"]').count()>0,'Approved PDF missing from guide: '+guide.slug);
+    if(width===1280){
+      const pdfDownload=await page.request.get(base+approvedPdf.path);
+      assert.equal(pdfDownload.status(),200,'Approved PDF unavailable over public-shaped route: '+approvedPdf.path);
+      const pdfBytes=await pdfDownload.body();
+      assert.equal(pdfBytes.length,approvedPdf.bytes,'PDF bytes truncated over HTTP: '+guide.slug);
+      assert.equal(crypto.createHash('sha256').update(pdfBytes).digest('hex'),approvedPdf.sha,'PDF HTTP bytes differ from original: '+guide.slug);
+      assert(/pdf/i.test(pdfDownload.headers()['content-type']||''),'PDF MIME type incorrect: '+guide.slug);
+    }
+    assert.equal(await page.locator('.entry').count(),guide.count,'Online community guide incomplete: '+guide.slug);
+    assert(await page.locator('#'+guide.target).count()>0,'Direct entry anchor missing from online guide');
+    assert(await page.locator('.contents a').count()>0,'Accessible section navigation missing');
+    const guideOverflow=await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth+1);
+    assert(!guideOverflow,'Online community guide overflows at '+width+': '+guide.slug);
+    await page.locator('#guide-query').fill(guide.query);
+    const shown=await page.locator('.entry:visible').count();
+    assert(shown>=1&&shown<guide.count,'Online guide client-side search failed: '+guide.slug);
+    assert((await page.locator('#guide-status').innerText()).includes('of '+guide.count),'Guide status not announced');
+    await page.locator('#guide-clear').click();
+    assert.equal(await page.locator('.entry:visible').count(),guide.count,'Guide reset did not restore full source set');
+    if(width===390){
+      await page.addScriptTag({path:require.resolve('axe-core')});
+      const audit=await page.evaluate(async()=>await window.axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa']}}));
+      assert.equal(audit.violations.length,0,'Online guide axe violations: '+guide.slug+' '+JSON.stringify(audit.violations.map(v=>v.id)));
+    }
+    if(width===1280){
+      await page.screenshot({path:path.join(dir,'community-'+guide.slug+'-1280.png'),fullPage:false});
+      const webPdf=await page.pdf({format:'Letter',printBackground:false,pageRanges:'1-2'});
+      assert(webPdf.length>5000,'Guide print/PDF output unexpectedly empty: '+guide.slug);
+      fs.writeFileSync(path.join(dir,'community-'+guide.slug+'-print-sample.pdf'),webPdf);
+    }
+   }
    await page.goto(base+'/resources/clinical-resource-finder.html',{waitUntil:'networkidle'});
    await page.locator('#lab-q').focus();
    assert.equal(await page.evaluate(()=>document.activeElement.id),'lab-q','Search input focus missing');
