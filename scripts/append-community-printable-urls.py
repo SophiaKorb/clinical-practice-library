@@ -72,7 +72,7 @@ def build(which):
  base=fitz.open(original)
  rows,click_count=gather(base)
  assert len(rows)>= (35 if which=='youth' else 120)
- prefix_pages=7 if which=='youth' else 6
+ prefix_pages=json.loads((ROOT/(which+'-qa.json')).read_text())['supplement_pages']
  def page_ref(i):
   return f'Newer section p. {i+1}' if i<prefix_pages else f'Original October p. {i-prefix_pages+1}'
  def footer(c,d):
