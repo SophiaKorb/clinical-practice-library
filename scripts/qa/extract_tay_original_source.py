@@ -6,7 +6,7 @@ exception explained in the builder. Retains complete extraction audit evidence.
 """
 from pathlib import Path
 import fitz,re,json,os
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=Path(__file__).resolve().parents[2]
 SOURCE=ROOT/'resources/community/original-pdfs/Southern_Arizona_Youth_Transition_Resources_2026.pdf'
 OUT=ROOT/'qa-artifacts/community-tay-redesign'
 OUT.mkdir(parents=True,exist_ok=True)
