@@ -115,8 +115,31 @@ fs.mkdirSync(dir,{recursive:true});
     const shown=await page.locator('.entry:visible').count();
     assert(shown>=1&&shown<guide.count,'Online guide client-side search failed: '+guide.slug);
     assert((await page.locator('#guide-status').innerText()).includes('of '+guide.count),'Guide status not announced');
+    const sectionLinkCount=await page.locator('.contents li').count();
+    const visibleSectionLinks=await page.locator('.contents li:visible').count();
+    assert(visibleSectionLinks>0&&visibleSectionLinks<sectionLinkCount,'Search navigation still links to hidden sections: '+guide.slug);
+    if(width<1280)await page.screenshot({path:path.join(dir,'community-'+guide.slug+'-filtered-'+width+'.png'),fullPage:false});
+    await page.emulateMedia({media:'print'});
+    const printedEntries=await page.locator('.entry').evaluateAll(nodes=>nodes.filter(node=>
+      getComputedStyle(node).display!=='none'&&getComputedStyle(node.closest('.section')).display!=='none'
+    ).length);
+    assert.equal(printedEntries,guide.count,'Printing a filtered view omitted guide listings: '+guide.slug);
+    assert.equal(await page.locator('.search-panel').evaluate(el=>getComputedStyle(el).display),'none','Print CSS did not hide the search panel: '+guide.slug);
+    assert.equal(await page.locator('.contents').evaluate(el=>getComputedStyle(el).display),'none','Print CSS did not hide navigation: '+guide.slug);
+    assert.equal(await page.locator('.section').first().evaluate(el=>getComputedStyle(el).breakBefore),'auto','Print CSS forces wasteful section page breaks: '+guide.slug);
+    assert.equal(await page.locator('.section-head').first().evaluate(el=>getComputedStyle(el).breakAfter),'avoid','Print section heading could become orphaned: '+guide.slug);
+    assert.equal(await page.locator('.entries').first().evaluate(el=>getComputedStyle(el).columnCount),'auto','Print CSS leaves entries in an unbreakable two-column box: '+guide.slug);
+    assert.equal(await page.locator('.entry').first().evaluate(el=>getComputedStyle(el).display),'block','Print CSS leaves entries in unbreakable inline-block layout: '+guide.slug);
+    await page.emulateMedia({media:'screen'});
+    assert.equal(await page.locator('.entry:visible').count(),shown,'Screen filter lost after print: '+guide.slug);
+    await page.locator('#guide-query').fill('unlikelynonexistentguidequeryxyz');
+    assert.equal(await page.locator('.entry:visible').count(),0,'No-match query still shows entries: '+guide.slug);
+    assert((await page.locator('#guide-status').innerText()).includes('No matches'),'No-match guidance is missing: '+guide.slug);
+
     await page.locator('#guide-clear').click();
     assert.equal(await page.locator('.entry:visible').count(),guide.count,'Guide reset did not restore full source set');
+    // Clear the explicit screen-media emulation: page.pdf() must use actual print CSS.
+    await page.emulateMedia({media:null});
     if(width===390){
       await page.addScriptTag({path:require.resolve('axe-core')});
       const audit=await page.evaluate(async()=>await window.axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa']}}));
