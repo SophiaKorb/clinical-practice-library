@@ -29,6 +29,7 @@ for(const [html,entries,type] of [[familyHtml,family,'family'],[tayHtml,tay,'tay
   assert(html.includes('Print all web listings')&&html.includes('shorter web summaries')&&html.includes('bookmarks and document tags'),'The web print action must not be confused with the approved source PDF');
   assert(html.includes('.section[hidden]{display:block!important}')&&html.includes('.entry[hidden]{display:inline-block!important}'),'Filtered listing must not disappear from full-guide print');
   assert(html.includes('.section{break-before:auto;margin-bottom:18px}')&&html.includes('.section-head{break-inside:avoid;break-after:avoid}'),'Print layout must not force a blank partial cover page and must keep headings with their section');
+  assert(html.includes('.entries{display:block;columns:initial}.entry{display:block;width:100%;margin:0 0 10px}'),'Print listing content must allow pagination without unbreakable two-column blocks');
   assert(html.includes('link.parentElement.hidden=')&&html.includes('No matches. Try a different search'),'Filtered navigation and no-match instruction missing');
   assert(!/<iframe|<form[^>]*action=|fetch\(/i.test(html),'Unexpected external processing or embedded content');
 }
