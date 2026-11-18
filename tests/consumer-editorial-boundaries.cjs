@@ -45,6 +45,7 @@ assert(diagnosisIndex.includes('Being listed does not mean a resource is clinica
 assert(compIndex.includes('not validated diagnostic instruments or stand-alone treatment protocols'));
 assert(hubJS.includes("data.resources.filter(")&&hubJS.includes("r.tags&&r.tags.diagnosis"),'Preserve fully sourced dynamic topic filter');
 assert(hubJS.includes("direct.length+' resources for this topic'"),'Dynamic counter still exposes catalog metadata');
+assert.equal((hubJS.match(/More topic resources/g)||[]).length,2,'Rendered resource group label must match its grouping-order key');
 assert(qaPage.includes('name="robots" content="noindex,nofollow"'));
 assert(!topicIndex.includes('href="/resources/qa-status.html"'),'Internal QA link in reader-facing topic footer');
 const firstSiteFlags=audit.filter(x=>!x.file.startsWith('resources/diagnoses/')&&x.file!=='resources/clinical-topics/index.html');
