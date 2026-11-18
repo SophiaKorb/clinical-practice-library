@@ -26,6 +26,13 @@ for(const [html,entries,type] of [[familyHtml,family,'family'],[tayHtml,tay,'tay
   assert(html.includes('id="guide-query"')&&html.includes('id="guide-status"')&&html.includes('role="status"'),'Client-only guide filtering and announcements missing');
   assert(html.includes('@media print')&&html.includes('@media(max-width:520px)'),'Print/small-screen layout missing');
   assert(html.includes('id="guide-print"')&&html.includes("window.print()"),'Online guide lacks print/save PDF action');
+  assert(html.includes('Print all web listings')&&html.includes('shorter web summaries')&&html.includes('bookmarks and document tags'),'The web print action must not be confused with the approved source PDF');
+  assert(html.includes('.section[hidden]{display:block!important}')&&html.includes('.entry[hidden]{display:block!important}'),'Filtered listing must not disappear from full-guide print');
+  assert(html.includes('.section{break-before:auto;margin-bottom:18px}')&&html.includes('.section-head{break-inside:avoid;break-after:avoid}'),'Print layout must not force a blank partial cover page and must keep headings with their section');
+  assert(html.includes('.entries{display:block;columns:initial}.entry{display:block;width:100%;margin:0 0 10px}'),'Print listing content must allow pagination without unbreakable two-column blocks');
+  assert(html.includes('link.parentElement.hidden=')&&html.includes('No matches. Try a different search'),'Filtered navigation and no-match instruction missing');
+  assert(html.includes('localCount===0')&&html.includes('LGBTQ+ supplemental resources shown'),'Local supplementary listings not included in guide filtering and status');
+  assert(html.includes('.lgbtq-extra[hidden]{display:block!important}')&&html.includes('.lgbtq-listing[hidden]{display:list-item!important}'),'Local supplementary listings excluded from full-guide printing');
   assert(!/<iframe|<form[^>]*action=|fetch\(/i.test(html),'Unexpected external processing or embedded content');
 }
 for(let n=1;n<=170;n++)assert(familyHtml.includes('id="listing-'+n+'"'),'Missing numbered family entry '+n);
@@ -35,6 +42,27 @@ for(const p of ['resources/community/index.html','index.html','resources/start-h
  const s=read(p);
  for(const name of ['family-guide.html','transition-age-guide.html'])assert(s.includes(name),'No visible route to '+name+' in '+p);
 }
+// Local LGBTQ+ supplemental listings are visible INSIDE each online community guide, not just on the hub.
+// They must not change any of the 170/27 original numbered entries, 28 TAY index records,
+// their search facets or the byte-identical October PDF publications.
+const localIds=['eon','pride','fluxx','stars','stars-name','stars-update','fluxx-clinic','fluxx-health'];
+const localHub=read('resources/community/index.html');
+for(const [html,type] of [[familyHtml,'family'],[tayHtml,'transition-age']]){
+ assert(html.includes('id="lgbtq-community-resources"'),'No local LGBTQ section in '+type);
+ assert(html.includes('href="#lgbtq-community-resources"'),'Local LGBTQ supplement missing TOC or top navigation in '+type);
+ assert(html.includes('not part of the original October 25, 2026 numbered guide or approved PDF'),'Original/supplement distinction missing '+type);
+ assert(html.includes('href="/resources/community/online-lgbtq-resources.html"'),'Online/national LGBTQ collection missing '+type);
+ assert.equal((html.match(/<li class="lgbtq-listing"/g)||[]).length,localIds.length,'Wrong count of local LGBTQ resource additions '+type);
+ for(const id of localIds){
+  const source=localHub.match(new RegExp('<article class="card" id="'+id+'">([\\s\\S]*?)<\\/article>'));
+  assert(source,'Original community hub card missing '+id);
+  const url=source[1].match(/<a href="(https?:[^"]+)"/)?.[1];
+  assert(url&&html.includes('href="'+url+'"'),'Missing original provider link for '+id+' in '+type);
+  assert(html.includes('id="local-lgbtq-'+id+'"'),'Missing direct heading anchor '+id+' in '+type);
+  assert(html.includes('href="/resources/community/index.html#'+id+'"'),'Missing CPL contextual notes for '+id+' in '+type);
+ }
+}
+
 // User-approved final print+digital PDFs are published byte-identically to canonical Drive sources.
 // They supersede the older archived 38-page/9-page PDF snapshots, not the source-text companions.
 const crypto=require('node:crypto');
