@@ -9,7 +9,7 @@ function walk(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>{
  if(e.isDirectory())return walk(p);
  return e.isFile()&&p.endsWith('.html')?[p]:[];
 });}
-const files=[path.join(root,'index.html'),path.join(root,'library.html'),...walk(path.join(root,'resources')),...walk(path.join(root,'guides'))];
+const files=[path.join(root,'index.html'),path.join(root,'library.html'),...walk(path.join(root,'resources')),...walk(path.join(root,'guides')),...walk(path.join(root,'legacy'))];
 const strip=s=>s.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi,' ')
  .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi,' ')
  .replace(/<!--[^]*?-->/g,' ').replace(/<[^>]*>/g,' ').replace(/\s+/g,' ');
