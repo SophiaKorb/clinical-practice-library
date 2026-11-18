@@ -152,7 +152,7 @@ fs.mkdirSync(dir,{recursive:true});
     assert.equal(await page.locator('.entry:visible').count(),guide.count,'Guide reset did not restore full source set');
     // Clear the explicit screen-media emulation: page.pdf() must use actual print CSS.
     await page.emulateMedia({media:null});
-    if(width===390){
+    if(width===390||width===640){
       await page.addScriptTag({path:require.resolve('axe-core')});
       const audit=await page.evaluate(async()=>await window.axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa']}}));
       assert.equal(audit.violations.length,0,'Online guide axe violations: '+guide.slug+' '+JSON.stringify(audit.violations.map(v=>v.id)));
