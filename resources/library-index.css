@@ -352,3 +352,12 @@
   .cpl-static-nav__links a:nth-child(5),
   .cpl-static-nav__links a:nth-child(6) {display:none!important}
 }
+
+
+/* Keep the mobile More menu's final Español and diagnosis entries discoverable
+   at standard phone heights; short viewports still scroll inside the menu. */
+@media screen and (max-width:600px) {
+  body .cpl-static-nav .cpl-static-nav__menu {
+    max-height:min(78vh,620px)!important;
+  }
+}
