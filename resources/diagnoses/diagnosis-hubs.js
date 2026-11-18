@@ -73,18 +73,18 @@ function groupFor(r){
  if(u.includes('/school/')||u.startsWith('/guides/'))return 'School, family and learning';
  if(u.includes('/assessment/')||u.includes('/clinical-depth/')||u.includes('/therapy/'))return 'Assessment and professional practice';
  if(r.externalUrl||u.includes('#ext-'))return 'External and publisher references';
- return 'Other directly indexed resources';
+ return 'More topic resources';
 }
-var groupsOrder=['Clinical topic collections and formats','Assessment and professional practice','Worksheets, handouts and PDFs','School, family and learning','External and publisher references','Other directly indexed resources'];
+var groupsOrder=['Clinical topic collections and formats','Assessment and professional practice','Worksheets, handouts and PDFs','School, family and learning','External and publisher references','More topic resources'];
 function renderTopics(){
  var grid=document.getElementById('topic-grid');if(!grid)return;
  var select=document.getElementById('topic-select');
  for(var t of known){
   var count=data.resources.filter(r=>(r.tags&&r.tags.diagnosis||[]).includes(t)).length;
-  var opt=elem('option',null,t+' · '+count+' indexed');opt.value=t;select.appendChild(opt);
+  var opt=elem('option',null,t+' · '+count+' resources');opt.value=t;select.appendChild(opt);
   var card=elem('article','topic-choice'),h=elem('h3');
   h.appendChild(link('?topic='+encodeURIComponent(t),t));
-  card.appendChild(h);card.appendChild(elem('p',null,count+' directly tagged resources'));
+  card.appendChild(h);card.appendChild(elem('p',null,count+' resources'));
   grid.appendChild(card);
  }
  select.value=selected;
@@ -148,12 +148,12 @@ function renderSelected(){
  if(!selected){shown.hidden=true;overview.hidden=false;return;}
  shown.hidden=false;overview.hidden=true;
  document.getElementById('adhd-focus').hidden=(selected!=='ADHD');
- document.title=selected+' — Full resource index | Clinical Practice Library';
+ document.title=selected+' — Topic resources | Clinical Practice Library';
  document.getElementById('topic-name').textContent=selected;
  var depthLink=document.getElementById('topic-depth-link');if(depthLink){depthLink.href=comprehensiveGuideRoutes[selected]||'/resources/diagnoses/comprehensive/index.html';depthLink.textContent='Open '+selected+' clinical-depth guide and printable worksheet';}
  document.getElementById('topic-lede').textContent=subtitle[selected]||'Clinical topic resources';
  var direct=data.resources.filter(r=>(r.tags&&r.tags.diagnosis||[]).includes(selected));
- document.getElementById('topic-stat').textContent=direct.length+' directly indexed resources';
+ document.getElementById('topic-stat').textContent=direct.length+' resources for this topic';
  var byGroup=new Map(),bundleRecords=[];
  for(var r of direct){
   if(selected==='ADHD'&&isAdhdTopicBundleRecord(r)){bundleRecords.push(r);continue;}
@@ -174,7 +174,7 @@ function renderSelected(){
  }
  var supplemental=document.getElementById('related-section'),list=document.getElementById('related-list');
  var directUrls=new Set(direct.map(r=>r.url)),extras=(extra[selected]||[]).filter(x=>!directUrls.has(x[0]));
- if(caseManagerGuideRoutes[selected])extras.unshift([caseManagerGuideRoutes[selected],'Practical case-management support sheet','Client-centered access and service coordination; not an indexed treatment endorsement']);
+ if(caseManagerGuideRoutes[selected])extras.unshift([caseManagerGuideRoutes[selected],'Practical case-management support sheet','Practical service navigation and support planning, chosen with the individual']);
  if(extras.length){
   for(var [url,title,reason] of extras){
    var li=elem('li');li.appendChild(link(url,title));li.appendChild(elem('span',null,reason));list.appendChild(li);
