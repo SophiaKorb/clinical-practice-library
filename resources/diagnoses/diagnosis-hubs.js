@@ -75,7 +75,7 @@ function groupFor(r){
  if(r.externalUrl||u.includes('#ext-'))return 'External and publisher references';
  return 'More topic resources';
 }
-var groupsOrder=['Clinical topic collections and formats','Assessment and professional practice','Worksheets, handouts and PDFs','School, family and learning','External and publisher references','Other directly indexed resources'];
+var groupsOrder=['Clinical topic collections and formats','Assessment and professional practice','Worksheets, handouts and PDFs','School, family and learning','External and publisher references','More topic resources'];
 function renderTopics(){
  var grid=document.getElementById('topic-grid');if(!grid)return;
  var select=document.getElementById('topic-select');
