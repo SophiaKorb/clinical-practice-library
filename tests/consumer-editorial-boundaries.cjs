@@ -85,5 +85,5 @@ const firstSiteFlags=audit.filter(x=>!x.file.startsWith('resources/diagnoses/')&
 console.log('CONSUMER_EDITORIAL_QA_PASS '+JSON.stringify({
  publicHtmlScanned:files.length,diagnosisPagesChecked:files.filter(x=>x.includes('/resources/diagnoses/')).length,
  reviewedInternalCopyFindings:0,sitewideFollowupCount:firstSiteFlags.length,
- sitewideFollowupSample:firstSiteFlags.slice(0,18)
+ sitewideFollowupDetails:firstSiteFlags
 }));
