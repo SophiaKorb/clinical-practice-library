@@ -97,6 +97,20 @@ const widths = [320, 390, 768, 1280];
           }));
           if (nav.scroll > nav.client + 1) failures.push('Desktop navigation horizontal clipping at '+width+'px: '+nav.scroll+'/'+nav.client);
           if (width >= 1050 && !nav.communityVisible) failures.push('Community missing from primary desktop navigation at '+width+'px');
+          // Explicit navigation priorities must survive markup reordering. This
+          // guards against future additions silently hiding important routes.
+          const stable = await page.locator('.cpl-static-nav__links').evaluate(n => {
+            const links=[...n.querySelectorAll('a')];
+            const before=links.map(a=>({href:a.getAttribute('href'),visible:getComputedStyle(a).display!=='none',priority:a.dataset.navPriority,compact:a.dataset.navCompact}));
+            [...links].reverse().forEach(a=>n.appendChild(a));
+            const after=links.map(a=>getComputedStyle(a).display!=='none');
+            links.forEach(a=>n.appendChild(a));
+            const primary=before.filter(a=>a.priority==='primary');
+            const unexpected=before.filter(a=>!['primary','more'].includes(a.priority));
+            const expected=before.every(a=>a.visible === (a.priority==='primary' && !(innerWidth<=1040 && a.compact==='hide')));
+            return {same:before.every((a,i)=>a.visible===after[i]),expected,primary:primary.length,unexpected:unexpected.length};
+          });
+          if (!stable.same || !stable.expected || stable.primary!==5 || stable.unexpected) failures.push('Desktop navigation priority/reorder regression at '+width+'px: '+JSON.stringify(stable));
         }
         if (exceptions.length) failures.push(path + ' ' + width + 'px JS error '+exceptions.join('; ').slice(0,200));
         console.log('CHECK',width,path,'HTTP',response?.status(),'scroll/client',metrics.scroll+'/'+metrics.client,'firstTab',focus);
