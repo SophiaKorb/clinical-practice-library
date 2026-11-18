@@ -121,10 +121,48 @@ const widths = [320, 390, 768, 1280];
             choices: document.querySelectorAll('.tracks button[data-track]').length,
             assignmentLink: [...document.querySelectorAll('a[href]')].some(a =>
               a.getAttribute('href')==='/resources/therapy/clinical-intern-learning-hub.html#assignments'),
-            trainingLabel: !![...document.querySelectorAll('h2')].find(h=>h.textContent.includes('Choose a skill to practice'))
+            trainingLabel: !![...document.querySelectorAll('h2')].find(h=>h.textContent.includes('Choose a skill to practice')),
+            actionLabels:[...document.querySelectorAll('.tracks button[data-track]')].map(b=>b.firstChild?.textContent.trim()),
+            instructions:!!document.querySelector('#track-practice')?.textContent.trim()
           }));
-          if (learning.choices!==4 || !learning.assignmentLink || !learning.trainingLabel)
+          const expectedLabels=['Describe observable behavior','Rehearse a supportive conversation','Compare clinical explanations','Plan and review one support'];
+          if (learning.choices!==4 || !learning.assignmentLink || !learning.trainingLabel ||
+              !learning.instructions || JSON.stringify(learning.actionLabels)!==JSON.stringify(expectedLabels))
             failures.push('Workforce learning-to-assignments journey at '+width+'px: '+JSON.stringify(learning));
+          await page.locator('button[data-track="explore"]').click();
+          const trackState=await page.evaluate(()=>({
+            selected:document.querySelector('button[data-track="explore"]')?.getAttribute('aria-pressed'),
+            practice:document.querySelector('#track-practice')?.textContent
+          }));
+          if(trackState.selected!=='true'||!trackState.practice?.includes('two plausible explanations'))
+            failures.push('Interactive clinical explanation practice not updated at '+width+'px: '+JSON.stringify(trackState));
+        }
+        if (path === '/resources/training/workforce-learning-center.html') {
+          const toAssignments=page.locator('a[href="/resources/therapy/clinical-intern-learning-hub.html#assignments"]').first();
+          if (!await toAssignments.count()) {
+            failures.push('Workforce to assignments: missing link at '+width+'px');
+          } else {
+            await toAssignments.click();
+            await page.waitForURL('**/resources/therapy/clinical-intern-learning-hub.html#assignments');
+            const target=await page.evaluate(() => {
+              const h=document.querySelector('#assignments h2');
+              const sec=document.querySelector('#assignments');
+              const rect=sec?.getBoundingClientRect();
+              return {found:!!h,hash:location.hash,top:rect?.top,viewport:innerHeight,headings:[...sec.querySelectorAll('.assignment h3')].length};
+            });
+            if (!target.found || target.hash!=='#assignments' || target.headings!==6 || target.top>target.viewport)
+              failures.push('Workforce assignment link did not reach section at '+width+'px '+JSON.stringify(target));
+            await page.goto(base+path,{waitUntil:'domcontentloaded'});
+          }
+        }
+        if (path === '/resources/therapy/clinical-intern-learning-hub.html' && width===390) {
+          await page.emulateMedia({media:'print'});
+          const printInfo=await page.evaluate(() => ({
+            cards:[...document.querySelectorAll('#assignments article.assignment')].filter(n=>getComputedStyle(n).display!=='none').length,
+            skipHidden:getComputedStyle(document.querySelector('a.cpl-skip')).display==='none'
+          }));
+          await page.emulateMedia({media:'screen'});
+          if(printInfo.cards!==6 || !printInfo.skipHidden)failures.push('Printable supervision assignments incomplete '+JSON.stringify(printInfo));
         }
         if (path === '/' && !metrics.hasSpanish) failures.push('homepage ' + width + 'px: missing #espanol');
         if (path === '/' && width >= 601) {
@@ -162,6 +200,11 @@ const widths = [320, 390, 768, 1280];
           const pdf = await page.pdf({format:'Letter',printBackground:true});
           checks++;
           if (pdf.length < 1500 || pdf.subarray(0,4).toString() !== '%PDF') failures.push('PRINT '+path+': invalid PDF '+pdf.length+' bytes');
+          if(path==='/resources/therapy/clinical-intern-learning-hub.html'){
+            const out='qa-artifacts/pr43/supervisee-assignments';
+            fs.mkdirSync(out,{recursive:true});
+            fs.writeFileSync(out+'/supervisee-print.pdf',pdf);
+          }
           console.log('PRINT',path,'PDF bytes',pdf.length);
           await page.emulateMedia({media:'screen'});
         }
