@@ -85,8 +85,17 @@ assert(alternateFinder.includes('Alternate search layout')&&alternateFinder.incl
 assert(alternateFinder.includes('Results are suggestions, not clinical endorsements.')&&!alternateFinder.includes('Nonproduction UX study'),'Alternate finder cannot expose development status');
 assert.equal(firstSiteFlags.length,0,'Reader-facing editorial wording still leaks elsewhere: '+JSON.stringify(firstSiteFlags));
 
+// Known shared clinical-topic template issue: count separately, do not misstate that
+// the targeted wording scan cleared all editorial concerns across unrelated source topics.
+const sharedTemplateBacklog=files.filter(file=>{
+ const rel=path.relative(root,file).replace(/\\/g,'/');
+ if(!rel.startsWith('resources/clinical-topics/'))return false;
+ return /tool validation and qualified clinical (?:approval|review) (?:remain )?pending/i.test(strip(fs.readFileSync(file,'utf8')));
+}).map(file=>path.relative(root,file).replace(/\\/g,'/'));
 console.log('CONSUMER_EDITORIAL_QA_PASS '+JSON.stringify({
  publicHtmlScanned:files.length,diagnosisPagesChecked:files.filter(x=>x.includes('/resources/diagnoses/')).length,
  reviewedInternalCopyFindings:0,sitewideFollowupCount:firstSiteFlags.length,
- sitewideFollowupSample:firstSiteFlags.slice(0,18)
+ sitewideFollowupSample:firstSiteFlags.slice(0,18),
+ sharedClinicalTopicTemplateBacklogCount:sharedTemplateBacklog.length,
+ sharedClinicalTopicTemplateSamples:sharedTemplateBacklog.slice(0,10)
 }));
