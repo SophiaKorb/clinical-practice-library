@@ -259,3 +259,96 @@
   .shelves-section .shelf.expandable-shelf {border-color:#777}
   .shelves-section .shelf.expandable-shelf>.shelf-body{background:white!important;border-color:#888}
 }
+
+
+/* Desktop navigation disclosure.
+   A hidden horizontal scrollbar was concealing Community and Español links.
+   Keep the six principal destinations in view and move secondary ones into
+   the already-present native More disclosure (same real destinations). */
+@media screen and (min-width:601px) {
+  .cpl-static-nav {
+    justify-content:space-between;
+    gap:10px;
+  }
+  .cpl-static-nav__links {
+    flex:1 1 auto;
+    overflow:visible;
+    white-space:normal;
+    scrollbar-width:none;
+    padding:0;
+    gap:1px;
+  }
+  .cpl-static-nav__links a {padding:8px clamp(6px,.75vw,11px);min-height:44px}
+  .cpl-static-nav__links a:nth-child(1),
+  .cpl-static-nav__links a:nth-child(2),
+  .cpl-static-nav__links a:nth-child(7),
+  .cpl-static-nav__links a:nth-child(8),
+  .cpl-static-nav__links a:nth-child(9),
+  .cpl-static-nav__links a:nth-child(11),
+  .cpl-static-nav__links a:nth-child(12) {display:none!important}
+  .cpl-static-nav__mobile {
+    display:flex;
+    flex:0 0 auto;
+    align-items:center;
+  }
+  .cpl-static-nav__quick {display:none!important}
+  .cpl-static-nav__more {
+    display:block;
+    position:relative;
+    padding:0;
+    margin:0;
+    border:0;
+    background:transparent;
+  }
+  .cpl-static-nav__more>summary {
+    display:inline-flex;
+    align-items:center;
+    gap:5px;
+    min-height:44px;
+    padding:8px 11px;
+    cursor:pointer;
+    list-style:none;
+    border:1px solid #c9d8cd;
+    border-radius:8px;
+    background:#fffdfa;
+    color:#244c40;
+    font:650 .9rem/1.3 system-ui,sans-serif;
+  }
+  .cpl-static-nav__more>summary::-webkit-details-marker {display:none}
+  .cpl-static-nav__more[open]>summary {background:#e0ebe2;border-color:#9cb9a3}
+  .cpl-static-nav__more:not([open]) .cpl-static-nav__menu {display:none!important}
+  .cpl-static-nav__menu {
+    position:absolute;
+    top:calc(100% + 7px);
+    right:0;
+    z-index:30;
+    width:min(284px,calc(100vw - 18px));
+    max-height:min(72vh,520px);
+    overflow-y:auto;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:1px;
+    padding:7px;
+    border:1px solid #adc5b4;
+    border-radius:10px;
+    background:#fffdfa;
+    box-shadow:0 15px 36px #172e241f;
+    white-space:normal;
+  }
+  .cpl-static-nav__menu a {
+    display:block;
+    min-height:44px;
+    padding:11px 12px;
+    border-radius:6px;
+    color:#205548;
+    text-decoration:none;
+    font:600 .9rem/1.4 system-ui,sans-serif;
+  }
+  .cpl-static-nav__menu a:hover {background:#edf4ee}
+  .cpl-static-nav__more>summary:focus-visible,
+  .cpl-static-nav__menu a:focus-visible {outline:3px solid #98630d;outline-offset:2px}
+}
+@media screen and (min-width:601px) and (max-width:1040px) {
+  .cpl-static-nav__links a:nth-child(5),
+  .cpl-static-nav__links a:nth-child(6) {display:none!important}
+}
