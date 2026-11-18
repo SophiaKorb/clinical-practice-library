@@ -36,6 +36,13 @@ for(const [html,entries,type] of [[familyHtml,family,'family'],[tayHtml,tay,'tay
 for(let n=1;n<=170;n++)assert(familyHtml.includes('id="listing-'+n+'"'),'Missing numbered family entry '+n);
 for(let n=1;n<=27;n++)assert(tayHtml.includes('id="youth-listing-'+n+'"'),'Missing TAY entry '+n);
 assert(tayHtml.includes('id="iam-you-360"'),'Added youth provider profile missing');
+// New provider context is explicitly dated and sourced; the historic guide text and 813 finder records remain unchanged.
+assert(tayHtml.includes('Direct provider check — November 17, 2026')&&tayHtml.includes('href="https://lfreferrals.org/"'),'Primary La Frontera intake verification missing from online TAY reader');
+assert(tayHtml.includes('17 or younger')&&tayHtml.includes('under 17'),'Do not silently resolve the conflicting guardian-consent text');
+assert(tayHtml.includes('COE-projectfocus@arizona.edu')&&tayHtml.includes('Next intake remains unverified'),'Project FOCUS current official contact and unresolved intake conflict lost');
+assert(tayHtml.includes('data-search="la frontera current intake'),'La Frontera not searchable by provider name in online reader');
+assert(tayHtml.includes('Provider-page discrepancy — November 17, 2026')&&tayHtml.includes('href="https://teenlifeline.org/tucson/"'),'Conflicting current official Teen Lifeline Tucson text routing was silently omitted');
+assert(tayHtml.includes('Text 602-248-8336')&&tayHtml.includes('texting 520-327-8336'),'Retain both official texting instructions until the provider resolves the contradiction');
 for(const p of ['resources/community/index.html','index.html','resources/start-here.html','resources/clinical-resource-finder.html']){
  const s=read(p);
  for(const name of ['family-guide.html','transition-age-guide.html'])assert(s.includes(name),'No visible route to '+name+' in '+p);

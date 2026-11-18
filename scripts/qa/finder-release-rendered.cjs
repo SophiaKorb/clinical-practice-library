@@ -12,7 +12,7 @@ fs.mkdirSync(dir,{recursive:true});
  const browser=await chromium.launch({headless:true});
  const checks=[];
  try{
-  for(const width of [1280,390,320]){
+  for(const width of [1280,640,390,320]){
    const context=await browser.newContext({viewport:{width,height:850},reducedMotion:'reduce'});
    const page=await context.newPage();
    const exceptions=[];page.on('pageerror',e=>exceptions.push(e.message));
@@ -108,6 +108,22 @@ fs.mkdirSync(dir,{recursive:true});
     }
     assert.equal(await page.locator('.entry').count(),guide.count,'Online community guide incomplete: '+guide.slug);
     assert(await page.locator('#'+guide.target).count()>0,'Direct entry anchor missing from online guide');
+    if(guide.slug==='transition-age-guide'){
+      const focus=page.locator('#youth-listing-2');
+      assert((await focus.innerText()).includes('November 17, 2026'),'FOCUS source-check date missing');
+      assert((await focus.innerText()).includes('Next intake remains unverified'),'FOCUS contradictory intake date caution lost');
+      assert.equal(await focus.locator('a[href="mailto:COE-projectfocus@arizona.edu"]').count(),1,'FOCUS official contact email missing');
+      const lf=page.locator('#youth-listing-24');
+      assert((await lf.innerText()).includes('17 or younger')&&(await lf.innerText()).includes('under 17'),'Both conflicting guardian-consent thresholds must be retained');
+      assert.equal(await lf.locator('a[href="https://lfreferrals.org/"]').count(),1,'La Frontera official intake URL missing');
+      const teen=page.locator('#youth-listing-23');
+      const teenText=await teen.innerText();
+      assert(teenText.includes('Text 602-248-8336')&&teenText.includes('texting 520-327-8336'),'Teen Lifeline official text-routing conflict not transparent');
+      assert.equal(await teen.locator('a[href="https://teenlifeline.org/tucson/"]').count(),1,'Tucson-specific hotline instructions missing');
+      await page.locator('#guide-query').fill('La Frontera');
+      assert.equal(await page.locator('#youth-listing-24:visible').count(),1,'Provider name should retrieve You Are Not Alone');
+      await page.locator('#guide-clear').click();
+    }
     assert(await page.locator('.contents a').count()>0,'Accessible section navigation missing');
     const guideOverflow=await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth+1);
     assert(!guideOverflow,'Online community guide overflows at '+width+': '+guide.slug);
@@ -140,7 +156,7 @@ fs.mkdirSync(dir,{recursive:true});
     assert.equal(await page.locator('.entry:visible').count(),guide.count,'Guide reset did not restore full source set');
     // Clear the explicit screen-media emulation: page.pdf() must use actual print CSS.
     await page.emulateMedia({media:null});
-    if(width===390){
+    if(width===390||width===640){
       await page.addScriptTag({path:require.resolve('axe-core')});
       const audit=await page.evaluate(async()=>await window.axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa']}}));
       assert.equal(audit.violations.length,0,'Online guide axe violations: '+guide.slug+' '+JSON.stringify(audit.violations.map(v=>v.id)));
@@ -167,6 +183,6 @@ fs.mkdirSync(dir,{recursive:true});
    await context.close();
   }
   console.log('FINDER_RELEASE_RENDERED_PASS '+JSON.stringify(checks));
-  fs.writeFileSync(path.join(dir,'summary.json'),JSON.stringify({result:'PASS',scope:'Chromium 320,390,1280 CSS pixels; native AT, real browser zoom, physical print remain human review',checks},null,2));
+  fs.writeFileSync(path.join(dir,'summary.json'),JSON.stringify({result:'PASS',scope:'Chromium 320,390,640,1280 CSS pixel widths. 640 and 320 CSS px approximate layout/reflow at 200%/400% from 1280, not actual browser zoom; native AT, actual browser zoom and physical print remain human review',checks},null,2));
  }finally{await browser.close();}
 })().catch(err=>{console.error(err);process.exitCode=1;});
