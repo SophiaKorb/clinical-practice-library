@@ -58,7 +58,7 @@ jobs:
           urls=set()
           for page in list(pdf)[:offset+13]:
               urls.update(l['uri'] for l in page.get_links() if l.get('uri','').startswith('http'))
-          index=''.join(p.get_text() for p in list(pdf)[offset+13:]).replace(' ','').replace('\\n','')
+          index=''.join(p.get_text() for p in list(pdf)[offset+13:]).replace(' ','').replace(chr(10),'')
           assert len(urls)==48
           assert all(url in index for url in urls), 'A complete source URL is missing from printed index'
           # Prior severe orphan: last directory page should not hold just 1-3 entries.
