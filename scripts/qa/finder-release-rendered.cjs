@@ -128,6 +128,8 @@ fs.mkdirSync(dir,{recursive:true});
     assert.equal(await page.locator('.contents').evaluate(el=>getComputedStyle(el).display),'none','Print CSS did not hide navigation: '+guide.slug);
     assert.equal(await page.locator('.section').first().evaluate(el=>getComputedStyle(el).breakBefore),'auto','Print CSS forces wasteful section page breaks: '+guide.slug);
     assert.equal(await page.locator('.section-head').first().evaluate(el=>getComputedStyle(el).breakAfter),'avoid','Print section heading could become orphaned: '+guide.slug);
+    assert.equal(await page.locator('.entries').first().evaluate(el=>getComputedStyle(el).columnCount),'auto','Print CSS leaves entries in an unbreakable two-column box: '+guide.slug);
+    assert.equal(await page.locator('.entry').first().evaluate(el=>getComputedStyle(el).display),'block','Print CSS leaves entries in unbreakable inline-block layout: '+guide.slug);
     await page.emulateMedia({media:'screen'});
     assert.equal(await page.locator('.entry:visible').count(),shown,'Screen filter lost after print: '+guide.slug);
     await page.locator('#guide-query').fill('unlikelynonexistentguidequeryxyz');
