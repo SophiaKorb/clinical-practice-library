@@ -35,6 +35,27 @@ for(const p of ['resources/community/index.html','index.html','resources/start-h
  const s=read(p);
  for(const name of ['family-guide.html','transition-age-guide.html'])assert(s.includes(name),'No visible route to '+name+' in '+p);
 }
+// Local LGBTQ+ supplemental listings are visible INSIDE each online community guide, not just on the hub.
+// They must not change any of the 170/27 original numbered entries, 28 TAY index records,
+// their search facets or the byte-identical October PDF publications.
+const localIds=['eon','pride','fluxx','stars','stars-name','stars-update','fluxx-clinic','fluxx-health'];
+const localHub=read('resources/community/index.html');
+for(const [html,type] of [[familyHtml,'family'],[tayHtml,'transition-age']]){
+ assert(html.includes('id="lgbtq-community-resources"'),'No local LGBTQ section in '+type);
+ assert(html.includes('href="#lgbtq-community-resources"'),'Local LGBTQ supplement missing TOC or top navigation in '+type);
+ assert(html.includes('not part of the original October 25, 2026 numbered guide or approved PDF'),'Original/supplement distinction missing '+type);
+ assert(html.includes('href="/resources/community/online-lgbtq-resources.html"'),'Online/national LGBTQ collection missing '+type);
+ assert.equal((html.match(/<li class="lgbtq-listing"/g)||[]).length,localIds.length,'Wrong count of local LGBTQ resource additions '+type);
+ for(const id of localIds){
+  const source=localHub.match(new RegExp('<article class="card" id="'+id+'">([\\s\\S]*?)<\\/article>'));
+  assert(source,'Original community hub card missing '+id);
+  const url=source[1].match(/<a href="(https?:[^"]+)"/)?.[1];
+  assert(url&&html.includes('href="'+url+'"'),'Missing original provider link for '+id+' in '+type);
+  assert(html.includes('id="local-lgbtq-'+id+'"'),'Missing direct heading anchor '+id+' in '+type);
+  assert(html.includes('href="/resources/community/index.html#'+id+'"'),'Missing CPL contextual notes for '+id+' in '+type);
+ }
+}
+
 // User-approved final print+digital PDFs are published byte-identically to canonical Drive sources.
 // They supersede the older archived 38-page/9-page PDF snapshots, not the source-text companions.
 const crypto=require('node:crypto');
