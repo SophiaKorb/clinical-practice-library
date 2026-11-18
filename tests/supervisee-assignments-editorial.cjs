@@ -65,4 +65,5 @@ for(const p of ['index.html','library.html','classic.html']){
   }
 }
 console.log('EDITORIAL_PHRASE_AUDIT',JSON.stringify(flagged));
+assert.equal(flagged.length,0,'Public CPL pages still use vague question-in-front/learning-path language');
 
