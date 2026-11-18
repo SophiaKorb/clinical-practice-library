@@ -37,6 +37,8 @@ jobs:
           node scripts/qa/diagnosis-hubs-rendered.cjs
           node scripts/qa/diagnosis-all14-rendered.cjs
           node scripts/qa/diagnosis-practice-labs-rendered.cjs
+          node scripts/qa/diagnosis-wave2-rendered.cjs
+          node scripts/qa/diagnosis-wave2-reflow.cjs
       - name: Retain CPL review screenshots and printable samples
         if: always()
         uses: actions/upload-artifact@v4
@@ -46,5 +48,6 @@ jobs:
             qa-artifacts/pr43/
             qa-artifacts/diagnosis-hubs/
             qa-artifacts/practice-labs/
+            qa-artifacts/diagnosis-wave2/
           if-no-files-found: warn
           retention-days: 14

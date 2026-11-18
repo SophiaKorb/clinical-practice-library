@@ -34,6 +34,7 @@ jobs:
       - run: node tests/finder-release-qa.cjs
       - run: node tests/adult-adhd-collection-qa.cjs
       - run: node tests/diagnosis-practice-labs.cjs
+      - run: node tests/diagnosis-wave2.cjs
       - run: node tests/diagnosis-resource-hubs.cjs
       - run: node tests/condition-case-management.cjs
       - run: node tests/comprehensive-diagnosis-guides.cjs

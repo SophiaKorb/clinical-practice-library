@@ -1,0 +1,37 @@
+name: CPL diagnosis Wave 2 enlarged-text reflow QA
+on:
+  pull_request:
+    paths:
+      - 'resources/diagnoses/practice-labs/wave-2/**'
+      - 'scripts/qa/diagnosis-wave2-reflow.cjs'
+      - '.github/workflows/diagnosis-wave2-reflow.yml'
+permissions:
+  contents: read
+jobs:
+  reflow-and-keyboard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: |
+          npm install --no-save --no-audit --no-fund playwright
+          npx playwright install --with-deps chromium
+      - name: Start local static source and inspect four condition maps
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/cpl-wave2-http.log 2>&1 &
+          for i in $(seq 1 20); do
+            if curl -fsS http://127.0.0.1:8765/ >/dev/null; then break; fi
+            sleep 1
+          done
+          node scripts/qa/diagnosis-wave2-reflow.cjs
+      - name: Retain enlarged-text screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cpl-wave2-reflow-review
+          path: qa-artifacts/diagnosis-wave2/reflow/
+          if-no-files-found: warn
+          retention-days: 14
