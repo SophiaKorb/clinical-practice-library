@@ -109,14 +109,54 @@ fs.mkdirSync(dir,{recursive:true});
     assert.equal(await page.locator('.entry').count(),guide.count,'Online community guide incomplete: '+guide.slug);
     assert(await page.locator('#'+guide.target).count()>0,'Direct entry anchor missing from online guide');
     assert(await page.locator('.contents a').count()>0,'Accessible section navigation missing');
+    assert.equal(await page.locator('.lgbtq-listing').count(),8,'LGBTQ+ local supplement count changed: '+guide.slug);
+    assert(await page.locator('.contents a[href="#lgbtq-community-resources"]').count()===1,'Supplement TOC link missing: '+guide.slug);
+    assert(await page.locator('.route a[href="#lgbtq-community-resources"]').count()===1,'Supplement quick link missing: '+guide.slug);
+    assert.equal(await page.locator('.lgbtq-listing a[href^="https://"]').count(),8,'Supplement provider URLs missing: '+guide.slug);
+    await page.locator('.route a[href="#lgbtq-community-resources"]').focus();
+    assert.equal(await page.evaluate(()=>document.activeElement.getAttribute('href')),'#lgbtq-community-resources','Keyboard focus cannot reach supplement route: '+guide.slug);
+    await page.keyboard.press('Enter');
+    assert.equal(await page.evaluate(()=>location.hash),'#lgbtq-community-resources','Keyboard anchor activation failed: '+guide.slug);
+    await page.screenshot({path:path.join(dir,'community-'+guide.slug+'-lgbtq-'+width+'.png'),fullPage:false});
+    await page.locator('#guide-query').fill('STARS');
+    assert(await page.locator('.lgbtq-listing:visible').count()>=2,'STARS supplementary listings not searchable: '+guide.slug);
+    assert(!(await page.locator('#guide-status').innerText()).includes('No matches'),'Supplementary matches incorrectly reported as zero: '+guide.slug);
+    assert((await page.locator('#guide-status').innerText()).includes('of 8 LGBTQ+ supplemental'),'Status excludes supplemental collection: '+guide.slug);
+    await page.locator('#guide-clear').click();
+    assert.equal(await page.locator('.lgbtq-listing:visible').count(),8,'Supplement reset did not restore listings: '+guide.slug);
     const guideOverflow=await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth+1);
     assert(!guideOverflow,'Online community guide overflows at '+width+': '+guide.slug);
     await page.locator('#guide-query').fill(guide.query);
     const shown=await page.locator('.entry:visible').count();
     assert(shown>=1&&shown<guide.count,'Online guide client-side search failed: '+guide.slug);
     assert((await page.locator('#guide-status').innerText()).includes('of '+guide.count),'Guide status not announced');
+    const sectionLinkCount=await page.locator('.contents li').count();
+    const visibleSectionLinks=await page.locator('.contents li:visible').count();
+    assert(visibleSectionLinks>0&&visibleSectionLinks<sectionLinkCount,'Search navigation still links to hidden sections: '+guide.slug);
+    if(width<1280)await page.screenshot({path:path.join(dir,'community-'+guide.slug+'-filtered-'+width+'.png'),fullPage:false});
+    await page.emulateMedia({media:'print'});
+    const printedEntries=await page.locator('.entry').evaluateAll(nodes=>nodes.filter(node=>
+      getComputedStyle(node).display!=='none'&&getComputedStyle(node.closest('.section')).display!=='none'
+    ).length);
+    assert.equal(printedEntries,guide.count,'Printing a filtered view omitted guide listings: '+guide.slug);
+    const printedLocal=await page.locator('.lgbtq-listing').evaluateAll(nodes=>nodes.filter(el=>getComputedStyle(el).display!=='none'&&getComputedStyle(el.closest('.lgbtq-extra')).display!=='none').length);
+    assert.equal(printedLocal,8,'Printing filtered view omitted local LGBTQ+ supplements: '+guide.slug);
+    assert.equal(await page.locator('.search-panel').evaluate(el=>getComputedStyle(el).display),'none','Print CSS did not hide the search panel: '+guide.slug);
+    assert.equal(await page.locator('.contents').evaluate(el=>getComputedStyle(el).display),'none','Print CSS did not hide navigation: '+guide.slug);
+    assert.equal(await page.locator('.section').first().evaluate(el=>getComputedStyle(el).breakBefore),'auto','Print CSS forces wasteful section page breaks: '+guide.slug);
+    assert.equal(await page.locator('.section-head').first().evaluate(el=>getComputedStyle(el).breakAfter),'avoid','Print section heading could become orphaned: '+guide.slug);
+    assert.equal(await page.locator('.entries').first().evaluate(el=>getComputedStyle(el).columnCount),'auto','Print CSS leaves entries in an unbreakable two-column box: '+guide.slug);
+    assert.equal(await page.locator('.entry').first().evaluate(el=>getComputedStyle(el).display),'block','Print CSS leaves entries in unbreakable inline-block layout: '+guide.slug);
+    await page.emulateMedia({media:'screen'});
+    assert.equal(await page.locator('.entry:visible').count(),shown,'Screen filter lost after print: '+guide.slug);
+    await page.locator('#guide-query').fill('unlikelynonexistentguidequeryxyz');
+    assert.equal(await page.locator('.entry:visible').count(),0,'No-match query still shows entries: '+guide.slug);
+    assert((await page.locator('#guide-status').innerText()).includes('No matches'),'No-match guidance is missing: '+guide.slug);
+
     await page.locator('#guide-clear').click();
     assert.equal(await page.locator('.entry:visible').count(),guide.count,'Guide reset did not restore full source set');
+    // Clear the explicit screen-media emulation: page.pdf() must use actual print CSS.
+    await page.emulateMedia({media:null});
     if(width===390){
       await page.addScriptTag({path:require.resolve('axe-core')});
       const audit=await page.evaluate(async()=>await window.axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa']}}));
@@ -127,6 +167,8 @@ fs.mkdirSync(dir,{recursive:true});
       const webPdf=await page.pdf({format:'Letter',printBackground:false,pageRanges:'1-2'});
       assert(webPdf.length>5000,'Guide print/PDF output unexpectedly empty: '+guide.slug);
       fs.writeFileSync(path.join(dir,'community-'+guide.slug+'-print-sample.pdf'),webPdf);
+      const completePdf=await page.pdf({format:'Letter',printBackground:false});
+      fs.writeFileSync(path.join(dir,'community-'+guide.slug+'-complete-print.pdf'),completePdf);
     }
    }
    await page.goto(base+'/resources/clinical-resource-finder.html',{waitUntil:'networkidle'});
@@ -143,6 +185,9 @@ fs.mkdirSync(dir,{recursive:true});
    checks.push({width,overflow,axe:axe.violations.length,legacyLinkRecovery:true,classicFunctional:true});
    await context.close();
   }
+  // Isolated extra reflow/stress regression: run only after the original smoke checks pass.
+  // Its viewport equivalents do not claim actual browser zoom certification.
+  require('node:child_process').execFileSync(process.execPath,[path.join(__dirname,'community-guides-reflow-rendered.cjs')],{stdio:'inherit',timeout:150000,env:process.env});
   console.log('FINDER_RELEASE_RENDERED_PASS '+JSON.stringify(checks));
   fs.writeFileSync(path.join(dir,'summary.json'),JSON.stringify({result:'PASS',scope:'Chromium 320,390,1280 CSS pixels; native AT, real browser zoom, physical print remain human review',checks},null,2));
  }finally{await browser.close();}
