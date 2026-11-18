@@ -1,6 +1,7 @@
 /* Nonproduction rendered keyboard/print QA. Use a local file-serving origin; never hit production. */
 'use strict';
 const assert = require('node:assert/strict');
+const fs = require('node:fs');
 const { chromium } = require('playwright');
 const base = 'http://127.0.0.1:8765';
 const skipRoutes = require('./skip-navigation-routes.cjs');
@@ -89,6 +90,14 @@ const widths = [320, 390, 768, 1280];
           }
         }
         if (path === '/' && !metrics.hasSpanish) failures.push('homepage ' + width + 'px: missing #espanol');
+        if (path === '/' && width >= 601) {
+          const nav = await page.locator('.cpl-static-nav__links').evaluate(n => ({
+            client:n.clientWidth,scroll:n.scrollWidth,
+            communityVisible:!![...n.querySelectorAll('a')].find(a => a.getAttribute('href')==='/resources/community/index.html' && getComputedStyle(a).display!=='none')
+          }));
+          if (nav.scroll > nav.client + 1) failures.push('Desktop navigation horizontal clipping at '+width+'px: '+nav.scroll+'/'+nav.client);
+          if (width >= 1050 && !nav.communityVisible) failures.push('Community missing from primary desktop navigation at '+width+'px');
+        }
         if (exceptions.length) failures.push(path + ' ' + width + 'px JS error '+exceptions.join('; ').slice(0,200));
         console.log('CHECK',width,path,'HTTP',response?.status(),'scroll/client',metrics.scroll+'/'+metrics.client,'firstTab',focus);
       }
@@ -105,6 +114,47 @@ const widths = [320, 390, 768, 1280];
           console.log('PRINT',path,'PDF bytes',pdf.length);
           await page.emulateMedia({media:'screen'});
         }
+      }
+      // Review-only visual captures of the redesigned production routes. No network or PHI.
+      if (width === 390 || width === 1280) {
+        const out = 'qa-artifacts/pr43/editorial-tiles';
+        fs.mkdirSync(out, {recursive:true});
+        await page.goto(base+'/', {waitUntil:'domcontentloaded'});
+        await page.locator('#shelves .shelf.expandable-shelf').first().scrollIntoViewIfNeeded();
+        await page.screenshot({path:out+'/home-'+width+'.png',animations:'disabled'});
+        await page.locator('#parent-patient').evaluate(node => {node.open = true;});
+        await page.locator('#parent-patient').evaluate(node => window.scrollTo({top:window.scrollY + node.getBoundingClientRect().top - 74,behavior:'instant'}));
+        await page.screenshot({path:out+'/home-expanded-'+width+'.png',animations:'disabled'});
+        await page.locator('.cpl-static-nav__more > summary').focus();
+        await page.keyboard.press('Enter');
+        const menuOpen = await page.locator('.cpl-static-nav__more').evaluate(n => n.open);
+        const communityLink = page.locator('.cpl-static-nav__menu a[href="/resources/community/index.html"]');
+        const queerLink = page.locator('.cpl-static-nav__menu a[href="/resources/community/online-lgbtq-resources.html"]');
+        if (!menuOpen || !await communityLink.isVisible() || !await queerLink.isVisible()) failures.push('More menu missing community routes at '+width+'px');
+        await page.evaluate(() => window.scrollTo({top:0,behavior:'instant'}));
+        const menuOnscreen = await page.locator('.cpl-static-nav__menu').evaluate(n=>{
+          const b=n.getBoundingClientRect();
+          return b.top>=0 && b.left>=0 && b.right<=innerWidth+1 && b.bottom<=innerHeight+1;
+        });
+        if (!menuOnscreen) failures.push('Open More menu cropped outside viewport at '+width+'px');
+        if (width===390) {
+          const lastShown=await page.locator('.cpl-static-nav__menu a').last().evaluate(a=>{
+            const b=a.getBoundingClientRect(),parent=a.closest('.cpl-static-nav__menu').getBoundingClientRect();
+            return b.top>=parent.top && b.bottom<=parent.bottom+1 && b.bottom<=innerHeight+1;
+          });
+          if (!lastShown) failures.push('More menu final destination requires undisclosed scrolling at standard mobile height');
+        }
+        await page.screenshot({path:out+'/home-more-'+width+'.png',animations:'disabled'});
+        await page.keyboard.press('Tab');
+        const firstLinkFocused = await page.locator('.cpl-static-nav__menu a').first().evaluate(a=>document.activeElement===a);
+        if (!firstLinkFocused) failures.push('More menu keyboard focus did not enter link list at '+width+'px');
+        await page.goto(base+'/resources/community/index.html', {waitUntil:'domcontentloaded'});
+        await page.locator('.cards .card').first().scrollIntoViewIfNeeded();
+        await page.screenshot({path:out+'/community-'+width+'.png',animations:'disabled'});
+        await page.goto(base+'/resources/clinical-resource-finder.html', {waitUntil:'domcontentloaded'});
+        await page.locator('#lab-q').fill('TAY');
+        await page.locator('#lab-results .result-card').first().scrollIntoViewIfNeeded();
+        await page.screenshot({path:out+'/finder-tay-'+width+'.png',animations:'disabled'});
       }
       await context.close();
     }

@@ -79,3 +79,97 @@ footer{border-top:1px solid #dce6dd;padding:19px 28px;color:#5c7064;font-size:.8
 @media(max-width:750px){.finder-live-links{gap:10px}.finder-live-links a{font-size:.75rem}.finder-live-links a:nth-child(2){display:none}}
 @media(max-width:360px){.finder-live-links a{font-size:.7rem}}
 @media print{.finder-live-links,.quick-links{display:none!important}}
+
+
+/* Editorial search results | separate full resource records without a wall of tiles.
+   Search engine, filter order, and caution text are unchanged. */
+.results {
+  display:block;
+  border-top:1px solid #cfd9d1;
+}
+.result-card {
+  display:flex;
+  flex-direction:column;
+  gap:9px;
+  padding:22px 5px 25px;
+  margin:0;
+  background:transparent;
+  border:0;
+  border-bottom:1px solid #cfd9d1;
+  border-radius:0;
+  box-shadow:none;
+}
+.result-card h3 {
+  font:600 clamp(1.25rem,2vw,1.47rem)/1.32 Georgia,"Times New Roman",serif;
+  letter-spacing:-.015em;
+  color:#183d32;
+  overflow-wrap:break-word;
+}
+.result-card h3 a {text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
+.result-card h3 a:hover {color:#0e5a48}
+.result-card p {max-width:82ch;line-height:1.6}
+.result-card .chips {gap:6px 8px;align-items:center}
+.result-card .chip {
+  border:1px solid #cbd8ce;
+  border-radius:4px;
+  background:transparent;
+  color:#426252;
+  font-size:.79rem;
+  font-weight:650;
+  padding:2px 7px;
+}
+.result-card .chip--neutral {background:transparent;color:#4f6258;border-color:#d7ddd7}
+.result-card .match-explain {max-width:88ch;line-height:1.5!important;color:#4c6255!important}
+.result-card .web-guide-link {
+  align-self:flex-start;
+  font-size:.94rem;
+  font-weight:700;
+  text-underline-offset:4px;
+}
+.result-card .caveat {
+  max-width:82ch;
+  border-left:3px solid #916e3c;
+  padding:5px 0 5px 12px;
+  font-size:.92rem;
+  color:#4e554e;
+}
+.result-card .family {
+  margin-top:7px;
+  border-top:1px solid #dee6df;
+  padding-top:13px;
+}
+.results-head h2 {
+  font:600 clamp(1.55rem,2.6vw,2rem)/1.25 Georgia,"Times New Roman",serif;
+}
+@media(max-width:750px){
+  .result-card {padding:19px 1px 23px}
+  .result-card h3 {font-size:1.3rem}
+  .result-card .chip {font-size:.78rem}
+}
+@media print{
+  .results {border-top:0}
+  .result-card {padding:11px 0;border:0;border-bottom:1px solid #888;break-inside:avoid}
+  .result-card .chip {border-color:#777}
+  .result-card .caveat {border-left-color:#444}
+}
+
+
+/* Print-focused search controls: a focused search input is context, not a blue
+   active UI field. Keep the query visible without browser focus/cancel chrome. */
+@media print {
+  .search-box input[type="search"],
+  .search-box input[type="search"]:focus,
+  .search-box input[type="search"]:focus-visible {
+    -webkit-appearance:none;
+    appearance:none;
+    border:0!important;
+    outline:0!important;
+    box-shadow:none!important;
+    background:transparent!important;
+  }
+  .search-box input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance:none;
+    appearance:none;
+    display:none!important;
+  }
+}
