@@ -101,6 +101,48 @@ function renderResourceCard(r){
  if(parts.length)li.appendChild(elem('p','resource-meta',parts.join(' · ')));
  return li;
 }
+/* Keep the eight original topic-start formats independently indexed but grouped in one discovery card. */
+var adhdTopicStartPrefix='/resources/clinical-topics/adult-adhd-task-starts/';
+var adhdTopicStartPDF='/resources/downloads/topic-adult-adhd-task-starts.pdf';
+var adhdTopicFormatNames={
+ 'care-partner.html':'Care-partner guide',
+ 'client-workbook.html':'Client workbook',
+ 'formulation.html':'Clinician formulation',
+ 'case.html':'Interactive case practice',
+ 'progress-review.html':'Progress review',
+ 'support-map.html':'Visual support map'
+};
+function isAdhdTopicBundleRecord(r){
+ var u=r.url||'',suffix=u.slice(adhdTopicStartPrefix.length);
+ return u===adhdTopicStartPrefix+'index.html'||u===adhdTopicStartPDF||
+ (u.startsWith(adhdTopicStartPrefix)&&Object.prototype.hasOwnProperty.call(adhdTopicFormatNames,suffix));
+}
+function renderAdhdTopicBundle(records){
+ var primary=records.find(r=>r.url===adhdTopicStartPrefix+'index.html');
+ if(!primary)return null;
+ var li=elem('li','resource-bundle');
+ var intro=elem('div','bundle-primary'),eyebrow=elem('p','bundle-eyebrow','One topic collection · Adult');
+ var h=elem('h4'),main=link(primary.url,'Task starts & external scaffolds');
+ h.appendChild(main);intro.appendChild(eyebrow);intro.appendChild(h);
+ intro.appendChild(elem('p','resource-description','Understand task-start barriers and use its companion workbook, clinician guidance and interactive tools. These are formats within the same collection.'));
+ li.appendChild(intro);
+ var sub=elem('div','bundle-companions'),label=elem('p','bundle-label','Choose a companion format');
+ sub.appendChild(label);
+ var links=elem('nav','bundle-links');links.setAttribute('aria-label','Adult ADHD task-starts companion formats');
+ var formats=[
+ ['care-partner.html','Care-partner guide'],['client-workbook.html','Client workbook'],
+ ['formulation.html','Clinician formulation'],['case.html','Interactive case practice'],
+ ['progress-review.html','Progress review'],['support-map.html','Visual support map']
+ ];
+ for(var entry of formats){
+  var rec=records.find(r=>r.url===adhdTopicStartPrefix+entry[0]);
+  if(!rec)continue;
+  var a=link(rec.url,entry[1]);a.setAttribute('aria-label',entry[1]+' — ADHD task-start toolkit');links.appendChild(a);
+ }
+ var pdf=records.find(r=>r.url===adhdTopicStartPDF);
+ if(pdf){var pdfLink=link(pdf.url,'Download topic PDF');pdfLink.setAttribute('aria-label','Download the ADHD task-start toolkit PDF');links.appendChild(pdfLink);}
+ sub.appendChild(links);li.appendChild(sub);return li;
+}
 function renderSelected(){
  var shown=document.getElementById('topic-page'),overview=document.getElementById('topic-overview');
  if(!selected){shown.hidden=true;overview.hidden=false;return;}
@@ -112,13 +154,20 @@ function renderSelected(){
  document.getElementById('topic-lede').textContent=subtitle[selected]||'Clinical topic resources';
  var direct=data.resources.filter(r=>(r.tags&&r.tags.diagnosis||[]).includes(selected));
  document.getElementById('topic-stat').textContent=direct.length+' directly indexed resources';
- var byGroup=new Map();
- for(var r of direct){var k=groupFor(r);if(!byGroup.has(k))byGroup.set(k,[]);byGroup.get(k).push(r);}
+ var byGroup=new Map(),bundleRecords=[];
+ for(var r of direct){
+  if(selected==='ADHD'&&isAdhdTopicBundleRecord(r)){bundleRecords.push(r);continue;}
+  var k=groupFor(r);if(!byGroup.has(k))byGroup.set(k,[]);byGroup.get(k).push(r);
+ }
+ var bundle=selected==='ADHD'?renderAdhdTopicBundle(bundleRecords):null;
+ if(!bundle&&bundleRecords.length){for(var r of bundleRecords){var k=groupFor(r);if(!byGroup.has(k))byGroup.set(k,[]);byGroup.get(k).push(r);}}
  var root=document.getElementById('direct-groups');
  for(var name of groupsOrder){
-  var records=byGroup.get(name)||[];if(!records.length)continue;
+  var records=byGroup.get(name)||[],hasBundle=!!bundle&&name==='Clinical topic collections and formats';
+  if(!records.length&&!hasBundle)continue;
   var section=elem('section','resource-group'),h=elem('h3',null,name);
   var ul=elem('ul','resource-list');
+  if(hasBundle)ul.appendChild(bundle);
   records.sort((a,b)=>a.title.localeCompare(b.title));
   for(var r of records)ul.appendChild(renderResourceCard(r));
   section.appendChild(h);section.appendChild(ul);root.appendChild(section);

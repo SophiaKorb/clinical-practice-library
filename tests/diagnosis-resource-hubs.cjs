@@ -24,6 +24,16 @@ const refs=[...directMarkup.matchAll(/<a href="([^"]+)">/g)].map(m=>m[1]);
 assert.equal(refs.length,19,'Direct ADHD listing should contain one link per current ADHD-tagged resource');
 assert.equal(new Set(refs).size,19,'Direct ADHD list contains duplicates');
 assert.deepEqual(new Set(refs),new Set(catalog.map(x=>x.url)),'ADHD directory missing catalog-tagged source');
+const bundleStart=directMarkup.indexOf('<li class="companion-bundle">');
+const bundleEnd=directMarkup.indexOf('</li>',bundleStart);
+const bundle=bundleStart>=0&&bundleEnd>bundleStart?directMarkup.slice(bundleStart,bundleEnd+5):'';
+assert(bundle,'Adult ADHD task-start formats must be nested in one collection card');
+const bundleUrls=[...bundle.matchAll(/<a href="([^"]+)">/g)].map(x=>x[1]);
+assert.equal(bundleUrls.length,8,'Focused toolkit must retain exactly eight original links');
+assert.equal(new Set(bundleUrls).size,8,'Repeated companion resource inside bundle');
+assert(bundle.includes('Choose a companion format'),'Companion links need a clear contextual heading');
+assert.equal((directMarkup.match(/<li(?: class="[^"]*")?>/g)||[]).length,12,'The original 19 links should render in 12 top-level resource cards');
+
 const related=adult.match(/<section id="related-supports"[^>]*>[\s\S]*?<\/section>/)?.[0]||'';
 const relatedRefs=[...related.matchAll(/<li><a href="([^"]+)">/g)].map(m=>m[1]);
 assert.equal(relatedRefs.length,12,'Expected 12 evidence-reviewed cross-diagnostic support links');
