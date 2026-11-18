@@ -38,6 +38,7 @@ jobs:
           node scripts/qa/diagnosis-all14-rendered.cjs
           node scripts/qa/diagnosis-practice-labs-rendered.cjs
           node scripts/qa/diagnosis-wave2-rendered.cjs
+          node scripts/qa/diagnosis-wave2-reflow.cjs
       - name: Retain CPL review screenshots and printable samples
         if: always()
         uses: actions/upload-artifact@v4
