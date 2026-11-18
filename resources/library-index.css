@@ -217,3 +217,45 @@
   .shelves-section .plain-resource-list a,
   .diagnosis-links a {color:#111!important}
 }
+
+
+/* Visual QA pass 2: collections are library index rows, not stacks of cards.
+   Also remove the legacy duplicate desktop header when the shared nav is present. */
+.cpl-static-nav[data-replaces-header="true"] + .site-header {display:none!important}
+.shelves-section .shelf.expandable-shelf {
+  background:transparent;
+  border:0;
+  border-bottom:1px solid #cbd7ce;
+  border-radius:0;
+  margin:0;
+}
+.shelves-section .shelf.expandable-shelf:first-of-type {border-top:1px solid #cbd7ce}
+.shelves-section .shelf.expandable-shelf>summary {
+  padding:19px 8px;
+  border-radius:0;
+  min-height:72px;
+}
+.shelves-section .shelf.expandable-shelf>summary:hover {background:#eef3ec}
+.shelves-section .shelf.expandable-shelf>.shelf-body {
+  background:#fffdfa;
+  border:1px solid #e0e8e0;
+  border-radius:8px;
+  margin:0 4px 12px;
+  padding:14px 20px 20px;
+}
+.shelves-section .shelf-toggle {
+  border:0;
+  border-radius:0;
+  background:transparent;
+  width:32px;
+  height:32px;
+}
+@media(max-width:700px) {
+  .shelves-section .shelf.expandable-shelf {border-radius:0;margin:0}
+  .shelves-section .shelf.expandable-shelf>summary {padding:15px 6px!important;min-height:58px}
+  .shelves-section .shelf.expandable-shelf>.shelf-body {margin:0 0 10px;padding:10px 13px 14px}
+}
+@media print {
+  .shelves-section .shelf.expandable-shelf {border-color:#777}
+  .shelves-section .shelf.expandable-shelf>.shelf-body{background:white!important;border-color:#888}
+}
