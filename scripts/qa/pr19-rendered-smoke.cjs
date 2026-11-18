@@ -1,6 +1,7 @@
 /* Nonproduction rendered keyboard/print QA. Use a local file-serving origin; never hit production. */
 'use strict';
 const assert = require('node:assert/strict');
+const fs = require('node:fs');
 const { chromium } = require('playwright');
 const base = 'http://127.0.0.1:8765';
 const skipRoutes = require('./skip-navigation-routes.cjs');
@@ -105,6 +106,24 @@ const widths = [320, 390, 768, 1280];
           console.log('PRINT',path,'PDF bytes',pdf.length);
           await page.emulateMedia({media:'screen'});
         }
+      }
+      // Review-only visual captures of the redesigned production routes. No network or PHI.
+      if (width === 390 || width === 1280) {
+        const out = 'qa-artifacts/pr43/editorial-tiles';
+        fs.mkdirSync(out, {recursive:true});
+        await page.goto(base+'/', {waitUntil:'domcontentloaded'});
+        await page.locator('#shelves .shelf.expandable-shelf').first().scrollIntoViewIfNeeded();
+        await page.screenshot({path:out+'/home-'+width+'.png',animations:'disabled'});
+        await page.locator('#parent-patient').evaluate(node => {node.open = true;});
+        await page.locator('#parent-patient > summary').scrollIntoViewIfNeeded();
+        await page.screenshot({path:out+'/home-expanded-'+width+'.png',animations:'disabled'});
+        await page.goto(base+'/resources/community/index.html', {waitUntil:'domcontentloaded'});
+        await page.locator('.cards .card').first().scrollIntoViewIfNeeded();
+        await page.screenshot({path:out+'/community-'+width+'.png',animations:'disabled'});
+        await page.goto(base+'/resources/clinical-resource-finder.html', {waitUntil:'domcontentloaded'});
+        await page.locator('#lab-q').fill('TAY');
+        await page.locator('#lab-results .result-card').first().scrollIntoViewIfNeeded();
+        await page.screenshot({path:out+'/finder-tay-'+width+'.png',animations:'disabled'});
       }
       await context.close();
     }
