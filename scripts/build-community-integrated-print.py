@@ -69,12 +69,12 @@ def entries(html):
 def supplement_record(r,i):
  return B([P(f'LOCAL LISTING  /  {i:02d}','kicker'),P(esc(r['name']),'h3'),P(esc(r['meta']),'fine'),
  P(esc(r['desc']),'body'),P('<b>Before visiting:</b> Confirm age, eligibility, fee, accessible participation, current schedule and privacy with the listed organization.','fine'),
- P(A('Open the current provider page',r['url']),'link')],8)
+ P(A(r['url'],r['url']),'link')],8)
 def legal_page(story):
  story += [P('CURRENT LEGAL & DOCUMENT SOURCES','kicker'),P('Check the agency record, not an old checklist','h2'),
  P('Regional groups can help people navigate the process, but their handouts are not legal instructions. Some STARS/Fluxx pages describe older fees, policy and litigation. Name-change and sex-marker processes are distinct. Where a current agency page disagrees with a dated PDF or community guide, check directly with the agency or qualified counsel.'),Spacer(1,5)]
  for title,url,explanation in gov:
-  story += [P(A(title,url),'body'),P(esc(explanation),'fine'),Spacer(1,4)]
+  story += [P(A(title,url),'body'),P(A(url,url),'link'),P(esc(explanation),'fine'),Spacer(1,4)]
  story += [B([P('<b>Privacy and choice:</b> Do not infer that a young person wants a caregiver, school or other provider informed. Respect consent, confidentiality and the person’s preferred support. These notes are not legal advice.','body')]),PageBreak()]
 def worksheet(story):
  story += [P('RESOURCE NAVIGATION / PRINTABLE WORKSHEET','kicker'),P('An informed next connection','h2'),
@@ -88,7 +88,7 @@ def cover(story,title,overview,online,originalcount,hasextra):
  P(esc(overview)),
  P(f'The <b>complete original October 2026 guide</b> appears without page alteration after this new section. Its {originalcount} designed pages and links are retained. Newer listings are clearly dated and separated from original source claims.'),
  Spacer(1,10)]
- q=qr(online);text=[P('Check the current online edition','h3'),P('Scan to review provider sources, eligibility notes and new listings before making a referral. The print edition is a dated snapshot.','body'),P(A('Open the current CPL community guide',online),'link')]
+ q=qr(online);text=[P('Check the current online edition','h3'),P('Scan to review provider sources, eligibility notes and new listings before making a referral. The print edition is a dated snapshot.','body'),P(A(online,online),'link')]
  t=Table([[q,text]],colWidths=[110,386]);t.setStyle(TableStyle([('BACKGROUND',(0,0),(-1,-1),pale),('VALIGN',(0,0),(-1,-1),'MIDDLE'),('TOPPADDING',(0,0),(-1,-1),16),('BOTTOMPADDING',(0,0),(-1,-1),16),('LEFTPADDING',(0,0),(0,0),14),('LEFTPADDING',(1,0),(1,0),7)]));story += [t,Spacer(1,17)]
  story += [P('Inside this revised print edition','h2'),
  P('• Eight local LGBTQ+ community listings from the newer online directory.'),
@@ -104,7 +104,7 @@ def youth_extra(story):
   title=flatten(sec.find('h2'));desc=flatten(sec.find('p'))
   story += [P(esc(title),'h3'),P(esc(desc),'body'),Spacer(1,5)]
  story += [B([P('<b>Different locations:</b> The CPL source profile distinguishes the provider’s office/hygiene pickup site at 1131 S. Van Buren Avenue from a separate Small Home Experience site at 1101 S. Van Buren Avenue. Confirm addresses, hours, intake, eligibility, capacity and whether the service is currently operating before travel or referral.','body')]),Spacer(1,10),
- P(A('Current organization website','https://iamyou360.org/')+'  /  '+A('CPL source-specific profile','https://clinical-practice-library.vercel.app/resources/community/iamyou360.html'),'link'),PageBreak()]
+ P(A('https://iamyou360.org/','https://iamyou360.org/'),'link'),P(A('https://clinical-practice-library.vercel.app/resources/community/iamyou360.html','https://clinical-practice-library.vercel.app/resources/community/iamyou360.html'),'link'),PageBreak()]
 def make(which):
  youth=which=='youth'
  name='Youth & Transition-Age Community Resource Guide' if youth else 'Family & Parenting Community Resource Guide'
