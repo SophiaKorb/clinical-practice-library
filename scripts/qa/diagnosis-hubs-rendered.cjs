@@ -195,6 +195,27 @@ fs.mkdirSync(dir,{recursive:true});
    await page.selectOption('#topic-select','ADHD');
    await page.waitForURL(/topic=ADHD/);
    assert.match(await page.locator('#topic-name').innerText(),/ADHD/,'Diagnosis picker broken');
+   // Public-facing editorial limits on four collections formerly showed internal approval status.
+   if(width===390||width===1280){
+    for(const topic of ['aphasia-communication-access','child-aggression-caregiver-coaching','child-grief-continuing-bonds','health-anxiety-medical-plan']){
+     const response=await page.goto(base+'/resources/clinical-topics/'+topic+'/index.html',{waitUntil:'domcontentloaded'});
+     assert.equal(response.status(),200,'Topic collection unavailable: '+topic);
+     const plain=await page.locator('main').innerText();
+     assert(plain.includes('These original teaching aids have not been independently validated'),'Clinically important evidence caution missing '+topic);
+     assert(!/review pending|approval remain pending|QA and qualified review needs/i.test(plain),'Internal review note leaked into collection '+topic);
+     assert(await page.locator('a[href="/resources/qa-status.html"]').count()>0,'Related resource-use guidance link missing '+topic);
+     const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);
+     assert(overflow<=2,'Clinical-topic editorial reflow '+topic+' '+width+' overflow '+overflow);
+     await page.locator('a[href="/resources/qa-status.html"]').focus();
+     assert.equal(await page.evaluate(()=>document.activeElement.getAttribute('href')),'/resources/qa-status.html','About-resources link not keyboard focusable '+topic);
+     if(width===390)await page.screenshot({path:path.join(dir,'reader-clinical-topic-'+topic+'-390.png'),fullPage:true});
+     if(width===1280&&topic==='child-grief-continuing-bonds'){
+      const pdf=await page.pdf({format:'Letter',printBackground:false});
+      assert(pdf.length>3000,'Child grief printable guide unexpectedly small');
+      fs.writeFileSync(path.join(dir,'reader-child-grief-print.pdf'),pdf);
+     }
+    }
+   }
    await page.goto(base+'/#diagnosis-guides',{waitUntil:'networkidle'});
    assert.equal(await page.locator('.diagnosis-card').count(),8);
    assert.equal(await page.locator('.diagnosis-card .diagnosis-hub-link').count(),8);
