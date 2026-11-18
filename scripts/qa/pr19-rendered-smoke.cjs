@@ -126,6 +126,33 @@ const widths = [320, 390, 768, 1280];
           if (learning.choices!==4 || !learning.assignmentLink || !learning.trainingLabel)
             failures.push('Workforce learning-to-assignments journey at '+width+'px: '+JSON.stringify(learning));
         }
+        if (path === '/resources/training/workforce-learning-center.html') {
+          const toAssignments=page.locator('a[href="/resources/therapy/clinical-intern-learning-hub.html#assignments"]').first();
+          if (!await toAssignments.count()) {
+            failures.push('Workforce to assignments: missing link at '+width+'px');
+          } else {
+            await toAssignments.click();
+            await page.waitForURL('**/resources/therapy/clinical-intern-learning-hub.html#assignments');
+            const target=await page.evaluate(() => {
+              const h=document.querySelector('#assignments h2');
+              const sec=document.querySelector('#assignments');
+              const rect=sec?.getBoundingClientRect();
+              return {found:!!h,hash:location.hash,top:rect?.top,viewport:innerHeight,headings:[...sec.querySelectorAll('.assignment h3')].length};
+            });
+            if (!target.found || target.hash!=='#assignments' || target.headings!==6 || target.top>target.viewport)
+              failures.push('Workforce assignment link did not reach section at '+width+'px '+JSON.stringify(target));
+            await page.goto(base+path,{waitUntil:'domcontentloaded'});
+          }
+        }
+        if (path === '/resources/therapy/clinical-intern-learning-hub.html' && width===390) {
+          await page.emulateMedia({media:'print'});
+          const printInfo=await page.evaluate(() => ({
+            cards:[...document.querySelectorAll('#assignments article.assignment')].filter(n=>getComputedStyle(n).display!=='none').length,
+            skipHidden:getComputedStyle(document.querySelector('a.cpl-skip')).display==='none'
+          }));
+          await page.emulateMedia({media:'screen'});
+          if(printInfo.cards!==6 || !printInfo.skipHidden)failures.push('Printable supervision assignments incomplete '+JSON.stringify(printInfo));
+        }
         if (path === '/' && !metrics.hasSpanish) failures.push('homepage ' + width + 'px: missing #espanol');
         if (path === '/' && width >= 601) {
           const nav = await page.locator('.cpl-static-nav__links').evaluate(n => ({
@@ -162,6 +189,11 @@ const widths = [320, 390, 768, 1280];
           const pdf = await page.pdf({format:'Letter',printBackground:true});
           checks++;
           if (pdf.length < 1500 || pdf.subarray(0,4).toString() !== '%PDF') failures.push('PRINT '+path+': invalid PDF '+pdf.length+' bytes');
+          if(path==='/resources/therapy/clinical-intern-learning-hub.html'){
+            const out='qa-artifacts/pr43/supervisee-assignments';
+            fs.mkdirSync(out,{recursive:true});
+            fs.writeFileSync(out+'/supervisee-print.pdf',pdf);
+          }
           console.log('PRINT',path,'PDF bytes',pdf.length);
           await page.emulateMedia({media:'screen'});
         }
