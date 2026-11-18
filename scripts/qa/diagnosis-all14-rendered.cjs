@@ -7,12 +7,13 @@ const catalog=JSON.parse(raw.replace(/^globalThis\.CPLFinderData\s*=\s*/,'').rep
 const {runInNewContext}=require('node:vm');
 const runtimeCatalog=JSON.parse(JSON.stringify(catalog));
 runInNewContext(fs.readFileSync(path.join(process.cwd(),'resources/diagnoses/adult-adhd-collection/finder-overlay.js'),'utf8'),{CPLFinderData:runtimeCatalog});
+runInNewContext(fs.readFileSync(path.join(process.cwd(),'resources/diagnoses/practice-labs/finder-overlay.js'),'utf8'),{CPLFinderData:runtimeCatalog});
 assert([615,813].includes(catalog.resources.length),'Expect historical 615 or current 813 official finder source');
-assert.equal(runtimeCatalog.resources.length,catalog.resources.length+31,'Exactly 31 new review ADHD entries added to current official source');
+assert.equal(runtimeCatalog.resources.length,catalog.resources.length+35,'31 ADHD + four practice-lab entries added to current official source');
 for(const topic of catalog.facets.diagnosis){
  const initial=catalog.resources.filter(x=>(x.tags?.diagnosis||[]).includes(topic));
  const loaded=runtimeCatalog.resources.filter(x=>(x.tags?.diagnosis||[]).includes(topic));
- assert.equal(loaded.length,initial.length+(topic==='ADHD'?31:0),'Non-ADHD diagnosis metadata changed: '+topic);
+ assert.equal(loaded.length,initial.length+(topic==='ADHD'?31:0)+({'Autism':1,'Anxiety / OCD':1,'Depression':1,'Trauma / dissociation':1}[topic]||0),'Unexpected diagnosis overlay metadata: '+topic);
 }
 const base=process.env.CPL_QA_ORIGIN||'http://127.0.0.1:8765';
 const dir=path.join(process.cwd(),'qa-artifacts/diagnosis-hubs');

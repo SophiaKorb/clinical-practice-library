@@ -174,7 +174,7 @@ fs.mkdirSync(dir,{recursive:true});
     'Serious topic-index axe issue '+width+': '+JSON.stringify(hubAxe.violations.map(v=>({id:v.id,impact:v.impact,nodes:v.nodes.slice(0,2).map(n=>n.html)}))));
    await page.goto(base+'/resources/diagnoses/index.html?topic=Autism',{waitUntil:'networkidle'});
    await page.waitForSelector('#direct-groups .resource-list li');
-   assert.equal(await page.locator('#direct-groups .resource-list li').count(),29,'Autism diagnosis hub missing tagged resources');
+   assert.equal(await page.locator('#direct-groups .resource-list li').count(),30,'Autism diagnosis hub must include all 29 canonical tagged records plus one additive practice lab');
    assert.equal(await page.locator('#adhd-focus').isHidden(),true,'Adult ADHD content leaked into unrelated diagnosis');
    await page.goto(base+'/resources/diagnoses/index.html',{waitUntil:'networkidle'});
    await page.waitForSelector('#topic-grid .topic-choice');
