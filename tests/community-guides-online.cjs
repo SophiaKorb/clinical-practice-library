@@ -63,6 +63,15 @@ for(const [html,type] of [[familyHtml,'family'],[tayHtml,'transition-age']]){
  }
 }
 
+// Distinguish source-specific community legal guides from current government procedure.
+const legalReaders=[familyHtml,tayHtml,read('resources/community/index.html')];
+const officialLegalLinks=["https://www.sc.pima.gov/how-do-i","https://www.azcourts.gov/selfservicecenter/Forms/Name-Change","https://www.ssa.gov/life-events/change-name","https://azdot.gov/mvd/services/driver-license-ID/change-your-name","https://www.azdhs.gov/licensing/vital-records/index.php","https://travel.state.gov/en/passports/apply/unique-needs/sex-markers.html"];
+for(const [i,html] of legalReaders.entries()){
+ assert.equal((html.match(/id="current-legal-records"/g)||[]).length,1,'Missing one-and-only-one legal source caution on community page '+i);
+ assert(html.includes('do not rely on a community handout alone'.replace('do','Do')),'Missing advice to verify primary sources on community page '+i);
+ for(const url of officialLegalLinks)assert(html.includes('href="'+url+'"'),'Missing authoritative legal reference '+url+' on community page '+i);
+}
+
 // User-approved final print+digital PDFs are published byte-identically to canonical Drive sources.
 // They supersede the older archived 38-page/9-page PDF snapshots, not the source-text companions.
 const crypto=require('node:crypto');

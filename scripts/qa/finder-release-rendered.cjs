@@ -185,6 +185,9 @@ fs.mkdirSync(dir,{recursive:true});
    checks.push({width,overflow,axe:axe.violations.length,legacyLinkRecovery:true,classicFunctional:true});
    await context.close();
   }
+  // Isolated extra reflow/stress regression: run only after the original smoke checks pass.
+  // Its viewport equivalents do not claim actual browser zoom certification.
+  require('node:child_process').execFileSync(process.execPath,[path.join(__dirname,'community-guides-reflow-rendered.cjs')],{stdio:'inherit',timeout:150000,env:process.env});
   console.log('FINDER_RELEASE_RENDERED_PASS '+JSON.stringify(checks));
   fs.writeFileSync(path.join(dir,'summary.json'),JSON.stringify({result:'PASS',scope:'Chromium 320,390,1280 CSS pixels; native AT, real browser zoom, physical print remain human review',checks},null,2));
  }finally{await browser.close();}
