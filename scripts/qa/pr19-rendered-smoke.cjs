@@ -16,6 +16,7 @@ const paths = [...new Set([
   '/resources/clinical-topics/voices-collaborative-coping/case.html',
   '/resources/therapy/visual-reasoning-toolkit.html',
   '/resources/therapy/clinical-intern-learning-hub.html',
+  '/resources/training/workforce-learning-center.html',
   '/resources/training/dsm-from-zero.html',
   '/resources/training/diagnosis-comparer.html',
   '/resources/therapy/treatment-planning-worksheet.html',
@@ -114,6 +115,16 @@ const widths = [320, 390, 768, 1280];
             });
             await page.screenshot({path:out+'/supervisee-'+width+'.png',animations:'disabled'});
           }
+        }
+        if (path === '/resources/training/workforce-learning-center.html') {
+          const learning = await page.evaluate(() => ({
+            choices: document.querySelectorAll('.tracks button[data-track]').length,
+            assignmentLink: [...document.querySelectorAll('a[href]')].some(a =>
+              a.getAttribute('href')==='/resources/therapy/clinical-intern-learning-hub.html#assignments'),
+            trainingLabel: !![...document.querySelectorAll('h2')].find(h=>h.textContent.includes('Choose a skill to practice'))
+          }));
+          if (learning.choices!==4 || !learning.assignmentLink || !learning.trainingLabel)
+            failures.push('Workforce learning-to-assignments journey at '+width+'px: '+JSON.stringify(learning));
         }
         if (path === '/' && !metrics.hasSpanish) failures.push('homepage ' + width + 'px: missing #espanol');
         if (path === '/' && width >= 601) {
