@@ -137,6 +137,13 @@ const widths = [320, 390, 768, 1280];
           return b.top>=0 && b.left>=0 && b.right<=innerWidth+1 && b.bottom<=innerHeight+1;
         });
         if (!menuOnscreen) failures.push('Open More menu cropped outside viewport at '+width+'px');
+        if (width===390) {
+          const lastShown=await page.locator('.cpl-static-nav__menu a').last().evaluate(a=>{
+            const b=a.getBoundingClientRect(),parent=a.closest('.cpl-static-nav__menu').getBoundingClientRect();
+            return b.top>=parent.top && b.bottom<=parent.bottom+1 && b.bottom<=innerHeight+1;
+          });
+          if (!lastShown) failures.push('More menu final destination requires undisclosed scrolling at standard mobile height');
+        }
         await page.screenshot({path:out+'/home-more-'+width+'.png',animations:'disabled'});
         await page.keyboard.press('Tab');
         const firstLinkFocused = await page.locator('.cpl-static-nav__menu a').first().evaluate(a=>document.activeElement===a);
