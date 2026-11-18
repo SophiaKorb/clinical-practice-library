@@ -39,6 +39,7 @@ const diagnosisIndex=fs.readFileSync(path.join(root,'resources/diagnoses/index.h
 const compIndex=fs.readFileSync(path.join(root,'resources/diagnoses/comprehensive/index.html'),'utf8');
 const hubJS=fs.readFileSync(path.join(root,'resources/diagnoses/diagnosis-hubs.js'),'utf8');
 const qaPage=fs.readFileSync(path.join(root,'resources/qa-status.html'),'utf8');
+const adhdGuide=fs.readFileSync(path.join(root,'resources/diagnoses/adult-adhd.html'),'utf8');
 const topicIndex=fs.readFileSync(path.join(root,'resources/clinical-topics/index.html'),'utf8');
 assert(diagnosisIndex.includes('<h2 id="direct-head">Resources for this topic</h2>'));
 assert(diagnosisIndex.includes('Being listed does not mean a resource is clinically suitable for everyone'));
@@ -46,6 +47,7 @@ assert(compIndex.includes('not validated diagnostic instruments or stand-alone t
 assert(hubJS.includes("data.resources.filter(")&&hubJS.includes("r.tags&&r.tags.diagnosis"),'Preserve fully sourced dynamic topic filter');
 assert(hubJS.includes("direct.length+' resources for this topic'"),'Dynamic counter still exposes catalog metadata');
 assert.equal((hubJS.match(/More topic resources/g)||[]).length,2,'Rendered resource group label must match its grouping-order key');
+assert(adhdGuide.includes('Choose resources according to the person\'s goals, age, and circumstances')&&!adhdGuide.includes('live finder and dynamic ADHD index'), 'ADHD overview must speak to the reader, not explain catalog history');
 assert(qaPage.includes('name="robots" content="noindex,nofollow"'));
 assert(!topicIndex.includes('href="/resources/qa-status.html"'),'Internal QA link in reader-facing topic footer');
 const firstSiteFlags=audit.filter(x=>!x.file.startsWith('resources/diagnoses/')&&x.file!=='resources/clinical-topics/index.html');
