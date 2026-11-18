@@ -64,7 +64,15 @@ fs.mkdirSync(out,{recursive:true});
     await page.fill('#lab-q','IEP');
     await page.selectOption('#lab-population','');
     await page.selectOption('#lab-audience','');
+    await page.emulateMedia({media:'print'});
+    const searchPrint=await page.locator('#lab-q').evaluate(el=>{
+      const x=getComputedStyle(el);
+      return {outline:x.outlineStyle,border:x.borderTopWidth,background:x.backgroundColor};
+    });
+    assert.equal(searchPrint.outline,'none','Printed search field retained keyboard focus ring');
+    assert.equal(searchPrint.border,'0px','Printed search field retained active border');
     const pdf=await page.pdf({format:'Letter',printBackground:false});
+    await page.emulateMedia({media:'screen'});
     fs.writeFileSync(path.join(out,'lab-iep-browser-print.pdf'),pdf);
    }
    const original=await context.newPage();
