@@ -34,6 +34,7 @@ jobs:
           node scripts/qa/cpl-pr40-pr41-rendered.cjs
           node scripts/qa/finder-lab-rendered.cjs
           node scripts/qa/finder-release-rendered.cjs
+          node scripts/qa/community-guides-reflow-rendered.cjs
           node scripts/qa/diagnosis-hubs-rendered.cjs
           node scripts/qa/diagnosis-all14-rendered.cjs
       - name: Retain CPL review screenshots and printable samples
