@@ -27,7 +27,7 @@ for(const [html,entries,type] of [[familyHtml,family,'family'],[tayHtml,tay,'tay
   assert(html.includes('@media print')&&html.includes('@media(max-width:520px)'),'Print/small-screen layout missing');
   assert(html.includes('id="guide-print"')&&html.includes("window.print()"),'Online guide lacks print/save PDF action');
   assert(html.includes('Print all web listings')&&html.includes('shorter web summaries')&&html.includes('bookmarks and document tags'),'The web print action must not be confused with the approved source PDF');
-  assert(html.includes('.section[hidden]{display:block!important}')&&html.includes('.entry[hidden]{display:inline-block!important}'),'Filtered listing must not disappear from full-guide print');
+  assert(html.includes('.section[hidden]{display:block!important}')&&html.includes('.entry[hidden]{display:block!important}'),'Filtered listing must not disappear from full-guide print');
   assert(html.includes('.section{break-before:auto;margin-bottom:18px}')&&html.includes('.section-head{break-inside:avoid;break-after:avoid}'),'Print layout must not force a blank partial cover page and must keep headings with their section');
   assert(html.includes('.entries{display:block;columns:initial}.entry{display:block;width:100%;margin:0 0 10px}'),'Print listing content must allow pagination without unbreakable two-column blocks');
   assert(html.includes('link.parentElement.hidden=')&&html.includes('No matches. Try a different search'),'Filtered navigation and no-match instruction missing');
