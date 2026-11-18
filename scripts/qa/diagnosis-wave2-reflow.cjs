@@ -19,7 +19,7 @@ const out=path.resolve('qa-artifacts/diagnosis-wave2/reflow');fs.mkdirSync(out,{
    assert.equal(r.status(),200,uri);
    await page.evaluate(size=>{document.documentElement.style.fontSize=size+'px';},check.font);
    const tooWide=await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);
-   assert(tooWide<=2,'Reflow overflow '+JSON.stringify({slug,...check,tooWide}));
+   if(tooWide>2){const offenders=await page.evaluate(()=>[...document.querySelectorAll('body *')].map(el=>({tag:el.tagName,text:(el.textContent||'').trim().slice(0,55),left:Math.round(el.getBoundingClientRect().left),right:Math.round(el.getBoundingClientRect().right)})).filter(x=>x.right>innerWidth+2||x.left < -2).slice(0,15));throw new Error('Reflow overflow '+JSON.stringify({slug,...check,tooWide,offenders}));}
    const b=page.locator('button[data-choice]').last();
    await b.focus();await page.keyboard.press('Enter');
    assert.equal(await b.getAttribute('aria-pressed'),'true','Keyboard Enter selection '+slug+' '+check.name);
