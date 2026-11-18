@@ -72,3 +72,285 @@
 .diagnosis-hub-link:hover{background:#d8ecdc}.diagnosis-links a:focus-visible{outline:3px solid #195fc1;outline-offset:3px}
 @media(max-width:480px){.diagnosis-hub-link{width:100%;justify-content:center}.diagnosis-links{gap:4px 12px}}
 @media print{.diagnosis-hub-link{background:none;border:1px solid #777;color:black!important}}
+
+
+/* Editorial tile review | isolated visual-only refinement.
+   Collection disclosures remain disclosures; resources remain direct links. */
+.shelves-section .shelf.expandable-shelf {
+  background:#fffdfa;
+  border:1px solid #d8ddd6;
+  border-radius:12px;
+  margin:9px 0;
+  overflow:hidden;
+}
+.shelves-section .shelf.expandable-shelf>summary {
+  border-left:0 !important;
+  padding:19px 22px;
+  min-height:76px;
+  gap:18px;
+}
+.shelves-section .shelf.expandable-shelf>summary:hover {
+  background:#f7f9f5;
+}
+.shelves-section .shelf.expandable-shelf>summary h3 {
+  font:600 clamp(1.18rem,1.65vw,1.42rem)/1.25 Georgia,"Times New Roman",serif;
+  letter-spacing:-.015em;
+  color:#253b33;
+}
+.shelves-section .shelf.expandable-shelf>summary p {
+  font-size:.94rem;
+  line-height:1.52;
+  color:#53635b;
+  margin-top:5px;
+}
+.shelves-section .shelf-toggle {
+  width:29px;
+  height:29px;
+  border:1px solid #d6dfd7;
+  background:transparent;
+  color:#31594b;
+}
+.shelves-section .shelf.expandable-shelf>.shelf-body {
+  background:#fffdfa;
+  border-top:1px solid #e1e7df;
+  padding:14px 21px 20px;
+}
+.shelves-section .topic {
+  background:transparent;
+  border:0;
+  border-bottom:1px solid #e2e7e0;
+  border-radius:0;
+  margin:0;
+}
+.shelves-section .topic>summary {
+  font-size:1rem;
+  line-height:1.4;
+  padding:13px 4px;
+  color:#2c4b3f;
+}
+.shelves-section .topic-body {
+  padding:0 4px 13px;
+  font-size:.95rem;
+}
+.shelves-section .resource-links,
+.shelves-section .plain-resource-list {
+  gap:0 20px;
+}
+.shelves-section .resource-links a,
+.shelves-section .plain-resource-list a {
+  display:block;
+  padding:11px 2px;
+  border-bottom:1px solid #e5eae4;
+  border-radius:0;
+  background:transparent;
+  color:#285a4e;
+  font-size:.95rem;
+  font-weight:580;
+  line-height:1.5;
+  text-decoration:underline;
+  text-decoration-thickness:1px;
+  text-underline-offset:3px;
+}
+.shelves-section .resource-links a:hover,
+.shelves-section .plain-resource-list a:hover {
+  color:#173f34;
+  background:#f6f8f4;
+}
+.shelves-section .resource-links .resource-item,
+.shelves-section .plain-resource-list .resource-item {
+  background:transparent;
+  border-bottom:1px solid #e5eae4;
+  border-radius:0;
+  padding:11px 2px;
+  font-size:.92rem;
+}
+.diagnosis-grid {border-color:#d7ded6;border-radius:12px;background:#fffdfa}
+.diagnosis-card {
+  background:transparent;
+  grid-template-columns:minmax(160px,26%) minmax(0,1fr);
+  gap:8px 22px;
+  padding:19px 23px;
+  border-bottom-color:#e3e8e0;
+}
+.diagnosis-card h3 {
+  font:600 1.24rem/1.32 Georgia,"Times New Roman",serif;
+  letter-spacing:-.015em;
+  color:#243c33;
+}
+.diagnosis-card p {font-size:.9rem;line-height:1.55}
+.diagnosis-links {gap:6px 19px}
+.diagnosis-links a {
+  font-size:.95rem;
+  font-weight:580;
+  text-decoration:underline;
+  text-underline-offset:3px;
+  min-height:44px;
+}
+.diagnosis-links a.diagnosis-hub-link {
+  background:transparent;
+  border:0;
+  border-bottom:2px solid #658c78;
+  border-radius:0;
+  padding:3px 0;
+  color:#205648!important;
+  justify-content:flex-start;
+  font-weight:730!important;
+}
+.diagnosis-links a.diagnosis-hub-link:hover {background:transparent;color:#153c32!important}
+.need-card {border-radius:12px;background:#fffdfa;border-color:#d8ddd6;padding:22px}
+.need-card h3 {font:600 1.35rem/1.3 Georgia,"Times New Roman",serif}
+@media(max-width:700px) {
+  .shelves-section .shelf.expandable-shelf>summary {
+    padding:15px 16px!important;
+    min-height:60px;
+  }
+  .shelves-section .shelf.expandable-shelf>summary h3 {font-size:1.16rem}
+  .shelves-section .shelf.expandable-shelf>.shelf-body {padding:10px 16px 15px}
+  .diagnosis-card {grid-template-columns:1fr;padding:16px}
+  .diagnosis-card h3 {font-size:1.24rem}
+  .diagnosis-links a.diagnosis-hub-link {width:auto;justify-content:flex-start}
+}
+@media print {
+  .shelves-section .shelf.expandable-shelf,
+  .diagnosis-grid,.diagnosis-card,.need-card {background:white!important;box-shadow:none!important}
+  .shelves-section .resource-links a,
+  .shelves-section .plain-resource-list a,
+  .diagnosis-links a {color:#111!important}
+}
+
+
+/* Visual QA pass 2: collections are library index rows, not stacks of cards.
+   Also remove the legacy duplicate desktop header when the shared nav is present. */
+.cpl-static-nav[data-replaces-header="true"] + .site-header {display:none!important}
+.shelves-section .shelf.expandable-shelf {
+  background:transparent;
+  border:0;
+  border-bottom:1px solid #cbd7ce;
+  border-radius:0;
+  margin:0;
+}
+.shelves-section .shelf.expandable-shelf:first-of-type {border-top:1px solid #cbd7ce}
+.shelves-section .shelf.expandable-shelf>summary {
+  padding:19px 8px;
+  border-radius:0;
+  min-height:72px;
+}
+.shelves-section .shelf.expandable-shelf>summary:hover {background:#eef3ec}
+.shelves-section .shelf.expandable-shelf>.shelf-body {
+  background:#fffdfa;
+  border:1px solid #e0e8e0;
+  border-radius:8px;
+  margin:0 4px 12px;
+  padding:14px 20px 20px;
+}
+.shelves-section .shelf-toggle {
+  border:0;
+  border-radius:0;
+  background:transparent;
+  width:32px;
+  height:32px;
+}
+@media(max-width:700px) {
+  .shelves-section .shelf.expandable-shelf {border-radius:0;margin:0}
+  .shelves-section .shelf.expandable-shelf>summary {padding:15px 6px!important;min-height:58px}
+  .shelves-section .shelf.expandable-shelf>.shelf-body {margin:0 0 10px;padding:10px 13px 14px}
+}
+@media print {
+  .shelves-section .shelf.expandable-shelf {border-color:#777}
+  .shelves-section .shelf.expandable-shelf>.shelf-body{background:white!important;border-color:#888}
+}
+
+
+/* Desktop navigation disclosure.
+   A hidden horizontal scrollbar was concealing Community and Español links.
+   Keep the five principal destinations in view and move secondary ones into
+   the already-present native More disclosure (same real destinations). */
+@media screen and (min-width:601px) {
+  .cpl-static-nav {
+    justify-content:space-between;
+    gap:10px;
+  }
+  .cpl-static-nav__links {
+    flex:1 1 auto;
+    overflow:visible;
+    white-space:normal;
+    scrollbar-width:none;
+    padding:0;
+    gap:1px;
+  }
+  .cpl-static-nav__links a {padding:8px clamp(6px,.75vw,11px);min-height:44px}
+  .cpl-static-nav__links a[data-nav-priority="more"] {display:none!important}
+  .cpl-static-nav__mobile {
+    display:flex!important; /* site-navigation.css loads later and sets display:none */
+    flex:0 0 auto;
+    align-items:center;
+  }
+  .cpl-static-nav__quick {display:none!important}
+  .cpl-static-nav__more {
+    display:block;
+    position:relative;
+    padding:0;
+    margin:0;
+    border:0;
+    background:transparent;
+  }
+  .cpl-static-nav__more>summary {
+    display:inline-flex;
+    align-items:center;
+    gap:5px;
+    min-height:44px;
+    padding:8px 11px;
+    cursor:pointer;
+    list-style:none;
+    border:1px solid #c9d8cd;
+    border-radius:8px;
+    background:#fffdfa;
+    color:#244c40;
+    font:650 .9rem/1.3 system-ui,sans-serif;
+  }
+  .cpl-static-nav__more>summary::-webkit-details-marker {display:none}
+  .cpl-static-nav__more[open]>summary {background:#e0ebe2;border-color:#9cb9a3}
+  .cpl-static-nav__more:not([open]) .cpl-static-nav__menu {display:none!important}
+  .cpl-static-nav__menu {
+    position:absolute;
+    top:calc(100% + 7px);
+    right:0;
+    z-index:30;
+    width:min(284px,calc(100vw - 18px));
+    max-height:min(72vh,520px);
+    overflow-y:auto;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:1px;
+    padding:7px;
+    border:1px solid #adc5b4;
+    border-radius:10px;
+    background:#fffdfa;
+    box-shadow:0 15px 36px #172e241f;
+    white-space:normal;
+  }
+  .cpl-static-nav__menu a {
+    display:block;
+    min-height:44px;
+    padding:11px 12px;
+    border-radius:6px;
+    color:#205548;
+    text-decoration:none;
+    font:600 .9rem/1.4 system-ui,sans-serif;
+  }
+  .cpl-static-nav__menu a:hover {background:#edf4ee}
+  .cpl-static-nav__more>summary:focus-visible,
+  .cpl-static-nav__menu a:focus-visible {outline:3px solid #98630d;outline-offset:2px}
+}
+@media screen and (min-width:601px) and (max-width:1040px) {
+  .cpl-static-nav__links a[data-nav-compact="hide"] {display:none!important}
+}
+
+
+/* Keep the mobile More menu's final Español and diagnosis entries discoverable
+   at standard phone heights; short viewports still scroll inside the menu. */
+@media screen and (max-width:600px) {
+  body .cpl-static-nav .cpl-static-nav__menu {
+    max-height:min(78vh,620px)!important;
+  }
+}
