@@ -131,6 +131,12 @@ const widths = [320, 390, 768, 1280];
         const communityLink = page.locator('.cpl-static-nav__menu a[href="/resources/community/index.html"]');
         const queerLink = page.locator('.cpl-static-nav__menu a[href="/resources/community/online-lgbtq-resources.html"]');
         if (!menuOpen || !await communityLink.isVisible() || !await queerLink.isVisible()) failures.push('More menu missing community routes at '+width+'px');
+        await page.evaluate(() => window.scrollTo({top:0,behavior:'instant'}));
+        const menuOnscreen = await page.locator('.cpl-static-nav__menu').evaluate(n=>{
+          const b=n.getBoundingClientRect();
+          return b.top>=0 && b.left>=0 && b.right<=innerWidth+1 && b.bottom<=innerHeight+1;
+        });
+        if (!menuOnscreen) failures.push('Open More menu cropped outside viewport at '+width+'px');
         await page.screenshot({path:out+'/home-more-'+width+'.png',animations:'disabled'});
         await page.keyboard.press('Tab');
         const firstLinkFocused = await page.locator('.cpl-static-nav__menu a').first().evaluate(a=>document.activeElement===a);
