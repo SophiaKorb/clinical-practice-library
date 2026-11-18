@@ -263,7 +263,7 @@
 
 /* Desktop navigation disclosure.
    A hidden horizontal scrollbar was concealing Community and Español links.
-   Keep the six principal destinations in view and move secondary ones into
+   Keep the five principal destinations in view and move secondary ones into
    the already-present native More disclosure (same real destinations). */
 @media screen and (min-width:601px) {
   .cpl-static-nav {
@@ -279,13 +279,7 @@
     gap:1px;
   }
   .cpl-static-nav__links a {padding:8px clamp(6px,.75vw,11px);min-height:44px}
-  .cpl-static-nav__links a:nth-child(1),
-  .cpl-static-nav__links a:nth-child(2),
-  .cpl-static-nav__links a:nth-child(7),
-  .cpl-static-nav__links a:nth-child(8),
-  .cpl-static-nav__links a:nth-child(9),
-  .cpl-static-nav__links a:nth-child(11),
-  .cpl-static-nav__links a:nth-child(12) {display:none!important}
+  .cpl-static-nav__links a[data-nav-priority="more"] {display:none!important}
   .cpl-static-nav__mobile {
     display:flex!important; /* site-navigation.css loads later and sets display:none */
     flex:0 0 auto;
@@ -349,8 +343,7 @@
   .cpl-static-nav__menu a:focus-visible {outline:3px solid #98630d;outline-offset:2px}
 }
 @media screen and (min-width:601px) and (max-width:1040px) {
-  .cpl-static-nav__links a:nth-child(5),
-  .cpl-static-nav__links a:nth-child(6) {display:none!important}
+  .cpl-static-nav__links a[data-nav-compact="hide"] {display:none!important}
 }
 
 
