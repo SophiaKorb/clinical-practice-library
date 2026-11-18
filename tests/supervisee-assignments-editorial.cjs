@@ -40,3 +40,29 @@ assert.match(pages.training,/\.assignment-grid\{/);
 assert.match(pages.training,/@media\(max-width:760px\)/);
 assert.match(pages.training,/@media print/);
 console.log('PASS: Plain-language entry points; 6 specific fictional assignments, deliverables, supervision standards and valid resources.');
+
+// Continue the editorial audit beyond the four entry pages. The repository
+// includes historical/archived public pages, so report rather than silently
+// rewriting source passages that have not received owner review.
+const flagged=[];
+const pattern=/\b(?:start with|choose) the question in front of you\b|\bfour learning paths\b|\blearning paths\b/gi;
+function scan(dir){
+  for(const item of fs.readdirSync(path.join(root,dir),{withFileTypes:true})){
+    if(item.name==='node_modules'||item.name==='.git'||item.name==='legacy')continue;
+    const rel=path.join(dir,item.name);
+    if(item.isDirectory()){scan(rel);continue}
+    if(!item.isFile()||!rel.endsWith('.html'))continue;
+    const text=read(rel);
+    const matches=[...text.matchAll(pattern)].map(m=>m[0]);
+    if(matches.length)flagged.push({path:rel,count:matches.length,examples:[...new Set(matches)].slice(0,3)});
+  }
+}
+scan('resources');
+for(const p of ['index.html','library.html','classic.html']){
+  if(fs.existsSync(path.join(root,p))){
+    const hits=[...read(p).matchAll(pattern)];
+    if(hits.length)flagged.push({path:p,count:hits.length});
+  }
+}
+console.log('EDITORIAL_PHRASE_AUDIT',JSON.stringify(flagged));
+
