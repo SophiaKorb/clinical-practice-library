@@ -92,6 +92,25 @@ const sharedTemplateBacklog=files.filter(file=>{
  if(!rel.startsWith('resources/clinical-topics/'))return false;
  return /tool validation and qualified clinical (?:approval|review) (?:remain )?pending/i.test(strip(fs.readFileSync(file,'utf8')));
 }).map(file=>path.relative(root,file).replace(/\\/g,'/'));
+// Shared topic collections are a separately verified template family (25 x 7 formats).
+const topicFamilies=['adult-adhd-task-starts','adult-autism-load-recovery','aphasia-communication-access',
+'bfrb-awareness-support','binge-eating-patterns','bipolar-episode-timeline','body-dysmorphia-checking',
+'child-aggression-caregiver-coaching','child-grief-continuing-bonds','chronic-pain-pacing',
+'depression-activity-reward','dissociation-function-orientation','health-anxiety-medical-plan',
+'insomnia-cbti-readiness','intellectual-disability-supported-choice','learning-instruction-access',
+'ocd-mental-rituals','panic-alarm-loop','restrictive-eating-coordination',
+'sibling-conflict-safety-repair','sleep-loss-activation','social-anxiety-attention',
+'tics-context-impact','trauma-cue-orientation','voices-collaborative-coping'];
+const topicFormats=['index','care-partner','case','client-workbook','formulation','progress-review','support-map'];
+assert.equal(topicFamilies.length*topicFormats.length,175);
+for(const family of topicFamilies)for(const format of topicFormats){
+ const filename=path.join(root,'resources/clinical-topics',family,format+'.html');
+ const src=fs.readFileSync(filename,'utf8');
+ assert(src.includes('These original teaching aids have not been independently validated as assessment or treatment protocols.'),'Reader-facing validation caution missing '+family+'/'+format);
+ assert(src.includes('Evidence and appropriate use')&&src.includes('About using these resources'),'Internal topic navigation not corrected '+family+'/'+format);
+ assert(!/tool validation and qualified clinical (?:approval|review) (?:remain )?pending/i.test(strip(src)),'Internal template approval status still public '+family+'/'+format);
+}
+assert.equal(sharedTemplateBacklog.length,0,'Shared clinical-topic template backlog remains: '+JSON.stringify(sharedTemplateBacklog.slice(0,12)));
 console.log('CONSUMER_EDITORIAL_QA_PASS '+JSON.stringify({
  publicHtmlScanned:files.length,diagnosisPagesChecked:files.filter(x=>x.includes('/resources/diagnoses/')).length,
  reviewedInternalCopyFindings:0,sitewideFollowupCount:firstSiteFlags.length,
