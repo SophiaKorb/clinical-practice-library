@@ -126,6 +126,8 @@ fs.mkdirSync(dir,{recursive:true});
     assert.equal(printedEntries,guide.count,'Printing a filtered view omitted guide listings: '+guide.slug);
     assert.equal(await page.locator('.search-panel').evaluate(el=>getComputedStyle(el).display),'none','Print CSS did not hide the search panel: '+guide.slug);
     assert.equal(await page.locator('.contents').evaluate(el=>getComputedStyle(el).display),'none','Print CSS did not hide navigation: '+guide.slug);
+    assert.equal(await page.locator('.section').first().evaluate(el=>getComputedStyle(el).breakBefore),'auto','Print CSS forces wasteful section page breaks: '+guide.slug);
+    assert.equal(await page.locator('.section-head').first().evaluate(el=>getComputedStyle(el).breakAfter),'avoid','Print section heading could become orphaned: '+guide.slug);
     await page.emulateMedia({media:'screen'});
     assert.equal(await page.locator('.entry:visible').count(),shown,'Screen filter lost after print: '+guide.slug);
     await page.locator('#guide-query').fill('unlikelynonexistentguidequeryxyz');
