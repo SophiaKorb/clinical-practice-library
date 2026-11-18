@@ -1,0 +1,35 @@
+name: CPL integrated community guide printable review
+on:
+  pull_request:
+    paths:
+      - 'scripts/build-community-integrated-print.py'
+      - 'scripts/append-community-printable-urls.py'
+      - '.github/workflows/community-integrated-print.yml'
+      - 'resources/community/**'
+permissions:
+  contents: read
+jobs:
+  build-verify-print:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install isolated PDF builder
+        run: pip install --disable-pip-version-check --quiet pymupdf reportlab beautifulsoup4 qrcode[pil]
+      - name: Produce updated print editions without changing source binaries
+        run: python scripts/build-community-integrated-print.py
+      - name: Add complete printed source URLs and verify all external links
+        run: python scripts/append-community-printable-urls.py
+      - name: Save review PDF outputs and checks
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cpl-updated-community-guide-printable-reviews
+          path: |
+            qa-artifacts/community-integrated-print/CPL_*.pdf
+            qa-artifacts/community-integrated-print/*-qa.json
+          retention-days: 14
+          if-no-files-found: error
