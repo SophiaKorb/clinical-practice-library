@@ -41,6 +41,8 @@ assert(tayHtml.includes('Direct provider check — November 17, 2026')&&tayHtml.
 assert(tayHtml.includes('17 or younger')&&tayHtml.includes('under 17'),'Do not silently resolve the conflicting guardian-consent text');
 assert(tayHtml.includes('COE-projectfocus@arizona.edu')&&tayHtml.includes('Next intake remains unverified'),'Project FOCUS current official contact and unresolved intake conflict lost');
 assert(tayHtml.includes('data-search="la frontera current intake'),'La Frontera not searchable by provider name in online reader');
+assert(tayHtml.includes('Provider-page discrepancy — November 17, 2026')&&tayHtml.includes('href="https://teenlifeline.org/tucson/"'),'Conflicting current official Teen Lifeline Tucson text routing was silently omitted');
+assert(tayHtml.includes('Text 602-248-8336')&&tayHtml.includes('texting 520-327-8336'),'Retain both official texting instructions until the provider resolves the contradiction');
 for(const p of ['resources/community/index.html','index.html','resources/start-here.html','resources/clinical-resource-finder.html']){
  const s=read(p);
  for(const name of ['family-guide.html','transition-age-guide.html'])assert(s.includes(name),'No visible route to '+name+' in '+p);
