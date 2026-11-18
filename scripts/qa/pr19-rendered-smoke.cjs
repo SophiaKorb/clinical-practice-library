@@ -15,6 +15,7 @@ const paths = [...new Set([
   '/resources/clinical-topics/bipolar-episode-timeline/index.html',
   '/resources/clinical-topics/voices-collaborative-coping/case.html',
   '/resources/therapy/visual-reasoning-toolkit.html',
+  '/resources/therapy/clinical-intern-learning-hub.html',
   '/resources/training/dsm-from-zero.html',
   '/resources/training/diagnosis-comparer.html',
   '/resources/therapy/treatment-planning-worksheet.html',
@@ -89,6 +90,27 @@ const widths = [320, 390, 768, 1280];
             await page.emulateMedia({forcedColors:'none'});
           }
         }
+        if (path === '/resources/therapy/clinical-intern-learning-hub.html') {
+          const assignmentQA = await page.evaluate(() => {
+            const cards=[...document.querySelectorAll('#assignments article.assignment')];
+            return {
+              count:cards.length,
+              inView:cards.every(c=>c.scrollWidth<=c.clientWidth+1),
+              width:document.documentElement.scrollWidth,
+              visibleHeading:!!document.querySelector('#assignments h2'),
+              links:cards.every(c=>[...c.querySelectorAll('a')].every(a=>a.getAttribute('href')?.startsWith('/resources/'))),
+              standards:cards.every(c=>c.querySelector('.submission')&&c.querySelector('.feedback'))
+            };
+          });
+          if (assignmentQA.count!==6 || !assignmentQA.visibleHeading || !assignmentQA.links || !assignmentQA.standards || !assignmentQA.inView)
+            failures.push('Supervisee assignment display regression at '+width+'px: '+JSON.stringify(assignmentQA));
+          if (width===390 || width===1280) {
+            const out='qa-artifacts/pr43/supervisee-assignments';
+            fs.mkdirSync(out,{recursive:true});
+            await page.locator('#assignments').scrollIntoViewIfNeeded();
+            await page.screenshot({path:out+'/supervisee-'+width+'.png',animations:'disabled'});
+          }
+        }
         if (path === '/' && !metrics.hasSpanish) failures.push('homepage ' + width + 'px: missing #espanol');
         if (path === '/' && width >= 601) {
           const nav = await page.locator('.cpl-static-nav__links').evaluate(n => ({
@@ -116,7 +138,7 @@ const widths = [320, 390, 768, 1280];
         console.log('CHECK',width,path,'HTTP',response?.status(),'scroll/client',metrics.scroll+'/'+metrics.client,'firstTab',focus);
       }
       if (width === 390) {
-        for (const path of ['/', '/resources/clinical-topics/aphasia-communication-access/index.html', skipRoutes.worksheet, skipRoutes.jurisdictions[0], skipRoutes.jurisdictions[1], ...skipRoutes.legacy, ...skipRoutes.additional]) {
+        for (const path of ['/', '/resources/therapy/clinical-intern-learning-hub.html', '/resources/clinical-topics/aphasia-communication-access/index.html', skipRoutes.worksheet, skipRoutes.jurisdictions[0], skipRoutes.jurisdictions[1], ...skipRoutes.legacy, ...skipRoutes.additional]) {
           const response = await page.goto(base+path,{waitUntil:'domcontentloaded'});
           assert.equal(response.status(),200);
           await page.emulateMedia({media:'print'});
