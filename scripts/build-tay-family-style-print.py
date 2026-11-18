@@ -36,11 +36,11 @@ pdfmetrics.registerFont(TTFont('Lato',basefont+'Lato-Regular.ttf'))
 pdfmetrics.registerFont(TTFont('Lato-Bold',basefont+'Lato-Bold.ttf'))
 pdfmetrics.registerFont(TTFont('Lato-Semi',basefont+'Lato-Semibold.ttf'))
 pdfmetrics.registerFont(TTFont('Lato-Italic',basefont+'Lato-Italic.ttf'))
-pdfmetrics.registerFont(TTFont('Serif','/usr/share/fonts/truetype/ebgaramond/EBGaramond12-Regular.ttf'))
+pdfmetrics.registerFont(TTFont('Serif','/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf'))
 pdfmetrics.registerFontFamily('Lato',normal='Lato',bold='Lato-Bold',italic='Lato-Italic')
 styles={
 'kicker':ParagraphStyle('kicker',fontName='Lato-Bold',fontSize=8.6,leading=12,textColor=BLUE,spaceAfter=7),
-'cover':ParagraphStyle('cover',fontName='Serif',fontSize=35,leading=36,textColor=DARK,spaceAfter=13),
+'cover':ParagraphStyle('cover',fontName='Serif',fontSize=31.5,leading=34,textColor=DARK,spaceAfter=13),
 'hero':ParagraphStyle('hero',fontName='Lato',fontSize=12,leading=18.1,textColor=INK,spaceAfter=13),
 'section':ParagraphStyle('section',fontName='Lato-Bold',fontSize=17,leading=23,textColor=BLUE,spaceAfter=12,spaceBefore=9,keepWithNext=1),
 'sub':ParagraphStyle('sub',fontName='Lato-Bold',fontSize=11.5,leading=15.6,textColor=INK,spaceAfter=3,spaceBefore=13,keepWithNext=1),
