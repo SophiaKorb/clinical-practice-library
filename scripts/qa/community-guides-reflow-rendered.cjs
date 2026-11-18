@@ -26,11 +26,12 @@ fs.mkdirSync(dir,{recursive:true});
     const errors=[];page.on('pageerror',error=>errors.push(error.message));
     const response=await page.goto(base+'/resources/community/'+guide+'.html',{waitUntil:'networkidle'});
     assert.equal(response.status(),200,guide+' unavailable');
-    if(test.fontBoost!==1)await page.addStyleTag({content:'html{font-size:200%!important}body{font-size:2rem!important}'}); // larger text, not true zoom
+    if(test.fontBoost!==1)await page.addStyleTag({content:'html{font-size:200%!important}body{font-size:34px!important}'}); // approximately 2x the baseline 17px body text; not actual browser zoom
     const geom=await page.evaluate(()=>{
       const root=document.documentElement,selectors=['.wrap','.reader','.guide-main','.search-panel','.lgbtq-extra','.legal-source-check','.lgbtq-listing','.entry','.route'];
       const samples={};for(const sel of selectors){const nodes=[...document.querySelectorAll(sel)];samples[sel]=nodes.length?Math.max(...nodes.map(el=>Math.max(0,el.getBoundingClientRect().right-innerWidth))):null;}
-      return {scrollWidth:root.scrollWidth,clientWidth:root.clientWidth,overflow:Math.max(0,root.scrollWidth-root.clientWidth),samples};
+      const offenders=[...document.querySelectorAll('body *')].filter(el=>{const style=getComputedStyle(el);return style.display!=='none'&&style.visibility!=='hidden'&&el.getBoundingClientRect().right>root.clientWidth+1;}).slice(0,12).map(el=>({tag:el.tagName,cls:String(el.className).slice(0,80),text:(el.textContent||'').trim().slice(0,50),right:Math.round(el.getBoundingClientRect().right)}));
+      return {scrollWidth:root.scrollWidth,clientWidth:root.clientWidth,overflow:Math.max(0,root.scrollWidth-root.clientWidth),samples,offenders};
     });
     assert(geom.overflow<=2,guide+' horizontal page overflow at '+test.name+': '+JSON.stringify(geom));
     const input=page.locator('#guide-query'),reset=page.locator('#guide-clear');
