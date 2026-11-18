@@ -44,6 +44,7 @@ const topicIndex=fs.readFileSync(path.join(root,'resources/clinical-topics/index
 assert(diagnosisIndex.includes('<h2 id="direct-head">Resources for this topic</h2>'));
 assert(diagnosisIndex.includes('Being listed does not mean a resource is clinically suitable for everyone'));
 assert(compIndex.includes('not validated diagnostic instruments or stand-alone treatment protocols'));
+assert(!compIndex.includes('All indexed diagnoses')&&!compIndex.includes('existing indexed resources'),'Comprehensive guide must not explain catalog internals in reader navigation');
 assert(hubJS.includes("data.resources.filter(")&&hubJS.includes("r.tags&&r.tags.diagnosis"),'Preserve fully sourced dynamic topic filter');
 assert(hubJS.includes("direct.length+' resources for this topic'"),'Dynamic counter still exposes catalog metadata');
 assert.equal((hubJS.match(/More topic resources/g)||[]).length,2,'Rendered resource group label must match its grouping-order key');
