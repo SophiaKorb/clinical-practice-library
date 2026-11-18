@@ -80,6 +80,11 @@ for(const slug of ['learning-disorders','persistent-conflict','psychosis-bipolar
 assert(qaPage.includes('name="robots" content="noindex,nofollow"'));
 assert(!topicIndex.includes('href="/resources/qa-status.html"'),'Internal QA link in reader-facing topic footer');
 const firstSiteFlags=audit.filter(x=>!x.file.startsWith('resources/diagnoses/')&&x.file!=='resources/clinical-topics/index.html'&&!priorityPages.includes(x.file));
+const alternateFinder=fs.readFileSync(path.join(root,'resources/finder-lab.html'),'utf8');
+assert(alternateFinder.includes('Alternate search layout')&&alternateFinder.includes('Choosing a resource'),'Alternate finder must present reader-oriented context');
+assert(alternateFinder.includes('Results are suggestions, not clinical endorsements.')&&!alternateFinder.includes('Nonproduction UX study'),'Alternate finder cannot expose development status');
+assert.equal(firstSiteFlags.length,0,'Reader-facing editorial wording still leaks elsewhere: '+JSON.stringify(firstSiteFlags));
+
 console.log('CONSUMER_EDITORIAL_QA_PASS '+JSON.stringify({
  publicHtmlScanned:files.length,diagnosisPagesChecked:files.filter(x=>x.includes('/resources/diagnoses/')).length,
  reviewedInternalCopyFindings:0,sitewideFollowupCount:firstSiteFlags.length,
