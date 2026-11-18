@@ -107,7 +107,11 @@ const widths = [320, 390, 768, 1280];
           if (width===390 || width===1280) {
             const out='qa-artifacts/pr43/supervisee-assignments';
             fs.mkdirSync(out,{recursive:true});
-            await page.locator('#assignments').scrollIntoViewIfNeeded();
+            await page.evaluate(() => {
+              if (document.activeElement instanceof HTMLElement) document.activeElement.blur();
+              const section=document.querySelector('#assignments');
+              window.scrollTo({top:scrollY+section.getBoundingClientRect().top-18,behavior:'instant'});
+            });
             await page.screenshot({path:out+'/supervisee-'+width+'.png',animations:'disabled'});
           }
         }
