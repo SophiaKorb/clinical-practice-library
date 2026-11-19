@@ -1,0 +1,39 @@
+name: CPL diagnosis Wave 3 interactive, reflow and print review
+on:
+  pull_request:
+    paths:
+      - 'resources/diagnoses/practice-labs/wave-3/**'
+      - 'scripts/qa/diagnosis-wave3-rendered.cjs'
+      - 'tests/diagnosis-wave3.cjs'
+      - '.github/workflows/diagnosis-wave3-rendered.yml'
+permissions:
+  contents: read
+jobs:
+  browser-keyboard-print:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: |
+          npm install --no-save --no-audit --no-fund playwright axe-core
+          npx playwright install --with-deps chromium
+      - name: Run bounded static contracts and browser/print checks
+        run: |
+          node tests/diagnosis-wave3.cjs
+          python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/cpl-wave3-http.log 2>&1 &
+          for i in $(seq 1 25); do
+            if curl -fsS http://127.0.0.1:8765/ >/dev/null; then break; fi
+            sleep 1
+          done
+          node scripts/qa/diagnosis-wave3-rendered.cjs
+      - name: Preserve exact-run review evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cpl-wave3-review-evidence
+          path: qa-artifacts/diagnosis-wave3/
+          if-no-files-found: warn
+          retention-days: 14

@@ -75,7 +75,9 @@ var AUDIENCE_EVIDENCE={
  '/resources/arizona/iep-504-clinician-guide.html':['clinician','school_team'],
  '/resources/school/iep-504-meeting-preparation.html':['caregiver','case_manager','school_team'],
  '/resources/es/arizona-como-conseguir-iep-504.html':['caregiver','case_manager','school_team'],
- '/resources/es/school/iep-504-preparacion-reunion.html':['caregiver','school_team']
+ '/resources/es/school/iep-504-preparacion-reunion.html':['caregiver','school_team'],
+ '/resources/diagnoses/practice-labs/wave-3/supported-choice.html':['client','caregiver'],
+ '/resources/diagnoses/practice-labs/wave-3/medical-first.html':['client','caregiver']
 };
 var NEEDS=['clinical','worksheet','caregiver','assessment','school','referral','training','education','collection'];
 var AUDIENCES=['client','caregiver','clinician','case_manager','school_team','trainee'];
