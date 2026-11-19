@@ -47,6 +47,7 @@ const out=path.resolve('qa-artifacts/diagnosis-wave2/reflow');fs.mkdirSync(out,{
    assert.equal(await page.locator('.track').count(),4,'Four workshop lenses '+slug);
    assert.equal(await page.locator('.sheet').count(),2,'Two workshop sheets '+slug);
    const workshopSkip=page.locator('a.skip');await workshopSkip.focus();assert(await workshopSkip.evaluate(el=>document.activeElement===el),'Workshop skip focus '+slug);
+   await workshopSkip.evaluate(el=>el.blur());
    if(check.name==='200pct-text-at-390')await page.screenshot({path:path.join(out,slug+'-workshop-text200.png'),fullPage:true});
    observations.push({slug,kind:'case-to-action',test:check.name,width:check.width,fontSize:check.font,overflow:workshopOverflow});
   }
