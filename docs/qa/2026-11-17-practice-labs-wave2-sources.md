@@ -42,3 +42,11 @@ Review: 2026-11-17. Exact parent: passing PR #79 `e3c60f5aa752ba5b5eeb8a03f6991d
 ## Release controls
 
 No merge, deployment or publication authorized. Independent clinician/specialist and safeguarding review, rights, consent, Part 2 legal/privacy where applicable, native AT, true 200/400% zoom, and physical print/PDF access reviews remain open. The separate PR #80 consumer-copy work has not been incorporated into this clinical-content branch; reconcile deliberately rather than overwriting it.
+
+## November 19 case-to-action workshop expansion (separate review)
+
+Dependent on exact Wave 2 passing parent `8204f7b173e9d01e275b0b00a531b9e078c60007`. Adds four differentiated HTML workshops: each has a fictional vignette, four clinically meaningful comparison lenses, six collaborative facilitator moves, three decision cautions, and two large-print blank sheets. There are **8 additional printable sheets and 40 additional blank prompts**, giving 16 print sheets and 80 prompts across 20 Wave 2 topic pages. Original 16 topic pages, PDFs, historical source texts, and canonical 813 finder records remain unchanged in content; only the four collection overviews gain links. Wave 2's **additive** overlay grows from 16 to 20 records, expected total 868 including prior overlays. No PHI, tracking, contenteditable controls or external data requests. `noindex` until review.
+
+Publisher references reviewed November 19: IES WWC reading 4–9, mathematics and writing guides; NICE CG185 bipolar updated September 2025 and CG178 psychosis updated September 2026; SAMHSA TIP35 plus HHS Part 2 fact sheet and current Part 2 overview (amended-rule compliance date February 16, 2026); SAMHSA grief, APA prolonged grief and NCI bereavement. International applicability and per-person clinical decisions require qualified review. In particular, grief is not automatically a disorder; learning access does not prove school eligibility or diagnosis; psychosis/bipolar worksheets cannot supply urgent medical decisions; Part 2 sharing authority is not established by a print page.
+
+**Status: review only**, no clinical approval, youth/guardian or Part 2 consent clearance, rights clearance, native AT, true 200%/400% browser zoom, PDF/UA or physical print approval. Neither merge nor deployment authorized.
