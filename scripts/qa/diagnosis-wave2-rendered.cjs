@@ -3,7 +3,7 @@
 const {chromium}=require('playwright');
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const base=process.env.CPL_QA_ORIGIN||'http://127.0.0.1:8765',prefix='/resources/diagnoses/practice-labs/wave-2/';
-const slugs=['learning','psychosis-bipolar','substance-use','grief'],pages=['index','facilitator','map','worksheets'];
+const slugs=['learning','psychosis-bipolar','substance-use','grief'],pages=['index','facilitator','map','worksheets','case-to-action'];
 const dir=path.resolve(process.cwd(),'qa-artifacts/diagnosis-wave2');fs.mkdirSync(dir,{recursive:true});
 (async()=>{const browser=await chromium.launch({headless:true});const report=[];
 try{
@@ -19,6 +19,12 @@ try{
     assert(overflow<=2,'Overflow '+uri+' width='+width+' over='+overflow);
     const skip=page.locator('a.skip');await skip.focus();assert(await skip.evaluate(el=>document.activeElement===el),'Skip not focusable '+uri);
     await skip.evaluate(el=>el.blur());
+    if(kind==='case-to-action'){
+      assert.equal(await page.locator('.track').count(),4,'Four distinct case lenses '+uri);
+      assert.equal(await page.locator('.sheet').count(),2,'Two additional sheets '+uri);
+      assert.equal(await page.locator('.prompt').count(),10,'Ten optional prompts '+uri);
+      assert.equal(await page.locator('a[href="index.html"]').count()>0,true,'Return link absent '+uri);
+    }
     if(kind==='map'){
      const choices=page.locator('button[data-choice]');assert.equal(await choices.count(),4,'Four interactive topics '+uri);
      for(let i=0;i<4;i++){
@@ -30,20 +36,20 @@ try{
      }
      const status=await page.locator('#choice-summary').innerText();assert(status.includes('Selected:'),'Live region not updated '+uri);
     }
-    if((width===390||width===1280)&&['map','index'].includes(kind)){await page.screenshot({path:path.join(dir,slug+'-'+kind+'-'+width+'.png'),fullPage:true});}
-    if((width===390||width===1280)&&['index','map','worksheets'].includes(kind)){
+    if((width===390||width===1280)&&['map','index','case-to-action'].includes(kind)){await page.screenshot({path:path.join(dir,slug+'-'+kind+'-'+width+'.png'),fullPage:true});}
+    if((width===390||width===1280)&&['index','map','worksheets','case-to-action'].includes(kind)){
       await page.addScriptTag({path:require.resolve('axe-core')});
       const axe=await page.evaluate(async()=>window.axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa']}}));
       const serious=axe.violations.filter(v=>v.impact==='serious'||v.impact==='critical');
       assert.equal(serious.length,0,'Serious axe '+uri+' '+width+': '+JSON.stringify(serious.map(v=>v.id)));
     }
-    if(width===1280&&kind==='worksheets'){
+    if(width===1280&&['worksheets','case-to-action'].includes(kind)){
       await page.emulateMedia({media:'print'});
       assert(await page.locator('main>h1').isHidden(),'Screen heading leaking into print '+uri);
-      assert(await page.locator('#sheet-one').isVisible()&&await page.locator('#sheet-two').isVisible(),'Worksheets hidden at print '+uri);
+      const ids=kind==='worksheets'?['#sheet-one','#sheet-two']:['#page-1','#page-2']; assert(await page.locator(ids[0]).isVisible()&&await page.locator(ids[1]).isVisible(),'Print pages hidden '+uri);
       const bytes=await page.pdf({format:'Letter',printBackground:false});
       assert(bytes.length>4000,'PDF sample unexpectedly empty '+uri);
-      fs.writeFileSync(path.join(dir,slug+'-worksheets-print.pdf'),bytes);await page.emulateMedia({media:'screen'});
+      fs.writeFileSync(path.join(dir,slug+'-'+kind+'-print.pdf'),bytes);await page.emulateMedia({media:'screen'});
     }
     report.push({slug,kind,width,overflow});
    }
@@ -52,5 +58,5 @@ try{
   await ctx.close();
  }
  fs.writeFileSync(path.join(dir,'results.json'),JSON.stringify({status:'PASS',checks:report.length,report},null,2));
- console.log('DIAGNOSIS_WAVE2_RENDERED_PASS '+JSON.stringify({pages:report.length,maps:4,printPDFs:4,widths:[1280,640,390,320]}));
+ console.log('DIAGNOSIS_WAVE2_RENDERED_PASS '+JSON.stringify({pages:report.length,maps:4,printPDFs:8,widths:[1280,640,390,320]}));
 }finally{await browser.close();}})().catch(e=>{console.error(e);process.exitCode=1});

@@ -14,10 +14,10 @@ const add=p=>vm.runInNewContext(read(p),contexts);
 const adhd='resources/diagnoses/adult-adhd-collection/finder-overlay.js',one='resources/diagnoses/practice-labs/finder-overlay.js',two=base+'finder-overlay.js';
 add(adhd);add(one);const retained=JSON.stringify(source.resources);
 assert.equal(source.resources.length,848);
-add(two);assert.equal(source.resources.length,864,'Expected 813 canonical +31 ADHD +4 wave1 +16 wave2');
+add(two);assert.equal(source.resources.length,868,'Expected 813 canonical +31 ADHD +4 wave1 +16 wave2');
 assert.equal(JSON.stringify(source.resources.slice(0,813)),prior,'Source entries overwritten');
 assert.equal(JSON.stringify(source.resources.slice(0,848)),retained,'Prior overlays overwritten');
-add(two);assert.equal(source.resources.length,864,'Wave 2 overlay is not idempotent');
+add(two);assert.equal(source.resources.length,868,'Wave 2 overlay is not idempotent');
 const groups={
 'learning':{'guide':'learning-disorders','topic':'Learning disorders','stages':['School age / adolescence']},
 'psychosis-bipolar':{'guide':'psychosis-bipolar','topic':'Psychosis / bipolar','stages':['Adult']},
@@ -25,13 +25,13 @@ const groups={
 'grief':{'guide':'grief-bereavement','topic':'Grief / bereavement','stages':['Across ages / adapt to person']}
 };
 const hub=read(base+'index.html'),all=read('resources/diagnoses/practice-labs/index.html'),comprehensive=read('resources/diagnoses/comprehensive/index.html');
-const paths=['index','facilitator','map','worksheets'];let promptTotal=0;
+const paths=['index','facilitator','map','worksheets','case-to-action'];let promptTotal=0;
 for(const [slug,spec] of Object.entries(groups)){
  const topicBase=base+slug+'/';
  assert(hub.includes('/'+topicBase+'index.html'),slug+' not in main lab collection');
  const comp=read('resources/diagnoses/comprehensive/'+spec.guide+'.html');
  assert(comp.includes('/'+topicBase+'index.html'),'Clinical guide has no tool backlink '+slug);
- assert.equal(source.resources.filter(r=>r.url.startsWith('/'+topicBase)).length,4,'Must index every topic page '+slug);
+ assert.equal(source.resources.filter(r=>r.url.startsWith('/'+topicBase)).length,5,'Must index every topic page '+slug);
  for(const part of paths){
   const p=topicBase+part+'.html',html=read(p),u='/'+p;
   const record=source.resources.find(x=>x.url===u);
@@ -59,6 +59,7 @@ for(const [slug,spec] of Object.entries(groups)){
  }
 }
 assert.equal(promptTotal,40);
+let extraPromptTotal=0;for(const slug of Object.keys(groups)){const h=read(base+slug+'/case-to-action.html');assert.equal((h.match(/class="sheet"/g)||[]).length,2,'Two extra printed sheets '+slug);assert.equal((h.match(/class="write-lines"/g)||[]).length,10,'Ten extra prompts '+slug);assert(h.includes('Fictional case')&&h.includes('noindex'),'Case example and scope '+slug);extraPromptTotal+=10;}assert.equal(extraPromptTotal,40);
 assert(hub.includes('Learning disorders')&&hub.includes('Grief / bereavement'));
 assert(all.includes('/'+base+'index.html')&&comprehensive.includes('/'+base+'index.html'),'Collection routes not discoverable');
 for(const p of ['resources/diagnoses/index.html','resources/clinical-resource-finder.html']){
@@ -68,4 +69,4 @@ for(const p of ['resources/diagnoses/index.html','resources/clinical-resource-fi
 const script=read(base+'choice-map.js');assert(!/localStorage|sessionStorage|fetch\s*\(|XMLHttpRequest/.test(script),'JS stores or sends data');
 assert(script.includes("aria-pressed")&&script.includes('data-choice-panel'));
 const notes=read('docs/qa/2026-11-17-practice-labs-wave2-sources.md');for(const spec of Object.values(groups))assert(notes.includes(spec.topic),'Missing source crosswalk');
-console.log('DIAGNOSIS_WAVE2_STATIC_PASS '+JSON.stringify({canonical:813,prior:35,new:16,runtime:864,pages:16,printSheets:8,writingPrompts:40,diagnosisFacets:4}));
+console.log('DIAGNOSIS_WAVE2_STATIC_PASS '+JSON.stringify({canonical:813,prior:35,new:20,runtime:868,pages:20,printSheets:16,writingPrompts:80,diagnosisFacets:4}));

@@ -31,9 +31,28 @@ const out=path.resolve('qa-artifacts/diagnosis-wave2/reflow');fs.mkdirSync(out,{
    assert(tooWideAfter<=2,'Selected panel overflow '+JSON.stringify({slug,...check,tooWideAfter}));
    if(check.name==='200pct-text-at-390')await page.screenshot({path:path.join(out,slug+'-text200.png'),fullPage:true});
    observations.push({slug,test:check.name,width:check.width,fontSize:check.font,overflow:tooWide});
+   const workshopUri=target+slug+'/case-to-action.html',wr=await page.goto(root+workshopUri,{waitUntil:'networkidle'});
+   assert.equal(wr.status(),200,'Workshop unavailable '+workshopUri);
+   await page.evaluate(size=>{document.documentElement.style.fontSize=size+'px';},check.font);
+   const workshopOverflow=await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);
+   if(workshopOverflow>2){
+     const extra=await page.evaluate(()=>{
+       const all=[...document.querySelectorAll('body *')];
+       return {htmlScroll:document.documentElement.scrollWidth,bodyScroll:document.body.scrollWidth,
+         wideElements:all.map(el=>({tag:el.tagName,cls:el.className?.toString().slice(0,40),text:(el.textContent||'').trim().slice(0,35),scroll:el.scrollWidth,client:el.clientWidth,rect:Math.round(el.getBoundingClientRect().width)})).filter(x=>x.scroll>x.client+2).slice(0,18)};
+     });
+     await page.screenshot({path:path.join(out,slug+'-workshop-overflow.png'),fullPage:true});
+     console.error('WORKSHOP_OVERFLOW_DETAILS '+JSON.stringify({slug,...check,extra}));
+     const offenders=await page.evaluate(()=>[...document.querySelectorAll('body *')].map(el=>({tag:el.tagName,text:(el.textContent||'').trim().slice(0,48),left:Math.round(el.getBoundingClientRect().left),right:Math.round(el.getBoundingClientRect().right)})).filter(x=>x.right>innerWidth+2||x.left<-2).slice(0,12));throw new Error('Workshop overflow '+JSON.stringify({slug,...check,workshopOverflow,offenders}));}
+   assert.equal(await page.locator('.track').count(),4,'Four workshop lenses '+slug);
+   assert.equal(await page.locator('.sheet').count(),2,'Two workshop sheets '+slug);
+   const workshopSkip=page.locator('a.skip');await workshopSkip.focus();assert(await workshopSkip.evaluate(el=>document.activeElement===el),'Workshop skip focus '+slug);
+   await workshopSkip.evaluate(el=>el.blur());
+   if(check.name==='200pct-text-at-390')await page.screenshot({path:path.join(out,slug+'-workshop-text200.png'),fullPage:true});
+   observations.push({slug,kind:'case-to-action',test:check.name,width:check.width,fontSize:check.font,overflow:workshopOverflow});
   }
   assert.deepEqual(errors,[],'Browser errors at '+check.name);await ctx.close();
  }
  fs.writeFileSync(path.join(out,'report.json'),JSON.stringify({status:'PASS',observations},null,2));
- console.log('DIAGNOSIS_WAVE2_REFLOW_PASS '+JSON.stringify({observations:observations.length,mobile:true,text200:true,keyboard:true}));
+ console.log('DIAGNOSIS_WAVE2_REFLOW_PASS '+JSON.stringify({observations:observations.length,mobile:true,text200:true,keyboard:true,workshops:4}));
 }finally{await browser.close()}})().catch(e=>{console.error(e);process.exitCode=1});
