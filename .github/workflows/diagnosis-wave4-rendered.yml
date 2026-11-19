@@ -1,0 +1,40 @@
+name: CPL Wave 4 youth voice rendered and print QA
+on:
+  pull_request:
+    paths:
+      - 'resources/diagnoses/practice-labs/wave-4/**'
+      - 'scripts/qa/diagnosis-wave4-rendered.cjs'
+      - 'tests/diagnosis-wave4.cjs'
+      - 'resources/finder-lab-engine.js'
+      - '.github/workflows/diagnosis-wave4-rendered.yml'
+permissions:
+  contents: read
+jobs:
+  browser-keyboard-print:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: |
+          npm install --no-save --no-audit --no-fund playwright axe-core
+          npx playwright install --with-deps chromium
+      - name: Run static, keyboard, reflow, age-role and print QA
+        run: |
+          node tests/diagnosis-wave4.cjs
+          python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/cpl-wave4-http.log 2>&1 &
+          for i in $(seq 1 20); do
+            if curl -fsS http://127.0.0.1:8765/ >/dev/null; then break; fi
+            sleep 1
+          done
+          node scripts/qa/diagnosis-wave4-rendered.cjs
+      - name: Retain reviewer evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cpl-wave4-review
+          path: qa-artifacts/diagnosis-wave4/
+          if-no-files-found: warn
+          retention-days: 14

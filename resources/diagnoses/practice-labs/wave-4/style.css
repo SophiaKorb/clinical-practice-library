@@ -1,0 +1,9 @@
+/* Wave 4: differentiated convergence diagram, no decorative overlap. */
+.route-grid.team{grid-template-areas:"a b" "c d"}
+.role-lane{position:relative}.role-lane:nth-child(1){background:#eef5fc}.role-lane:nth-child(2){background:#fff7ed}.role-lane:nth-child(3){background:#f4f1fb}.role-lane:nth-child(4){background:#eef8f1}
+.convergence{margin:1.1rem auto;padding:1rem;border-radius:12px;border:2px solid #5f826e;background:#f5faf4;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr) minmax(0,1fr);gap:1rem;align-items:center;text-align:center}
+.convergence strong{font-family:Georgia,serif;font-size:1.14rem}.convergence>*{min-width:0;overflow-wrap:anywhere}
+.scope,.sheet,.route,.caution,.answer{min-width:0;overflow-wrap:anywhere;word-break:normal}
+@media(max-width:650px){.convergence{grid-template-columns:1fr;gap:.3rem}.convergence span{font-size:.86rem}}
+@media(max-width:450px){.route-grid.team{grid-template-areas:"a" "b" "c" "d"}}
+@media print{.sheet .write-lines{height:5.3rem}.convergence,.choice-grid{display:none}}
