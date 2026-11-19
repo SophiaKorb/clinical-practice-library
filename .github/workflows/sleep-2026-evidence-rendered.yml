@@ -1,0 +1,40 @@
+name: CPL adult insomnia 2026 evidence browser QA
+on:
+  pull_request:
+    paths:
+      - 'resources/diagnoses/practice-labs/sleep-2026/**'
+      - 'scripts/qa/sleep-2026-evidence-rendered.cjs'
+      - 'tests/sleep-2026-evidence.cjs'
+      - 'resources/finder-lab-engine.js'
+      - '.github/workflows/sleep-2026-evidence-rendered.yml'
+permissions:
+  contents: read
+jobs:
+  browser-keyboard-print:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: |
+          npm install --no-save --no-audit --no-fund playwright axe-core
+          npx playwright install --with-deps chromium
+      - name: Run adult-only indexing and exact-page rendered/print QA
+        run: |
+          node tests/sleep-2026-evidence.cjs
+          python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/sleep2026-http.log 2>&1 &
+          for i in $(seq 1 20); do
+            if curl -fsS http://127.0.0.1:8765/ >/dev/null; then break; fi
+            sleep 1
+          done
+          node scripts/qa/sleep-2026-evidence-rendered.cjs
+      - name: Preserve exact-head screenshots, PDF and report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cpl-sleep-2026-evidence-review
+          path: qa-artifacts/sleep-2026/
+          if-no-files-found: warn
+          retention-days: 14
