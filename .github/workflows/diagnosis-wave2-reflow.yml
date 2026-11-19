@@ -19,7 +19,7 @@ jobs:
       - run: |
           npm install --no-save --no-audit --no-fund playwright
           npx playwright install --with-deps chromium
-      - name: Start local static source and inspect four condition maps
+      - name: Start local source and inspect four maps and four workshops
         run: |
           python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/cpl-wave2-http.log 2>&1 &
           for i in $(seq 1 20); do
