@@ -78,7 +78,8 @@ var AUDIENCE_EVIDENCE={
  '/resources/es/school/iep-504-preparacion-reunion.html':['caregiver','school_team'],
  '/resources/diagnoses/practice-labs/wave-3/supported-choice.html':['client','caregiver'],
  '/resources/diagnoses/practice-labs/wave-3/medical-first.html':['client','caregiver'],
- '/resources/diagnoses/practice-labs/wave-4/team-voice.html':['client','caregiver']
+ '/resources/diagnoses/practice-labs/wave-4/team-voice.html':['client','caregiver'],
+ '/resources/diagnoses/practice-labs/sleep-2026/compare-treatment.html':['client']
 };
 var NEEDS=['clinical','worksheet','caregiver','assessment','school','referral','training','education','collection'];
 var AUDIENCES=['client','caregiver','clinician','case_manager','school_team','trainee'];
