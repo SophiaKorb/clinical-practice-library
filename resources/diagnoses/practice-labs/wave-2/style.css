@@ -4,3 +4,6 @@ a{color:#155b57;text-underline-offset:.17em}a:focus-visible,button:focus-visible
 @media(max-width:760px){.tracks--contrast{grid-template-columns:repeat(2,minmax(0,1fr))}.flow{grid-template-columns:1fr}}
 @media(max-width:420px){.tracks,.tracks--contrast,.choices,.cards{grid-template-columns:1fr}.tracks--parallel .track:nth-child(2),.tracks--two-path .track:nth-child(2){margin-left:.8rem}.bridge{font-size:.92rem}}
 @media print{@page{size:letter;margin:.55in}html{font-size:12pt;background:white;color:black}.mast,.skip,.foot,.no-print,.print{display:none!important}main{max-width:none;padding:0}.sheet{border:0;border-radius:0;margin:0;padding:0;break-inside:avoid;page-break-after:always;break-after:page}.sheet:last-child{page-break-after:auto;break-after:auto}.sheet h2{font-size:22pt}.prompt{margin:1.2rem 0;break-inside:avoid}.write-lines{height:4.25rem;border-color:#444}body:has(.sheet) main>:not(#print-sheets){display:none!important}#print-sheets{border:0;margin:0;padding:0}.sheet p{max-width:none}}
+
+/* Workshop text enlargement: wrap long labels, never clip content or reduce type size. */
+.notice,.notice strong,#print-sheets .sheet,#print-sheets .prompt,#print-sheets .prompt strong{min-width:0;overflow-wrap:anywhere;word-break:normal}
