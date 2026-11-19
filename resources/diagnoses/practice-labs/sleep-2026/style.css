@@ -1,0 +1,11 @@
+/* Adult insomnia 2026: comparator-first evidence design, no diagnostic scores. */
+.comparison{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.85rem}
+.comparison-card{min-width:0;border:1px solid #a5c0b3;border-top:6px solid #406d63;background:#fff;padding:1rem;border-radius:10px}
+.comparison-card:nth-child(1){border-top-color:#335f88}.comparison-card:nth-child(2){border-top-color:#9c783e}.comparison-card:nth-child(3){border-top-color:#4d8062}
+.comparison-card h3{font-size:1.13rem;margin:.45rem 0}.comparison-card p,.scope,.prompt strong,.handoff span{overflow-wrap:anywhere}
+.handoff{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.65rem}
+.handoff>div{padding:1rem;border:2px solid #7faaa0;border-radius:10px;min-width:0;background:#fff}
+.handoff strong,.handoff span{display:block}.handoff span{font-size:.91rem;color:#465d56;margin-top:.35rem}
+@media(max-width:740px){.comparison{grid-template-columns:1fr}.handoff{grid-template-columns:1fr}}
+@media(max-width:450px){h1{font-size:1.55rem;max-width:none}.eyebrow{letter-spacing:.03em}}
+@media print{.sheet .write-lines{height:5.25rem}.comparison,.handoff{display:none!important}}

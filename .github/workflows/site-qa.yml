@@ -37,6 +37,7 @@ jobs:
       - run: node tests/diagnosis-wave2.cjs
       - run: node tests/diagnosis-wave3.cjs
       - run: node tests/diagnosis-wave4.cjs
+      - run: node tests/sleep-2026-evidence.cjs
       - run: node tests/diagnosis-resource-hubs.cjs
       - run: node tests/condition-case-management.cjs
       - run: node tests/comprehensive-diagnosis-guides.cjs

@@ -21,6 +21,6 @@ assert(!/localStorage|sessionStorage|<input\b|<form\b|<textarea\b|contenteditabl
 for(const p of ['resources/diagnoses/comprehensive/persistent-conflict.html','resources/diagnoses/comprehensive/case-management/persistent-conflict.html','resources/diagnoses/comprehensive/index.html','resources/diagnoses/practice-labs/index.html'])assert(read(p).includes(url),'Missing hub route '+p);
 for(const p of ['resources/clinical-resource-finder.html','resources/diagnoses/index.html'])assert(read(p).indexOf('wave-4/finder-overlay.js')>read(p).indexOf('wave-3/finder-overlay.js'));
 assert(read('resources/finder-lab-engine.js').includes("'"+url+"':['client','caregiver']"));
-const qa=read('scripts/qa/diagnosis-all14-rendered.cjs');assert(qa.includes('catalog.resources.length+58')&&qa.includes("topic==='Persistent conflict'?1"));
+const qa=read('scripts/qa/diagnosis-all14-rendered.cjs');assert(qa.includes('catalog.resources.length+59')&&qa.includes("topic==='Persistent conflict'?1")&&qa.includes("topic==='Sleep conditions'?1"),'Full 14-category rendered QA must retain Wave 4 and add adult sleep record');
 const css=read(base+'style.css');assert(css.includes('grid-template-areas:"a" "b" "c" "d"')&&css.includes('@media print'));
 console.log('DIAGNOSIS_WAVE4_STATIC_PASS '+JSON.stringify({canonical:813,retained:57,newResources:1,runtime:871,roleLanes:4,printSheets:2,writingPrompts:10}));

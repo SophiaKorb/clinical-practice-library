@@ -11,12 +11,13 @@ runInNewContext(fs.readFileSync(path.join(process.cwd(),'resources/diagnoses/pra
 runInNewContext(fs.readFileSync(path.join(process.cwd(),'resources/diagnoses/practice-labs/wave-2/finder-overlay.js'),'utf8'),{CPLFinderData:runtimeCatalog});
 runInNewContext(fs.readFileSync(path.join(process.cwd(),'resources/diagnoses/practice-labs/wave-3/finder-overlay.js'),'utf8'),{CPLFinderData:runtimeCatalog});
 runInNewContext(fs.readFileSync(path.join(process.cwd(),'resources/diagnoses/practice-labs/wave-4/finder-overlay.js'),'utf8'),{CPLFinderData:runtimeCatalog});
+runInNewContext(fs.readFileSync(path.join(process.cwd(),'resources/diagnoses/practice-labs/sleep-2026/finder-overlay.js'),'utf8'),{CPLFinderData:runtimeCatalog});
 assert([615,813].includes(catalog.resources.length),'Expect historical 615 or current 813 official finder source');
-assert.equal(runtimeCatalog.resources.length,catalog.resources.length+58,'31 ADHD + four wave1 + twenty wave2 + two wave3 + one wave4 record expected');
+assert.equal(runtimeCatalog.resources.length,catalog.resources.length+59,'31 ADHD + four wave1 + twenty wave2 + two wave3 + one wave4 + one adult sleep resource expected');
 for(const topic of catalog.facets.diagnosis){
  const initial=catalog.resources.filter(x=>(x.tags?.diagnosis||[]).includes(topic));
  const loaded=runtimeCatalog.resources.filter(x=>(x.tags?.diagnosis||[]).includes(topic));
- assert.equal(loaded.length,initial.length+(topic==='ADHD'?31:0)+({'Autism':1,'Anxiety / OCD':1,'Depression':1,'Trauma / dissociation':1}[topic]||0)+({'Learning disorders':5,'Psychosis / bipolar':5,'Substance use':5,'Grief / bereavement':5}[topic]||0)+({'Intellectual disability':1,'Eating disorders':1}[topic]||0)+(topic==='Persistent conflict'?1:0),'Unexpected diagnosis overlay metadata: '+topic);
+ assert.equal(loaded.length,initial.length+(topic==='ADHD'?31:0)+({'Autism':1,'Anxiety / OCD':1,'Depression':1,'Trauma / dissociation':1}[topic]||0)+({'Learning disorders':5,'Psychosis / bipolar':5,'Substance use':5,'Grief / bereavement':5}[topic]||0)+({'Intellectual disability':1,'Eating disorders':1}[topic]||0)+(topic==='Persistent conflict'?1:0)+(topic==='Sleep conditions'?1:0),'Unexpected diagnosis overlay metadata: '+topic);
 }
 const base=process.env.CPL_QA_ORIGIN||'http://127.0.0.1:8765';
 const dir=path.join(process.cwd(),'qa-artifacts/diagnosis-hubs');
