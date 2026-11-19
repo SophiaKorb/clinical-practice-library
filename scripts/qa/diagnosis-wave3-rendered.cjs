@@ -38,5 +38,32 @@ const out=path.resolve('qa-artifacts/diagnosis-wave3');fs.mkdirSync(out,{recursi
   report.push({slug,width:check.width,font:check.font,overflow});
  }
  assert.deepEqual(errors,[],'Browser JavaScript errors '+check.width);await context.close();}
- fs.writeFileSync(path.join(out,'report.json'),JSON.stringify({status:'PASS',report},null,2));console.log('DIAGNOSIS_WAVE3_RENDERED_PASS '+JSON.stringify({views:report.length,interactive:12,printPDFs:2,axes:'sampled at 390 and 1280',scope:'CSS viewport+root font stress, not native browser zoom'}));
+ 
+ // Confirm real finder composition, not just source metadata.
+ const ctx=await browser.newContext({viewport:{width:1280,height:840},reducedMotion:'reduce'});
+ const finder=await ctx.newPage(),selected=[];
+ for(const [slug,title,url] of [
+   ['supported-choice','Make the decision accessible','/resources/diagnoses/practice-labs/wave-3/supported-choice.html'],
+   ['medical-first','Eating concerns medical care','/resources/diagnoses/practice-labs/wave-3/medical-first.html']
+ ]){
+  for(const population of ['children','adults']){
+   const result=await finder.goto(base+'/resources/clinical-resource-finder.html',{waitUntil:'networkidle'});assert.equal(result.status(),200);
+   await finder.locator('#lab-q').fill(title);
+   await finder.locator('#lab-form button[type="submit"]').click();
+   await finder.locator('#lab-population').selectOption(population);
+   await finder.locator('#lab-audience').selectOption('case_manager');
+   const hit=finder.locator('#lab-results a[href="'+url+'"]');
+   assert(await hit.count()>0,'Case-manager finder omitted '+slug+' for '+population);
+   selected.push({slug,population,audience:'case_manager',hit:true});
+  }
+  await finder.goto(base+'/resources/clinical-resource-finder.html',{waitUntil:'networkidle'});
+  await finder.locator('#lab-q').fill(title);
+  await finder.locator('#lab-form button[type="submit"]').click();
+  await finder.locator('#lab-audience').selectOption('caregiver');
+  assert(await finder.locator('#lab-results a[href="'+url+'"]').count()>0,'Verified caregiver audience missing '+slug);
+  selected.push({slug,population:'all',audience:'caregiver',hit:true});
+ }
+ await ctx.close();
+
+ fs.writeFileSync(path.join(out,'report.json'),JSON.stringify({status:'PASS',report},null,2));console.log('DIAGNOSIS_WAVE3_RENDERED_PASS '+JSON.stringify({views:report.length,interactive:12,printPDFs:2,axes:'sampled at 390 and 1280',scope:'CSS viewport+root font stress, not native browser zoom',finderAudienceChecks:6}));
 }finally{await browser.close()}})().catch(e=>{console.error(e);process.exitCode=1});
