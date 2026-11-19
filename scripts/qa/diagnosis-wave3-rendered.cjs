@@ -11,6 +11,16 @@ const out=path.resolve('qa-artifacts/diagnosis-wave3');fs.mkdirSync(out,{recursi
   assert.equal(await page.locator('h1').count(),1,'One main title '+slug);
   const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);if(overflow>2){const offenders=await page.evaluate(()=>[...document.querySelectorAll('body *')].map(e=>({tag:e.tagName,cls:(e.className||'').toString().slice(0,40),text:(e.textContent||'').trim().slice(0,40),scroll:e.scrollWidth,client:e.clientWidth})).filter(x=>x.scroll>x.client+2).slice(0,15));throw Error('Unexpected horizontal overflow '+JSON.stringify({slug,check,overflow,offenders}));}
   const skip=page.locator('a.skip');await skip.focus();assert(await skip.evaluate(el=>document.activeElement===el),'Skip link not focusable '+slug);await skip.evaluate(e=>e.blur());
+  if(slug==='index'){
+   const cards=page.locator('.route-grid > .route');assert.equal(await cards.count(),2,'Index must show two distinct lab choices');
+   const first=await cards.nth(0).boundingBox(),second=await cards.nth(1).boundingBox();
+   assert(first&&second,'Index lab cards not rendered');
+   const overlapX=Math.max(0,Math.min(first.x+first.width,second.x+second.width)-Math.max(first.x,second.x));
+   const overlapY=Math.max(0,Math.min(first.y+first.height,second.y+second.height)-Math.max(first.y,second.y));
+   assert(overlapX*overlapY<1,'Two lab choices overlap or hide each other '+JSON.stringify({check,first,second}));
+   assert.equal(await cards.nth(0).locator('h2').innerText(),'Supported decision-making');
+   assert.equal(await cards.nth(1).locator('h2').innerText(),'Eating concerns');
+  }
   if(slug!=='index'){
    const buttons=page.locator('button[data-lens]');assert.equal(await buttons.count(),4,'Distinct perspectives '+slug);
    assert.equal(await page.locator('.route').count(),4,'Visual structure incomplete '+slug);
